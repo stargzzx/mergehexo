@@ -1,0 +1,27 @@
+---
+title: hexo s 之后网址访问 localhost:4000 没用
+date: 2019-03-28 17:09:50
+categories:
+- hexo
+tags:
+- error
+- hexo
+---
+额，内容如题。
+<!-- more -->
+## 参考资料
+[hexo安装成功，并且正确运行，但是localhost:4000不能访问](https://blog.csdn.net/u012246342/article/details/51543370)
+最近在用hexo 搭建github pages 时，遇到一个问题，
+hexo安装没错，也能成功运行。启动也没错。
+就是不能访问。。
+原因是：
+你的电脑端口被占用了。
+hexo默认的端口是4000，如果你的电脑安装了福昕阅读器，，就是他，没错，坑爹吧！！！！
+启动hexo s 的时候，用这个命令，换一个端口。
+
+	hexo s -p 5000    
+
+换成5000端口，果断可以访问。
+坑爹。。。
+
+
