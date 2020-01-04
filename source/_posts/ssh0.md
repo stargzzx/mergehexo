@@ -77,7 +77,23 @@ ok，开始我们的操作。
 
 如果我要上传公司代码，就要注释掉我私人的ssh-key，反之亦然。
 
-ok，现在让我们把路径 cd 到你的项目中继续配置。
+然后，我们在 ~/.ssh 下使用下面的命令来测试 git 是否能连接成功。
+
+    ssh -T git@git.com  // 或者其他域名地址
+
+如果使用上面的 config 的配置，使用这个命令，会出现
+
+    Hi benpaodewoniu! You've successfully authenticated, but GitHub does not provide shell access.
+
+如果反过来注释就会出现
+
+    Hi TaylorChen! You've successfully authenticated, but GitHub does not provide shell access.
+
+之所以会出现下面这个情况，就看是哪个github的用户添加的 ssh-key。
+
+后面的纯粹是我琢磨的，你执行完上面的如何可以上传，就可以了，不行再使用下面的。
+
+配置 git 信息，进入你要配置的项目中。
 
 我是 cd blog
 
@@ -92,11 +108,4 @@ ok，现在让我们把路径 cd 到你的项目中继续配置。
 
 建议只使用单项目配置。
 
-然后，我们使用下面的命令来测试 git 是否能连接成功。
-
-    ssh -T git@git.com  // 或者其他域名地址
-
-如果使用上面的 config 的配置，使用这个命令，会出现
-
-
-    
+感谢大家观看，目前，只是权宜之计，很麻烦，如果要上传不同的项目，还得先切换 ssh-key。在接下来的日子里，我会查询相关资料，一次配置就好了，请各位期待。    

@@ -100,4 +100,8 @@ du 命令用于查看当前目录的总大小：
 
 max-depth 这个是目录深度
 
+命令在这里重写一遍，因为，有一个我复制标题竟然错了
+
+    du -h --max-depth=1 /home
+
 {% img /images/linux/4_1.png %}
