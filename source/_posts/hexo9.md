@@ -91,4 +91,14 @@ ps:在这里可能会遇到上传不成功，是因为我们并没有给仓库�
 
 ## 问题2
 
-我用新的电脑 hexo d 之后，导致，旧电脑不能够
+我用新的电脑 hexo d 之后，导致，旧电脑不能够再 hexo d ，经过查询要用下面的步骤才行
+
+网上的答案是
+
+## 问题3
+
+出现 LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+
+这是因为我的新电脑上用了 ShadowsocksX-NG 代理，我关了之后就好了。
+
+
