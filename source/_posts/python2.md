@@ -278,6 +278,9 @@ test()
 让人感到奇怪的是，即便是将 ion() 和 ioff() 注释掉后，还是原来的效果。。。
 真让人头大
 ## 解决中文乱码
+
+### win下的解决方案
+
 {% codeblock %}
 
 import matplotlib.pyplot as plt
@@ -302,6 +305,12 @@ plt.show()
 {% endcodeblock %}
 {% img /images/python/2_4_4.png %}
 
+### macbook下的解决方案
 
+由于Mac系统自带有中文字库，Arial Unicode MS即为其中一种。不需要安装字库，不需要修改配置文件。
 
+{% codeblock %}
+import matplotlib.pyplot as plt
+plt.rcParams["font.family"] = 'Arial Unicode MS'
+{% endcodeblock %}
 
