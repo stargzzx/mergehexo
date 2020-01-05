@@ -37,6 +37,12 @@ ok，开始我们的操作。
 
 然后我们会看见在 ~/.ssh 下面有几个文件，其中两个是原来的 ssh-key 的文件，另外两个是你刚才生成的 ssh-key 存储文件。
 
+win 中 ssh 存储的地方是
+
+	C:\Users\Administrator\.ssh
+
+Administrator 这个是登录者的名称
+
 按照上面的生成规则，生成的两个文件名叫做
 
     rsa_hexo
