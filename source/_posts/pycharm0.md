@@ -235,3 +235,15 @@ Pycharm 提供的这个代码模板，可以说是相当实用的一个功能了
 如果我们想选择最后一个 main ，可以继续键入 main，然后就可以直接生成如下这段平时都要手动敲入的代码。
 
 {% img /images/pycharm/0_30.gif %}
+
+# 运行多个代码文件
+
+{% img /images/pycharm/0_31.png %}
+
+选择 edit configurations
+
+勾选右边的 allow parallel run 勾选完之后，你可以在这个面板中修改参数，运行都是根据这个面板参数运行的。
+
+{% img /images/pycharm/0_32.png %}
+
+enjoy it!!!
