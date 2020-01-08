@@ -371,7 +371,42 @@ git最牛逼的就是分支，但是，有一个就是，当我们正在一个�
 
 得到的结果就是feature分支的commit 76cada ~62ecb3 都被合并到了master分支。
 
+### git merge 分支实操
 
+团队在写项目代码的时候，经常会建设多个分支。但是，最终，我们都是要回归 master 分支的。
+
+在这里，我们有一个情况，就是，当团队成员将 master 分支代码修改之后，而你正在 update_li 这个分支上修改，所以，你虽然一开始是基于 master 创建的分支，但是，你现在的代码已经和 master 有了很大的不同。
+
+这里，假设一种情况。如果，在你的分支上，你已经测试过无误之后，首先你将代码更新到 update_li 这个分支上，这个时候，你需要将你的代码合并到 master 上。以下是具体的步骤。
+
+首先，要合并 master ，我们的原则是 master 的代码是可以稳定运行的代码，所以，冲突方面应该在自己的分支上解决。
+
+我们先切换到 master 分支上，然后 git pull origin master ，我们将 master 的代码变成最新的代码。
+
+然后，我们切换到 update_li 这个分支上，我们使用
+
+	git merge origin master
+		这个 origin 是指远程仓库，这句话的意思是 merge 远程仓库的 master
+	由于之前我们已经将本地的 master pull 到最新的代码
+	所以，直接用
+	git merge master（merge 本地代码）
+	这条命令也可以，当然最好还是加上 origin
+
+我们在 update_li 上解决完冲突后，使用 git status 看一下
+
+这个时候，你会发现，有很多 文件需要我们 commit ，这是很正常的事，因为，你从 master 分支上，merge 了很多文件。这些文件都是你之前没有的，而且，你 merge 的话，就默认，这些文件属于你的，你只需要把这些文件提交到远程分支上就好了。
+
+ok，现在我们就默认你已经将代码提交到 update_li 上了，在这里我需要重申一遍，update_li 上面保存的代码应该是 最新的 master + 你自己写的代码。
+
+现在让我们切换到 master 上。
+
+我们执行
+
+	git merge origin update_li
+
+这样，在 master 上，我们的代码就是已经处理完冲突之后的代码了。
+
+这个时候，你再讲代码 git push origin master 就好了。
 
 
 
