@@ -2,7 +2,7 @@
 title: websocket入门
 date: 2019-11-10 22:11:17
 categories:
-- network
+- websocket
 tags:
 - websocket
 - network
@@ -19,7 +19,7 @@ tags:
 
 举例来说，我们想了解今天的天气，只能是客户端向服务器发出请求，服务器返回查询结果。HTTP 协议做不到服务器主动向客户端推送信息。
 
-{% img /images/network/0_0.jpg %}
+{% img /images/websocket/0_0.jpg %}
 
 这种单向请求的特点，注定了如果服务器有连续的状态变化，客户端要获知就非常麻烦。我们只能使用"轮询"：每隔一段时候，就发出一个询问，了解服务器有没有新的信息。最典型的场景就是聊天室。
 
@@ -31,7 +31,7 @@ WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器�
 
 它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于服务器推送技术的一种。
 
-{% img /images/network/0_1.png %}
+{% img /images/websocket/0_1.png %}
 
 其他特点包括：
 
@@ -45,7 +45,7 @@ WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器�
 
 	ws://example.com:80/some/path
 
-{% img /images/network/0_3.jpg %}
+{% img /images/websocket/0_3.jpg %}
 
 
 

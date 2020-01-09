@@ -2,7 +2,7 @@
 title: python websocket获取实时数据的几种常见链接方式
 date: 2019-12-23 21:45:57
 categories:
-- network
+- websocket
 tags:
 - network
 - websocket
