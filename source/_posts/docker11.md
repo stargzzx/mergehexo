@@ -5,6 +5,7 @@ categories:
 - docker
 tags:
 - docker
+- pycharm
 ---
 这个非常关键，因为我们可以远程使用docker 的 python 编译器，来调试代码，对于，使用集群的我们来说，非常重要。
 
@@ -135,6 +136,8 @@ tags:
 {% img /images/docker/11_2.png %}
 
 # 在PyCharm里配置远程解释器
+
+虽然在后期版本的 pycharm 中，这些面板的选项都已经变了，但是，万变不离其宗。知道原理就好。 good luckily to you！！！
 
 点击PyCharm的
 
