@@ -133,6 +133,14 @@ tags:
 
 这时候你搁置的代码就回来了。
 
+当然，你也可以用
+
+	git stash pop stash@{int}
+
+这两者的区别是：
+
+>git stash pop stash@{id}命令会在执行后将对应的stash id 从stash list里删除，而 git stash apply stash@{id} 命令则会继续保存stash id。
+
 ### 一个小小的告知
 
 我一开始难以理解git的作用，因为我用的是pycharm，所以，无论是我怎么git stash ，pycharm 上并不会隐藏我刚刚写的代码，所以，我就产生了一个疑问，如果pycharm不会隐藏代码，那么我提交的时候不就提交了全部代码吗？
