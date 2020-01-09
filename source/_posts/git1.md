@@ -167,6 +167,13 @@ git stash 可用来暂存当前正在进行的工作， 比如想pull 最新代�
 
 {% img /images/bbsx/2_0.png %}
 
+那么，当我们想要清除某一个 stash 的时候，使用下面的命令：
+
+	git stash drop <某一个标示>
+		git stash drop stash@{1}
+
+如果不填写标示，默认删除最新的。
+
 ## 查看之前的版本内容
 
 我们使用 git log 命令来查看过往版本的内容。
