@@ -1,7 +1,13 @@
 ---
 title: linux | 安装软件相关的命令
 date: 2020-01-09 18:09:01
+categories:
+- linux
 tags:
+- apt-get
+- linux
+- dpkg
+- apt
 mathjax: true
 ---
 linux 如何安装软件，每次安装软件执行的命令是怎么回事？这篇博文告诉你答案。
