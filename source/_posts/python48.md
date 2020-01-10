@@ -2,10 +2,8 @@
 title: pycharm 配置 anaconda 环境
 date: 2019-01-21 10:39:20
 categories:
-- python
+- anaconda
 tags:
-- pycharm
-- Anaconda
 - anaconda
 ---
 昨天为了配置环境，搞到 1 点多，几近崩溃，于是，今天我又来到实验室，然后搞了 2 分钟，就他妈的 OK 了，我是一万个不服啊！！！！

@@ -2,10 +2,8 @@
 title: Anaconda 所遇到的错误
 date: 2019-01-20 16:03:03
 categories:
-- python
+- anaconda
 tags:
-- python
-- 第三方版本
 - anaconda
 ---
 如题，给后来者填坑。

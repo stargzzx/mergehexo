@@ -2,11 +2,8 @@
 title: 安装 Anaconda
 date: 2019-01-20 11:33:02
 categories:
-- python
+- anaconda
 tags:
-- python
-- 第三方版本
-- Anaconda
 - anaconda
 ---
 这是安装 anaconda 的教程。
