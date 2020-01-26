@@ -102,6 +102,10 @@ class myImageFloder(data.Dataset):
         return self.classes
 {% endcodeblock %}
 
+关于 transform ，你可以看我的另一篇博客
+
+[pytorch | torchvision transform 的讲解](https://benpaodewoniu.github.io/2020/01/26/torch4/)
+
 ## 实例化torch.utils.data.DataLoader
 
 {% codeblock %}
