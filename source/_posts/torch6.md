@@ -1,5 +1,5 @@
 ---
-title: pytorch | 模型的自我构建
+title: pytorch | 模型的自我构建以及其他细节（参数、结构等）
 date: 2020-01-26 20:40:31
 categories:
 - pytorch
@@ -273,6 +273,31 @@ modules()方法，返回一个包含当前模型所有模块的迭代器，这�
 
 named_modules()的功能和modules()的功能类似，不同的是它返回内容有两部分:module的名称以及module。
 
+## 从文件中读取
+
+{% codeblock %}
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+
+class M(nn.Module):
+    def __init__(self):
+        super(M, self).__init__()
+        self.liner1 = nn.Linear(2, 2)
+
+    def forward(self, x):
+        return self.liner1(x)
+
+if __name__ == '__main__':
+    m = torch.load('./m.pth')
+    # print(m.liner1.weight)
+    for idx, m in enumerate(m.modules()):
+        print(idx, "-", m)
+{% endcodeblock %}
+
+从代码中我们知道，虽然可以从文件中读取，但是依然要给定定义的 model 类。
+
 ## children()方法
 
 和modules()不同，children()只返回当前模块的子模块，不会递归子模块。
@@ -294,3 +319,106 @@ named_modules()的功能和modules()的功能类似，不同的是它返回内�
 子模块3-Sequential仍然有子模块，children()没有递归的返回。
 
 named_children()和children()的功能类似，不同的是其返回两部分内容：模块的名称以及模块本身。
+
+# 网络的参数
+
+方法parameters()返回一个包含模型所有参数的迭代器。一般用来当作optimizer的参数。
+
+	for p in m.parameters():
+	        print(type(p.data),p.size())
+
+其输出为：
+
+	<class 'torch.Tensor'> torch.Size([128, 64, 3, 3])
+	<class 'torch.Tensor'> torch.Size([128])
+	<class 'torch.Tensor'> torch.Size([128, 128, 3, 3])
+	<class 'torch.Tensor'> torch.Size([128])
+
+## 在训练的过程中获得参数
+
+{% codeblock %}
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+
+class M(nn.Module):
+    def __init__(self):
+        super(M, self).__init__()
+        self.liner1 = nn.Linear(2, 2)
+
+    def forward(self, x):
+        return self.liner1(x)
+
+
+x = torch.tensor([3., 4.], dtype=torch.float32)
+y = torch.tensor([3., 9.], dtype=torch.float32)
+m = M()
+criterion = nn.MSELoss()
+optimizer = optim.SGD(m.parameters(), lr=0.001, momentum=0.9)
+
+outputs = m(x)
+loss = criterion(outputs, y)
+loss.backward()
+optimizer.step()
+d = m.liner1
+print(d.weight)
+	# 这个来输出某一层的权重
+{% endcodeblock %}
+
+## 读取网络文件来输出权重
+
+	m = torch.load('./m.pth')
+	print(m.liner1.weight)
+		这个也要给定 model 类，具体的可以参照下面的博客：一个简单的结构
+
+[pytorch | 几个比较简单的代码示例](https://benpaodewoniu.github.io/2020/01/26/torch7/)
+
+## 多层定义
+
+{% codeblock %}
+class net(nn.Module):
+    def __init__(self):
+        super().__init__()
+	    self.c1 = nn.Sequential(
+	    nn.Conv2d(3,16,5,1,2), 
+	    nn.ReLU()
+	        ) 
+	    self.c2 = nn.Sequential(
+	        nn.Conv2d(16,32,5,1,2), 
+	        nn.ReLU(),
+	    )
+	    self.fc = nn.Linear(2097152,2)
+	def forward(self,x):
+	    x = self.c1(x)
+	    x = self.c2(x)
+	    x = x.view(x.size(0), -1) 
+	    x = self.fc(x) 
+	    return x   
+
+代码省略
+
+model.fc
+>>
+Linear(in_features=1048576, out_features=2, bias=True)
+model.c1[0]
+>>
+Conv2d(3, 16, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+#获得某层的权重
+model.c1[0].weight
+>>
+Parameter containing:
+tensor([[[[ 2.7182e-03, -8.7767e-03,  3.2988e-02, -1.0006e-01, -1.1177e-01],
+          [-2.9155e-02, -6.2152e-02,  4.1465e-02, -4.5812e-02,  6.7885e-02],
+      	...
+      	...
+model.c1[0].parameters()为该层的参数，包含梯度等等
+{% endcodeblock %}
+
+因为其包含网络中的所有的权值矩阵参数以及偏置参数。 对网络进行训练时需要将parameters()作为优化器optimizer的参数。
+
+	optimizer = torch.optim.SGD(m1.parameters(),lr = args.lr,momentum=args.momentum,weight_decay=args.weight_decay)
+
+parameters()返回网络的所有参数，主要是提供给optimizer用的。而要取得网络某一层的参数或者参数进行一些特殊的处理（如fine-tuning)，则使用named_parameters()更为方便些。
+
+named_parameters()返回参数的名称及参数本身，可以按照参数名对一些参数进行处理。

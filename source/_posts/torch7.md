@@ -52,7 +52,7 @@ loss = criterion(pred, y)
 print('loss after 1 step optimization: ', loss.item())
 {% endcodeblock %}
 
-# 有一个简单的结构
+# 一个简单的结构
 
 {% codeblock %}
 import torch
@@ -93,6 +93,14 @@ torch.save(m, './m.pth')
 下面是载入模型的代码。
 
 {% codeblock %}
+class M(nn.Module):
+    def __init__(self):
+        super(M, self).__init__()
+        self.liner1 = nn.Linear(2, 2)
+
+    def forward(self, x):
+        return self.liner1(x)
+
 x = torch.tensor([3., 4.], dtype=torch.float32)
 y = torch.tensor([1., 1.], dtype=torch.float32)
 m = torch.load('./m.pth')
@@ -106,6 +114,9 @@ print(outputs)
 loss = criterion(outputs, y)
 print(loss)
 {% endcodeblock %}
+
+这里有一个特别注意的点就是，我们虽然可以从文件中直接读取参数和网络结构，但是，在文件中还是要放一下我们构建模型的那个 model。
+
 
 
 
