@@ -233,6 +233,64 @@ class Model(nn.Module):
         return x
 {% endcodeblock %}
 
+modules()方法，返回一个包含当前模型所有模块的迭代器，这个是递归的返回网络中的所有Module。使用如下语句
 
+	m = Model()
+    for idx,m in enumerate(m.modules()):
+        print(idx,"-",m)
 
+其结果为：
 
+	0 - Model(
+	  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1))
+	  (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+	  (maxpool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+	  (features): Sequential(
+	    (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+	    (conv4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+	    (relu1): ReLU()
+	  )
+	)
+	1 - Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1))
+	2 - Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+	3 - MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+	4 - Sequential(
+	  (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+	  (conv4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+	  (relu1): ReLU()
+	)
+	5 - Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+	6 - Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+	7 - ReLU()
+
+输出结果解析：
+
+	0-Model 整个网络模块
+	1-2-3-4 为网络的4个子模块，注意4 - Sequential仍然包含有子模块
+	5-6-7为模块4 - Sequential的子模块
+
+可以看出modules()是递归的返回网络的各个module，从最顶层直到最后的叶子module。
+
+named_modules()的功能和modules()的功能类似，不同的是它返回内容有两部分:module的名称以及module。
+
+## children()方法
+
+和modules()不同，children()只返回当前模块的子模块，不会递归子模块。
+
+	for idx,m in enumerate(m.children()):
+	        print(idx,"-",m)
+
+其输出为：
+
+	0 - Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1))
+	1 - Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+	2 - MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+	3 - Sequential(
+	  (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1))
+	  (conv4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+	  (relu1): ReLU()
+	)
+
+子模块3-Sequential仍然有子模块，children()没有递归的返回。
+
+named_children()和children()的功能类似，不同的是其返回两部分内容：模块的名称以及模块本身。

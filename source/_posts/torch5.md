@@ -103,6 +103,12 @@ print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
 
 在这个代码中，我们可以看出，我们得预先知道整个网络的结构才行。
 
+## 不使用 model，直接使用模型
+
+关于这个代码，请大家看下面博文的第2个例子:一个简单的结构
+
+[pytorch | 几个比较简单的代码示例](https://benpaodewoniu.github.io/2020/01/26/torch7/)
+
 ## 别人的 model
 
 Pytorch 提供了许多 Pre-Trained Model on ImageNet，仅需调用 torchvision.models 即可，具体细节可查看官方文档。
