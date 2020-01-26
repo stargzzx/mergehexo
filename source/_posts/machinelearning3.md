@@ -2,7 +2,7 @@
 title: 什么是机器学习以及相关的概念
 date: 2018-11-09 10:16:31
 categories:
-- macheine learning
+- machine learning
 tags:
 - 周志华
 - machine learning

@@ -2,11 +2,11 @@
 title: 卷积神经网络（CNN）入门
 date: 2019-01-19 03:05:44
 categories:
-- deeplearning
+- deep learning
 tags:
-- deeplearning
+- deep learning
 - CNN
-- machinelearning
+- machine learning
 ---
 这是一篇最基础的入门教程。
 <!--more-->

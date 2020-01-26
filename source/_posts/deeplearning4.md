@@ -2,11 +2,11 @@
 title: 对 CNN 的新理解
 date: 2019-04-22 21:00:20
 categories:
-- deeplearning
+- deep learning
 tags:
-- deeplearning
+- deep learning
 - CNN
-- machinelearning
+- machine learning
 ---
 这一篇将会详细的介绍我对 CNN 的新理解，并且解答我对 CNN 的疑问。
 <!--more-->

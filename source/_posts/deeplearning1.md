@@ -2,14 +2,14 @@
 title: 神经网络超级详解
 date: 2019-01-03 09:35:13
 categories:
-- deeplearning
+- deep learning
 tags:
 - 神经网络
-- deeplearning
+- deep learning
 - NN
 - nn
 - neural network
-- machinelearning
+- machine learning
 ---
 在这一篇中，我会讲述神经网络的全部内容，包括数学推导还有思维抽象，虽然我之前也写过类似的文章，但是，之前的文章都太浅了，所以，我想将资源进行整合。
 在这篇 blog 中你会了解什么是前向传播，什么是反向传播，以及他们的数学推导。

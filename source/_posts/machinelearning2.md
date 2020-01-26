@@ -2,7 +2,7 @@
 title: 机器学习入门-MNIST全过程
 date: 2018-08-23 14:06:46
 categories:
-- macheine learning
+- machine learning
 tags:
 - MNIST
 - machine learning

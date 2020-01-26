@@ -2,15 +2,15 @@
 title: 神经网络的数学推导公式
 date: 2019-01-16 22:04:59
 categories:
-- deeplearning
+- deep learning
 tags:
 - 神经网络
 - 数学推导
-- deeplearning
+- deep learning
 - NN
 - nn
 - neural network
-- machinelearning
+- machine learning
 mathjax: true
 ---
 如题。

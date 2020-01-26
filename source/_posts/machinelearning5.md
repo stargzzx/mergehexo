@@ -2,10 +2,10 @@
 title: 什么是交叉熵
 date: 2019-01-26 23:20:48
 categories:
-- machinelearning
+- machine learning
 tags:
 - 交叉熵
-- machinelearning
+- machine learning
 - 信息
 mathjax: true
 ---
