@@ -246,4 +246,16 @@ Pycharm 提供的这个代码模板，可以说是相当实用的一个功能了
 
 {% img /images/pycharm/0_32.png %}
 
+# 不让图片在 ide 中显示
+
+有的时候我们使用画图的库，比如 matplotlib 或者 pillow 的时候，在显示图片，会直接在 ide 中显示。
+
+但是，这样显示的话，ide 会自动记录图片，导致有的时候内存占用率太大了。
+
+我个人还是倾向于不再 ide 中显示图片，所以，我们要这样设置。
+
+	File -> Settings -> Tools -> Python Scientific -> 去掉Show plots in tool window勾选
+
+在 MacBook 上，我们选择 preferences ，然后直接搜索 tools 找到相关选项就好了。
+
 enjoy it!!!
