@@ -273,6 +273,29 @@ modules()方法，返回一个包含当前模型所有模块的迭代器，这�
 
 named_modules()的功能和modules()的功能类似，不同的是它返回内容有两部分:module的名称以及module。
 
+{% codeblock %}
+model = torch.load('./m.pth')
+
+for name, value in model.named_parameters():
+    print(name)
+    print(value)
+{% endcodeblock %}
+
+    liner1.weight
+    Parameter containing:
+    tensor([[ 0.3026,  0.3919, -0.0346],
+            [-0.0996,  0.4806,  0.4587]], requires_grad=True)
+    liner1.bias
+    Parameter containing:
+    tensor([ 0.4266, -0.4391], requires_grad=True)
+    liner2.weight
+    Parameter containing:
+    tensor([[-0.3627, -0.0493]], requires_grad=True)
+    liner2.bias
+    Parameter containing:
+    tensor([0.4170], requires_grad=True)
+
+
 ## 从文件中读取
 
 {% codeblock %}
@@ -373,6 +396,8 @@ print(d.weight)
 		这个也要给定 model 类，具体的可以参照下面的博客：一个简单的结构
 
 [pytorch | 几个比较简单的代码示例](https://benpaodewoniu.github.io/2020/01/26/torch7/)
+
+你也可以根据上面的遍历网络结构的 named_modules() 来直接输出。不过，其还是要引入 model 类，哈哈！！！尴尬。。。
 
 ## 多层定义
 

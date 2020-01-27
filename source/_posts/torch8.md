@@ -186,7 +186,7 @@ print(m1.liner2.weight)
 	params = filter(lambda p: p.requires_grad, model.parameters())
 	optimizer = torch.optim.Adam(params, lr=1e-4)
 
-	代码示例：
+代码示例：
 
 {% codeblock %}
 import torch
@@ -249,17 +249,17 @@ liner1.bias
 	
 	tensor([ 0.4266, -0.4391], requires_grad=True)
 
-liner2.weight
+<p style="color: #FF0000;">liner2.weight</p>
 
 	tensor([[-0.3627, -0.0493]], requires_grad=True)
 
-liner2.bias
+<p style="color: #FF0000;">liner2.bias</p>
 
 	tensor([0.4170], requires_grad=True)
 
 经过更改之后的
 
-<b style="color: #FF0000;">liner1.weight</b>
+liner1.weight
 
 	tensor([[ 0.3026,  0.3919, -0.0346],
     	    [-0.0996,  0.4806,  0.4587]])
@@ -268,12 +268,82 @@ liner1.bias
 	
 	tensor([ 0.4266, -0.4391])
 
-liner2.weight
+<p style="color: #FF0000;">liner2.weight</p>
 
 	tensor([[-0.3624, -0.0491]], requires_grad=True)
 
-liner2.bias
+<p style="color: #FF0000;">liner2.bias</p>
 
 	tensor([0.4173], requires_grad=True)
 
 我们可以很明显地看到 liner1 的参数变了。
+
+同样，我们只固定 liner2 也一样可以。
+
+## 疑问
+
+但是，在上面我们看到一段代码是：
+
+	params = filter(lambda p: p.requires_grad, model.parameters())
+	optimizer = optim.SGD(params, lr=1e-4)
+
+这个在一些博文中是这样说明的：
+
+>在 optimizer 传入 model parameters 的时候可以用 filter 根据 requires_grad 再过滤一遍。
+
+但是，我在运行代码的过程中把上面那两段话注释掉，换成下面的代码，依然会有相同的结果。
+
+	optimizer = optim.SGD(model.parameters(), lr=1e-4)
+
+其全部的代码如下：
+
+{% codeblock %}
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+
+class M(nn.Module):
+
+    def __init__(self):
+        super(M, self).__init__()
+        self.liner1 = nn.Linear(3, 2)
+        self.liner2 = nn.Linear(2, 1)
+
+    def forward(self, x):
+        x = self.liner1(x)
+        x = self.liner2(x)
+        return x
+
+
+t = torch.tensor([[2, 1, 3]], dtype=torch.float32)
+y = torch.tensor([[1, ]], dtype=torch.float32)
+print(y.shape)
+
+names = ['liner1']
+
+model = torch.load('./m.pth')
+
+for name, value in model.named_parameters():
+    print(value)
+    if name.split('.')[0] in names:
+        value.requires_grad = False
+
+criterion = nn.MSELoss()
+optimizer = optim.SGD(model.parameters(), lr=1e-4)
+
+outputs = model(t)
+loss = criterion(outputs, y)
+
+loss.backward()
+optimizer.step()
+
+for name, value in model.named_parameters():
+    print(value)
+{% endcodeblock %}
+
+我的 pytorch 的版本是 1.4.0，torchvision 是 0.5.0
+
+所以，大家在用的时候还是要看好才行。
+
+# 修改 model ，并且增加新的层
