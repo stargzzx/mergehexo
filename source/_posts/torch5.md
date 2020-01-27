@@ -116,3 +116,5 @@ print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
 Pytorch 提供了许多 Pre-Trained Model on ImageNet，仅需调用 torchvision.models 即可，具体细节可查看官方文档。
 
 往往我们需要对 Pre-Trained Model 进行相应的修改，以适应我们的任务。这种情况下，我们可以先输出 Pre-Trained Model 的结构，确定好对哪些层修改，或者添加哪些层，接着，再将其修改即可。
+
+因为有预感在这个章节中可能有很多内容需要撰写更新，所以，决定开设新的博文，请移步到下面的博文。

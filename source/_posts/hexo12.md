@@ -1,41 +1,49 @@
 ---
-title: hexo 远程仓库的知识
-date: 2020-01-04 22:32:55
+title: hexo | 某些小修饰（加粗，颜色变化等）
+date: 2020-01-27 19:57:57
 categories:
 - hexo
 tags:
-- 远程仓库
 - hexo
 ---
-这个对于理解 hexo 非常重要。
+我们经常在撰写文章的时候需要对文字进行一些修饰。
 
-<!--more-->
+比如，有的地方进行变颜色，加粗，斜体等，那么在 hexo 中如何做到这些？
 
-远程仓库是我们的数据存储的地方，我们有以下命令可以查看和设置远程仓库
+<!-- more -->
 
-# 查看远程仓库
+其实，答案很简单，使用 html 的知识就好了。
 
-    git remote -v
+# 加粗
 
-可以显示出
+	<b>粗体</b>
 
-    origin	git@github.com:benpaodewoniu/mergehexo.git (fetch)
-    origin	git@github.com:benpaodewoniu/mergehexo.git (push)
+<b>粗体</b>
 
-# 设置远程仓库
+# 变颜色
 
-    git remote add origin xxxxx.git
+	<p style="color: #FF0000;">红色</p>
 
-# 删除远程仓库
+<p style="color: #FF0000;">红色</p>
 
-    git remote rm origin
+下面是搜集的颜色列表：
 
-# 修改远程仓库
+{% img /images/hexo/12_0.png %}
 
-## 直接修改
+# 斜体
 
-    git remote set-url origin xxxxx.git
+	<i>斜体</i>
 
-## 先删除后修改
+<i>斜体</i>
 
+# 删除体
 
+	<del>删除体</del>
+
+<del>删除体</del>
+
+# 插入字
+
+	<ins>插入字</ins>
+
+<ins>插入字</ins>
