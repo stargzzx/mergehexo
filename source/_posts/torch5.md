@@ -39,6 +39,11 @@ model = torch.load(PATH)
 
 # 读取 Checkpoint 中的网络参数
 model.load_state_dict(torch.load(PATH))
+    # 值得注意的是，这样加载的是保存的参数信息
+    # 也就是 PATH 这个文件对应的是 model.state_dict()
+    # 值得原理后，处理起来就很灵活，比如
+    # 即便保存的是全部网络信息，我们只需要调用 model.state_dict() 就好了
+    # 希望你能看懂我所讲的意思
 
 # 若 Checkpoint 中的网络参数与当前网络参数有部分不同,有以下两种方式进行加载:
 # 1. 利用字典的 update 方法进行加载
@@ -118,3 +123,5 @@ Pytorch 提供了许多 Pre-Trained Model on ImageNet，仅需调用 torchvision
 往往我们需要对 Pre-Trained Model 进行相应的修改，以适应我们的任务。这种情况下，我们可以先输出 Pre-Trained Model 的结构，确定好对哪些层修改，或者添加哪些层，接着，再将其修改即可。
 
 因为有预感在这个章节中可能有很多内容需要撰写更新，所以，决定开设新的博文，请移步到下面的博文。
+
+[pytorch | 微调别人的 model，以及参数相关](https://benpaodewoniu.github.io/2020/01/27/torch8/)

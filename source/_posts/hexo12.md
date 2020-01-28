@@ -47,3 +47,39 @@ tags:
 	<ins>插入字</ins>
 
 <ins>插入字</ins>
+
+# 上标字
+	
+	<sup>上标字</sup>123
+
+<sup>上标字</sup>123
+
+# 下标字
+	
+	123<sub>下标字</sub>
+
+123<sub>下标字</sub>
+
+# 标签
+
+## 数字标签
+
+1. 这是一个标签
+
+2. 这是第二个标签
+
+上面的标签用法是：
+
+	1. 这是一个标签
+
+	2. 这是第二个标签
+		数字 + . + 空格
+
+## 符号标签
+
+<li style="margin-left: 40px;font-size: 20px">123</li>
+
+上面的使用这个实现的
+
+	<li style="margin-left: 40px;font-size: 20px">123</li>
+
