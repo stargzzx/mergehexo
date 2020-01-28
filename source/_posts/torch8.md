@@ -425,6 +425,13 @@ detach()的官方说明如下：
 
 >Returns a new Tensor, detached from the current graph.The result will never require gradient.
 
+其源代码如下：
+
+	def detach(self):
+	    result = NoGrad()(self)  # this is needed, because it merges version counters
+	    result._grad_fn = None
+	    return result
+
 假设有模型A和模型B，我们需要将A的输出作为B的输入，但训练时我们只训练模型B. 那么可以这样做：
 
 	input_B = output_A.detach()
@@ -535,6 +542,48 @@ for name, value in model.named_parameters():
 	tensor([[-0.1755,  0.6273]], requires_grad=True)
 	Parameter containing:
 	tensor([0.6418], requires_grad=True)
+
+## detach_()方法
+
+官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
+
+从源码中也可以看出这一点：
+
+将 Variable 的grad_fn 设置为 None，这样，BP 的时候，到这个 Variable 就找不到 它的 grad_fn，所以就不会再往后BP了。
+
+其源代码如下:
+
+	def detach_(self):
+	    """Detaches the Variable from the graph that created it, making it a
+	    leaf.
+	    """
+	    self._grad_fn = None
+	    self.requires_grad = False
+
+这两个方法的用法和区别:
+
+如果我们有两个网络 A,B, 两个关系是这样的 y=A(x),z=B(y)现在我们想用 z.backward() 来为 B网络的参数来求梯度，但是又不想求 A 网络参数的梯度。我们可以这样：
+
+	# y=A(x), z=B(y) 求B中参数的梯度，不求A中参数的梯度
+	# 第一种方法
+	y = A(x)
+	z = B(y.detach())
+	z.backward()
+	 
+	# 第二种方法
+	y = A(x)
+	y.detach_()
+	z = B(y)
+	z.backward()
+
+在这种情况下，detach 和 detach_ 都可以用。但是如果 你也想用 y 来对 A 进行 BP 呢？那就只能用第一种方法了。因为 第二种方法 已经将 A 模型的输出 给 detach（分离）了。
+
+如果将上面的 detach() 换成 detach_() 这个方法，其表现的还是一样的。
+
+
+举一个例子：
+
+这里暂时先不写例子啦，有时间补上
 
 ## 总结
 
