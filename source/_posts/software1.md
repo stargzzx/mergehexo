@@ -76,3 +76,47 @@ post的请求是在 body 中的 form-data 填写数据。
 使用 send and download 就好了。
 
 {% img /images/software/1_11.png %}
+
+# 上传文件
+
+{% img /images/software/1_12.png %}
+
+# POST 请求 500 错误
+
+有的时候我们使用 postman 会出现 500 的错误，这有可能是我们传值的方式错误
+
+所以，我们也变更我们传值的方式。
+
+之前错误的传值方法
+
+{% img /images/software/1_13.png %}
+
+另一种表现形式
+
+{% img /images/software/1_14.png %}
+
+这种可能会导致出现 500 错误，所以，我们要更改传值方式，变成 通过 raw 传值
+
+{% img /images/software/1_15.png %}
+
+错误的原因：
+
+其实就是json格式的问题
+
+header就不用说了：   
+
+	Content-Type:application/json
+
+{% img /images/software/1_16.png %}
+
+# 返回 code
+
+postman 还能直接返回 code 形式
+
+{% img /images/software/1_17.png %}
+
+{% img /images/software/1_18.png %}
+
+
+
+
