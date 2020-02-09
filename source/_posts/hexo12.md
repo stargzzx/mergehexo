@@ -77,9 +77,34 @@ tags:
 
 ## 符号标签
 
-<li style="margin-left: 40px;font-size: 20px">123</li>
+<li style="margin-left: 40px;font-size: 15px">123</li>
 
 上面的使用这个实现的
 
-	<li style="margin-left: 40px;font-size: 20px">123</li>
+	<li style="margin-left: 40px;font-size: 15px">123</li>
 
+我们的 li 标签要放在一行中，不然，每一个 li 标签，会被添加 <br/>
+
+<li style="margin-left: 40px;font-size: 15px">123</li><li style="margin-left: 40px;font-size: 15px">123</li><li style="margin-left: 40px;font-size: 15px">123</li>
+
+	<li style="margin-left: 40px;font-size: 15px">123</li><li style="margin-left: 40px;font-size: 15px">123</li><li style="margin-left: 40px;font-size: 15px">123</li>
+
+如果不放在一行会出现
+
+<li style="margin-left: 40px;font-size: 15px">123</li>
+<li style="margin-left: 40px;font-size: 15px">123</li>
+<li style="margin-left: 40px;font-size: 15px">123</li>
+
+很难看
+
+<br/>
+# 好看的排列
+<br/>
+
+当我们只用 # 这个标签的时候，最好添加 <br/>
+
+	<br/>
+	# ***
+	<br/>
+
+这样整体排列很好看。
