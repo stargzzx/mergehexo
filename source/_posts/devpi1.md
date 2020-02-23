@@ -23,8 +23,17 @@ tags:
 
 我们的测试机用的是 python3.7 ，所以，其 pip 也是 pip3.7。测试机自带翻墙，不过很慢。
 
+
+经过一些过程，下面的官方教程 Quickstart: uploading, testing, pushing releases 是一种测试版，不是正式开启环境，所以，后面导致了一些问题。
+
+但是，我在这个得记录一下。
+
 <br/>
-# 安装
+# 官方测试版（也可以叫体验版）
+<br/>
+
+<br/>
+## 安装
 <br/>
 
 我是严格按照官方的教程来的。其链接如下：
@@ -48,7 +57,7 @@ tags:
 安装好之后，打算开启服务。
 
 <br/>
-# 开启服务
+## 开启服务
 <br/>
 
 执行
@@ -105,6 +114,16 @@ tags:
 
 	devpi-gen-config
 
+这个命令蛮关键的，只有执行过这个命令的人，会在自己的 home 下产生一个目录，然后才有资格使用 devpi ，否则是没有的。
+
+运维小哥在 root 下使用了 devpi-gen-config ，才有资格使用 devpi
+
+然后，后来他更改了自己文件的一个配置，才能让我的账户和root共同使用：
+
+{% img /images/devpi/1_4.png %}
+
+上面的多用户可以忽略，因为，这个是测试版本，不算数，当时找错教程了。
+
 接着执行
 
 	devpi use http://localhost:3141
@@ -123,7 +142,7 @@ tags:
 
 	sudo devpi use http://localhost:3141
 
-结果，真的可以了。。。原来是权限不够的原因（我不是 root 用户，但是，登录用户被划到管理员组了）
+结果，真的可以了。。。原来是权限不够的原因（我不是 root 用户，但是，登录用户被划到管理员组了，后来运维小哥使用 root 还是需要添加 sudo 真是太奇怪了）
 
 创造账户
 
@@ -163,8 +182,70 @@ tags:
 
 >你的端口设置那一行应该是127.0.0.1,红框的部分如果变成 这个应该变成:::3141就对了，:::=0.0.0.0   ::1:=127.0.0.1 。127.0.0.1的意思就是只能本机使用。
 
-后面，我的主要任务就是解决如何让线下链接线上，但是，问题，暂时还没解决。未完待续。。。
+然后，我们想重新打开服务器，所以，使用
 
+	devpi-server --stop
 
+但是，提示没有开启这项服务，但是，使用命令
 
+	devpi-server --status
 
+却能找到 devpi-server 运行在哪个端口，但是，使用 ps aux | grep 'devpi' 的时候并不能查到 devpi-server 这个信息
+
+但是，使用这个命令，却能看到类似于
+
+	python devpi（比这个长，但是，意思差不多），这个也是相应的 pid
+
+所以，我们打算杀死这个进程，结果，杀死之后，它自己又自动重启了。
+
+后来，我们调用 devpi-server --log
+
+查看日志，日志的意思大概是说，我们在开启 devpi-server 的时候，出现端口占用导致出现错我。
+
+所以，我猜测情况是这样的，devpi-server 的运行程序的pid记录在一个文件中（我找到了），导致，devpi-server --status 的时候，直接读取这个文件，然后说有服务运行，但是，真正想要关闭这个服务的时候，由于找不到，所以报错。
+
+所以，现在的任务就是如何关闭 devpi。
+
+经过，很长时间的摸索，我们在上面的教程中看到了这个。
+
+{% img /images/devpi/1_3.png %}
+
+所以，这次是一种测试体验，所以，最后我进入我的 home 目录，也就是使用
+
+	supervisord -c gen-config/supervisord.conf
+
+这个命令的目录（去其他目录执行没用，我是在 home 下执行的）
+
+	supervisorctl -c gen-config/supervisord.conf shutdown
+
+最后成功关闭。
+
+在这里，我需要特别说明的是，我本地和线上都执行了这个教程，但是，我本地却有 devpi-server，也能自己关上，其最大的不同是我没执行过这个命令
+
+	supervisord -c gen-config/supervisord.conf
+
+当时，认为麻烦。
+ 
+<br/>
+# 正式教程
+<br/>
+
+[Quickstart: permanent install on server/laptop](https://devpi.net/docs/devpi/devpi/latest/+d/quickstart-server.html#quickstart-server)
+
+然后运维小哥使用下面的命令启动
+
+	devpi-server --host=0.0.0.0 --start
+
+然后，我成功在站外访问了
+
+但是，这个服务器上什么都没有，包括之前测试版上传的包，这是因为，测试版被我们删了之后，所有的数据也都清空了，所以，还是要在正式环境下使用。
+
+我在本地使用
+
+	pip install -i http://主机ip:3141/root/ant ant --trusted-host 主机ip
+
+成功安装，自此大部分完成。
+
+这里有一个小插曲，就是，运维小哥，在测试机上启用 docker 的时候，其安装并不成功，具体错误是指，其没有符合的版本。
+
+最后查到是因为机器上没有安装 protobuf ，这个我就没在追踪，所以，至此，devpi 配置结束。感谢大家观看！！！

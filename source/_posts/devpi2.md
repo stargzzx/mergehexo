@@ -97,3 +97,11 @@ tags:
 
 	devpi remove http://localhost:3141/ant/dev/+f/a8c/47f60ee6e7f32/ant-0.0.2.tar.gz
 
+那么如何安装指定的包版本呢，对于上面我们既有 0.0.1 还有 0.0.2
+
+我们可以使用下面的命令来安装制定版本
+
+	pip install -i http://localhost:3141/ant/dev ant==0.0.1
+
+这样就可以安装 0.0.1 版本了，祝好！！！
+
