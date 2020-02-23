@@ -2,10 +2,9 @@
 title: eosvoter|关于项目的一些业务逻辑
 date: 2019-10-09 21:00:39
 categories:
-- eos_voter
+- eosvoter
 tags:
-- eos_voter
-- 项目经验
+- eosvoter
 - 币币生息
 ---
 这个主要是怕忘记了业务逻辑，所以，在这里总结一下。

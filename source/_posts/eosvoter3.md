@@ -2,10 +2,9 @@
 title: eosvoter | 前端代码的书写以及部署
 date: 2019-12-08 08:27:39
 categories:
-- eos_voter
+- eosvoter
 tags:
-- eos_voter
-- 项目经验
+- eosvoter
 - 币币生息
 ---
 为了不让流程忘记，所以，特地来记录一下部署。

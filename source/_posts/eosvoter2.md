@@ -1,11 +1,10 @@
 ---
-title: eosvoter|dfuse接口对接，获取节点的reward
+title: eosvoter | dfuse接口对接，获取节点的reward
 date: 2019-11-25 17:29:21
 categories:
-- eos_voter
+- eosvoter
 tags:
-- eos_voter
-- 项目经验
+- eosvoter
 - 币币生息
 ---
 因为之前获得 reward 的接口挂了，官方换成其他的了，所以，我们也要重新对接相关的接口。
