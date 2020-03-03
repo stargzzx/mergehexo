@@ -259,3 +259,36 @@ Pycharm 提供的这个代码模板，可以说是相当实用的一个功能了
 在 MacBook 上，我们选择 preferences ，然后直接搜索 tools 找到相关选项就好了。
 
 enjoy it!!!
+
+# pycharm 的 flask 自启用
+
+pychram 会自动识别你这个项目用的是什么框架，比如，下面的 flask 
+
+{% img /images/pycharm/0_33.png %}
+
+pycharm 会将其变成 flask
+
+{% img /images/pycharm/0_34.png %}
+
+然后采用 flask 的启动方式，这样就导致
+
+{% img /images/pycharm/0_33.png %}
+
+中，线程启动不了。（不能 debug）
+
+造成这个方面的原因，我认为可能有几个方面
+
+1. 项目没有严格遵守 flask 的书写规范
+2. pycharm 处理不好
+
+但是，如果你在命令行中运行
+
+	python main.py
+
+是可以正常运行的，所以，我们的目的就是让 pycharm 按照 python main.py 的方式运行，而不是 flask
+
+{% img /images/pycharm/0_35.png %}
+
+然后我们运行这个 main.py 就好了
+
+{% img /images/pycharm/0_36.png %}

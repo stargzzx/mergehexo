@@ -101,3 +101,39 @@ brew cask可以看作是苹果官方app store的补充。
 	brew cask install adoptopenjdk8
 
 最后成功安装。
+
+## brew 的本地安装
+
+经过测试，brew install 和 brew cask install 一样。
+
+举一个例子，我在安装 jenkins
+
+	brew install jenkins
+
+但是，安装的速度非常慢，于是，我就查看了 brew 的 下载目录。
+
+而，我的 brew cask 的缓存目录在
+
+	/Users/licong/Library/Caches/Homebrew/downloads/
+
+看到有这样一个文件
+
+	37df13af60d72d1ec9015a3196849941f0ddd8e6e20e8ba247223642f126d6b5--jenkins.war.incomplete
+
+然后我用迅雷，找到 jenkin.war 的资源链接，下载下来
+
+并将文件放在该目录下，命名成
+
+	37df13af60d72d1ec9015a3196849941f0ddd8e6e20e8ba247223642f126d6b5--jenkins.war
+
+同时，我们将
+
+	37df13af60d72d1ec9015a3196849941f0ddd8e6e20e8ba247223642f126d6b5--jenkins.war.imcomplete
+
+给删除掉。
+
+然后我们接着运行
+
+	brew install jenkins
+
+完美解决。
