@@ -1,11 +1,10 @@
 ---
-title: 币币生息|远程服务器部署
+title: eosvoter|远程服务器部署
 date: 2019-10-09 21:46:57
 categories:
-- 币币生息
+- eosvoter
 tags:
-- 项目经验
-- 币币生息
+- eosvoter
 - ssh
 - 服务器
 ---

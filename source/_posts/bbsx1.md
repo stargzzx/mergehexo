@@ -2,10 +2,9 @@
 title: 抓捕漏的数据|币币生息
 date: 2019-09-22 16:07:51
 categories:
-- 币币生息
+- eosvoter
 tags:
-- 项目经验
-- 币币生息
+- eosvoter
 ---
 在公司接到的第一件事就是将漏抓的数据补全。
 <!-- more -->
