@@ -4,7 +4,7 @@ date: 2019-08-22 15:29:59
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 微信小程序——图片的备份

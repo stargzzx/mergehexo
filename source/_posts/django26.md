@@ -4,8 +4,7 @@ date: 2019-09-13 18:12:28
 categories:
 - Django
 tags:
-- Diango
-- 模型
+- Django
 ---
 Django模型层之数据库迁移
 <!-- more -->

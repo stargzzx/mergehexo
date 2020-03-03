@@ -2,9 +2,9 @@
 title: 博客制作——django admin
 date: 2019-08-09 12:37:26
 categories:
-- Diango
+- Django
 tags:
-- Diango
+- Django
 ---
 这里讲的是 django admin 模块
 <!-- more -->

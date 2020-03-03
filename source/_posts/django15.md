@@ -4,7 +4,7 @@ date: 2019-08-23 14:07:21
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 微信小程序——综合实践之生活服务

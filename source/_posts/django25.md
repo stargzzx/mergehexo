@@ -4,8 +4,7 @@ date: 2019-09-13 18:05:59
 categories:
 - Django
 tags:
-- Diango
-- 模型
+- Django
 ---
 Django是MTV模式，其中Model是模型。
 <!-- more -->

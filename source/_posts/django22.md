@@ -4,7 +4,7 @@ date: 2019-09-09 12:31:54
 categories:
 - Django
 tags:
-- Diango
+- Django
 - CSRF
 - 403
 ---

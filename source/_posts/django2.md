@@ -2,9 +2,9 @@
 title: 博客制作——django shell
 date: 2019-08-09 12:21:41
 categories:
-- Diango
+- Django
 tags:
-- Diango
+- Django
 ---
 这里讲述了 shell 的作用。
 <!-- more -->

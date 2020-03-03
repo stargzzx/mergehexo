@@ -4,7 +4,7 @@ date: 2019-08-23 14:58:30
 categories:
 - Django
 tags:
-- Diango
+- Django
 - Django错误
 ---
 Django 报错 TypeError: xxx() got multiple values for argument 'xxx'

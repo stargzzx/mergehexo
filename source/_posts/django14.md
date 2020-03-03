@@ -4,7 +4,7 @@ date: 2019-08-22 19:40:18
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 微信小程序————setData()方法的使用和注意事项

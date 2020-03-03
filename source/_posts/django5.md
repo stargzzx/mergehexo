@@ -2,9 +2,9 @@
 title: 博客制作——django 分页
 date: 2019-08-13 10:07:56
 categories:
-- Diango
+- Django
 tags:
-- Diango
+- Django
 ---
 这一篇讲述分页。
 <!-- more -->

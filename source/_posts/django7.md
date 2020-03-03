@@ -4,7 +4,7 @@ date: 2019-08-20 11:25:47
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 这是django的视图层。

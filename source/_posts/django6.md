@@ -4,7 +4,7 @@ date: 2019-08-14 10:25:47
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 这个是微信小程序的入门环节。

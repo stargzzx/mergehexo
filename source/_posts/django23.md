@@ -4,7 +4,7 @@ date: 2019-09-09 13:02:42
 categories:
 - Django
 tags:
-- Diango
+- Django
 - 中间件
 ---
 这个是介绍了Django的中间件。

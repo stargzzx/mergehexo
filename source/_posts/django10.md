@@ -2,11 +2,11 @@
 title: 理解wx:key
 date: 2019-08-21 11:37:19
 categories:
-- Django
+- 微信小程序
 tags:
-- Diango
+- 微信小程序
 ---
-理解django的框架细节。
+理解w微信小程序的框架细节。
 <!-- more -->
 # 参考原文
 [最难点For的wx:key，您肯定不知道的！](http://www.wxappclub.com/topic/536)

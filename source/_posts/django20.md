@@ -4,7 +4,7 @@ date: 2019-09-07 15:11:43
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 微信小程序——实现登录功能

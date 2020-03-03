@@ -4,7 +4,7 @@ date: 2019-08-22 14:49:20
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 django的类视图

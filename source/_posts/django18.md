@@ -4,7 +4,7 @@ date: 2019-08-30 14:40:36
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 微信小程序之综合实践——休闲娱乐

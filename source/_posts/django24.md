@@ -4,7 +4,7 @@ date: 2019-09-13 16:54:55
 categories:
 - Django
 tags:
-- Diango
+- Django
 - session
 - cookie
 ---

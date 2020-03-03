@@ -4,7 +4,7 @@ date: 2019-08-20 21:38:11
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 小程序开发——django视图层（Django url配置）

@@ -4,7 +4,7 @@ date: 2019-09-09 09:29:26
 categories:
 - Django
 tags:
-- Diango
+- Django
 - CSRF
 - 中间件
 ---

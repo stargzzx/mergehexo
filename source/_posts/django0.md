@@ -2,9 +2,9 @@
 title: 博客制作——django入门
 date: 2019-08-07 13:28:15
 categories:
-- Diango
+- Django
 tags:
-- Diango
+- Django
 ---
 这是入门教程。
 <!-- more -->

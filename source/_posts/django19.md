@@ -4,7 +4,7 @@ date: 2019-09-07 10:23:34
 categories:
 - 微信小程序
 tags:
-- Diango
+- Django
 - 微信小程序
 ---
 微信小程序开发——会话服务
