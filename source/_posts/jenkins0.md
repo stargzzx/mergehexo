@@ -12,9 +12,19 @@ tags:
 
 <!-- more -->
 
-# 简介
+<br/>
+# 背景
+<br/>
 
+使用的是 macbook
+
+<br/>
+# 简介
+<br/>
+
+<br/>
 # 安装
+<br/>
 
 jenkins 要使用 brew 进行安装，如果使用 dmg 进行安装的话，后期会导致权限问题。
 
@@ -56,7 +66,13 @@ jenkins 要使用 brew 进行安装，如果使用 dmg 进行安装的话，后�
 
 这一步很慢。
 
+我在没有修改镜像之前，安装插件是失败的，关于如何安装插件请参考我下一篇博文。
+
 ## 其他
+
+关闭服务
+
+	launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 
 查看初始密码
 
