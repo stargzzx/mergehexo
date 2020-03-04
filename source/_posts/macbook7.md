@@ -19,4 +19,7 @@ tags:
 
 	brew install unrar
 
-明天再更新
+
+解压一个压缩包
+
+	unrar x 压缩包.rar

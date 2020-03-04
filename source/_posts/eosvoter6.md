@@ -12,6 +12,10 @@ tags:
 
 在这里，我总结一下，在和外包合作时候的注意点。
 
+关于 rest 的接口规范，希望你可以看我下面的博文。
+
+[编程规范 | rest 接口篇](https://benpaodewoniu.github.io/2020/03/03/standard0/)
+
 <!-- more -->
 
 <br/>
