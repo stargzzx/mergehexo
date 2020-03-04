@@ -6,6 +6,7 @@ categories:
 tags:
 - standard
 - rest
+mathjax: true
 ---
 rest 是一种架构风格，你也可以理解成接口规范，是一种不具有广义性标准的规范。
 
@@ -75,5 +76,72 @@ rest 还有更多的操作，但是，以上四种就已经满足几乎所有的
 - 更新资源的部分属性
 	- HTTP PATCH
 
+关于这个操作，我接受的那个项目并没有很好的规范，我只用了 get 和 post 请求。
 
+<br/>
+# 设计规范
+<br/>
 
+协议：使用 HTTPs 协议，确保交互数据的传输安全
+
+域名：应该尽量将 API 部署在专用域名之下。
+
+	https://api.example.com
+
+这点，很多交易所确实将 API 部署在专有域名之下，但是，我的那个投票管理项目其放在专有域名之下。
+
+版本控制：将版本号放在 URL 或者 Header 中。
+
+我公司的项目是将其放在 URL 中，比如
+
+	http://{{host}}/eosvoter/v1/add/account
+
+大部分交易所，也是将版本放在URL中。
+
+路径：只能包含名词，不能包含动词
+
+这个我负责的项目也没有很好的遵守
+
+过滤信息： ?limit=10  ?offset=10 ?page=1
+
+Hypermedia API：在返回结果中提供相关的资源的链接，连向其他的 API 方法
+
+验证：确定用户是其声明的身份，比如提供账户的密码
+
+关于这点，我在量化交易的项目中深有体会。交易所往往会提供一个 key 和一个 secret ，然后我们在 url 或者 header 中加上 key ，再把 key + secret + time 进行加密（或者其他加密方式），放在 header 中。
+
+授权：保证用户对请求资源的操作权限。
+
+这个在交易所上主要有，不同的 key 和 secret 有的可以下单，有的只能查询。
+
+<br/>
+# HTTP 常见的状态码
+<br/>
+
+状态码|含义
+---|---|---
+200(OK)|  请求成功
+201(created)|  资源被成功创建
+202(accepted)|  已经接受请求，但是尚未完成（异步处理）
+301(moved permanently)|  资源的 URL 被更新
+303(see other)|  其他（如，负载均衡等）
+400(bad request)|  坏请求
+404(not found)|  资源不存在
+406(not acceptable)|  服务端不支持所需表示
+409(conflict)|  通用冲突
+412(precondition failed)|  前置条件失败（如执行条件更新时的冲突）
+415(unsupported media type)|  接收到的表示不支持
+500(internal server error)|  通用错误响应
+503(service unavailable)|  服务当前无法处理请求
+
+<br/>
+# 返回结果设计
+<br/>
+
+	{
+		"msg":"url not found",
+		"code":"1001",
+		"request":"get/add/id"
+	}
+
+code 可以根据自己的公司设定来，比如前几位代表部门，后面代表什么业务
