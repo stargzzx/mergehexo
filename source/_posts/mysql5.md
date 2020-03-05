@@ -71,3 +71,43 @@ utf8mb4 替换为 utf8
 有的时候，可能不是 utf8mb4_0900_ai_ci 和 utf8mb4，但也没关系，只要把相应位置的东西，进行匹配替换就好了。
 
 {% img /images/mysql/5_0.png %}
+
+<br/>
+# 导出的数据表再导入的时候出错
+<br/>
+
+使用
+
+	mysqldump -u root -p -d coinex btc >> btc.sql
+
+导出一张 sql 表的时候，我再次导入出现下面的问题
+	
+	Variable ‘time_zone’ can’t be set to the value of ‘NULL’解决方法
+
+查了一下网上的方法，说是需要扩大缓存量，但是，我扩大后还是不行。
+
+后来我注意到，导出来的 sql 表中有这个
+
+{% img /images/mysql/5_1.png %}
+
+我将所有的注释都去掉后
+
+{% img /images/mysql/5_2.png %}
+
+果然就没有再报错。
+
+<br/>
+# mysqldump 的参数问题
+<br/>
+
+查看参数可以使用
+
+	mysqldump --help
+
+非常有用
+
+比如，净化版的输出就是
+
+	mysqldump -u root -p --compact=TRUE --add-drop-table=FALSE --create-options=FALSE --add-locks=TRUE --column-statistics=FALSE -t ant t_relation >> ~/tmp.sql
+
+{% img /images/mysql/5_3.png %}

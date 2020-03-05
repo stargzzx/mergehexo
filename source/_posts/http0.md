@@ -87,7 +87,7 @@ Transmission Conreol Protocol 传输控制协议
 2. 连接（connect）套接字
 3. 处理信息
 
-### 代码展示
+### 一个简单的代码展示
 
 #### server.py
 
