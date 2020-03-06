@@ -60,5 +60,5 @@ tags:
 
 关于实习经历，你可以查看下面的文章。
 
-[币币生息](http://localhost:4000/categories/%E5%B8%81%E5%B8%81%E7%94%9F%E6%81%AF/)
-[两年的经历回顾](http://localhost:4000/2020/01/07/life1/)
+[币币生息](https://benpaodewoniu.github.io/categories/%E5%B8%81%E5%B8%81%E7%94%9F%E6%81%AF/)
+[两年的经历回顾](https://benpaodewoniu.github.io/2020/01/07/life1/)
