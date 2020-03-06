@@ -15,7 +15,15 @@ mathjax: true
 
 ## 客户端
 
-<pre class="mermaid">graph LR
-A[Bob<br>输入明文P] -->|P|B["Bob的私钥PRbob<br>加密算法(如RSA)<br>C=E(PRbob,P)"];
-B -->|传输数字签名C|C["Alice的公钥环{PUbob,……}<br>解密算法(如RSA)<br>P=D(PUbob,C)"];
-C -->|P|D["Alice<br>输出明文P"];</pre>
+
+```mermaid
+graph TB
+start(开始)-->inputA[输入用户名密码]
+inputA-->opA{数据库查询子类}
+opA-->conditionA{是否有此用户}
+conditionA--yes-->conditionB{密码是否正确}
+conditionA--no-->inputA
+conditionB--yes-->opB[读入用户信息]
+conditionB--no-->inputA
+opB-->en(登录)
+```
