@@ -13,3 +13,9 @@ mathjax: true
 
 # 技术路线
 
+## 客户端
+
+<pre class="mermaid">graph LR
+A[Bob<br>输入明文P] -->|P|B["Bob的私钥PRbob<br>加密算法(如RSA)<br>C=E(PRbob,P)"];
+B -->|传输数字签名C|C["Alice的公钥环{PUbob,……}<br>解密算法(如RSA)<br>P=D(PUbob,C)"];
+C -->|P|D["Alice<br>输出明文P"];</pre>
