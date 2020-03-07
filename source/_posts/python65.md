@@ -11,7 +11,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 引子
+
+<br/>
 
 在项目中，我遇见了一个问题，我们会把状态用 log 输入到文件中，但是，有的输出并不知道哪里错了，也就是不知道哪个文件错了。
 
@@ -42,7 +46,11 @@ if __name__ == '__main__':
 	
 通过示例，我们发现普通的打印异常只有很少量的信息（通常是异常的value值），这种情况下我们很难定位在哪块代码出的问题，以及如何出现这种异常。那么到底要如何打印更加详细的信息呢？下面我们就来一一介绍。
 
+<br/>
+
 # sys.exc_info和traceback object
+
+<br/>
 
 Python程序的traceback信息均来源于一个叫做traceback object的对象，而这个traceback object通常是通过函数sys.exc_info()来获取的，先来看一个例子：
 
@@ -72,7 +80,11 @@ if __name__ == '__main__':
 
 有了traceback object我们就可以通过traceback module来打印和格式化traceback的相关信息，下面我们就来看下traceback module的相关函数。
 
+<br/>
+
 # traceback module
+
+<br/>
 
 Python的traceback module提供一整套接口用于提取，格式化和打印Python程序的stack traces信息，下面我们通过例子来详细了解下这些接口：
 
@@ -151,7 +163,11 @@ traceback.print_exception(etype, value, tb[, limit[, file]])
 
 还有一个不同是当异常为SyntaxError时，会有"^"来指示语法错误的位置
 
+<br/>
+
 # print_exc
+
+<br/>
 
 print_exc是简化版的print_exception, 由于exception type, value和traceback object都可以通过sys.exc_info()获取，因此print_exc()就自动执行exc_info()来帮助获取这三个参数了，也因此这个函数是我们的程序中最常用的，因为它足够简单
 
@@ -186,7 +202,11 @@ if __name__ == '__main__':
 
 只有两个参数，够简单
 
+<br/>
+
 # format_exc
+
+<br/>
 
 {% codeblock %}
 import logging
@@ -214,7 +234,11 @@ if __name__ == '__main__':
 
 traceback module中还有一些其它的函数，但因为并不常用，就不在展开来讲，感兴趣的同学可以看下参考链接中的文档。
 
+<br/>
+
 # 获取线程中的异常信息
+
+<br/>
 
 通常情况下我们无法将多线程中的异常带回主线程，所以也就无法打印线程中的异常，而通过上边学到这些知识，我们可以对线程做如下修改，从而实现捕获线程异常的目的。
 

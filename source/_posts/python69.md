@@ -74,5 +74,4 @@ class Show:
 if __name__ == '__main__':
     show = Show()
     show.show_picture(show.get_file_path())
-
 {% endcodeblock %}

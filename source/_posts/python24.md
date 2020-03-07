@@ -9,12 +9,16 @@ tags:
 - matplotlib
 ---
 如题。
-<!-- more -->
-给出一些比较好玩的例子。
-## Rastrigin
-{% img /images/python/24_0.png %}
-{% codeblock %}
 
+<!-- more -->
+
+给出一些比较好玩的例子。
+
+## Rastrigin
+
+{% img /images/python/24_0.png %}
+
+{% codeblock %}
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -29,6 +33,6 @@ R = y ** 2 - 10 * np.cos(2 * np.pi * y) + 10
 Z = B + R
 ax.plot_surface(x,y,Z,rstride=1,cstride=1,cmap=plt.get_cmap('rainbow'))
 plt.show()
-
 {% endcodeblock %}
+
 {% img /images/python/24_1.png %}

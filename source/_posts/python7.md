@@ -9,7 +9,9 @@ tags:
 - Virtaulenvwrapper
 ---
 Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做：
- <!-- more -->
+
+<!-- more -->
+
 	1.将所有虚拟环境整合在一个目录下
 	2.管理（新增，删除，复制）虚拟环境
 	3.快速切换虚拟环境
@@ -17,12 +19,15 @@ Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境�
 安装方法
 
 ## 1 运行
+
 {% codeblock %}
 pip install virtualenvwrapper
 {% endcodeblock %}
 
 ## 2 创建目录
+
 用来存放虚拟环境(只是创建一个普通的目录)
+
 {% codeblock %}
 mkdir 。。。
 {% endcodeblock %}
@@ -41,12 +46,15 @@ source /usr/local/bin/virtualenvwrapper.sh
 ## 4 运行： 
 
 使用virtualenv命令virtualenv env创建的虚拟环境是不能被workon的
+
 需要使用
+
 {% codeblock %}	
 mkvirtualenv  创建
 {% endcodeblock %}
 
 ## 命令列表
+
 {% codeblock %}	
 workon:列出虚拟环境列表
 	
@@ -66,8 +74,11 @@ workon [虚拟环境名称]:切换虚拟环境
 {% endcodeblock %}
 
 ## 注意点
+
 每一个虚拟环境相当于独立的环境，如果要安装第三方，需要进入虚拟环境中单独安装
+
 安装第三方可以用豆瓣源
+
 {% codeblock %}	
 pip install -i http://pypi.douban.com/simple/ saltTesting
 {% endcodeblock %}

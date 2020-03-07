@@ -9,16 +9,31 @@ tags:
 - pandas
 ---
 如题。
+
 <!-- more -->
+
+<br/>
+
 # R
+
+<br/>
+
 ## read_csv()
+
 pandas可以将读取到的表格型数据（文件不一定要是表格）转成DataFrame类型的数据结构，然后我们可以通过操作DataFrame进行数据分析，数据预处理以及行和列的操作等。
+
 功能：从文件、URL、文件新对象中加载带有分隔符的数据，默认分隔符是逗号。
+
 read_csv(*filepath_or_buffer*, *sep='*, *'*, *delimiter=None*, *header='infer'*, *names=None*, *index_col=None*,*usecols=None*, *squeeze=False*, *prefix=None*, *mangle_dupe_cols=True*, *dtype=None*, *engine=None*,*converters=None*, *true_values=None*, *false_values=None*, *skipinitialspace=False*, *skiprows=None*, *nrows=None*,*na_values=None*, *keep_default_na=True*, *na_filter=True*, *verbose=False*, *skip_blank_lines=True*,*parse_dates=False*, *infer_datetime_format=False*, *keep_date_col=False*, *date_parser=None*, *dayfirst=False*,*iterator=False*, *chunksize=None*, *compression='infer'*, *thousands=None*, *decimal='.'*, *lineterminator=None*,*quotechar='"'*, *quoting=0*, *escapechar=None*, *comment=None*, *encoding=None*, *dialect=None*, *tupleize_cols=False*,*error_bad_lines=True*, *warn_bad_lines=True*, *skipfooter=0*, *skip_footer=0*, *doublequote=True*,*delim_whitespace=False*, *as_recarray=False*, *compact_ints=False*, *use_unsigned=False*, *low_memory=True*,*buffer_lines=None*, *memory_map=False*, *float_precision=None*)
+
 返回参数
+
 返回参数 : DataFrame or TextParser
+
 DataFrame：二维标记数据结构
+
 列可以是不同的数据类型，是最常用的pandas对象，如同Series对象一样接受多种输入：lists/dicts/Series/DataFrame。
+
 ceshi.csv 参数
 
 	,c1,c2,c3
@@ -29,7 +44,6 @@ ceshi.csv 参数
 	e,4,9,14
 	
 {% codeblock %}
-
 import pandas as pd
 obj=pd.read_csv('ceshi.csv')
 print obj
@@ -47,7 +61,6 @@ c1             int64
 c2             int64
 c3             int64
 dtype: object
-
 {% endcodeblock %}
 
 	代码将有列索引但没有行索引的数据，read_csv会自动添加上行索引（即使原数据有行索引）。
@@ -71,9 +84,10 @@ dtype: object
 		将真实的某列当做index（列的数目，甚至列名）
 	
 ### 当 header = None
-即指明原始文件数据没有列索引，这样read_csv为自动加上列索引，除非你给定列索引的名字。
-{% codeblock %}
 
+即指明原始文件数据没有列索引，这样read_csv为自动加上列索引，除非你给定列索引的名字。
+
+{% codeblock %}
 obj_2=pd.read_csv('f:/ceshi.csv',header=None,names=range(2,5))
 print obj_2
 
@@ -84,12 +98,13 @@ print obj_2
 3   2   7  12
 4   3   8  13
 5   4   9  14
-
 {% endcodeblock %}
-### header=0
-表示文件第0行（即第一行，索引从0开始）为列索引，这样加names会替换原来的列索引。
-{% codeblock %}
 
+### header=0
+
+表示文件第0行（即第一行，索引从0开始）为列索引，这样加names会替换原来的列索引。
+
+{% codeblock %}
 obj_2=pd.read_csv('f:/ceshi.csv',header=0,names=range(2,5))
 print obj_2
 
@@ -99,11 +114,11 @@ print obj_2
 2  2  7  12
 3  3  8  13
 4  4  9  14
-
 {% endcodeblock %}
-### index_col用法
-{% codeblock %}
 
+### index_col用法
+
+{% codeblock %}
 obj_2=pd.read_csv('ceshi.csv',index_col=0)
 print obj_2
 
@@ -124,8 +139,8 @@ b 6    1  11
 c 7    2  12
 d 8    3  13
 e 9    4  14
-
 {% endcodeblock %}
+
 index_col为指定数据中那一列作为Dataframe的行索引，也可以可指定多列，形成层次索引，默认为None,即不指定行索引，这样系统会自动加上行索引。
 
 

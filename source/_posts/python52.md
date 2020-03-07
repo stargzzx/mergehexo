@@ -10,47 +10,58 @@ tags:
 - 生成器
 ---
 python 的迭代器和生成器。
-<!-- more -->
-## 前提
-yield 必须放在循环中，要么是 while 要么是 for 循环
-## 参考资料
-[Python3 迭代器与生成器](http://www.runoob.com/python3/python3-iterator-generator.html)
-[Python yield 使用浅析](https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/)
-## 迭代器
-迭代是Python最强大的功能之一，是访问集合元素的一种方式。
-迭代器是一个可以记住遍历的位置的对象。
-迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。
-迭代器有两个基本的方法：iter() 和 next()。
-字符串，列表或元组对象都可用于创建迭代器：
-{% codeblock %}
 
+<!-- more -->
+
+## 前提
+
+yield 必须放在循环中，要么是 while 要么是 for 循环
+
+## 参考资料
+
+[Python3 迭代器与生成器](http://www.runoob.com/python3/python3-iterator-generator.html)
+
+[Python yield 使用浅析](https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/)
+
+## 迭代器
+
+迭代是Python最强大的功能之一，是访问集合元素的一种方式。
+
+迭代器是一个可以记住遍历的位置的对象。
+
+迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。
+
+迭代器有两个基本的方法：iter() 和 next()。
+
+字符串，列表或元组对象都可用于创建迭代器：
+
+{% codeblock %}
 >>>list=[1,2,3,4]
 >>> it = iter(list)    # 创建迭代器对象
 >>> print (next(it))   # 输出迭代器的下一个元素
 1
 >>> print (next(it))
 2
->>>
-			
+>>>		
 {% endcodeblock %}
-迭代器对象可以使用常规for语句进行遍历：
-{% codeblock %}
 
+迭代器对象可以使用常规for语句进行遍历：
+
+{% codeblock %}
 #!/usr/bin/python3
  
 list=[1,2,3,4]
 it = iter(list)    # 创建迭代器对象
 for x in it:
-    print (x, end=" ")
-			
+    print (x, end=" ")		
 {% endcodeblock %}
 执行以上程序，输出结果如下：
 
 	1 2 3 4
 	
 也可以使用 next() 函数：
-{% codeblock %}
 
+{% codeblock %}
 #!/usr/bin/python3
  
 import sys         # 引入 sys 模块
@@ -62,9 +73,9 @@ while True:
     try:
         print (next(it))
     except StopIteration:
-        sys.exit()
-			
+        sys.exit()			
 {% endcodeblock %}
+
 执行以上程序，输出结果如下：
 
 	1
@@ -73,14 +84,20 @@ while True:
 	4
 	
 ## 创建一个迭代器
-把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__() 。
-如果你已经了解的面向对象编程，就知道类都有一个构造函数，Python 的构造函数为 __init__(), 它会在对象初始化的时候执行。
-更多内容查阅：Python3 面向对象
-__iter__() 方法返回一个特殊的迭代器对象， 这个迭代器对象实现了 __next__() 方法并通过 StopIteration 异常标识迭代的完成。
-__next__() 方法（Python 2 里是 next()）会返回下一个迭代器对象。
-创建一个返回数字的迭代器，初始值为 1，逐步递增 1：
-{% codeblock %}
 
+把一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__() 。
+
+如果你已经了解的面向对象编程，就知道类都有一个构造函数，Python 的构造函数为 __init__(), 它会在对象初始化的时候执行。
+
+更多内容查阅：Python3 面向对象
+
+__iter__() 方法返回一个特殊的迭代器对象， 这个迭代器对象实现了 __next__() 方法并通过 StopIteration 异常标识迭代的完成。
+
+__next__() 方法（Python 2 里是 next()）会返回下一个迭代器对象。
+
+创建一个返回数字的迭代器，初始值为 1，逐步递增 1：
+
+{% codeblock %}
 class MyNumbers:
   def __iter__(self):
     self.a = 1
@@ -98,9 +115,9 @@ print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))
-print(next(myiter))
-			
+print(next(myiter))	
 {% endcodeblock %}
+
 执行输出结果为：
 
 	1
@@ -110,7 +127,6 @@ print(next(myiter))
 	5
 
 {% codeblock %}
-
 class Fab(object):
 
     def __init__(self, max):
@@ -137,9 +153,9 @@ print(next(e))
 print(next(e))
 print(next(e))
 print(next(e))
-print(next(e))
-			
+print(next(e))		
 {% endcodeblock %}
+
 执行输出结果为：
 
 	1
@@ -152,10 +168,12 @@ print(next(e))
 	21
 	
 ## StopIteration
-StopIteration 异常用于标识迭代的完成，防止出现无限循环的情况，在 __next__() 方法中我们可以设置在完成指定循环次数后触发 StopIteration 异常来结束迭代。
-在 20 次迭代后停止执行：
-{% codeblock %}
 
+StopIteration 异常用于标识迭代的完成，防止出现无限循环的情况，在 __next__() 方法中我们可以设置在完成指定循环次数后触发 StopIteration 异常来结束迭代。
+
+在 20 次迭代后停止执行：
+
+{% codeblock %}
 class MyNumbers:
   def __iter__(self):
     self.a = 1
@@ -174,8 +192,8 @@ myiter = iter(myclass)
  
 for x in myiter:
   print(x)
-			
 {% endcodeblock %}
+
 执行输出结果为：
 
 	1
@@ -200,7 +218,6 @@ for x in myiter:
 	20
 
 {% codeblock %}
-
 class Fab(object):
 
     def __init__(self, max):
@@ -227,9 +244,9 @@ print(next(e))
 print(next(e))
 print(next(e))
 print(next(e))
-print(next(e))
-			
+print(next(e))	
 {% endcodeblock %}
+
 执行输出结果为：
 
 	1
@@ -245,14 +262,20 @@ print(next(e))
 	StopIteration
 
 因为向 Fab 中传递的是 5 ，所以说当执行的迭代次数超过 5 的时候，就会报错。
-## 生成器
-在 Python 中，使用了 yield 的函数被称为生成器（generator）。
-跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器。
-在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值, 并在下一次执行 next() 方法时从当前位置继续运行。
-调用一个生成器函数，返回的是一个迭代器对象。
-以下实例使用 yield 实现斐波那契数列：
-{% codeblock %}
 
+## 生成器
+
+在 Python 中，使用了 yield 的函数被称为生成器（generator）。
+
+跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作，更简单点理解生成器就是一个迭代器。
+
+在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值, 并在下一次执行 next() 方法时从当前位置继续运行。
+
+调用一个生成器函数，返回的是一个迭代器对象。
+
+以下实例使用 yield 实现斐波那契数列：
+
+{% codeblock %}
 #!/usr/bin/python3
  
 import sys
@@ -271,18 +294,23 @@ while True:
     try:
         print (next(f), end=" ")
     except StopIteration:
-        sys.exit()
-			
+        sys.exit()	
 {% endcodeblock %}
+
 执行以上程序，输出结果如下：
 
 	0 1 1 2 3 5 8 13 21 34 55
 	
 ## 用例子说明 yield 的发展
+
 您可能听说过，带有 yield 的函数在 Python 中被称之为 generator（生成器），何谓 generator ？
+
 我们先抛开 generator，以一个常见的编程题目来展示 yield 的概念。
+
 ## 如何生成斐波那契數列
+
 斐波那契（Fibonacci）數列是一个非常简单的递归数列，除第一个和第二个数外，任意一个数都可由前两个数相加得到。用计算机程序输出斐波那契數列的前 N 个数是一个非常简单的问题，许多初学者都可以轻易写出如下函数：
+
 ### 清单 1. 简单输出斐波那契數列前 N 个数
 
 	def fab(max): 
@@ -302,7 +330,9 @@ while True:
 	5
 
 结果没有问题，但有经验的开发者会指出，直接在 fab 函数中用 print 打印数字会导致该函数可复用性较差，因为 fab 函数返回 None，其他函数无法获得该函数生成的数列。
+
 要提高 fab 函数的可复用性，最好不要直接打印出数列，而是返回一个 List。以下是 fab 函数改写后的第二个版本：
+
 ### 清单 2. 输出斐波那契數列前 N 个数第二版
 
 	def fab(max): 
@@ -326,7 +356,9 @@ while True:
 	5
 
 改写后的 fab 函数通过返回 List 能满足复用性的要求，但是更有经验的开发者会指出，该函数在运行中占用的内存会随着参数 max 的增大而增大，如果要控制内存占用，最好不要用 List
+
 来保存中间结果，而是通过 iterable 对象来迭代。例如，在 Python2.x 中，代码：
+
 ### 清单 3. 通过 iterable 对象来迭代
 
 	for i in range(1000): pass
@@ -336,7 +368,9 @@ while True:
 	for i in xrange(1000): pass
 	
 则不会生成一个 1000 个元素的 List，而是在每次迭代中返回下一个数值，内存空间占用很小。因为 xrange 不返回 List，而是返回一个 iterable 对象。
+
 利用 iterable 我们可以把 fab 函数改写为一个支持 iterable 的 class，以下是第三个版本的 Fab：
+
 ### 清单 4. 第三个版本
 
 	class Fab(object): 
@@ -368,6 +402,7 @@ Fab 类通过 next() 不断返回数列的下一个数，内存占用始终为�
 	5
 
 然而，使用 class 改写的这个版本，代码远远没有第一版的 fab 函数来得简洁。如果我们想要保持第一版 fab 函数的简洁性，同时又要获得 iterable 的效果，yield 就派上用场了：
+
 ### 清单 5. 使用 yield 的第四版
 
 	def fab(max): 
@@ -381,6 +416,7 @@ Fab 类通过 next() 不断返回数列的下一个数，内存占用始终为�
 	'''
 
 第四个版本的 fab 和第一版相比，仅仅把 print b 改为了 yield b，就在保持简洁性的同时获得了 iterable 的效果。
+
 调用第四版的 fab 和第二版的 fab 完全一致：
 
 	>>> for n in fab(5): 
@@ -413,10 +449,15 @@ Fab 类通过 next() 不断返回数列的下一个数，内存占用始终为�
 	StopIteration
 
 当函数执行结束时，generator 自动抛出 StopIteration 异常，表示迭代完成。在 for 循环里，无需处理 StopIteration 异常，循环会正常结束。
+
 我们可以得出以下结论：
+
 一个带有 yield 的函数就是一个 generator，它和普通函数不同，生成一个 generator 看起来像函数调用，但不会执行任何函数代码，直到对其调用 next()（在 for 循环中会自动调用 next()）才开始执行。虽然执行流程仍按函数的流程执行，但每执行到一个 yield 语句就会中断，并返回一个迭代值，下次执行时从 yield 的下一个语句继续执行。看起来就好像一个函数在正常执行的过程中被 yield 中断了数次，每次中断都会通过 yield 返回当前的迭代值。
+
 yield 的好处是显而易见的，把一个函数改写为一个 generator 就获得了迭代能力，比起用类的实例保存状态来计算下一个 next() 的值，不仅代码简洁，而且执行流程异常清晰。
+
 如何判断一个函数是否是一个特殊的 generator 函数？可以利用 isgeneratorfunction 判断：
+
 ### 清单 7. 使用 isgeneratorfunction 判断
 
 	>>> from inspect import isgeneratorfunction 
@@ -424,6 +465,7 @@ yield 的好处是显而易见的，把一个函数改写为一个 generator 就
 	True
 
 要注意区分 fab 和 fab(5)，fab 是一个 generator function，而 fab(5) 是调用 fab 返回的一个 generator，好比类的定义和类的实例的区别：
+
 ### 清单 8. 类的定义和类的实例
 
 	>>> import types 
@@ -462,8 +504,11 @@ fab 是无法迭代的，而 fab(5) 是可迭代的：
 	f2: 5
 
 ## return 的作用
+
 在一个 generator function 中，如果没有 return，则默认执行至函数完毕，如果在执行过程中 return，则直接抛出 StopIteration 终止迭代。
+
 ## 另一个例子
+
 另一个 yield 的例子来源于文件读取。如果直接对文件对象调用 read() 方法，会导致不可预测的内存占用。好的方法是利用固定长度的缓冲区来不断读取文件内容。通过 yield，我们不再需要编写读文件的迭代类，就可以轻松实现文件读取：
 
 清单 9. 另一个 yield 的例子
@@ -479,14 +524,18 @@ fab 是无法迭代的，而 fab(5) 是可迭代的：
 				   return
 				   
 以上仅仅简单介绍了 yield 的基本概念和用法，yield 在 Python 3 中还有更强大的用法，我们会在后续文章中讨论。
+
 注：本文的代码均在 Python 2.7 中调试通过
 
 ## 我的代码示例
-### 叠加 yield
-在这个方法中我们还能调用方法
-#### 没有 while 的例子
-{% codeblock %}
 
+### 叠加 yield
+
+在这个方法中我们还能调用方法
+
+#### 没有 while 的例子
+
+{% codeblock %}
 def a():
     print("a")
 
@@ -513,12 +562,12 @@ next(f)
 next(f)
 next(f)
 next(f)
-next(f)
-			
+next(f)		
 {% endcodeblock %}
-输出
-{% codeblock %}
 
+输出
+
+{% codeblock %}
 1
 2
 3
@@ -532,12 +581,13 @@ Traceback (most recent call last):
   File "ski.py", line 25, in <module>
     next(f)
 StopIteration
-
 {% endcodeblock %}
-因为 next 的输出超过了循环中的次数
-#### 有 while 的代码
-{% codeblock %}
 
+因为 next 的输出超过了循环中的次数
+
+#### 有 while 的代码
+
+{% codeblock %}
 def a():
     print("a")
 
@@ -580,5 +630,6 @@ a
 a
 a
 {% endcodeblock %}
+
 while 的是不出错的
 

@@ -8,9 +8,10 @@ tags:
 - PIL
 ---
 这是一个很神奇的代码，OK，下面请看效果图。
-<!-- more -->
-{% codeblock %}
 
+<!-- more -->
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 import time
@@ -35,5 +36,4 @@ for i in range(0, y):
         else:
             t.putpixel([j, i], tuple(np.array([255, 255, 255])))
 t.save('max/licong.jpg')
-
 {% endcodeblock %}

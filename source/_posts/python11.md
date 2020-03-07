@@ -10,17 +10,26 @@ tags:
 - 格式化
 ---
 python 的字符串处理。
-<!-- more -->
-## 字符串前面添加（u，r，b）的功能
-### r/R 
-在Python的string前面加上‘r’， 是为了告诉编译器这个string是个raw string，不要转意backslash '\' 。 例如，\n 在raw string中，是两个字符，\和n， 而不会转意为换行符。由于正则表达式和 \ 会有冲突，因此，当一个字符串使用了正则表达式后，最好在前面加上'r'。
-### b 
-Python3里默认的str是(Python2里的)unicode, bytes是(Python2)的str, b前缀代表的就是bytes。 Python2里, b前缀没什么具体意义， 只是为了兼容Python3的这种写法。
-### u/U 
-表示unicode字符串 ，不是仅仅是针对中文, 可以针对任何的字符串，代表是对字符串进行unicode编码。 一般英文字符在使用各种编码下, 基本都可以正常解析, 所以一般不带u；但是中文, 必须表明所需编码, 否则一旦编码转换就会出现乱码。 建议所有编码方式采用UTF-8。
-## 字符串
-{% codeblock %}
 
+<!-- more -->
+
+## 字符串前面添加（u，r，b）的功能
+
+### r/R 
+
+在Python的string前面加上‘r’， 是为了告诉编译器这个string是个raw string，不要转意backslash '\' 。 例如，\n 在raw string中，是两个字符，\和n， 而不会转意为换行符。由于正则表达式和 \ 会有冲突，因此，当一个字符串使用了正则表达式后，最好在前面加上'r'。
+
+### b 
+
+Python3里默认的str是(Python2里的)unicode, bytes是(Python2)的str, b前缀代表的就是bytes。 Python2里, b前缀没什么具体意义， 只是为了兼容Python3的这种写法。
+
+### u/U 
+
+表示unicode字符串 ，不是仅仅是针对中文, 可以针对任何的字符串，代表是对字符串进行unicode编码。 一般英文字符在使用各种编码下, 基本都可以正常解析, 所以一般不带u；但是中文, 必须表明所需编码, 否则一旦编码转换就会出现乱码。 建议所有编码方式采用UTF-8。
+
+## 字符串
+
+{% codeblock %}
 字符串切片
 
 	str = "1234567"
@@ -47,15 +56,19 @@ Python3里默认的str是(Python2里的)unicode, bytes是(Python2)的str, b前�
 str.capitalize() 使首字母大写
 str.casefold()	整个字符改成小写
 str.center() 看图片
-
 {% endcodeblock %}
-## 函数
-{% img /images/python/11_0.JPG %}
-{% img /images/python/11_1.JPG %}
-{% img /images/python/11_2.JPG %}
-## 格式化
-{% codeblock %}
 
+## 函数
+
+{% img /images/python/11_0.JPG %}
+
+{% img /images/python/11_1.JPG %}
+
+{% img /images/python/11_2.JPG %}
+
+## 格式化
+
+{% codeblock %}
 format()
 
 位置参数,必须从0开始
@@ -103,14 +116,18 @@ format()
 
 "%-10d" % 5
 	输出"5         "
-
 {% endcodeblock %}
-{% img /images/python/11_3.JPG %}
-{% img /images/python/11_4.JPG %}
-{% img /images/python/11_5.JPG %}
-## 字符输出
-{% codeblock %}
 
+{% img /images/python/11_3.JPG %}
+
+{% img /images/python/11_4.JPG %}
+
+
+{% img /images/python/11_5.JPG %}
+
+## 字符输出
+
+{% codeblock %}
 python中如果输出字符是
 	print("c:\nov")
 
@@ -147,7 +164,6 @@ python中如果输出字符是
 
 print() 默认换行
 	要想不换行 print (x,end = '')  
-	
 {% endcodeblock %}
 
 

@@ -8,8 +8,11 @@ tags:
 - tutorial
 ---
 魔法方法
- <!-- more -->
+
+<!-- more -->
+
 ## 魔法方法 小例
+
 {% codeblock %}
 __init__()
 	类在实例化对象的时候首先调用的方法
@@ -29,17 +32,28 @@ __new__(class[,..])
 
 __del__(self)
 	自动调用，垃圾回收机制
-
 {% endcodeblock %}
+
 {% img /images/python/10_m0.JPG %}
+
 {% img /images/python/10_m1.JPG %}
+
 {% img /images/python/10_m2.JPG %}
+
 {% img /images/python/10_m3.JPG %}
+
 {% img /images/python/10_m4.JPG %}
+
 {% img /images/python/10_m5.jpg %}
+
 {% img /images/python/10_m6.jpg %}
+
 ## 注意事项
+
 {% img /images/python/10_mm0.png %}
+
 {% img /images/python/10_mm1.png %}
+
 {% img /images/python/10_mm2.png %}
+
 {% img /images/python/10_mm3.JPG %}

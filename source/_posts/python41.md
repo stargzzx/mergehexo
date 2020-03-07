@@ -9,15 +9,18 @@ tags:
 - multiprocessing
 ---
 如题。
+
 <!-- more -->
+
 ## 运行条件
+
 多进程，必须得有
 
 	if __name__ == '__main__':
 
 否则会报错。
-{% codeblock %}
 
+{% codeblock %}
 import multiprocessing as mp
 
 def job(a,d):
@@ -29,11 +32,11 @@ if __name__ == '__main__':
     p1.join()
 	
 		# aaaaaa
-
 {% endcodeblock %}
-## queue进程输出
-{% codeblock %}
 
+## queue进程输出
+
+{% codeblock %}
 import multiprocessing as mp
 
 def job(q):
@@ -54,11 +57,11 @@ if __name__=='__main__':
     res2 = q.get()
     print(res1+res2)
 		# 499667166000
-
 {% endcodeblock %}
-## 效率比较 multithreading multiprocessing
-{% codeblock %}
 
+## 效率比较 multithreading multiprocessing
+
+{% codeblock %}
 import multiprocessing as mp
 import threading as td
 import time
@@ -116,10 +119,10 @@ if __name__ == '__main__':
 		# multithread time: 1.4985547065734863
 		# multicore: 499999666667166666000000
 		# multicore time: 0.8846650123596191
-
-
 {% endcodeblock %}
+
 ## 进程池 pool
+
 pool 是一个进程池，我们把值和函数传给进程池，进程池就会自动的分配进程。更为重要的一点是，进程池有返回值。
 
 	pool = mp.Pool()
@@ -129,7 +132,6 @@ pool 是一个进程池，我们把值和函数传给进程池，进程池就会
 	pool = mp.Pool(processes = 2)
 	
 {% codeblock %}
-
 import multiprocessing as mp
 
 def job(x):
@@ -143,11 +145,11 @@ def multicore():
 if __name__ == '__main__':
     multicore()
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
 {% endcodeblock %}
-只输出一个核的结果
-{% codeblock %}
 
+只输出一个核的结果
+
+{% codeblock %}
 import multiprocessing as mp
 
 def job(x):
@@ -166,11 +168,10 @@ def multicore():
 if __name__ == '__main__':
     multicore()
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-		# [25]
-		
+		# [25]	
 {% endcodeblock %}
-{% codeblock %}
 
+{% codeblock %}
 import multiprocessing as mp
 
 def job(x):
@@ -192,14 +193,16 @@ if __name__ == '__main__':
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 		# [25]
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-	
 {% endcodeblock %}
+
 ## 共享内存
+
 我们在多个函数中共享一个全局变量，通常会有如下的代码
 
 	global A
 	
 但是，如果是多核的话，我们是无法通过 global 来共享值的。
+
 共享值，我们会用到共享内存这个途径来解决。代码如下
 
 	Value(typecode_or_type, *args, lock=True)  
@@ -218,4 +221,5 @@ if __name__ == '__main__':
 	array = mp.Array('i',[[1,2,3]])
 			   
 {% img /images/python/41_0.png %}
+
 ## lock 锁

@@ -13,11 +13,19 @@ tags:
 
 由于时间线长久，所以，可能出错的顺序不一样，但是，也不影响阅读。
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [python-dev是什么？为什么安装了python后有时还要安装python-dev？](https://blog.csdn.net/qq_41746437/article/details/79340299)
 
+<br/>
+
 # 过程
+
+<br/>
 
 环境：MacBook python3.7
 

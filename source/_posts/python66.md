@@ -12,7 +12,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 不同级别的时间戳
+
+<br/>
 
 {% codeblock %}
 import time
@@ -33,7 +37,11 @@ print (int(round(t * 1000000))) #微秒级时间戳
 1499825149257892     #微秒级时间戳，16位
 {% endcodeblock %}
 
+<br/>
+
 # 获取当前时间
+
+<br/>
 
 {% codeblock %}
 dt    = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -49,7 +57,11 @@ print(dt_ms)
 2018-09-06 21:54:46.205213
 {% endcodeblock %}
 
+<br/>
+
 # 将日期转化为秒级时间戳
+
+<br/>
 
 {% codeblock %}
 dt = '2018-01-01 10:40:30'
@@ -58,7 +70,11 @@ print (ts)
 	1514774430
 {% endcodeblock %}
 
+<br/>
+
 # 将秒级时间戳转为日期
+
+<br/>
 
 {% codeblock %}
 ts = 1515774430
@@ -67,7 +83,11 @@ print(dt)
 	2018-01-13 00:27:10
 {% endcodeblock %}
 
+<br/>
+
 # 时间格式转成另一种时间格式
+
+<br/>
 
 {% codeblock %}
 dt = '08/02/2019 01:00'
@@ -76,7 +96,11 @@ print(dt_new)
 	2019-08-02 01:00:00
 {% endcodeblock %}
 
+<br/>
+
 # 转结构体时间struct_time
+
+<br/>
 
 {% codeblock %}
 ta_dt = time.strptime("2018-09-06 21:54:46", '%Y-%m-%d %H:%M:%S')  #日期时间转结构体 

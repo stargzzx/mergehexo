@@ -19,7 +19,11 @@ python项目如何在另一个环境上重新构建项目所需要的运行环�
 
 生成requirements.txt，有两种方式：
 
+<br/>
+
 # 适用于 单虚拟环境的情况
+
+<br/>
 
 	pip freeze > requirements.txt
 
@@ -29,7 +33,11 @@ python项目如何在另一个环境上重新构建项目所需要的运行环�
 
 当然这种情况并不是我们想要的，当我们使用的是全局环境时，可以使用第二种方法。
 
+<br/>
+
 # (推荐) 使用 pipreqs ，
+
+<br/>
 
 github地址为： https://github.com/bndr/pipreqs
 

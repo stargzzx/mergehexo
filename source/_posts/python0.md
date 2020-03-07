@@ -10,8 +10,11 @@ tags:
 - numpy
 ---
 Here is the tutorial of python's numpy.
- <!-- more -->
+
+<!-- more -->
+
 ## 基本用法
+
 {% codeblock %}
 import numpy as np
 
@@ -41,8 +44,10 @@ print("type:",array.dtype)
 a = np.zeros((3,4)) #定义为 3 行 4 列
 b = np.ones((3,4))
 c = np.empty((3,4)) #定义一个空矩阵 实际上很接近于零
- {% endcodeblock %}
- ## 对数组的处理
+{% endcodeblock %}
+
+## 对数组的处理
+
 {% codeblock %}
 a = np.arange(10,20,2)
 print(a) #[10 12 14 16 18] 起始位置 步长 用来生成 数组
@@ -59,7 +64,8 @@ print(a.flatten()) #将矩阵变成单个的数 [ 0  1  2  3  4  5  6  7  8  9 1
 #生成线段
 a = np.linspace(1,10,4)
 print(a) #[ 1.  4.  7. 10.] 从 1 到 10 生成 4 段的数列
- {% endcodeblock %}
+{% endcodeblock %}
+
 ## 基本属性
 
 	a.ndim   #数组的维数
@@ -70,13 +76,13 @@ print(a) #[ 1.  4.  7. 10.] 从 1 到 10 生成 4 段的数列
 	print a.itemsize  #每个元素所占的字节数
 	
 {% codeblock %}
-
 b = np.arange(1,10)
 print(b.dtype)
 	# int32
-	
 {% endcodeblock %}
+
 ## numpy 的基本运算
+
 {% codeblock %}
 a = np.array([10,9,8])
 b = np.arange(3)
@@ -169,7 +175,9 @@ a = np.array([1,1,1])
 print(a.T) #对于 单行矩阵是没办法将其变为向量的
 print(a.reshape((1,3))) #可以这样
 {% endcodeblock %}
+
 ## 通过索引找元素
+
 {% codeblock %}
 a = np.arange(3,15).reshape((3,4))
 print(a[2]) #[11 12 13 14]
@@ -190,7 +198,9 @@ for column in a.T:
 for item in a.flat: #和a.flatten() 不同 a.flat 返回的是迭代器
     print(item) #输出每一个元素
 {% endcodeblock %}
+
 ## 合并
+
 {% codeblock %}
 a = np.array([1,1,1])
 b = np.array([2,2,2])
@@ -201,8 +211,11 @@ print(np.hstack((a,b))) # 横向合并
 #[1 1 1 2 2 2]
 print(np.vstack((a,a,b))) #多个合并
 {% endcodeblock %}
+
 ## 分割
+
 numpy 的分割和 python 自带的切片不一样。
+
 {% codeblock %}
 a = np.arange(12).reshape((3,4))
 print(np.split(a,2,axis=1)) #将矩阵 a 按照行分割成 2 个片段
@@ -237,19 +250,22 @@ a[0] = 2
 print(a) #[2 1 1]
 print(b) #[1 1 1]
 {% endcodeblock %}
-## 小技巧
-### 1
-在 python 中下面的句子是不成立的。
-{% codeblock %}
 
+## 小技巧
+
+### 1
+
+在 python 中下面的句子是不成立的。
+
+{% codeblock %}
 a = [0 , 1]
 b = [True,False]
 print(a[b])
-
 {% endcodeblock %}
-但是在 numpy 中这种语句是成立的，比如
-{% codeblock %}
 
+但是在 numpy 中这种语句是成立的，比如
+
+{% codeblock %}
 import numpy as np
 points = np.arange(1,11,step=1)
 cross_points = np.random.randint(0, 2, size=10).astype(np.bool)
@@ -259,12 +275,13 @@ print(cross_points)
 	# [ True  True False False  True  True  True  True False False]
 print(points[cross_points])
 	# [1 2 5 6 7 8]
-
 {% endcodeblock %}
-在 numpy 中，我们可以看到，第一它们的数据类型并不是列表，也就是没有逗号，第二，他们都是 numpy 的数据类型。
-这一点技巧很重要，因为它可以直接换取局部数值。
-{% codeblock %}
 
+在 numpy 中，我们可以看到，第一它们的数据类型并不是列表，也就是没有逗号，第二，他们都是 numpy 的数据类型。
+
+这一点技巧很重要，因为它可以直接换取局部数值。
+
+{% codeblock %}
 import numpy as np
 points = np.arange(1,11,step=1)
 cross_points = np.random.randint(0, 2, size=10).astype(np.bool)
@@ -279,14 +296,16 @@ print(random_i)
 	# [5 2 4 7 1 6 7 0 8 2]
 points[cross_points] = random_i[cross_points]
 print(points)
-	# [1 2 4 7 1 6 7 8 8 2]
-	
+	# [1 2 4 7 1 6 7 8 8 2]	
 {% endcodeblock %}
-上面的小技巧交给我们如何直接局部值。非常重要，装逼必备。
-### 2
-我们知道用 numpy 创造的数据是矩阵，而矩阵的特性是和 python 的那些数据类型不一样的，比如，它可以直接比较，如下面的装逼必备代码。
-{% codeblock %}
 
+上面的小技巧交给我们如何直接局部值。非常重要，装逼必备。
+
+### 2
+
+我们知道用 numpy 创造的数据是矩阵，而矩阵的特性是和 python 的那些数据类型不一样的，比如，它可以直接比较，如下面的装逼必备代码。
+
+{% codeblock %}
 import numpy as np
 a = np.arange(1,10)
 b = a.copy()
@@ -296,11 +315,11 @@ print(a == b)
 	# [False  True  True  True False  True  True  True  True]
 print((a == b).sum(axis=0))
 	# 7
-
 {% endcodeblock %}
-### 3 取反
-{% codeblock %}
 
+### 3 取反
+
+{% codeblock %}
 import numpy as np
 a = np.arange(1,11)
 b = np.random.randint(0,2,size=10).astype(np.bool)
@@ -308,17 +327,17 @@ print(b)
 	# [False False False False False  True False  True False False]
 print(~b)
 	# [ True  True  True  True  True False  True False  True  True]
-
 {% endcodeblock %}
-### 4 直接改变 list 元素
-{% codeblock %}
 
+### 4 直接改变 list 元素
+
+{% codeblock %}
 v = np.array([1,2,3,4])
 v[v > 2] = 3
 print(v)
 	# [1,2,3,3]
-
 {% endcodeblock %}
+
 ## numpy 支持的数据类型
 
 	bool_		以字节存储的布尔值（True 或 False）
@@ -342,15 +361,26 @@ print(v)
 	complex128	由两个64位浮点（实部和虚部）组成的复数
 	
 ## 术语解析
+
 ### array_like 和 iterable
+
 术语“array-like”确实仅在NumPy中使用，并且是指可以作为第一个参数传递给numpy.array()的任何东西来创建数组。
+
 术语“iterable”是标准的python术语，是指可以迭代的任何东西(例如，在可迭代中使用x)。
+
 大多数类似数组的对象是可迭代的，除了标量类型。
+
 许多迭代不是数组的 – 例如，您不能使用numpy.array()从生成器表达式构造NumPy数组。 (您将不得不使用numpy.fromiter()，但是在NumPy文档的术语中，生成器表达式不是“类似数组”)。
+
 ## 在项目中 numpy 究竟是如何处理数据的
+
 numpy 的数据类型是向量和矩阵。
+
 所以，处理起来要转变思维，因为它有时候并不是一个单独的向量，而是很多向量聚在一起的矩阵，相当于处理多维数组。
+
 但是，相较于 python 处理多维数组，在 numpy 中处理矩阵的代码就好像是在处理一维数组一样。
+
 思维，一定要转变。
+
 {% img /images/python/0.jpg %}
 

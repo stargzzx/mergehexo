@@ -11,7 +11,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 参考文章
+
+<br/>
 
 [Python使用matplotlib画动态图](https://blog.csdn.net/xyisv/article/details/80651334)
 [创造生动有趣的动画，Matplotlib库大显身手](https://zhuanlan.zhihu.com/p/65949658)
@@ -19,7 +23,11 @@ tags:
 
 Matplotlib是一个 Python 的 2D绘图库，也是Python中最受欢迎的绘图数据库。大多数人在踏上数据可视化之旅时，都是首选Matplotlib。这是因为它可简单地生成绘图，直方图、功率谱、条形图、错误图、散点图等。不仅如此，它还无缝连接了Pandas、Seaborn等数据库，甚至创建出更为复杂的可视化数据。
 
+<br/>
+
 # 优点
+
+<br/>
 
 其构造和MATLAB(矩阵实验室)类似，所以两者间易于切换
 
@@ -29,7 +37,11 @@ Matplotlib是一个 Python 的 2D绘图库，也是Python中最受欢迎的绘�
 
 已存在数十年以上，因此，有大量的用户基础
 
+<br/>
+
 # 缺点
+
+<br/>
 
 Matplotlib常常不可避免地存在冗繁的API（应用程序编程接口）
 
@@ -39,7 +51,11 @@ Matplotlib常常不可避免地存在冗繁的API（应用程序编程接口）
 
 处理大型及复杂的数据时速度常常较慢
 
+<br/>
+
 # 动态条形图 
+
+<br/>
 
 {% img /images/python/68_0.gif %}
 
@@ -57,7 +73,11 @@ for i in range(50):
     plt.pause(0.1)
 {% endcodeblock %}
 
+<br/>
+
 # 动态折线图 
+
+<br/>
 
 {% img /images/python/68_1.gif %}
 
@@ -83,7 +103,11 @@ for i in range(100):
     plt.pause(0.1)
 {% endcodeblock %}
 
+<br/>
+
 # 动画
+
+<br/>
 
 Matplotlib的动画基类负责处理动画部分。其可提供构建动画功能的框架。有两个主要接口来实现此功能：
 
@@ -93,7 +117,11 @@ ArtistAnimation：利用已定义的Artist对象创建动画。
 
 但是，在上述两种接口中，FuncAnimation更为方便。我们专注于FuncAnimation工具的研究。
 
+<br/>
+
 # 移动的正弦波
+
+<br/>
 
 {% img /images/python/68_2.gif %}
 
@@ -130,7 +158,11 @@ anim.save('sine_wave.gif', writer='imagemagick')
 
 在第20 行，创建实际的动画对象。Blit参数确保只重新绘制已更改的部分。
 
+<br/>
+
 # 实时更新图
+
+<br/>
 
 绘制股票数据、传感器数据等其他与时间相关的动态数据时，实时更新图就会派上用场。我们绘制一个基图，在更多的数据被输入系统后，基图就会自动更新。现在，来绘制某假定公司某月内的股价图。
 
@@ -169,7 +201,11 @@ plt.show()
 
 其更新的时间间隔是1000毫秒或一秒。
 
+<br/>
+
 # 3D图中的动画
+
+<br/>
 
 {% img /images/python/68_4.gif %}
 
@@ -215,7 +251,11 @@ for angle in range(70,210,2):
 
 convert -delay 10 Volcano*.pnganimated_volcano.gif
 
+<br/>
+
 # 利用Celluloid模块动画化
+
+<br/>
 
 Celluloid是python中的一个模块，其在matplotlib中可简化创建动画的进程。这个库创建一个matplotlib图并从中创建相机。然后，重新启用该图，并在创建每帧动画后，用上述相机拍快照。最后，利用所有捕捉到的帧创建动画。
 

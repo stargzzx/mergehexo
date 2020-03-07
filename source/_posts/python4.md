@@ -8,8 +8,11 @@ tags:
 - tutorial
 ---
 Here is the tutorial of python.
- <!-- more -->
+
+<!-- more -->
+
 # 小技巧
+
 {% codeblock %}
 获得关于类型的信息
 	有type() 但推荐用 isinstance()
@@ -59,8 +62,10 @@ for倒序输出
 		# [5, 6, 6, 7, 7, 8]
 		# 解析，前面的那个在最外层
 	
- {% endcodeblock %}
+{% endcodeblock %}
+
 # 安装 whl
+
 {% codeblock %}
 
 whl格式本质上是一个压缩包，里面包含了py文件，以及经过编译的pyd文件。使得可以在不具备编译环境的情况下，选择合适自己的python环境进行安装。
@@ -71,10 +76,11 @@ pip install xxxx.whl
 
 pip install C:\Users\xxx\Downloads\python_dateutil-2.5.3-py2.py3-none-any.whl
 
- {% endcodeblock %}
-# 编码
-{% codeblock %}
+{% endcodeblock %}
 
+# 编码
+
+{% codeblock %}
 python2 中
 	s = "我爱你"
 	windows 下中文默认为GB2312保存
@@ -92,23 +98,28 @@ decode 解码
 
 python3
 	中文默认用unicode	
- {% endcodeblock %}
-# 控制讲解
-## break
-break 只是跳出离它最近的循环
-{% codeblock %}
+{% endcodeblock %}
 
+# 控制讲解
+
+## break
+
+break 只是跳出离它最近的循环
+
+{% codeblock %}
 for i in range(2):
     for j in range(2):
 		if(j == 1):
 			break
         print(i,j)
 		# 0 0
-			1 0
-			
- {% endcodeblock %}
+			1 0		
+{% endcodeblock %}
+
 # 数据类型
+
 ## 序列
+
 {% codeblock %}
 序列包括列表，元组，字符串
 
@@ -149,10 +160,11 @@ b = [4,5,6]
 list(zip(a,b))  多余的舍弃  zip 将两数以元组的形式绑在一起
 	[(1,4),(2,5),(3,6)]
 
- {% endcodeblock %}
-## 列表
-{% codeblock %}
+{% endcodeblock %}
 
+## 列表
+
+{% codeblock %}
 创建固定长度的列表
 tmp = [0 for k in range(0,9)]
 
@@ -254,11 +266,11 @@ sort()
 	
 	#	[1, 1, 1, 0, 0]
 	#	[1, 1, 0, 1, 1]
-		
- {% endcodeblock %}
+{% endcodeblock %}
+
 ## 字典
-{% codeblock %}
-	
+
+{% codeblock %}	
 字典是映射类型 键值对 为无序
 
 对字典的基本操作
@@ -389,9 +401,10 @@ data = {
 data['A'] = data['A'] + 7;
 print(data.get('A'))
 	#7
-		
- {% endcodeblock %}
+{% endcodeblock %}
+
 ## 集合
+
 {% codeblock %}
 集合 set
 	a = {} a为字典
@@ -410,9 +423,10 @@ set() 创建集合，工厂函数，可以通过接受其他可迭代对象，�
 
 不可变集合，不能添加和删除
 	a = frozenset([1,2,3,4]) 创建不可变集合
+{% endcodeblock %}
 
- {% endcodeblock %}
 ## 元组
+
 {% codeblock %}
 元组是不可改变的，不能删除，插入
 
@@ -434,8 +448,10 @@ set() 创建集合，工厂函数，可以通过接受其他可迭代对象，�
 
 del a 删除整个元组
 
- {% endcodeblock %}
+{% endcodeblock %}
+
 # 面向对象
+
 {% codeblock %}
 class 中的函数，默认第一个都会传递self
 class a:
@@ -517,14 +533,17 @@ getattr(object,name[,default])
 
 setattr(object,name,value)
 	
- {% endcodeblock %}
- # 函数
- ## 函数 函数介绍
- {% codeblock %}
- ####
-  {% endcodeblock %}
- ## 函数 参数
-  {% codeblock %}
+{% endcodeblock %}
+
+# 函数
+## 函数 函数介绍
+{% codeblock %}
+####
+{% endcodeblock %}
+
+## 函数 参数
+
+{% codeblock %}
 用 def 来创建
 
 def function():
@@ -566,11 +585,12 @@ def function():
 	def function(*name):  （会用元组打包起来）
 		print(len(name))
 	function(1,2,3)
-		输出 3	
-		
-  {% endcodeblock %}
- ## 函数 过程
-  {% codeblock %}
+		输出 3		
+{% endcodeblock %}
+
+## 函数 过程
+
+{% codeblock %}
 python 只有函数没有过程，是因为每个函数都有返回值，即便是没有 return，返回的是none
 python返回多个值，可以用列表
 如果函数试图在函数内修改全局变量，那么python会自动创建一个相同名字的局部变量代替
@@ -580,10 +600,11 @@ python返回多个值，可以用列表
 	print(a)
 		function()
 			最终输出0
-		
-  {% endcodeblock %}
- ## 函数 lambda表达式
-  {% codeblock %}
+{% endcodeblock %}
+
+## 函数 lambda表达式
+
+{% codeblock %}
 lambda表达式也就是匿名函数
 def ds(x):
 	return 2 *x
@@ -606,10 +627,11 @@ def ds(x):
 			return None
 	相当于
 		lambda x : x if x % 2 else None
+{% endcodeblock %}
 
-  {% endcodeblock %}
- ## 将函数作为参数
-  {% codeblock %}
+## 将函数作为参数
+
+{% codeblock %}
 def a():
     print("1")
 
@@ -633,9 +655,11 @@ b(a())
 
 当传递的参数为function()带括号时，传的是一个方法返回值
 
-  {% endcodeblock %}
- ## 函数 内嵌函数和闭包
-  {% codeblock %}
+{% endcodeblock %}
+
+## 函数 内嵌函数和闭包
+
+{% codeblock %}
 修改全局变量 
 	运用 global 关键字
 	a = 10
@@ -718,10 +742,14 @@ b(a())
 			return fun2()
 		fun1() 输出25
 
-  {% endcodeblock %}
+{% endcodeblock %}
+
 {% img /images/python/4_fun.jpg %}
+
 # 其他
+
 ## 迭代
+
 {% codeblock %}
 iter()
 	对容器调用这个方法生成一个迭代器
@@ -739,7 +767,9 @@ __iter__()
 __next__()
 	决定了迭代器的规则
 {% endcodeblock %}
+
 ## 描述符
+
 {% codeblock %}
 将某种特殊的类的实例指派给另一个类的属性
 class a():
@@ -772,9 +802,10 @@ b.a = 10
 b.a
 	输出 属性正在被访问
 {% endcodeblock %}
-## 扩展else语句和with语句
-{% codeblock %}
 
+## 扩展else语句和with语句
+
+{% codeblock %}
 while 和 else 语句配合 不满足while则执行else
 
 	while 条件：
@@ -799,7 +830,6 @@ with语句
 			for esch in f:
 				print(each)
 	except
-	
 {% endcodeblock %}
 
  

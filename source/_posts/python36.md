@@ -9,7 +9,9 @@ tags:
 - scipy
 ---
 如题。
+
 <!--more-->
+
 # 所带的包
 
 	特殊函数 	(scipy.special)

@@ -9,9 +9,10 @@ tags:
 - matplotlib
 ---
 我们经常会遇到这样一个场景，我们要生成并处理大量的图片。
-<!-- more -->
-{% codeblock %}
 
+<!-- more -->
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import pylab
 import numpy as np
@@ -29,12 +30,10 @@ dataPIL = Image.open(buffer_)
 data = np.asarray(dataPIL)
 print(data)
 buffer_.close()
-
 {% endcodeblock %}
 
 
 {% codeblock %}
-
 import matplotlib.pyplot as plt
 import pylab
 import numpy as np
@@ -60,5 +59,4 @@ for i in range(0,x):
 print(data.shape)
 t.show()
 buffer_.close()
-
 {% endcodeblock %}

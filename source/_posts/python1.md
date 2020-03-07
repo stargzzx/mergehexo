@@ -9,9 +9,12 @@ tags:
 - pandas
 ---
 Here is the tutorial of python's pandas.
- <!-- more -->
- ## 基本属性
- {% codeblock %}
+
+<!-- more -->
+
+## 基本属性
+
+{% codeblock %}
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,7 +32,9 @@ print(s)
 #5     1.0
 #dtype: float64
 {% endcodeblock %}
+
 ## 基本操作
+
 {% codeblock %}
 #索引自定义
 dates = pd.date_range('20180501',periods=6) #从 20180501 开始生成六天
@@ -529,4 +534,5 @@ print(res)
 #1  K1        2         5
 #2  K2        3         6
 {% endcodeblock %}
+
 {% img /images/python/1.jpg %}

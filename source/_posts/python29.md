@@ -10,9 +10,13 @@ tags:
 - tutorial
 ---
 python 中 math 模块。
- <!-- more -->
+
+<!-- more -->
+
 ## math
+
 [转载](http://www.cnblogs.com/vamei)
+
 {% codeblock %}
 math包主要处理数学相关的运算。math包定义了两个常数:
 math.e   # 自然常数e
@@ -41,5 +45,4 @@ math.sqrt(x)
 双曲函数: math.sinh(x), math.cosh(x), math.tanh(x), math.asinh(x), math.acosh(x), math.atanh(x)
 
 特殊函数： math.erf(x), math.gamma(x)
-
 {% endcodeblock %}

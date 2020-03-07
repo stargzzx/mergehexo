@@ -8,15 +8,16 @@ tags:
 - tutorial
 ---
 Here is the tutorial of python.
- <!-- more -->
- 
- 
- 
-# C
-## concatenate()
-numpy提供了numpy.concatenate((a1,a2,...), axis=0)函数。能够一次完成多个数组的拼接。其中a1,a2,...是数组类型的参数
-{% codeblock %}
 
+<!-- more -->
+
+# C
+
+## concatenate()
+
+numpy提供了numpy.concatenate((a1,a2,...), axis=0)函数。能够一次完成多个数组的拼接。其中a1,a2,...是数组类型的参数
+
+{% codeblock %}
 a=np.array([1,2,3])
 b=np.array([11,22,33])
 c=np.array([44,55,66])
@@ -37,29 +38,33 @@ np.concatenate((a,b),axis=0)
 np.concatenate((a,b),axis=1)  #axis=1表示对应行的数组进行拼接
 	# array([[ 1,  2,  3, 11, 21, 31],
       		 [ 4,  5,  6,  7,  8,  9]])
-
 {% endcodeblock %}
 
 
 
 
 # E
-## enumerate()
-enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
-Python 2.3. 以上版本可用，2.6 添加 start 参数。
-enumerate(sequence, [start=0])
-{% codeblock %}
 
+
+## enumerate()
+
+enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。
+
+Python 2.3. 以上版本可用，2.6 添加 start 参数。
+
+enumerate(sequence, [start=0])
+
+{% codeblock %}
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 list(enumerate(seasons))
 	# [(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
 list(enumerate(seasons, start=1))       # 下标从 1 开始
 	# [(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
-
 {% endcodeblock %}
-普通 for 循环
-{% codeblock %}
 
+普通 for 循环
+
+{% codeblock %}
 i = 0
 seq = ['one', 'two', 'three']
 for element in seq:
@@ -69,11 +74,11 @@ for element in seq:
 	# 0 one
 	# 1 two
 	# 2 three
-
 {% endcodeblock %}
-for 循环使用 enumerate
-{% codeblock %}
 
+for 循环使用 enumerate
+
+{% codeblock %}
 seq = ['one', 'two', 'three']
 for i, element in enumerate(seq):
     print i, element
@@ -86,18 +91,19 @@ a = [[1,2,3],[4,5,6]]
 for i,d in enumerate(a):
     print(d)
 	# [1, 2, 3]
-		[4, 5, 6]
-		
+		[4, 5, 6]	
 {% endcodeblock %}
 
 
 
 
 # F
-## flatten()
-首先声明两者所要实现的功能是一致的（将多维数组降位一维），两者的区别在于返回拷贝（copy）还是返回视图（view），numpy.flatten()返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，而numpy.ravel()返回的是视图（view，也颇有几分C/C++引用reference的意味），会影响（reflects）原始矩阵。
-{% codeblock %}
 
+## flatten()
+
+首先声明两者所要实现的功能是一致的（将多维数组降位一维），两者的区别在于返回拷贝（copy）还是返回视图（view），numpy.flatten()返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，而numpy.ravel()返回的是视图（view，也颇有几分C/C++引用reference的意味），会影响（reflects）原始矩阵。
+
+{% codeblock %}
 x = np.array([[1, 2], [3, 4]])
 x.flatten()[1] = 100
 x
@@ -107,15 +113,19 @@ x.ravel()[1] = 100
 x
 	# array([[  1, 100],
 		[  3,   4]])
-
 {% endcodeblock %}
-## fromstring()
-将字符串变为 ASCII 的代码表数组。
-numpy.fromstring(string, dtype=, count=, sep='')
-A new 1-D array initialized from text data in a string
-因为是 ASCII 码，所以，不能转换中文，这是我自己的猜测，因为在转换中文的时候，会输出三个数字代码，看不懂。。。
-{% codeblock %}
 
+## fromstring()
+
+将字符串变为 ASCII 的代码表数组。
+
+numpy.fromstring(string, dtype=, count=, sep='')
+
+A new 1-D array initialized from text data in a string
+
+因为是 ASCII 码，所以，不能转换中文，这是我自己的猜测，因为在转换中文的时候，会输出三个数字代码，看不懂。。。
+
+{% codeblock %}
 import numpy as np
 s = "一"
 a = 'yi'
@@ -123,7 +133,6 @@ print(np.fromstring(s,dtype=np.uint8))
 	# [228 184 128]
 print(np.fromstring(a,dtype=np.uint8))
 	# [121 105]
-
 {% endcodeblock %}
 
 
@@ -131,17 +140,21 @@ print(np.fromstring(a,dtype=np.uint8))
 
 
 # G
+
 ## global()
+
 globals() 函数会以字典类型返回当前位置的全部全局变量
 
 
 
 
 # I
-## isin()
-numpy.isin(element, test_elements, assume_unique=False, invert=False)
-{% codeblock %}
 
+## isin()
+
+numpy.isin(element, test_elements, assume_unique=False, invert=False)
+
+{% codeblock %}
 import numpy as np
 a = np.arange(1,10)
 b = np.array([3,4,7])
@@ -156,54 +169,56 @@ print(np.isin(b,a,invert=True))
 print(np.isin(a,b))
 	# [False False  True  True False False  True False False]
 print(np.isin(a,b,invert=True))
-	# [ True  True False False  True  True False  True  True]
-		
+	# [ True  True False False  True  True False  True  True]	
 {% endcodeblock %}
 
 
 
 
 # J
-## join()
-{% codeblock %}
 
+## join()
+
+{% codeblock %}
 将列表，元组转为字符串
 a = [1,2,3,4]
 str = "".join(a)
-
 {% endcodeblock %}
 
 
 
 
 # L
-## len
-{% codeblock %}
 
+## len
+
+{% codeblock %}
 Python len() 方法返回对象（字符、列表、元组等）长度或项目个数。
 语法
 	len()方法语法：
 	len( s )
-	
 {% endcodeblock %}
-## list
-list() 方法用于将元组（字符串也可以）转换为列表。
-注：元组与列表是非常类似的，区别在于元组的元素值不能修改，元组是放在括号中，列表是放于方括号中。
-{% codeblock %}
 
+## list
+
+list() 方法用于将元组（字符串也可以）转换为列表。
+
+注：元组与列表是非常类似的，区别在于元组的元素值不能修改，元组是放在括号中，列表是放于方括号中。
+
+{% codeblock %}
 print(list("123"))
 	# ['1', '2', '3']
 print(list(("123","234")))
 	# ['123', '234']
-	
 {% endcodeblock %}
 
 
 
 # M
-## min max
-{% codeblock %}
 
+## min max
+
+{% codeblock %}
 min( x, y, z, .... )
 	参数
 		x -- 数值表达式。
@@ -219,29 +234,30 @@ min( x, y, z, .... )
 		# 1
 	
 	max 和 min 一样
-	
 {% endcodeblock %}
 
 
 
 
 # O
-## ord()
-{% codeblock %}
 
+## ord()
+
+{% codeblock %}
 返回字符在 ASCII 的位置
 index = ord("a")
-	
 {% endcodeblock %}
 
 
 
 
 #R
-## ravel()
-首先声明两者所要实现的功能是一致的（将多维数组降位一维），两者的区别在于返回拷贝（copy）还是返回视图（view），numpy.flatten()返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，而numpy.ravel()返回的是视图（view，也颇有几分C/C++引用reference的意味），会影响（reflects）原始矩阵。
-{% codeblock %}
 
+## ravel()
+
+首先声明两者所要实现的功能是一致的（将多维数组降位一维），两者的区别在于返回拷贝（copy）还是返回视图（view），numpy.flatten()返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，而numpy.ravel()返回的是视图（view，也颇有几分C/C++引用reference的意味），会影响（reflects）原始矩阵。
+
+{% codeblock %}
 x = np.array([[1, 2], [3, 4]])
 x.flatten()[1] = 100
 x
@@ -251,15 +267,17 @@ x.ravel()[1] = 100
 x
 	# array([[  1, 100],
 		[  3,   4]])
-
 {% endcodeblock %}
 
 
 
 
 # S
+
+
 ## sorted()
-  {% codeblock %}
+
+{% codeblock %}
 内置函数
 sorted(data, cmp=None, key=None, reverse=False)  
 		#data是待排序数据，可以使List或者iterator, cmp和key都是函数，这两个函数作用与data的元素上产生一个结果，sorted方法根据这个结果来排序。 
@@ -297,6 +315,7 @@ sorted(data, cmp=None, key=None, reverse=False)
 {% endcodeblock %}
 
 ## strip()
+
 {% codeblock %}
 python 2.0+
 str = "0000000     Runoob  0000000"; 
@@ -310,6 +329,7 @@ python3一样使用
 {% endcodeblock %}
 
 ## split()
+
 {% codeblock %}
 split(str , num)
 	参数
@@ -328,13 +348,18 @@ split(str , num)
 
 
 # Z
-## zip()
-zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。
-我们可以使用 list() 转换来输出列表。
-如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 * 号操作符，可以将元组解压为列表。
-zip([iterable, ...]) iterabl -- 一个或多个迭代器;
-{% codeblock %}
 
+## zip()
+
+zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。
+
+我们可以使用 list() 转换来输出列表。
+
+如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 * 号操作符，可以将元组解压为列表。
+
+zip([iterable, ...]) iterabl -- 一个或多个迭代器;
+
+{% codeblock %}
 a = [1,2,3]
 b = [4,5,6]
 c = [4,5,6,7,8]
@@ -351,5 +376,4 @@ list(a1)
 	# [1, 2, 3]
 list(a2)
 	# [4, 5, 6]
-
 {% endcodeblock %}

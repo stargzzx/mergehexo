@@ -9,7 +9,9 @@ tags:
 - matplotlib
 ---
 [Python数据可视化利器Matplotlib，colors系列，颜色的指定形式](https://blog.csdn.net/m0_37235489/article/details/79761450)
+
 <!-- more -->
+
 当我们绘图的时候，经常要指定各种各样的颜色，如何才能让matplotlib准确的显示出我们想要的颜色呢？这就要求我们必须了解matplotlib可以识别的颜色的指定形式有哪些。
 
 	灰度值字符串（ color = '0.75' ）
@@ -23,7 +25,9 @@ matplotlib中的RGB、RGBA元组与我们常见的RGB或RGBA列表不完全相�
 	例如，红色：(1,0,0)或(1,0,0,1)；黄色：(1,1,0)或(1,1,0,1)；白色：(1,1,1)或(1,1,1,1)
 
 RGB、RGBA十六进制形式字符串（ color = '#1f77b4' ）
+
 如：'#0F0F0F' 或 '#0F0F0F0F'
+
 常用颜色简写（ color = 'b' ）
 
 	b: 蓝色（blue）
@@ -38,7 +42,9 @@ RGB、RGBA十六进制形式字符串（ color = '#1f77b4' ）
 	xkcd颜色名称（ color = 'xkcd:blue' ）
 
 完整名称列表请查看https://xkcd.com/color/rgb/
+
 Tableau颜色名称（ color = 'tab:blue' ）
+
 颜色列表：
 
 	'blue', '#1f77b4'

@@ -10,11 +10,13 @@ tags:
 - numpy
 ---
 [转载](https://blog.csdn.net/vincentlipan/article/details/20717163)
+
 Numpy matrices必须是2维的,但是 numpy arrays (ndarrays) 可以是多维的（1D，2D，3D····ND）. Matrix是Array的一个小的分支，包含于Array。所以matrix 拥有array的所有特性。
- <!-- more -->
+<!-- more -->
+
 在numpy中matrix的主要优势是：相对简单的乘法运算符号。例如，a和b是两个matrices，那么a*b，就是矩阵积。
- {% codeblock %}
- 
+
+{% codeblock %} 
 import numpy as np
 
 a=np.mat('4 3; 2 1')
@@ -28,30 +30,31 @@ print(b)
 print(a*b)
 	# [[13 20]
 	#  [ 5  8]]
- 
- {% endcodeblock %}
-matrix 和 array 都可以通过objects后面加.T 得到其转置。但是 matrix objects 还可以在后面加 .H f得到共轭矩阵, 加 .I 得到逆矩阵。
-相反的是在numpy里面arrays遵从逐个元素的运算，所以array：c 和d的c*d运算相当于matlab里面的c.*d运算。
-{% codeblock %}
+{% endcodeblock %}
 
+matrix 和 array 都可以通过objects后面加.T 得到其转置。但是 matrix objects 还可以在后面加 .H f得到共轭矩阵, 加 .I 得到逆矩阵。
+
+相反的是在numpy里面arrays遵从逐个元素的运算，所以array：c 和d的c*d运算相当于matlab里面的c.*d运算。
+
+{% codeblock %}
 c=np.array([[4, 3], [2, 1]])
 d=np.array([[1, 2], [3, 4]])
 print(c*d)
 # [[4 6]
 #  [6 4]]
- 
- {% endcodeblock %}
-而矩阵相乘，则需要numpy里面的dot命令 :
-{% codeblock %}
+{% endcodeblock %}
 
+而矩阵相乘，则需要numpy里面的dot命令 :
+
+{% codeblock %}
 print(np.dot(c,d))
 	# [[13 20]
 	#  [ 5  8]]
- 
 {% endcodeblock %}
- ** 运算符的作用也不一样 ：
-{% codeblock %}
 
+** 运算符的作用也不一样 ：
+
+{% codeblock %}
 # 对于 矩阵的 ** 相当于两个矩阵相乘
 print(a**2)
 	# [[22 15]
@@ -61,13 +64,15 @@ print(a**2)
 print(c**2)
 	# [[16  9]
 	#  [ 4  1]]
-
 {% endcodeblock %}
-问题就出来了，如果一个程序里面既有matrix 又有array，会让人脑袋大。但是如果只用array，你不仅可以实现matrix所有的功能，还减少了编程和阅读的麻烦。
-当然你可以通过下面的两条命令轻松的实现两者之间的转换：np.asmatrix和np.asarray
-对我来说，numpy 中的array与numpy中的matrix，matlab中的matrix的最大的不同是，在做归约运算时，array的维数会发生变化，但matrix总是保持为2维。例如下面求平均值的运算。
-{% codeblock %}
 
+问题就出来了，如果一个程序里面既有matrix 又有array，会让人脑袋大。但是如果只用array，你不仅可以实现matrix所有的功能，还减少了编程和阅读的麻烦。
+
+当然你可以通过下面的两条命令轻松的实现两者之间的转换：np.asmatrix和np.asarray
+
+对我来说，numpy 中的array与numpy中的matrix，matlab中的matrix的最大的不同是，在做归约运算时，array的维数会发生变化，但matrix总是保持为2维。例如下面求平均值的运算。
+
+{% codeblock %}
 m = np.mat([[1,2],[2,3]])
 m
 	# matrix([[1, 2],
@@ -80,12 +85,12 @@ mm.shape
 	# (2, 1)
 m - mm
 	# matrix([[-0.5,  0.5],
-    #     [-0.5,  0.5]])
-		
+    #     [-0.5,  0.5]])	
 {% endcodeblock %}
-对array 来说
-{% codeblock %}
 
+对array 来说
+
+{% codeblock %}
 a = np.array([[1,2],[2,3]])
 a
 	# array([[1, 2],
@@ -101,10 +106,12 @@ a - am #wrong
 a - am[:, np.newaxis]  #right
 	# array([[-0.5,  0.5],
 	#        [-0.5,  0.5]])
-		
 {% endcodeblock %}
+
 我在其他地方找到的总结：
+
 [转载](http://blog.sina.com.cn/s/blog_5d8dae7c0100zms5.html)
+
 Matrix类型继承于ndarray类型，因此含有ndarray的所有数据属性和方法。Matrix类型与ndarray类型有六个重要的不同点，当你当Matrix对象当arrays操作时，这些不同点会导致非预期的结果。
 
 	1）Matrix对象可以使用一个Matlab风格的字符串来创建，也就是一个以空格分隔列，以分号分隔行的字符串。

@@ -9,28 +9,35 @@ tags:
 - matplotlib
 ---
 Here is the tutorial of python's matplotlib.
- <!-- more -->
+<!-- more -->
+
 # 基本使用方法
+
 ## 简介
+
 matplotlib是python中强大的画图模块，按官网上的图例，基本能做出各种各样美观的图表，但python缺省并不带这个模块，需要自己安装呵
 
 	pip install -i http://pypi.douban.com/simple matplotlib
 
 同时也会相应自主安装 numpy
-## 基本用法
-我们用不到 matplotlib 的所有功能，基本上只是使用一小部分，所以只需要：
-{% codeblock %}
 
+## 基本用法
+
+我们用不到 matplotlib 的所有功能，基本上只是使用一小部分，所以只需要：
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1,1,50)
 y = 2 * x + 1
 plt.plot(x,y)	
 plt.show()
-	
 {% endcodeblock %}
+
 {% img /images/python/2_0.png %}
+
 ## figure 的使用
+
 figure(num=None, figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon=True)
 
 	num:图像编号或名称，数字为编号 ，字符串为名称
@@ -41,8 +48,8 @@ figure(num=None, figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon
 	frameon:是否显示边框
 
 想要画出多个图像
-{% codeblock %}
 
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1, 1, 50)
@@ -57,14 +64,17 @@ plt.plot(x,y1,color = 'red',linewidth = 1.0,linestyle = '--')
 	# 在一幅图中做两条线
 	# linestyle 是线段类型，比如这个就是虚线
 plt.show()
-	
 {% endcodeblock %}
-一共表现为两张图
-{% img /images/python/2_0.png %}
-{% img /images/python/2_1.png %}
-## 设置坐标
-{% codeblock %}
 
+一共表现为两张图
+
+{% img /images/python/2_0.png %}
+
+{% img /images/python/2_1.png %}
+
+## 设置坐标
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1, 1, 50)
@@ -94,11 +104,11 @@ plt.yticks(
 	[r'$really \ bad$', 'bad', r'$normal\ \alpha$', 'good', 'really good']
 )
 plt.show()
-
 {% endcodeblock %}
-{% img /images/python/2_2.png %}
-{% codeblock %}
 
+{% img /images/python/2_2.png %}
+
+{% codeblock %}
 #修改坐标轴位置
 import matplotlib.pyplot as plt
 import numpy as np
@@ -142,12 +152,13 @@ ax.yaxis.set_ticks_position('left')
 ax.spines['bottom'].set_position(('data',-1))
 ax.spines['left'].set_position(('data',0))
 plt.show()
-
 {% endcodeblock %}
-{% img /images/python/2_3.png %}
-## legend 图例
-{% codeblock %}
 
+{% img /images/python/2_3.png %}
+
+## legend 图例
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1, 1, 50)
@@ -173,12 +184,13 @@ plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--',label = 'down')
 # label的选择是就近原则，如下不会打出 up,down 只会打出 li cong
 plt.legend(loc = 'best',labels = ['li','cong'])
 plt.show()
-
 {% endcodeblock %}
-{% img /images/python/2_4.png %}
-## 动图
-{% codeblock %}
 
+{% img /images/python/2_4.png %}
+
+## 动图
+
+{% codeblock %}
 import numpy as np
 import matplotlib.pyplot as plt
 import time
@@ -191,31 +203,35 @@ for i in range(200):
     if 'l' in globals():
         l.remove()
 plt.show()
-
 {% endcodeblock %}
+
 #接口
+
 ## pyplot
+
 pyplot是一个收集一些函数的模块，这些函数允许以函数式方式使用matplotlib。
 
 
 
 
 # 小技巧
-## 去掉坐标系
-这两段代码效果一样。
-{% codeblock %}
 
+## 去掉坐标系
+
+这两段代码效果一样。
+
+{% codeblock %}
 plt.figure()
 plt.xticks([])
 plt.yticks([])
 data = np.arange(12)
 plt.plot(data,data*2)
 plt.show()
-
 {% endcodeblock %}
-注意，类似的这些操作若想起作用，需要将其置于 plt.show() 之前，plt.imshow() 之后
-{% codeblock %}
 
+注意，类似的这些操作若想起作用，需要将其置于 plt.show() 之前，plt.imshow() 之后
+
+{% codeblock %}
 plt.figure()
 frame = plt.gca()
 # y 轴不可见
@@ -225,12 +241,13 @@ frame.axes.get_xaxis().set_visible(False)
 data = np.arange(12)
 plt.plot(data,data*2)
 plt.show()
-
 {% endcodeblock %}
-{% img /images/python/2_4_0.png %}
-## 去掉边界
-{% codeblock %}
 
+{% img /images/python/2_4_0.png %}
+
+## 去掉边界
+
+{% codeblock %}
 plt.figure()
 frame = plt.gca()
 # y 轴不可见
@@ -241,13 +258,18 @@ plt.axis('off')
 data = np.arange(12)
 plt.plot(data,data*2)
 plt.show()
-
 {% endcodeblock %}
+
 {% img /images/python/2_4_1.png %}
+
 注意，类似的这些操作若想起作用，需要将其置于 plt.show() 之前，plt.imshow() 之后
+
 ## 无限动图
+
 效果图如下：
+
 {% img /images/python/2_4_2.gif %}
+
 Matplotlib中默认是使用阻塞模式。看一下这里用到的matplotlib中的几个函数：
 
 	plt.ion()：打开交互模式
@@ -257,8 +279,8 @@ Matplotlib中默认是使用阻塞模式。看一下这里用到的matplotlib中
 	plt.pause()：暂停功能
 	
 了解了以上几个函数之后，就可以很方便的画出动态图了。原理很简单，就是一个“画图-->清理-->画图”的循环，注意这中间的pause暂停。
-{% codeblock %}
 
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 def test():
@@ -273,26 +295,27 @@ def test():
 		plt.ioff()
 		plt.show()
 test()
-
 {% endcodeblock %}
+
 让人感到奇怪的是，即便是将 ion() 和 ioff() 注释掉后，还是原来的效果。。。
+
 真让人头大
+
 ## 解决中文乱码
 
 ### win下的解决方案
 
 {% codeblock %}
-
 import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
 plt.text(0.5,0.3,"李丛123")
 plt.show()
-
 {% endcodeblock %}
-{% img /images/python/2_4_3.png %}
-{% codeblock %}
 
+{% img /images/python/2_4_3.png %}
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
@@ -301,8 +324,8 @@ plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 plt.figure()
 plt.text(0.5,0.3,u"李丛123")
 plt.show()
-
 {% endcodeblock %}
+
 {% img /images/python/2_4_4.png %}
 
 ### macbook下的解决方案

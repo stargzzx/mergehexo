@@ -10,10 +10,14 @@ tags:
 - tutorial
 ---
 python 中 os 模块。
- <!-- more -->
+<!-- more -->
+
 ## os
+
 [参考文章]( http://www.cnblogs.com/cherishry/p/5725977.html)
+
 ### 常见函数列表
+
 {% codeblock %}
 os.sep
 	取代操作系统特定的路径分隔符
@@ -80,5 +84,4 @@ os.path.basename(path)
 	返回文件名
 os.path.dirname(path)	
 	返回文件路径
-	
 {% endcodeblock %}
