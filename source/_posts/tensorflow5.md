@@ -8,19 +8,33 @@ tags:
 - tensorflow
 ---
 这一章主要讲解神经网络的优化。
+
 <!-- more -->
+
 {% img /images/tensorflow/3_0.jpg %}
+
 ## 激活函数
+
 {% img /images/tensorflow/3_1.jpg %}
+
 ## 神经网络的复杂度
+
 层数 = 隐藏层数 + 1 个输出层，特别注意的是，是不包含输入层的
+
 总参数 = 总 W + 总 b
+
 比如输入层有 3 个节点，隐藏层有一层为 4 个节点，输出层有两个节点。
+
 总参数为 3 * 4 + 4 + 4 * 2 + 2 = 26
+
 ## 损失函数
+
 部分细节可以参考下面的文章。
+
 [tensorflow 反向传播](https://benpaodewoniu.github.io/2018/09/08/tensorflow2/)
+
 ### 主流的损失函数
+
 一共可以分为三类
 	
 	1. 均方误差
@@ -29,15 +43,22 @@ tags:
 	3. 交叉熵
 	
 ## 场景模拟
-### 场景 1 均方误差损失函数
-描述
-一个酸奶生产厂，想要预测最佳的生产量。其中 x1 , x2 是影响酸奶的两个因素。
-日销量为 y_ 。
-为了更加贴近现实，我们队 x1 和 x2 添加正负 0.05 的噪声。
-拟合可以预测销量的函数。
-代码
-{% codeblock %}
 
+### 场景 1 均方误差损失函数
+
+描述
+
+一个酸奶生产厂，想要预测最佳的生产量。其中 x1 , x2 是影响酸奶的两个因素。
+
+日销量为 y_ 。
+
+为了更加贴近现实，我们队 x1 和 x2 添加正负 0.05 的噪声。
+
+拟合可以预测销量的函数。
+
+代码
+
+{% codeblock %}
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -200,26 +221,34 @@ with tf.Session() as sess:
 # [[0.9777026]
 #  [1.0181949]]
 # After 19500 training step(s),loss on all data is 0.000775461
-
 {% endcodeblock %}
 
 结论
+
 逻辑上我们可以得出，当销量和产量平齐的时候，企业能获得最大的利润，所以，我们可以看到参数慢慢趋近于 1，而 loss 也越来越小。
+
 ### 场景二 自定义损失函数
+
 描述
+
 还是接上一个例子，虽然均方误差能够使得产量和销量相平齐，但是无法使得利益最大化。
+
 比如，预测多了，成本会增加，预测少了，利润会减少。
+
 所以我们要自定义损失函数，公式如下：
+
 {% img /images/tensorflow/3_2.JPG %}
+
 {% img /images/tensorflow/3_3.JPG %}
+
 在 tf 中，具体代码如下：
 
 	loss = tf.reduce_sum(tf.where(tf.greater(y,y_),(y - y_) * COST,(y_ - y) * PROFIT))
 	tf.where(tf.greater(y,y_) 相当于一个三元选择器 即 y > y_ ? ，如果式子条件成立则选择前面，如果不成立则选择后面
 	
 代码1
-{% codeblock %}
 
+{% codeblock %}
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -383,15 +412,17 @@ with tf.Session() as sess:
 # [[1.0208615]
 #  [1.0454264]]
 # After 19500 training step(s),loss on all data is 1.91289
-
 {% endcodeblock %}
+
 结论2
+
 系数都偏大
 
 代码2
-我们修改参数，让成本为 9，利润为 1
-{% codeblock %}
 
+我们修改参数，让成本为 9，利润为 1
+
+{% codeblock %}
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -555,15 +586,20 @@ with tf.Session() as sess:
 # [[0.967159  ]
 #  [0.97354174]]
 # After 19500 training step(s),loss on all data is 1.44697
-
 {% endcodeblock %}
+
 结论2
+
 系数都小于 1
 
 ### 场景模拟 3 交叉熵
+
 交叉熵表征两个概率分布之间的距离，公式如下：
+
 {% img /images/tensorflow/3_4.JPG %}
+
 交叉熵越小，两个概率分布越近，就越接近正确答案。
+
 例子：
 
 	已知答案，y_ = (1,0) 预测 Y1 = (0.6,0.4) Y2 = (0.8,0.2) 哪个更接近标准答案？
@@ -582,7 +618,9 @@ with tf.Session() as sess:
 	所以我们要使用 softmax() 函数来制造这类数据
 	
 公式如下：
+
 {% img /images/tensorflow/3_5.JPG %}
+
 在 tf 中的代码
 
 	ce = tf.nn.sparse_softmax_cross_entropy_with_logits(logits = y,labels = y,labels=tf.argmax(y_,1))

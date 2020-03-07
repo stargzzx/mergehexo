@@ -15,7 +15,11 @@ pytorch读取训练集是非常便捷的，只需要使用到2个类：
 	torch.utils.data.Dataset
 	torch.utils.data.DataLoader
 
+<br/>
+
 # 规范代码
+
+<br/>
 
 You should build your custom dataset as below.
 
@@ -45,7 +49,11 @@ train_loader = torch.utils.data.DataLoader(dataset=custom_dataset,
                                            shuffle=True)
 {% endcodeblock %}
 
+<br/>
+
 # 例子 (自定义数据集)
+
+<br/>
 
 这个例子来源于知乎
 
@@ -131,7 +139,11 @@ for i, data in enumerate(imgLoader, 0):
     break
 {% endcodeblock %}
 
+<br/>
+
 # 使用 torch 公有例子
+
+<br/>
 
 对于常用数据集，可以使用torchvision.datasets直接进行读取。torchvision.dataset是torch.utils.data.Dataset的实现
 

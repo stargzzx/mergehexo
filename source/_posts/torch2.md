@@ -10,7 +10,12 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 参考资料
+
+<br/>
+
 [Pytorch optimizer.step和loss.backward和scheduler.step的关系与区别](https://blog.csdn.net/xiaoxifei/article/details/87797935)
 
 有人问我optimizer的step为什么不能放在min-batch那个循环之外，还有optimizer.step和loss.backward的区别；那么我想把答案记录下来。

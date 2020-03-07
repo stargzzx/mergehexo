@@ -16,7 +16,11 @@ tags:
 
 [pytorch | 几个比较简单的代码示例](https://benpaodewoniu.github.io/2020/01/26/torch7/)
 
+<br/>
+
 # model=model.to(device)
+
+<br/>
 
 这代表将模型加载到指定设备上。
 

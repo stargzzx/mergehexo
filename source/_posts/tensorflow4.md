@@ -8,31 +8,40 @@ tags:
 - tensorflow
 ---
 这一章主要讲述反向传播。
+
 <!-- more -->
+
 反向传播的作用是训练模型参数，在所有参数上用梯度下降，使用神经网络模型在训练数据上的损失函数最小。
+
 ## 损失函数（loss）
+
 预测值 y 和已知答案 y_ 的差距
+
 一般主要有以下形式
+
 ### 均方误差（MSE）
+
 {% img /images/tensorflow/2_0.JPG %}
-{% codeblock %}
 
+{% codeblock %}
 loss = tf.reduce_mean(tf.square(y_ - y))
-
 {% endcodeblock %}
-## 训练方法
-以减小 loss 值为优化目标
-{% codeblock %}
 
+## 训练方法
+
+以减小 loss 值为优化目标
+
+{% codeblock %}
 train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
 train_step = tf.train.MomentumOptimizer(learning_rate,momentum).minimize(loss)
 train_step = tf.train.AdamOptimizer(learning_rate).minimize(loss)
-
 {% endcodeblock %}
-## 学习率
-决定参数每次更新的幅度
-{% codeblock %}
 
+## 学习率
+
+决定参数每次更新的幅度
+
+{% codeblock %}
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -103,15 +112,24 @@ with tf.Session() as sess:
 	# [[-0.06024267]
 	# [ 0.91956186]
 	# [-0.0682071 ]]
-	
 {% endcodeblock %}
+
 ## 神经网络八股
+
 搭建神经网络八股：准备，前传，反传，迭代
+
 ### 准备
+
 优化数据集
+
 ### 前向传播
+
 定义输入，参数和输出
+
 ### 反向传播
+
 定义损失函数，反向传播方法
+
 ### 迭代
+
 生成会话，训练 STEPS 轮

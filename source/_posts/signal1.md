@@ -9,18 +9,31 @@ tags:
 - 信号基础
 ---
 这篇主要讲述了信号的频率等相关属性。
+
 <!--more-->
+
 ## 参考资料
+
 [振幅、周期、相移和频率](https://www.shuxuele.com/algebra/amplitude-period-frequency-phase-shift.html)
+
 ## 周期
+
 周期是从一个最高点到下一个最高点（或任何一点到下一个相对点）
+
 振幅是从中（平）线到最高点的高度（或到最低点），也是从最高点到最低点的距离除以2。
+
 {% img /images/signal/1_10.png %}
+
 相移是函数比通常的位置水平向右移了多远。
+
 {% img /images/signal/1_11.png %}
+
 垂直位移是函数比通常的位置垂直向上移了多远。
+
 {% img /images/signal/1_12.png %}
+
 全部一起来！
+
 我们可以全部放进一个方程里：
 
 	y = A sin(Bx + C) + D

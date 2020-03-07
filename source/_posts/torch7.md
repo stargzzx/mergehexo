@@ -10,7 +10,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 只是一个简单的流程
+
+<br/>
 
 {% codeblock %}
 x = torch.randn(10, 3)
@@ -52,7 +56,11 @@ loss = criterion(pred, y)
 print('loss after 1 step optimization: ', loss.item())
 {% endcodeblock %}
 
+<br/>
+
 # 一个简单的结构
+
+<br/>
 
 {% codeblock %}
 import torch
@@ -117,7 +125,11 @@ print(loss)
 
 这里有一个特别注意的点就是，我们虽然可以从文件中直接读取参数和网络结构，但是，在文件中还是要放一下我们构建模型的那个 model。
 
+<br/>
+
 # 一个持续更新的代码
+
+<br/>
 
 {% codeblock %}
 import torch
@@ -269,7 +281,11 @@ torch.save(model.state_dict(), 'model.ckpt')
 
     with torch.no_grad()或者@torch.no_grad()中的数据不需要计算梯度，也不会进行反向传播
 
+<br/>
+
 # 一个简单的具有完整网络结构的例子
+
+<br/>
 
 希望你能喜欢
 

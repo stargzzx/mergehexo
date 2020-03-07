@@ -10,9 +10,13 @@ tags:
 - cnn
 ---
 这是用 cnn 分类一个花的数据库。
+
 <!-- more -->
+
 ## 数据库链接
+
 [flowers](http://download.tensorflow.org/example_images/flower_photos.tgz)
+
 数据集描述：
 
 ## 环境
@@ -20,13 +24,21 @@ python 3.5
 tensorflow
 scikit-image
 numpy
+
 ## 操作流程
+
 ### 数据集的操作
+
 我们的数据集下载下来是压缩包，所以，第一步当然是将其解压缩。
+
 然后我们会看到五个文件夹，里面放着花的图片。
+
 剩下的我们就是来读取花的数据，然后进行 cnn 分类。
+
 ### 读取花的数据
+
 我们用的库是 skimage ，关于它的优势，可以看我下面的 blog 。
+
 [python scikit-image skimage](https://benpaodewoniu.github.io/2019/02/16/python50/)
 
 	def read_img(path):
@@ -43,6 +55,7 @@ numpy
 		return np.asarray(imgs,np.float32),np.asarray(labels,np.int32)
 
 在这里尤为注意的是 windows 下的路径书写方式。
+
 如果直接粘贴路径的话，其大概是下面这样
 
 	E:\database\flower\flower_photos\test\flower_photos
@@ -56,7 +69,9 @@ numpy
 	E:/database/flower/flower_photos/test/flower_photos\test.jpg
 
 竟然也能读取。
+
 上面这段代码将所有图片变成 narray 的形式，顺便将其分了类，没有用 one-hot 编码方式。
+
 下面就是打乱顺序，然后将数据分为训练集和验证集，即
 
 	#打乱顺序
@@ -75,11 +90,14 @@ numpy
 	
 
 ### 构建 CNN 网络
-详情见代码吧
-直说最后输出的是 shape 是 5 个数
-## code
-{% codeblock %}
 
+详情见代码吧
+
+直说最后输出的是 shape 是 5 个数
+
+## code
+
+{% codeblock %}
 from skimage import io,transform
 import glob
 import os
@@ -258,31 +276,7 @@ for epoch in range(n_epoch):
 
 saver.save(sess,model_path)
 sess.close()
-
 {% endcodeblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

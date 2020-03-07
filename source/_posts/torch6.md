@@ -12,13 +12,21 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 参考文章
+
+<br/>
 
 [PyTorch-网络的创建，预训练模型的加载](https://www.cnblogs.com/wangguchangqing/p/11058525.html)
 
 主要涉及到以下函数的使用
 
+<br/>
+
 # 函数使用
+
+<br/>
 
 ## 模型创建
 
@@ -43,7 +51,11 @@ tags:
 	load()
 	state_dict() 
 
+<br/>
+
 # 构建网络
+
+<br/>
 
 ## 手动一层层构建
 
@@ -199,7 +211,11 @@ model = nn.Sequential(OrderedDict([
 
 	Sequential按照顺序将将Module加入到网络中，也可以处理字典。 相比于ModuleList不需要自己实现forward
 
+<br/>
+
 # 遍历网络结构
+
+<br/>
 
 可以使用以下2对4个方法来访问网络层所有的Modules
 

@@ -25,13 +25,17 @@ rest 的作用规范是有的，但是，具体的实施取决于写接口的人
 [REST API 接口测试](https://www.imooc.com/learn/1048)
 
 <br/>
+
 # 生命周期
+
 <br/>
 
 接口测试在单元测试之后，UI测试之前。（这个不懂）
 
 <br/>
+
 # 接口测试
+
 <br/>
 
 接口测试（Application Programming Interface）即 api 测试。
@@ -43,7 +47,9 @@ rest 的作用规范是有的，但是，具体的实施取决于写接口的人
 举一个我经手项目的一个例子：eos投票管理系统，其接口就是前端和后端进行数据交互的（前后端分离）。
 
 <br/>
+
 # rest 和 restful 的区别
+
 <br/>
 
 rest = representational state transfer
@@ -53,7 +59,9 @@ rest = representational state transfer
 其借助的是 http 。
 
 <br/>
+
 # rest 操作
+
 <br/>
 
 rest的核心思想是资源，其有四种操作资源的方式
@@ -79,7 +87,9 @@ rest 还有更多的操作，但是，以上四种就已经满足几乎所有的
 关于这个操作，我接受的那个项目并没有很好的规范，我只用了 get 和 post 请求。
 
 <br/>
+
 # 设计规范
+
 <br/>
 
 协议：使用 HTTPs 协议，确保交互数据的传输安全
@@ -115,27 +125,31 @@ Hypermedia API：在返回结果中提供相关的资源的链接，连向其他
 这个在交易所上主要有，不同的 key 和 secret 有的可以下单，有的只能查询。
 
 <br/>
+
 # HTTP 常见的状态码
-<br/>
-
-状态码|含义
----|---|---
-200(OK)|  请求成功
-201(created)|  资源被成功创建
-202(accepted)|  已经接受请求，但是尚未完成（异步处理）
-301(moved permanently)|  资源的 URL 被更新
-303(see other)|  其他（如，负载均衡等）
-400(bad request)|  坏请求
-404(not found)|  资源不存在
-406(not acceptable)|  服务端不支持所需表示
-409(conflict)|  通用冲突
-412(precondition failed)|  前置条件失败（如执行条件更新时的冲突）
-415(unsupported media type)|  接收到的表示不支持
-500(internal server error)|  通用错误响应
-503(service unavailable)|  服务当前无法处理请求
 
 <br/>
+
+|状态码|含义|
+|---|---|
+|200(OK)|  请求成功|
+|201(created)|  资源被成功创建|
+|202(accepted)|  已经接受请求，但是尚未完成（异步处理）|
+|301(moved permanently)|  资源的 URL 被更新|
+|303(see other)|  其他（如，负载均衡等）|
+|400(bad request)|  坏请求|
+|404(not found)|  资源不存在|
+|406(not acceptable)|  服务端不支持所需表示|
+|409(conflict)|  通用冲突|
+|412(precondition failed)|  前置条件失败（如执行条件更新时的冲突）|
+|415(unsupported media type)|  接收到的表示不支持|
+|500(internal server error)|  通用错误响应|
+|503(service unavailable)|  服务当前无法处理请求|
+
+<br/>
+
 # 返回结果设计
+
 <br/>
 
 	{

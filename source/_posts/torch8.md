@@ -14,7 +14,11 @@ mathjax: true
 
 <!-- more -->
 
+<br/>
+
 # 删除层
+
+<br/>
 
 	pretrained_params = torch.load('Pretrained_Model'）
 	model = The_New_Model(xxx)

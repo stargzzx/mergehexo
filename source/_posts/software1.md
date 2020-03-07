@@ -13,8 +13,11 @@ tags:
 
 关于这个的下载和安装在这里不说了，自己搜相关的内容吧，在这里我只是提一下提高效率的方法。
 
+<br/>
 
 # 项目的路径规整
+
+<br/>
 
 我们会在 collections 中，创建我们的项目URL合集。
 
@@ -26,7 +29,11 @@ tags:
 
 然后我们在相应的文件夹中，放置相应的请求。
 
+<br/>
+
 # get 和 post 请求
+
+<br/>
 
 ## get
 
@@ -40,11 +47,17 @@ post的请求是在 body 中的 form-data 填写数据。
 
 {% img /images/software/1_3.png %}
 
+<br/>
+
 # 占位符
+
+<br/>
+
 我们经常会在本地和线上做测试，所以，要填写不同的地址，这个时候，我们就可以用占位符来减少我们的工作量。
 
 ## 添加
 {% img /images/software/1_4.png %}
+
 {% img /images/software/1_5.png %}
 
 我们创建完成相应的环境之后，我们就可以填写占位符，比如，下面我们填写了 host 占位符。
@@ -71,17 +84,29 @@ post的请求是在 body 中的 form-data 填写数据。
 	
 {% img /images/software/1_10.png %}
 
+<br/>
+
 # 请求文件下载
+
+<br/>
 
 使用 send and download 就好了。
 
 {% img /images/software/1_11.png %}
 
+<br/>
+
 # 上传文件
+
+<br/>
 
 {% img /images/software/1_12.png %}
 
+<br/>
+
 # POST 请求 500 错误
+
+<br/>
 
 有的时候我们使用 postman 会出现 500 的错误，这有可能是我们传值的方式错误
 
@@ -109,7 +134,11 @@ header就不用说了：
 
 {% img /images/software/1_16.png %}
 
+<br/>
+
 # 返回 code
+
+<br/>
 
 postman 还能直接返回 code 形式
 

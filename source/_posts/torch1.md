@@ -13,13 +13,21 @@ mathjax: true
 
 <!-- more -->
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [Tensor的自动求导](https://cloud.tencent.com/developer/article/1381900)
 [Pytorch问题：autograd与backward](http://www.manongjc.com/article/41240.html)
 [pytorch的backward](https://www.cnblogs.com/wanghui-garcia/p/10616344.html)
 
+<br/>
+
 # 设置Tensor的自动求导属性
+
+<br/>
 
 所有的tensor都有.requires_grad属性，都可以设置成自动求导。具体方法就是在定义tensor的时候，让这个属性为True：
 
@@ -64,7 +72,11 @@ print(x.requires_grad,y.requires_grad)
 
 这里，注意区别tensor.requires_grad和tensor.requires_grad_()两个东西，前面是调用变量的属性值，后者是调用内置的函数，来改变属性。
 
+<br/>
+
 # 来求导吧
+
+<br/>
 
 下面我们来试试自动求导到底怎么样。
 
@@ -136,7 +148,11 @@ J对x的导数应该是什么呢？
 
 {% img /images/torch/1_2.jpeg %}
 
+<br/>
+
 # 关于backward函数的一些其他问题：
+
+<br/>
 
 在看文档的时候,他们给了这样的一个例子：
 

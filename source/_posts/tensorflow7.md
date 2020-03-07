@@ -8,8 +8,11 @@ tags:
 - tensorflow
 ---
 如题，我也是第一次见滑动平均这个概念。
+
 <!-- more -->
+
 滑动平均是一个优化方法。滑动平均又叫影子值，记录了每个参数一段时间内过往值的平均，增加了模型的泛化性。
+
 滑动平均针对所有参数（W 和 b），就好像是给参数加了影子，参数变化，影子缓慢追随。
 
 	影子 = 衰减率 * 影子 + （1 - 衰减率） * 参数
@@ -33,8 +36,8 @@ tags:
 	...
 	
 ## 在 tensorflow 中如何写滑动平均
-{% codeblock %}
 
+{% codeblock %}
 ema = tf.train.ExponentialMovingAverage(衰减率MOVING_AVERAGE_DECAY,当前轮数gloal_step)
 #ema_op = ema.apply([])
 ema_op = ema.apply(tf.trainable_variables())
@@ -43,12 +46,11 @@ with tf.control_dependencies([train_step,ema_op]):
 	train_op = tf.no_op(name = 'train')
 ema.average(参数名)
 	# 查看某些参数的活动平均值
-	
 {% endcodeblock %}
 
 ## 代码示例
-{% codeblock %}
 
+{% codeblock %}
 import tensorflow as tf
 
 #1 定义一个 32 位浮点变量，初始值为 0.0 这个代码就是不断地更新 w1 参数，优化 w1 参数，滑动平均做了个 w1 的影子
@@ -111,5 +113,4 @@ with tf.Session() as sess:
 		# [10.0, 4.061389]
 		# [10.0, 4.547275]
 		# [10.0, 4.9934072]
-		
 {% endcodeblock %}

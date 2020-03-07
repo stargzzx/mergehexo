@@ -10,11 +10,19 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [PyTorch 预训练模型，保存，读取和更新模型参数以及多 GPU 训练模型](https://blog.csdn.net/Code_Mart/article/details/88254444)
 
+<br/>
+
 # 保存模型参数
+
+<br/>
 
 PyTorch 中保存模型的方式有许多种：
 
@@ -29,7 +37,11 @@ torch.save({'state_dict': model.state_dict(), 'fc_dict':model.fc.state_dict(),
             PATH)
 {% endcodeblock %}
 
+<br/>
+
 # 读取模型参数
+
+<br/>
 
 同样的，PyTorch 中读取模型参数的方式也有许多种：
 

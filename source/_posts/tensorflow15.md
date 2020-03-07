@@ -8,13 +8,21 @@ tags:
 - tensorflow
 ---
 制作 tensorflow 的数据集。
+
 <!-- more -->
+
 ## 参考资料
+
 [北京大学人工智能实践：Tensorflow笔记](https://www.bilibili.com/video/av22530538/?p=25)
+
 [tensorflow TFRecords文件的生成和读取方法](https://zhuanlan.zhihu.com/p/31992460)
+
 ## tfrecords文件
+
 tfrecords 是一种二进制文件，可以先将图片和标签制作成该格式的文件。使用 tfrecords 进行数据读取，会提高内存的利用率.
+
 TFRecords是一种tensorflow的内定标准文件格式，其实质是二进制文件，遵循protocol buffer（PB）协议，其后缀一般为tfrecord。TFRecords文件方便复制和移动，能够很好的利用内存，无需单独标记文件，适用于大量数据的顺序读取，是tensorflow“从文件里读取数据”的一种官方推荐方法！
+
 用 tf.train.Example 的协议存储训练数据。训练数据的特征用键值对的形式表示。
 	
 	如：
@@ -22,6 +30,7 @@ TFRecords是一种tensorflow的内定标准文件格式，其实质是二进制�
 	'label' : 值 值是 Byteslist/FloatList/Int64List
 
 用 SerializeToString() 把数据序列转化为字符串存储。
+
 ### TFRecords文件的生成
 
 	其源代码主要位于文件tensorflow/python/lib/io/tf_record.py
@@ -39,6 +48,7 @@ TFRecords是一种tensorflow的内定标准文件格式，其实质是二进制�
 	option = tf.python_io.TFRecordOptions(tf.python_io.TFRecordCompressionType.ZLIB)
 	
 第二步，tf.train.Feature生成协议信息
+
 一个协议信息特征（这里翻译可能不准确）是将原始数据编码成特定的格式，一般是features中又包含feature，内层feature是一个字典值，它是将某个类型列表编码成特定的feature格式，而该字典键用于读取TFRecords文件时索引得到不同的数据，某个类型列表可能包含零个或多个值，列表类型一般有BytesList, FloatList, Int64List，通常用如下方法来生成某个列表类型再送给内层的tf.train.Feature编码：
 
 	tf.train.BytesList(value=[value]) # value转化为字符串（二进制）列表
@@ -46,6 +56,7 @@ TFRecords是一种tensorflow的内定标准文件格式，其实质是二进制�
 	tf.train.Int64List(value=[value]) # value转化为整型列表
 	
 其中，value是你要保存的数据。
+
 内层feature编码方式：
 
 	feature_internal = {
@@ -59,6 +70,7 @@ TFRecords是一种tensorflow的内定标准文件格式，其实质是二进制�
 	features_extern = tf.train.Features(feature_internal)
 	
 看起来，tf.train.Feature这个接口可以编码封装列表类型和字典类型，但注意用的接口是不一样的，内层用的是tf.train.Feature而外层用的是tf.train.Features，一个是对单一数据编码成单元feature，而另一个是将包含多个单元feature的字典数据再编码为集成的features。
+
 第三步，使用tf.train.Example将features编码数据封装成特定的PB协议格式
 
 	example = tf.train.Example(features_extern)
@@ -71,13 +83,18 @@ TFRecords是一种tensorflow的内定标准文件格式，其实质是二进制�
 
 	writer.write(example_str)
 	
-TFRecordWriter拥有类似python文件操作的接口，如writer.flush()立即将内存数据刷新到磁盘文件里，writer.close()关闭TFRecordWriter，在写完数据到协议缓冲区后通常需要调用writer.close()主动关闭TFRecords文件操作接口。
-举例说明TFRecords文件的生成
-下面的例子可以将如下图片生成TFRecords文件，我们将保存该图片的宽高以及其内容，并保存浮点型数据9.99、8.88、6.66到不同的压缩tfrecord文件里，该图片的原始大小是1.2Mb，等下我们看一下不同TFRecords文件压缩方式生成文件的大小。
-{% img /images/tensorflow/15_0.jpg %}
-代码及其注释如下：
-{% codeblock %}
 
+TFRecordWriter拥有类似python文件操作的接口，如writer.flush()立即将内存数据刷新到磁盘文件里，writer.close()关闭TFRecordWriter，在写完数据到协议缓冲区后通常需要调用writer.close()主动关闭TFRecords文件操作接口。
+
+举例说明TFRecords文件的生成
+
+下面的例子可以将如下图片生成TFRecords文件，我们将保存该图片的宽高以及其内容，并保存浮点型数据9.99、8.88、6.66到不同的压缩tfrecord文件里，该图片的原始大小是1.2Mb，等下我们看一下不同TFRecords文件压缩方式生成文件的大小。
+
+{% img /images/tensorflow/15_0.jpg %}
+
+代码及其注释如下：
+
+{% codeblock %}
 import tensorflow as tf
 
 filename = "/home/xsr-ai/study/tfrecord/beautiful_view.jpg"
@@ -146,15 +163,22 @@ writer_none.close()
 writer_zlib.close()
 writer_gzip.close()
 print("finish to write data to tfrecord file!")
-
 {% endcodeblock %}
+
 运行代码后，生成的数据如下：
+
 {% img /images/tensorflow/15_1.jpg %}
+
 我们看到，用不同方式压缩保存的tfrecord文件大小并无异，这可能是数据量不够多的缘故。
+
 ps：我运行的时候，有报错，但是不影响使用，还是生成了三个文件。
+
 ### TFRecords文件的读取
+
 TFRecords文件的读取主要是使用tf.TFRecordReader和tf.python_io.tf_record_iterator
+
 其源代码位于tensorflow/python/ops/io_ops.py和tensorflow/python/lib/io/tf_record.py
+
 第一步，使用tf.train.string_input_producer生成文件队列
 
 	filename_queues = tf.train.string_input_producer([tfrecord_path_none,tfrecord_path_zlib,tfrecord_path_gzip])
@@ -164,11 +188,13 @@ TFRecords文件的读取主要是使用tf.TFRecordReader和tf.python_io.tf_recor
 	reader = tf.TFRecordReader(name=None, options=None)
 	
 options是tfrecord文件存储时的压缩方式，与tf.python_io.TFRecordWriter保存时一致，是一个TFRecordOptions对象。
+
 第三步，读取tfrecord文件
 
 	serialized_example = reader.read(filename)
 	
 filename是tf.train.string_input_producer得到的文件队列名，读取得到的是一个系列化的example。
+
 第四步，使用tf.parse_single_example解析得到的系列化example
 
 	features = tf.parse_single_example( 
@@ -182,13 +208,18 @@ filename是tf.train.string_input_producer得到的文件队列名，读取得到
 	)
 	
 需要按照存储时的格式还原features，必须写明features内的字典的键索引得到特定的数据！
-第五步，处理得到的数据
-features是一个字典，要使用特定数据，需要用字典的key来索引得到相应的数据，如要得到的width的值，则可以以features['width']得到，对于得到的数据还需要做一些处理的，比如features['image_raw']需要decode才能显示整个图片。
-举例说明TFRecords文件的读取
-我们根据生成的tfrecord文件来读取其中的float_val的值，并显示image_raw的图片内容。
-代码及其注释如下：
-{% codeblock %}
 
+第五步，处理得到的数据
+
+features是一个字典，要使用特定数据，需要用字典的key来索引得到相应的数据，如要得到的width的值，则可以以features['width']得到，对于得到的数据还需要做一些处理的，比如features['image_raw']需要decode才能显示整个图片。
+
+举例说明TFRecords文件的读取
+
+我们根据生成的tfrecord文件来读取其中的float_val的值，并显示image_raw的图片内容。
+
+代码及其注释如下：
+
+{% codeblock %}
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
@@ -252,7 +283,6 @@ plt.title("beautiful view")
 plt.show()
 
 print("finish to read data from tfrecord file!")
-
 {% endcodeblock %}
 
 

@@ -9,10 +9,12 @@ tags:
 - 神经层
 ---
 这个应该是重点。。。
-<!-- more -->
-一段代码讲述如何建立。。。
-{% codeblock %}
 
+<!-- more -->
+
+一段代码讲述如何建立。。。
+
+{% codeblock %}
 import tensorflow as tf
 
 def add_layer(inputs,in_size,out_size,activation_function = None):
@@ -25,8 +27,8 @@ def add_layer(inputs,in_size,out_size,activation_function = None):
     else:
         outputs = activation_function(Wx_plus_b)
     return outputs
-
 {% endcodeblock %}
+
 OK，打完收工。
 
 

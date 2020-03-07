@@ -9,28 +9,38 @@ tags:
 - MNIST
 ---
 这只是一个简单的 tensorflow 分类例子。
-<!-- more -->
-## MNIST 数据
-在 tensorflow 的例子中自带 MNIST 数据包，我们可以直接引用，如果我们的 tensorflow 没有这个包，那么它会自己下载的。如果有数据的话，它会直接读取。
-{% img /images/tensorflow/13_0.png %}
-相关代码如下;
-{% codeblock %}
 
+<!-- more -->
+
+## MNIST 数据
+
+在 tensorflow 的例子中自带 MNIST 数据包，我们可以直接引用，如果我们的 tensorflow 没有这个包，那么它会自己下载的。如果有数据的话，它会直接读取。
+
+{% img /images/tensorflow/13_0.png %}
+
+相关代码如下;
+
+{% codeblock %}
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-
 {% endcodeblock %}
+
 但是，我们应该自己下载下来。[因为漫长的等待总是让人崩溃的]
+
 [MNIST 数据下载](http://www.tensorfly.cn/tfdoc/tutorials/mnist_download.html)
+
 我们可以用迅雷将资源下载下来，放到文件中。
+
 目录如下：
+
 {% img /images/tensorflow/13_1.png %}
 
 
 ## 参考 tensorflow 的文档写的代码
-用最普通的方式做训练
-{% codeblock %}
 
+用最普通的方式做训练
+
+{% codeblock %}
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 import numpy as np
@@ -161,7 +171,6 @@ if __name__ == "__main__":
     print("test accuracy %g" % accuracy.eval(session=sess,feed_dict={
         x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
     #test accuracy 0.9919
- 
 {% endcodeblock %}
 
 

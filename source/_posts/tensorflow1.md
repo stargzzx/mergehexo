@@ -9,12 +9,19 @@ tags:
 - 函数详解
 ---
 如题。
+
 <!-- more -->
+
 # A
+
 ## add_to_collection
+
 tf.add_to_collection(‘list_name’, element)：将元素element添加到列表list_name中
+
 tf.get_collection(‘list_name’)：返回名称为list_name的列表
+
 tf.add_n(list)：将列表元素相加并返回
+
 {% codeblock %}
 import tensorflow as tf
 tf.add_to_collection('losses', tf.constant(2.2))
@@ -39,9 +46,10 @@ with tf.Session() as sess:
 
 
 # E
-## exp()
-{% codeblock %}
 
+## exp()
+
+{% codeblock %}
 import tensorflow as tf
 x = tf.constant([[1.0,2.0],[5.0,3.0]])
 x_2 = tf.exp(x)

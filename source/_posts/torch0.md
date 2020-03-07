@@ -14,13 +14,21 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 安装 torch
+
+<br/>
 
 你可以访问我下面的 blog ，安装它还是需要一点技巧的。
 
 [安装 torch](https://benpaodewoniu.github.io/2019/11/10/python64/)
 
+<br/>
+
 # 对于 macos
+
+<br/>
 
 官网上说
 
@@ -36,7 +44,11 @@ tags:
 
 其中，我们先讲一下 torchvision。
 
+<br/>
+
 # torchvision
+
+<br/>
 
 这是一个独立与 torch 的库，里面包含了很多经典的网络机构和数据集。如，已经训练好的 vgg 结构，常用的数据集等等。
 
@@ -55,7 +67,11 @@ tags:
 
 对于以后要用的torch来说一站式的anaconda是首选，毕竟人生苦短。
 
+<br/>
+
 # numpy 和 torch 的区别
+
+<br/>
 
 {% codeblock %}
 import torch

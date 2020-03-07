@@ -10,11 +10,19 @@ tags:
 - cnn
 ---
 利用 tensorflow 的 CNN 来训练图片分类。
+
 <!-- more -->
+
 ## 训练数据集
+
 [The CIFAR-10 dataset](http://www.cs.toronto.edu/~kriz/cifar.html)
+
 ## 项目地址
+
 [tensorflow/models](https://github.com/tensorflow/models/tree/master/tutorials/image/cifar10/)
+
 ## 项目介绍
+
 [卷积神经网络](http://tensorfly.cn/tfdoc/tutorials/deep_cnn.html)
+
 [Advanced Convolutional Neural Networks](https://www.tensorflow.org/tutorials/images/deep_cnn)
