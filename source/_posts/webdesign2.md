@@ -10,12 +10,16 @@ tags:
 - konwhow
 ---
 我们的knowhow的其中一个文件可能会需要修改。
-<!-- more -->
-# 文件1
-这个文件在 htdocs\wordpress\wp-content\themes\konwhow\content-meta.php
-我将文件改成下面的那个了。
-{% codeblock %}
 
+<!-- more -->
+
+# 文件1
+
+这个文件在 htdocs\wordpress\wp-content\themes\konwhow\content-meta.php
+
+我将文件改成下面的那个了。
+
+{% codeblock %}
 <?php 
 $st_post_meta = of_get_option('st_article_meta' );
 $number = get_comments_number(get_the_ID()); ?>
@@ -54,7 +58,6 @@ $number = get_comments_number(get_the_ID()); ?>
 
 
 </ul>
-
 {% endcodeblock %}
 
 

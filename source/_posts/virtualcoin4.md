@@ -11,6 +11,9 @@ tags:
 - earn menoy
 ---
 清点进去看图。
+
 <!-- more -->
+
 {% img /images/virtualcoin/4_0.jpg %}
+
 {% img /images/virtualcoin/4_1.JPG %}

@@ -7,7 +7,9 @@ tags:
 - ubuntu
 ---
 由于国内墙的原因，所以，我们要更换一下镜像源。
+
 <!--more-->
+
 ## 参考资料
 
 [ubuntu更改镜像源（软件源）](https://blog.csdn.net/weixin_41762173/article/details/79480832)
