@@ -49,3 +49,51 @@ tags:
 
 [Hexo Next 主题中添加本地搜索功能](https://blog.csdn.net/lijing742180/article/details/87970909)
 
+## 主题配置文件
+
+在主题配置文件 _config.yml 中找到如下内容：
+
+
+	local_search:
+	  enable: true
+	  trigger: auto
+	  top_n_per_article: 1
+
+确保 enable 设成 true。
+
+top_n_per_article 字段表示在每篇文章中显示的搜索结果数量，设成 -1 会显示每篇文章的所有搜索结果数量。
+
+这个时候，页面就已经出现搜索框了，但是，现在还不能用，必须安装插件。
+
+## 安装插件
+
+	# 安装插件，用于生成博客索引数据（在博客根目录下执行下列命令）：
+	npm install hexo-generator-search --save
+
+安装之后，会在站点目录的 public 文件夹下创建一个 search.xml 文件。
+
+## 修改站点配置文件
+
+在站点配置文件 _config.yml 中添加如下内容：
+
+
+	# Search 
+	search:
+	  path: ./public/search.xml
+	  field: post
+	  format: html
+	  limit: 10000
+
+- path：索引文件的路径，相对于站点根目录
+- field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面
+- limit：限制搜索的条目数
+
+这个时候就能使用搜索了。
+
+讲真的，搜索真香～～～
+
+到后面，使用
+
+	hexo g
+
+其，就自动生成 search.xml 文件了。
