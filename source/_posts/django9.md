@@ -8,8 +8,15 @@ tags:
 - 微信小程序
 ---
 小程序开发——实现个人助手功能清单发布。
+
 <!-- more -->
+
+<br/>
+
 # Django后台实现
+
+<br/>
+
 ## 定义功能清单的通用数据字段
 
 	功能名字
@@ -17,10 +24,15 @@ tags:
 	功能的附加信息(版本、地址、描述)
 	
 ## 实现功能清单的接口
+
 {% img /images/django/9_0.png %}
+
 在django的project中，我们定义一个 app.yaml 的文件，用来描述正在开发的app和开发完成的app
+
 {% img /images/django/9_1.png %}
+
 {% img /images/django/9_2.png %}
+
 其路由过程如下，先是根据 setting.py 找到根路由
 
 	ROOT_URLCONF = 'backend.urls'
@@ -47,9 +59,9 @@ tags:
 	]
 
 根据上面的那些进入对应得视图文件。
+
 其中 menu.py 下的文件内容为：
 {% codeblock %}
-
 import os
 import yaml
 
@@ -73,15 +85,15 @@ def get_menu(request):
     response = utils.response.wrap_json_response(data=published_app_data,
                                                  code=utils.response.ReturnCode.SUCCESS)
     return JsonResponse(data=response, safe=False)
-
 {% endcodeblock %}
+
 那个
 
 	import utils.response
 	
 是自己编写得代码，是为了让返回函数有更好得封装，如下
-{% codeblock %}
 
+{% codeblock %}
 # 状态码
 class ReturnCode:
     SUCCESS = 0
@@ -115,8 +127,8 @@ def wrap_json_response(data=None, code=None, message=None):
     response['result_code'] = code
     response['message'] = message
     return response
-
 {% endcodeblock %}
+
 通过上面部署代码运行后，在 postman 中输入
 
 	127.0.0.1:8000/api/v1.0/service/menu
@@ -141,8 +153,14 @@ def wrap_json_response(data=None, code=None, message=None):
 	}
 	
 
+<br/>
+
 # 小程序的实现
+
+<br/>
+
 {% img /images/django/9_3.png %}
+
 在 app.js 中，我们定义全局属性：
 
 	globalData: {
@@ -152,8 +170,8 @@ def wrap_json_response(data=None, code=None, message=None):
 	}
 
 然后，我们进入 menu 文件夹下的 menu.js
-{% codeblock %}
 
+{% codeblock %}
 // pages/menu/menu.js
 
 const app = getApp() //全局唯一的APP对象
@@ -192,12 +210,13 @@ Page({
     })
   }
 })
-
 {% endcodeblock %}
-这里一个细节是 onLoad 的函数内，调用了 updateMenuData 函数。
-而 menu.wxml 的内容如下：
-{% codeblock %}
 
+这里一个细节是 onLoad 的函数内，调用了 updateMenuData 函数。
+
+而 menu.wxml 的内容如下：
+
+{% codeblock %}
 <!--pages/menu/menu.wxml-->
 <view class="page">
   <view class="page__hd">
@@ -216,8 +235,8 @@ Page({
     </view>
   </view>
 </view>
-
 {% endcodeblock %}
+
 {% img /images/django/9_4.png %}
 
 

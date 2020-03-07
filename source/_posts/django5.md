@@ -7,14 +7,23 @@ tags:
 - Django
 ---
 这一篇讲述分页。
+
 <!-- more -->
+
 为了获得具体是哪一页，我们的 url 采用 /blog/index?page=1 的这种方式
+
 我们将boorstrap的分页组件放在相应的页面中
+
 {% img /images/django/5_0.png %}
+
+<br/>
+
 # django的分页组件
+
+<br/>
+
 {% codeblock %}
 from django.core.paginator import Paginator
-
 l = [1,2,3,4]
 p = Paginator(l,2) # 将 l 分为 2 组
 print(p.num_pages)
@@ -33,9 +42,10 @@ print(page1.has_previous())
 	# False
 
 {% endcodeblock %}
-为了获取 url 里的参数，我们可以修改blog/views.py 的 get_index_page()
-{% codeblock %}
 
+为了获取 url 里的参数，我们可以修改blog/views.py 的 get_index_page()
+
+{% codeblock %}
 def get_index_page(request):
     page = request.GET.get('page')
     if page:
@@ -66,11 +76,11 @@ def get_index_page(request):
                       'next_page': next_page,
                       'previous_page': previous_page
                   })
-
 {% endcodeblock %}
-而 /blog/index.html的界面代码如下：
-{% codeblock %}
 
+而 /blog/index.html的界面代码如下：
+
+{% codeblock %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,9 +143,10 @@ def get_index_page(request):
 </div>
 </body>
 </html>
-{% endcodeblock %}
-{% img /images/django/5_1.png %}
 
+{% endcodeblock %}
+
+{% img /images/django/5_1.png %}
 
 
 

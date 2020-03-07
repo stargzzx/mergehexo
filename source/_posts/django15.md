@@ -8,21 +8,36 @@ tags:
 - 微信小程序
 ---
 微信小程序——综合实践之生活服务
+
 <!-- more -->
+
+<br/>
+
 # 实现天气应用
+
+<br/>
+
 要修改的效果
 
 	函数视图改成类视图
 	weather page页面
 	下拉刷新页面
 	
-# 逻辑过程
-由于代码的太多了，所以，我们这边只是说一下里面的逻辑过程。
-{% img /images/django/15_0.png %}
-这个在小程序内是 menu 页面。
-其中，menu.wxml的代码为
-{% codeblock %}
+<br/>
 
+# 逻辑过程
+
+<br/>
+
+由于代码的太多了，所以，我们这边只是说一下里面的逻辑过程。
+
+{% img /images/django/15_0.png %}
+
+这个在小程序内是 menu 页面。
+
+其中，menu.wxml的代码为
+
+{% codeblock %}
 <!--pages/menu/menu.wxml-->
 <view class="page">
   <view class="page__hd">
@@ -39,17 +54,19 @@ tags:
     </view>
   </view>
 </view>
-
 {% endcodeblock %}
+
 这里面有一个标签是
 
 	<navigator url="" class="weui-grid" hover-class="weui-grid_active" data-index='{{index}}' bindtap='onNavigatorTap'>
 	
 其中，data-index 是为了区分两个应用的参数，bindtap这个是点击之后执行的方法。
-因为，我们有两个应用，所以，在点击之后，我们要让后台知道是哪个应用被点击了，所以，在这里，我们引入 data-index 参数。
-在 menu.js 中，我们看到这样的代码：
-{% codeblock %}
 
+因为，我们有两个应用，所以，在点击之后，我们要让后台知道是哪个应用被点击了，所以，在这里，我们引入 data-index 参数。
+
+在 menu.js 中，我们看到这样的代码：
+
+{% codeblock %}
 // pages/menu/menu.js
 
 const app = getApp()
@@ -106,9 +123,10 @@ Page({
     }
   }
 })
-
 {% endcodeblock %}
+
 ## updateMenuData
+
 在这里，我们将会重点剖析一些方法事例。
 
 	updateMenuData: function() {
@@ -129,8 +147,8 @@ Page({
 	127.0.0.1:8000/api/v1.0/service/menu
 	
 其中，在 menu.py 文件中，其代码是这样的
-{% codeblock %}
 
+{% codeblock %}
 import os
 import yaml
 
@@ -153,12 +171,11 @@ def get_menu(request):
     # return JsonResponse(data=published_apps, safe=False, status=200)
     response = utils.response.wrap_json_response(data=published_apps)
     return JsonResponse(data=response, safe=False)
-
 {% endcodeblock %}
 
 这个代码是让我们加载一个叫做 app.yaml 的文件，其内容是
-{% codeblock %}
 
+{% codeblock %}
 published:
   - app:
       category: life
@@ -175,9 +192,10 @@ published:
       publish_date: 2018-10-01
       url: /service/image
       desc: this is a backup image app.
-
 {% endcodeblock %}
+
 至此，我们就加载了应用信息。
+
 ## onNavigatorTap
 
 	onNavigatorTap: function(e) {
@@ -201,15 +219,22 @@ published:
 	var index = e.currentTarget.dataset.index
 	
 这个方法就是获取具体是哪个应用。
-参考下面的文章链接。
-[微信小程序 传值取值的几种方法总结](https://benpaodewoniu.github.io/2019/08/23/django17/)
-然后，利用上面的APP信息，我们得到具体点击的是哪个应用。
-点击天气后，跳转到
-{% img /images/django/15_1.png %}
-由于天气的接口已经过期，所以这个页面显示是错误的，只能从视频上截图了，但是，视频又是AV画质。。。
-其页面的 weather.wxml 的代码如下：
-{% codeblock %}
 
+参考下面的文章链接。
+
+[微信小程序 传值取值的几种方法总结](https://benpaodewoniu.github.io/2019/08/23/django17/)
+
+然后，利用上面的APP信息，我们得到具体点击的是哪个应用。
+
+点击天气后，跳转到
+
+{% img /images/django/15_1.png %}
+
+由于天气的接口已经过期，所以这个页面显示是错误的，只能从视频上截图了，但是，视频又是AV画质。。。
+
+其页面的 weather.wxml 的代码如下：
+
+{% codeblock %}
 <!--pages/weather/weather.wxml-->
 <view class="weui-panel weui-panel_access">
   <view wx:if='{{isAuthorized}}' class="weui-panel__hd">您关心的城市：</view>
@@ -232,11 +257,11 @@ published:
     </navigator>
   </view>
 </view>
-
 {% endcodeblock %}
-其 weather.js 的代码如下：
-{% codeblock %}
 
+其 weather.js 的代码如下：
+
+{% codeblock %}
 // pages/weather/weather.js
 
 const app = getApp()
@@ -312,10 +337,12 @@ Page({
     this.updateWeatherData()
   }
 })
-
 {% endcodeblock %}
+
 在这里，我们要重点说两个：
+
 ### 下拉刷新
+
 即，js中的
 
 	onPullDownRefresh
@@ -332,14 +359,16 @@ Page({
 	}
 
 ### updateWeatherData 请求后台数据
+
 之所以用 POST 请求，是因为 GET 请求需要在 URL 中，自己带参数，还要解析参数，不如直接通过 POST 传数据。
+
 将数据传到
 
 	127.0.0.1:8000/api/v1.0/service/weather
 	
 这个 weather.py 的代码如下：
-{% codeblock %}
 
+{% codeblock %}
 import json
 from django.views import View
 from django.http import HttpResponse, JsonResponse
@@ -365,27 +394,33 @@ class WeatherView(View, CommonResponseMixin):
             data.append(result)
         response_data = self.wrap_json_response(data)
         return JsonResponse(data=response_data, safe=False)
-
 {% endcodeblock %}
+
 其中
 
 	juhe.weather(city.get('city'))
 	
 这个就是调用接口的，在这里就不再细说了。
+
 另外，因为我们用的是类视图，所以，我们在 urls 设计上是这样的
 
 	path('weather', weather.WeatherView.as_view()),
+
+<br/>
 	
 # 优化图片备份应用
+
+<br/>
 
 	进入页面自动加载已备份的图片
 	长按删除和取消上传
 	上传成功自动更新小程序页面的已备份列表
 
 这个页面在小程序叫做 backup
-{% img /images/django/15_2.png %}
-{% codeblock %}
 
+{% img /images/django/15_2.png %}
+
+{% codeblock %}
 <view class="page">
   <view class="page__hd">
     <view class="page__title">图片备份</view>
@@ -428,11 +463,11 @@ class WeatherView(View, CommonResponseMixin):
     <view class='text-center' wx:if="{{downloadedBackupedFiles.length == 0}}">暂无</view>
   </view>
 </view>
-
 {% endcodeblock %}
-其 backup.js 的代码如下：
-{% codeblock %}
 
+其 backup.js 的代码如下：
+
+{% codeblock %}
 const app = getApp()
 const imageUrl = app.globalData.serverUrl + app.globalData.apiVersion + '/service/image'
 
@@ -569,10 +604,12 @@ Page({
     })
   },
 });
-
 {% endcodeblock %}
+
 ## onLoad
+
 我们加载这个页面的时候，会自动加载已经上传的图片。
+
 所以，我们写了这个方法
 
 	onLoad: function () {
@@ -602,8 +639,8 @@ Page({
 	127.0.0.1:8000/api/v1.0/service/image/list
 	
 而相关的 py 文件代码如下：
-{% codeblock %}
 
+{% codeblock %}
 import os
 import hashlib
 from django.views import View
@@ -671,9 +708,8 @@ class ImageView(View, CommonResponseMixin):
             message = 'file(%s) not found.' % img_name
         response = self.wrap_json_response(code=ReturnCode.SUCCESS, message=message)
         return JsonResponse(data=response, safe=False)
-
-
 {% endcodeblock %}
+
 在 url 中，我们这样配置
 
 	path('image', image.ImageView.as_view()),
@@ -684,6 +720,7 @@ class ImageView(View, CommonResponseMixin):
 	ImageListView这个方法
 
 ## 长按删除
+
 {% img /images/django/15_3.png %}
 
 	<view class="weui-uploader__file" data-type="UploadView" bind:longpress="longTapConfirm" data-id="{{item}}">

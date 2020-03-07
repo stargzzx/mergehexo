@@ -8,20 +8,34 @@ tags:
 - 微信小程序
 ---
 微信小程序之综合实践——休闲娱乐
+
 <!-- more -->
+
+<br/>
+
 # 功能
+
+<br/>
 
 	实现股票查询应用
 	实现星座运势应用
 	实现每日笑话应用
 	
 {% img /images/django/18_0.png %}
-# 小程序页面设计
-目录结构
-{% img /images/django/18_2.png %}
-## menu.wxml
-{% codeblock %}
 
+<br/>
+
+# 小程序页面设计
+
+<br/>
+
+目录结构
+
+{% img /images/django/18_2.png %}
+
+## menu.wxml
+
+{% codeblock %}
 <!--pages/menu/menu.wxml-->
 <view class="page">
   <view class="page__hd">
@@ -38,11 +52,11 @@ tags:
     </view>
   </view>
 </view>
-
 {% endcodeblock %}
-## menu.js
-{% codeblock %}
 
+## menu.js
+
+{% codeblock %}
 // pages/menu/menu.js
 
 const app = getApp()
@@ -111,14 +125,17 @@ Page({
     }
   }
 })
-
 {% endcodeblock %}
-整个的目录结构如下：
-{% img /images/django/18_1.png %}
-这个请求的是 django 下面的 views 的 menu.py
-## menu.py
-{% codeblock %}
 
+整个的目录结构如下：
+
+{% img /images/django/18_1.png %}
+
+这个请求的是 django 下面的 views 的 menu.py
+
+## menu.py
+
+{% codeblock %}
 import os
 import yaml
 from django.http import JsonResponse
@@ -138,12 +155,13 @@ def get_menu(request):
     # return JsonResponse(data=published_apps, safe=False, status=200)
     response = utils.response.wrap_json_response(data=published_apps)
     return JsonResponse(data=response, safe=False)
-
 {% endcodeblock %}
-而其中访问的 app.yaml 是
-## app.yaml
-{% codeblock %}
 
+而其中访问的 app.yaml 是
+
+## app.yaml
+
+{% codeblock %}
 published:
   - app:
       category: life
@@ -182,12 +200,13 @@ published:
       publish_date: 2018-10-03
       url: /service/joke
       desc: this is a joke app.
-
 {% endcodeblock %}
-而在第三方接口，即 thirdparty 下的 juhe.py 的内容如下
-## juhe.py
-{% codeblock %}
 
+而在第三方接口，即 thirdparty 下的 juhe.py 的内容如下
+
+## juhe.py
+
+{% codeblock %}
 import json
 import time
 import requests
@@ -289,12 +308,13 @@ def weather(cityname):
 
 if __name__ == '__main__':
     data = weather('深圳')
-
 {% endcodeblock %}
-而我们用 views 中的 service.py 来调用上面的函数
-## service.py
-{% codeblock %}
 
+而我们用 views 中的 service.py 来调用上面的函数
+
+## service.py
+
+{% codeblock %}
 import os
 import json
 import random
@@ -359,12 +379,13 @@ def joke(request):
     sample_jokes = random.sample(all_jokes, limits)
     response = CommonResponseMixin.wrap_json_response(data=sample_jokes)
     return JsonResponse(data=response, safe=False)
-
 {% endcodeblock %}
-views 下的 urls.py 的内容如下：
-## urls.py
-{% codeblock %}
 
+views 下的 urls.py 的内容如下：
+
+## urls.py
+
+{% codeblock %}
 from django.urls import path
 
 from .views import weather, menu, image, service
@@ -379,12 +400,13 @@ urlpatterns = [
     path('constellation', service.constellation),
     path('joke', service.joke)
 ]
-
 {% endcodeblock %}
-然后我们就以股票的页面为例：
-## stock.wxml
-{% codeblock %}
 
+然后我们就以股票的页面为例：
+
+## stock.wxml
+
+{% codeblock %}
 <view class="weui-panel weui-panel_access">
     <view class="weui-panel__hd">股票：</view>
     <view class="weui-panel__bd">
@@ -400,11 +422,11 @@ urlpatterns = [
       </view>
     </view>
   </view>
-
 {% endcodeblock %}
-## stock.js
-{% codeblock %}
 
+## stock.js
+
+{% codeblock %}
 // pages/stock/stock.js
 
 const app = getApp()
@@ -490,7 +512,6 @@ Page({
 
   }
 })
-
 {% endcodeblock %}
 
 

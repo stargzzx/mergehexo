@@ -8,24 +8,35 @@ tags:
 - 微信小程序
 ---
 微信小程序——图片的备份
+
 <!-- more -->
+
+<br/>
+
 # Django后台实现
+
+<br/>
+
 ## 获取文件内容
+
 通过
 	
 	request.FILES
 	
 获取的。
+
 调用上面的函数，就会的得到 key-value对象
 
 	key = 文件名
 	value = 文件（二进制）
 	
 ## Django文件操作
-通过 OS 标准库
-## 编写图片上传，下载，删除代码
-{% codeblock %}
 
+通过 OS 标准库
+
+## 编写图片上传，下载，删除代码
+
+{% codeblock %}
 import os
 from django.http import Http404, HttpResponse, FileResponse,JsonResponse
 from backend import settings
@@ -71,11 +82,11 @@ class ImageView(View,utils.response.CommonResponseMixin):
         message = 'put method success'
         response = self.wrap_json_response(message=message,code=utils.response.ReturnCode.SUCCESS)
         return JsonResponse(data=response, safe=False)
-
 {% endcodeblock %}
-其中 utils.response 文件内容如下：
-{% codeblock %}
 
+其中 utils.response 文件内容如下：
+
+{% codeblock %}
 class ReturnCode:
     SUCCESS = 0
     FAILED = -100
@@ -109,23 +120,39 @@ class CommonResponseMixin(object):
         response['result_code'] = code
         response['message'] = message
         return response
-
 {% endcodeblock %}
-关于这个有一个非常需要注意的一点就是，在这个 CommonResponseMixin 类的 wrap_json_response 方法里面有一个 cls ，它是接受传过来的 request 的，必须存在，否则会报错
-具体的情况，可以参考这篇文章
-[python @classmethod 的使用场合](https://benpaodewoniu.github.io/2019/08/23/python58/)
-# 小程序测的实现
-## WeUI的Upload控件
-### wx.chooseImage
-从本地相册选择图片或使用相机拍照。
-{% img /images/django/13_0.png %}
-注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 wx.saveFile，在小程序下次启动时才能访问得到。
-success返回参数说明：
-{% img /images/django/13_1.png %}
-File 对象结构如下:
-{% img /images/django/13_2.png %}
-{% codeblock %}
 
+关于这个有一个非常需要注意的一点就是，在这个 CommonResponseMixin 类的 wrap_json_response 方法里面有一个 cls ，它是接受传过来的 request 的，必须存在，否则会报错
+
+具体的情况，可以参考这篇文章
+
+[python @classmethod 的使用场合](https://benpaodewoniu.github.io/2019/08/23/python58/)
+
+<br/>
+
+# 小程序测的实现
+
+<br/>
+
+## WeUI的Upload控件
+
+### wx.chooseImage
+
+从本地相册选择图片或使用相机拍照。
+
+{% img /images/django/13_0.png %}
+
+注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 wx.saveFile，在小程序下次启动时才能访问得到。
+
+success返回参数说明：
+
+{% img /images/django/13_1.png %}
+
+File 对象结构如下:
+
+{% img /images/django/13_2.png %}
+
+{% codeblock %}
 wx.chooseImage({
     count: 1, // 默认9
     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -135,11 +162,11 @@ wx.chooseImage({
         var tempFilePaths = res.tempFilePaths
     }
 })
-
 {% endcodeblock %}
-这里尤其要注意的是 tempFilePath可以作为img标签的src属性显示图片
-{% codeblock %}
 
+这里尤其要注意的是 tempFilePath可以作为img标签的src属性显示图片
+
+{% codeblock %}
 // 选择图片上传
 chooseImage: function(e) {
 var that = this;
@@ -154,19 +181,23 @@ wx.chooseImage({
   }
 })
 },
-
 {% endcodeblock %}
+
 {% img /images/django/13_3.gif %}
+
 这里有一个非常奇怪的点是：
 
 	needUploadFiles: that.data.needUploadFiles.concat(res.tempFilePaths)
 	
 将括号里面的 tempFilePaths 换成 tempFilePath
-会导致不能使用。
-## 小程序的文件上传和下载
-### wx.uploadFile
-{% codeblock %}
 
+会导致不能使用。
+
+## 小程序的文件上传和下载
+
+### wx.uploadFile
+
+{% codeblock %}
 wx.chooseImage({
   success: function(res) {
     var tempFilePaths = res.tempFilePaths
@@ -185,8 +216,8 @@ wx.chooseImage({
     })
   }
 })
-
 {% endcodeblock %}
+
 这里要说明一下：
 
 	上传服务器地址须为https，官方实例有误。
@@ -195,31 +226,45 @@ wx.chooseImage({
 	小程序后台需要配置相应地址。
 	
 ### wx.downloadFile
+
 下载文件资源到本地，客户端直接发起一个 HTTP GET 请求，返回文件的本地临时路径。使用前请先阅读说明。
+
 OBJECT参数说明：
+
 {% img /images/django/13_4.png %}
+
 注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 wx.saveFile，才能在小程序下次启动时访问得到。
+
 success返回参数说明：
+
 {% img /images/django/13_5.png %}
+
 返回值：
+
 >基础库 1.4.0 开始支持，低版本需做兼容处理
 
 返回一个 downloadTask 对象，通过 downloadTask，可监听下载进度变化事件，以及取消下载任务。
-#### wx.downloadTask
-downloadTask 对象的方法列表：
-{% img /images/django/13_6.png %}
-onProgressUpdate 返回参数说明：
-{% img /images/django/13_7.png %}
-wxml：
-{% codeblock %}
 
+#### wx.downloadTask
+
+downloadTask 对象的方法列表：
+
+{% img /images/django/13_6.png %}
+
+onProgressUpdate 返回参数说明：
+
+{% img /images/django/13_7.png %}
+
+wxml：
+
+{% codeblock %}
 <button bindtap='down_file'>下载</button>//用来触发下载函数的按钮
 <view><image src='{{img_l}}' bindtap='preview_img'></image></view>
-
 {% endcodeblock %}
-下载的资源在服务器中支持：
-{% codeblock %}
 
+下载的资源在服务器中支持：
+
+{% codeblock %}
 page({
       data:{
         img_l:''
@@ -251,19 +296,30 @@ preview_img:function(){//图片预览函数
     })
   }
 })
-
 {% endcodeblock %}
+
 ### wx.request
+
 发起 HTTPS 网络请求。
+
 {% img /images/django/13_8.png %}
+
 #### object.method 的合法值
+
 {% img /images/django/13_9.png %}
+
 #### object.dataType 的合法值
+
 {% img /images/django/13_10.png %}
+
 #### object.responseType 的合法值
+
 {% img /images/django/13_11.png %}
+
 #### object.success 回调函数
+
 {% img /images/django/13_12.png %}
+
 data 参数说明
 
 最终发送给服务器的数据是 String 类型，如果传入的 data 不是 String 类型，会被转换成 String 。转换规则如下：
@@ -273,8 +329,8 @@ data 参数说明
 	对于 POST 方法且 header['content-type'] 为 application/x-www-form-urlencoded 的数据，会将数据转换成 query string （encodeURIComponent(k)=encodeURIComponent(v)&encodeURIComponent(k)=encodeURIComponent(v)...）
 
 示例代码
-{% codeblock %}
 
+{% codeblock %}
 wx.request({
   url: 'test.php', //仅为示例，并非真实的接口地址
   data: {
@@ -288,12 +344,13 @@ wx.request({
     console.log(res.data)
   }
 })
-
 {% endcodeblock %}
-## 具体应用
-### .wxml
-{% codeblock %}
 
+## 具体应用
+
+### .wxml
+
+{% codeblock %}
 <view class="page">
   <view class="page__hd">
     <view class="page__title">图片备份</view>
@@ -340,13 +397,13 @@ wx.request({
     <view class='text-center' wx:if="{{downloadedBackupedFiles.length == 0}}">暂无</view>
   </view>
 </view>
-
 {% endcodeblock %}
+
 {% img /images/django/13_13.png %}
 
 ### .js
-{% codeblock %}
 
+{% codeblock %}
 const app = getApp()
 const imageUrl = app.globalData.serverUrl + app.globalData.apiVersion + '/service/image'
 
@@ -421,7 +478,8 @@ Page({
     })
   }
 });
-
 {% endcodeblock %}
+
 {% img /images/django/13_14.gif %}
+
 关于后台 Django 的书写，在开头就已经给出。

@@ -9,17 +9,41 @@ tags:
 - 中间件
 ---
 CSRF是黑客攻击的常见手段，而Django却有应对的机制。
+
 <!-- more -->
+
+<br/>
+
 # 原文链接
+
+<br/>
+
 [CSRF与AJAX](http://www.liujiangblog.com/course/django/179)
+
 [详解Django的CSRF认证](https://www.cnblogs.com/renpingsheng/p/9756051.html)
+
 如果你要想了解什么是CSRF的话，可以看看我下面的文章：
+
 [什么是CSRF](https://benpaodewoniu.github.io/2019/09/09/hacker1/)
+
+<br/>
+
 # csrf原理
+
+<br/>
+
 csrf要求发送post,put或delete请求的时候，是先以get方式发送请求，服务端响应时会分配一个随机字符串给客户端，客户端第二次发送post,put或delete请求时携带上次分配的随机字符串到服务端进行校验
+
+<br/>
+
 # Django中的CSRF中间件
+
+<br/>
+
 首先，我们知道Django中间件作用于整个项目。
+
 在一个项目中，如果想对全局所有视图函数或视图类起作用时，就可以在中间件中实现，比如想实现用户登录判断，基于用户的权限管理（RBAC）等都可以在Django中间件中来进行操作
+
 Django内置了很多中间件,其中之一就是CSRF中间件
 
 	MIDDLEWARE_CLASSES = [
@@ -34,15 +58,27 @@ Django内置了很多中间件,其中之一就是CSRF中间件
 	]
 	
 上面第四个就是Django内置的CSRF中间件
+
+<br/>
+
 # 基本使用
+
+<br/>
+
 默认情况下，使用django-admin startproject xxx命令创建工程时，CSRF防御机制就已经开启了。
+
 如果没有开启，请在MIDDLEWARE设置中添加'django.middleware.csrf.CsrfViewMiddleware'。
+
 上面的那个选项是在项目中的 setting.py 文件内
+
 {% img /images/django/21_0.png %}
+
 >对于GET请求，一般来说没有这个问题，CSRF通常是针对POST方法的！
 
 在含有POST表单的模板中，需要在其<form>表单元素内部添加csrf_token标签。
+
 如下所示：
+
 {% img /images/django/21_1.png %}
 
 	<form id="comment_form" action="#"></form>
@@ -52,18 +88,28 @@ Django内置了很多中间件,其中之一就是CSRF中间件
 	<p><input type="button", id="send" value="提交"></p> 
 	
 这样，当表单数据通过POST方法，发送到后台服务器的时候，除了正常的表单数据外，还会携带一个CSRF令牌随机字符串，用于进行csrf验证。其实没有多么麻烦和复杂，对么？如果表单中没有携带这个csrf令牌，你将会获得一枚403奖章。
+
 额外提示：对于初学者，要明白一件事情，就是我们上面讲的都是Django项目自己内部的事务，不涉及与外界的关系。例如，你不能把上面那个表单发往百度，百度会懵逼的，你这发的啥？其次，那样也不安全，可能引起CSRF信息泄露而导致自己的站点出现漏洞。
+
+<br/>
+
 # AJAX
+
+<br/>
+
 我们知道，在前端的世界，有一种叫做AJAX的东西，也就是“Asynchronous Javascript And XML”（异步 JavaScript 和 XML），经常被用来在不刷新页面的情况下，提交和请求数据。如果我们的Django服务器接收的是一个通过AJAX发送过来的POST请求的话，那么将很麻烦。
+
 为什么？因为AJAX中，没有办法像form表单中那样携带
 
 	{% csrf_token %}
 	
 令牌。
-那怎么办呢？
-好办！在你的前端模版的JavaScript代码处，添加下面的代码：
-{% codeblock %}
 
+那怎么办呢？
+
+好办！在你的前端模版的JavaScript代码处，添加下面的代码：
+
+{% codeblock %}
 // using jQuery
 function getCookie(name) {
     var cookieValue = null;
@@ -93,15 +139,27 @@ $.ajaxSetup({
         }
     }
 });
-
 {% endcodeblock %}
-上面代码的作用就是让你的ajax的POST方法带上CSRF需要的令牌，它依赖Jquery库，必须提前加载Jquery。这是Django官方提供的解决方案哦，^-^。
-# Django中间件的执行过程
-[django的中间件](https://benpaodewoniu.github.io/2019/09/09/django23/)
-# Django CSRF中间件的源码解析
-Django CSRF中间件的源码
-{% codeblock %}
 
+上面代码的作用就是让你的ajax的POST方法带上CSRF需要的令牌，它依赖Jquery库，必须提前加载Jquery。这是Django官方提供的解决方案哦，^-^。
+
+<br/>
+
+# Django中间件的执行过程
+
+<br/>
+
+[django的中间件](https://benpaodewoniu.github.io/2019/09/09/django23/)
+
+<br/>
+
+# Django CSRF中间件的源码解析
+
+<br/>
+
+Django CSRF中间件的源码
+
+{% codeblock %}
 class CsrfViewMiddleware(MiddlewareMixin):
 
     def _accept(self, request):
@@ -240,12 +298,13 @@ class CsrfViewMiddleware(MiddlewareMixin):
         self._set_token(request, response)
         response.csrf_cookie_set = True
         return response
-
 {% endcodeblock %}
-从上面的源码中可以看到，CsrfViewMiddleware中间件中定义了process_request，process_view和process_response三个方法
-## 先来看process_request方法
-{% codeblock %}
 
+从上面的源码中可以看到，CsrfViewMiddleware中间件中定义了process_request，process_view和process_response三个方法
+
+## 先来看process_request方法
+
+{% codeblock %}
 def _get_token(self, request):  
     if settings.CSRF_USE_SESSIONS:  
         try:  
@@ -272,11 +331,14 @@ def process_request(self, request):
         if csrf_token is not None:  
             # Use same token next time.  
       request.META['CSRF_COOKIE'] = csrf_token
-
 {% endcodeblock %}
+
 从Django项目配置文件夹中读取CSRF_USE_SESSIONS的值，如果获取成功，则从session中读取CSRF_SESSION_KEY的值，默认为'_csrftoken'，如果没有获取到CSRF_USE_SESSIONS的值，则从发送过来的请求中获取CSRF_COOKIE_NAME的值，如果没有定义则返回None。
+
 ## 再来看process_view方法
+
 在process_view方法中，先检查视图函数是否被csrf_exempt装饰器装饰，如果视图函数没有被csrf_exempt装饰器装饰，则程序继续执行，否则返回None。接着从request请求头中或者cookie中获取携带的token并进行验证，验证通过才会继续执行与URL匹配的视图函数，否则就返回403 Forbidden错误。
+
 实际项目中，会在发送POST,PUT,DELETE,PATCH请求时，在提交的form表单中添加
 
 	{% csrf_token %}
