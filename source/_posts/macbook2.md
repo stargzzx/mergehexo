@@ -10,9 +10,13 @@ tags:
 - vim
 ---
 这是vim编辑器的一些用法。
+
 <!-- more -->
+
 # readonly option is set
+
 用vi修改文件，保存文件时，提示“readonly option is set”的解决方法。
+
 步骤：
 
 	1.按Esc键

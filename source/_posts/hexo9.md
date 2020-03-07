@@ -10,14 +10,26 @@ tags:
 
 <!--more-->
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [Hexo的版本控制与持续集成](https://formulahendry.github.io/2016/12/04/hexo-ci/)
 [使用hexo，如果换了电脑怎么更新博客？](https://www.zhihu.com/question/21193762)
 
+<br/>
+
 # 总结如下
 
+<br/>
+
+<br/>
+
 # 原电脑上传文件
+
+<br/>
 
 hexo 是一个静态博客，我们在 source 文件夹中写文章，然后运行 hexo g 来生成静态文件，也就是 public 文件夹，然后 hexo d 将 public 文件夹上传到 github 上。
 
@@ -74,7 +86,11 @@ ps:在这里可能会遇到上传不成功，是因为我们并没有给仓库�
 	git fetch --all 
 	git reset --hard origin/master
 
+<br/>
+
 # 发布文件
+
+<br/>
 
 在这里我们新建文件写完后要把新的文件 pull 上去
 
@@ -82,15 +98,23 @@ ps:在这里可能会遇到上传不成功，是因为我们并没有给仓库�
 	git commit -m "更新信息"  
 	git push -u origin master #以后每次提交可以直接git push
 
+<br/>
+
 # 同步
+
+<br/>
 
 每次写文件首先要 git pull 一下
 
 或者运行下面
 
-git pull origin master
+    git pull origin master
+
+<br/>
 
 # 错误
+
+<br/>
 
 这整个过程中，主要遇到两个错误
 

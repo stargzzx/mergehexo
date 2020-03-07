@@ -13,17 +13,23 @@ tags:
 <!-- more -->
 
 <br/>
+
 # 背景
+
 <br/>
 
 使用的是 macbook
 
 <br/>
+
 # 简介
+
 <br/>
 
 <br/>
+
 # 安装
+
 <br/>
 
 jenkins 要使用 brew 进行安装，如果使用 dmg 进行安装的话，后期会导致权限问题。

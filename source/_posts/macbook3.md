@@ -8,8 +8,15 @@ tags:
 - anaconda
 ---
 这里有一些关于macbook上anaconda的一些技巧。
+
 <!-- more -->
+
+<br/>
+
 # 参考资料
+
+<br/>
+
 [安装conda后取消命令行前出现的base，取消每次启动自动激活conda的基础环境](https://blog.csdn.net/u014734886/article/details/90718719)
 
 关于如何安装这个就不再说了，网上的教程实在是太多了。
@@ -28,7 +35,11 @@ tags:
 
 {% img /images/macbook/3_0.png %}
 
+<br/>
+
 # 老是自动激活环境
+
+<br/>
 
 我安装完MacBook后，有一个很奇怪的现像就是，它会自动激活环境（base）。
 

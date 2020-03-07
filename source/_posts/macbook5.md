@@ -12,12 +12,20 @@ brew是MacBook的一个安装软件的工具，非常好用，每个人MacBook�
 
 <!-- more -->
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [官网](https://brew.sh/index_zh-cn)
 [Mac下安装homebrew下的error：RPC错误](https://blog.csdn.net/qq_38206417/article/details/88568773)
 
+<br/>
+
 # 安装的过程
+
+<br/>
 
 如果你直接使用官网的安装命令
 
@@ -111,7 +119,11 @@ ps：安装过程缺失和图中差不多
 
 [mac 安装brew遇到错误](https://my.oschina.net/happyfish319/blog/3089195)
 
+<br/>
+
 # Git error: RPC failed; curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+
+<br/>
 
 错误信息：
 

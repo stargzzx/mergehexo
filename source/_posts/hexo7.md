@@ -8,12 +8,27 @@ tags:
 - 高亮
 ---
 早就想配置我的博客了，没有一点颜色，难看死了，这次配置的是代码块高亮。
+
 <!--more-->
+
+<br/>
+
 # 原文参考
+
+<br/>
+
 [next主题设定代码高亮格式](https://blog.csdn.net/u011240016/article/details/79422448)
+
 [如何让hexo代码高亮？](https://www.zhihu.com/question/37052642)
+
 [hexo中next主题代码高亮无法正常显示，如何解决？](https://www.zhihu.com/question/51705387)
+
+<br/>
+
 # 正文内容
+
+<br/>
+
 新版的Next主题卡得很严，记录如下。
 
 首先需要动的地方有：
@@ -62,4 +77,5 @@ highlight_theme: normal，注释显示有五种显示主题可用，分别是：
 	{% codeblock %}{% endcodeblock %}
 	
 并且，我也没有注明代码类型，但是，最后却能显示高亮，在此记录一下，可能是版本问题，或者有默认选项。
+
 总之，我的代码有高亮了。

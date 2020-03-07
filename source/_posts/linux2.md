@@ -15,11 +15,19 @@ tags:
 
 [python-crontab](https://benpaodewoniu.github.io/2019/10/27/python61/)
 
+<br/>
+
 # 查看 crontab
+
+<br/>
 
 	crontab -l
 
+<br/>
+
 # 修改
+
+<br/>
 
 	crontab -e
 
@@ -27,7 +35,11 @@ tags:
 
 按照 crontab 的格式进行编写就好。
 
+<br/>
+
 # 注意点
+
+<br/>
 
 当我们用定时任务的时候，很多情况下，我们自己执行 python 就可以，但是使用定时任务执行就不可以，我所遇见的情况如下，给大家解释一下。
 
@@ -53,7 +65,11 @@ tags:
 
 	sys.path.append('/root/eosvoter/')
 
+<br/>
+
 # 执行时出错
+
+<br/>
 
 比如，我再本地执行没有错误，但是在定时任务上执行 python /root/*.py 就会出错。
 

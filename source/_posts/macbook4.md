@@ -11,13 +11,21 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [终极 Shell——ZSH](https://zhuanlan.zhihu.com/p/19556676)
 [幕启：介绍 Z shell](https://www.ibm.com/developerworks/cn/linux/shell/z/index.html)
 [Mac下切换zsh和bash](https://blog.csdn.net/a19891024/article/details/53869574)
 
+<br/>
+
 # macbook下的z shell
+
+<br/>
 
 Shell是Linux/Unix的一个外壳，你理解成衣服也行。它负责外界与Linux内核的交互，接收用户或其他应用程序的命令，然后把这些命令转化成内核能理解的语言，传给内核，内核是真正干活的，干完之后再把结果返回用户或应用程序。
 
@@ -38,11 +46,19 @@ Linux/Unix提供了很多种Shell，为毛要这么多Shell？难道用来炒着
 
 目前常用的 Linux 系统和 OS X 系统的默认 Shell 都是 bash，但是真正强大的 Shell 是深藏不露的 zsh， 这货绝对是马车中的跑车，跑车中的飞行车，史称『终极 Shell』，但是由于配置过于复杂，所以初期无人问津，很多人跑过来看看 zsh 的配置指南，什么都不说转身就走了。直到有一天，国外有个穷极无聊的程序员开发出了一个能够让你快速上手的zsh项目，叫做「oh my zsh」，Github 网址是：https://github.com/robbyrussell/oh-my-zsh。这玩意就像「X天叫你学会 C++」系列，可以让你神功速成，而且是真的。
 
+<br/>
+
 # 安装
+
+<br/>
 
 这个我就略过了，因为我的电脑上有
 
+<br/>
+
 # 切换
+
+<br/>
 
 直接在命令行中运行
 
@@ -52,7 +68,11 @@ Linux/Unix提供了很多种Shell，为毛要这么多Shell？难道用来炒着
 
 	chsh -s /bin/bash
 
+<br/>
+
 # 配置
+
+<br/>
 
 zsh 的配置主要集中在用户当前目录的.zshrc文件里，用 vim 或你喜欢的其他编辑器打开.zshrc，在最下面会发现这么一行字：
 	
@@ -87,6 +107,7 @@ zsh 的牛粪之处在于不仅可以设置通用别名，还能针对文件类�
 alias -s html=mate，意思就是你在命令行输入 hello.html，zsh会为你自动打开 TextMat 并读取 hello.html； alias -s gz='tar -xzvf'，表示自动解压后缀为 gz 的压缩包。
 
 总之，只有想不到，木有做不到。
+
 ## 配置环境变量
 
 关于MacBook的环境变量你可以参考我下面的文章。

@@ -8,12 +8,22 @@ tags:
 - 动态背景
 ---
 这个挺简单的，当然，也会有一点点小坑。
+
 <!--more-->
+
+<br/>
+
 # 参考资料
+
+<br/>
 
 [next主题如何添加动态背景](https://blog.csdn.net/qq_33699981/article/details/60330891)
 
+<br/>
+
 # 文章内容
+
+<br/>
 
 ## 修改_layout.swig
 
@@ -26,6 +36,7 @@ tags:
 	{% endif %}
 
 ## 修改配置文件
+
 打开 /next/_config.yml,在里面添加如下代码：
 
 	canvas_nest: true

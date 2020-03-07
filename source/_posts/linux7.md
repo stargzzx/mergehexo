@@ -14,7 +14,11 @@ linux 如何安装软件，每次安装软件执行的命令是怎么回事？�
 
 <!-- more -->
 
+<br/>
+
 # 什么是 apt-get?
+
+<br/>
 
 Ubuntu源自Debian Linux。Debian使用dpkg打包系统。包装系统是一种为安装提供程序和应用程序的方法。这样，您就不必从源代码构建程序。
 
@@ -22,7 +26,11 @@ APT（高级软件包工具）是与此打包系统交互的命令行工具。�
 
 它有两个主要工具：apt-get和apt-cache。apt-get用于安装，升级和清理包，而apt-cache用于查找新包。我们将在本指南后面的示例中看到所有这些命令。
 
+<br/>
+
 # dpkg和apt-get区别
+
+<br/>
 
 一般来说著名的 Linux 系统基本上分两大类：
 
@@ -55,7 +63,11 @@ dpkg:用来安装.deb文件时，不会解决模块的依赖关系，且不会�
 
 apt-get:会解决和安装模块的依赖问题，并会咨询软件仓库，但不会安装本地的deb文件，apt-get是建立在dpkg之上的软件管理工具。
 
+<br/>
+
 # apt 和 apt-get 的区别
+
+<br/>
 
 Ubuntu 16.04 发布时，一个引人注目的新特性便是 apt 命令的引入。其实早在 2014 年，apt 命令就已经发布了第一个稳定版，只是直到 2016 年的 Ubuntu 16.04 系统发布时才开始引人关注。
 
@@ -94,24 +106,24 @@ apt 还会在更新存储库数据库时提示用户可升级的软件包个数�
 虽然 apt 与 apt-get 有一些类似的命令选项，但它并不能完全向下兼容 apt-get 命令。也就是说，可以用 apt 替换部分 apt-get 系列命令，但不是全部。
 
 
-apt 命令|取代的命令|命令的功能
----|---|---
-apt install|  apt-get install|  安装软件包
-apt remove|  apt-get remove|  移除软件包
-apt purge|  apt-get purge|  移除软件包及配置文件
-apt update|  apt-get update|  刷新存储库索引
-apt upgrade|  apt-get upgrade|  升级所有可升级的软件包
-apt autoremove|  apt-get autoremove|  自动删除不需要的包
-apt full-upgrade|  apt-get dist-upgrade|  在升级软件包时自动处理依赖关系
-apt search|  apt-cache search|  搜索应用程序
-apt show|  apt-cache show|  显示装细节
+|apt 命令|取代的命令|命令的功能|
+|---|---|---|
+|apt install|  apt-get install|  安装软件包|
+|apt remove|  apt-get remove|  移除软件包|
+|apt purge|  apt-get purge|  移除软件包及配置文件|
+|apt update|  apt-get update|  刷新存储库索引|
+|apt upgrade|  apt-get upgrade|  升级所有可升级的软件包|
+|apt autoremove|  apt-get autoremove|  自动删除不需要的包|
+|apt full-upgrade|  apt-get dist-upgrade|  在升级软件包时自动处理依赖关系|
+|apt search|  apt-cache search|  搜索应用程序|
+|apt show|  apt-cache show|  显示装细节|
 
 当然，apt 还有一些自己的命令：
 
-新的apt命令| 命令的功能
----|---|---
-apt list|  列出包含条件的包（已安装，可升级等）
-apt edit-sources|  编辑源列表
+|新的apt命令| 命令的功能|
+|---|---|
+|apt list|  列出包含条件的包（已安装，可升级等）|
+|apt edit-sources|  编辑源列表|
 
 需要大家注意的是：apt 命令也还在不断发展， 因此，你可能会在将来的版本中看到新的选项。
 
@@ -125,39 +137,47 @@ apt edit-sources|  编辑源列表
 
 最重要的是，apt 命令选项更少更易记，因此也更易用，所以没理由继续坚持 apt-get。
 
+<br/>
+
 # dpkg 的用法
+
+<br/>
 
 ## 安装软件包
 
-dpkg命令| 描述
----|---|---
-dpkg -i package_name.deb|  安装本地软件包，不解决依赖关系
-apt-get install package|  在线安装软件包
-aptitude install pattern|  同上
-apt-get install package --reinstall|  重新安装软件包
-apitude reinstall package|  同上
-dpkg -R /usr/local/src|  安装一个目录下面所有的软件包
+|dpkg命令| 描述|
+|---|---|
+|dpkg -i package_name.deb|  安装本地软件包，不解决依赖关系|
+|apt-get install package|  在线安装软件包|
+|aptitude install pattern|  同上|
+|apt-get install package --reinstall|  重新安装软件包|
+|apitude reinstall package|  同上|
+|dpkg -R /usr/local/src|  安装一个目录下面所有的软件包|
 
 ## 移除软件包
 
-dpkg命令| 描述
----|---|---
-dpkg -r package|  删除软件包
-dpkg -P|  删除软件包及配置文件
-apt-get autoremove |  自动移除不再需要的软件包 
+|dpkg命令| 描述|
+|---|---|
+|dpkg -r package|  删除软件包|
+|dpkg -P|  删除软件包及配置文件|
+|apt-get autoremove |  自动移除不再需要的软件包| 
 
 ## 其他
 
-dpkg命令|描述
----|---|---
-dpkg –help|  显示帮助信息
-dpkg –version|  显示dpkg的版本号
-dpkg -l package-name-pattern|  搜索Deb包(例子：dpkg -I vim)
-dpkg -L package-Name|  显示一个包安装到系统里面的文件目录信息
+|dpkg命令|描述|
+|---|---|---|
+|dpkg –help|  显示帮助信息|
+|dpkg –version|  显示dpkg的版本号|
+|dpkg -l package-name-pattern|  搜索Deb包(例子：dpkg -I vim)|
+|dpkg -L package-Name|  显示一个包安装到系统里面的文件目录信息|
 
 很多人抱怨用了Ubuntu或者Debian以后，不知道自己的软件给安装到什么地方了。其实可以用上面的dpkg -L命令来方便的查找。看来基础还是非常重要的，图形界面并不能够包办一切。
 
+<br/>
+
 # apt-get的使用方法
+
+<br/>
 
 ## 使用apt-get更新包数据库
 

@@ -17,7 +17,11 @@ tags:
 
 下面命令直接执行就好。
 
+<br/>
+
 # 换成清华源
+
+<br/>
 
 	git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 
@@ -29,7 +33,11 @@ tags:
 
 brew update 这一步挺慢的，耐心等待
 
+<br/>
+
 # 重制为原来的源
+
+<br/>
 
 	git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
 

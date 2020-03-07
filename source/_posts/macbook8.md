@@ -60,11 +60,19 @@ brew cask可以看作是苹果官方app store的补充。
 	ProductVersion:	10.14.5
 	BuildVersion:	18F132
 
+<br/>
+
 # 网上流传的 brew 的本地安装例子
+
+<br/>
 
 [mac中使用brew安装软件，下载太慢怎么办？](https://www.jianshu.com/p/03d1db713f76)
 
+<br/>
+
 # brew cask 的本地安装
+
+<br/>
 
 经过我的探索，我的 brew 的缓存目录是
 
