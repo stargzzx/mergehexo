@@ -14,21 +14,37 @@ tags:
 
 我们的方法是通过 commit ，但是，官方不建议通过commit方式来创建，如果不担心镜像会越来越大的话，这种方式是最自由最简单的，通过dockerfile当然是更优的啦。
 
+<br/>
+
 # 拉线上镜像
+
+<br/>
 
 	docker pull tensorflow/tensorflow
 
+<br/>
+
 # 运行bash
+
+<br/>
 
 	docker run -it tensorflow/tensorflow /bin/bash
 
 安装python3+tensorflow-gpu+keras
 
+<br/>
+
 # 安装完环境后退出docker
+
+<br/>
 
 	exit
 
+<br/>
+
 # 查看所有docker容器，找到要commit的容器id
+
+<br/>
 
 	docker ps -a
 
@@ -38,7 +54,11 @@ tags:
 
 这里我要commit的容器id为 00ff1b764a1b
 
+<br/>
+
 # commit制作镜像
+
+<br/>
 
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 
@@ -53,7 +73,11 @@ OPTIONS说明：
 
 	docker commit -a "li" -m "py3.6_tf1.8_keras2.2" 00ff1b764a1b tf_keras:v1
 
+<br/>
+
 # 查看制作出来的镜像
+
+<br/>
 
 	docker images
 
@@ -61,7 +85,11 @@ OPTIONS说明：
 
 关于我们通过 commit 制作的镜像，我们有两个选择方式，一个是将制作出来的镜像提交到 https://hub.docker.com 另一个是镜像导出导入。
 
+<br/>
+
 # 镜像提交到 https://hub.docker.com
+
+<br/>
 
 通过 commit 出来的镜像非常大，如果要 push 上去的会很麻烦，如果网络不好，那几乎不可能成功，但是，在这里我们还是提一下这个过程。
 
@@ -89,7 +117,11 @@ push到线上
 
 上传就只能慢慢等了
 
+<br/>
+
 # 镜像导出导入
+
+<br/>
 
 >由于我网络堪忧，要都依赖线上镜像的话，镜像拷贝真的要死要死的了，所以必须线下导出导入
 

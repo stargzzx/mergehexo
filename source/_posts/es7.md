@@ -8,14 +8,20 @@ tags:
 - GA
 ---
 这是我见过的很优秀的代码。一个将面向对象和 GA 思想改编淋淋尽致的代码。
-<!-- more -->
-这是 github 中的一个项目，OK,为了知识产权发挥效力，我将原链接贴出来。
-[原链接](https://github.com/KIDJourney/ga_circlepuzzle)
-## 效果展示
-{% img /images/machinelearningalgorithm/12_0.png %}
-## 具体代码
-{% codeblock %}
 
+<!-- more -->
+
+这是 github 中的一个项目，OK,为了知识产权发挥效力，我将原链接贴出来。
+
+[原链接](https://github.com/KIDJourney/ga_circlepuzzle)
+
+## 效果展示
+
+{% img /images/machinelearningalgorithm/12_0.png %}
+
+## 具体代码
+
+{% codeblock %}
 #!/usr/bin/env python
 
 import time
@@ -256,14 +262,18 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 {% endcodeblock %}
+
 ## 思维导图
+
 {% img /images/machinelearningalgorithm/12_1.png %}
+
 ## 算法原理
+
 还是先感谢一下这个代码的作者，让我看到如此优美的代码，尽管他自己说这是他东拼西凑的，但是，还是让我感到艺术。
+
 OK，让我们正式进入主题。另外，我得吐槽一下思维导图，明明我在思维导图中已经介绍的很详细了，但是却不能导出注释。。。
+
 先占坑，明天更新
 
 

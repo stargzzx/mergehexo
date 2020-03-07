@@ -18,7 +18,11 @@ tags:
 
 下面我们来学习：
 
+<br/>
+
 # 列出镜像列表
+
+<br/>
 
 我们可以使用 docker images 来列出本地主机上的镜像。
 
@@ -38,7 +42,11 @@ tags:
 
 [docker | 容器的使用](https://benpaodewoniu.github.io/2019/12/01/docker7/)
 
+<br/>
+
 # 获取一个新的镜像
+
+<br/>
 
 当我们在本地主机上使用一个不存在的镜像时 Docker 就会自动下载这个镜像。如果我们想预先下载这个镜像，我们可以使用 
 
@@ -46,7 +54,11 @@ tags:
 
 命令来下载它。
 
+<br/>
+
 # 查找镜像
+
+<br/>
 
 我们可以从 Docker Hub 网站来搜索镜像，Docker Hub 网址为： https://hub.docker.com/
 
@@ -62,13 +74,21 @@ tags:
 	stars: 类似 Github 里面的 star，表示点赞、喜欢的意思。
 	AUTOMATED: 自动构建。
 
+<br/>
+
 # 删除镜像
+
+<br/>
 
 镜像删除使用 docker rmi 命令，比如我们删除 hello-world 镜像：
 
 	docker rmi hello-world
 
+<br/>
+
 # 仓库
+
+<br/>
 
 仓库（Repository）是集中存放镜像的地方。以下介绍一下
 

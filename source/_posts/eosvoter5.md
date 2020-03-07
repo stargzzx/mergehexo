@@ -23,13 +23,17 @@ tags:
 我才用的是模块化的文档，将各种功能或者大类放在同一个文件夹中，然后，列一个总的目录。
 
 <br/>
+
 # 总展示
+
 <br/>
 
 {% img /images/eos_voter/5_0.png %}
 
 <br/>
+
 # 目录展示
+
 <br/>
 
 {% img /images/eos_voter/5_1.png %}

@@ -8,10 +8,12 @@ tags:
 - GA
 ---
 内容如题目所示。
-<!-- more -->
-## 轮盘赌算法
-{% codeblock %}
 
+<!-- more -->
+
+## 轮盘赌算法
+
+{% codeblock %}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -92,12 +94,12 @@ for i in range(N_GENERATIONS):
         parent[:] = child
 
 plt.show()
-
 {% endcodeblock %}
 ## 经营策略
-### 原代码
-{% codeblock %}
 
+### 原代码
+
+{% codeblock %}
 """
 Visualize Microbial Genetic Algorithm to find the maximum point in a graph.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -181,6 +183,6 @@ for _ in range(N_GENERATIONS):                    # 100 generations
     sca = plt.scatter(DNA_prod, pred, s=200, lw=0, c='red', alpha=0.5); plt.pause(0.05)
 
 plt.ioff();plt.show()
-
 {% endcodeblock %}
+
 让人感到奇怪的是，他写的基于经营策略的遗传算法，和我想的不大一样，所以，我不打算重读代码了，但是思想都是一样的，只是和经典遗传做个微小的改动而已。

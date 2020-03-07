@@ -10,7 +10,11 @@ tags:
 
 <!--more-->
 
+<br/>
+
 # 宿主机拷贝到容器
+
+<br/>
 
 ## 语法
 
@@ -26,7 +30,11 @@ docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
 
 	docker cp /root/file/test.txt 1e8a101d671d:/home/open/file
 
+<br/>
+
 # 容器文件拷贝到主机
+
+<br/>
 
 将容器30026605dcfe的/home/cloudera/RS-MapReduce目录拷贝到主机的/tmp目录中。
 

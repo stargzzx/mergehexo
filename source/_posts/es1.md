@@ -8,14 +8,20 @@ tags:
 - 进化算法
 ---
 那就话怎么说来着，Do not tell me,just show your code.
-<!-- more -->
-[莫烦python](https://morvanzhou.github.io/)
-## GA 解决函数最优解问题
-### 原理
-这是最基础的问题，所以不再陈述
-### 代码
-{% codeblock %}
 
+<!-- more -->
+
+[莫烦python](https://morvanzhou.github.io/)
+
+## GA 解决函数最优解问题
+
+### 原理
+
+这是最基础的问题，所以不再陈述
+
+### 代码
+
+{% codeblock %}
 """
 Visualize Genetic Algorithm to find a maximum point in a function.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -87,14 +93,17 @@ for _ in range(N_GENERATIONS):
         parent[:] = child       # parent is replaced by its child
 
 plt.ioff(); plt.show()
-
 {% endcodeblock %}
-### 效果图
-{% img /images/machinelearningalgorithm/6_0.gif %}
-### 解读
-第一点首先先写出四大基本框架
-{% codeblock %}
 
+### 效果图
+
+{% img /images/machinelearningalgorithm/6_0.gif %}
+
+### 解读
+
+第一点首先先写出四大基本框架
+
+{% codeblock %}
 def get_fitness(pred): # 获取个体的适应度
     return pred
 def translateDNA(pop): # 翻译DNA 因为 DNA 是在电脑中是一段二进制代码，所以要将其翻译成定义域内的数值
@@ -105,12 +114,13 @@ def corssover(parent,pop): # 交叉遗传
     pass
 def mutate(child):  # 变异
     pass
-	
 {% endcodeblock %}
-上面的代码就是遗传算法的主要函数，通过就算每个个体的适应度，推算出他们中基因是否能遗传给下一代，然后存活下来的基因进行交叉，然后产生新的一代。
-下面我将所有的代码都重新编排了一下，并写上了很详细的注释，也算是给后来者造福。。。
-{% codeblock %}
 
+上面的代码就是遗传算法的主要函数，通过就算每个个体的适应度，推算出他们中基因是否能遗传给下一代，然后存活下来的基因进行交叉，然后产生新的一代。
+
+下面我将所有的代码都重新编排了一下，并写上了很详细的注释，也算是给后来者造福。。。
+
+{% codeblock %}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -191,27 +201,41 @@ for i in range(N_GENERATIONS):
         parent[:] = child
 
 plt.show()
-
 {% endcodeblock %}
+
 关于这段代码，莫烦的交叉和变异采用的是不同的方法。不过，也很新颖。
+
 在我写的 GA 原理中，交叉是遗传父的前一半代码，然后遗传母的后一半代码。但是，莫烦的交叉是真交叉，也就是某个位置随机选择是父基因还是母基因。
+
 他的变异也是每一个基因点都有可能变异，而我的原理是一段 DNA 中只有一个变异。
+
 当然，这些都无伤大雅，比较那个思想的好坏，可以通过数学公式推导，但是，还是天命比较重要。
 
 ## GA 解决句子匹配问题
-### 问题描述
-给你一段英文，然后随机生出种群，经过繁衍进化后，所得后代可以完全匹配这段英文。
-### 原理
-我们都知道，英文编码也就是 ASCII 码中。
-ASCII 表
-{% img /images/machinelearningalgorithm/6_1.JPG %}
-{% img /images/machinelearningalgorithm/6_2.JPG %}
-从图中我们可以知道，电脑能输出的 ADCII 码的编号就是 32 - 126 。
-所以，我们只要把原来的英文语句转化成 ASCII 码的列表，然后，我们在随机和原来英文等长度的 32 - 126 数字的代码，作为初始种群。
-比较和原来数组中数字的相似度，来确定是否遗传他的基因。
-### 源代码
-{% codeblock %}
 
+### 问题描述
+
+给你一段英文，然后随机生出种群，经过繁衍进化后，所得后代可以完全匹配这段英文。
+
+### 原理
+
+我们都知道，英文编码也就是 ASCII 码中。
+
+ASCII 表
+
+{% img /images/machinelearningalgorithm/6_1.JPG %}
+
+{% img /images/machinelearningalgorithm/6_2.JPG %}
+
+从图中我们可以知道，电脑能输出的 ADCII 码的编号就是 32 - 126 。
+
+所以，我们只要把原来的英文语句转化成 ASCII 码的列表，然后，我们在随机和原来英文等长度的 32 - 126 数字的代码，作为初始种群。
+
+比较和原来数组中数字的相似度，来确定是否遗传他的基因。
+
+### 源代码
+
+{% codeblock %}
 """
 Visualize Genetic Algorithm to match the target phrase.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -286,11 +310,11 @@ if __name__ == '__main__':
         if best_phrase == TARGET_PHRASE:
             break
         ga.evolve()
-
 {% endcodeblock %}
-### 我的注释代码
-{% codeblock %}
 
+### 我的注释代码
+
+{% codeblock %}
 import numpy as np
 
 TARGET_PHRASE = "i love you"        # 目标语句
@@ -371,14 +395,17 @@ if __name__ == '__main__':
         if best_phrase == TARGET_PHRASE:
             break
         ga.evolve()
-
 {% endcodeblock %}
-## TSP 旅行商问题
-对于这个问题，遗传算法只能找到相对比较优的路径，而不能 100% 找到最优路径。
-{% img /images/machinelearningalgorithm/6_3.gif %}
-### 原代码
-{% codeblock %}
 
+## TSP 旅行商问题
+
+对于这个问题，遗传算法只能找到相对比较优的路径，而不能 100% 找到最优路径。
+
+{% img /images/machinelearningalgorithm/6_3.gif %}
+
+### 原代码
+
+{% codeblock %}
 """
 Visualize Genetic Algorithm to find the shortest path for travel sales problem.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -478,11 +505,11 @@ for generation in range(N_GENERATIONS):
 
 plt.ioff()
 plt.show()
-
 {% endcodeblock %}
-### 添加详细注释后的代码
-{% codeblock %}
 
+### 添加详细注释后的代码
+
+{% codeblock %}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -677,5 +704,4 @@ for generation in range(N_GENERATIONS):
 
 plt.ioff()
 plt.show()
-
 {% endcodeblock %}

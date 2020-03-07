@@ -13,7 +13,11 @@ tags:
 
 <!--more-->
 
+<br/>
+
 # 更新镜像
+
+<br/>
 
 更新镜像之前，我们需要使用镜像来创建一个容器。
 
@@ -38,7 +42,11 @@ tags:
 
 {% img /images/docker/5_0.png %}
 
+<br/>
+
 # 构建镜像
+
+<br/>
 
 [Docker Dockerfile](https://www.runoob.com/docker/docker-dockerfile.html)
 ## Docker Dockerfile

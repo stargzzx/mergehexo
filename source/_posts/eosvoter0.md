@@ -13,17 +13,29 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 项目环境 
 
-MACbook
-python3.7
-flask
+<br/>
+
+- MACbook
+- python3.7
+- flask
+
+<br/>
 
 # 项目需求
 
+<br/>
+
 想要实现将数据库的数据生成xls文件，并且可以下载。
 
+<br/>
+
 # postman的用法
+
+<br/>
 
 这个项目的请求是通过 postman 来发送请求的，有两个蛮有意思的地方。
 
@@ -46,9 +58,14 @@ flask
 如果要利用 postman 下载的话，就要将右侧的 send 切换到 send and download。
 
 {% img /images/bbsx/3_1.png %}
+
 {% img /images/bbsx/3_2.png %}
 
+<br/>
+
 # 代码书写
+
+<br/>
 
 ## 技巧寻找数据的自身BUG
 

@@ -20,7 +20,11 @@ tags:
 
 [ubuntu | 挂载问题](https://benpaodewoniu.github.io/2019/12/01/ubuntu3/)
 
+<br/>
+
 # docker
+
+<br/>
 
 假设，我们在 /home/li/code/p.py 有一个 p.py 的文件，我们在本机进入路径
 
@@ -53,4 +57,8 @@ tags:
 
 [docker | 容器的使用](https://benpaodewoniu.github.io/2019/12/01/docker7/)
 
+<br/>
+
 # nvidia-docker
+
+<br/>

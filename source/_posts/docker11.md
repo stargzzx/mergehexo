@@ -11,7 +11,11 @@ tags:
 
 <!--more-->
 
+<br/>
+
 # 参考链接
+
+<br/>
 
 [PyCharm+Docker：打造最舒适的深度学习炼丹炉](https://zhuanlan.zhihu.com/p/52827335)
 
@@ -36,7 +40,11 @@ tags:
 
 这句话的意思是让宿主机的 5000 端口和 docker 的22端口连接，以后访问宿主机就和访问dcoker 的22 端口是一样的。
 
+<br/>
+
 # 配置 ssh 服务
+
+<br/>
 
 我的镜像中是没有 ssh 服务的，所以，要自己配置
 
@@ -109,7 +117,11 @@ tags:
 
 接下来，我们就开始配置 pycharm，让 python 编译器指向 docker 中的 python。
 
+<br/>
+
 # 在PyCharm里配置部署环境
+
+<br/>
 
 我们首先要知道python的路径，可以使用以下命令：、
 
@@ -135,7 +147,11 @@ tags:
 
 {% img /images/docker/11_2.png %}
 
+<br/>
+
 # 在PyCharm里配置远程解释器
+
+<br/>
 
 虽然在后期版本的 pycharm 中，这些面板的选项都已经变了，但是，万变不离其宗。知道原理就好。 good luckily to you！！！
 

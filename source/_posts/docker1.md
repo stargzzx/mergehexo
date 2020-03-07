@@ -10,7 +10,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # docker 版本
+
+<br/>
 
 Docker 是一个开源的商业产品，有两个版本：
 
@@ -19,7 +23,11 @@ Docker 是一个开源的商业产品，有两个版本：
 
 企业版包含了一些收费服务，个人开发者一般用不到。下面的介绍都针对社区版。
 
+<br/>
+
 # docker 安装
+
+<br/>
 
 ## ubuntu
 
@@ -102,13 +110,21 @@ Homebrew 的 Cask 已经支持 Docker for Mac，因此可以很方便的使用 H
 
 {% img /images/docker/0_1.png %}
 
+<br/>
+
 # 安装验证
+
+<br/>
 
 	docker version
 	# 或者
 	docker info
 
+<br/>
+
 # 添加当前用户到 docker 用户组
+
+<br/>
 
 docker 默认使用 root 权限，如果不想使用 sudo 或者切换 root 的话，可以将当前的用户添加到 docker 用户组中
 
@@ -122,13 +138,21 @@ docker 默认使用 root 权限，如果不想使用 sudo 或者切换 root 的�
 
 	docker run hello-world
 
+<br/>
+
 # 镜像
+
+<br/>
 
 关于镜像，你可以参考我的博客
 
-[]()
+[docker | 配置镜像](https://benpaodewoniu.github.io/2019/11/30/docker2/)
+
+<br/>
 
 # image 文件
+
+<br/>
 
 Docker 把应用程序及其依赖，打包在 image 文件里面。只有通过这个文件，才能生成 Docker 容器。image 文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。
 
@@ -148,7 +172,11 @@ image 文件是通用的，一台机器的 image 文件拷贝到另一台机器�
 
 是最重要、最常用的 image 仓库。此外，出售自己制作的 image 文件也是可以的。
 
+<br/>
+
 # 实例：hello world
+
+<br/>
 
 我们在上面运行过，但是，我们这次说一下它的运行原理。
 
