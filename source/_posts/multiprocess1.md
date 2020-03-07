@@ -14,11 +14,19 @@ tags:
 
 首先，我们要明白多进程可以分为两个阵营，一个是主进程，另一个是分进程，这一篇我们主要是想讨论一下关于主进程和分进程的寿命问题。
 
+<br/>
+
 # multiprocessing
+
+<br/>
 
 python中的多线程其实并不是真正的多线程，如果想要充分地使用多核CPU的资源，在python中大部分情况需要使用多进程。Python提供了非常好用的多进程包multiprocessing，只需要定义一个函数，Python会完成其他所有事情。借助这个包，可以轻松完成从单进程到并发执行的转换。multiprocessing支持子进程、通信和共享数据、执行不同形式的同步，提供了Process、Queue、Pipe、Lock等组件。
 
+<br/>
+
 # Process
+
+<br/>
 
 ## 创建进程的类
 
@@ -50,7 +58,11 @@ authkey、daemon（要通过start()设置）、exitcode(进程在运行时为Non
 
 	p.join()
 
+<br/>
+
 # 一个简单的例子
+
+<br/>
 
 {% codeblock %}
 import time
@@ -91,11 +103,19 @@ if __name__ == '__main__':
 
 创建子进程时，只需要传入一个执行函数和函数的参数，创建一个Process实例，并用其start()方法启动，这样创建进程比fork()还要简单。 join()方法表示等待子进程结束以后再继续往下运行，通常用于进程间的同步。
 
+<br/>
+
 # 注意： 
+
+<br/>
 
 在Windows上要想使用进程模块，就必须把有关进程的代码写在当前.py文件的if __name__ == ‘__main__’ :语句的下面，才能正常使用Windows下的进程模块。Unix/Linux下则不需要。
 
+<br/>
+
 # 关于 join()
+
+<br/>
 
 join()方法可以在当前位置阻塞主进程，带执行join()的进程结束后再继续执行主进程的代码逻辑。
 

@@ -15,7 +15,9 @@ tags:
 <!-- more -->
 
 <br/>
+
 # 只导出数据库结构
+
 <br/>
 
 	mysqldump -u root -p -d coinex >> coinex.sql
@@ -27,7 +29,9 @@ tags:
 这个是导出 coinex 数据库中 btc 这张表的结构
 
 <br/>
+
 # 带有条件的数据库导出
+
 <br/>
 
 	mysqldump -u用户名 -p密码 -h mysql主机  --default-character-set=指定编码  数据库名称  表名称  --where=" 查询条件 " > 导出文件名.sql
@@ -47,7 +51,9 @@ tags:
 	--where="  "
 
 <br/>
+
 # mysql8.0 导入 mysql5.7 的时候出错
+
 <br/>
 
 出现
@@ -73,7 +79,9 @@ utf8mb4 替换为 utf8
 {% img /images/mysql/5_0.png %}
 
 <br/>
+
 # 导出的数据表再导入的时候出错
+
 <br/>
 
 使用
@@ -97,7 +105,9 @@ utf8mb4 替换为 utf8
 果然就没有再报错。
 
 <br/>
+
 # mysqldump 的参数问题
+
 <br/>
 
 查看参数可以使用

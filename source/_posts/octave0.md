@@ -9,11 +9,17 @@ tags:
 - tutorial
 ---
 Recently,i learn machine learning in coursera.The lesson is teached by Andrew Ng.
+
 Here is the address.[address](https://www.coursera.org/)
+
 You can search Andrew Ng or machine learning.
+
  <!-- more -->
+
 So,my note about octave is here.
+
 ## tips
+
 {% codeblock %}
 ctrl + c
 	强制退出
@@ -40,10 +46,10 @@ clear
 end
 	end的出现只出现在方法结尾，控制语句结尾，如果整个文件没有方法或者控制语句，就不需要 end
 {% endcodeblock %}
+
 ## 统计数据的几种形式
+
 {% codeblock %}
-
-
 data1 = [[1 2 3]
          [4 5 6]
 ];
@@ -75,10 +81,11 @@ size(data7)
 	% 1   6
 data8 = [[1    2    3  8] [2     4    5 9]];
 size(data8)
-	% 1   8
-	
+	% 1   8	
 {% endcodeblock %}
+
 ## basis
+
 {% codeblock %}
 A = [1 2;3 4;5 6] 建立矩阵
 V = 1:0.1:2 一个行向量从 1 到 2，增量为0.1
@@ -135,7 +142,9 @@ A .^2
 A .* eye(n)
 	A 的对角线上的元素不变，其他的全为零
 {% endcodeblock %}
+
 ## functions
+
 {% codeblock %}
 复杂输出 disp(a)
 	 disp(sprintf('2 decimals: %0.2f',a)) 类似 c 的风格,这种可以格式化输出
@@ -253,7 +262,9 @@ B = reshape(A(1:110),10,11);
 B = [A(:);C(:)];
 	可以将 A 和 C 矩阵变成一个向量
 {% endcodeblock %}
+
 ## calculation
+
 {% codeblock %}
 abs(x)		
 	純量的絕對值或向量的長度	
@@ -373,7 +384,9 @@ nargin
 nargout		
 	函數的輸出引數個數
 {% endcodeblock %}
+
 ## files
+
 {% codeblock %}
 load('文件名')
 	加载文件数据，当我们添加文件后，变量就是以文件名命名
@@ -384,7 +397,9 @@ V = data1(1:10) data1前10个值赋给V
 save a.mat v 将v变量存储在a.mat中，存储格式是压缩的二进制
 save a.txt v -ascii 将v变量存储为可以看得懂的格式，文本文档
 {% endcodeblock %}
+
 ## draw
+
 {% codeblock %}
 plot(x,y)
 	画图
@@ -470,7 +485,9 @@ hist(Y);
 hist(Y,nbins);
 	nbins是间隔数，也就是说我们应该统计多少个间隔，这里设nbins=20
 {% endcodeblock %}
+
 ## control
+
 {% codeblock %}
 for：
 	for i = 1:10,
@@ -509,7 +526,9 @@ else
 		disp('xxx');
 	end;
 {% endcodeblock %}
+
 ## function by myself
+
 {% codeblock %}
 在octive中定义函数，首先需要定义一个和 函数名 相同的文件，后缀是 m
 	首先
@@ -531,8 +550,11 @@ function g = sigmoid(z)
 g = 1.0 ./ (1.0 + exp(-z));
 end
 {% endcodeblock %}
+
 ## 如何使用 octave 文件
+
 当我们建了一个文件名为 fun.m 代码如下：
+
 {% codeblock %}
 W = [3.00774324,1.69532264]
 x = 0:0.1:1
@@ -549,9 +571,13 @@ function test()
 	plot(x, y, 'k', 'LineWidth', 1.5);
 end;
 {% endcodeblock %}
+
 我们只需要在控制台直接输入 test() 即可。
+
 ## examples
+
 test.m
+
 {% codeblock %}
 function test()
 data = load('ex2data1.txt');
@@ -568,7 +594,9 @@ plot(X(B,1),X(B,2),'ko','MarkerFaceColor','r','MarkerSize',7); % ko 是指图像
 hold off;
 end;
 {% endcodeblock %}
+
 Finally,the picture is following.
+
 {% img /images/octave/0.jpg %}
 
 

@@ -8,15 +8,22 @@ tags:
 - algorithm
 ---
 题目描述：
-把两个有序数组合并成一个数组，第一个数组的空间正好可以容纳两个数组的元素。
-<!-- more -->
-## 分析
-如下图所示：
-{% img /images/practice/9_0.png %}
-从后向前覆盖可以防止丢失数据。
-## 代码
-{% codeblock %}
 
+把两个有序数组合并成一个数组，第一个数组的空间正好可以容纳两个数组的元素。
+
+<!-- more -->
+
+## 分析
+
+如下图所示：
+
+{% img /images/practice/9_0.png %}
+
+从后向前覆盖可以防止丢失数据。
+
+## 代码
+
+{% codeblock %}
 arr1 = [None for k in range(0,6)]
 arr1[0] = 1
 arr1[1] = 3
@@ -43,7 +50,6 @@ def merge(arr1,arr2):
             j -= 1
 merge(arr1,arr2)
 print(arr1)
-
 {% endcodeblock %}
 
 

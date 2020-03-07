@@ -9,8 +9,11 @@ tags:
 - algorithm
 ---
 这是刷的第 3 个 leetcode 题。
+
 <!-- more -->
+
 ## 介绍
+
 Title：
 Reverse Integer    
 Acceptance：
@@ -20,7 +23,9 @@ Easy
 [地址](https://leetcode.com/problems/palindrome-number/submissions/)
 解决语言：
 python3
+
 ## Description
+
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 Example 1:
 
@@ -41,7 +46,6 @@ Example 3:
 
 ## code
 {% codeblock %}
-
 class Solution:
     def isPalindrome(self, x: 'int') -> 'bool':
         b = x
@@ -54,11 +58,13 @@ class Solution:
         if(a == b):
             return True
         else:
-            return False
-			
+            return False		
 {% endcodeblock %}
+
 这道题目和我上次写的 leetcode 2 原理差不多，在此不再详述。
+
 ## Result
+
 Runtime: 240 ms, faster than 90.23% of Python3 online submissions for Palindrome Number.
 Memory Usage: 12.8 MB, less than 100.00% of Python3 online submissions for Palindrome Number.
 

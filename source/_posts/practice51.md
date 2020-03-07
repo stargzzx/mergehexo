@@ -9,25 +9,41 @@ tags:
 - algorithm
 ---
 这是刷的第 7 个 leetcode 题。
+
 关于字典的优秀应用。非常好的思想。
+
 <!-- more -->
+
 ## 介绍
+
 Title：
+
 Valid Parentheses
+
 Acceptance：
+
 35.8%
+
 Difficulty:
+
 Easy
+
 [地址](https://leetcode.com/problems/valid-parentheses/)
+
 解决语言：
+
 python3
 
+
+
 ## Description
-Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+>Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 An input string is valid if:
 Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Note that an empty string is also considered valid.
+
 Example 1:
 
 	Input: "()"
@@ -54,8 +70,8 @@ Example 5:
 	Output: true
 	
 ## code
-{% codeblock %}
 
+{% codeblock %}
 class Solution:
     def isValid(self, s: 'str') -> 'bool':
         i = 0
@@ -90,15 +106,16 @@ class Solution:
         if(len(tmp) == 0):
             return True
         else:
-            return False
-			
+            return False		
 {% endcodeblock %}
+
 这里值得思考的是 or 和 and
+
 拿 or 来说，如果 A or B 的话，如果 A 是 True 的话，那么 A or B 就是 True，而不会去计算 B ,所以，在某种程度下 A 和 B 的顺序很重要。
+
 贴一下别人写的代码
+
 {% codeblock %}
-
-
 JeremieMelo's avatar
 JeremieMelo
 2
@@ -144,14 +161,14 @@ class Solution(object):
         if(not stack):
             return True
         else:
-            return False
-		
+            return False	
 {% endcodeblock %}
+
 下面这个代码更加优秀。
+
 它熟练地运用了字典的性质。
+
 {% codeblock %}
-
-
 JeremieMelo's avatar
 JeremieMelo
 2
@@ -167,9 +184,9 @@ def isValid(self, s):
                 return False
         else:
             stack.append(ch)
-    return not stack
-		
+    return not stack		
 {% endcodeblock %}
+
 首先说明一下字典的一些概念
 
 	m = {')': '(', ']': '[', '}': '{'}
@@ -178,7 +195,9 @@ def isValid(self, s):
 			# ) } ]
 			
 ## Result
+
 Runtime: 36 ms, faster than 84.38% of Python3 online submissions for Valid Parentheses.
+
 Memory Usage: 12.5 MB, less than 58.33% of Python3 online submissions for Valid Parentheses.
 
 

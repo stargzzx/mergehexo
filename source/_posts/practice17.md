@@ -8,21 +8,34 @@ tags:
 - algorithm
 ---
 问题描述：
-给定一个句子，要求返回单词间的逆序。
-如：
-i am dog => dog am i
-<!-- more -->
-## 分析
-只需要写出一个根据初始，结束位置完全转置的函数。
-一共分为两步：
-第一步：
-将所有字符转置 abc d => d cba
-第二部：
-将独立的单词逆序
-d cba => d abc
-## 代码
-{% codeblock %}
 
+给定一个句子，要求返回单词间的逆序。
+
+如：
+
+i am dog => dog am i
+
+<!-- more -->
+
+## 分析
+
+只需要写出一个根据初始，结束位置完全转置的函数。
+
+一共分为两步：
+
+第一步：
+
+将所有字符转置 abc d => d cba
+
+第二部：
+
+将独立的单词逆序
+
+d cba => d abc
+
+## 代码
+
+{% codeblock %}
 def reverse(i,j,arr):
     arr = list(arr)
     while(i < j):
@@ -36,5 +49,4 @@ new = ""
 for i in range(len(arr)):
     new = new + reverse(0,len(arr[i]) - 1,arr[i]) + " "
 print(new)
-
 {% endcodeblock %}

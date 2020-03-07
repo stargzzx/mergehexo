@@ -8,26 +8,44 @@ tags:
 - algorithm
 ---
 问题描述：
-{% img /images/practice/13_0.JPG %}
-<!-- more -->
-这个问题给出两种解法，一般解和最优解。
-## 一般解
-### 分析
-首先将二叉树序列化，然后暴力拟合。
-时间复杂度时 O(N * M)[N 是 TXT 的长度 M 是 STR 的长度]
-### 代码
-略
-## 最优解
-### 分析
-序列化，然后用 KMP 拟合。
-[二叉树创建、四大遍历](https://benpaodewoniu.github.io/2018/06/30/practice3/)
-[KMP详解](https://benpaodewoniu.github.io/2018/07/12/practice14/)
-这样最后的时间复杂度是 O(N + M)[N 是 TXT 的长度 M 是 STR 的长度]
-空间复杂度是 O(M)
-当然下面代码中的序列化要改变，因为添加了 ！ ，KMP 的返回值也要改变，但是我觉得麻烦，就没改。因为懒。
-### 代码
-{% codeblock %}
 
+{% img /images/practice/13_0.JPG %}
+
+<!-- more -->
+
+这个问题给出两种解法，一般解和最优解。
+
+## 一般解
+
+### 分析
+
+首先将二叉树序列化，然后暴力拟合。
+
+时间复杂度时 O(N * M)[N 是 TXT 的长度 M 是 STR 的长度]
+
+### 代码
+
+略
+
+## 最优解
+
+### 分析
+
+序列化，然后用 KMP 拟合。
+
+[二叉树创建、四大遍历](https://benpaodewoniu.github.io/2018/06/30/practice3/)
+
+[KMP详解](https://benpaodewoniu.github.io/2018/07/12/practice14/)
+
+这样最后的时间复杂度是 O(N + M)[N 是 TXT 的长度 M 是 STR 的长度]
+
+空间复杂度是 O(M)
+
+当然下面代码中的序列化要改变，因为添加了 ！ ，KMP 的返回值也要改变，但是我觉得麻烦，就没改。因为懒。
+
+### 代码
+
+{% codeblock %}
 def getNext(substr,next):
     i = 0
     j = -1
@@ -118,5 +136,4 @@ print(substr)
 next = [None for k in range(len(substr))]
 getNext(substr,next)
 print(KMP(str,substr,next))
-
 {% endcodeblock %}

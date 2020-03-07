@@ -8,9 +8,13 @@ tags:
 - algorithm
 ---
 问题描述：
+
 给定两个32位整数 a 和 b，返回 a 和 b 中较大的，但是不能用任何比较判断。
+
 <!-- more -->
+
 ## 原理
+
 首先我们要了解
 
 	A 位操作符 B = C
@@ -28,8 +32,8 @@ tags:
 	也就是说，如果 a - b > 0.则返回 b,否则返回 a
 
 ## 代码
-{% codeblock %}
 
+{% codeblock %}
 def test(a,b):
     number = a - b
     f = number >> 31
@@ -38,8 +42,7 @@ def test(a,b):
     j = i ^ 1
     print(j)
     return  i * a + j * b
-
+    
 print(test(8,7))
-
 {% endcodeblock %}
 

@@ -9,10 +9,12 @@ tags:
 - algorithm
 ---
 如题所示，另外代码是由 python 实现。
- <!-- more -->
-## 得到最后一个重复的位置
-{% codeblock %}
 
+<!-- more -->
+
+## 得到最后一个重复的位置
+
+{% codeblock %}
 def gainLast(arr,num):	# 得到最后一个重复的位置
 	l = 0
 	r = len(arr)
@@ -36,11 +38,11 @@ def gainLast(arr,num):	# 得到最后一个重复的位置
 			index -= 1
 			break
 	return index
-
 {% endcodeblock %}
-### 测试
-{% codeblock %}
 
+### 测试
+
+{% codeblock %}
 arr = [1,2,2,2,3,5,6,6,7,9]
 print(gainLast(arr,0))
 	# -1
@@ -52,11 +54,11 @@ print(gainLast(arr,9))
 	# 9
 print(gainLast(arr,10))
 	# 9
-
 {% endcodeblock %}
-## 得到第一个重复的位置
-{% codeblock %}
 
+## 得到第一个重复的位置
+
+{% codeblock %}
 def gainFirst(arr,num):	# 得到第一个重复的位置
 	l = 0
 	r = len(arr)
@@ -82,11 +84,11 @@ def gainFirst(arr,num):	# 得到第一个重复的位置
 			index -= 1
 			break
 	return index
-
 {% endcodeblock %}
-### 测试
-{% codeblock %}
 
+### 测试
+
+{% codeblock %}
 arr = [1,2,2,2,3,5,6,6,7,9]
 print(gainLast(arr,0))
 	# -1
@@ -98,5 +100,4 @@ print(gainLast(arr,9))
 	# 8
 print(gainLast(arr,10))
 	# 9
-
 {% endcodeblock %}

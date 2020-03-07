@@ -11,7 +11,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 参考资料
+
+<br/>
 
 [深入浅出数据库索引原理](https://www.cnblogs.com/aspwebchh/p/6652855.html)
 [MYSQL-索引](https://segmentfault.com/a/1190000003072424)
@@ -20,7 +24,11 @@ tags:
 [MySQL设置多列为唯一约束,即多列不能同时相同](https://blog.csdn.net/itccccc/article/details/77771720)
 [mysql 查询效率优化之 常用索引的几种类型 新手使用教程，少走弯路？](https://www.jianshu.com/p/42a08cf3358c)
 
+<br/>
+
 # 正文
+
+<br/>
 
 ## 索引存储分类
 

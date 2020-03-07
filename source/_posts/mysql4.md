@@ -16,13 +16,17 @@ tags:
 <!-- more -->
 
 <br/>
+
 # DBMS 的特性
+
 <br/>
 
 <li style="margin-left: 40px;font-size: 15px">不区分大小写，但是，有的数据库的列名区分大小写</li><li style="margin-left: 40px;font-size: 15px">列的排列下标从 1 开始，行的排列下标从 0 开始</li><li style="margin-left: 40px;font-size: 15px">sql语句自动忽略所有空格</li>
 
 <br/>
+
 # 检索
+
 <br/>
 
 ## 特性
@@ -56,7 +60,9 @@ offset 5 由于行数一开始的下标是 0，则这个意思是从第 6 行开
 	select * from person limit 5,5;
 
 <br/>
+
 # 注释
+
 <br/>
 
 ## 行内注释
@@ -78,7 +84,9 @@ offset 5 由于行数一开始的下标是 0，则这个意思是从第 6 行开
 	select * from person;
 
 <br/>
+
 # 排序
+
 <br/>
 
 ## 指定排序属性
@@ -116,7 +124,9 @@ order by
 关于这个排序是否区分大小写，主要是和数据库的设计有关，比如 a 是和 A 等价，还是排在 Z 之后。
 
 <br/>
+
 # 过滤
+
 <br/>
 
 操作符

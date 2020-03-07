@@ -9,8 +9,11 @@ tags:
 - algorithm
 ---
 I code by C and use pointer to solve.But my code is not concise.Maybe I will optimize in the future.
+
 Ok,let us see.
+
 <!--more-->
+
 {% codeblock %}
 #include <stdio.h>
 #include <stdlib.h>

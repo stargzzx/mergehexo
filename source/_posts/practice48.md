@@ -9,8 +9,11 @@ tags:
 - algorithm
 ---
 这是刷的第 4 个 leetcode 题。
+
 <!-- more -->
+
 ## 介绍
+
 Title：
 Roman to Integer    
 Acceptance：
@@ -18,9 +21,13 @@ Acceptance：
 Difficulty:
 Easy
 [地址](https://leetcode.com/problems/roman-to-integer/)
+
 解决语言：
+
 python3
+
 ## Description
+
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
 	Symbol       Value
@@ -69,8 +76,8 @@ Example 5:
 	Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 ## code
-{% codeblock %}
 
+{% codeblock %}
 class Solution:
     def romanToInt(self, s: 'str') -> 'int':
         number = [900,400,90,40,9,4,1000,500,100,50,10,5,1]
@@ -88,9 +95,10 @@ class Solution:
             else:
                 sum += number[number_str.index(str1)]
                 j += 1
-        return sum
-			
+        return sum		
 {% endcodeblock %}
+
 ## Result
+
 Runtime: 128 ms, faster than 78.13% of Python3 online submissions for Roman to Integer.
 Memory Usage: 12.5 MB, less than 100.00% of Python3 online submissions for Roman to Integer.

@@ -11,7 +11,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 在原来的数据表中增加字段
+
+<br/>
 
 	ALTER TABLE t_claim_info ADD check_df BOOLEAN DEFAULT FALSE;
 
@@ -21,10 +25,18 @@ tags:
 
 这个不行，因为check不能作为字段名
 
+<br/>
+
 # 删除字段
+
+<br/>
 
 	ALTER TABLE t_claim_info DROP check_df;
 
+<br/>
+
 # 改变字段的属性
+
+<br/>
 
 	alter table t_claim_info modify check_df tinyint default '0';

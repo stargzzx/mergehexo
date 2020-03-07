@@ -9,21 +9,29 @@ tags:
 - algorithm
 ---
 这是刷的第 6 个 leetcode 题。
+
 <!-- more -->
+
 ## 介绍
+
 Title：
 Longest Common Prefix
 Acceptance：
 32.9%
 Difficulty:
 Easy
+
 [地址](https://leetcode.com/problems/longest-common-prefix/)
+
 解决语言：
+
 python3
 
 ## Description
-Write a function to find the longest common prefix string amongst an array of strings.
+
+>Write a function to find the longest common prefix string amongst an array of strings.
 If there is no common prefix, return an empty string "".
+
 Example 1:
 
 	Input: ["flower","flow","flight"]
@@ -36,8 +44,8 @@ Example 2:
 	Explanation: There is no common prefix among the input strings.
 
 ## code
-{% codeblock %}
 
+{% codeblock %}
 class Solution:
     def longestCommonPrefix(self, strs: 'List[str]') -> 'str':
         i = 0
@@ -60,12 +68,12 @@ class Solution:
                         f = i
                         g = j
             j += 1
-        return strs[0][f:g]
-			
+        return strs[0][f:g]		
 {% endcodeblock %}
-我自己写的代码太过于冗余，下面我贴一下其他人写的代码，供自己学习。
-{% codeblock %}
 
+我自己写的代码太过于冗余，下面我贴一下其他人写的代码，供自己学习。
+
+{% codeblock %}
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -87,17 +95,22 @@ class Solution(object):
                 break
             if(same):
                 cpt += check[0]
-        return cpt
-		
+        return cpt	
 {% endcodeblock %}
-当然，我在原来代码的基础上进行了改变。
-这份代码的思想和我一开始想的相似，但是，他的构造也很巧妙。
-先是得到字符中最短的长度，然后再进行字符串中每一个字符的比较，不错，学习了。
-## 注解
-之前写题目的时候没有清楚，以为是寻找最长匹配，而题目中的要求是寻找最长前缀匹配。
-所以，在这里贴一下我的最长匹配代码，所以啊，磨刀不误砍柴功，干任何事都要仔细的思考之后再做，当然，三思而殆，这点也要注意。
-{% codeblock %}
 
+当然，我在原来代码的基础上进行了改变。
+
+这份代码的思想和我一开始想的相似，但是，他的构造也很巧妙。
+
+先是得到字符中最短的长度，然后再进行字符串中每一个字符的比较，不错，学习了。
+
+## 注解
+
+之前写题目的时候没有清楚，以为是寻找最长匹配，而题目中的要求是寻找最长前缀匹配。
+
+所以，在这里贴一下我的最长匹配代码，所以啊，磨刀不误砍柴功，干任何事都要仔细的思考之后再做，当然，三思而殆，这点也要注意。
+
+{% codeblock %}
 class Solution:
     def longestCommonPrefix(self, strs: 'List[str]') -> 'str':
         i = 0
@@ -125,9 +138,10 @@ class Solution:
                 i += 1
                 j = i + 1
             j += 1
-        return strs[0][f:g]
-			
+        return strs[0][f:g]		
 {% endcodeblock %}
+
 ## Result
+
 Runtime: 48 ms, faster than 44.46% of Python3 online submissions for Longest Common Prefix.
 Memory Usage: 12.5 MB, less than 100.00% of Python3 online submissions for Longest Common Prefix.

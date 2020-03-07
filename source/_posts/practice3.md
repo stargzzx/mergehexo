@@ -11,12 +11,14 @@ tags:
 - Binary tree
 ---
 如题所示，另外代码是由 python 实现。
- <!-- more -->
+
+<!-- more -->
+
 ## 构建
+
 过程如图：
 
 {% codeblock %}
-
 class Node: #节点类
 	def __init__(self,k):
 		self.k = k
@@ -45,17 +47,25 @@ class Tree: #二叉树类
 					return
 				else:
 					q.append(p.l)
-					q.append(p.r)
-					
+					q.append(p.r)				
 {% endcodeblock %}
+
 ## 遍历说明
+
 二叉树的遍历其实是二叉树的序列化。
+
 如下面代码所示，如果节点为空，则用 #！ 代替
+
 如果非空，则用 %s！ 代替 （%s 代表那个 value）
+
 在这里你可能有一个疑问，为什么最后总要有一个 ！ 作为分解？
+
 假设没有 ！ 为分界，那 23 是 2 和 3 还是 23 ？
+
 所以用 ！ 作为分界，可以很好的规避上述问题。
+
 ## 层次遍历
+
 {% codeblock %}
 	def levelOrder(self):  # 按层次遍历
 		l = []             # 借助队列
@@ -75,7 +85,9 @@ class Tree: #二叉树类
 			if last == node:
 					print('\n')
 {% endcodeblock %}
+
 ## 前序遍历
+
 {% codeblock %}			
 	def preorder(self,node):	# 前序遍历
 		if node is None:
@@ -86,7 +98,9 @@ class Tree: #二叉树类
 			self.preorder(node.l)
 			self.preorder(node.r)
 {% endcodeblock %}
+
 ## 中序遍历
+
 {% codeblock %}				
 	def midorder(self,node): # 中序遍历
 		if node is None:
@@ -97,7 +111,9 @@ class Tree: #二叉树类
 			print("%s!" % node.k,end = "")
 			self.midorder(node.r)
 {% endcodeblock %}
+
 ## 后序遍历
+
 {% codeblock %}		
 	def postorder(self,node):	#后序遍历
 		if node is None:
@@ -109,11 +125,11 @@ class Tree: #二叉树类
 			print("%s!" % node.k,end = "")
 
 {% endcodeblock %}
-## 测试
-{% codeblock %}
 
+## 测试
+
+{% codeblock %}
 t = Tree()
 for i in range(10):
 	t.add(i)
-
 {% endcodeblock %}

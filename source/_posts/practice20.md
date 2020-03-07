@@ -8,9 +8,13 @@ tags:
 - algorithm
 ---
 问题描述：
+
 给定一个字符串 str，将其中所有的空格字符替换成“%20”[三个字符]。假设 str 后面有足够的空间。
+
 <!-- more -->
+
 ## 分析
+
 假设有如下数据
 
 	a b c一共是三个字符，两个空格
@@ -21,8 +25,8 @@ tags:
 	当 i 指向空格字符时，j 的位置变成 %20 ，j - 3，i - 1
 
 ## 代码
-{% codeblock %}
 
+{% codeblock %}
 def change(str):
     arr = str.split(" ")
     i = len(str) - 1
@@ -45,5 +49,4 @@ def change(str):
 
 arr = " a b c "
 change(arr)
-
 {% endcodeblock %}

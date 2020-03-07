@@ -9,8 +9,11 @@ tags:
 - tutorial
 ---
 Here is tips of octave.
- <!-- more -->
+
+<!-- more -->
+
 ### 1
+
 {% codeblock %}
 A = [1 2;1 4]
 	A = [
@@ -39,5 +42,6 @@ end;
 		0   0   0
 		1   0   0
 {% endcodeblock %}
+
 ### 2
 

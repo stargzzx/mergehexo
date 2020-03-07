@@ -9,8 +9,11 @@ tags:
 - algorithm
 ---
 这是刷的第 2 个 leetcode 题。
+
 <!-- more -->
+
 ## 介绍
+
 Title：
 Reverse Integer    
 Acceptance：
@@ -20,8 +23,11 @@ Easy
 [地址](https://leetcode.com/problems/reverse-integer/)
 解决语言：
 python3
+
 ## Description
+
 Given a 32-bit signed integer, reverse digits of an integer.
+
 Example 1:
 
 	Input: 123
@@ -38,10 +44,12 @@ Example 3:
 	Output: 21
 
 Note:
-Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
-## code
-{% codeblock %}
 
+Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+
+## code
+
+{% codeblock %}
 class Solution:
     def reverse(self, x: 'int') -> 'int':
 		# lock 是一个判断锁
@@ -82,15 +90,15 @@ class Solution:
             return 0
         else:
             return a * b
-
 {% endcodeblock %}
+
 ## Result
+
 Runtime: 52 ms, faster than 89.25% of Python3 online submissions for Reverse Integer.
 Memory Usage: 12.7 MB, less than 100.00% of Python3 online submissions for Reverse Integer.
 
 ## other code
 {% codeblock %}
-
 class Solution:
     # @return an integer
     def reverse(self, x):
@@ -107,7 +115,6 @@ class Solution:
             x //= 10
 
         return 0 if result > pow(2, 31) else result * symbol
-
 {% endcodeblock %}
 
 

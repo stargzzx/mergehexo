@@ -8,17 +8,25 @@ tags:
 - algorithm
 ---
 问题描述：
+
 用非递归手段打印二叉树的先序排列。
+
 <!-- more -->
+
 可以看看我之前的两篇文章。
+
 [二叉树创建、四大遍历](https://benpaodewoniu.github.io/2018/06/30/practice3/)
+
 [递归](https://benpaodewoniu.github.io/2018/06/14/basis2/)
+
 思路就是用 stack 来代替递归。
+
 具体过程：
 
 1. 首先申请一个新的栈，记为 stack
 2. 然后将头结点 head 压入 stack 中
 3. 每次从 stack 中弹出栈顶节点，记为 cur ，然后打印 cur 节点的值。如果 cur 有孩子不为空的话，将 cur 的右孩子先压入 stack 中。最后如果 cur 的左孩子不为空的话，将 cur 的左孩子压入 stack 中。
+
 中序和后序以此可以推出。
 
 中序：
@@ -32,13 +40,13 @@ tags:
 
 1. 申请一个栈，记为 stack ，将头结点压入 stack ，同时设置两个变量 h 和 c 。在整个流程中， h 代表最近一次弹出并打印的节点。 c 代表当前 stack 的栈顶节点，初始时令 h 为头结点， c 为 NULL。
 2. 每次令 c 等于当前 stack 的栈顶节点，但是不从 stack 中弹出节点，此时分为以下三种情况。
-（1） 如果 c 的左孩子不为空，并且 h 不等于 c 的左孩子，也不等于 c 的右孩子，则把 c 的左孩子压入 stack 中。
-（2） 如果其情况 1 不成立，并且 c 的右孩子不为空，并且 h 不等于 c 的右孩子，则把 c 的右孩子压入 stack 中。
-（3） 如果 1 和 2 都不成立，那么 stack 弹出 c 并打印，令 h 等于 c 。
+    1. 如果 c 的左孩子不为空，并且 h 不等于 c 的左孩子，也不等于 c 的右孩子，则把 c 的左孩子压入 stack 中。
+    2. 如果其情况 1 不成立，并且 c 的右孩子不为空，并且 h 不等于 c 的右孩子，则把 c 的右孩子压入 stack 中。
+    3. 如果 1 和 2 都不成立，那么 stack 弹出 c 并打印，令 h 等于 c 。
 
 ## 代码
-{% codeblock %}
 
+{% codeblock %}
 class Node:  # 节点类
     def __init__(self, k):
         self.k = k
@@ -98,5 +106,4 @@ tree.add(3)
 tree.add(4)
 tree.add(5)
 tree.preorder2(tree.root)
-
 {% endcodeblock %}
