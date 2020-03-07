@@ -16,7 +16,9 @@ tags:
 [devpi | 本地安装](https://benpaodewoniu.github.io/2020/02/10/devpi0/)
 
 <br/>
+
 # 可以创建多个 index
+
 <br/>
 
 创建多个 index 的原因是，可以在 index 放不同版本的包，比如有的包还在测试不稳定，有的包是稳定版本。
@@ -44,7 +46,9 @@ tags:
 	devpi index -l
 
 <br/>
+
 # 包管理
+
 <br/>
 
 我们上传的包怎么看到呢？

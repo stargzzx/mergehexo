@@ -14,7 +14,9 @@ tags:
 <!-- more -->
 
 <br/>
+
 # 标签云显示不全
+
 <br/>
 
 [参考资料](https://github.com/iissnan/hexo-theme-next/issues/1908)
@@ -37,7 +39,9 @@ And in NexT page.swig value is set to 200:
 那些标签果然都能出现了。
 
 <br/>
+
 # 标签数据紊乱
+
 <br/>
 
 这个问题发生在我的 MacBook 上。

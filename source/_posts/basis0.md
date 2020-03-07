@@ -13,8 +13,11 @@ tags:
 这里介绍广谱正则表达式：
 <!--more-->
 这里引入我另一篇关于在 python 中如何操纵表达式的博文。
+
 [python re 模块](https://benpaodewoniu.github.io/2018/06/08/python8/)
+
 ## 基础
+
 {% codeblock %}
 
  . 匹配任意字符（除了\n）
@@ -78,7 +81,9 @@ $ 匹配字符串的结尾
 	输出 booby123
 	
 {% endcodeblock %}
+
 ## 例子
+
 {% codeblock %}
 str = "booooobb123"
 	
@@ -137,7 +142,9 @@ str = "booooobb123"
 		输出为 b00b 因为后面的不能满足
 		
 {% endcodeblock %}
+
 ## 有意识的匹配输出
+
 {% codeblock %}
 
 在 python 中如果模式匹配中有括号，那么匹配的输出结果是括号内容

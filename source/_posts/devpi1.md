@@ -18,7 +18,9 @@ tags:
 <!-- more -->
 
 <br/>
+
 # 背景
+
 <br/>
 
 我们的测试机用的是 python3.7 ，所以，其 pip 也是 pip3.7。测试机自带翻墙，不过很慢。
@@ -29,11 +31,15 @@ tags:
 但是，我在这个得记录一下。
 
 <br/>
+
 # 官方测试版（也可以叫体验版）
+
 <br/>
 
 <br/>
+
 ## 安装
+
 <br/>
 
 我是严格按照官方的教程来的。其链接如下：
@@ -57,7 +63,9 @@ tags:
 安装好之后，打算开启服务。
 
 <br/>
+
 ## 开启服务
+
 <br/>
 
 执行
@@ -227,7 +235,9 @@ tags:
 当时，认为麻烦。
  
 <br/>
+
 # 正式教程
+
 <br/>
 
 [Quickstart: permanent install on server/laptop](https://devpi.net/docs/devpi/devpi/latest/+d/quickstart-server.html#quickstart-server)

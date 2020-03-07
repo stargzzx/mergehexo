@@ -8,11 +8,25 @@ tags:
 - 组合模式
 ---
 从MVC中得知了组合模式的存在，然后找了一个比较好的文章进行解读。
+
 <!--more-->
+
+<br/>
+
 # 原文链接
+
+<br/>
+
 [组合模式](https://www.jianshu.com/p/c7f19e5310f9)
+
+<br/>
+
 # 原文内容
+
+<br/>
+
 ## 简介
+
 >Compose objects into tree structures to represent part-whole hierarchies.Composite lets clients treat individual objects and compositions of objects uniformly.
 将对象组合成树形结构以表示 “部分-整体” 的层次结构，使得用户对单个对象和组合对象的使用具有一致性。
 

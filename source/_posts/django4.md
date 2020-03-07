@@ -7,21 +7,53 @@ tags:
 - Django
 ---
 这里介绍django的模板系统。
+
 <!-- more -->
+
+<br/>
+
 # 为什么要有模板
+
+<br/>
+
 视图文件不适合编码 HTML
+
 页面设就改变需要修改python 代码
+
 网页逻辑和视图应该分开设计
+
+<br/>
+
 # 是什么
+
+<br/>
+
 模板系统的表现形式是文本
+
 分离文档的表现形式和表现内容
+
 模板系统定义了特有的标签占位符
+
+<br/>
+
 # 基本语法
+
+<br/>
+
 这些语法和markdown语法冲突，所以，很多细节，不能看，建议直接看我的代码。
+
 {% img /images/django/4_5.png %}
+
+<br/>
+
 # 模板系统的渲染
+
+<br/>
+
 定义页面，首先添加页面模板，也就是在 blog 中添加一个 templates 文件夹
+
 templates用来放置模板文件
+
 
 	1、templates 该目录本身没有，如果我们需要使用，需要我们自己创建，该目录名通常为templates
 	2、创建位置：
@@ -34,11 +66,14 @@ templates用来放置模板文件
 		标记：templates目录右键--mark Directory  as---template Folder
 
 然后我们在 templates 下定义一个 blog 文件夹，用来放置 html
-{% img /images/django/4_0.png %}
-上面图中的data、tools文件夹不需要管，那是为了给数据库传递数据
-我们先配置路由，也就是 blog下的urls.py文件
-{% codeblock %}
 
+{% img /images/django/4_0.png %}
+
+上面图中的data、tools文件夹不需要管，那是为了给数据库传递数据
+
+我们先配置路由，也就是 blog下的urls.py文件
+
+{% codeblock %}
 from django.urls import path,include
 import blog.views
 
@@ -67,11 +102,11 @@ def get_detail_page(request):
                   {
                       'curr_article':curr_article
                   })
-
 {% endcodeblock %}
-最后我们编写index.html 文件
-{% codeblock %}
 
+最后我们编写index.html 文件
+
+{% codeblock %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,19 +147,28 @@ def get_detail_page(request):
 </div>
 </body>
 </html>
-
 {% endcodeblock %}
+
 最后运行项目，然后浏览器输入
 
 	http://127.0.0.1:8000/blog/index
 	
-{% img /images/django/4_1.png %}
-# 展现具体文章内容
-之前是 /blog/detail 这个不能指定某一篇博客
-所以我们要利用唯一ID使得url变成 /blog/detail/1 这种形式
-首先修改 blog 下的路径文件
-{% codeblock %}
 
+{% img /images/django/4_1.png %}
+
+<br/>
+
+# 展现具体文章内容
+
+<br/>
+
+之前是 /blog/detail 这个不能指定某一篇博客
+
+所以我们要利用唯一ID使得url变成 /blog/detail/1 这种形式
+
+首先修改 blog 下的路径文件
+
+{% codeblock %}
 from django.urls import path,include
 import blog.views
 
@@ -146,11 +190,11 @@ def get_detail_page(request):
                   {
                       'curr_article':curr_article
                   })
-
 {% endcodeblock %}
-变成
-{% codeblock %}
 
+变成
+
+{% codeblock %}
 def get_detail_page(request,article_id):
     all_article = Article.objects.all()
     curr_article = None
@@ -163,14 +207,21 @@ def get_detail_page(request,article_id):
                   {
                       'curr_article':curr_article
                   })
-
 {% endcodeblock %}
-{% img /images/django/4_2.png %}
-# 实现上一篇，下一篇的按钮效果
-{% img /images/django/4_4.png %}
-修改blog 下面的 views 的 get_detail_page 函数
-{% codeblock %}
 
+{% img /images/django/4_2.png %}
+
+<br/>
+
+# 实现上一篇，下一篇的按钮效果
+
+<br/>
+
+{% img /images/django/4_4.png %}
+
+修改blog 下面的 views 的 get_detail_page 函数
+
+{% codeblock %}
 def get_detail_page(request,article_id):
     all_article = Article.objects.all()
     curr_article = None
@@ -203,11 +254,11 @@ def get_detail_page(request,article_id):
                       'previous_article':previous_article,
                       'next_article':next_article
                   })
-
 {% endcodeblock %}
-然后修改detail的代码
-{% codeblock %}
 
+然后修改detail的代码
+
+{% codeblock %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -238,9 +289,10 @@ def get_detail_page(request,article_id):
 </div>
 </body>
 </html>
-
 {% endcodeblock %}
+
 最后的页面如下面所示：
+
 {% img /images/django/4_3.png %}
 
 

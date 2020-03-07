@@ -14,7 +14,11 @@ tags:
 
 <!-- more -->
 
+<br/>
+
 # 流程
+
+<br/>
 
 t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根据 instance_name 拿到 instance_id 和 strategy_id。
 
@@ -24,11 +28,19 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 同样，我们根据上面的 strategy_id 拿到相关的策略。
 
+<br/>
+
 # 所有的表
+
+<br/>
 
 {% img /images/coinex/0_0.png %}
 
+<br/>
+
 # t_strategy
+
+<br/>
 
 {% img /images/coinex/0_1.png %}
 
@@ -36,7 +48,11 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 这个 strategy_name 是由我们自己定义的。
 
+<br/>
+
 # t_stragegy_instance
+
+<br/>
 
 {% img /images/coinex/0_2.png %}
 
@@ -46,7 +62,11 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 而， instance_name 是我们查询这张表的参数。
 
+<br/>
+
 # t_trade_user
+
+<br/>
 
 {% img /images/coinex/0_3.png %}
 
@@ -58,7 +78,11 @@ fcoin-x 项目中，我们需要先切换到 sort 分支下，然后找到 crypt
 
 根据相应的运算，我们将得到的加密放在表的相应位置。
 
+<br/>
+
 # t_relation
+
+<br/>
 
 {% img /images/coinex/0_4.png %}
 

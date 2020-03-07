@@ -7,7 +7,7 @@ title: 李丛的博客
 subtitle: 姑苏城外一茅屋，万树梅花月满天
 description: 促席坐鸣琴,写我平生心。平生固如此，松竹谐素音。
 author: 李丛
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: next-reloaded
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

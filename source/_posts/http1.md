@@ -12,7 +12,9 @@ mathjax: true
 <!-- more -->
 
 <br/>
+
 # 技术路线
+
 <br/>
 
 画图是真的烂，我也是第一次用这个插件，见谅，2333～～～
@@ -47,7 +49,9 @@ graph TB
 	- SimpleHTTPRequestHandler ：实现自定义的 HTTP 请求（GET、POST）处理逻辑
 
 <br/>
+
 # 本章完成的内容
+
 <br/>
 
 ## 技术路线图
@@ -90,7 +94,9 @@ graph LR
 	- 需要服务端多线程处理请求模型
 
 <br/>
+
 # TCPServer
+
 <br/>
 
 后面那些都是方法
@@ -168,7 +174,9 @@ class TCPServer:
 ```
 
 <br/>
+
 # StreamRequsetHandler
+
 <br/>
 
 - BaseRequestHandler
@@ -196,6 +204,7 @@ graph LR
 graph LR
     目录:handler-->base_handler.py
 ```
+
 
 ```python
 # -*- encoding=utf-8 -*-

@@ -19,13 +19,17 @@ tags:
 <!-- more -->
 
 <br/>
+
 # 参考资料
+
 <br/>
 
 [如何让你的HEXO博客支持手写流程图？](https://www.liuyude.com/How_to_make_your_HEXO_blog_support_handwriting_flowchart.html)
 
 <br/>
+
 # 安装插件
+
 <br/>
 
 首先，进入到博客的根目录，一定要在博客的根目录，很重要：
@@ -73,7 +77,9 @@ tags:
 hexo g 是为了加载配置。
 
 <br/>
+
 # 个性化背景颜色
+
 <br/>
 
 因为，我之前设置代码一类的背景是黑色，导致，这个画图也是黑色，这样就难以分辨了。
@@ -98,7 +104,9 @@ hexo g 是为了加载配置。
 	}
 
 <br/>
+
 # 语法
+
 <br/>
 
 ## 官方网址

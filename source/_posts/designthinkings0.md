@@ -11,12 +11,20 @@ tags:
 <!--more-->
 近期，币币生息的陈哥让我重新组建代码架构，他让我按照MVC的设计模式来，经过查阅相关资料，我会将我的想法搬上来。
 
+<br/>
+
 # 参考文章
+
+<br/>
 
 [深入理解MVC](https://zhuanlan.zhihu.com/p/35680070)
 [代码结构中Dao，Service，Controller，Util，Model是什么意思？](https://www.cnblogs.com/helloworld2048/p/10879587.html)
 
+<br/>
+
 # 原文内容
+
+<br/>
 
 
 ## 知乎
@@ -110,6 +118,7 @@ MVC就是将这三个设计模式在一起用了，将这三个设计模式弄�
 注：此文核心思想来自《head first设计模式》
 
 ## 博客
+
 内容大纲：
 
 1.为什么需要一个好的代码结构

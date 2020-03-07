@@ -21,14 +21,18 @@ tags:
 <!-- more -->
 
 <br/>
+
 # 当年错误的分析
+
 <br/>
 
 - next 5.0 之后的版本自带搜索框，不需要自己添加代码
 - 生成的 search.xml 很小，之前，貌似是眼花，看成了 600+ M 数据。
 
 <br/>
+
 # npm 出现错误
+
 <br/>
 
 我在安装插件的时候， npm 出现错误。
@@ -38,7 +42,10 @@ tags:
 [npm | run 'npm audit fix' to fix them, or 'npm audit' for details](https://benpaodewoniu.github.io/2020/03/07/npm1/)
 
 <br/>
+
 # 步骤
+
 <br/>
+
 [Hexo Next 主题中添加本地搜索功能](https://blog.csdn.net/lijing742180/article/details/87970909)
 
