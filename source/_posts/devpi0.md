@@ -57,7 +57,7 @@ tags:
 
 我们使用浏览器访问，便会看到：
 
-{% img /images/devpi/0_0.png %}
+![](/images/devpi/0_0.png)
 
 这里特别提醒一点是，上面的用户排序是根据 26 个字母顺序来排的。
 
@@ -69,7 +69,7 @@ tags:
 
 因为，我们搭建私服，本身就是为了打包自己的项目。经过，公司的大牛编写的脚本，我在本地生成了这个包。
 
-{% img /images/devpi/0_1.png %}
+![](/images/devpi/0_1.png)
 
 查阅相关资料
 
@@ -83,7 +83,7 @@ tags:
 
 而，看浏览器的 devpi ant 用户的目录，可以发现
 
-{% img /images/devpi/0_2.png %}
+![](/images/devpi/0_2.png)
 
 <br/>
 
@@ -115,13 +115,13 @@ tags:
 
 	devpi --help
 
-{% img /images/devpi/0_3.png %}
+![](/images/devpi/0_3.png)
 
 我们可以看到很多命令，我们可以发现 user 这个命令段，为了知道这个命令怎么用，我们再执行
 
 	devpi user --help
 
-{% img /images/devpi/0_4.png %}
+![](/images/devpi/0_4.png)
 
 就可以很轻松的知道，如何删除 user 了
 

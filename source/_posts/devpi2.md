@@ -59,17 +59,18 @@ tags:
 
 {% img /images/devpi/2_1.png %}
 
+
 然后查看具体的包
 
 	devpi list ant
 
-{% img /images/devpi/2_2.png %}
+![](/images/devpi/2_2.png)
 
 可以看到这里面有两个版本。
 
 但是，我们访问网页只能看到一个版本。
 
-{% img /images/devpi/2_3.png %}
+![](/images/devpi/2_3.png)
 
 这是因为网页上只显示最新的版本。
 
