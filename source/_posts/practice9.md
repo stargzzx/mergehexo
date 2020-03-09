@@ -17,7 +17,7 @@ tags:
 
 如下图所示：
 
-{% img /images/practice/9_0.png %}
+![](/images/practice/9_0.png)
 
 从后向前覆盖可以防止丢失数据。
 

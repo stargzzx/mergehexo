@@ -42,6 +42,6 @@ tags:
 
 期待他的新书。
 
-{% img /images/book/8.jpg %}
+![](/images/book/8.jpg)
 
 

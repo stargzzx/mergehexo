@@ -42,9 +42,9 @@ ADS1256 是靠 SPI 传递信息，而 ADS1115 是靠 I2C 来传递信息。
 
 	sudo raspi-config
 	
-{% img /images/raspberry/14_0.png %}
+![](/images/raspberry/14_0.png)
 
-{% img /images/raspberry/14_1.png %}
+![](/images/raspberry/14_1.png)
 
 ## 连接线
 
@@ -53,7 +53,7 @@ ADS1256 是靠 SPI 传递信息，而 ADS1115 是靠 I2C 来传递信息。
 	ADS1x15 SCL to Raspberry Pi SCL
 	ADS1x15 SDA to Raspberry Pi SDA
 
-{% img /images/raspberry/14_2.png %}
+![](/images/raspberry/14_2.png)
 
 ## 配置运行环境
 
@@ -64,7 +64,7 @@ ADS1256 是靠 SPI 传递信息，而 ADS1115 是靠 I2C 来传递信息。
 
 	sudo i2cdetect -y 1
 	
-{% img /images/raspberry/14_3.png %}
+![](/images/raspberry/14_3.png)
 
 ## 配置第三方库
 
@@ -99,11 +99,11 @@ ADS1256 是靠 SPI 传递信息，而 ADS1115 是靠 I2C 来传递信息。
 	
 我们就会看见第三方库已经安装上去了。
 
-{% img /images/raspberry/14_4.png %}
+![](/images/raspberry/14_4.png)
 
 我们进入到相关目录下，就能看见里面有示例代码。
 
-{% img /images/raspberry/14_5.png %}
+![](/images/raspberry/14_5.png)
 
 示例代码就在 examples 中。
 
@@ -111,7 +111,7 @@ ADS1256 是靠 SPI 传递信息，而 ADS1115 是靠 I2C 来传递信息。
 
 	sudo python simpletest.py
 	
-{% img /images/raspberry/14_6.png %}
+![](/images/raspberry/14_6.png)
 
 即，程序正确执行。
 

@@ -19,4 +19,4 @@ tags:
 - 有一个可以赚钱的副业
 
 
-{% img /images/goal/2.jpg %}
+![](/images/goal/2.jpg)

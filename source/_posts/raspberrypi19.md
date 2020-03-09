@@ -21,23 +21,23 @@ tags:
 
 ADS1115 一共有四个通道，按照逻辑的话，应该是一个通道输入，其他通道都不会改变值，但是，在实际的过程中，一个通道有输入其它通道的输出变化特别大。
 
-{% img /images/raspberry/19_0.png %}
+![](/images/raspberry/19_0.png)
 
 我以为是程序或者其他的硬件出了问题，所以，我换了 N 个库，然后找了很多东西，都没有解决。
 
 原来的基值信号。
 
-{% img /images/raspberry/19_2.png %}
+![](/images/raspberry/19_2.png)
 
 向 A0 输入模拟信号，可以看出其他通道都有。
 
-{% img /images/raspberry/19_3.png %}
+![](/images/raspberry/19_3.png)
 
 然后，问了一下商城的客服。
 
 图片如下：
 
-{% img /images/raspberry/19_1.png %}
+![](/images/raspberry/19_1.png)
 
 ## 验证
 
@@ -47,6 +47,6 @@ ADS1115 一共有四个通道，按照逻辑的话，应该是一个通道输入
 
 我的办法是将杜邦线进行整合，这个都是小问题，其测试结果如下。
 
-{% img /images/raspberry/19_4.png %}
+![](/images/raspberry/19_4.png)
 
 

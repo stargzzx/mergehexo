@@ -50,9 +50,9 @@ raise 语句，自主引发异常
 		raise ZeroDivisionError("除数为零的异常")
 {% endcodeblock %}
 
-{% img /images/python/12_0.JPG %}
+![](/images/python/12_0.JPG)
 
-{% img /images/python/12_1.JPG %}
+![](/images/python/12_1.JPG)
 
 ## 异常参数输出：
 

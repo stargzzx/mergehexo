@@ -41,11 +41,11 @@ Genetic Algorithms(GA) 是遗传算法，这是一个非常有意思的算法，
 
 看下面的函数
 
-{% img /images/machinelearningalgorithm/5_0.JPG %}
+![](/images/machinelearningalgorithm/5_0.JPG)
 
 将这个函数画出图像我们就能得出
 
-{% img /images/machinelearningalgorithm/5_1.JPG %}
+![](/images/machinelearningalgorithm/5_1.JPG)
 
 首先我们知道函数的定义域是 [-1,2] 相当于物种是袋鼠，这是个限制，我们就是要找那个数能得到函数的最大值。
 
@@ -76,7 +76,7 @@ Genetic Algorithms(GA) 是遗传算法，这是一个非常有意思的算法，
 
 公式如下：
 
-{% img /images/machinelearningalgorithm/5_2.JPG %}
+![](/images/machinelearningalgorithm/5_2.JPG)
 
 具体例子如下，我们要精确到 6 位小数，由于定义域是 [-1,2] ，也就是长度是 2 + 1 = 3。
 
@@ -84,7 +84,7 @@ Genetic Algorithms(GA) 是遗传算法，这是一个非常有意思的算法，
 
 又因为
 
-{% img /images/machinelearningalgorithm/5_3.JPG %}
+![](/images/machinelearningalgorithm/5_3.JPG)
 
 所以编码的二进制至少需要 22 位。
 
@@ -92,7 +92,7 @@ OK，现在我们编码算是糊弄过去了，那么如何解码？给你一段
 
 看如下公式：
 
-{% img /images/machinelearningalgorithm/5_4.JPG %}
+![](/images/machinelearningalgorithm/5_4.JPG)
 
 看不懂对吧，很正常，这是中国人自以为是的技能，将简单问题复杂化，用来彰显自己学术水平牛逼。
 
@@ -105,7 +105,7 @@ OK，现在我们编码算是糊弄过去了，那么如何解码？给你一段
 	
 如，二进制串： 1000101110110101000111 ，表示实数值为 0.637197
 
-{% img /images/machinelearningalgorithm/5_5.JPG %}
+![](/images/machinelearningalgorithm/5_5.JPG)
 
 OK，到这里，正如原文中所说，对于基因的编码和解码我们应该不成问题了。
 
@@ -135,9 +135,9 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 
 但是，单一的利用原函数并不能满足我们的要求，因为原函数最终得值有负有正，所以，单纯的求解满足不了适应度非负的前提，所以，我们要做一些变换。
 
-{% img /images/machinelearningalgorithm/5_6.png %}
+![](/images/machinelearningalgorithm/5_6.png)
 
-{% img /images/machinelearningalgorithm/5_7.png %}
+![](/images/machinelearningalgorithm/5_7.png)
 
 我们如何定义每个个体的适应度呢？
 
@@ -149,7 +149,7 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 
 下面将是解决方案，但是，我没懂，因为这节课我因为有很重要的事，逃了。。。
 
-{% img /images/machinelearningalgorithm/5_8.png %}
+![](/images/machinelearningalgorithm/5_8.png)
 
 改天问一下老师。。。
 
@@ -163,11 +163,11 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 	
 一般执行选择算子的手段是轮盘选择，精英选择，稳态选择。
 
-{% img /images/machinelearningalgorithm/5_9.png %}
+![](/images/machinelearningalgorithm/5_9.png)
 
-{% img /images/machinelearningalgorithm/5_10.png %}
+![](/images/machinelearningalgorithm/5_10.png)
 
-{% img /images/machinelearningalgorithm/5_11.png %}
+![](/images/machinelearningalgorithm/5_11.png)
 
 ## 遗传变异
 
@@ -175,21 +175,21 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 
 ### 单点交叉算子
 
-{% img /images/machinelearningalgorithm/5_12.png %}
+![](/images/machinelearningalgorithm/5_12.png)
 
-{% img /images/machinelearningalgorithm/5_13.png %}
+![](/images/machinelearningalgorithm/5_13.png)
 
-{% img /images/machinelearningalgorithm/5_14.png %}
+![](/images/machinelearningalgorithm/5_14.png)
 
 ### 基本位变异算子
 
 这个算法是讲变异的，富人靠科技，穷人靠变异。
 
-{% img /images/machinelearningalgorithm/5_15.png %}
+![](/images/machinelearningalgorithm/5_15.png)
 
-{% img /images/machinelearningalgorithm/5_16.png %}
+![](/images/machinelearningalgorithm/5_16.png)
 
-{% img /images/machinelearningalgorithm/5_17.png %}
+![](/images/machinelearningalgorithm/5_17.png)
 
 ## 用数学的角度看 GA
 
@@ -225,45 +225,45 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 
 适应度和被选中的概率
 
-{% img /images/machinelearningalgorithm/5_18.png %}
+![](/images/machinelearningalgorithm/5_18.png)
 
 第 t 代产生了，其中有一个种群是 s ，那么第 t + 1 代中，种群 s 的数目如下公式计算：
 
-{% img /images/machinelearningalgorithm/5_19.png %}
+![](/images/machinelearningalgorithm/5_19.png)
 
 由于公式难写，所以，下面的公式推导我大都采用截图，必要的时候我会给祥加说明，非我懒惰，只是实在是找不到特殊符号的编码。
 
-{% img /images/machinelearningalgorithm/5_20.png %}
+![](/images/machinelearningalgorithm/5_20.png)
 
-{% img /images/machinelearningalgorithm/5_21.png %}
+![](/images/machinelearningalgorithm/5_21.png)
 
 这个公式说明下一代模式 s 的种群取决于种群 s 的平均适应度和全部个体平均适应度之比。且只有这两个的比大于 1 ，种群 s 的数目才能增加，否则数目减小。
 
 正好符合优胜略汰的道理。
 
-{% img /images/machinelearningalgorithm/5_22.png %}
+![](/images/machinelearningalgorithm/5_22.png)
 
-{% img /images/machinelearningalgorithm/5_23.png %}
+![](/images/machinelearningalgorithm/5_23.png)
 
 下面仅仅是推导单点交叉。
 
-{% img /images/machinelearningalgorithm/5_24.png %}
+![](/images/machinelearningalgorithm/5_24.png)
 
-{% img /images/machinelearningalgorithm/5_25.png %}
+![](/images/machinelearningalgorithm/5_25.png)
 
 我在别的地方找的一个图片，道理是相通的，所以我就不过多的陈述了
 
-{% img /images/machinelearningalgorithm/5_26.jpg %}
+![](/images/machinelearningalgorithm/5_26.jpg)
 
-{% img /images/machinelearningalgorithm/5_27.png %}
+![](/images/machinelearningalgorithm/5_27.png)
 
 也就是说，模式的长度越长，越容易被破坏。
 
 变异模式下的推导
 
-{% img /images/machinelearningalgorithm/5_28.png %}
+![](/images/machinelearningalgorithm/5_28.png)
 
-{% img /images/machinelearningalgorithm/5_29.png %}
+![](/images/machinelearningalgorithm/5_29.png)
 
 上述公式即为模式定理，适应度高于群体平均适应度的，长度较短，低阶的模式在遗传算法的迭代过程中将按照指数规律增长。
 
@@ -279,7 +279,7 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 
 ### 模式存活的最小长度
 
-{% img /images/machinelearningalgorithm/5_30.png %}
+![](/images/machinelearningalgorithm/5_30.png)
 
 这张图有几点需要解释一下，第一，ε 是 0 和 1 之间的数，代表很小的数，第二，图片中的 l 和 λ 是一个含义。
 
@@ -287,11 +287,11 @@ OK，到这里，正如原文中所说，对于基因的编码和解码我们应
 
 下面我都是截图给出，讲道理，为什么会有隐含，我是看不太懂。
 
-{% img /images/machinelearningalgorithm/5_31.png %}
+![](/images/machinelearningalgorithm/5_31.png)
 
-{% img /images/machinelearningalgorithm/5_32.png %}
+![](/images/machinelearningalgorithm/5_32.png)
 
-{% img /images/machinelearningalgorithm/5_33.png %}
+![](/images/machinelearningalgorithm/5_33.png)
 
 ## 遗传算法的特点总结
 

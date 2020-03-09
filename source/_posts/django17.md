@@ -42,7 +42,7 @@ tags:
 
 实现delete方法，取到index下标值。
 
-{% img /images/django/17_0.png %}
+![](/images/django/17_0.png)
 
 	delete: function (e) {
 	  var index = parseInt(e.currentTarget.dataset.index);
@@ -53,11 +53,11 @@ tags:
 
 将会导致仅点中<view>才能输出index值，点子元素<image>或<text>将输出NaN。
 
-{% img /images/django/17_1.png %}
+![](/images/django/17_1.png)
 
 那target有什么用呢，用于区分子元素与外部元素要分别处理时，比如换用户头像的场景，点击头像本身预览大图，而头像所在的点整一行，将是切换头像。
 
-{% img /images/django/17_2.png %}
+![](/images/django/17_2.png)
 
 关于二者区别的详情说明，请见文档：https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html
 
@@ -125,7 +125,7 @@ address/add页面实现onLoad(options)方法，从url路径中获取objectId
 	
 然后就是访问网络以及渲染页面了。
 
-{% img /images/django/17_3.png %}
+![](/images/django/17_3.png)
 
 <br/>
 

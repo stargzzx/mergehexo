@@ -17,19 +17,19 @@ tags:
 
 一般情况下标准输出设备为显示器，标准输入设备为键盘。
 
-{% img /images/linux/1_0.png %}
+![](/images/linux/1_0.png)
 
 linux中用0代表标准输入，1代表标准正确输出，2代表标准错误输出。
 
 输出重定向：正常输出是把内容输出到显示器上，而输出重定向是把内容输出到文件中
 
-{% img /images/linux/1_1.png %}
+![](/images/linux/1_1.png)
 
 例如：ifconfig > test.log 即把ifconfig执行显示的内容写入test.log.当前页面不再显示执行结果。
 
 注意：错误输出重定向>/>>后边没有空格
 
-{% img /images/linux/1_2.png %}
+![](/images/linux/1_2.png)
 
 命令 >> 文件 2>&1 和 命令 &>>文件 两个命令作用相同
 

@@ -57,7 +57,7 @@ Matplotlib常常不可避免地存在冗繁的API（应用程序编程接口）
 
 <br/>
 
-{% img /images/python/68_0.gif %}
+![](/images/python/68_0.gif)
 
 基本原理是将数据放入数组，然后每次往数组里面增加一个数，清除之前的图，重新画出图像。
 
@@ -79,7 +79,7 @@ for i in range(50):
 
 <br/>
 
-{% img /images/python/68_1.gif %}
+![](/images/python/68_1.gif)
 
 基本原理是使用一个长度为2的数组，每次替换数据并在原始图像后追加。
 
@@ -123,7 +123,7 @@ ArtistAnimation：利用已定义的Artist对象创建动画。
 
 <br/>
 
-{% img /images/python/68_2.gif %}
+![](/images/python/68_2.gif)
 
 {% codeblock %}
 import numpy as np
@@ -166,7 +166,7 @@ anim.save('sine_wave.gif', writer='imagemagick')
 
 绘制股票数据、传感器数据等其他与时间相关的动态数据时，实时更新图就会派上用场。我们绘制一个基图，在更多的数据被输入系统后，基图就会自动更新。现在，来绘制某假定公司某月内的股价图。
 
-{% img /images/python/68_3.gif %}
+![](/images/python/68_3.gif)
 
 {% codeblock %}
 #importing libraries
@@ -207,7 +207,7 @@ plt.show()
 
 <br/>
 
-{% img /images/python/68_4.gif %}
+![](/images/python/68_4.gif)
 
 创建3D图形十分常见，但是如果可以将这些图形视角动画化呢?其方法是，在改变相机视图后，利用生成后的所有图像来创建动画。而在PythonGraph Gallery（Python图形库）中有个专门的部分可以完成这类工作。
 
@@ -267,7 +267,7 @@ Celluloid是python中的一个模块，其在matplotlib中可简化创建动画�
 
 ## 极小值
 
-{% img /images/python/68_5.gif %}
+![](/images/python/68_5.gif)
 
 创建3D图形十分常见，但是如果可以将这些图形视角动画化呢?其方法是，在改变相机视图后，利用生成后的所有图像来创建动画。而在PythonGraph Gallery（Python图形库）中有个专门的部分可以完成这类工作。
 
@@ -288,7 +288,7 @@ animation.save('celluloid_minimal.gif', writer = 'imagemagick')
 
 ## 子图
 
-{% img /images/python/68_6.gif %}
+![](/images/python/68_6.gif)
 
 {% codeblock %}
 import numpy as np
@@ -309,7 +309,7 @@ animation.save('celluloid_subplots.gif', writer = 'imagemagick')
 
 ## 图例
 
-{% img /images/python/68_7.gif %}
+![](/images/python/68_7.gif)
 
 {% codeblock %}
 import matplotlib
@@ -328,7 +328,7 @@ animation.save('celluloid_legends.gif', writer = 'imagemagick')
 
 # 通过定时器Timer触发事件，定时更新绘图
 
-{% img /images/python/68_8.gif %}
+![](/images/python/68_8.gif)
 
 这个没开始研究，但是，我确定是我必须要掌握的。
 

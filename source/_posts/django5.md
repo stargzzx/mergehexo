@@ -14,7 +14,7 @@ tags:
 
 我们将boorstrap的分页组件放在相应的页面中
 
-{% img /images/django/5_0.png %}
+![](/images/django/5_0.png)
 
 <br/>
 
@@ -146,7 +146,7 @@ def get_index_page(request):
 
 {% endcodeblock %}
 
-{% img /images/django/5_1.png %}
+![](/images/django/5_1.png)
 
 
 

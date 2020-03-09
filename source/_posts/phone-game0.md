@@ -29,6 +29,6 @@ tags:
 
 世界是变化的啊！玩过之后，心中还是有些感触的。
 
-{% img /images/phone_game/0_0.jpg %}
+![](/images/phone_game/0_0.jpg)
 
-{% img /images/phone_game/0_1.jpg %}
+![](/images/phone_game/0_1.jpg)

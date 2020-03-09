@@ -47,4 +47,4 @@ tags:
 
 后来，我把币提到鲸交所，挂了0.0005175，最后有人买了。OK，另外，傻逼dex.top，一生黑。
 
-{% img /images/virtualcoin/8_0.jpg %}
+![](/images/virtualcoin/8_0.jpg)

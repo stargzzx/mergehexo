@@ -20,7 +20,7 @@ tags:
 
 通常把与刺激信号有严格关系的特定反应电位称为特异性诱发电位，这种特异性诱发电位是诱发信息以神经发放形式，在神经通路不同水平上不断组合形成的一系列神经电活动。
 
-{% img /images/brainwave/0_2.png %}
+![](/images/brainwave/0_2.png)
 
 被事件所引发的正负电压波动可以被称为“峰”、“波”或“（脑电）成分”，是事件相关电位研究的主要对象。
 
@@ -71,19 +71,19 @@ tags:
 
 ## 脑波的波形
 
-{% img /images/brainwave/0_0.png %}
+![](/images/brainwave/0_0.png)
 
-{% img /images/brainwave/0_1.png %}
+![](/images/brainwave/0_1.png)
 
 下面这张表来自于百度百科
 
-{% img /images/brainwave/0_3.png %}
+![](/images/brainwave/0_3.png)
 
 在自然静息的状态下，α 波为脑电波主要成分，当然也含有少量的 θ 波和 β 波。
 
 脑电波的分类图示
 
-{% img /images/brainwave/0_4.jpg %}
+![](/images/brainwave/0_4.jpg)
 
 ## 脑电噪声
 

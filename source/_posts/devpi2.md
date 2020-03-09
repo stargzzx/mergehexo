@@ -32,7 +32,7 @@ tags:
 
 	devpi use
 
-{% img /images/devpi/2_0.png %}
+![](/images/devpi/2_0.png)
 
 换 index ，可以使用下面的命令
 
@@ -57,7 +57,7 @@ tags:
 
 	devpi list
 
-{% img /images/devpi/2_1.png %}
+![](/images/devpi/2_1.png)
 
 
 然后查看具体的包

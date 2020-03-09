@@ -72,4 +72,4 @@ Rage, rage against the dying of the light.
 不要温和地走进那个良夜
 怒斥吧，怒斥光的消逝
 
-{% img /images/movie/5.jpg %}
+![](/images/movie/5.jpg)

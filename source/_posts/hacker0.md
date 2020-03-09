@@ -48,23 +48,23 @@ DVWA共有十个模块:
 
 安装完成后点击运行
 
-{% img /images/hacker/0_0.jpg %}
+![](/images/hacker/0_0.jpg)
 
 在Apache及MySQL选择行中点击start便可创建虚拟环境
 
-{% img /images/hacker/0_1.jpg %}
+![](/images/hacker/0_1.jpg)
 
 测试
 
 打开浏览器输入localhost测试是否搭建成功，显示该页面则搭建完成
 
-{% img /images/hacker/0_2.jpg %}
+![](/images/hacker/0_2.jpg)
 
 ## DVWA搭建
 
 将下载的 zip 文件解压至XAMPP目录下的htdocs文件夹中，打开dvwa/config，修改 config.inc.php.bak（这里也可能不是 bak 但是都修改成右边的名字） 为 config.inc.php ，随后打开浏览器输入localhost/dvwa/setup.php （文件名不区分大小写）打开设置页面，并点击页面下方 Create/Reset Database 
 
-{% img /images/hacker/0_3.jpg %}
+![](/images/hacker/0_3.jpg)
 
 ### 可能的报错
 
@@ -72,7 +72,7 @@ DVWA共有十个模块:
 	
 原因是：$_DVWA[‘db_password’]=‘p@ssword’;这个密码必须和MySQL root用户的密码一致。
 
-{% img /images/hacker/0_4.jpg %}
+![](/images/hacker/0_4.jpg)
 
 解决：打开dvwa目录下的config，打开config.inc.php，在图中第21行的
 
@@ -80,17 +80,17 @@ DVWA共有十个模块:
 	改为
 	$_DVWA[ 'db_password' ] = '';
 
-{% img /images/hacker/0_5.jpg %}
+![](/images/hacker/0_5.jpg)
 
 之后成功Create Database
 
-{% img /images/hacker/0_6.jpg %}
+![](/images/hacker/0_6.jpg)
 
 数秒后自动转至Login界面，默认帐号为admin，密码为password
 
 成功登陆DVWA
 
-{% img /images/hacker/0_7.jpg %}
+![](/images/hacker/0_7.jpg)
 
 
 

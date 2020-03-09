@@ -43,7 +43,7 @@ tags:
 
 	{"registry-mirrors":["https://registry.docker-cn.com"]}
 
-{% img /images/docker/2_0.jpg %}
+![](/images/docker/2_0.jpg)
 
 之后重新启动服务：
 
@@ -54,7 +54,7 @@ tags:
 
 对于使用 Windows 10 的系统，在系统右下角托盘 Docker 图标内右键菜单选择 Settings，打开配置窗口后左侧导航菜单选择 Daemon。在 Registrymirrors 一栏中填写加速器地址 https://registry.docker-cn.com ，之后点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址了。
 
-{% img /images/docker/0_3.png %}
+![](/images/docker/0_3.png)
 
 ## MacOS
 
@@ -64,7 +64,7 @@ tags:
 
 在列表中填写加速器地址即可。修改完成之后，点击 Apply & Restart 按钮，Docker 就会重启并应用配置的镜像地址了。
 
-{% img /images/docker/0_2.png %}
+![](/images/docker/0_2.png)
 
 之后我们可以通过 docker info 来查看是否配置成功。
 

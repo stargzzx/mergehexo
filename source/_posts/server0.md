@@ -34,7 +34,7 @@ tags:
 
 其配置如图：
 
-{% img /images/server/0_0.png %}
+![](/images/server/0_0.png)
 
 ### 连接服务器
 

@@ -98,7 +98,7 @@ tags:
 
 方渐博士文凭没有得到，于是就买了一个德国克莱登大学的博士文凭。
 
-{% img /images/book/10.jpg %}
+![](/images/book/10.jpg)
 
 
 

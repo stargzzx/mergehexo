@@ -42,4 +42,4 @@ Font = ImageFont.truetype('C:\Windows\Fonts\simsun.ttc',30,encoding='utf-8')
 draw.text((10,10),'程序猿',fill=(255,255,255),font=Font)
 image.save('test.jpg')
 {% endcodeblock %}
-{% img /images/python/35_0.jpg %}
+![](/images/python/35_0.jpg)

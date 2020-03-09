@@ -97,7 +97,7 @@ plt.ioff(); plt.show()
 
 ### 效果图
 
-{% img /images/machinelearningalgorithm/6_0.gif %}
+![](/images/machinelearningalgorithm/6_0.gif)
 
 ### 解读
 
@@ -223,9 +223,9 @@ plt.show()
 
 ASCII 表
 
-{% img /images/machinelearningalgorithm/6_1.JPG %}
+![](/images/machinelearningalgorithm/6_1.JPG)
 
-{% img /images/machinelearningalgorithm/6_2.JPG %}
+![](/images/machinelearningalgorithm/6_2.JPG)
 
 从图中我们可以知道，电脑能输出的 ADCII 码的编号就是 32 - 126 。
 
@@ -401,7 +401,7 @@ if __name__ == '__main__':
 
 对于这个问题，遗传算法只能找到相对比较优的路径，而不能 100% 找到最优路径。
 
-{% img /images/machinelearningalgorithm/6_3.gif %}
+![](/images/machinelearningalgorithm/6_3.gif)
 
 ### 原代码
 

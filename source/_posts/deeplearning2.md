@@ -69,7 +69,7 @@ $$ C(w,b) \equiv  \{1 \over 2n \} \sum_x | y(x) - a|^2 $$
 
 假设我们要最小化函数 C(v),v=v1,v2。该函数图像为：
 
-{% img /images/deeplearning/2_0.png %}
+![](/images/deeplearning/2_0.png)
 
 我们要找到 $C$ 的全局最小值。一种做法是计算函数的导数，找到各个极值。课本上的导数很好求解。不幸的是，现实生活中，问题所代表的函数经常包含过多的变量。尤其是神经网络中，有数以万计的权值和偏移，不可能直接求取极值。
 
@@ -109,7 +109,7 @@ $$ v \rightarrow v’ = v -\eta \nabla C $$
 
 总结一下，首先重复计算梯度 $ \nabla C $，然后向相反方向移动，画成图就是
 
-{% img /images/deeplearning/2_1.png %}
+![](/images/deeplearning/2_1.png)
 
 请注意，上述梯度下降的规则并没有复制出真正的物理运动。在真实生活中，球有动量，滚向谷底后还会继续滚上去，在摩擦力的作用下才会最终停下。但我们的算法中没这么复杂。
 
@@ -304,11 +304,11 @@ delta_nabla_b, delta_nabla_w = self.backprop(x, y)
 
 首先是明确的权重定义。使用 $w^l_{jk}$ 表示权重，代表连接 $(l-1)^{\rm th}$ 层第 $k^{\rm th}$ 个神经元 和 $l^{\rm th}$ 层第 $j^{\rm th}$ 个神经元的权重。举例来说，第二层第四个神经元和第三层第二个神经元之间的权重连接为
 
-{% img /images/deeplearning/2_2.png %}
+![](/images/deeplearning/2_2.png)
 
 对于网络的偏移和激励我们将使用类似的符号。即 $b^l_j$ 是 $l^{\rm th}$ 层第 $j^{\rm th}$ 个神经元的偏移，$a^l_j$ 是 $l^{\rm th}$ 层第 $j^{\rm th}$ 个神经元的激励。如图所示：
 
-{% img /images/deeplearning/2_3.png %}
+![](/images/deeplearning/2_3.png)
 
 有了这些记号，第 $l^{\rm th}$ 层第 $ j^{\rm th} $ 个神经元的激励 $ a^l_j $可以由第 $(l-1)^{\rm th}$ 层的所有激励求得：
 
@@ -352,7 +352,7 @@ $$ C = \frac{1}{2n} \sum_x |y(x)-a^L(x)|^2 $$
 
 第二个假设是误差可以写作神经网络输出的函数：
 
-{% img /images/deeplearning/2_4.png %}
+![](/images/deeplearning/2_4.png)
 
 例如，二次代价函数就满足这一要求，单个训练数据 $x$ 的二次误差可以写成：
 
@@ -374,7 +374,7 @@ $$\left[\begin{array}{c} 1 \\ 2 \end{array}\right]   \odot \left[\begin{array}{c
 
 然后我们继续引入一个中间变量 $\delta^l_j$，我们称作第 $l$ 层第 $j$ 个神经元的误差。为了形象地理解误差到底是什么，假设在我们的神经网络中有一个小妖精：
 
-{% img /images/deeplearning/2_5.png %}
+![](/images/deeplearning/2_5.png)
 
 这个妖精坐在 $l$ 层的第 $j$ 个神经元上。当输入到来时，它故意扰乱神经元的正常工作。它在神经元的加权输入中加入了一个小的变化 $\Delta z^l_j$，这样输出变成了 $\sigma(z^l_j+\Delta z^l_j)$。这个变化向后层神经网络传递，最终到输出层导致误差相应地改变为 $\frac{\partial C}{\partial z^l_j} \Delta z^l_j$。
 
@@ -418,14 +418,14 @@ $$\delta^l = ((w^{l+1})^T \delta^{l+1}) \odot \sigma’(z^l)$$
 
 #### BP2的证明
 
-{% img /images/deeplearning/2_6.png %}
+![](/images/deeplearning/2_6.png)
 
 #### 证明解释
 
 首先看（I）式，$ \delta^l_j = \frac{\partial C}{\partial Z^l_j} $,就是误差（error）的定义，这个简单。
 通过公式 (BP1) 和公式 (BP2) 的组合，每一层的误差都能求得。
 
-{% img /images/deeplearning/2_7.jpg %}
+![](/images/deeplearning/2_7.jpg)
 
 这个就是链式法则啦，我们知道前一层的输出可以作为后一层的输入，也就是说，可以认为前一层的$z$算式后一层$z$的变量（别晕）。应用复合函数链式法则，就能够得到这个式子了。
 

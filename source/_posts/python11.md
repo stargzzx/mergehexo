@@ -60,11 +60,11 @@ str.center() 看图片
 
 ## 函数
 
-{% img /images/python/11_0.JPG %}
+![](/images/python/11_0.JPG)
 
-{% img /images/python/11_1.JPG %}
+![](/images/python/11_1.JPG)
 
-{% img /images/python/11_2.JPG %}
+![](/images/python/11_2.JPG)
 
 ## 格式化
 
@@ -118,12 +118,12 @@ format()
 	输出"5         "
 {% endcodeblock %}
 
-{% img /images/python/11_3.JPG %}
+![](/images/python/11_3.JPG)
 
-{% img /images/python/11_4.JPG %}
+![](/images/python/11_4.JPG)
 
 
-{% img /images/python/11_5.JPG %}
+![](/images/python/11_5.JPG)
 
 ## 字符输出
 

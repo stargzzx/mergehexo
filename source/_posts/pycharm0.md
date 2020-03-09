@@ -26,13 +26,13 @@ tags:
 
 pycharm的删除文件并不会放到回收站，它有它自己的机制。
 
-{% img /images/pycharm/0_0.png %}
+![](/images/pycharm/0_0.png)
 
 图中那两个选项都要选上，这样在删除的时候，它会自动查询其它地方有没有引用这个文件。
 
 如果删除了那怎么办？Pycharm 的隐藏的一个功能 Local History，它会保存你对文件的所有操作记录。
 
-{% img /images/pycharm/0_1.png %}
+![](/images/pycharm/0_1.png)
 
 此时你可以在你的项目目录里，点击右键，有个 Local History 的选项，再点击子选项 Show History，你可以看到这里有个记录板。如果你想恢复删除的文件，就在删除的记录项点击右键，选择 Revert 即可恢复。
 
@@ -59,15 +59,15 @@ pep8 是Python 语言的一个代码编写规范。如若你是新手，目前�
 	
 找到首选项中的 tool 
 
-{% img /images/pycharm/0_2.jpg %}
+![](/images/pycharm/0_2.jpg)
 
 我随意写了一段不符合 pep8 规范的代码。
 
-{% img /images/pycharm/0_3.jpg %}
+![](/images/pycharm/0_3.jpg)
 
 点击右键，选择 External Tools -> AutoPep8
 
-{% img /images/pycharm/0_4.png %}
+![](/images/pycharm/0_4.png)
 
 你可能会说，Pycharm 本身就自带这个功能了呀，快捷键 Command+Option+L ，就可以实现一键pep8了。你可以对比一下，Pycharm 自带的代码 pep8 化功能 并没有像这个autopep8 来得彻底。 我相信你最终的选择肯定是后者。
 
@@ -90,7 +90,7 @@ pep8 是Python 语言的一个代码编写规范。如若你是新手，目前�
 	F11                   删除书签（经测试仅能在Windows上有效）
 	在 macbook 中 Command + F11 也是取消书签，但是，必须移动焦点，再返回才行
 	
-{% img /images/pycharm/0_5.jpg %}
+![](/images/pycharm/0_5.jpg)
 
 在你要打书签的位置，按下 Command + F11 ，你可以给这个位置加个序号，可以是数字也可以是字母，假如在下面这个位置 加了 1 这个序号，下次你就可以使用 Control + 1 直接跳转到这个位置。
 
@@ -112,19 +112,19 @@ pep8 是Python 语言的一个代码编写规范。如若你是新手，目前�
 	
 对于刚使用 Pycharm 的同学，可能并不知道 Pycharm 也是可以指定参数的。点击下图位置
 
-{% img /images/pycharm/0_6.png %}
+![](/images/pycharm/0_6.png)
 
 进入设置面板，在 Script parameters 中填入参数即可。
 
-{% img /images/pycharm/0_7.jpg %}
+![](/images/pycharm/0_7.jpg)
 
 同样，我们可以在这个界面制定环境变量
 
 比如，我们本地有的环境变量需要读，但是，那么我们将可以将环境变量配置成下面这样
 
-{% img /images/pycharm/0_9.jpg %}
+![](/images/pycharm/0_9.jpg)
 
-{% img /images/pycharm/0_8.jpg %}
+![](/images/pycharm/0_8.jpg)
 
 <br/>
 
@@ -134,11 +134,11 @@ pep8 是Python 语言的一个代码编写规范。如若你是新手，目前�
 
 我平时会看的框架是 OpenStack ，我不知道其他框架是怎样的，但在 OpenStack 里面带有大量（真的很多）的单元测试文件。这给我在使用 Find in Path  时带来了不小的困扰，你可以从下图的搜索结果中感受一下，搜索一个函数，test 文件里的结果比 正常文件要多很多。
 
-{% img /images/pycharm/0_10.jpg %}
+![](/images/pycharm/0_10.jpg)
 
 这些测试文件的搜索结果，对于我们看源代码不仅没有任何帮助的，更重要的是还干扰视线。于是我就研究了一下，从文件名入手，只要在 File mask 里填写 !test* 可以将这些test文件过滤掉。搜索结果一下子清晰很多。
 
-{% img /images/pycharm/0_11.jpg %}
+![](/images/pycharm/0_11.jpg)
 
 <br/>
 
@@ -156,7 +156,7 @@ pep8 是Python 语言的一个代码编写规范。如若你是新手，目前�
 
 我研究了下，Pycharm （2018版本）里是有开关按钮的，将下图中的这个选项（Show intention bulb）取消勾选，就可以关闭这个功能。
 
-{% img /images/pycharm/0_12.jpg %}
+![](/images/pycharm/0_12.jpg)
 
 <br/>
 
@@ -166,7 +166,7 @@ pep8 是Python 语言的一个代码编写规范。如若你是新手，目前�
 
 下面我先给出了一小段代码示例，思考一下，为什么name，my_name 不会有波浪线，而 myname 和 wangbm 会有波浪线呢？
 
-{% img /images/pycharm/0_13.png %}
+![](/images/pycharm/0_13.png)
 
 Pycharm 本身会实时地对变量名进行检查，如果变量名不是一个已存在的英文单词，就会出现一条波浪线，当一个变量里有多个单词时，Python 推荐的写法是用下划线来分隔（其他语言可能会习惯使用驼峰式命名法 ，但 Python 是使用下划线），所以在 Pycharm 看来  my_name 是规范的，而 myname 会被当成是一个单词对待，由于它在单词库里并没有它，所以 myname 是不规范的。
 
@@ -174,7 +174,7 @@ Pycharm 本身会实时地对变量名进行检查，如果变量名不是一个
 
 那么如何关闭这个非语法级别的波浪线呢？很简单，它的开关就在你的右下角那个像 人头像 一样的按钮
 
-{% img /images/pycharm/0_14.png %}
+![](/images/pycharm/0_14.png)
 
 然后选择 Syntax 级别的即可。同样一段代码，效果如下，干净了很多。
 
@@ -186,25 +186,25 @@ Pycharm 本身会实时地对变量名进行检查，如果变量名不是一个
 
 按照如下提示点击 Git 仓库配置
 
-{% img /images/pycharm/0_15.jpg %}
+![](/images/pycharm/0_15.jpg)
 
 接着输入仓库地址
 
-{% img /images/pycharm/0_16.png %}
+![](/images/pycharm/0_16.png)
 
 点击 Test，测试连通性，会要求输入密码
 
-{% img /images/pycharm/0_17.png %}
+![](/images/pycharm/0_17.png)
 
 若一切顺利，则会看到如下界面
 
-{% img /images/pycharm/0_18.png %}
+![](/images/pycharm/0_18.png)
 
 测试连接成功后，点击 Clone 就可以克隆下来了。
 
 对于以前使用 Git 命令来管理的，现在可以直接使用 PyCharm 的菜单栏来操作，这些功能已经可以满足大多数人的日常需求了，应该是够用了。
 
-{% img /images/pycharm/0_19.jpg %}
+![](/images/pycharm/0_19.jpg)
 
 <br/>
 
@@ -224,25 +224,25 @@ Pycharm 本身会实时地对变量名进行检查，如果变量名不是一个
 
 假如我在调试如下几行简单的代码。在第 3 行处打了个断点。然后点击图示位置 Show Python Prompt 按钮。
 
-{% img /images/pycharm/0_20.jpg %}
+![](/images/pycharm/0_20.jpg)
 
 就进入了 Python Shell 的界面，这个Shell 环境和我们当前运行的程序环境是打通的，使用的是同一个 namespace，这下你可以轻松地进行调试了。
 
-{% img /images/pycharm/0_21.jpg %}
+![](/images/pycharm/0_21.jpg)
 
 上面我们打了个断点，是为了方便说明这个效果。并不是说一定要打断点。如果不打断点，在脚本执行完成后，也仍然可以在这个界面查看并操作所有变量。
 
-{% img /images/pycharm/0_22.jpg %}
+![](/images/pycharm/0_22.jpg)
 
 现在我们已经可以满足我们的调试的需求，但是每次运行脚本，都要手动点击 Show Python Prompt ，有点麻烦。嗯？其实这个有地方可以设置默认打开的。这个开头还比较隐秘，一般人还真发现不了。
 
 你需要点击图示位置 Edit Configurations 处。
 
-{% img /images/pycharm/0_23.png %}
+![](/images/pycharm/0_23.png)
 
 然后在这里打勾选中。
 
-{% img /images/pycharm/0_24.png %}
+![](/images/pycharm/0_24.png)
 
 设置上之后，之后你每次运行后脚本后，都会默认为你存储所有变量的值，并为你打开 console 命令行调试界面。
 
@@ -250,11 +250,11 @@ Pycharm 本身会实时地对变量名进行检查，如果变量名不是一个
 
 使用方法就是，在你打了断点后，在图示位置处，点击右键使用 Evaluate Expression
 
-{% img /images/pycharm/0_25.jpg %}
+![](/images/pycharm/0_25.jpg)
 
 就弹出了一个 Evaluate Expression 窗口，这里 可以运行命令表达式，直接操作变量。
 
-{% img /images/pycharm/0_26.jpg %}
+![](/images/pycharm/0_26.jpg)
 
 <br/>
 
@@ -264,21 +264,21 @@ Pycharm 本身会实时地对变量名进行检查，如果变量名不是一个
 
 Pycharm 提供的这个代码模板，可以说是相当实用的一个功能了。它可以在你新建一个文件时，按照你预设的模板给你生成一段内容，比如解释器路径，编码方法，作者详细信息等
 
-{% img /images/pycharm/0_27.jpg %}
+![](/images/pycharm/0_27.jpg)
 
 按照上图模板，生成的效果如下。
 
-{% img /images/pycharm/0_28.jpg %}
+![](/images/pycharm/0_28.jpg)
 
 除了新建文件时可以初始化文件，在开发编写代码时，也同样使用 Pycharm 中自带的实用的代码模板，提高你的编码效率。
 
 当你在键盘中敲入 Command + J 时，就可以调出一个面板，从下图可以看出里面有许多预设的模板。
 
-{% img /images/pycharm/0_29.jpg %}
+![](/images/pycharm/0_29.jpg)
 
 如果我们想选择最后一个 main ，可以继续键入 main，然后就可以直接生成如下这段平时都要手动敲入的代码。
 
-{% img /images/pycharm/0_30.gif %}
+![](/images/pycharm/0_30.gif)
 
 <br/>
 
@@ -286,13 +286,13 @@ Pycharm 提供的这个代码模板，可以说是相当实用的一个功能了
 
 <br/>
 
-{% img /images/pycharm/0_31.png %}
+![](/images/pycharm/0_31.png)
 
 选择 edit configurations
 
 勾选右边的 allow parallel run 勾选完之后，你可以在这个面板中修改参数，运行都是根据这个面板参数运行的。
 
-{% img /images/pycharm/0_32.png %}
+![](/images/pycharm/0_32.png)
 
 <br/>
 
@@ -320,15 +320,15 @@ enjoy it!!!
 
 pychram 会自动识别你这个项目用的是什么框架，比如，下面的 flask 
 
-{% img /images/pycharm/0_33.png %}
+![](/images/pycharm/0_33.png)
 
 pycharm 会将其变成 flask
 
-{% img /images/pycharm/0_34.png %}
+![](/images/pycharm/0_34.png)
 
 然后采用 flask 的启动方式，这样就导致
 
-{% img /images/pycharm/0_33.png %}
+![](/images/pycharm/0_33.png)
 
 中，线程启动不了。（不能 debug）
 
@@ -343,8 +343,8 @@ pycharm 会将其变成 flask
 
 是可以正常运行的，所以，我们的目的就是让 pycharm 按照 python main.py 的方式运行，而不是 flask
 
-{% img /images/pycharm/0_35.png %}
+![](/images/pycharm/0_35.png)
 
 然后我们运行这个 main.py 就好了
 
-{% img /images/pycharm/0_36.png %}
+![](/images/pycharm/0_36.png)

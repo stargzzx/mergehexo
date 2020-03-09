@@ -34,7 +34,7 @@ tags:
 
 使组件保持自身的状态，列表渲染效率高。
 
-{% img /images/django/10_0.gif %}
+![](/images/django/10_0.gif)
 
 ## 无wx:key的情况（重新创建）
 
@@ -46,11 +46,11 @@ tags:
 
 使组件重置初始状态（原有状态自然被清空），列表渲染效率低。
 
-{% img /images/django/10_1.gif %}
+![](/images/django/10_1.gif)
 
 ## 两种情况的对比
 
-{% img /images/django/10_2.png %}
+![](/images/django/10_2.png)
 
 <br/>
 
@@ -72,7 +72,7 @@ tags:
 
 不提供 wx:key的警告： 
 
-{% img /images/django/10_3.png %}
+![](/images/django/10_3.png)
 
 <br/>
 

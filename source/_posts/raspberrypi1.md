@@ -37,7 +37,7 @@ tags:
 
 [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 
-{% img /images/raspberry/1_0.png %}
+![](/images/raspberry/1_0.png)
 
 这一共有三个版本，第一个是包含全部功能，包括一些软件，比如游戏，第二个是带有命令行和图形化界面，缺少很多软件，第三个是之带有命令行。
 
@@ -54,7 +54,7 @@ tags:
 
 如下图：
 
-{% img /images/raspberry/1_1.jpg %}
+![](/images/raspberry/1_1.jpg)
 
 如果烧录成功，我们用电脑打开（电脑安装的是 windows 系统）。我们会发现 SD 卡已经被分为两个区了，一个是 boot，另一个是不知名盘。
 
@@ -84,7 +84,7 @@ error 5
 
 Volume label可以自由起名
 
-{% img /images/raspberry/1_2.png %}
+![](/images/raspberry/1_2.png)
 
 点击“Format”开始格式化，一般要10分钟
 
@@ -104,7 +104,7 @@ Volume label可以自由起名
 
 會出現類似於下圖的說明
 
-{% img /images/raspberry/1_3.png %}
+![](/images/raspberry/1_3.png)
 
 我們8GB的SD卡目前是位於DISK 1，所以輸入
 

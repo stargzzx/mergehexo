@@ -29,4 +29,4 @@ tags:
 
 略略略。。。
 
-{% img /images/phone_game/1.jpg %}
+![](/images/phone_game/1.jpg)

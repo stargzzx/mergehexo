@@ -26,4 +26,4 @@ tags:
 
 满分十分给《华尔街之狼》这部电影打6分吧，不推荐看。
 
-{% img /images/book/2.jpg %}
+![](/images/book/2.jpg)

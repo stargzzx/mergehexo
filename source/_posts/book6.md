@@ -40,5 +40,5 @@ tags:
 
 书看完了，只能说也就那样，没有达到心里的预期值。
 
-{% img /images/book/6.jpg %}
+![](/images/book/6.jpg)
 

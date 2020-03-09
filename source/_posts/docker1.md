@@ -87,7 +87,7 @@ Docker 的旧版本被称为 docker，docker.io 或 docker-engine 。如果已�
 
 	sudo docker run hello-world
 
-{% img /images/docker/0_4.png %}
+![](/images/docker/0_4.png)
 
 
 ## MacOS
@@ -106,9 +106,9 @@ Homebrew 的 Cask 已经支持 Docker for Mac，因此可以很方便的使用 H
 
 点击顶部状态栏中的鲸鱼图标会弹出操作菜单。
 
-{% img /images/docker/0_0.png %}
+![](/images/docker/0_0.png)
 
-{% img /images/docker/0_1.png %}
+![](/images/docker/0_1.png)
 
 <br/>
 

@@ -25,13 +25,13 @@ tags:
 	
 ## 实现功能清单的接口
 
-{% img /images/django/9_0.png %}
+![](/images/django/9_0.png)
 
 在django的project中，我们定义一个 app.yaml 的文件，用来描述正在开发的app和开发完成的app
 
-{% img /images/django/9_1.png %}
+![](/images/django/9_1.png)
 
-{% img /images/django/9_2.png %}
+![](/images/django/9_2.png)
 
 其路由过程如下，先是根据 setting.py 找到根路由
 
@@ -159,7 +159,7 @@ def wrap_json_response(data=None, code=None, message=None):
 
 <br/>
 
-{% img /images/django/9_3.png %}
+![](/images/django/9_3.png)
 
 在 app.js 中，我们定义全局属性：
 
@@ -237,7 +237,7 @@ Page({
 </view>
 {% endcodeblock %}
 
-{% img /images/django/9_4.png %}
+![](/images/django/9_4.png)
 
 
 

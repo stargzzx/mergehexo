@@ -12,7 +12,7 @@ tags:
 
 因为之前写的python脚本有问题，导致，有些数据没抓到，需要补全，所以，陈哥将这项工作交给我。
 
-{% img /images/bbsx/1_0.png %}
+![](/images/bbsx/1_0.png)
 
 我的环境是 python3.7
 
@@ -38,7 +38,7 @@ python的web框架为flask。
 	
 我们想抓取8月31号——9月20号的节点出块和投票奖励数据。
 
-{% img /images/bbsx/1_1.png %}
+![](/images/bbsx/1_1.png)
 
 于是，经过陈哥的指点，我们要抓取的包的网址是
 
@@ -47,7 +47,7 @@ python的web框架为flask。
 	
 我们打开开发者界面，发现
 
-{% img /images/bbsx/1_2.png %}
+![](/images/bbsx/1_2.png)
 
 请求时 post 请求，并且，还有三个参数。
 
@@ -140,7 +140,7 @@ while index >= 0 :
 
 尽管上面的代码可以访问到数据，但是丢包现像及其严重。
 
-{% img /images/bbsx/1_2.png %}
+![](/images/bbsx/1_2.png)
 
 这个有三个参数
 
@@ -157,13 +157,13 @@ while index >= 0 :
 
 最后的结果是这样的
 
-{% img /images/bbsx/1_3.png %}
+![](/images/bbsx/1_3.png)
 
 可以看出虽然取得数据范围都一样，但是，抓的数据量却不一样。
 
 所以，想着把pos进行移动
 
-{% img /images/bbsx/1_4.png %}
+![](/images/bbsx/1_4.png)
 
 最后的实验结果，pos只能等于-1。
 
@@ -289,7 +289,7 @@ with open('data.txt','r') as file:
 
 最后成功录入。有一点需要注意的是
 
-{% img /images/bbsx/1_0.png %}
+![](/images/bbsx/1_0.png)
 
 因为eos出块的时间都不一样，所以，录入数据库是寻求时间戳的唯一性进行录制的。
 

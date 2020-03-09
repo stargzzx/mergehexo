@@ -17,7 +17,7 @@ tags:
 
 ## 效果展示
 
-{% img /images/machinelearningalgorithm/12_0.png %}
+![](/images/machinelearningalgorithm/12_0.png)
 
 ## 具体代码
 
@@ -266,7 +266,7 @@ if __name__ == '__main__':
 
 ## 思维导图
 
-{% img /images/machinelearningalgorithm/12_1.png %}
+![](/images/machinelearningalgorithm/12_1.png)
 
 ## 算法原理
 

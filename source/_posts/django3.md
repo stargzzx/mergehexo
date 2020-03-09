@@ -46,7 +46,7 @@ shell新增文章很复杂
 
 	python manage.py createsuperuser
 
-{% img /images/django/3_0.png %}
+![](/images/django/3_0.png)
 
 这里我设置密码是123456
 
@@ -58,7 +58,7 @@ shell新增文章很复杂
 
 然后填写相关信息，就能进入管理页面
 
-{% img /images/django/3_1.png %}
+![](/images/django/3_1.png)
 
 <br/>
 
@@ -84,7 +84,7 @@ admin.site.register(Article)
 
 然后刷新页面就会出现
 
-{% img /images/django/3_2.png %}
+![](/images/django/3_2.png)
 
 我们就可以在出现的那个 articles 中直接增删改查
 
@@ -94,7 +94,7 @@ admin.site.register(Article)
 
 <br/>
 
-{% img /images/django/3_3.png %}
+![](/images/django/3_3.png)
 
 我们可以看到文章是以对象信息出现的，我们想让它们显示文章标题，可以修改 blog 下的 models.py
 
@@ -124,7 +124,7 @@ class Article(models.Model):
 	
 然后文章界面就会变成
 
-{% img /images/django/3_4.png %}
+![](/images/django/3_4.png)
 
 <br/>
 
@@ -177,7 +177,7 @@ urlpatterns = [
 
 	http://127.0.0.1:8000/blog/content
 	
-{% img /images/django/3_5.png %}
+![](/images/django/3_5.png)
 
 
 

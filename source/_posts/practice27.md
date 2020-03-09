@@ -27,7 +27,7 @@ tags:
 
 过程如图：
 
-{% img /images/practice/27.png %}
+![](/images/practice/27.png)
 
 ## 代码
 

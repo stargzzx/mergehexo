@@ -16,7 +16,7 @@ tags:
 
 ## Rastrigin
 
-{% img /images/python/24_0.png %}
+![](/images/python/24_0.png)
 
 {% codeblock %}
 import numpy as np
@@ -35,4 +35,4 @@ ax.plot_surface(x,y,Z,rstride=1,cstride=1,cmap=plt.get_cmap('rainbow'))
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/24_1.png %}
+![](/images/python/24_1.png)

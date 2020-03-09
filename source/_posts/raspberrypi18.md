@@ -29,7 +29,7 @@ tags:
 
 首先，我们要知道，ADS1115 最多可以并联 4 个 ADS1115 。其，并联方式如下图：
 
-{% img /images/raspberry/18_0.png %}
+![](/images/raspberry/18_0.png)
 
 我们要尤为注意的是，图中除了基础连接外，我们的 ADDR 接口还要和相应的接口进行连接。
 
@@ -37,17 +37,17 @@ tags:
 
 所以，我将线改成下图进行连接。
 
-{% img /images/raspberry/18_1.jpg %}
+![](/images/raspberry/18_1.jpg)
 
 按照图连接成功后，我们就可以进行下一步。
 
 ADS1115 的地址可以通过 ADDR 与SDA、SCL、GND 或 VDD 短接，实现修改。不设置的话，默认值为 0x48。
 
-{% img /images/raspberry/18_3.png %}
+![](/images/raspberry/18_3.png)
 
 每一个器件都有一个唯一地址，也就是和 ADDR 相连接的器件地址，我们就是靠这个地址来区分 ADS1115 的。
 
-{% img /images/raspberry/18_2.png %}
+![](/images/raspberry/18_2.png)
 
 按照连接图连接好线路之后，下一步就是编写代码。代码直接给出，我用的是两个 ADS1115 的并联，分别连接的是 VDD 和 GND 。
 

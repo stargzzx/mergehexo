@@ -76,7 +76,7 @@ utf8mb4 替换为 utf8
 
 有的时候，可能不是 utf8mb4_0900_ai_ci 和 utf8mb4，但也没关系，只要把相应位置的东西，进行匹配替换就好了。
 
-{% img /images/mysql/5_0.png %}
+![](/images/mysql/5_0.png)
 
 <br/>
 
@@ -96,11 +96,11 @@ utf8mb4 替换为 utf8
 
 后来我注意到，导出来的 sql 表中有这个
 
-{% img /images/mysql/5_1.png %}
+![](/images/mysql/5_1.png)
 
 我将所有的注释都去掉后
 
-{% img /images/mysql/5_2.png %}
+![](/images/mysql/5_2.png)
 
 果然就没有再报错。
 
@@ -120,4 +120,4 @@ utf8mb4 替换为 utf8
 
 	mysqldump -u root -p --compact=TRUE --add-drop-table=FALSE --create-options=FALSE --add-locks=TRUE --column-statistics=FALSE -t ant t_relation >> ~/tmp.sql
 
-{% img /images/mysql/5_3.png %}
+![](/images/mysql/5_3.png)

@@ -27,9 +27,9 @@ tags:
 
 ## 具体案例
 
-{% img /images/ppt/2_0.JPG %}
+![](/images/ppt/2_0.JPG)
 
-{% img /images/ppt/2_1.JPG %}
+![](/images/ppt/2_1.JPG)
 
 
 

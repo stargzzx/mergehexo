@@ -21,7 +21,7 @@ tags:
 
 ### 均方误差（MSE）
 
-{% img /images/tensorflow/2_0.JPG %}
+![](/images/tensorflow/2_0.JPG)
 
 {% codeblock %}
 loss = tf.reduce_mean(tf.square(y_ - y))

@@ -26,19 +26,19 @@ tags:
 
 我们知道一元函数的情况下，导数就是函数的变化率，从几何意义上看就是：
 
-{% img /images/math/8_0.png %}
+![](/images/math/8_0.png)
 
 但是在多元的情况下比一元的复杂，下面我用二元函数来举例子（三元我也画不出来），比如这样一个曲面上的一点A ：
 
-{% img /images/math/8_1.png %}
+![](/images/math/8_1.png)
 
 在曲面上可以做无数条过A 点的曲线（图上随便画了三根）：
 
-{% img /images/math/8_2.png %}
+![](/images/math/8_2.png)
 
 每根曲线都可能可以（也有作不出来的情况，你想想一元的时候也有作不出切线的情况）作一根切线，比如（随便挑了一根切线来画，都画出来太乱了）：
 
-{% img /images/math/8_3.png %}
+![](/images/math/8_3.png)
 
 全导数的意义：每一根切线都和一个全导数“相关”，A点有无数个全导数。
 
@@ -61,25 +61,25 @@ tags:
 
 我们来看一下，随便画一条过A 点的曲线：
 
-{% img /images/math/8_4.png %}
+![](/images/math/8_4.png)
 
 这条曲线也是一个关于x,y 的函数f(x,y) ，因此它与xy 平面上的曲线具有一一对应的关系：
 
-{% img /images/math/8_5.png %}
+![](/images/math/8_5.png)
 
 因此我们只需要描述xy 上的曲线就可以达到描述曲面的曲线的目的，这时候就很自然的可以使用参数方程了。
 
 举个具体的例子，对于f(x,y)=x^2+y^2 这个二元函数，函数图像是这样的：
 
-{% img /images/math/8_6.png %}
+![](/images/math/8_6.png)
 
 注意此时的x,y 都可以自由改变：
 
-{% img /images/math/8_7.png %}
+![](/images/math/8_7.png)
 
 但是如果增加参数方程：
 
-{% img /images/math/8_8.png %}
+![](/images/math/8_8.png)
 
 这有什么意义？
 
@@ -90,19 +90,19 @@ tags:
 	
 的约束
 
-{% img /images/math/8_9.png %}
+![](/images/math/8_9.png)
 
 我们来把这根参数方程决定的直线放到三维空间去：
 
-{% img /images/math/8_10.png %}
+![](/images/math/8_10.png)
 
 根据之前的描述，这根直线可以决定一根曲面上的曲线：
 
-{% img /images/math/8_11.png %}
+![](/images/math/8_11.png)
 
 这根曲面上的曲线就是刚才说过的：
 
-{% img /images/math/8_8.png %}
+![](/images/math/8_8.png)
 
 ### 参数方程可以拍扁三维图像
 
@@ -110,15 +110,15 @@ tags:
 
 什么意思，我们来看看，还是f(x,y)=x^2+y^2 这个二元函数：
 
-{% img /images/math/8_10.png %}
+![](/images/math/8_10.png)
 
 增加参数方程约束：
 
-{% img /images/math/8_8.png %}
+![](/images/math/8_8.png)
 
 把x,y 代入到z 里面去，可以得到z=2t^2 ：
 
-{% img /images/math/8_12.png %}
+![](/images/math/8_12.png)
 
 这就好比把xyz 空间的立体图形拍扁到了zt 平面，这个特性在后面会用到，所以在这里先预热下。
 
@@ -130,49 +130,49 @@ tags:
 
 由xy 平面中平行于x 轴或者y 轴的直线决定的曲线：
 
-{% img /images/math/8_13.png %}
+![](/images/math/8_13.png)
 
 这根曲线的方程也可以写成参数方程（以平行于x 轴的曲线为例，a 为常数）：
 
-{% img /images/math/8_14.png %}
+![](/images/math/8_14.png)
 
 偏导数就是这根曲线的切线的斜率：
 
-{% img /images/math/8_15.png %}
+![](/images/math/8_15.png)
 
 ### 方向导数
 
 xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些射线决定的曲线：
 
-{% img /images/math/8_16.png %}
+![](/images/math/8_16.png)
 
 为什么是射线？我们回想一下一元函数中左可导、右可导的概念：
 
-{% img /images/math/8_17.png %}
+![](/images/math/8_17.png)
 
 射线可以类比左可导、右可导中的“左”和“右”。
 
 方向导数也就是这根曲线的“左导数”、“右导数”：
 
-{% img /images/math/8_18.png %}
+![](/images/math/8_18.png)
 
 假设A 点的坐标为(x_0,y_0,z_0) ，则该曲线方程的参数方程为
 
-{% img /images/math/8_19.png %}
+![](/images/math/8_19.png)
 
 ### 全导数
 
 除了直线射线以外， xy 平面上还有很多不同的曲线，这些曲线总可以写成参数方程的形式：
 
-{% img /images/math/8_20.png %}
+![](/images/math/8_20.png)
 
 这些曲线也总能决定曲面上的曲线，比如我之前画过的图：
 
-{% img /images/math/8_21.png %}
+![](/images/math/8_21.png)
 
 曲线的参数方程可以写成：
 
-{% img /images/math/8_22.png %}
+![](/images/math/8_22.png)
 
 讲到这让我先总结一下：
 
@@ -193,17 +193,17 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 在xyz 平面中，偏导数的曲线其实位于平行于x 轴的平面上：
 
-{% img /images/math/8_23.png %}
+![](/images/math/8_23.png)
 
 拍扁到zt 平面：
 
-{% img /images/math/8_24.png %}
+![](/images/math/8_24.png)
 
 本身也就是平面，拍扁之后也不会发生变形。
 
 因为偏导是特殊的全导，所以我们可以认为偏导就是dz / dt ，也就是 zt 平面上切线的斜率：
 
-{% img /images/math/8_25.png %}
+![](/images/math/8_25.png)
 
 因为没有拍扁过程中没有发生变形，所以zt 平面上切线也就是xyz 空间中的切线。
 
@@ -211,15 +211,15 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 但是，普通的全导（也就是曲线不在平面中的），拍扁的过程中会变形，比如说还是我之前举的决定全导数的曲线：
 
-{% img /images/math/8_26.png %}
+![](/images/math/8_26.png)
 
 把它拍扁到zt 平面中去：
 
-{% img /images/math/8_27.png %}
+![](/images/math/8_27.png)
 
 不得不说看起来还是有那么一点像，不过已经严重变形了。所以全导 dz / dt 在 zt 平面上还是切线的斜率：
 
-{% img /images/math/8_28.png %}
+![](/images/math/8_28.png)
 
 但因为变形，已经不是xyz 空间中的切线（实际上要是还原回去的话是一条曲线）。
 
@@ -229,15 +229,15 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 函数f(x,y) 的A 点在这个方向上也是有切线的，其切线的斜率就是方向导数：
 
-{% img /images/math/8_29.jpg %}
+![](/images/math/8_29.jpg)
 
 很显然，A 点不止一个方向，而是360度都有方向：
 
-{% img /images/math/8_30.jpg %}
+![](/images/math/8_30.jpg)
 
 每个方向都是有方向导数的：
 
-{% img /images/math/8_31.jpg %}
+![](/images/math/8_31.jpg)
 
 这就引出了梯度的定义：
 
@@ -254,17 +254,17 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 我们来看一个显而易见的物理现象：
 
-{% img /images/math/8_32.jpg %}
+![](/images/math/8_32.jpg)
 
 光滑的、笔直的玻璃上的水滴，一定会沿着玻璃滑下来，（理想情况下）滑下来的方向就是玻璃最陡峭的地方。对于笔直的平面玻璃而言，这个滑下来的方向是只有一个。
 
 说这个干什么？我们回头来看看梯度的数学定义，并且画一下重点：
 
-{% img /images/math/8_33.jpg %}
+![](/images/math/8_33.jpg)
 
 具有一阶连续偏导数，意味着可微。可微意味着函数f(x,y) 在各个方向的切线都在同一个平面上，也就是切平面：
 
-{% img /images/math/8_34.jpg %}
+![](/images/math/8_34.jpg)
 
 所有的切线都在一个平面上，就好像刚才我说过的光滑的笔直玻璃上，某一点一定有且只有一个（梯度为0的情况除外，可以自己想想为什么？）最陡峭的地方（因为方向导数是切线的斜率，方向导数最大也就意味着最陡峭）。
 
@@ -284,21 +284,21 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 先说明一下，下图的矢量表示f(x,y) 在A 点处的梯度，切线是梯度方向的切线。因为我把梯度画在了A 点处，所以我画了一个辅助平面，这个平面和xy 平面平行：
 
-{% img /images/math/8_35.jpg %}
+![](/images/math/8_35.jpg)
 
 为了方便观察，我把切平面也画出来了，切平面和之前的辅助平面有一根交线，这根交线很明显平行于xy 平面：
 
-{% img /images/math/8_36.jpg %}
+![](/images/math/8_36.jpg)
 
 我增加切平面、平行于xy 的平面以及两者的交线，都是为了方便有个参照物，看出切线的陡峭的程度。
 
 然后我们来观察不同方向的切线和梯度方向的切线的关系（绿色是梯度以外的方向，它和梯度成 θ 夹角）：
 
-{% img /images/math/8_37.jpg %}
+![](/images/math/8_37.jpg)
 
 自己动手操作以下，就很容易观察出为什么梯度是最陡峭的方向，以及 θ 对方向导数大小的影响：
 
-{% img /images/math/8_38.jpg %}
+![](/images/math/8_38.jpg)
 
 ## 总结
 
@@ -308,7 +308,7 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 一直沿着梯度相反的方向就可以到达谷底（原理和弹珠从高处滚落最后会滚进最低处一样）
 
-{% img /images/math/8_39.jpg %}
+![](/images/math/8_39.jpg)
 
 ## 机器学习中的梯度下降
 
@@ -318,29 +318,29 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 ### 什么是导数
 
-{% img /images/deeplearning/0_12.png %}
+![](/images/deeplearning/0_12.png)
 
 定义：
 
 当函数y=f(x)的自变量x在一点x0上产生一个增量Δx时，函数输出值的增量Δy与自变量增量Δx的比值在Δx趋于0时的极限a如果存在，a即为在x0处的导数，记作f'(x0)或df(x0)/dx。
 
-{% img /images/deeplearning/0_13.png %}
+![](/images/deeplearning/0_13.png)
 
 ### 什么是偏导数
 
-{% img /images/deeplearning/0_14.png %}
+![](/images/deeplearning/0_14.png)
 
 可以看到，导数与偏导数本质是一致的，都是当自变量的变化量趋于0时，函数值的变化量与自变量变化量比值的极限。
 
 ### 什么是方向导数
 
-{% img /images/deeplearning/0_15.png %}
+![](/images/deeplearning/0_15.png)
 
 在前面导数和偏导数的定义中，均是沿坐标轴讨论函数的变化率。那么当我们讨论函数沿任意方向的变化率时，也就引出了方向导数的定义，即：某一点在某一趋近方向上的导数值
 
 ### 什么是梯度
 
-{% img /images/deeplearning/0_16.png %}
+![](/images/deeplearning/0_16.png)
 
 梯度的提出只为回答一个问题：
 
@@ -362,7 +362,7 @@ xy 平面不光有平行于坐标轴的直线，还有各种射线，由这些�
 
 梯度下降法可以描述如下：
 
-{% img /images/deeplearning/0_17.png %}
+![](/images/deeplearning/0_17.png)
 
 以上就是梯度下降法的由来，大部分的机器学习任务，都可以利用Gradient Descent来进行优化。
 

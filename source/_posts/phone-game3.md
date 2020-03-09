@@ -31,4 +31,4 @@ tags:
 
 但是，这是一个非常值得玩的游戏，五星推荐。
 
-{% img /images/phone_game/3.jpg %}
+![](/images/phone_game/3.jpg)

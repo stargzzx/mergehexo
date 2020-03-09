@@ -53,7 +53,7 @@ mitmproxy 一共有三个组件
 
 [官网](https://mitmproxy.org/downloads/#4.0.4/)
 
-{% img /images/spider/5_0.png %}
+![](/images/spider/5_0.png)
 
 安装完成后，打开cmd ，输入 mitmdump --version
 
@@ -86,15 +86,15 @@ mitmproxy 一共有三个组件
 
 但是，有时候，命令行窗口并不太适合查看，所以，我们也会开启web的界面进行查看。
 
-{% img /images/spider/5_1.png %}
+![](/images/spider/5_1.png)
 
 选择完那个后，我们按照他们的信息配置代理就好了。
 
-{% img /images/spider/5_2.png %}
+![](/images/spider/5_2.png)
 
 然后访问所给出的网址，在网址上我们可以看到抓包出来的数据。
 
-{% img /images/spider/5_3.png %}
+![](/images/spider/5_3.png)
 
 但是，我个人更喜欢用fildder分析数据。
 

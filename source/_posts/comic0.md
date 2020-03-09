@@ -24,4 +24,4 @@ tags:
 
 漫画的具体内容，我就不透漏了，长篇一律，没什么亮点。就这样吧。
 
-{% img /images/comic/0_0.jpg %}
+![](/images/comic/0_0.jpg)

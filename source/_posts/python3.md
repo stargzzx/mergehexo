@@ -546,7 +546,7 @@ numpy.linalg.solve()函数给出了矩阵形式的线性方程的解。
 
 可以使用矩阵表示为：
 
-{% img /images/python/3_L_0.jpg %}
+![](/images/python/3_L_0.jpg)
 
 如果矩阵成为A、X和B，方程变为：
 
@@ -660,7 +660,7 @@ np.newaxis放的位置不同，产生的新数组也不同
 
 如下：
 
-{% img /images/python/3_N_0.png %}
+![](/images/python/3_N_0.png)
 
 这个操作可是很重要，如果是 100 * 100 的 shape
 
@@ -807,7 +807,7 @@ print(np.random.permutation(b))
 
 速度比较：
 
-{% img /images/python/3_method_0.png %}
+![](/images/python/3_method_0.png)
 
 可以看出在达到 109109 级别以前，两者速度几乎没有差别，但是在 达到 109109 以后两者速度差距明显拉大，shuffle 的用时明显短于 permutation。
 
@@ -1340,7 +1340,7 @@ print(np.tile(data,(1,2)));
 
 表示方差
 
-{% img /images/python/3_V_0.JPG %}
+![](/images/python/3_V_0.JPG)
 
 要注意上面式子描述的平均值是 μ ，所以下面除以 N ，而不是 N - 1，关于这个疑问，请参考我的博文。
 

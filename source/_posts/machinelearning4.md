@@ -132,7 +132,7 @@ OK，这一章我们的内容也是和题目一样，虽然大部分在说定义
 
 如下图所示：
 
-{% img /images/machinelearning/4_0.JPG %}
+![](/images/machinelearning/4_0.JPG)
 
 如果某一个模型的 S(P-R) 大，那么就说明这个模型性能好。S 是指面积。
 

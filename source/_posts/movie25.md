@@ -22,4 +22,4 @@ tags:
 
 对了，女主有时候看很漂亮，有时候怎么看起来像是营养不良？
 
-{% img /images/movie/25.jpg %}
+![](/images/movie/25.jpg)

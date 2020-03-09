@@ -17,7 +17,7 @@ tags:
 
 假设，有一辆车，它初始是加速的，到达某一时间点的时候，它开始减速，直到速度为 0，一共行驶了 3 分钟。图像如下：
 
-{% img /images/calculus/1_0.JPG %}
+![](/images/calculus/1_0.JPG)
 
 其中横坐标是时间，竖坐标是距离。
 
@@ -31,11 +31,11 @@ OK，那我们如何计算这个瞬时速度呢？
 
 	v = d / t
 	
-{% img /images/calculus/1_1.JPG %}
+![](/images/calculus/1_1.JPG)
 
 那如果，我们将时间变得尽可能小呢？我们将尽可能小的时间成为 dt
 
-{% img /images/calculus/1_2.JPG %}
+![](/images/calculus/1_2.JPG)
 
 我们就会发现原来的瞬时速度，随着 dt 越来越小，就变成了某一点的斜率。
 
@@ -43,11 +43,11 @@ OK，那我们如何计算这个瞬时速度呢？
 
 如下图所示。
 
-{% img /images/calculus/1_3.JPG %}
+![](/images/calculus/1_3.JPG)
 
 经过将图中的式子化简，（ dt 因为无限的趋向于零，所以凡是和 dt 相乘的都可以看作零）
 
-{% img /images/calculus/1_4.JPG %}
+![](/images/calculus/1_4.JPG)
 
 导数从本质上讲只是关注着某一个量(dx)的微小变化，以及与之关联的另一个量(dy)的微小变化。
 

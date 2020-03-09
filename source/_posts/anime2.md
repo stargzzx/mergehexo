@@ -58,4 +58,4 @@ tags:
 
 另外，我是从 B 站看的。
 
-{% img /images/animes/2.jpg %}
+![](/images/animes/2.jpg)

@@ -66,27 +66,27 @@ tags:
 
 那么：
 
-{% img /images/math/2_0.JPG %}
+![](/images/math/2_0.JPG)
 
 是对 μ 不错的一个估计，为什么？因为它是无偏估计。
 
 首先，真正的全体女性的身高均值  ，我们是不知道，只有上帝才知道，在图中就画为虚线：
 
-{% img /images/math/2_1.jpg %}
+![](/images/math/2_1.jpg)
 
 我们通过采样计算出样本平均值：
 
-{% img /images/math/2_2.jpg %}
+![](/images/math/2_2.jpg)
 
 会发现，不同采样得到的样本平均值 是围绕 μ 左右波动的：
 
-{% img /images/math/2_3.gif %}
+![](/images/math/2_3.gif)
 
 这有点像打靶，只要命中在靶心周围，还算不错的成绩，这就是无偏的：
 
-{% img /images/math/2_4.jpg %}
+![](/images/math/2_4.jpg)
 
-{% img /images/math/2_5.JPG %}
+![](/images/math/2_5.JPG)
 
 根据
 
@@ -94,13 +94,13 @@ tags:
 
 解释，会偏离靶心、产生偏差，这就是有偏的：
 
-{% img /images/math/2_6.jpg %}
+![](/images/math/2_6.jpg)
 
-{% img /images/math/2_7.JPG %}
+![](/images/math/2_7.JPG)
 
 这种偏差就好像瞄准镜歪了，是系统性的：
 
-{% img /images/math/2_8.jpg %}
+![](/images/math/2_8.jpg)
 
 就此而言，无偏估计要好于有偏估计。
 
@@ -108,31 +108,31 @@ tags:
 
 打靶的时候，右边的成绩肯定更优秀：
 
-{% img /images/math/2_9.jpg %}
+![](/images/math/2_9.jpg)
 
 进行估计的时候也是，估计量越靠近目标，效果越“好”。这个“靠近”可以用方差来衡量。
 
 比如，仍然对 μ 进行估计，方差越小，估计量的分布越接近 μ ：
 
-{% img /images/math/2_10.gif %}
+![](/images/math/2_10.gif)
 
 有效估计和无偏估计是不相关的：
 
-{% img /images/math/2_11.jpg %}
+![](/images/math/2_11.jpg)
 
-{% img /images/math/2_12.JPG %}
+![](/images/math/2_12.JPG)
 
 但是后者比前者方差小，后者更有效。
 
 并且在现实中不一定非要选无偏估计量，比如：
 
-{% img /images/math/2_13.jpg %}
+![](/images/math/2_13.jpg)
 
 如果能接受点误差，我倒觉得选择右边这个估计量更好。
 
 ### 3 一致性
 
-{% img /images/math/2_14.JPG %}
+![](/images/math/2_14.JPG)
 
 可以看到，随着采样个数n 的增加，这个偏差会越来越小。那么这个估计就是“一致”的。
 

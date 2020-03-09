@@ -43,7 +43,7 @@ tags:
 	
 在虚拟环境下，运行。
 
-{% img /images/spider/6_0.png %}
+![](/images/spider/6_0.png)
 
 我们在相关的python文件中写对应的代码，然后处理。和正常的python代码一样，只不过需要有两个注意点。
 

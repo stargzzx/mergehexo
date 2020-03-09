@@ -45,19 +45,19 @@ t=li[0:4:2]      ["A","C"]			 #从li[0]到li[3],设定步长为2。
 
 上面的结果都是一样的：t 为 ["A","B"]。
 
-{% img /images/python/37_0.png %}
+![](/images/python/37_0.png)
 
 	t=li[-1:-3:-1]	t=li[-1:1:-1]	t=li[3:1:-1]	t=li[3:-3:-1]
 	
 上面的结果都是一样的：t 为 ["D","C"]。
 
-{% img /images/python/37_1.png %}
+![](/images/python/37_1.png)
 
 	t=li[-1:-3]	t=li[-1:1]	t=li[3:1]	t=li[3:-3]
 
 都切出空列表。
 
-{% img /images/python/37_2.png %}
+![](/images/python/37_2.png)
 
 同时，step 的正负决定了切片结果的元素采集的先后。
 
@@ -258,7 +258,7 @@ newshape : int or tuple of ints。整数或者元组
 
 row * col * 列中列
 
-{% img /images/python/37_3.png %}
+![](/images/python/37_3.png)
 
 	arr2[0] = 23 #赋值
 	arr2

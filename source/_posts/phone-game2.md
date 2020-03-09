@@ -37,4 +37,4 @@ tags:
 
 总之，还是很值得玩的，毕竟不花钱。
 
-{% img /images/phone_game/2.png %}
+![](/images/phone_game/2.png)

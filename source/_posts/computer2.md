@@ -18,13 +18,13 @@ tags:
 
 来，依次进入“控制面板-管理工具-服务”（或在“此电脑”鼠标右键，点击“管理”），找到Windows Update项目后，将“启动类型”改为“禁用”。
 
-{% img /images/computer/3_0.png %}
+![](/images/computer/3_0.png)
 
 什么？你说就算“禁用”了Windows会照样更新是吗？其实大家都只看到了前面的选项，而忽略了微软挖的大坑，所以用很多其他办法修改后，Windows Updata照样太阳升级。
 
 刚才的窗口别急着关闭，仔细看看上面选项卡，还有个“恢复”项目呢，问题就出在这儿了。系统默认当第一次失败后“重新启动服务”。
 
-{% img /images/computer/3_1.png %}
+![](/images/computer/3_1.png)
 
 我们只要将它更改成“无操作”，那Windows Updata才能彻底歇了。
 

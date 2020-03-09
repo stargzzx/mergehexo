@@ -92,7 +92,7 @@ urlpatterns = [
 ]
 {% endcodeblock %}
 
-{% img /images/django/12_0.png %}
+![](/images/django/12_0.png)
 
 <br/>
 
@@ -102,7 +102,7 @@ urlpatterns = [
 
 ## python的Mixin模式
 
-{% img /images/django/12_1.png %}
+![](/images/django/12_1.png)
 
 传统的继承好像左边的图，是 is a 的关系。
 
@@ -116,11 +116,11 @@ urlpatterns = [
 
 ### image.py
 
-{% img /images/django/12_2.png %}
+![](/images/django/12_2.png)
 
 ### response.py
 
-{% img /images/django/12_3.png %}
+![](/images/django/12_3.png)
 
 注意，这个类有一个修饰
 
@@ -131,11 +131,11 @@ urlpatterns = [
 
 ### response.py
 
-{% img /images/django/12_4.png %}
+![](/images/django/12_4.png)
 
 ### image.py
 
-{% img /images/django/12_5.png %}
+![](/images/django/12_5.png)
 
 
 

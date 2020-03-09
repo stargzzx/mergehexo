@@ -61,7 +61,7 @@ plt.show()
 
 skimage库的全称scikit-image Scikit， 是对scipy.ndimage进行了扩展，提供了更多的图片处理功能。skimage包含很多的子模块，各个子模块具有不同的功能，如下
 
-{% img /images/python/50_0.png %}
+![](/images/python/50_0.png)
 
 当要使用对应的模块中功能函数时，需要通过import导入对应的子模块即可, 若要导入多个子模块时，子模块之间用逗号隔开，如下：
 
@@ -90,7 +90,7 @@ io.imshow(img)
 io.show()		
 {% endcodeblock %}
 
-{% img /images/python/50_1.png %}
+![](/images/python/50_1.png)
 
 读取单张灰度图片时，使用 skimage.io.imread(fname, as_grey=True) 函数，第一个参数fname表示要显示的图片路径，第二个参数as_grey，是bool类型，默认值False。
 
@@ -101,11 +101,11 @@ io.imshow(img)
 io.show()	
 {% endcodeblock %}
 
-{% img /images/python/50_2.png %}
+![](/images/python/50_2.png)
 
 ## skimage自带图片
 
-{% img /images/python/50_3.png %}
+![](/images/python/50_3.png)
 
 例如
 
@@ -116,7 +116,7 @@ io.imshow(img)
 io.show()		
 {% endcodeblock %}
 
-{% img /images/python/50_4.png %}
+![](/images/python/50_4.png)
 
 图片名就是对应的函数名，如camera图片对应的函数名为 data.camera()。
 
@@ -212,7 +212,7 @@ io.imshow(R)
 io.show()		
 {% endcodeblock %}
 
-{% img /images/python/50_5.png %}
+![](/images/python/50_5.png)
 
 ### 像素修改
 
@@ -236,7 +236,7 @@ io.imshow(img)
 io.show()		
 {% endcodeblock %}
 
-{% img /images/python/50_6.png %}
+![](/images/python/50_6.png)
 
 此处，使用numpy中的random来产生随机数， randint(0, cols)表示随机生成一个整数， 范围在0到cols之间。
 
@@ -255,7 +255,7 @@ io.imshow(partial_img)
 io.show()
 {% endcodeblock %}
 
-{% img /images/python/50_7.png %}
+![](/images/python/50_7.png)
 
 对多个像素点进行操作时， 使用数组切片方式进行访问， 切片方式访问的是指定间隔内下标对应的像素点。以下是一些例子
 
@@ -289,7 +289,7 @@ io.imshow(img_gray)
 io.show()
 {% endcodeblock %}
 
-{% img /images/python/50_8.png %}
+![](/images/python/50_8.png)
 
 例2： 使用color模块的rgb2gray()函数，将彩色三通道图片转换为灰度图片，转换结果为float64类型的数组，范围在[0,1]之间
 
@@ -306,7 +306,7 @@ io.imshow(img)
 io.show()
 {% endcodeblock %}
 
-{% img /images/python/50_9.png %}
+![](/images/python/50_9.png)
 
 这个例子先对R通道的所有像素值进行判断，如果大于170，则将这个地方的像素值变为[0,255,0], 即G通道值为255，R和B通道值为0。
 
@@ -316,7 +316,7 @@ io.show()
 
 在skimage中，一张图片以numpy数组形式存储，数组的数据类型有很多中，相互之间可以转换，数据类型以及取值范围如下表所示
 
-{% img /images/python/50_10.png %}
+![](/images/python/50_10.png)
 
 一张图片的像素值范围是[0,255], 因此默认类型是unit8, 可用如下代码查看数据类型：
 
@@ -371,7 +371,7 @@ float转为uint8,可能会造成数据损失，因此会有警告
 
 除了如上两种转换以外，还有其他的一些类型转换，如下表:
 
-{% img /images/python/50_11.png %}
+![](/images/python/50_11.png)
 
 ### 颜色空间及转换
 
@@ -391,7 +391,7 @@ io.imshow(gray)
 io.show()
 {% endcodeblock %}
 
-{% img /images/python/50_12.png %}
+![](/images/python/50_12.png)
 
 其它的转换，用法都是一样的，列举常用的如下：
 
@@ -419,7 +419,7 @@ io.imshow(hsv)
 io.show()
 {% endcodeblock %}
 
-{% img /images/python/50_13.png %}
+![](/images/python/50_13.png)
 
 在color模块的颜色空间转换函数中，还有一个比较有用的函数是
 
@@ -450,7 +450,7 @@ io.imshow(dst)
 io.show()
 {% endcodeblock %}
 
-{% img /images/python/50_14.png %}
+![](/images/python/50_14.png)
 
 
 

@@ -24,7 +24,7 @@ tags:
 
 我发现现在我写东西越来越烂了。。。
 
-{% img /images/movie/15.jpg %}
+![](/images/movie/15.jpg)
 
 
 

@@ -21,7 +21,7 @@ tags:
 
 所谓PC104标准键盘是指键盘含有104个按键，国内和美国多使用该类型键盘，而欧洲大陆多使用PC105键盘，除了比PC104键盘多了一个按键之外，很多符号的位置也不相同。PC104键盘的外观如下图所示。
 
-{% img /images/raspberry/3_0.jpg %}
+![](/images/raspberry/3_0.jpg)
 
 ## 配置流程
 
@@ -31,37 +31,37 @@ tags:
 	
 选则通用 104 键 pc 键盘
 
-{% img /images/raspberry/3_1.png %}
+![](/images/raspberry/3_1.png)
 
 按tab键，到OK，按Enter确定。
 
 在键盘layout选择中，选Other。
 
-{% img /images/raspberry/3_2.PNG %}
+![](/images/raspberry/3_2.PNG)
 
 按tab键，到OK，按Enter确定.
 
 然后在选项中，选English(US)
 
-{% img /images/raspberry/3_3.PNG %}
+![](/images/raspberry/3_3.PNG)
 
 按tab键，到OK，按Enter确定
 
 再选English(US, alternative international)
 
-{% img /images/raspberry/3_4.PNG %}
+![](/images/raspberry/3_4.PNG)
 
 选择键盘默认布局
 
-{% img /images/raspberry/3_5.png %}
+![](/images/raspberry/3_5.png)
 
 compose key设置（从来没有见过这个按键）
 
-{% img /images/raspberry/3_6.png %}
+![](/images/raspberry/3_6.png)
 
 ctrl+alt+backspace组合键，类似于windows的ctrl+alt+delete。
 
-{% img /images/raspberry/3_7.png %}
+![](/images/raspberry/3_7.png)
 
 按tab键，到OK，按Enter确定
 

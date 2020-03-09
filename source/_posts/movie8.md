@@ -40,4 +40,4 @@ tags:
 
 希望，在未来我可以碰到我的灵魂，我的一切，我的欲望，我的洛丽塔。
 
-{% img /images/movie/8.jpg %}
+![](/images/movie/8.jpg)

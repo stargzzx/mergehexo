@@ -48,19 +48,19 @@ tags:
 
 在夜神模拟器上启动XPosed Installer，进入XPosed框架安装管理器。
 
-{% img /images/plug_in/5_0.png %}
+![](/images/plug_in/5_0.png)
 
 进入XPosed框架后点击“框架”进入框架界面。
 
-{% img /images/plug_in/5_1.png %}
+![](/images/plug_in/5_1.png)
 
 接下来点击“安装/更新”，如果弹出root授权界面，请点击允许root授权。
 
-{% img /images/plug_in/5_2.png %}
+![](/images/plug_in/5_2.png)
 
 在弹出来的重启设备对话框中，点击“是”进入模拟器系统重启程序。
 
-{% img /images/plug_in/5_3.png %}
+![](/images/plug_in/5_3.png)
 
 重启完成之后，再次进入XPosed Installer，点击“模块”，这一步之前请先安装好XPosed模块手机信息修改工具。
 
@@ -70,19 +70,19 @@ tags:
 
 [中国XPosed模块下载地址](https://xposed.appkg.com/category/modules)
 
-{% img /images/plug_in/5_4.png %}
+![](/images/plug_in/5_4.png)
 
 在模块中将我们要测试的XPosed模块手机信息修改器打钩。
 
-{% img /images/plug_in/5_5.png %}
+![](/images/plug_in/5_5.png)
 
 再次进入“框架”，点击“软重启”或“重启”重启系统。
 
-{% img /images/plug_in/5_6.png %}
+![](/images/plug_in/5_6.png)
 
 重启之后，打开手机信息修改器模块工具程序，可以看到软件可正常使用。
 
-{% img /images/plug_in/5_7.png %}
+![](/images/plug_in/5_7.png)
 
 
 

@@ -44,7 +44,7 @@ for i in range(4):
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_3.png %}
+![](/images/python/2_method_3.png)
 
 添加 cla()
 
@@ -64,7 +64,7 @@ for i in range(4):
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_4.png %}
+![](/images/python/2_method_4.png)
 
 替换为 clf()
 
@@ -84,7 +84,7 @@ for i in range(4):
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_5.png %}
+![](/images/python/2_method_5.png)
 
 close（）函数还允许指定哪个窗口应该关闭。参数可以是使用figure（number_or_name）创建的窗口的数字或名称。也可以是获得的图形实例，即使用fig = figure（）。如果没有人提出任何论点close()，当前活动的窗口将关闭。 此外，还有语法close（'all'），它关闭所有数字。
 
@@ -141,12 +141,12 @@ plt.plot(x,y,format_string,**kwargs)
 	
 format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成。
 
-{% img /images/python/2_method_14.JPG %}
+![](/images/python/2_method_14.JPG)
 
-{% img /images/python/2_method_15.JPG %}
+![](/images/python/2_method_15.JPG)
 
 
-{% img /images/python/2_method_16.JPG %}
+![](/images/python/2_method_16.JPG)
 
 {% codeblock %}
 import matplotlib.pyplot as plt
@@ -157,7 +157,7 @@ plt.plot(a,a*1.5,'go-',a,a*2.5,'rx',a,a*3.5,'*',a,a*4.5,'b-.')
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_17.png %}
+![](/images/python/2_method_17.png)
 
 plt.plot(x,y,format_string,**kwargs)
 
@@ -179,7 +179,7 @@ plt.legend(loc='best',labels = ['Default','steps-post']) # 在合适的位置放
 plt.show()
 {% endcodeblock %}	
 
-{% img /images/python/2_method_18.png %}
+![](/images/python/2_method_18.png)
 
 ## T
 
@@ -208,7 +208,7 @@ plt.plot(a,y1)
 plt.text(-0.05,-0.05,"this is a test %d" % x ,fontdict={'size':20,'color':'red'})
 plt.show()
 {% endcodeblock %}
-{% img /images/python/2_method_6.png %}
+![](/images/python/2_method_6.png)
 
 ## I
 
@@ -266,17 +266,17 @@ plt.ioff()
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_0.png %}
+![](/images/python/2_method_0.png)
 
 ## S
 
 ### scatter()
 
-{% img /images/python/2_method_12.jpg %}
+![](/images/python/2_method_12.jpg)
 
 其中散点的形状参数marker如下：
 
-{% img /images/python/2_method_13.jpg %}
+![](/images/python/2_method_13.jpg)
 
 {% codeblock %}
 N = 10
@@ -286,7 +286,7 @@ plt.scatter(x, y, alpha=0.6)  # 绘制散点图，透明度为0.6（这样颜色
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_7.png %}
+![](/images/python/2_method_7.png)
 
 {% codeblock %}
 N = 10
@@ -299,7 +299,7 @@ ax.scatter(x, y, s=area, alpha=0.5)  # 绘制散点图，面积随机
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_8.png %}
+![](/images/python/2_method_8.png)
 
 {% codeblock %}
 N = 10
@@ -315,7 +315,7 @@ ax.scatter(x2, y2, s=area, c='green', alpha=0.6)  # 改变颜色
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_9.png %}
+![](/images/python/2_method_9.png)
 
 {% codeblock %}
 N = 10
@@ -334,7 +334,7 @@ ax.scatter(x3, y3, s=area, c=area, marker='v', cmap='Reds', alpha=0.7)  # 更换
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_10.png %}
+![](/images/python/2_method_10.png)
 
 图片中的红色倒三角，面积越大的颜色越红。这是因为我们在ax.scatter()中启用了参数cmap，它需要与控制颜色的参数c配合使用。cmap指明调色板的类型，c指明颜色的深浅。
 
@@ -359,7 +359,7 @@ ax.scatter(x3, y3, s=area, alpha=0.5, linewidths=[3], edgecolors='r')
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_11.png %}
+![](/images/python/2_method_11.png)
 
 ### subplot()
 
@@ -390,7 +390,7 @@ for i in range(4):
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_method_1.png %}
+![](/images/python/2_method_1.png)
 
 不均匀图
 
@@ -415,7 +415,7 @@ plt.show()
 
 虽然，第一张图只是占据了一行，但是却是占据了 2 列，所以，下面的第一张图当然从下标 3 开始
 
-{% img /images/python/2_method_2.png %}
+![](/images/python/2_method_2.png)
 
 
 # 形状
@@ -430,7 +430,7 @@ plt.hist(np.random.randn(100), bins  = 20, color = 'k', alpha = 0.3)
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_3_0.png %}
+![](/images/python/2_3_0.png)
 
 ## 基础图形
 
@@ -449,5 +449,5 @@ a.add_patch(pgon)
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_3_1.png %}
+![](/images/python/2_3_1.png)
 

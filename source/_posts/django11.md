@@ -19,7 +19,7 @@ tags:
 
 文本消息和图文消息对比
 
-{% img /images/django/11_0.png %}
+![](/images/django/11_0.png)
 
 <br/>
 
@@ -27,7 +27,7 @@ tags:
 
 <br/>
 
-{% img /images/django/11_1.png %}
+![](/images/django/11_1.png)
 
 我们建立了一个文件夹，叫做 resources ，然后里面有一个 images 文件夹。
 
@@ -119,11 +119,11 @@ def image_text(request):
 	
 的时候，得到
 
-{% img /images/django/11_2.png %}
+![](/images/django/11_2.png)
 
 当客户端拿到这个数据的时候，就会找到图片的url，然后请求就好了。
 
-{% img /images/django/11_3.png %}
+![](/images/django/11_3.png)
 
 
 

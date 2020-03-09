@@ -20,7 +20,7 @@ tags:
 
 ## 正解
 
-{% img /images/tensorflow/18_1.png %}
+![](/images/tensorflow/18_1.png)
 
 直接看代码
 

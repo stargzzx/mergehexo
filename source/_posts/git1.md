@@ -178,7 +178,7 @@ git stash 可用来暂存当前正在进行的工作， 比如想pull 最新代�
 	
 来将栈清空。
 
-{% img /images/bbsx/2_0.png %}
+![](/images/bbsx/2_0.png)
 
 那么，当我们想要清除某一个 stash 的时候，使用下面的命令：
 
@@ -191,13 +191,13 @@ git stash 可用来暂存当前正在进行的工作， 比如想pull 最新代�
 
 我们使用 git log 命令来查看过往版本的内容。
 
-{% img /images/bbsx/2_1.png %}
+![](/images/bbsx/2_1.png)
 
 然后，我们复制想要看的版本的 commit，然后执行
 
 	git show ***
 	
-{% img /images/bbsx/2_2.png %}
+![](/images/bbsx/2_2.png)
 
 ## 使用线上版本强制覆盖本地版本
 
@@ -232,7 +232,7 @@ git stash 可用来暂存当前正在进行的工作， 比如想pull 最新代�
 
 如下图所示：
 
-{% img /images/bbsx/2_3.jpg %}
+![](/images/bbsx/2_3.jpg)
 
 ## 撤销文件与回退到某一版本
 

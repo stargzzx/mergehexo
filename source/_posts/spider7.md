@@ -28,7 +28,7 @@ tags:
 
 而，这个网站的展示，如下面这样
 
-{% img /images/spider/7_0.png %}
+![](/images/spider/7_0.png)
 
 这样对我造成了极大的分类难度，但是，如果我们得到这个网页，也可以很好的分类出来，但是，scrapy 很笨重，分类就不是很好分（主要是当时对 scrapy 理解就是解读 模块化 代码，其实，现在想想，scrapy 一样可以分析这种网页）
 
@@ -116,17 +116,17 @@ doc.save('./test.docx')
 
 正常的：
 
-{% img /images/spider/7_1.png %}
+![](/images/spider/7_1.png)
 
 不正常的：
 
-{% img /images/spider/7_2.png %}
+![](/images/spider/7_2.png)
 
 王 字的 历史名人 就没在 p 标签内，所以，我们原来的代码运行就解析不出来。
 
 因为，解析不出单个的 历史名人 ，而是 *****，历史名人（历史名人在一句话中）。
 
-{% img /images/spider/7_3.png %}
+![](/images/spider/7_3.png)
 
 这种是内容不在 p 中，但是，仔细观察，前面都有一个 
 
@@ -161,7 +161,7 @@ doc.save('./test.docx')
 
 我在里面还用了 python-word 这个库，可以顺便生成 docx ，真香，下面看一下效果：
 
-{% img /images/spider/7_4.png %}
+![](/images/spider/7_4.png)
 
 这里特别吐槽一下，这里的百家姓一共搜集了快 37 万字了，老师，还想叫我一星期给他们出一本书，真的无语，也不看看这是什么工作量，真的自私。。。
 

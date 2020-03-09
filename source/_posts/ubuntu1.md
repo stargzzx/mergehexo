@@ -24,29 +24,29 @@ tags:
 
 [清华镜像源地址](https://mirrors.tuna.tsinghua.edu.cn/)
 
-{% img /images/ubuntu/1_0.png %}
+![](/images/ubuntu/1_0.png)
 
 我们一定要记住，要选用和自己版本匹配得镜像源。
 
-{% img /images/ubuntu/1_1.png %}
+![](/images/ubuntu/1_1.png)
 
-{% img /images/ubuntu/1_2.png %}
+![](/images/ubuntu/1_2.png)
 
 ### 备份Ubuntu默认的源地址
 
 	sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 
-{% img /images/ubuntu/1_3.png %}
+![](/images/ubuntu/1_3.png)
 
 ### 更新源服务器列表
 
-{% img /images/ubuntu/1_4.png %}
+![](/images/ubuntu/1_4.png)
 
-{% img /images/ubuntu/1_5.png %}
+![](/images/ubuntu/1_5.png)
 
 ### 更新源
 
-{% img /images/ubuntu/1_6.png %}
+![](/images/ubuntu/1_6.png)
 
 ## Ubuntu软件操作的相关命令
 

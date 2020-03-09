@@ -31,7 +31,7 @@ MNIST 就是一个手写数字的数据集。我们都知道，机器中只有 0
 
 当然，MNIST 只是个数据集，就是你自己也可以创造，所以，假定每个数字都由 28 * 28 个像素点组成，每一个为 1 的像素点组成一个数字。如下图：
 
-{% img /images/machinelearning/2_0.png %}
+![](/images/machinelearning/2_0.png)
 
 当然，这个数据集中不仅仅只是包含像素数字而已，还包含数字的标签，因为电脑看过去只是 0 或者 1，所以我们要对每一个像素数字贴上一个标签，讲述它到底是数字几。
 
@@ -81,13 +81,13 @@ MNIST 就是一个手写数字的数据集。我们都知道，机器中只有 0
 
 我们再看一下这个图：
 
-{% img /images/machinelearning/2_0.png %}
+![](/images/machinelearning/2_0.png)
 
 当像素点为 1 的时候，这个点的比重或者说权重就大，毕竟这个像素点是组成数字的一部分。
 
 当数以万计的相同数字集合，即便是同一数字，因为每个数字因为长得不一样，导致相同数字最后的样子集合变的更为臃肿，如下图：
 
-{% img /images/machinelearning/2_1.png %}
+![](/images/machinelearning/2_1.png)
 
 红色代表负数权值，蓝色代表正数权值。
 
@@ -103,25 +103,25 @@ MNIST 就是一个手写数字的数据集。我们都知道，机器中只有 0
 	
 最后的结果是：
 
-{% img /images/machinelearning/2_2.png %}
+![](/images/machinelearning/2_2.png)
 
 但是，我们计算的这个数值，肯定不是概率数值，甚至有可能数值会达到万级以上，所以，我们需要再次进行包装，让最后的数字以概率的形式出现。
 
-{% img /images/machinelearning/2_3.png %}
+![](/images/machinelearning/2_3.png)
 
 其中， softmax 就是包装，在机器学习中又叫激活函数。（完全不懂为什么叫这个破名字？抖机灵？？？）
 
 所以，计算这些数的概率就如下图所示：
 
-{% img /images/machinelearning/2_4.png %}
+![](/images/machinelearning/2_4.png)
 
 将其写成一个等式：
 
-{% img /images/machinelearning/2_5.png %}
+![](/images/machinelearning/2_5.png)
 
 让我们继续装逼，写成向量的形式：
 
-{% img /images/machinelearning/2_6.png %}
+![](/images/machinelearning/2_6.png)
 
 最终，哪个数的的概率大就是哪个数。
 

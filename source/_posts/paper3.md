@@ -60,7 +60,7 @@ tags:
 
 这一系列的界面都很类似,输入关键字就能查找书籍了。
 
-{% img /images/paper/3_0.png %}
+![](/images/paper/3_0.png)
 
 该系列站是俄国的网站，但有英文版本。该站截止到今天，已有256万多种书籍，绝大多数是pdf,djvu,eupb格式。麻烦在于下完一本后才能下第二本，而且更新比较慢。
 
@@ -76,7 +76,7 @@ tags:
 
 [freeon science library guide](http://faith.freeonsciencelibraryguide.com/)
 
-{% img /images/paper/3_1.png %}
+![](/images/paper/3_1.png)
 
 这些网站书籍非常多，比第一系列的书要多，而且每天都在更新，论文也非常多，只要是外文书籍和论文，基本上都可以搜到并下载，最近几年的论文也可以下载。
 
@@ -88,11 +88,11 @@ tags:
 
 然后在相应的搜索结果中看见 mirrors 选项，选择一个
 
-{% img /images/paper/3_3.png %}
+![](/images/paper/3_3.png)
 
 然后在打开的页面中选择下载选项
 
-{% img /images/paper/3_4.png %}
+![](/images/paper/3_4.png)
 
 ### 第三系列
 
@@ -102,6 +102,6 @@ tags:
 
 [ebookee](https://ebookee.org/)
 
-{% img /images/paper/3_2.png %}
+![](/images/paper/3_2.png)
 
 Avax 是俄罗斯的一个资源发布博客，内容很丰富，包括软件、电子书、影视音乐资源等，更新非常快。每天都有新的书籍、杂志资源发布，通过MegaUpload、Rapidshare、Deposite、Uploading、filesonic、fileserves等网盘下载。ebookee上书籍种类丰富，基本专业书籍都可找到。这一系列网站唯一不好的地方就是网络硬盘存储，下载麻烦，有广告。部分网络硬盘在国内可能被墙，需要挂代理。不过淘宝上有带下这些国外网盘的服务。

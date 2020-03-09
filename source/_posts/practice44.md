@@ -19,7 +19,7 @@ tags:
 
 所有走法就是
 
-{% img /images/practice/44.JPG %}
+![](/images/practice/44.JPG)
 
 ## 代码
 

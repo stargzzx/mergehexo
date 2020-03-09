@@ -43,7 +43,7 @@ tags:
 	
 查看账户之间的关系。
 
-{% img /images/bbsx/4_0.png %}
+![](/images/bbsx/4_0.png)
 
 其中属性 pid 是 parent id ，也就是父亲节点，虽然说是父亲节点，但是并没有包含关系，只是关联关系，通过 pid 的话，进行串联，可以通过一个 bp_name 找到其它相关的 投票bp ，是一种不错的数据结构。
 
@@ -54,7 +54,7 @@ tags:
 
 	select * from t_settle_account where settle_relation=27;
 
-{% img /images/bbsx/4_1.png %}
+![](/images/bbsx/4_1.png)
 
 我们从这一幅图中可以看到，每一个投票bp下面都有很多account。
 

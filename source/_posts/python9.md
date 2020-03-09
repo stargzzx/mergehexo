@@ -142,9 +142,9 @@ os.path 模块使用
 
 ## 文件系统
 
-{% img /images/python/9_io0.JPG %}
+![](/images/python/9_io0.JPG)
 
-{% img /images/python/9_io1.JPG %}
+![](/images/python/9_io1.JPG)
 
 ## 永久存储 pickle模块
 
@@ -166,7 +166,7 @@ os.path 模块使用
 
 ## 文件对象方法
 
-{% img /images/python/9_io2.JPG %}
+![](/images/python/9_io2.JPG)
 
 ## 代码示例
 

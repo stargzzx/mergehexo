@@ -29,7 +29,7 @@ setData 函数用于将数据从逻辑层发送到视图层（异步），同时
 
 参数说明： 
 
-{% img /images/django/14_0.png %}
+![](/images/django/14_0.png)
 
 Object 以 key: value 的形式表示，将 this.data 中的 key 对应的值改变成 value。
 
@@ -63,7 +63,7 @@ Page({
 
 在页面中显示：
 
-{% img /images/django/14_1.png %}
+![](/images/django/14_1.png)
 
 在onLoad（）函数中调用setData（）
 
@@ -76,7 +76,7 @@ Page({
 	  
 再次运行： 
 
-{% img /images/django/14_2.png %}
+![](/images/django/14_2.png)
 
 在wx:request()中使用
 
@@ -108,7 +108,7 @@ wx:wx.request({
 
 这里会出现一个问题：直接在wx:request()的success回调函数中使用this.setData()会报这样一个错误：
 
-{% img /images/django/14_3.png %}
+![](/images/django/14_3.png)
 
 因为这里的this是相对于wx:request()的当前对象，我们可以这样解决：因为这里的wx:rewuest()是在页面加载时调用，所以我们可以在onLoad（）中定义一个变量that ，将this赋值给that，那么此时的that代表相对于onLoad（）的当前对象，然后在success回调函数中直接使用that.setData()即可。
 
@@ -155,7 +155,7 @@ onLoad: function (options) {
 
 正常获取到服务器返回的数据： 
 
-{% img /images/django/14_4.png %}
+![](/images/django/14_4.png)
 
 还有一个需要注意到地方就是：
 

@@ -19,20 +19,20 @@ tags:
 
 我是按照最原始的步骤来配置的。
 
-{% img /images/python/48_0.png %}
+![](/images/python/48_0.png)
 
-{% img /images/python/48_1.png %}
+![](/images/python/48_1.png)
 
 #### 使用虚拟环境来配置 anaconda
 
-{% img /images/python/48_2.png %}
+![](/images/python/48_2.png)
 
 我在网上遍地寻找都没有解决方案，直到我用了百度。。。2333333
 
 #### 解决方案
 
 就是上面参考资料的解决方案。
-{% img /images/python/48_3.png %}
+![](/images/python/48_3.png)
 
 
 然后就是定位到anaconda中已有环境的python.exe所在目录了
@@ -41,7 +41,7 @@ tags:
 
 C:\Users\[username]\AppData\Local\conda\conda\envs\tensorflow\python.exe
 
-{% img /images/python/48_4.png %}
+![](/images/python/48_4.png)
 
 ### 在 anaconda 中下载了第三方库，但是 pycharm 却没有显示
 
@@ -57,15 +57,15 @@ C:\Users\[username]\AppData\Local\conda\conda\envs\tensorflow\python.exe
 
 如果打开 setting 找到 interpreter ，就会发现我们的那个环境下的第三方包是没有 numpy 的。
 
-{% img /images/python/48_5.png %}
+![](/images/python/48_5.png)
 
 在查询了很多资料之后，按照下面的步骤我成功的解决了问题，但是，我不知道哪一步是有用的。
 
 #### 删除所有的编辑器引用
 
-{% img /images/python/48_6.png %}
+![](/images/python/48_6.png)
 
-{% img /images/python/48_7.png %}
+![](/images/python/48_7.png)
 
 选择环境，然后按照 delete 删除所有的环境。
 
@@ -83,7 +83,7 @@ C:\Users\[username]\AppData\Local\conda\conda\envs\tensorflow\python.exe
 
 在虚拟环境下按照命令行方式运行
 
-{% img /images/python/48_8.png %}
+![](/images/python/48_8.png)
 
 代码正确运行，所以，我以后的策略就是，在 pycharm 中编辑代码，但是在命令行中运行代码。
 

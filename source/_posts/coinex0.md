@@ -34,7 +34,7 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 <br/>
 
-{% img /images/coinex/0_0.png %}
+![](/images/coinex/0_0.png)
 
 <br/>
 
@@ -42,7 +42,7 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 <br/>
 
-{% img /images/coinex/0_1.png %}
+![](/images/coinex/0_1.png)
 
 这个表是对应的策略层，其中 strategy_id 和 strategy_name 是我们要特别注意的。
 
@@ -54,7 +54,7 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 <br/>
 
-{% img /images/coinex/0_2.png %}
+![](/images/coinex/0_2.png)
 
 这个表目前我主要用的参数是 instance_id , strategy_id 和 instance_name
 
@@ -68,7 +68,7 @@ t_stragegy_instance 表是目前的所有程序的开始，首先，我们先根
 
 <br/>
 
-{% img /images/coinex/0_3.png %}
+![](/images/coinex/0_3.png)
 
 这个表主要存储了 app_key 和 app_secret ，我们还要注意 trade_user_id 和 user_id 。
 
@@ -84,7 +84,7 @@ fcoin-x 项目中，我们需要先切换到 sort 分支下，然后找到 crypt
 
 <br/>
 
-{% img /images/coinex/0_4.png %}
+![](/images/coinex/0_4.png)
 
 这张表很关键，它记载了 instance_id 到 trade_user_id 的映射。
 

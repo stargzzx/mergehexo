@@ -31,7 +31,7 @@ Airtest基于Python的一个开源库Poco开发，而在Airtest的B区写的Pyth
 	
 这个库依赖的东西有点多，安装稍稍慢一些。安装完成以后，我们把代码复制到PyCharm中，如下图所示。
 
-{% img /images/plug_in/2_0.png %}
+![](/images/plug_in/2_0.png)
 
 运行这段代码，如果是Linux或者macOS的用户，请注意看运行结果是不是有报错，提示adb没有运行权限。这是因为随Poco安装的adb没有运行权限，需要给它添加权限，在终端执行命令：
 
@@ -40,7 +40,7 @@ Airtest基于Python的一个开源库Poco开发，而在Airtest的B区写的Pyth
 
 命令运行完成以后再次执行代码，可以看到代码运行成功，手机被成功控制了，如下图所示。
 
-{% img /images/plug_in/2_1.png %}
+![](/images/plug_in/2_1.png)
 
 ## 如何获取屏幕文字
 
@@ -48,7 +48,7 @@ Airtest基于Python的一个开源库Poco开发，而在Airtest的B区写的Pyth
 
 既然要做爬虫，就需要获取手机上的文字内容。回到搜索页面，我想知道“古剑奇谭”三这个关键字能搜索出多少条结果，每条结果有多少个讨论，如下图所示：
 
-{% img /images/plug_in/2_2.png %}
+![](/images/plug_in/2_2.png)
 
 此时我们需要做两件事情：
 
@@ -57,7 +57,7 @@ Airtest基于Python的一个开源库Poco开发，而在Airtest的B区写的Pyth
 	
 E区的树状结构如下图所示：
 
-{% img /images/plug_in/2_3.png %}
+![](/images/plug_in/2_3.png)
 
 每一个搜索结果的标题作为text属性的值，在name='com.zhihu.android:id/magi_title'对应的元素中；每一个搜索结果的讨论数作为text属性的值，在name='com.zhihu.android:id/magi_count'对应的元素中。
 
@@ -72,21 +72,21 @@ E区的树状结构如下图所示：
 		
 运行效果如下图所示：
 
-{% img /images/plug_in/2_4.png %}
+![](/images/plug_in/2_4.png)
 
 但是这种做法实际上是很危险的，假设会有某一个很生僻的搜索结果，只有标题没有讨论数，那么这样分开抓取再组合的做法，就会导致最后匹配错位。所以合理的做法是先抓大再抓小。每一组标题和讨论数，他们都有自己的父节点，如下图箭头所指向的三个android.widget.LinearLayout:
 
-{% img /images/plug_in/2_5.png %}
+![](/images/plug_in/2_5.png)
 
 那么现在，使用先抓大再抓小的技巧，先把每一组结果的父节点抓下来，再到每一个结果里面分别获取标题和讨论数。
 
 然而这个父节点又怎么获取呢？如下图所示，这个父节点每一个属性值都没有什么特殊的，写任何一个都有可能与别的节点撞上。
 
-{% img /images/plug_in/2_6.png %}
+![](/images/plug_in/2_6.png)
 
 此时，最简单的办法，就是在E区，双击父节点。定位代码就会自动添加，如下图所示。
 
-{% img /images/plug_in/2_7.png %}
+![](/images/plug_in/2_7.png)
 
 这个定位代码看起来非常复杂，但实际上它的内在逻辑非常简单，就是从顶层一层一层往下找而已。
 
@@ -112,7 +112,7 @@ E区的树状结构如下图所示：
 
 运行效果如下图所示。
 
-{% img /images/plug_in/2_8.png %}
+![](/images/plug_in/2_8.png)
 
 ## 控制多台手机
 
@@ -122,7 +122,7 @@ E区的树状结构如下图所示：
 	
 运行效果如下图所示。
 
-{% img /images/plug_in/2_9.png %}
+![](/images/plug_in/2_9.png)
 
 每个手机都会被列出来。在最左边的编号就是手机串号。使用这个串号可以指定多个手机：
 

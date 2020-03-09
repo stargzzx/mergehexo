@@ -39,19 +39,19 @@ tags:
 
 打开夜神模拟器，进入屏幕上的[设置]，如图
 
-{% img /images/plug_in/6_0.png %}
+![](/images/plug_in/6_0.png)
 
 划到[设置]的最后，进入[关于平板电脑]，如图
 
-{% img /images/plug_in/6_1.png %}
+![](/images/plug_in/6_1.png)
 
 多次点击[版本号]
 
-{% img /images/plug_in/6_2.png %}
+![](/images/plug_in/6_2.png)
 
 退回到[设置]目录，会看到[开发者选项]，如图
 
-{% img /images/plug_in/6_3.png %}
+![](/images/plug_in/6_3.png)
 
 ## 使用 AirtestIDE 连接模拟器
 
@@ -63,11 +63,11 @@ tags:
 
 我开了两个手机模拟器,所以截图如下.
 
-{% img /images/plug_in/6_4.png %}
+![](/images/plug_in/6_4.png)
 
 我们在连接界面分别输入 cmd 出现的两个地址.
 
-{% img /images/plug_in/6_5.png %}
+![](/images/plug_in/6_5.png)
 
 点击 连接.
 
@@ -83,7 +83,7 @@ tags:
 
 就会出现连接画面.
 
-{% img /images/plug_in/6_6.png %}
+![](/images/plug_in/6_6.png)
 
 ## 使用 python 代码连接模拟器
 

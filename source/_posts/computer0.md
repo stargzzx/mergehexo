@@ -34,7 +34,7 @@ tags:
 
 关闭它们，可将其活动从你的时间线中隐藏。”三组选项前面的复选框，这是关闭模块的第一步。
 
-{% img /images/computer/1_0.jpg %}
+![](/images/computer/1_0.jpg)
 
 注册表
 
@@ -44,7 +44,7 @@ tags:
 
 重启或注销当前账户后，整个时间线（Time Line）功能便被彻底关闭了。现在再来试一试吧，看你的电脑是不是又和以前一样轻快如初了！
 
-{% img /images/computer/1_1.jpg %}
+![](/images/computer/1_1.jpg)
 
 通过注册表彻底关闭Time Line模块
 

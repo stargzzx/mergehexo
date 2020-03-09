@@ -52,7 +52,7 @@ Tensorflow的模型（model）长什么样子？
 
 因此，总结来说，Tensorflow（版本0.10以后）模型长这个样子：
 
-{% img /images/tensorflow/23_0.png %}
+![](/images/tensorflow/23_0.png)
 
 Tensorflow版本0.11以前，只包含以下三个文件：
 

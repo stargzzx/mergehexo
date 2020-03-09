@@ -135,7 +135,7 @@ MVC就是将这三个设计模式在一起用了，将这三个设计模式弄�
 	
 我们经常形容一个坏的代码结构，像屎一样。
 
-{% img /images/designthinkings/0_0.jpg %}
+![](/images/designthinkings/0_0.jpg)
 
 我们称它为一坨，说真的，接手过烂代码之后，真的找不到比屎更能描述自己感受的词了。
 
@@ -143,11 +143,11 @@ MVC就是将这三个设计模式在一起用了，将这三个设计模式弄�
 
 有时候我们还会用一团毛线来形容代码，大概是这样的。
 
-{% img /images/designthinkings/0_1.jpg %}
+![](/images/designthinkings/0_1.jpg)
 
 对的，这种感受是绝对不会错的。而我们要做的就是把这团毛线，变成像瑞士军刀一样的清晰。
 
-{% img /images/designthinkings/0_2.jpg %}
+![](/images/designthinkings/0_2.jpg)
 
 你们觉得哪个更有成就感？
 
@@ -161,7 +161,7 @@ MVC就是将这三个设计模式在一起用了，将这三个设计模式弄�
 
 就像。。。他们一样。
 
-{% img /images/designthinkings/0_3.jpg %}
+![](/images/designthinkings/0_3.jpg)
 
 该喷火的喷火，该喷水的喷水，每个人分工都很明确。
 
@@ -173,7 +173,7 @@ Model是模型，一般而言，会有人分的更细，VO，DTO等等。我并�
 
 Model承载的作用就是数据的抽象，描述了一个数据的定义，Model的实例就是一组组的数据。整个系统都可以看成是数据的 流动，既然要流动，就一定是有流动的载体。
 
-{% img /images/designthinkings/0_4.jpg %}
+![](/images/designthinkings/0_4.jpg)
 
 这个红圈标的就是Model。它就应该是一个纯数据的集合，就是被各种东西传来传去，被各种加工处理的数据团。
 
@@ -193,7 +193,7 @@ Util一般要和私有方法对比：私有方法一般来说是只是在特地�
 
 如果有可能，尽可能的少用私有方法，而是把他换成一个公用的Util，代表他和业务逻辑是不相关的。通常命名也是ArticleUtil，CommentUtil之类的。
 
-{% img /images/designthinkings/0_5.jpg %}
+![](/images/designthinkings/0_5.jpg)
 
 像这种打包，不管是充气娃娃还是别的什么东西，都打包。你可以理解为图中的黑衣人就是一个Util。
 
@@ -207,7 +207,7 @@ Util一般来说，就是一个明确的输入和一个明确的输出结果。�
 
 Service比Util的概念大很多，它的重点是在于提供一个服务。这个服务可能包括一系列的数据处理，也有可能会调用多个Util，或者是调用别的服务。总归一句话，就是，有什么事情，你来找我。
 
-{% img /images/designthinkings/0_6.jpg %}
+![](/images/designthinkings/0_6.jpg)
 
 就像这个图上的妹妹一样，她就是一个Service，她能提供什么样的服务？这个是必须定义好的。如果是洗脚，她要帮你脱鞋，要端盆子烫你的脚。这里面，你的脚就是一个Model，盆子里的水相当于Util，不管里面放进去啥都能烫一烫。
 
@@ -221,7 +221,7 @@ Service比Util的概念大很多，它的重点是在于提供一个服务。这
 
 Dao一般而言，都是用来和底层数据库通信，负责对数据库的增删改查。
 
-{% img /images/designthinkings/0_7.jpg %}
+![](/images/designthinkings/0_7.jpg)
 
 是的。他就是一个Dao。他从来不关心这些货物要去哪里，他只关心。入库，出库，查询和更换。
 
@@ -239,7 +239,7 @@ Dao最好都是要独立出来。
 
 #### Controller
 
-{% img /images/designthinkings/0_8.jpg %}
+![](/images/designthinkings/0_8.jpg)
 
 控制中心，所有的指令，调度都从这里发出去。
 
@@ -249,7 +249,7 @@ Controller也是最常见的容易产生脏代码地方，通常他们会把一�
 
 大概的感觉就是这样的。
 
-{% img /images/designthinkings/0_9.jpg %}
+![](/images/designthinkings/0_9.jpg)
 
 ## 我的思考
 

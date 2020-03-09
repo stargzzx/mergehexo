@@ -30,7 +30,7 @@ DOI: 10. 13274 /j. cnki. hdzj. 2015. 12. 033
 	傅里叶变换( Fourier Transform) 是一种线性的积分变换，常在将信号在时域和频域之间变换时使用。
 	傅里叶变换是可逆的，其逆变换称为逆傅里叶变换。
 	
-{% img /images/paper/1_0.png %}
+![](/images/paper/1_0.png)
 
 ### 小波变换
 

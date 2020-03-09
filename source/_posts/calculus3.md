@@ -23,7 +23,7 @@ tags:
 	
 看如下的图例：
 
-{% img /images/calculus/3_0.JPG %}
+![](/images/calculus/3_0.JPG)
 
 首先我们知道 f(x^2 + sin(θ)) 的高度就是 x^2 和 sin(θ) 的高度和。
 
@@ -43,7 +43,7 @@ tags:
 	
 看如下的图例：
 
-{% img /images/calculus/3_1.JPG %}
+![](/images/calculus/3_1.JPG)
 
 其实，这个就可以解读为边为 sin(θ) 和 边为 x^2 的矩形面积。
 
@@ -66,7 +66,7 @@ tags:
 	
 看如下的图例：
 
-{% img /images/calculus/3_2.JPG %}
+![](/images/calculus/3_2.JPG)
 
 x 变化，最先变化的是 x^2 ，然后才是 sin
 

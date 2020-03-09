@@ -48,7 +48,7 @@ $$  I(x_0)=-log(p(x_0)) $$
 
 由于是概率所以 $ p(x_0) $ 的取值范围是 $ [0,1] $,绘制为图形如下： 
 
-{% img /images/signal/1_0.png %}
+![](/images/signal/1_0.png)
 
 可见该函数符合我们对信息量的直觉
 
@@ -135,7 +135,7 @@ $$ b = b - \eta \times \frac{\alpha C}{\alpha b} = w - \eta \times a \times \sig
 
 因为sigmoid函数的性质，导致 $ σ′(z) $ 在 $ z $ 取大部分值时会很小（如下图标出来的两端，几近于平坦），这样会使得 $ w $ 和 $ b $ 更新非常慢（因为 η*a*σ′(z) 这一项接近于0）。
 
-{% img /images/signal/1_3.jpg %}
+![](/images/signal/1_3.jpg)
 
 ##### 交叉熵代价函数（cross-entropy cost function）
 
@@ -238,7 +238,7 @@ $$ loss=-\sum_{i=1}^{n}y_ilog(\hat{y_i}) \tag{2.1} $$
 
 举例说明,比如有如下样本 
 
-{% img /images/signal/1_1.png %}
+![](/images/signal/1_1.png)
 
 对应的标签和预测值
 
@@ -266,7 +266,7 @@ m为当前batch的样本数
 
 比如下面这张样本图，即有青蛙，又有老鼠，所以是一个多分类问题 
 
-{% img /images/signal/1_2.png %}
+![](/images/signal/1_2.png)
 
 对应的标签和预测值
 
@@ -311,11 +311,11 @@ ANN的设计目的之一是为了使机器可以像人一样学习知识。人�
 
 实验1：第一次输出值为0.82
 
-{% img /images/signal/1_4.jpg %}
+![](/images/signal/1_4.jpg)
 
 实验2：第一次输出值为0.98
 
-{% img /images/signal/1_5.jpg %}
+![](/images/signal/1_5.jpg)
 
 在实验1中，随机初始化参数，使得第一次输出值为0.82（该样本对应的实际值为0）；经过300次迭代训练后，输出值由0.82降到0.09，逼近实际值。而在实验2中，第一次输出值为0.98，同样经过300迭代训练，输出值只降到了0.20。
 
@@ -337,7 +337,7 @@ $$\frac{\alpha C}{\alpha w} = (a-y)\sigma^{’}(z)$$
 
 其中，z表示神经元的输入，表示激活函数。从以上公式可以看出，w和b的梯度跟激活函数的梯度成正比，激活函数的梯度越大，w和b的大小调整得越快，训练收敛得就越快。而神经网络常用的激活函数为sigmoid函数，该函数的曲线如下所示：
 
-{% img /images/signal/1_6.jpg %}
+![](/images/signal/1_6.jpg)
 
 如图所示，实验2的初始输出值（0.98）对应的梯度明显小于实验1的输出值（0.82），因此实验2的参数梯度下降得比实验1慢。这就是初始的代价（误差）越大，导致训练越慢的原因。与我们的期望不符，即：不能像人一样，错误越大，改正的幅度越大，从而学习得越快。
 
@@ -351,7 +351,7 @@ $$C = -\frac{1}{n} \sum_x [ylna + (1-y)ln(1-a)]$$
 
 其中，x表示样本，n表示样本的总数。那么，重新计算参数w的梯度：
 
-{% img /images/signal/1_7.png %}
+![](/images/signal/1_7.png)
 
 其中（具体证明见附录）：
 
@@ -367,7 +367,7 @@ $$\frac{\alpha C}{\alpha b} = \frac{1}{n} \sum_x (\sigma(z) - y)$$
 
 以偏置b的梯度计算为例，推导出交叉熵代价函数：
 
-{% img /images/signal/1_8.png %}
+![](/images/signal/1_8.png)
 
 在上面，由二次代价函数推导出来的b的梯度公式为：
 
@@ -389,7 +389,7 @@ $$C = -[ylna + (1-y)ln(1-a)] + constant $$
 
 ## 附录
 
-{% img /images/signal/1_9.png %}
+![](/images/signal/1_9.png)
 
 
 

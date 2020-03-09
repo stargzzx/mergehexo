@@ -66,4 +66,4 @@ tags:
 
 我想这就是文字的魅力吧。
 
-{% img /images/book/4.jpg %}
+![](/images/book/4.jpg)

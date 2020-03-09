@@ -31,13 +31,13 @@ tags:
 
 用dmg的方式安装。
 
-{% img /images/macbook/1_0.png %}
+![](/images/macbook/1_0.png)
 
 数据库下载服务器就好了，不需要下载图形化界面。
 
 选择dmg文件下载
 
-{% img /images/macbook/1_1.jpg %}
+![](/images/macbook/1_1.jpg)
 
 选择选择不登录,直接下载
 
@@ -57,7 +57,7 @@ tags:
 
 ps：可能之前的教程有点老了，所以，需要记住临时密码，我的版本不需要记住，是我手动输入自己的密码的，但是，还是建议记录一下临时密码以备后患。
 
-{% img /images/macbook/1_2.jpg %}
+![](/images/macbook/1_2.jpg)
 
 <br/>
 
@@ -73,19 +73,19 @@ ps：可能之前的教程有点老了，所以，需要记住临时密码，我
 
 ## 进入系统偏好设置
 
-{% img /images/macbook/1_3.jpg %}
+![](/images/macbook/1_3.jpg)
 
 ## 点击MySQL
 
-{% img /images/macbook/1_4.jpg %}
+![](/images/macbook/1_4.jpg)
 
 ## 开启MySQL服务
 
-{% img /images/macbook/1_5.jpg %}
+![](/images/macbook/1_5.jpg)
 
 打开后界面上红色的部分会变成绿色的running。
 
-{% img /images/macbook/1_6.jpg %}
+![](/images/macbook/1_6.jpg)
 
 <br/>
 

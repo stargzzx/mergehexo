@@ -11,11 +11,11 @@ tags:
 
 <!-- more -->
 
-{% img /images/tensorflow/3_0.jpg %}
+![](/images/tensorflow/3_0.jpg)
 
 ## 激活函数
 
-{% img /images/tensorflow/3_1.jpg %}
+![](/images/tensorflow/3_1.jpg)
 
 ## 神经网络的复杂度
 
@@ -237,9 +237,9 @@ with tf.Session() as sess:
 
 所以我们要自定义损失函数，公式如下：
 
-{% img /images/tensorflow/3_2.JPG %}
+![](/images/tensorflow/3_2.JPG)
 
-{% img /images/tensorflow/3_3.JPG %}
+![](/images/tensorflow/3_3.JPG)
 
 在 tf 中，具体代码如下：
 
@@ -596,7 +596,7 @@ with tf.Session() as sess:
 
 交叉熵表征两个概率分布之间的距离，公式如下：
 
-{% img /images/tensorflow/3_4.JPG %}
+![](/images/tensorflow/3_4.JPG)
 
 交叉熵越小，两个概率分布越近，就越接近正确答案。
 
@@ -619,7 +619,7 @@ with tf.Session() as sess:
 	
 公式如下：
 
-{% img /images/tensorflow/3_5.JPG %}
+![](/images/tensorflow/3_5.JPG)
 
 在 tf 中的代码
 

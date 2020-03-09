@@ -16,11 +16,11 @@ tags:
 
 首先，先介绍一下这样一个图，明确图的长和宽。
 
-{% img /images/python/34_0.png %}
+![](/images/python/34_0.png)
 
 OK，我们下面先上示例图。
 
-{% img /images/python/34_1.jpg %}
+![](/images/python/34_1.jpg)
 
 这个图片的长是 320 宽是 510
 
@@ -52,7 +52,7 @@ image.save('0.jpg')
 
 ### size
 
-{% img /images/python/34_4.png %}
+![](/images/python/34_4.png)
 
 ### data1
 
@@ -62,11 +62,11 @@ image.save('0.jpg')
 
 按照我们对坐标系的理解，其获取像素点的顺序应该是如下图所示：
 
-{% img /images/python/34_3.png %}
+![](/images/python/34_3.png)
 
 但实际上，我们的像素获得点确是下面这个方式
 
-{% img /images/python/34_2.png %}
+![](/images/python/34_2.png)
 
 让我来自圆其说一下，对于 PIL 的图理解方式来说，坐标的第一个代表的是列，第二个代表的是行。
 
@@ -75,11 +75,11 @@ image.save('0.jpg')
 
 经过十几分钟过的思考后，我终于想到了一个完美的解决方式，那就是坐标点对应的是坐标系，卧槽，老子可真是天才，看下图。
 
-{% img /images/python/34_5.png %}
+![](/images/python/34_5.png)
 
 这样坐标系，就能完美的解释上面的问题了。
 
-{% img /images/python/34_6.png %}
+![](/images/python/34_6.png)
 
 我再写一个代码验证一下。
 
@@ -94,7 +94,7 @@ draw.line(((0,0),(50,100)),'red',3)
 image.save('a.jpg')
 {% endcodeblock %}
 
-{% img /images/python/34_7.jpg %}
+![](/images/python/34_7.jpg)
 
 ### 画图
 

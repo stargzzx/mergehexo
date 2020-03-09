@@ -28,7 +28,7 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 
 <br/>
 
-{% img /images/django/26_0.png %}
+![](/images/django/26_0.png)
 
 <br/>
 
@@ -65,13 +65,13 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 
 我利用 Navicat ，来创建了一个数据库
 
-{% img /images/django/26_1.png %}
+![](/images/django/26_1.png)
 
-{% img /images/django/26_2.png %}
+![](/images/django/26_2.png)
 
 然后我们创建一个叫做 chazuo 的数据库
 
-{% img /images/django/26_3.png %}
+![](/images/django/26_3.png)
 
 我们在项目的 setting.py 中配置
 
@@ -121,7 +121,7 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 		
 但是，执行这句话的时候，可能会出现下面的错误：
 
-{% img /images/django/26_4.png %}
+![](/images/django/26_4.png)
 
 这是因为Django 在连接 MySQL 数据库时默认使用的是 MySQLdb 驱动，然而我们没有安装该驱动，因为它并不支持 Python3，我们现在安装的是 PyMySQL 驱动。
 
@@ -134,15 +134,15 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 	
 然后再次执行那个迁移命令，我们就能够看到数据列表都已经迁移到 MySQL中了。
 
-{% img /images/django/26_5.png %}
+![](/images/django/26_5.png)
 
 ## 数据迁移
 
 经历过上面的数据库表结构的迁移后，我们就可以把上面的那个注释掉，而启用最开始的那个配置。
 
-{% img /images/django/26_6.png %}
+![](/images/django/26_6.png)
 
-{% img /images/django/26_7.png %}
+![](/images/django/26_7.png)
 
 我们先执行数据的备份，我用命令
 
@@ -150,15 +150,15 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 
 可能会出现下面的错误：
 
-{% img /images/django/26_8.png %}
+![](/images/django/26_8.png)
 
 这是因为我们没有声明app，所以修改 setting.py 
 
-{% img /images/django/26_9.png %}
+![](/images/django/26_9.png)
 
 又出现了下面的错误
 
-{% img /images/django/26_10.png %}
+![](/images/django/26_10.png)
 
 最后我没有按照网上的教程来，因为我觉得有点问题，后来我怀疑是因为没有将数据列表进行更行导致的，所以，我依次运行了下面的两个命令：
 
@@ -167,9 +167,9 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 	
 最后在运行上面的命令的时候，成功了
 
-{% img /images/django/26_11.png %}
+![](/images/django/26_11.png)
 
-{% img /images/django/26_12.png %}
+![](/images/django/26_12.png)
 
 最后我们就会发现多出了一个上面的 json 文件。
 
@@ -181,7 +181,7 @@ SQLite3在项目中开发初期提供便利，在早期我们将数据存在 SQL
 	
 这个时候，这条命令又出现错误了
 
-{% img /images/django/26_13.png %}
+![](/images/django/26_13.png)
 
 我个人猜测，可能是因为原来的数据表没有数据导致的，所以，下面我将还原进行数据导入，然后再复现一边。
 

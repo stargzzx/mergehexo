@@ -50,7 +50,7 @@ Administrator 这个是登录者的名称
 
 我们只需要把 rsa_hexo.pub 下面的文件添加到github上的 ssh-key setting 就好了。
 
- {% img /images/ssh/0_0.png %}
+![](img)
 
 但是，现在仅仅只是生成了 ssh-key ，还得做一下区分，下面的方法是我自创的，完全是权宜之举，我相信还有更好的方法，如果我找到更好的方法，我会来更新的。
 

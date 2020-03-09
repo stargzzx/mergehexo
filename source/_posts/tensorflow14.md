@@ -21,7 +21,7 @@ tags:
 
 我创建了一个 python2.7 版本的环境，但是在安装 tensorflow 中，总会自动升级 python 版本到 3.5.6
 
-{% img /images/tensorflow/14_0.png %}
+![](/images/tensorflow/14_0.png)
 
 于是，我卸载了 3 的版本，安装了 anaconda2 的版本，以为是环境问题，但是很不幸。
 

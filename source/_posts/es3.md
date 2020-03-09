@@ -30,11 +30,11 @@ tags:
 
 具体方法如下：
 
-{% img /images/machinelearningalgorithm/8_0.png %}
+![](/images/machinelearningalgorithm/8_0.png)
 
-{% img /images/machinelearningalgorithm/8_1.png %}
+![](/images/machinelearningalgorithm/8_1.png)
 
-{% img /images/machinelearningalgorithm/8_2.png %}
+![](/images/machinelearningalgorithm/8_2.png)
 
 这个方法会导致适应度之间的实际差别，即不符合遗传算法的最基本的原理。
 
@@ -50,7 +50,7 @@ tags:
 	
 ## 竞技选择法
 
-{% img /images/machinelearningalgorithm/8_3.png %}
+![](/images/machinelearningalgorithm/8_3.png)
 
 这个方法让我注意的是，群体的最佳适应度是直接复制到下一代中的。
 
@@ -60,9 +60,9 @@ tags:
 
 在轮盘赌中我们也说过了，最优个体也有可能被淘汰，所以，我们有意识的把最优个体的基因进行保留，交叉遗传。
 
-{% img /images/machinelearningalgorithm/8_4.png %}
+![](/images/machinelearningalgorithm/8_4.png)
 
-{% img /images/machinelearningalgorithm/8_5.png %}
+![](/images/machinelearningalgorithm/8_5.png)
 
 还有很多，在这就不一一列举了。
 

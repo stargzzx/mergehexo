@@ -31,7 +31,7 @@ tags:
 
 由于代码的太多了，所以，我们这边只是说一下里面的逻辑过程。
 
-{% img /images/django/15_0.png %}
+![](/images/django/15_0.png)
 
 这个在小程序内是 menu 页面。
 
@@ -228,7 +228,7 @@ published:
 
 点击天气后，跳转到
 
-{% img /images/django/15_1.png %}
+![](/images/django/15_1.png)
 
 由于天气的接口已经过期，所以这个页面显示是错误的，只能从视频上截图了，但是，视频又是AV画质。。。
 
@@ -418,7 +418,7 @@ class WeatherView(View, CommonResponseMixin):
 
 这个页面在小程序叫做 backup
 
-{% img /images/django/15_2.png %}
+![](/images/django/15_2.png)
 
 {% codeblock %}
 <view class="page">
@@ -721,7 +721,7 @@ class ImageView(View, CommonResponseMixin):
 
 ## 长按删除
 
-{% img /images/django/15_3.png %}
+![](/images/django/15_3.png)
 
 	<view class="weui-uploader__file" data-type="UploadView" bind:longpress="longTapConfirm" data-id="{{item}}">
 		<image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />

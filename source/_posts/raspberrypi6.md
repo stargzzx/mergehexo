@@ -17,19 +17,19 @@ tags:
 
 下面是我收集的电路图
 
-{% img /images/raspberry/6_2.png %}
+![](/images/raspberry/6_2.png)
 
-{% img /images/raspberry/6_1.jpg %}
+![](/images/raspberry/6_1.jpg)
 
-{% img /images/raspberry/6_0.jpg %}
+![](/images/raspberry/6_0.jpg)
 
 拿走不谢
 
 ## 连接方式
 
-{% img /images/raspberry/6_4.jpg %}
+![](/images/raspberry/6_4.jpg)
 
-{% img /images/raspberry/6_3.jpg %}
+![](/images/raspberry/6_3.jpg)
 
 ### 代码
 
@@ -78,7 +78,7 @@ while True:
 	RPi.GPIO.BCM	以CPU对应的引脚的索引号(下图中的GPIOxx) 命名树莓派的引脚
 	RPi.GPIO.BOARD	以树莓派板子上引脚的索引号（下图中的Pin No.） 命名树莓派的引脚
 	
-{% img /images/raspberry/6_0.jpg %}
+![](/images/raspberry/6_0.jpg)
 
 ### 设置使用的GPIO引脚 为 输出模式
 

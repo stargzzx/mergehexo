@@ -19,9 +19,9 @@ tags:
 
 目前树莓派最新版本是第三代 B 型，一般简称 3B。还有一个小分支叫 Zero 系列，截止这篇文章完稿，Zero 系列有两款，分别是 Zero 和 Zero W。
 
-{% img /images/raspberry/7_0.png %}
+![](/images/raspberry/7_0.png)
 
-{% img /images/raspberry/7_1.png %}
+![](/images/raspberry/7_1.png)
 
 简单来说，3B 是旗舰产品，而 Zero 系列是针对于要求极致体积并且对性能要求不高的场景。比如无人机、探空气球之类的，又或者是单纯的对于计算能力要求不高的的场景，比如 3D 打印机、自动化农场、掌机之类的玩法。
 

@@ -109,4 +109,4 @@ $ pip install PyMySQL
 			conn.rollback()
 {% endcodeblock %}
 
-{% img /images/python/8_DB.JPG %}
+![](/images/python/8_DB.JPG)

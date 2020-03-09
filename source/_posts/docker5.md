@@ -40,7 +40,7 @@ tags:
 
 我们可以使用 docker images 命令来查看我们的新镜像 runoob/ubuntu:v2：
 
-{% img /images/docker/5_0.png %}
+![](/images/docker/5_0.png)
 
 <br/>
 

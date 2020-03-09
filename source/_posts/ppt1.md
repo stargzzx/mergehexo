@@ -41,7 +41,7 @@ ppt 一定不是 word
 
 额，图片很 AV。。。将就着点吧。
 
-{% img /images/ppt/1_0.JPG %}
+![](/images/ppt/1_0.JPG)
 
 这个文字很纤细，读起来体验太差。
 
@@ -49,33 +49,33 @@ ppt 一定不是 word
 
 将字体换成微软雅黑，并且突出重点。
 
-{% img /images/ppt/1_1.JPG %}
+![](/images/ppt/1_1.JPG)
 
 增加色彩块。
 
-{% img /images/ppt/1_2.JPG %}
+![](/images/ppt/1_2.JPG)
 
 变的更加富有多元性，并且给重点段落加上色块，吸引注意力。
 
-{% img /images/ppt/1_3.JPG %}
+![](/images/ppt/1_3.JPG)
 
 变成演说型 PPT。
 
 演说型 PPT 重点在演说，而不是文字，所以，要以图片突出，然后主讲人将文字讲出来。
 
-{% img /images/ppt/1_4.JPG %}
+![](/images/ppt/1_4.JPG)
 
 变的更具冲击力，加上万达的缩写。
 
-{% img /images/ppt/1_5.JPG %}
+![](/images/ppt/1_5.JPG)
 
 ### 时间排列
 
-{% img /images/ppt/1_6.JPG %}
+![](/images/ppt/1_6.JPG)
 
 画出时间轴
 
-{% img /images/ppt/1_7.JPG %}
+![](/images/ppt/1_7.JPG)
 
 ## 字体的选择
 

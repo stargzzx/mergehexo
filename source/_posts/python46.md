@@ -29,13 +29,13 @@ tags:
 
 例如，我的数据分析社群小伙伴就用Jupyter notebook写出了他的学习笔记，长这样，是不是很酷：
 
-{% img /images/python/46_0.jpg %}
+![](/images/python/46_0.jpg)
 
 所以，你现在明白了这句话是在说什么了：
 
 >Jupyter notebook（http://jupyter.org/） 是一种 Web 应用，能让用户将说明文本、数学方程、代码和可视化内容全部组合到一个易于共享的文档中。
 
-{% img /images/python/46_1.jpg %}
+![](/images/python/46_1.jpg)
 
 Jupyter Notebook 已迅速成为数据分析，机器学习的必备工具。因为它可以让数据分析师集中精力向用户解释整个分析过程。
 
@@ -57,7 +57,7 @@ Jupyter这个名字是它要服务的三种语言的缩写：Julia，PYThon和R�
 
 	conda install jupyter notebook
 	
-{% img /images/python/46_2.jpg %}
+![](/images/python/46_2.jpg)
 
 也可以通过python shell的 pip 来安装：pip install jupyter notebook。
 
@@ -68,17 +68,17 @@ Jupyter这个名字是它要服务的三种语言的缩写：Julia，PYThon和R�
 
 ### 方法一：windowns在开始菜单中按下图点击打开Notebook
 
-{% img /images/python/46_3.jpg %}
+![](/images/python/46_3.jpg)
 
 ### 方法2：在终端中输入命令： jupyter notebook。
 
 服务器会在你运行此命令的“notebook工作文件夹”中启动。也就是说后面你操作的任何 notebook 文件都会保存在该文件夹下，类似于你用优酷下载视频，优酷都会放到自己的下载目录一样。例如我在下面的C:\houzi 下面启动目录后，会在该目录下看到我后面运行的文件。
 
-{% img /images/python/46_4.jpg %}
+![](/images/python/46_4.jpg)
 
 启动notebook 服务器后，在浏览器中打开notebook页面地址：http://localhost:8888
 
-{% img /images/python/46_5.jpg %}
+![](/images/python/46_5.jpg)
 
 如果你同时启动了另一个 notebook 服务器，新服务器会尝试使用端口 8888，但由于此端口已被占用，因此新服务器会在端口 8889 上运行。之后，你可以通过 http://localhost:8889 连接到新服务器。以此类推。
 
@@ -98,7 +98,7 @@ Jupyter这个名字是它要服务的三种语言的缩写：Julia，PYThon和R�
 
 当我们打开 Jupyter Notebook 的时候。
 
-{% img /images/python/46_10.png %}
+![](/images/python/46_10.png)
 
 我们选择 file 打开右边的 new ，虽然我们创建了 py2 虚拟环境，但其实在 new （图中 2）中，是看不见 py2 的。
 
@@ -124,7 +124,7 @@ Jupyter这个名字是它要服务的三种语言的缩写：Julia，PYThon和R�
 
 我们可以对应conda中的环境，就知道这些环境对应conda中的环境列表。用 conda env list 就可以列出你创建的所有环境。
 
-{% img /images/python/46_6.jpg %}
+![](/images/python/46_6.jpg)
 
 其中py2是我在conda中创建的Python2环境名称，
 
@@ -134,11 +134,11 @@ root和default一样是默认环境，因为我安装的是Anaconda3，所以默
 
 （同样的，在你的py2环境下也要像刚才步骤那样安装一次这个包）
 
-{% img /images/python/46_7.jpg %}
+![](/images/python/46_7.jpg)
 
 完成上面安装步骤，回到标签页“Files”，再新建notebook时，会发现已经关联了环境名称py2和py3：
 
-{% img /images/python/46_8.jpg %}
+![](/images/python/46_8.jpg)
 
 这样你在notebook中可以轻松切换Python2和Python3环境了。
 
@@ -148,7 +148,7 @@ root和default一样是默认环境，因为我安装的是Anaconda3，所以默
 
 	conda install pyreadline
 	
-{% img /images/python/46_9.jpg %}
+![](/images/python/46_9.jpg)
 
 什么是代码自动补全呢？
 
@@ -166,7 +166,7 @@ Files（文件）显示当前“notebook工作文件夹”中的所有文件和�
 
 Clusters一般不会用到。因为过去在 Clusters（集群）中创建多个用于并行计算的内核。现在，这项工作已经由 ipyparallel 接管。
 
-{% img /images/python/46_11.jpg %}
+![](/images/python/46_11.jpg)
 
 ### 如何创建一个新的notebook？
 
@@ -174,59 +174,59 @@ Clusters一般不会用到。因为过去在 Clusters（集群）中创建多个
 
 “Notebooks”下的列表显示了你已安装的内核。由于我在 Python 3 环境中运行服务器，因此列出了 Python 3 内核。你在这里看到的可能是 Python 2。这里我点击Python3。
 
-{% img /images/python/46_12.jpg %}
+![](/images/python/46_12.jpg)
 
 这样你就打开了下面的页面，你会看到外框为绿色的一个小方框。它称为单元格。单元格是你编写和运行代码的地方。以后你就可以在这里写你的数据分析代码了。
 
-{% img /images/python/46_13.jpg %}
+![](/images/python/46_13.jpg)
 
 在这里你可以输入自己人生中的第一行Python代码Hello world。然后点击图中的运行按钮，会执行你当前所在的代码，其实我更喜欢用快捷键（键盘上同时按住ctrl+enter键）来执行代码。
 
-{% img /images/python/46_14.gif %}
+![](/images/python/46_14.gif)
 
 这句代码的意思是在界面输出字符串"Hello world！"，所以你会看到在下面与输出结果出来。
 
 运行代码单元格时，单元格下方会显示输出。单元格还会被编号（左侧会显示 In [1]:）。如果运行了多个单元格的话（也就是多块代码），这能让你知道运行的代码和运行顺序。
 
-{% img /images/python/46_15.jpg %}
+![](/images/python/46_15.jpg)
 
 notebook 中的大部分工作均在代码单元格中完成。这是编写和执行代码的地方。在代码单元格中可以执行多种操作，例如编写代码、给变量赋值、导入包，展示数据分析结果等。在一个单元格中执行的任何代码在所有其他单元格中均可用。
 
 +按钮用于创建新的单元格
 
-{% img /images/python/46_16.gif %}
+![](/images/python/46_16.gif)
 
 还记得一开始我提到代码自动补全功能吗？那么，什么是代码自动补全呢？
 
 比如 我定义了下面的变量。
 
-{% img /images/python/46_17.jpg %}
+![](/images/python/46_17.jpg)
 
 在后面代码中用到这个变量是，我只要输入第一个变量的第一个字母p，然后按下Tab键，边会自动查找到代码中以p开头的变量名称，这可以大幅度提供你写代码的效率。
 
-{% img /images/python/46_18.jpg %}
+![](/images/python/46_18.jpg)
 
 ### 重命名notebook
 
 你会看到刚才我建的notebook文件名是下面这样默认的，我想修改成自己喜欢的文件名如何办呢？
 
-{% img /images/python/46_19.jpg %}
+![](/images/python/46_19.jpg)
 
 点击“File”->Rename，可以对notebook文件进行重命名，这里我命名成‘Helloworld’
 
-{% img /images/python/46_20.jpg %}
+![](/images/python/46_20.jpg)
 
 同时，你可以在当前运行notebook服务器的“notebook工作文件夹”下看到创建的notebook，文件名后缀是ipynb。
 
 （其实Notebook 就是个扩展名为 .ipynb 的大型 JSON 文件。）
 
-{% img /images/python/46_21.jpg %}
+![](/images/python/46_21.jpg)
 
 点击下面的保存按钮，可以保存你的notebook文件。但 notebook 也会定期自动保存。
 
-{% img /images/python/46_22.jpg %}
+![](/images/python/46_22.jpg)
 
-{% img /images/python/46_23.jpg %}
+![](/images/python/46_23.jpg)
 
 ### 关闭 notebook文件
 
@@ -234,7 +234,7 @@ notebook 中的大部分工作均在代码单元格中完成。这是编写和�
 
 但是，在这样做之前，请确保你保存了工作！否则，在你上次保存后所做的任何更改都会丢失。同时如果不保存，你下次运行 notebook 时，你还需要重新运行代码。
 
-{% img /images/python/46_24.jpg %}
+![](/images/python/46_24.jpg)
 
 ### 如何共享你的notebook？
 
@@ -245,7 +245,7 @@ notebook 中的大部分工作均在代码单元格中完成。这是编写和�
 3）如果要在博客或文档中使用 notebook，我就选择Markdown格式。
 
 
-{% img /images/python/46_25.jpg %}
+![](/images/python/46_25.jpg)
 
 ### 关闭Jupler notebook服务器
 
@@ -253,15 +253,15 @@ notebook 中的大部分工作均在代码单元格中完成。这是编写和�
 
 关闭notebook服务器后，下次启动再打开notebook，当你继续在该notebook中写代码时，发现之前的变量无法访问了。需要你在该notebook的Kernerl选项卡中选择“Run All”重新编译下之前的代码。
 
-{% img /images/python/46_26.jpg %}
+![](/images/python/46_26.jpg)
 
 ### 安装的包在notebook中不可使用的问题
 
 是因为安装包的时候，不在当前notebook所在的python环境下安装了包，所以在这个python环境下找不到包。解决办法如下：
 
-{% img /images/python/46_27.jpg %}
+![](/images/python/46_27.jpg)
 
-{% img /images/python/46_28.jpg %}
+![](/images/python/46_28.jpg)
 
 
 

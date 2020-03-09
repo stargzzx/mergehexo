@@ -19,7 +19,7 @@ K-均值聚类算法是一个无监督学习算法。
 
 先介绍一幅图：
 
-{% img /images/machinelearningalgorithm/4_0.png %}
+![](/images/machinelearningalgorithm/4_0.png)
 
 初始，数据没有分类，如第一幅。然后我们随机初始化两个 K 值，通过计算数据点离谁最近，就属于那个 K 分类。
 
@@ -38,4 +38,4 @@ K-均值聚类算法是一个无监督学习算法。
 
 它的图像如下：
 
-{% img /images/machinelearningalgorithm/4_1.jpg %}
+![](/images/machinelearningalgorithm/4_1.jpg)

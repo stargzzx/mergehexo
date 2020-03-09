@@ -48,13 +48,13 @@ tags:
 
 使用fiddler抓包时，会看到左侧按照顺序显示session，并且前边有个图标，但通常，不知道图标是什么意思。 
 
-{% img /images/spider/2_0.png %}
+![](/images/spider/2_0.png)
 
 参考官方文档
 
 [官方文档](https://docs.telerik.com/fiddler/KnowledgeBase/UIGuide)
 
-{% img /images/spider/2_1.png %}
+![](/images/spider/2_1.png)
 
 这里尤其注意“锁图标”这里写图片描述，它用来标记，在网络环境受限时，为https建立http tunnel。
 
@@ -66,29 +66,29 @@ tags:
 
 选择Tools菜单
 
-{% img /images/spider/2_2.png %}
+![](/images/spider/2_2.png)
 
 切换到Connections标签，填写要监听的端口（如：8888），将下方3个钩勾上，最后点击OK关闭设置界面。
 
-{% img /images/spider/2_3.png %}
+![](/images/spider/2_3.png)
 
 ## 模拟器设置
 
 获取电脑的IP地址。
 
-{% img /images/spider/2_4.png %}
+![](/images/spider/2_4.png)
 
 在雷电中打开手机模拟器，找到 WLAN。
 
-{% img /images/spider/2_5.png %}
+![](/images/spider/2_5.png)
 
-{% img /images/spider/2_6.png %}
+![](/images/spider/2_6.png)
 
 鼠标左键长按，在弹出的对话框中，按照下面的步骤填写相关信息。
 
-{% img /images/spider/2_7.png %}
+![](/images/spider/2_7.png)
 
-{% img /images/spider/2_8.png %}
+![](/images/spider/2_8.png)
 
 ## 开始抓包
 
@@ -97,11 +97,11 @@ tags:
 
 此时如果在Fiddler中有太多请求记录，不方便我们查看接下来要抓的数据，可以进行如下操作将这些记录清除。
 
-{% img /images/spider/2_9.png %}
+![](/images/spider/2_9.png)
 
 当我对雷电模拟器的哔哩哔哩APP进行操作后，fildder就已经可以抓取数据了。
 
-{% img /images/spider/2_10.png %}
+![](/images/spider/2_10.png)
 
 但是，有点奇怪的是，我们抓取的包都带小锁，这是因为以上的配置都是在抓取http的信息，而不是https的信息。
 
@@ -109,7 +109,7 @@ tags:
 
 ## https配置
 
-{% img /images/spider/2_11.png %}
+![](/images/spider/2_11.png)
 
 在选择上述的选项中会弹出一系列弹窗，只需要全部选择 YSE 就好了。
 
@@ -121,9 +121,9 @@ Fiddler可以抓取支持http代理的任意程序的数据包，如果要抓取
 
 用手机浏览器访问，上面的IP：端口号。
 
-{% img /images/spider/2_12.png %}
+![](/images/spider/2_12.png)
 
-{% img /images/spider/2_13.png %}
+![](/images/spider/2_13.png)
 
 证书的名字随便就可以，这样就可以抓取手机APP的https信息了。
 
@@ -131,7 +131,7 @@ Fiddler可以抓取支持http代理的任意程序的数据包，如果要抓取
 
 ## 再次抓包
 
-{% img /images/spider/2_14.png %}
+![](/images/spider/2_14.png)
 
 这个时候，我们就可以看到信息已经成功的抓取了。
 
@@ -147,11 +147,11 @@ Fiddler可以抓取支持http代理的任意程序的数据包，如果要抓取
 
 ### 修改注册表
 
-{% img /images/spider/2_15.png %}
+![](/images/spider/2_15.png)
 
 在HKEY_CURRENT_USER\Software\Microsoft\Fiddler2下创建一个DWORD，值置为80（十进制） 
 
-{% img /images/spider/2_16.png %}
+![](/images/spider/2_16.png)
 
 编写fiddlerScript rule，
 
@@ -165,9 +165,9 @@ if (oSession.host.toLowerCase() == "webserver:8888") 
 }
 {% endcodeblock %}
 
-{% img /images/spider/2_17.png %}
+![](/images/spider/2_17.png)
 
-{% img /images/spider/2_18.png %}
+![](/images/spider/2_18.png)
 
 不过令人奇怪的是，我的手机设置完这些后，还是部分APP不能上网，我觉得是证书安装的方式不对，所以，我访问一下 https 的网址，结果，是可以访问的，额，这就奇怪了。
 
@@ -181,19 +181,19 @@ if (oSession.host.toLowerCase() == "webserver:8888") 
 
 很多时候，我都会使用HiJson来帮助我完成对接口返回数据的分析，我相信大多数安卓开发者对该工具应该不会陌生。不过，HiJson不支持直接数据请求，所以需要从别处将json数据复制到HiJson中，Fiddler的WebView窗口可以帮到我们。
 
-{% img /images/spider/2_19.png %}
+![](/images/spider/2_19.png)
 
-{% img /images/spider/2_20.png %}
+![](/images/spider/2_20.png)
 
 将WebView窗口中的数据全选，右键，复制。打开HiJson，粘贴到左窗口后点击“格式化JSON字符串”。
 
-{% img /images/spider/2_21.png %}
+![](/images/spider/2_21.png)
 
 ## 过滤器
 
 如果没有设置过滤规则，就会抓取所有的信息，太影响体验。
 
-{% img /images/spider/2_22.png %}
+![](/images/spider/2_22.png)
 
 
 

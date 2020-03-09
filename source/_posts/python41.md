@@ -220,6 +220,6 @@ if __name__ == '__main__':
 	# 下面这个是不合法的
 	array = mp.Array('i',[[1,2,3]])
 			   
-{% img /images/python/41_0.png %}
+![](/images/python/41_0.png)
 
 ## lock 锁

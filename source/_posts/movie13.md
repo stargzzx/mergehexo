@@ -40,4 +40,4 @@ tags:
 
 求约~~~
 
-{% img /images/movie/13.jpg %}
+![](/images/movie/13.jpg)

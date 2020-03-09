@@ -40,6 +40,6 @@ tags:
 
 [下载地址](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0)
 
-{% img /images/hexo/11_0.png %}
+![](/images/hexo/11_0.png)
 
 经过安装上面的证书，我又可以上传了。

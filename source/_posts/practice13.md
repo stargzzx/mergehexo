@@ -9,7 +9,7 @@ tags:
 ---
 问题描述：
 
-{% img /images/practice/13_0.JPG %}
+![](/images/practice/13_0.JPG)
 
 <!-- more -->
 

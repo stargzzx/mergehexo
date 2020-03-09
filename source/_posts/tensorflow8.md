@@ -22,7 +22,7 @@ tags:
 
 对于一些离散的二维空间中的样本点，下面两条曲线谁存在过拟合？
 
-{% img /images/tensorflow/8_0.png %}
+![](/images/tensorflow/8_0.png)
 
 遵循奥卡姆剃刀的一派，主张“如无必要,勿增实体”。他们相信相对简单的模型泛化能力更好：上图中的蓝色直线，虽然只有很少的样本点直接落在它上面，但是不妨认为这些样本点或多或少包含一些噪声。基于这种认知，可以预测新样本也会在这条直线附近出现。
 
@@ -58,7 +58,7 @@ tags:
 
 由此可见，模型存在明显的过拟合的特征。
 
-{% img /images/tensorflow/8_1.png %}
+![](/images/tensorflow/8_1.png)
 
 ## 过拟合的对策：L2正则化
 
@@ -66,7 +66,7 @@ tags:
 
 本篇引入L2正则化（Regularization），可以在原有的训练数据，以及网络架构不缩减的情况下，有效避免过拟合。L2正则化即在损失函数C的表达式上追加L2正则化项：
 
-{% img /images/tensorflow/8_2.png %}
+![](/images/tensorflow/8_2.png)
 
 上式中的C0代表原损失函数，可以替换成均方误差、交叉熵等任何一种损失函数表达式。
 
@@ -91,15 +91,15 @@ L2正则化表达式暗示着一种倾向：训练尽可能的小的权重，较
 
 C对w求偏导数，可以拆分成原有C0对w求偏导，以及L2正则项对w求偏导。前者继续利用原有的反向传播计算方法，而后者可以直接计算得到：
 
-{% img /images/tensorflow/8_3.png %}
+![](/images/tensorflow/8_3.png)
 
 C对于偏置b求偏导保持不变：
 
-{% img /images/tensorflow/8_4.png %}
+![](/images/tensorflow/8_4.png)
 
 基于上述，就可以得到权重w和偏置b的更新方法：
 
-{% img /images/tensorflow/8_5.png %}
+![](/images/tensorflow/8_5.png)
 
 ## TensorFlow实现L2正则化
 
@@ -132,7 +132,7 @@ TensorFlow的最优化方法tf.train.GradientDescentOptimizer包办了梯度下�
 
 需要注意的是，尽管正则化有效降低了验证集上过拟合程度，但是也降低了训练集的识别精度。所以在实现L2正则化时增加了隐藏层的神经元数量（从30到100）来抵消识别精度的下降。
 
-{% img /images/tensorflow/8_6.png %}
+![](/images/tensorflow/8_6.png)
 
 ## 以下为原 blog
 
@@ -146,13 +146,13 @@ TensorFlow的最优化方法tf.train.GradientDescentOptimizer包办了梯度下�
 
 第一种
 
-{% img /images/tensorflow/6_0.JPG %}
+![](/images/tensorflow/6_0.JPG)
 
 	loss(W) = tf.contrib.layers.l1_regularizer(REGULARIZER)(w)
 	
 第二种
 
-{% img /images/tensorflow/6_1.JPG %}
+![](/images/tensorflow/6_1.JPG)
 
 	loss(W) = tf.contrib.layers.l2_regularizer(REGULARIZER)(w)
 	
@@ -281,13 +281,13 @@ plt.show()
 
 原始展示
 
-{% img /images/tensorflow/6_2.png %}
+![](/images/tensorflow/6_2.png)
 
 无正则化
 
-{% img /images/tensorflow/6_3.png %}
+![](/images/tensorflow/6_3.png)
 
 有正则化
 
-{% img /images/tensorflow/6_4.png %}
+![](/images/tensorflow/6_4.png)
 

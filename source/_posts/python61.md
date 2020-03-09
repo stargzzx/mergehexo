@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
 如果你的文件名是 crontab ，那么你引入包的时候会报错 from crontab import CronTab
 
-{% img /images/python/61_1.png %}
+![](/images/python/61_1.png)
 
 ## 2
 
@@ -122,7 +122,7 @@ crontab是很蠢的，你必须要把所有的路径都标注出来。
 	
 可以查看到
 
-{% img /images/python/61_0.png %}
+![](/images/python/61_0.png)
 
 还有一点关于在 crontab 中如何分隔多个命令，其语法如下：
 
@@ -140,7 +140,7 @@ crontab是很蠢的，你必须要把所有的路径都标注出来。
 
 <br/>
 
-{% img /images/python/61_2.png %}
+![](/images/python/61_2.png)
 
 添加定时任务 : crontab -e
 

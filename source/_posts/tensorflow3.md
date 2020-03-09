@@ -44,7 +44,7 @@ tags:
 
 举个例子：
 
-{% img /images/tensorflow/1_0.png %}
+![](/images/tensorflow/1_0.png)
 
 代码：
 

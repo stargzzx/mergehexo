@@ -13,7 +13,7 @@ tags:
 
 学习率 learning_rate 即为每次参数更新的幅度。
 
-{% img /images/tensorflow/4_0.JPG %}
+![](/images/tensorflow/4_0.JPG)
 
 关于梯度的事情我会在另一篇文章中详细说明。
 

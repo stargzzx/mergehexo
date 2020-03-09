@@ -40,6 +40,6 @@ tags:
 
 满分十分，打六分吧，加情怀分3分，综上所述，9分。
 
-{% img /images/movie/1_0.jpg %}
+![](/images/movie/1_0.jpg)
 
-{% img /images/movie/1_1.jpg %}
+![](/images/movie/1_1.jpg)

@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-{% img /images/django/19_0.png %}
+![](/images/django/19_0.png)
 
 <br/>
 
@@ -33,19 +33,19 @@ tags:
 
 HTTP中有两个对象，一个是客户端，一个是服务端
 
-{% img /images/django/19_1.png %}
+![](/images/django/19_1.png)
 
 ## 服务器
 
 看图中的红线框，是服务器要你下次返回的时候，需要携带的信息。
 
-{% img /images/django/19_2.png %}
+![](/images/django/19_2.png)
 
 ## 客户端
 
 客户端返回的信息。
 
-{% img /images/django/19_3.png %}
+![](/images/django/19_3.png)
 
 <br/>
 
@@ -59,27 +59,27 @@ HTTP中有两个对象，一个是客户端，一个是服务端
 
 以Django后台为例，小程序是先把信息传给微信服务器，然后微信服务器再将信息传给Django后台。
 
-{% img /images/django/19_4.png %}
+![](/images/django/19_4.png)
 
 但是，微信的服务器只负责转发，而不能对 cookies 做任何处理，包括存储。
 
 所以，我们就让小程序用 storage 保存 cookies 然后用小程序发送就好了。
 
-{% img /images/django/19_5.png %}
+![](/images/django/19_5.png)
 
 ## 小程序 Storage 存储 Cookies
 
-{% img /images/django/19_2.png %}
+![](/images/django/19_2.png)
 
 从应答报文的头部，把 Cookies 取出来。
 
 ## Django的Session中间件
 
-{% img /images/django/19_11.png %}
+![](/images/django/19_11.png)
 
 我们要把后台的 setting.py 的 Session 给弄好。
 
-{% img /images/django/19_6.png %}
+![](/images/django/19_6.png)
 
 ## 整个过程
 
@@ -112,9 +112,9 @@ test_session 是为了设置 session
 
 ### 小程序页面
 
-{% img /images/django/19_7.png %}
+![](/images/django/19_7.png)
 
-{% img /images/django/19_8.png %}
+![](/images/django/19_8.png)
 
 #### cookie.js
 
@@ -225,6 +225,6 @@ Page({
 
 我们就能看到在界面中打出上一个Django返回的信息。
 
-{% img /images/django/19_9.png %}
+![](/images/django/19_9.png)
 
-{% img /images/django/19_10.png %}
+![](/images/django/19_10.png)

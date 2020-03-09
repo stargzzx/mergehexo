@@ -100,7 +100,7 @@ tags:
 
 找到相应的版本，然后找到下载的 url
 
-{% img /images/devpi/1_0.png %}
+![](/images/devpi/1_0.png)
 
 执行（下面的 url 是我胡编的，所以，去官方找）
 
@@ -128,7 +128,7 @@ tags:
 
 然后，后来他更改了自己文件的一个配置，才能让我的账户和root共同使用：
 
-{% img /images/devpi/1_4.png %}
+![](/images/devpi/1_4.png)
 
 上面的多用户可以忽略，因为，这个是测试版本，不算数，当时找错教程了。
 
@@ -138,7 +138,7 @@ tags:
 
 然后在这里又报错了
 
-{% img /images/devpi/1_1.png %}
+![](/images/devpi/1_1.png)
 
 因为这里面有一句话是：
 
@@ -184,7 +184,7 @@ tags:
 
 让运维小哥查看一下发现：
 
-{% img /images/devpi/1_2.png %}
+![](/images/devpi/1_2.png)
 
 小哥和我说
 
@@ -216,7 +216,7 @@ tags:
 
 经过，很长时间的摸索，我们在上面的教程中看到了这个。
 
-{% img /images/devpi/1_3.png %}
+![](/images/devpi/1_3.png)
 
 所以，这次是一种测试体验，所以，最后我进入我的 home 目录，也就是使用
 

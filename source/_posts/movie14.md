@@ -26,4 +26,4 @@ tags:
 
 另外，邓布利多是 GAY 我接受不了。。。
 
-{% img /images/movie/14.jpg %}
+![](/images/movie/14.jpg)

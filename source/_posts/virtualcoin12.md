@@ -22,7 +22,7 @@ tags:
 
 它的兴起，是行业全面转向POS、类POS共识机制的必然。目前已经有EOS、Tezos、Cosmos等6超过70只加密资产支持Staking，另外还有以太坊、Cardano、Polkadot等近20只加密资产准备支持Staking。而根据现有数据统计，Staking能为投资者带来的年化收益最高可达158.10%（Livepeer），平均在10%~20%左右。
 
-{% img /images/virtualcoin/12_0.jpg %}
+![](/images/virtualcoin/12_0.jpg)
 
 市值排名前50的加密资产Staking年化收益率参考值。数据来源：StakingRewards.com
 
@@ -48,7 +48,7 @@ Staking究竟是什么？为什么说它是“行业全面转向POS、类POS共�
 
 通过抵押加密资产进行挖矿并取得收益的过程被称之为“Staking”。这个过程与POW共识机制下矿工通过花费大量电力和算力进行计算挖矿有所不同。在POW共识机制下，挖矿有区块奖励，而算力多寡决定了挖矿产出能力。
 
-{% img /images/virtualcoin/12_1.jpg %}
+![](/images/virtualcoin/12_1.jpg)
 
 POS共识机制中，节点的工作方式：运行节点、成为验证节点（拥有投票权的节点被称为“验证节点”）、参与Staking、由算法选出验证节点、打包交易、广播交易、验证成功。图片来源：www.longhash.com
 
@@ -62,7 +62,7 @@ Staking正在为持币者带来增量收益。正在进行Staking的75个项目�
 
 不过，不同项目带来的Staking收益可能会有较大差别。目前EOS通过Staking锁定的市值最大，约为28亿美元，按其1.84%的年化收益率计算，相当于每年派发了5000多万美元的红利。
 
-{% img /images/virtualcoin/12_2.jpg %}
+![](/images/virtualcoin/12_2.jpg)
 
 # Staking运行机制：普通人如何“躺赚”？
 
@@ -94,7 +94,7 @@ Staking的收益主要由两部分构成：区块奖励（系统通过通胀增�
 
 通过将手中的加密资产抵押给提供Staking as a Service服务的节点运营商，由它们代为管理资产、节点或行使相应的权利（如投票参与共识的权利），持币者无须满足最低抵押余额限制就可以参与Staking分享收益，并在一定程度上隔离了风险。但持币者也需要向节点运营商支付一定的服务费（一般从Staking收益中扣除），费率在5%~25%不等。以Coinbase为例，其独立子公司Coinbase Custody今年3月29日宣布向机构客户提供Tezos的Staking服务，并从Staking收益中收取约20%~25%的手续费。
 
-{% img /images/virtualcoin/12_3.jpg %}
+![](/images/virtualcoin/12_3.jpg)
 
 自行验证（上）VS委托节点运营商验证（下）。图片来源：HashKeyHub
 
@@ -115,7 +115,7 @@ Staking的收益主要由两部分构成：区块奖励（系统通过通胀增�
 
 主要是通胀率。通胀率是由项目设定的增发模型决定的，这一部分可近似视为不变因素。固定通胀率模型（如EOS、Stellar等）和调整型通胀率模型（如Cosmos、Tzeos、Livepeer等）是当前两种主要的增发模型。
 
-{% img /images/virtualcoin/12_4.jpg %}
+![](/images/virtualcoin/12_4.jpg)
 
 在Cosmos的通胀模型中，66%的抵押率（Staking Ratio）是一个临界点。小于这一比值，通胀率会逐渐向20%调整，相应地，年化收益率也较高；大于这一比值，通胀率将逐渐调整到7%，年化收益率随之下降。这一机制使Cosmos的通胀模型鼓励及早参与Staking以获取早期红利。目前，Staking Rewards显示，Atom的抵押率已经升至72.29 %。图片来源：blog.chorus.one
 
@@ -123,7 +123,7 @@ Staking的收益主要由两部分构成：区块奖励（系统通过通胀增�
 
 包括抵押率、支付给节点运营商的手续费、委托给节点运营商的抵押资产数量、记账收入、加密资产在二级市场的价格表现等。在其他因素不变的情况下，抵押率和手续费越高，收益越低；记账收入越高，收益越高；委托资产越多、二级市场价格越高，以美元计价的收益也越高。
 
-{% img /images/virtualcoin/12_5.jpg %}
+![](/images/virtualcoin/12_5.jpg)
 
 ### 风险因素（随机的）
 
@@ -133,7 +133,7 @@ Staking的收益主要由两部分构成：区块奖励（系统通过通胀增�
 
 在stakingrewards.com上方便地查询加密资产Staking的年化收益率，但考虑到POS或者类POS机制的加密资产所具有的“通胀”性质，扣除通胀的真实收益率更值得关注。
 
-{% img /images/virtualcoin/12_6.jpg %}
+![](/images/virtualcoin/12_6.jpg)
 
 部分POS项目的真实收益率，数据截至6月3日；来源：messari.io
 
@@ -149,13 +149,13 @@ messari.io给出了真实收益率的参考值，在有数据可查证的项目�
 
 抵押加密资产给节点运营商并不意味着稳赚。尤其是当节点运营商缺乏经验或诚信记录的时候，持币者所暴露的风险尤其高。已经有一些第三方数据研究机构提供独立的监测工具，以监测节点的运营状态，但业态还没有完全建立。
 
-{% img /images/virtualcoin/12_7.jpg %}
+![](/images/virtualcoin/12_7.jpg)
 
 baking-bad.org为Tezos的节点运营商提供第三方运营监测服务。Tezos的验证节点被称为“Baker”。图片来源：baking-bad.org
 
 在这种情况下，有几个简单的标准作为选择节点运营商的参考：历史Staking回报率、社区贡献、声誉、官网上披露的安全架构和防攻击解决方案。一些项目方也会在自己的官网上挂出节点运营商的运营情况。
 
-{% img /images/virtualcoin/12_8.jpg %}
+![](/images/virtualcoin/12_8.jpg)
 
 Cosmos官方网站给出的节点运营商运营情况参考。图片来源：www.mintscan.io/validators
 
@@ -179,11 +179,11 @@ Cosmos官方网站给出的节点运营商运营情况参考。图片来源：ww
 
 验证节点、节点运营商。一般来说，持币人获得Staking收益首先要选择节点进行委托，节点运营商接受委托并收取一定比例的服务费。在现实中，钱包、交易所、加密托管机构常常可以凭借自己的入口优势成为验证节点或者节点运营商。
 
-{% img /images/virtualcoin/12_9.jpg %}
+![](/images/virtualcoin/12_9.jpg)
 
 除此之外，数据与研究机构、工具和应用开发者、安全团队也随着Staking市场需求的激发而被创造出来，它们共同构成了Staking生态图景不可或缺的部分。
 
-{% img /images/virtualcoin/12_10.jpg %}
+![](/images/virtualcoin/12_10.jpg)
 
 ## Staking as a Service渐成趋势
 
@@ -207,7 +207,7 @@ Staking带来的保本增值收益或许更受加密资产长期持有者（Hodl
 
 作为Staking服务商，和采用自行验证方式的个体一样，最不能忽视的风险就是Slash风险。在一些POS机制项目的设计中，Slash不仅会没收区块奖励，也可能罚没部分抵押资产。
 
-{% img /images/virtualcoin/12_11.jpg %}
+![](/images/virtualcoin/12_11.jpg)
 
 在Tezos发布的Staking惩罚列表中，有服务商在1分钟内甚至被罚18748个XTZ，按6月5日1.2美元的XTZ均价计算，损失高达22497.6美元。更有服务商因为连续失误而受到惩罚。图片来源：tzscan.io
 

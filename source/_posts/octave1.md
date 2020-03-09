@@ -96,6 +96,6 @@ options = optimset('GradObj', 'on', 'MaxIter', 50);
 
 先在这里贴一张图，函数之间的对应关系。
 
-{% img /images/octave/1.jpg %}
+![](/images/octave/1.jpg)
 
 可以看出，我们在 example2 中，第一个 t 只是一个传参，代表的是后面括号里面的函数，第二个 t 也只是象征性的写法，这是由 fmincg 这个方法特性所决定的，我之所以讲不清楚，因为我也是一知半解，但即便是这样，运用它已经不是问题了。

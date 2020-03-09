@@ -23,7 +23,7 @@ tags:
 
 线性函数将原始数据线性化的方法转换到[0 1]的范围，归一化公式如下：
 
-{% img /images/machinelearning/1_0.JPG %}
+![](/images/machinelearning/1_0.JPG)
 
 该方法实现对原始数据的等比例缩放，其中Xnorm为归一化后的数据，X为原始数据，Xmax、Xmin分别为原始数据集的最大值和最小值。
 
@@ -35,7 +35,7 @@ tags:
 
 0均值归一化方法将原始数据集归一化为均值为0、方差1的数据集，归一化公式如下：
 
-{% img /images/machinelearning/1_1.JPG %}
+![](/images/machinelearning/1_1.JPG)
 
 其中，μ、σ分别为原始数据集的均值和方法。该种归一化方式要求原始数据的分布可以近似为高斯分布，否则归一化的效果会变得很糟糕。
 

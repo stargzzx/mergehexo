@@ -22,7 +22,7 @@ tags:
 
 OK，再见。
 
-{% img /images/movie/17.jpg %}
+![](/images/movie/17.jpg)
 
 
 

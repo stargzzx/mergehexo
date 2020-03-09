@@ -43,11 +43,11 @@ tags:
 
 进入下载页面，选择下方图片方式。
 
-{% img /images/mysql/0_0.png %}
+![](/images/mysql/0_0.png)
 
-{% img /images/mysql/0_1.png %}
+![](/images/mysql/0_1.png)
 
-{% img /images/mysql/0_2.png %}
+![](/images/mysql/0_2.png)
 
 我们选择系统，然后下载 zip 压缩文件，压缩文件下载小的那个就行，我们仅仅只是需要它的 server 而已。
 
@@ -181,9 +181,9 @@ mysqld install MySQL --defaults-file="D:\mysql\my.ini"
 
 下面的步骤，我不确定哪个有用，但最好都试试。
 
-{% img /images/mysql/0_3.png %}
+![](/images/mysql/0_3.png)
 
-{% img /images/mysql/0_4.png %}
+![](/images/mysql/0_4.png)
 
 找到mysql配置文件并修改
 
@@ -218,7 +218,7 @@ mysqld install MySQL --defaults-file="D:\mysql\my.ini"
 
 输入相关的连接参数后出现
 
-{% img /images/mysql/0_6.png %}
+![](/images/mysql/0_6.png)
 
 经过查询时阿里云需要添加安全组规则。
 
@@ -226,7 +226,7 @@ mysqld install MySQL --defaults-file="D:\mysql\my.ini"
 
 0.0.0.0/0代表所有ip都可以访问
 
-{% img /images/mysql/0_5.jpg %}
+![](/images/mysql/0_5.jpg)
 
 图是网上找的，但是也差不多。
 
@@ -297,7 +297,7 @@ privileges - 用户的操作权限,如select,delete,update,create,drop等(详细
 	
 如果出现下面这个错误，也是因为权限不足，即可以用上面的命令进行授权。
 
-{% img /images/mysql/0_7.jpg %}
+![](/images/mysql/0_7.jpg)
 
 ## 其它
 

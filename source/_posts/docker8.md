@@ -26,7 +26,7 @@ tags:
 
 我们可以使用 docker images 来列出本地主机上的镜像。
 
-{% img /images/docker/8_0.png %}
+![](/images/docker/8_0.png)
 
 各个选项说明:
 
@@ -66,7 +66,7 @@ tags:
 
 	docker search httpd
 
-{% img /images/docker/8_1.jpg %}
+![](/images/docker/8_1.jpg)
 
 	NAME: 镜像仓库源的名称
 	DESCRIPTION: 镜像的描述
@@ -128,7 +128,7 @@ tags:
 
 	docker search ubuntu
 
-{% img /images/docker/8_2.jpg %}
+![](/images/docker/8_2.jpg)
 
 使用 docker pull 将官方 ubuntu 镜像下载到本地：
 
@@ -140,4 +140,4 @@ tags:
 
 以下命令中的 username 请替换为你的 Docker 账号用户名。
 
-{% img /images/docker/8_3.jpg %}
+![](/images/docker/8_3.jpg)

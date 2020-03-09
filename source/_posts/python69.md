@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-{% img /images/python/69_0.gif %}
+![](/images/python/69_0.gif)
 
 {% codeblock %}
 import matplotlib.pyplot as plt

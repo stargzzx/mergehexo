@@ -55,9 +55,9 @@ tags:
 	
 # 样例图
 
-{% img /images/raspberry/15_0.jpg %}
+![](/images/raspberry/15_0.jpg)
 
-{% img /images/raspberry/15_1.png %}
+![](/images/raspberry/15_1.png)
 
 # 在命令行中直接输出针脚图
 
@@ -94,7 +94,7 @@ tags:
 	gpio readall
 	
 就会出现下面的图。
-{% img /images/raspberry/15_2.png %}
+![](/images/raspberry/15_2.png)
 ### 样例代码
 {% codeblock %}
 

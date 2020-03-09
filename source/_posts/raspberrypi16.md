@@ -36,13 +36,13 @@ SSH 是纯文本连接，VNC 是图形化连接。
 
 	sudo raspi-config
 	
-{% img /images/raspberry/16_0.jpg %}
+![](/images/raspberry/16_0.jpg)
 
 依次操作：Interfacing Options -> VNC -> Yes。之后系统会提示你是否要安装 VNC 服务，输入 y 之后回车，等待系统自动下载安装完成，一切顺利的话 VNC 服务就启动了！
 
-{% img /images/raspberry/16_1.jpg %}
+![](/images/raspberry/16_1.jpg)
 
-{% img /images/raspberry/16_2.jpg %}
+![](/images/raspberry/16_2.jpg)
 
 ### 安装 VNC 客户端
 
@@ -52,7 +52,7 @@ SSH 是纯文本连接，VNC 是图形化连接。
 
 下载完成后，直接在上面输入要连接的 IP 就行了。
 
-{% img /images/raspberry/16_3.png %}
+![](/images/raspberry/16_3.png)
 
 ## 需要的注意点
 

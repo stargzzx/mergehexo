@@ -102,7 +102,7 @@ git log --oneline 精简化形式显示
 git log --decorate --oneline --graph --all 以图形化显示所有分支
 {% endcodeblock %}
 
-{% img /images/git/0_0.JPG %}
+![](/images/git/0_0.JPG)
 
 ## 回到过去
 
@@ -142,7 +142,7 @@ reset的参数
 	条件是必须知道之前的ID号
 {% endcodeblock %}
 
-{% img /images/git/0_1.png %}
+![](/images/git/0_1.png)
 
 ## 版本对比
 
@@ -229,7 +229,7 @@ git merge 分支名
 	git branch -d 分支名
 {% endcodeblock %}
 
-{% img /images/git/0_2.png %}
+![](/images/git/0_2.png)
 
 ## 匿名分支
 

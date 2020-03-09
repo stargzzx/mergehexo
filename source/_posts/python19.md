@@ -29,13 +29,13 @@ tags:
 
 17.1
 
-{% img /images/python/19_0.png %}
+![](/images/python/19_0.png)
 
 在这个版本中我们直接 add local 就可以直接添加编译器。
 
 2018.2
 
-{% img /images/python/19_1.png %}
+![](/images/python/19_1.png)
 
 在这个版本的编译器，我们必须要选择 Existing environment 也就是红框中内选项，然后我们再选择合适的编译器。
 
@@ -49,7 +49,7 @@ python 的下载肯定要到官网了，一个版本大概有三种下载方式�
 
 当然，环境配置起来也不复杂。
 
-{% img /images/python/19_2.png %}
+![](/images/python/19_2.png)
 
 环境配置如图所示。
 
@@ -63,7 +63,7 @@ pip 是 python 用来下载第三方库的可执行文件。
 
 pip 也是一个可执行文件。所以，不需要进入 python 环境中。而是在 cmd 中，直接运行。
 
-{% img /images/python/19_3.png %}
+![](/images/python/19_3.png)
 
 所以，到这个步骤，如果你所有的第三方库都下到一个解释器中的话，解释器就会变得非常的冗余，所以，我更喜欢用版本控制来降低冗余。
 

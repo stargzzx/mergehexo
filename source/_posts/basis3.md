@@ -56,7 +56,7 @@ tags:
 
 如图所示：
 
-{% img /images/basis/3_0.jpg %}
+![](/images/basis/3_0.jpg)
 
 ## 注意点
 
@@ -76,7 +76,7 @@ tags:
 
 如下公式计算 m 。
 
-{% img /images/basis/3_1.JPG %}
+![](/images/basis/3_1.JPG)
 
 最终 m = 19.9n，向上取整为 20n。
 
@@ -86,7 +86,7 @@ tags:
 
 公式如下：
 
-{% img /images/basis/3_2.JPG %}
+![](/images/basis/3_2.JPG)
 
 最终 k = 14
 
@@ -94,7 +94,7 @@ tags:
 
 因为我们在上一步有一个向上取整，所以实际失误率是比原来的万分之一更小，则实际失误率的公式如下：
 
-{% img /images/basis/3_3.JPG %}
+![](/images/basis/3_3.JPG)
 
 最后实际的失误率为 0.006%
 

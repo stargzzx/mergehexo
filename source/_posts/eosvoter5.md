@@ -28,7 +28,7 @@ tags:
 
 <br/>
 
-{% img /images/eos_voter/5_0.png %}
+![](/images/eos_voter/5_0.png)
 
 <br/>
 
@@ -36,7 +36,7 @@ tags:
 
 <br/>
 
-{% img /images/eos_voter/5_1.png %}
+![](/images/eos_voter/5_1.png)
 
 我的目录是这样分类的，希望可以帮到大家
 

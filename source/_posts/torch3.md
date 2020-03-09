@@ -59,7 +59,7 @@ train_loader = torch.utils.data.DataLoader(dataset=custom_dataset,
 
 假设我们有一个标签test_images.txt，内容如下：
 
-{% img /images/torch/3_0.png %}
+![](/images/torch/3_0.png)
 
 对应的图像位于images目录下。
 

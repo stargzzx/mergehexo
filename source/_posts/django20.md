@@ -36,7 +36,7 @@ tags:
 	用户的唯一标识——openid
 	用户的基本信息
 	
-{% img /images/django/20_1.png %}
+![](/images/django/20_1.png)
 
 其中我们在 authorization 中有一个文件是 models.py ，这里面有我们设定的模型
 
@@ -62,7 +62,7 @@ class User(models.Model):
 
 然后，我们会发现多出来一个文件夹和文件：
 
-{% img /images/django/20_3.png %}
+![](/images/django/20_3.png)
 
 然后，我们再次运行命令：
 
@@ -74,7 +74,7 @@ class User(models.Model):
 
 ## 获取用户的OpenID
 
-{% img /images/django/6_12.png %}
+![](/images/django/6_12.png)
 
 首先，小程序使用 wx.login() 获取临时的 code
 
@@ -90,15 +90,15 @@ Django后台将 appid + appsecret + code 发送到微信的接口服务，然后
 
 <br/>
 
-{% img /images/django/20_0.png %}
+![](/images/django/20_0.png)
 
 Django后台的目录架构：
 
-{% img /images/django/20_1.png %}
+![](/images/django/20_1.png)
 
 首先，我们先来了解一下什么是 appsecret，这个必须登录到微信小程序的开发界面。
 
-{% img /images/django/20_2.png %}
+![](/images/django/20_2.png)
 
 我们获取后，将这个信息放到 backend 下的 settings.py 文件里面
 
@@ -231,7 +231,7 @@ def authorize(request):
 
 我们的小程序的界面是：
 
-{% img /images/django/20_0.png %}
+![](/images/django/20_0.png)
 
 其中 homepage.wxml 的内容如下：
 

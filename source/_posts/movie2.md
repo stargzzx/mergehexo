@@ -48,4 +48,4 @@ little boy 和 the fat 绽放的时候，怕是世界上最美的花吧，象征
 
 电影满分十分打八分
 
-{% img /images/movie/2.jpg %}
+![](/images/movie/2.jpg)

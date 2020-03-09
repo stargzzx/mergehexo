@@ -47,7 +47,7 @@ tags:
 
 登录的请求时 post，其传参方式如下图：
 
-{% img /images/bbsx/3_0.png %}
+![](/images/bbsx/3_0.png)
 
 这里尤为注意的是 post 请求填写参数的位置在 body 的 form-data 中，而不是 params。
 
@@ -57,9 +57,9 @@ tags:
 
 如果要利用 postman 下载的话，就要将右侧的 send 切换到 send and download。
 
-{% img /images/bbsx/3_1.png %}
+![](/images/bbsx/3_1.png)
 
-{% img /images/bbsx/3_2.png %}
+![](/images/bbsx/3_2.png)
 
 <br/>
 
@@ -159,7 +159,7 @@ def get_vote_statistics_by_bps(bp_name):
 
 这里还有一点需要注意的是，下面还有一句话也需要写死period，要不然就会使得数据返回不全，这个数据不全的问题，浪费我一天的时间，才找到原因。
 
-{% img /images/bbsx/3_3.png %}
+![](/images/bbsx/3_3.png)
 
 到了现在才解决数据回传的所有问题，那么下面就是开发生成xls了（现实中的流程并不是这样的，我是先做完生成xls的，然后处理回传数据，最后根据回传数据填入xls，因为一开始我根本不知道回传数据的问题出现在哪里）
 

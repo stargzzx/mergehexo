@@ -28,7 +28,7 @@ tags:
 
 [python](https://hub.docker.com/_/python)
 
-{% img /images/docker/11_0.png %}
+![](/images/docker/11_0.png)
 
 使用命令：
 
@@ -135,7 +135,7 @@ tags:
 
 下面是我自己的配置
 
-{% img /images/docker/11_1.png %}
+![](/images/docker/11_1.png)
 
 然后，点击
 
@@ -145,7 +145,7 @@ tags:
 
 最后在Mappings中配置路径，这里的路径是你本地存放代码的路径，与刚刚配置的Root Path相互映射（意思是Mapping里本机的路径映射到远程的Root Path），方便以后在本地和远程docker中进行代码和其他文件同步。
 
-{% img /images/docker/11_2.png %}
+![](/images/docker/11_2.png)
 
 <br/>
 
@@ -161,13 +161,13 @@ tags:
 
 右边的设置按钮新建一个项目的远程解释器：
 
-{% img /images/docker/11_3.jpg %}
+![](/images/docker/11_3.jpg)
 
 根据提示一次填写相关的配置。
 
 配置完成，我的项目解释器如图：
 
-{% img /images/docker/11_4.png %}
+![](/images/docker/11_4.png)
 
 这个是因为我们没有安装 pip 的原因，所以，我们要开始安装 pip
 

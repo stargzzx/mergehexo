@@ -77,7 +77,7 @@ tags:
 	
 在书中的最终式子如图所示：
 
-{% img /images/machinelearningalgorithm/2_0.JPG %}
+![](/images/machinelearningalgorithm/2_0.JPG)
 
 看到上面的式子，你大概有两个疑问。
 
@@ -89,13 +89,13 @@ tags:
 
 如图：
 
-{% img /images/machinelearningalgorithm/2_1.JPG %}
+![](/images/machinelearningalgorithm/2_1.JPG)
 
 因为本来按照求导得出来的式子，正好和第一个图的式子一样，至于为什么不化成更简单的式子，其实很简单。
 
 因为我们不知道下面图片是否有逆。
 
-{% img /images/machinelearningalgorithm/2_2.JPG %}
+![](/images/machinelearningalgorithm/2_2.JPG)
 
 假设，X 是 m * n 其中 m < n
 
@@ -106,7 +106,7 @@ tags:
 
 以上就是直接求的原理。其最终式子，我在这里再贴一下：
 
-{% img /images/machinelearningalgorithm/2_0.JPG %}
+![](/images/machinelearningalgorithm/2_0.JPG)
 
 ### 用梯度下降的方式求 W
 
@@ -124,7 +124,7 @@ tags:
 
 我用 octave 画出 其中的数据分布，如图：
 
-{% img /images/machinelearningalgorithm/2_3.jpg %}
+![](/images/machinelearningalgorithm/2_3.jpg)
 
 而我们的目的就是拟合出一条线，使得误差 J 最小，我们决定使用直接求的方法。参见下述代码：
 
@@ -163,7 +163,7 @@ print(standRegression(x,y))
 
 根据上得到的 W，用 octave 绘图：
 
-{% img /images/machinelearningalgorithm/2_4.jpg %}
+![](/images/machinelearningalgorithm/2_4.jpg)
 
 ### 注意点
 
@@ -207,17 +207,17 @@ print(standRegression(x,y))
 
 首先给出计算 W 的新式子：
 
-{% img /images/machinelearningalgorithm/2_5.JPG %}
+![](/images/machinelearningalgorithm/2_5.JPG)
 
 而上面式子中的矩阵 A 就是用来给每一个数据赋予权重。
 
 LWLR使用核概念（和支持向量机的核概念一样）。核有很多，最常见的就是高斯核，高斯核对应的权重如下：
 
-{% img /images/machinelearningalgorithm/2_6.JPG %}
+![](/images/machinelearningalgorithm/2_6.JPG)
 
 观看如下图片：
 
-{% img /images/machinelearningalgorithm/2_7.jpg %}
+![](/images/machinelearningalgorithm/2_7.jpg)
 
 假设我们要观测的点是1.5，这就是不同的 K 的取值，其大约有多少样本点对样本点 1.5 的贡献。可以看出 K 越小，越少的样本点才有权重。
 
@@ -278,7 +278,7 @@ file.close()
 
 ### 图像
 
-{% img /images/machinelearningalgorithm/2_8.jpg %}
+![](/images/machinelearningalgorithm/2_8.jpg)
 
 我们从图上也可以清晰的看出当 k  = 0.01 的时候拟合程度是最好的。
 
@@ -315,7 +315,7 @@ file.close()
 
 而且，我们知道， LWLR 的前提是下面的式子逆矩阵存在：
 
-{% img /images/machinelearningalgorithm/2_9.JPG %}
+![](/images/machinelearningalgorithm/2_9.JPG)
 
 我们考虑这样一种情况，就是我们的特征比样本还多，也就是说输入矩阵 X 不是满秩矩阵（奇异矩阵）。
 
@@ -332,7 +332,7 @@ file.close()
 
 X 不是满秩矩阵，在计算下面式子的时候就会出错。
 
-{% img /images/machinelearningalgorithm/2_9.JPG %}
+![](/images/machinelearningalgorithm/2_9.JPG)
 
 而为了让上述式子成立，统计学家引入岭回归的概念。
 
@@ -340,7 +340,7 @@ X 不是满秩矩阵，在计算下面式子的时候就会出错。
 
 所以回归公式变成：
 
-{% img /images/machinelearningalgorithm/2_10.JPG %}
+![](/images/machinelearningalgorithm/2_10.JPG)
 
 上面式子 λ 是一个常量，当 λ 等于 0 的时候，原式就退变成为最小二乘法， I 是单位矩阵。为什么说为岭呢？正是因为 I 是单位矩阵，其对角线有数，其它的为零，所以像山岭。
 
@@ -402,7 +402,7 @@ rideg = ridgeTest(abX,abY)
 
 最后画出的图如下：
 
-{% img /images/machinelearningalgorithm/2_11.jpg %}
+![](/images/machinelearningalgorithm/2_11.jpg)
 
 abalone.txt 中的一个样例
 	
@@ -515,7 +515,7 @@ print(greed(x,y,0.01,200))
 
 下面贴一张当 lam = 0.005 迭代 1000 次的图像。
 
-{% img /images/machinelearningalgorithm/2_12.jpg %}
+![](/images/machinelearningalgorithm/2_12.jpg)
 
 前向逐步回归的主要作用
 

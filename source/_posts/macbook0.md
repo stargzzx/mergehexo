@@ -63,24 +63,24 @@ MacBook采用的是unix内核，其在某种程度上和linux吻合，所以，�
 
 	vi ./.bash_profile
 	
-{% img /images/macbook/0_0.png %}
+![](/images/macbook/0_0.png)
 
 我们根据最下面的提示，输入 e
 
 然后，我们就会进入这个文件内，但是，刚进入这个文件还处于查看模式，不能编辑，所以输入 i ，进入 insert 模式。
 
-{% img /images/macbook/0_1.png %}
+![](/images/macbook/0_1.png)
 
 这个时候就可以添加环境变量了，我们举一个例子：
 
 	export SCALA_HOME=/Users/fushuai/Documents/scala-2.12.4
 	export PATH=$PATH:$SCALA_HOME/bin
 	
-{% img /images/macbook/0_2.png %}
+![](/images/macbook/0_2.png)
 
 编辑完成，点击“esc键，退出insert模式”, 然后输入“:wq!”,回车，保存成功。 
 
-{% img /images/macbook/0_3.png %}
+![](/images/macbook/0_3.png)
 
 输入“source ./.bash_profile”，让环境变量生效。
 

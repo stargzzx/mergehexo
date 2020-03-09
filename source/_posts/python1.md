@@ -535,4 +535,4 @@ print(res)
 #2  K2        3         6
 {% endcodeblock %}
 
-{% img /images/python/1.jpg %}
+![](/images/python/1.jpg)

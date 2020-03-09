@@ -32,7 +32,7 @@ tags:
 
 [android](https://developer.android.com/studio)
 
-{% img /images/plug_in/3_0.png %}
+![](/images/plug_in/3_0.png)
 
 下载下来之后,将有 adb.exe 目录添加到环境变量里面,此时我们的 adb 环境变量就配置好了.
 
@@ -62,13 +62,13 @@ tags:
 	
 进入界面后,找到自己要控制的手机 IP .
 
-{% img /images/plug_in/3_1.png %}
+![](/images/plug_in/3_1.png)
 
 ### 在AirtestIDE中无线遥控手机
 
 打开Airtest，点击下图红框框住的 remote connection:
 
-{% img /images/plug_in/3_2.png %}
+![](/images/plug_in/3_2.png)
 
 在弹出来的输入框中，输入：
 
@@ -88,7 +88,7 @@ tags:
 
 如下图所示。
 
-{% img /images/plug_in/3_3.png %}
+![](/images/plug_in/3_3.png)
 
 点击 connect ，此时手机就会在上方的 Device列表中出现。双击它就可以无线连接手机并看到手机屏幕了。
 
@@ -120,7 +120,7 @@ tags:
 	
 只有按我这里的写法才能正确控制手机。如下面的gif所示。
 
-{% img /images/plug_in/3_4.gif %}
+![](/images/plug_in/3_4.gif)
 
 动图中涉及到的完整代码为：
 

@@ -31,7 +31,7 @@ tags:
 
 根据抓取 bloks.io 的数据来说，其 receive token 的包 url 是
 
-{% img /images/eos_voter/2_0.png %}
+![](/images/eos_voter/2_0.png)
 
 拿到 request 的 url 进行解析得到
 
@@ -43,11 +43,11 @@ tags:
 
 尤为注意的一点是，我们这个url是点击 receive token 获取的，也就是选择了
 
-{% img /images/eos_voter/2_3.png %}
+![](/images/eos_voter/2_3.png)
 
 如果我们没有选择这个选项，就会有大量杂乱的数据
 
-{% img /images/eos_voter/2_4.png %}
+![](/images/eos_voter/2_4.png)
 
 且不选择这个选项的url 是
 
@@ -76,13 +76,13 @@ tags:
 
 我们先了解一下价钱
 
-{% img /images/eos_voter/2_1.png %}
+![](/images/eos_voter/2_1.png)
 
 从图中可以看出，免费的一个月内可以有 250k 次请求，对于我们目前的项目来说完全够用了，所以，我们直接注册就好了，在这里，我是拿我的 github 账号登陆的。
 
 登陆之后，申请一个 API_KEY。
 
-{% img /images/eos_voter/2_2.png %}
+![](/images/eos_voter/2_2.png)
 
 在这里我们先说明一下，我们申请的这个 api_key 是永久的，但是根据这个 key 所产生的 JWT（我称之为令牌）的寿命只有24小时，也就是，我们验证的时候是用
 
@@ -94,13 +94,13 @@ JWT来获取数据的，而 JWT 是通过 key 来得到的，但是，JWT只有2
 
 找到 eosio
 
-{% img /images/eos_voter/2_5.png %}
+![](/images/eos_voter/2_5.png)
 
 选择 Getring started
 
 然后
 
-{% img /images/eos_voter/2_6.png %}
+![](/images/eos_voter/2_6.png)
 
 进入我们的验证方式。
 
@@ -114,27 +114,27 @@ JWT来获取数据的，而 JWT 是通过 key 来得到的，但是，JWT只有2
 
 在 eosvoter 中，使用 api_key 得到 JWT
 
-{% img /images/eos_voter/2_7.png %}
+![](/images/eos_voter/2_7.png)
 
 根据时间，看是否更新JWT
 
-{% img /images/eos_voter/2_8.png %}
+![](/images/eos_voter/2_8.png)
 
 得到相关的 token ，这个 token 就是 JWT ，来获取数据
 
-{% img /images/eos_voter/2_9.png %}
+![](/images/eos_voter/2_9.png)
 
 至此，dfuse 接口就对接完毕了。
 
 对了，还有关于这个接口的 api 你可以参考
 
-{% img /images/eos_voter/2_5.png %}
+![](/images/eos_voter/2_5.png)
 
 中的
 
 API Reference
 
-{% img /images/eos_voter/2_10.png %}
+![](/images/eos_voter/2_10.png)
 
 
 

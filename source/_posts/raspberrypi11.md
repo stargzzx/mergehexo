@@ -24,15 +24,15 @@ SFTP全名叫SSH File Transfer Protocol，从名字就可以看出来，这和SS
 
 这里的端口填和 SSH 一样的端口，22.我开了 putty 和 SFTP 都可以用 22 端口同时连接。
 
-{% img /images/raspberry/11_0.png %}
+![](/images/raspberry/11_0.png)
 
 然后点击快速连接，右边出现文件就连接成功了。
 
-{% img /images/raspberry/11_1.png %}
+![](/images/raspberry/11_1.png)
 
 如何用呢？很简单，找到想要传送的文件从左边拖到右边就上传给树莓派了。反之则下载到本机。
 
-{% img /images/raspberry/11_2.png %}
+![](/images/raspberry/11_2.png)
 
 
 

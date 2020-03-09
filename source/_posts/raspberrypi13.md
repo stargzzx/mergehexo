@@ -14,7 +14,7 @@ tags:
 
 ## demo
 
-{% img /images/raspberry/14_2.png %}
+![](/images/raspberry/14_2.png)
 
 [官网](http://fritzing.org/home/)
 
@@ -30,4 +30,4 @@ tags:
 
 我们可以根据自己的需求来寻找器件，将器件下载下来后，只需要导入就好了。
 
-{% img /images/raspberry/13_0.png %}
+![](/images/raspberry/13_0.png)

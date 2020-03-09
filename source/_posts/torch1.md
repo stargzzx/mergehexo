@@ -95,7 +95,7 @@ J = torch.mean(z)
 
 上面的计算过程可以表示为：
 
-{% img /images/torch/1_0.png %}
+![](/images/torch/1_0.png)
 
 好了，重点注意的地方来了！
 
@@ -137,7 +137,7 @@ grad 就是导数，要求这个首先得调用 backward.
 
 J对x的导数应该是什么呢？
 
-{% img /images/torch/1_1.png %}
+![](/images/torch/1_1.png)
 
 检查发现，导数就是：
 
@@ -146,7 +146,7 @@ J对x的导数应该是什么呢？
 
 总结一下，构建计算图（正向传播，Forward Propagation）和求导（反向传播，Backward Propagation）的过程就是：
 
-{% img /images/torch/1_2.jpeg %}
+![](/images/torch/1_2.jpeg)
 
 <br/>
 
@@ -178,9 +178,9 @@ print(x.grad)
 
 但是，如果看看backward函数的说明，会发现，里面确实有一个gradients参数：
 
-{% img /images/torch/1_3.png %}
+![](/images/torch/1_3.png)
 
-{% img /images/torch/1_4.jpeg %}
+![](/images/torch/1_4.jpeg)
 
 从说明中我们可以了解到：
 
@@ -194,7 +194,7 @@ print(x.grad)
 
 在StackOverflow有一个解释很好：
 
-{% img /images/torch/1_5.jpeg %}
+![](/images/torch/1_5.jpeg)
 
 一般来说，我是对标量求导，比如在神经网络里面，我们的loss会是一个标量，那么我们让loss对神经网络的参数w求导，直接通过loss.backward()即可。
 
@@ -398,13 +398,13 @@ print(j)
 比如你定义了计算图：
 
 
-{% img /images/torch/1_6.png %}
+![](/images/torch/1_6.png)
 
 你先求p求导，那么这个过程就是反向的p对y求导，y对x求导。
 
 求导完毕之后，这三个节点构成的计算子图就会被释放：
 
-{% img /images/torch/1_7.png %}
+![](/images/torch/1_7.png)
 
 那么计算图就只剩下z、q了，已经不完整，无法求导了。
 

@@ -42,7 +42,7 @@ tags:
 
 这些语法和markdown语法冲突，所以，很多细节，不能看，建议直接看我的代码。
 
-{% img /images/django/4_5.png %}
+![](/images/django/4_5.png)
 
 <br/>
 
@@ -67,7 +67,7 @@ templates用来放置模板文件
 
 然后我们在 templates 下定义一个 blog 文件夹，用来放置 html
 
-{% img /images/django/4_0.png %}
+![](/images/django/4_0.png)
 
 上面图中的data、tools文件夹不需要管，那是为了给数据库传递数据
 
@@ -154,7 +154,7 @@ def get_detail_page(request):
 	http://127.0.0.1:8000/blog/index
 	
 
-{% img /images/django/4_1.png %}
+![](/images/django/4_1.png)
 
 <br/>
 
@@ -209,7 +209,7 @@ def get_detail_page(request,article_id):
                   })
 {% endcodeblock %}
 
-{% img /images/django/4_2.png %}
+![](/images/django/4_2.png)
 
 <br/>
 
@@ -217,7 +217,7 @@ def get_detail_page(request,article_id):
 
 <br/>
 
-{% img /images/django/4_4.png %}
+![](/images/django/4_4.png)
 
 修改blog 下面的 views 的 get_detail_page 函数
 
@@ -293,7 +293,7 @@ def get_detail_page(request,article_id):
 
 最后的页面如下面所示：
 
-{% img /images/django/4_3.png %}
+![](/images/django/4_3.png)
 
 
 

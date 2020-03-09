@@ -22,13 +22,13 @@ wordpress需要apache+mysql。所以，我选择轻量级的集合环境——xa
 
 这个就从网上下载下来就行了，傻瓜式安装。
 
-{% img /images/webdesign/1_1.png %}
+![](/images/webdesign/1_1.png)
 
 首先点击里面的 xampp_start.exe。
 
 然后在目录下有一个 xampp-control.exe ，点击启用它。
 
-{% img /images/webdesign/1_0.png %}
+![](/images/webdesign/1_0.png)
 
 然后我们启用 apache 和 mysql ，当他们变绿就好了，但是，我在启用的时候，发现 mysql 并没有变绿。
 
@@ -44,21 +44,21 @@ wordpress需要apache+mysql。所以，我选择轻量级的集合环境——xa
 
 我们需要创建一个database
 
-{% img /images/webdesign/1_2.png %}
+![](/images/webdesign/1_2.png)
 
 ## 创建 wordpress
 
 将WordPress程序放到相应位置：解压缩wordpress程序，将文件命名为wordpress,放置到安装的XAMPP(Phpnow)文件夹下的htdocs文件里。
 
-{% img /images/webdesign/1_3.png %}
+![](/images/webdesign/1_3.png)
 
 本地安装wordpress程序：浏览器中输入：http://127.0.0.1/wordpress，
 
 按照提示步骤安装程序即可，截图如下：
 
-{% img /images/webdesign/1_4.png %}
+![](/images/webdesign/1_4.png)
 
-{% img /images/webdesign/1_5.png %}
+![](/images/webdesign/1_5.png)
 
 这里需要特别注意的是，那个数据库的名字，就是你之前创建的数据库的名字。
 

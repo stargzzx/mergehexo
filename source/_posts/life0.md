@@ -47,6 +47,6 @@ tags:
 
 好了，就写这些吧，也算是对我的经历做一个总结，另外附上我的笔记。
 
-{% img /images/life/0_0.jpg %}
+![](/images/life/0_0.jpg)
 
-{% img /images/life/0_1.jpg %}
+![](/images/life/0_1.jpg)

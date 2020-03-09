@@ -90,7 +90,7 @@ TFRecordWriter拥有类似python文件操作的接口，如writer.flush()立即�
 
 下面的例子可以将如下图片生成TFRecords文件，我们将保存该图片的宽高以及其内容，并保存浮点型数据9.99、8.88、6.66到不同的压缩tfrecord文件里，该图片的原始大小是1.2Mb，等下我们看一下不同TFRecords文件压缩方式生成文件的大小。
 
-{% img /images/tensorflow/15_0.jpg %}
+![](/images/tensorflow/15_0.jpg)
 
 代码及其注释如下：
 
@@ -167,7 +167,7 @@ print("finish to write data to tfrecord file!")
 
 运行代码后，生成的数据如下：
 
-{% img /images/tensorflow/15_1.jpg %}
+![](/images/tensorflow/15_1.jpg)
 
 我们看到，用不同方式压缩保存的tfrecord文件大小并无异，这可能是数据量不够多的缘故。
 

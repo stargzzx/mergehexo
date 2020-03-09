@@ -33,7 +33,7 @@ CSRF（Cross Site Request Forgery, 跨站域请求伪造）是一种网络的攻
 
 <br/>
 
-{% img /images/hacker/1_0.png %}
+![](/images/hacker/1_0.png)
 
 CSRF 攻击可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击站点，从而在并未授权的情况下执行在权限保护之下的操作。
 

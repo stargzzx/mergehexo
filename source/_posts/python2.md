@@ -34,7 +34,7 @@ plt.plot(x,y)
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_0.png %}
+![](/images/python/2_0.png)
 
 ## figure 的使用
 
@@ -68,9 +68,9 @@ plt.show()
 
 一共表现为两张图
 
-{% img /images/python/2_0.png %}
+![](/images/python/2_0.png)
 
-{% img /images/python/2_1.png %}
+![](/images/python/2_1.png)
 
 ## 设置坐标
 
@@ -106,7 +106,7 @@ plt.yticks(
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_2.png %}
+![](/images/python/2_2.png)
 
 {% codeblock %}
 #修改坐标轴位置
@@ -154,7 +154,7 @@ ax.spines['left'].set_position(('data',0))
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_3.png %}
+![](/images/python/2_3.png)
 
 ## legend 图例
 
@@ -186,7 +186,7 @@ plt.legend(loc = 'best',labels = ['li','cong'])
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_4.png %}
+![](/images/python/2_4.png)
 
 ## 动图
 
@@ -243,7 +243,7 @@ plt.plot(data,data*2)
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_4_0.png %}
+![](/images/python/2_4_0.png)
 
 ## 去掉边界
 
@@ -260,7 +260,7 @@ plt.plot(data,data*2)
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_4_1.png %}
+![](/images/python/2_4_1.png)
 
 注意，类似的这些操作若想起作用，需要将其置于 plt.show() 之前，plt.imshow() 之后
 
@@ -268,7 +268,7 @@ plt.show()
 
 效果图如下：
 
-{% img /images/python/2_4_2.gif %}
+![](/images/python/2_4_2.gif)
 
 Matplotlib中默认是使用阻塞模式。看一下这里用到的matplotlib中的几个函数：
 
@@ -313,7 +313,7 @@ plt.text(0.5,0.3,"李丛123")
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_4_3.png %}
+![](/images/python/2_4_3.png)
 
 {% codeblock %}
 import matplotlib.pyplot as plt
@@ -326,7 +326,7 @@ plt.text(0.5,0.3,u"李丛123")
 plt.show()
 {% endcodeblock %}
 
-{% img /images/python/2_4_4.png %}
+![](/images/python/2_4_4.png)
 
 ### macbook下的解决方案
 

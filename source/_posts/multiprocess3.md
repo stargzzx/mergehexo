@@ -38,7 +38,7 @@ Python中的线程是操作系统的原生线程，Python虚拟机使用一个�
 
 无论你启多少个线程，你有多少个cpu, Python在执行一个进程的时候会淡定的在同一时刻只允许一个线程运行。所以，python是无法利用多核CPU实现多线程的。这样，python对于计算密集型的任务开多线程的效率甚至不如串行(没有大量切换)，但是对于IO密集型的任务效率还是有显著提升的。
 
-{% img /images/multiprocess/3_0.png %}
+![](/images/multiprocess/3_0.png)
 
 <br/>
 
@@ -48,7 +48,7 @@ Python中的线程是操作系统的原生线程，Python虚拟机使用一个�
 
 GIL保护的是解释器级的数据，保护用户自己的数据则需要自己加锁处
 
-{% img /images/multiprocess/3_1.png %}
+![](/images/multiprocess/3_1.png)
 
 <br/>
 
@@ -140,7 +140,7 @@ if __name__ == '__main__':
 
 ps:并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有同时处理多个任务的能力。因而并行是并发的子集.
 
-{% img /images/multiprocess/3_2.png %}
+![](/images/multiprocess/3_2.png)
 
 <br/>
 

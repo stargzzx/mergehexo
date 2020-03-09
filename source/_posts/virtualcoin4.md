@@ -14,6 +14,6 @@ tags:
 
 <!-- more -->
 
-{% img /images/virtualcoin/4_0.jpg %}
+![](/images/virtualcoin/4_0.jpg)
 
-{% img /images/virtualcoin/4_1.JPG %}
+![](/images/virtualcoin/4_1.JPG)

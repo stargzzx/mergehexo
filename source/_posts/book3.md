@@ -43,4 +43,4 @@ tags:
 
 满分十分给这本书打六分。
 
-{% img /images/book/3.JPG %}
+![](/images/book/3.JPG)

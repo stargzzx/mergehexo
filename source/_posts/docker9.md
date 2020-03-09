@@ -50,7 +50,7 @@ tags:
 
 结果如下：
 
-{% img /images/docker/9_0.png %}
+![](/images/docker/9_0.png)
 
 这里我要commit的容器id为 00ff1b764a1b
 
@@ -81,7 +81,7 @@ OPTIONS说明：
 
 	docker images
 
-{% img /images/docker/9_1.png %}
+![](/images/docker/9_1.png)
 
 关于我们通过 commit 制作的镜像，我们有两个选择方式，一个是将制作出来的镜像提交到 https://hub.docker.com 另一个是镜像导出导入。
 
@@ -101,11 +101,11 @@ OPTIONS说明：
 
 我创建的REPOSITORY：
 
-{% img /images/docker/9_2.png %}
+![](/images/docker/9_2.png)
 
 将镜像标记成同名REPOSITORY
 
-{% img /images/docker/9_3.png %}
+![](/images/docker/9_3.png)
 
 登录账号
 
@@ -113,7 +113,7 @@ OPTIONS说明：
 
 push到线上
 
-{% img /images/docker/9_4.png %}
+![](/images/docker/9_4.png)
 
 上传就只能慢慢等了
 

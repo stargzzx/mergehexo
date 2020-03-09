@@ -597,6 +597,6 @@ end;
 
 Finally,the picture is following.
 
-{% img /images/octave/0.jpg %}
+![](/images/octave/0.jpg)
 
 

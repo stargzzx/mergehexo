@@ -18,15 +18,15 @@ OK,其实，代码上传到 github 上了，下面直接贴出链接。
 
 ## 原图
 
-{% img /images/interestingcode/0_0.jpg %}
+![](/images/interestingcode/0_0.jpg)
 
 ## 生成图
 
-{% img /images/interestingcode/0_1.png %}
+![](/images/interestingcode/0_1.png)
 
 ## 生成图局部
 
-{% img /images/interestingcode/0_2.png %}
+![](/images/interestingcode/0_2.png)
 
 
 

@@ -33,11 +33,11 @@ tags:
 	License key：
 		GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==
 		
-{% img /images/hexo/4_0.png %}
+![](/images/hexo/4_0.png)
 
 如果在开始的时候跳过了，可以点击
 
-{% img /images/hexo/4_1.png %}
+![](/images/hexo/4_1.png)
 
 上图是已经激活过的。
 
@@ -51,11 +51,11 @@ tags:
 
 最后重启MarkdownPad 2就可以用了!
 
-{% img /images/hexo/4_1.png %}
+![](/images/hexo/4_1.png)
 
 如果是英文版，可到tools->options修改，再重启即可
 
-{% img /images/hexo/4_2.png %}
+![](/images/hexo/4_2.png)
 
 
 

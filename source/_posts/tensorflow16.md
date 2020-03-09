@@ -28,7 +28,7 @@ tags:
 
 数据科学家Rakshith Vasudev简要解释了one hot编码这一机器学习中极为常见的技术。
 
-{% img /images/tensorflow/16_0.png %}
+![](/images/tensorflow/16_0.png)
 
 你可能在有关机器学习的很多文档、文章、论文中接触到“one hot编码”这一术语。本文将科普这一概念，介绍one hot编码到底是什么。
 
@@ -38,7 +38,7 @@ tags:
 
 假设我们有一个迷你数据集：
 
-{% img /images/tensorflow/16_1.png %}
+![](/images/tensorflow/16_1.png)
 
 其中，类别值是分配给数据集中条目的数值编号。比如，如果我们在数据集中新加入一个公司，那么我们会给这家公司一个新类别值4。当独特的条目增加时，类别值将成比例增加。
 
@@ -48,7 +48,7 @@ sklear的LabelEncoder可以帮我们完成这一类别值分配工作。
 
 现在让我们继续讨论one hot编码，将以上数据集one hot编码后，我们得到的表示如下：
 
-{% img /images/tensorflow/16_2.png %}
+![](/images/tensorflow/16_2.png)
 
 ## 为什么要使用one hot编码
 
@@ -107,7 +107,7 @@ enc.fit([[0, 0, 3], [1, 1, 0], [0, 2, 1], [1, 0, 2]])
 
 下面是颜色标注。 
 
-{% img /images/tensorflow/16_3.png %}
+![](/images/tensorflow/16_3.png)
 
 这个fit中，所有的数组第一个元素取值分别为：0，1，0，1（黄色标注的），最大为1，且为两种元素（0，1），说明用2个状态位来表示就可以了，且该维度的value值为2（该值只与最大值有关系，最大值为1）
 
@@ -124,7 +124,7 @@ enc.fit([[0, 0, 3], [1, 1, 0], [0, 2, 1], [1, 0, 2]])
 
 颜色标注
 
-{% img /images/tensorflow/16_4.png %}
+![](/images/tensorflow/16_4.png)
 
 这个就好办了，enc.transform就是将[0,1,1]这组特征转换成one hot编码，toarray()则是转成数组形式。[0,1,1],
 
@@ -138,19 +138,19 @@ enc.fit([[0, 0, 3], [1, 1, 0], [0, 2, 1], [1, 0, 2]])
 
 全部截图如下：
 
-{% img /images/tensorflow/16_5.png %}
+![](/images/tensorflow/16_5.png)
 
 ## 优缺点
 
 ### 优点
 
-{% img /images/tensorflow/16_6.png %}
+![](/images/tensorflow/16_6.png)
 
-{% img /images/tensorflow/16_7.png %}
+![](/images/tensorflow/16_7.png)
 
 one-hot编码将每个状态位都看成一个特征。对于前两个样本我们可以得到它的特征向量分别为
 
-{% img /images/tensorflow/16_8.png %}
+![](/images/tensorflow/16_8.png)
 
 一是解决了分类器不好处理离散数据的问题，二是在一定程度上也起到了扩充特征的作用（上面样本特征数从3扩展到了9）
 
@@ -171,7 +171,7 @@ one hot在特征提取上属于词袋模型（bag of words）。关于如何使�
 然后使用one hot对每段话提取特征向量：
 
 
-{% img /images/tensorflow/16_9.png %}
+![](/images/tensorflow/16_9.png)
 
 因此我们得到了最终的特征向量为
 
@@ -195,11 +195,11 @@ IF-IDF是信息检索（IR）中最常用的一种文本表示法。算法的思
 
 现在假设我们要统计一篇文档中的前10个关键词，应该怎么下手？首先想到的是统计一下文档中每个词出现的频率（TF），词频越高，这个词就越重要。但是统计完你可能会发现你得到的关键词基本都是“的”、“是”、“为”这样没有实际意义的词（停用词），这个问题怎么解决呢？你可能会想到为每个词都加一个权重，像这种”停用词“就加一个很小的权重（甚至是置为0），这个权重就是IDF。下面再来看看公式：
 
-{% img /images/tensorflow/16_10.png %}
+![](/images/tensorflow/16_10.png)
 
 IF应该很容易理解就是计算词频，IDF衡量词的常见程度。为了计算IDF我们需要事先准备一个语料库用来模拟语言的使用环境，如果一个词越是常见，那么式子中分母就越大，逆文档频率就越小越接近于0。这里的分母+1是为了避免分母为0的情况出现。TF-IDF的计算公式如下：
 
-{% img /images/tensorflow/16_11.png %}
+![](/images/tensorflow/16_11.png)
 
 根据公式很容易看出，TF-IDF的值与该词在文章中出现的频率成正比，与该词在整个语料库中出现的频率成反比，因此可以很好的实现提取文章中关键词的目的。
 

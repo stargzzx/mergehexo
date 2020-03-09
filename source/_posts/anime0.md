@@ -52,4 +52,4 @@ B 站的第一季已经完结了，于是我去找漫画来看。
 
 贴一张图。
 
-{% img /images/animes/0.jpg %}
+![](/images/animes/0.jpg)

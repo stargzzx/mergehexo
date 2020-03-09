@@ -66,7 +66,7 @@ data = load('test.txt');
 plot(data(:,1),data(:,2));
 {% endcodeblock %}
 
-{% img /images/octave/3_0.jpg %}
+![](/images/octave/3_0.jpg)
 
 ## 根据公式绘制连线图
 
@@ -77,7 +77,7 @@ y = x * W(:,2) + W(:,1)
 plot(x, y, 'k', 'LineWidth', 1.5);
 {% endcodeblock %}
 
-{% img /images/octave/3_0_0.jpg %}
+![](/images/octave/3_0_0.jpg)
 
 ## 特殊形式
 
@@ -95,7 +95,7 @@ plot(data)
 hold off;
 {% endcodeblock %}
 
-{% img /images/octave/3_0_1.jpg %}
+![](/images/octave/3_0_1.jpg)
 
 ## 散点图
 
@@ -107,7 +107,7 @@ plot(data(:,1),data(:,2),'k+','LineWidth',2);
 axis([1 6 4 12]); #设置横纵坐标
 {% endcodeblock %}
 
-{% img /images/octave/3_1.jpg %}
+![](/images/octave/3_1.jpg)
 
 <br/>
 
@@ -135,7 +135,7 @@ plot3(mat(:,1),mat(:,2),mat(:,3),'k+','LineWidth',2);
 axis([0 4 2 10 4 13])；
 {% endcodeblock %}
 
-{% img /images/octave/3_2.jpg %}
+![](/images/octave/3_2.jpg)
 
 
 

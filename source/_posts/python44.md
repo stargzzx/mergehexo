@@ -22,7 +22,7 @@ Anaconda在英文中是“蟒蛇”，麻辣鸡（Nicki Minaj妮琪·米娜）�
 
 所以你看下面Anaconda的图标就像一个收尾互相咬住的“蟒蛇”。
 
-{% img /images/python/44_0.jpg %}
+![](/images/python/44_0.jpg)
 
 ## 你可能已经安装了 Python，那么为什么还需要 Anaconda？
 
@@ -52,23 +52,23 @@ Anaconda 的下载文件比较大（约 500 MB），因为它附带了 Python �
 
 注意：如果你是windows 10系统，注意在安装Anaconda软件的时候，右击安装软件→选择以管理员的身份运行。
 
-{% img /images/python/44_1.jpg %}
+![](/images/python/44_1.jpg)
 
 完成安装后，如果你是在windows上操作，按下面图打开 Anaconda Prompt （或者 Mac 下的终端），后面我会将Anaconda Prompt统一称为“终端”。
 
-{% img /images/python/44_2.jpg %}
+![](/images/python/44_2.jpg)
 
 注意：如果你是windows 10系统，按下图操作
 
-{% img /images/python/44_3.jpg %}
+![](/images/python/44_3.jpg)
 
 如果win10系统没有按上述操作，后面会报下面的错误信息：
 
-{% img /images/python/44_4.jpg %}
+![](/images/python/44_4.jpg)
 
 可以在终端或命令提示符中键入 conda list，以查看你安装的内容。
 
-{% img /images/python/44_5.jpg %}
+![](/images/python/44_5.jpg)
 
 如果Anaconda Prompt中可以使用conda命令，接着下面继续操作。
 
@@ -119,7 +119,7 @@ conda 还会自动为你安装依赖项。例如，scipy 依赖于 numpy，因�
 	
 例如我已经成功安装了numpy和pandas这两个常用的包。
 
-{% img /images/python/44_6.jpg %}
+![](/images/python/44_6.jpg)
 
 如果不知道要找的包的确切名称，可以尝试使用 conda search search_term 进行搜索。例如，我知道我想安装numpy，但我不清楚确切的包名称。我可以这样尝试：conda search num。
 
@@ -135,7 +135,7 @@ conda 可以为你不同的项目建立不同的运行环境。
 
 安装nb_conda用于notebook自动关联nb_conda的环境。
 
-{% img /images/python/44_7.jpg %}
+![](/images/python/44_7.jpg)
 
 ### 创建环境
 
@@ -151,7 +151,7 @@ conda 可以为你不同的项目建立不同的运行环境。
 	
 例如，要创建环境名称为 py3 的环境并在其中安装 numpy，在终端中输入 conda create -n py3 pandas。
 
-{% img /images/python/44_8.jpg %}
+![](/images/python/44_8.jpg)
 
 ### 创建环境时，可以指定要安装在环境中的 Python 版本
 
@@ -176,11 +176,11 @@ conda 可以为你不同的项目建立不同的运行环境。
 
 进入环境后，你会在终端提示符中看到环境名称，下面图片是我进入py3的环境（这里的py3是我上面创建环境时自己起的名称，你可以起个自己喜欢的名称）。
 
-{% img /images/python/44_9.jpg %}
+![](/images/python/44_9.jpg)
 
 进入环境后，我可以用conda list 查看环境中默认安装的几个包：
 
-{% img /images/python/44_10.jpg %}
+![](/images/python/44_10.jpg)
 
 在环境中安装包的命令与前面一样：conda install package_name。
 
@@ -204,11 +204,11 @@ conda 可以为你不同的项目建立不同的运行环境。
 
 命令的第一部分 conda env export 用于输出环境中的所有包的名称（包括 Python 版本）。
 
-{% img /images/python/44_11.jpg %}
+![](/images/python/44_11.jpg)
 
 在“notebook工作文件夹”下（及你在终端中上图的路径）可以看到导出的环境文件：
 
-{% img /images/python/44_12.jpg %}
+![](/images/python/44_12.jpg)
 
 在 GitHub 上共享代码时，最好同样创建环境文件并将其包括在代码库中。这能让其他人更轻松地安装你的代码的所有依赖项。
 
@@ -229,7 +229,7 @@ conda 可以为你不同的项目建立不同的运行环境。
 
 首先，我在自己的电脑上在conda中将项目的包导出成environment.txt 文件：
 
-{% img /images/python/44_13.jpg %}
+![](/images/python/44_13.jpg)
 
 然后我将该文件包含在项目的代码库中，其他项目成员即使在他的电脑上没有安装conda也可以使用该文件来安装和我一样的开发环境：
 
@@ -239,7 +239,7 @@ conda 可以为你不同的项目建立不同的运行环境。
 	
 其中/path/requirements.txt是该文件在你电脑上的实际路径。
 
-{% img /images/python/44_14.jpg %}
+![](/images/python/44_14.jpg)
 
 ### 列出环境
 
@@ -247,7 +247,7 @@ conda 可以为你不同的项目建立不同的运行环境。
 
 你会看到环境的列表，而且你当前所在环境的旁边会有一个星号。默认的环境（即当你不在选定环境中时使用的环境）名为 root。
 
-{% img /images/python/44_15.jpg %}
+![](/images/python/44_15.jpg)
 
 ### 删除环境
 

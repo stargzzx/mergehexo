@@ -50,13 +50,13 @@ tags:
 
 进行制作
 
-{% img /images/ubuntu/0_0.png %}
+![](/images/ubuntu/0_0.png)
 
-{% img /images/ubuntu/0_1.png %}
+![](/images/ubuntu/0_1.png)
 
-{% img /images/ubuntu/0_2.png %}
+![](/images/ubuntu/0_2.png)
 
-{% img /images/ubuntu/0_3.png %}
+![](/images/ubuntu/0_3.png)
 
 ## 给 ubuntu 划分空间
 
@@ -70,13 +70,13 @@ tags:
 
 网上找的图。
 
-{% img /images/ubuntu/0_6.png %}
+![](/images/ubuntu/0_6.png)
 
 另外，值得注意的是，我们要记住这个未分配的分区大小，到后期我们会用到。
 
 下面这张图是我装了 ubuntu 之后的分区样子。
 
-{% img /images/ubuntu/0_7.png %}
+![](/images/ubuntu/0_7.png)
 
 图中黄色区域就是我安装的 ubuntu 。我在安装 ubuntu 的时候，划了四个区。当然，这是后话。
 
@@ -94,27 +94,27 @@ tags:
 
 我的 AMAX 安装界面。
 
-{% img /images/ubuntu/0_4.jpg %}
+![](/images/ubuntu/0_4.jpg)
 
 另一台电脑的安装界面。
 
-{% img /images/ubuntu/0_5.jpg %}
+![](/images/ubuntu/0_5.jpg)
 
 如果你从 usb 那个选项启动的话，你会遇见：
 
-{% img /images/ubuntu/0_8.jpg %}
+![](/images/ubuntu/0_8.jpg)
 
 进入启动界面，选择try ubuntu试用，不要选择立即安装。
 
 因为试用时，可以操作ubuntu，打开里面的浏览器查阅资料等。立即安装后面的流程，是操作不了ubuntu系统的。图：
 
-{% img /images/ubuntu/0_9.png %}
+![](/images/ubuntu/0_9.png)
 
 进入系统后，你可以先玩玩，点击桌面右上角联网，点击左侧启动器里面的火狐浏览器上网。
 
 点击桌面左上角的“安装 Ubuntu 16.04 LTS”启动安装程序，选择界面语言，继续：
 
-{% img /images/ubuntu/0_10.png %}
+![](/images/ubuntu/0_10.png)
 
 键盘布局直接选择英语(美国)就好，因为我们的键盘标准大都是美国标准。
 
@@ -130,13 +130,13 @@ tags:
 
 不过，ubuntu默认的办公软件、游戏、多媒体播放工具等都不太适合国人的使用，所以这里不建议默认的，我比较喜欢自己安装，甚至你也可以不勾选 为图像和无线硬件安装第三方软件
 
-{% img /images/ubuntu/0_11.png %}
+![](/images/ubuntu/0_11.png)
 
 这一步很关键，选择错了位置，会毁掉你windows系统上所有的数据。
 
 选择“其他选项”，使用之前预留的独立区域来安装ubuntu系统，继续：
 
-{% img /images/ubuntu/0_12.png %}
+![](/images/ubuntu/0_12.png)
 
 上面的其他选项就是我们有意识的 ubuntu 安装到我们所划分的区。
 
@@ -144,7 +144,7 @@ tags:
 
 若之前在windows系统里面，你没有按照我说的删除预留分区，则在此处就难以辨认是哪一个了。此处选择错了分区后果你懂得。
 
-{% img /images/ubuntu/0_13.png %}
+![](/images/ubuntu/0_13.png)
 
 我们一般是划分四个区。
 
@@ -162,7 +162,7 @@ tags:
 
 第一次分区完毕
 
-{% img /images/ubuntu/0_14.png %}
+![](/images/ubuntu/0_14.png)
 
 ### 交换空间
 
@@ -178,7 +178,7 @@ tags:
 
 第二次分区完毕
 
-{% img /images/ubuntu/0_15.png %}
+![](/images/ubuntu/0_15.png)
 
 ### /boot
 
@@ -194,11 +194,11 @@ tags:
 
 第三次分区完毕
 
-{% img /images/ubuntu/0_16.png %}
+![](/images/ubuntu/0_16.png)
 
 另外，这个分区有一点要特别注意，就是网上分区一般都是 200M ，但是在 18.04 中 200M 的内存空间时会出错的，会出现下面的错误：
 
-{% img /images/ubuntu/0_17.jpg %}
+![](/images/ubuntu/0_17.jpg)
 
 这是因为 boot 的空间不足，所以不能够删除成功。建议给 1G
 
@@ -212,11 +212,11 @@ tags:
 
 用于：EXT4日志文件系统
 
-{% img /images/ubuntu/0_18.png %}
+![](/images/ubuntu/0_18.png)
 
 分区设置完毕后，下方还有一项“安装启动引导器的设备”，默认就如下图所示那样，也是网友们所说的sda，如果选择默认，则是ubuntu引导windows7，到时候卸载ubuntu时，可能会麻烦些，如果想用windows7引导ubuntu，请选择你/boot所在的盘符，之后还要在windows下安装引导类的软件，才能启动ubuntu，过程会复杂些。这一步骤请大家慎重选择，笔者选择的默认选项，以后产生什么问题，以后再说吧。
 
-{% img /images/ubuntu/0_19.png %}
+![](/images/ubuntu/0_19.png)
 
 我也选择的默认。之前尝试过其他的，但是都失败了，所以，之后我选择的全都是默认。
 
@@ -224,7 +224,7 @@ tags:
 
 全部安装之后，第一次开机会出现
 
-{% img /images/ubuntu/0_21.png %}
+![](/images/ubuntu/0_21.png)
 
 ## 其他注意事项
 
@@ -242,11 +242,11 @@ tags:
 
 假设，你他妈的就是不听劝，非要用 UltraISO 和 USB 启动来安装 ubuntu18.04 ，那么你需要在写入磁盘的写入方式中选择 RAW 方式。
 
-{% img /images/ubuntu/0_20.png %}
+![](/images/ubuntu/0_20.png)
 
 选择通过 USB
 
-{% img /images/ubuntu/0_4.jpg %}
+![](/images/ubuntu/0_4.jpg)
 
 但是，我有个疑问，你他妈为什么不听劝，非要用这个方式来安装 ubuntu 。
 

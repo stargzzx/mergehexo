@@ -106,7 +106,7 @@ OK，我们在定时任务下这样写：
 
 复制定时器中的 command line 试一下，看是否可以。
 
-{% img /images/linux/2_0.png %}
+![](/images/linux/2_0.png)
 
 当然，关于重定向输入到文件中，你可以参考我下面的博文。
 

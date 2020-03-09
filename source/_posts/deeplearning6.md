@@ -17,7 +17,7 @@ tags:
 
 假如说，一个女生特别漂亮，嘿嘿，那应该是有很多男生喜欢，越漂亮就越多人喜欢，可能如下图：
 
-{% img /images/neural_network/1_7.png %}
+![](/images/neural_network/1_7.png)
 
 我们计算机可能会处理线性方程，当然，你也可能会说计算机也可以处理非线性方程，但是，对于计算机来说，处理一个非线性问题最好的办法就是用多个线性函数共同描述。
 
@@ -37,37 +37,37 @@ OK，那我们如何将线性问题转化为非线性呢？此时，就是激活
 
 这是一个单层的感知机, 也是我们最常用的神经网络组成单元啦. 用它可以划出一条线, 把平面分割开。
 
-{% img /images/neural_network/1_0.png %}
+![](/images/neural_network/1_0.png)
 
 那么很容易地我们就会想用多个感知机来进行组合, 获得更强的分类能力, 这是没问题的啦
 
-{% img /images/neural_network/1_1.png %}
+![](/images/neural_network/1_1.png)
 
 那么我们动笔算一算, 就可以发现, 这样一个神经网络组合起来,输出的时候无论如何都还是一个线性方程哎,纳尼, 说好的非线性分类呢!!???
 
-{% img /images/neural_network/1_2.png %}
+![](/images/neural_network/1_2.png)
 
 再盗用一幅经常在课堂上用的图...然而我已经不知道出处是哪了, 好像好多老师都是直接用的, 那我就不客气了嘿嘿嘿,这幅图就跟前面的图一样, 描述了当我们直接使用step activation function的时候所能获得的分类器, 其实只能还是线性的, 最多不过是复杂的线性组合罢了,当然你可以说我们可以用无限条直线去逼近一条曲线啊......额,当然可以, 不过比起用non-linear的activation function来说就太傻了嘛....
 
-{% img /images/neural_network/1_3.png %}
+![](/images/neural_network/1_3.png)
 
 祭出主菜. 题主问的激励函数作用是什么, 就在这里了!!
 
 我们在每一层叠加完了以后, 加一个激活函数, 如图中的y=sigma(a). 这样输出的就是一个不折不扣的非线性函数!
 
-{% img /images/neural_network/1_4.png %}
+![](/images/neural_network/1_4.png)
 
 于是就很容易拓展到多层的情况啦, 更刚刚一样的结构, 加上non-linear activation function之后, 输出就变成了一个复杂的, 复杂的, 超级复杂的函数....额别问我他会长成什么样, 没人知道的~~~~我们只能说, 有了这样的非线性激活函数以后, 神经网络的表达能力更加强大了~~(比起纯线性组合, 那是必须得啊!)
 
-{% img /images/neural_network/1_5.png %}
+![](/images/neural_network/1_5.png)
 
 继续厚颜无耻地放一张跟之前那副图并列的图, 加上非线性激活函数之后, 我们就有可能学习到这样的平滑分类平面. 这个比刚刚那个看起来牛逼多了有木有!
 
-{% img /images/neural_network/1_6.png %}
+![](/images/neural_network/1_6.png)
 
 ## 典型的激活函数
 
-{% img /images/neural_network/1_8.jpg %}
+![](/images/neural_network/1_8.jpg)
 
 事实上，我们也可以创造自己的激活函数，但必须保证创造的激活函数是可以微分的。因为在反向传播中我们需要微分来传递误差。
 
@@ -111,13 +111,13 @@ AF(W2y + b2)
 
 其函数形式如下：
 
-{% img /images/neural_network/1_9.png %}
+![](/images/neural_network/1_9.png)
 
-{% img /images/neural_network/1_10.png %}
+![](/images/neural_network/1_10.png)
 
 其导数图像
 
-{% img /images/neural_network/1_14.png %}
+![](/images/neural_network/1_14.png)
 
 Sigmoid 函数的三个主要缺陷：
 
@@ -129,11 +129,11 @@ Sigmoid 函数的三个主要缺陷：
 
 ### Tanh
 
-{% img /images/neural_network/1_11.png %}
+![](/images/neural_network/1_11.png)
 
 其导数图像
 
-{% img /images/neural_network/1_15.png %}
+![](/images/neural_network/1_15.png)
 
 Tanh 激活函数又叫作双曲正切激活函数（hyperbolic tangent activation function）。与 Sigmoid 函数类似，Tanh 函数也使用真值，但 Tanh 函数将其压缩至-1 到 1 的区间内。与 Sigmoid 不同，Tanh 函数的输出以零为中心，因为区间在-1 到 1 之间。你可以将 Tanh 函数想象成两个 Sigmoid 函数放在一起。在实践中，Tanh 函数的使用优先性高于 Sigmoid 函数。负数输入被当作负值，零输入值的映射接近零，正数输入被当作正值。唯一的缺点是：
 
@@ -143,15 +143,15 @@ Tanh 函数也会有梯度消失的问题，因此在饱和时也会「杀死」
 
 ### 修正线性单元（ReLU）
 
-{% img /images/neural_network/1_12.png %}
+![](/images/neural_network/1_12.png)
 
 其导数图像
 
-{% img /images/neural_network/1_16.png %}
+![](/images/neural_network/1_16.png)
 
 从上图可以看到，ReLU 是从底部开始半修正的一种函数。数学公式为：
 
-{% img /images/neural_network/1_13.png %}
+![](/images/neural_network/1_13.png)
 
 当输入 x<0 时，输出为 0，当 x> 0 时，输出为 x。该激活函数使网络更快速地收敛。它不会饱和，即它可以对抗梯度消失问题，至少在正区域（x> 0 时）可以这样，因此神经元至少在一半区域中不会把所有零进行反向传播。由于使用了简单的阈值化（thresholding），ReLU 计算效率很高。但是 ReLU 神经元也存在一些缺点：
 
@@ -163,11 +163,11 @@ Tanh 函数也会有梯度消失的问题，因此在饱和时也会「杀死」
 
 ### Leaky ReLU
 
-{% img /images/neural_network/1_17.png %}
+![](/images/neural_network/1_17.png)
 
 该函数试图缓解 dead ReLU 问题。数学公式为：
 
-{% img /images/neural_network/1_18.png %}
+![](/images/neural_network/1_18.png)
 
 Leaky ReLU 的概念是：当 x < 0 时，它得到 0.1 的正梯度。该函数一定程度上缓解了 dead ReLU 问题，但是使用该函数的结果并不连贯。尽管它具备 ReLU 激活函数的所有特征，如计算高效、快速收敛、在正区域内不会饱和。
 
@@ -177,7 +177,7 @@ Leaky ReLU 可以得到更多扩展。不让 x 乘常数项，而是让 x 乘超
 
 Parametric ReLU的数学公式：
 
-{% img /images/neural_network/1_19.png %}
+![](/images/neural_network/1_19.png)
 
 其中是超参数。这里引入了一个随机的超参数，它可以被学习，因为你可以对它进行反向传播。这使神经元能够选择负区域最好的梯度，有了这种能力，它们可以变成 ReLU 或 Leaky ReLU。
 
@@ -185,11 +185,11 @@ Parametric ReLU的数学公式：
 
 ### Swish
 
-{% img /images/neural_network/1_20.png %}
+![](/images/neural_network/1_20.png)
 
 该函数又叫作自门控激活函数，它近期由谷歌的研究者发布，数学公式为：
 
-{% img /images/neural_network/1_21.png %}
+![](/images/neural_network/1_21.png)
 
 根据论文（https://arxiv.org/abs/1710.05941v1），Swish 激活函数的性能优于 ReLU 函数。
 

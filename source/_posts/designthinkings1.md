@@ -35,7 +35,7 @@ tags:
 
 这不就是个典型的三层架构吗？？？(⊙ o ⊙ )啊！哈哈（这个后面再做解释）
 
-{% img /images/designthinkings/1_0.png %}
+![](/images/designthinkings/1_0.png)
 
 先了解：
 
@@ -47,7 +47,7 @@ tags:
 
 >DAL:(数据访问层):与数据库打交道。主要实现对数据的增、删、改、查。将存储在数据库中的数据提交给业务层，同时将业务层处理的数据保存到数据库。（当然这些操作都是基于UI层的。用户的需求反映给界面（UI），UI反映给BLL，BLL反映给DAL，DAL进行数据的操作，操作后再一一返回，直到将用户所需数据反馈给用户）
 
-{% img /images/designthinkings/1_1.png %}
+![](/images/designthinkings/1_1.png)
 
 每一层都各负其责，那么该如何将三层联系起来呢？
 
@@ -72,11 +72,11 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 综上所述:三层及实体层之间的依赖关系:
 
-{% img /images/designthinkings/1_2.png %}
+![](/images/designthinkings/1_2.png)
 
 思想来源于生活：
 
-{% img /images/designthinkings/1_3.png %}
+![](/images/designthinkings/1_3.png)
 
 	服务员：只管接待客人；
 	厨师：只管做客人点的菜；
@@ -112,13 +112,13 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 两层：
 
-{% img /images/designthinkings/1_4.png %}
+![](/images/designthinkings/1_4.png)
 
 （当任何一个地方发生变化时，都需要重新开发整个系统。“多层”放在一层，分工不明确耦合度高——难以适应需求变化，可维护性低、可扩展性低）
 
 三层：
 
-{% img /images/designthinkings/1_5.png %}
+![](/images/designthinkings/1_5.png)
 
 （发生在哪一层的变化，只需更改该层，不需要更改整个系统。层次清晰，分工明确，每层之间耦合度低——提高了效率，适应需求变化，可维护性高，可扩展性高）
 
@@ -142,15 +142,15 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 ## 三层的具体表现形式？？
 
-{% img /images/designthinkings/1_6.png %}
+![](/images/designthinkings/1_6.png)
 
 ### UI
 
-{% img /images/designthinkings/1_7.png %}
+![](/images/designthinkings/1_7.png)
 
 （大家不要误会，UI层不只是一个个用户界面，也是需要有代码的）
 
-{% img /images/designthinkings/1_8.png %}
+![](/images/designthinkings/1_8.png)
 
 1. 功能：用户输入数据、反馈给用户数据；
 
@@ -158,7 +158,7 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 ### BLL
 
-{% img /images/designthinkings/1_9.png %}
+![](/images/designthinkings/1_9.png)
 
 1. BLL是表示层与数据访问层之间的桥梁，负责数据处理、传递；
 
@@ -166,13 +166,13 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 ### DAL
 
-{% img /images/designthinkings/1_10.png %}
+![](/images/designthinkings/1_10.png)
 
-{% img /images/designthinkings/1_11.png %}
+![](/images/designthinkings/1_11.png)
 
-{% img /images/designthinkings/1_12.png %}
+![](/images/designthinkings/1_12.png)
 
-{% img /images/designthinkings/1_13.png %}
+![](/images/designthinkings/1_13.png)
 
 1. 以上是DAL层中DbUtil类、user_DA类和workRecord_DA类中的代码;
 
@@ -180,7 +180,7 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 ### Entity（Model）层
 
-{% img /images/designthinkings/1_14.png %}
+![](/images/designthinkings/1_14.png)
 
 （定义了实体类user）
 
@@ -195,7 +195,7 @@ Entity(实体层)：它不属于三层中的任何一层，但是它是必不可
 
 还是以机房收费系统的登陆为例：
 
-{% img /images/designthinkings/1_15.png %}
+![](/images/designthinkings/1_15.png)
 
 （观察上面的两层的代码：将业务逻辑、数据访问都展现在用户表现层，当需求需要改变时，需要改变整个系统。比如，我把文本框txtPassWord的名称改为txtPwd的话，大家观察一下得需要更改多少地方。这样的改动算是小的，如果真的有业务需求上的改动才叫麻烦复杂，程序员不跳楼才怪。呵呵、、开个玩笑）
 

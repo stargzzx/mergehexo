@@ -33,7 +33,7 @@ tags:
 
 我最后自己添加的路径截图如下：
 
-{% img /images/macbook/3_0.png %}
+![](/images/macbook/3_0.png)
 
 <br/>
 

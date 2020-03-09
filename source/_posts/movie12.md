@@ -42,7 +42,7 @@ tags:
 
 就先写这么多吧，因为我不想写了。。。QvQ
 
-{% img /images/movie/12.jpg %}
+![](/images/movie/12.jpg)
 
 
 

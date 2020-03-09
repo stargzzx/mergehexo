@@ -48,7 +48,7 @@ print result
 
 比如
 
-{% img /images/tensorflow/0_0.png %}
+![](/images/tensorflow/0_0.png)
 
 即：Y = XW = X1 * W1 + X2 * W2
 

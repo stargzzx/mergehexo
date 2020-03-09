@@ -21,7 +21,7 @@ tags:
 
 ## "EnvironmentLocationNotFound: Not a conda environment: /home/xxx/.conda/envs/anaconda3 "
 
-{% img /images/python/47_0.png %}
+![](/images/python/47_0.png)
 
 conda 版本4.4以后会出现，可以通过以下修复：
 
@@ -58,7 +58,7 @@ return {
 出现这个原因是因为你没有指定一个浏览器来打开jupyter notebook，这就导致jupyter notebook不知如何进入网页，这种情况的出现一般因为电脑上存在两个浏览器导致的，所以只要把其中一个设为默认浏览器就可以了。
 
 ## 报错:ImportError: cannot import name 'ensure_dir_exists'
-{% img /images/python/47_1.jpg %}
+![](/images/python/47_1.jpg)
 
 需要从终端手动更新 jupyter_core and jupyter_client如下
 

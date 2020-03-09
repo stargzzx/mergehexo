@@ -17,7 +17,7 @@ tags:
 
 它的原理很简单，比如有如下数据：判断是否是鱼，我们有特征在水中生活，有鳞。可以画出决策树图：
 
-{% img /images/machinelearningalgorithm/1_0.png %}
+![](/images/machinelearningalgorithm/1_0.png)
 
 根据这幅图，我们就可以收集数据，然后在根据特征来判断是否是鱼。
 
@@ -129,7 +129,7 @@ Gain(D,色泽) = 0.998 - (6/17 * 1.000 + 6/17 * 0.918 + 5/17 * 0.722) = 0.109
 
 事实上，我们的每一次划分都会将一个属性减去，然后在这个属性上再次划分分支，比如我们上面判断西瓜是好坏，假设我们判断的根节点是色泽。如图所示：
 
-{% img /images/machinelearningalgorithm/1_1.png %}
+![](/images/machinelearningalgorithm/1_1.png)
 
 我们发现上面已经分成了 3 个分支。
 

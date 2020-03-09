@@ -65,10 +65,10 @@ tags:
 
 感谢小佛，日后一定会拜访你。
 
-{% img /images/book/0_0.jpg %}
+![](/images/book/0_0.jpg)
 
-{% img /images/book/0_1.jpg %}
+![](/images/book/0_1.jpg)
 
-{% img /images/book/0_2.jpg %}
+![](/images/book/0_2.jpg)
 
-{% img /images/book/0_3.jpg %}
+![](/images/book/0_3.jpg)

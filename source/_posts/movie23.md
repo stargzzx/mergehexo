@@ -80,4 +80,4 @@ tags:
 
 厉百程的生活也侧面反映了中国的发展。所有中国人的不屈。
 
-{% img /images/movie/23.jpg %}
+![](/images/movie/23.jpg)

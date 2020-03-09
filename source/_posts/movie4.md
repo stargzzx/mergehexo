@@ -28,4 +28,4 @@ tags:
 
 满分十分，给它打八分。
 
-{% img /images/movie/4.jpg %}
+![](/images/movie/4.jpg)

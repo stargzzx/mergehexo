@@ -77,19 +77,19 @@ CUDA看作是一个工作台，上面配有很多工具，如锤子、螺丝刀�
 
 官方Linux安装指南表述：
 
-{% img /images/nvidia/0_0.png %}
+![](/images/nvidia/0_0.png)
 
 从官方安装指南可以看出，只要把cuDNN文件复制到CUDA的对应文件夹里就可以，即是所谓插入式设计，把cuDNN数据库添加CUDA里，cuDNN是CUDA的扩展计算库，不会对CUDA造成其他影响。
 
 cuDNN的安装文件有两个文件夹，共五个文件，如下
 
-{% img /images/nvidia/0_1.png %}
+![](/images/nvidia/0_1.png)
 
 >cudnn.h是调用加速库的文件，*.os是
 
 CUDA平台里对应文件夹的文件，如下
 
-{% img /images/nvidia/0_2.png %}
+![](/images/nvidia/0_2.png)
 
 可以看到，CUDA已有的文件与cuDNN没有相同的文件，复制CUDNN的文件后，CUDA里的文件并不会被覆盖，CUDA其他文件并不会受影响。
 

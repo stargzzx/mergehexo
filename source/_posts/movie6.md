@@ -33,5 +33,5 @@ tags:
 
 贴张图：
 
-{% img /images/movie/6.jpg %}
+![](/images/movie/6.jpg)
 

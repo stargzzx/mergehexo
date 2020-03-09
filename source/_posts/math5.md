@@ -30,15 +30,15 @@ tags:
 
 首先是向量 y 对标量 x 求导，我们假定所有的向量都是列向量，
 
-{% img /images/math/5_0.JPG %}
+![](/images/math/5_0.JPG)
 
 在分子布局下，
 
-{% img /images/math/5_1.JPG %}
+![](/images/math/5_1.JPG)
 
 而在分母布局下，
 
-{% img /images/math/5_2.JPG %}
+![](/images/math/5_2.JPG)
 
 你可以随时在两种布局间进行转换，只要你自己不犯迷糊。为了简单起见，更为了遵循大多数时候的传统，我在接下来的部分将默认使用分母布局，除非是在一些很特殊的情形，这些我们到时候再详述。
 
@@ -50,21 +50,21 @@ tags:
 
 标量 y 对向量 x 求导:
 
-{% img /images/math/5_3.JPG %}
+![](/images/math/5_3.JPG)
 
 注意到，标量对向量求导和向量对标量求导刚好反过来。
 
 向量对向量求导，
 
-{% img /images/math/5_4.JPG %}
+![](/images/math/5_4.JPG)
 
 标量对矩阵求导，
 
-{% img /images/math/5_5.JPG %}
+![](/images/math/5_5.JPG)
 
 矩阵对标量求导，
 
-{% img /images/math/5_6.JPG %}
+![](/images/math/5_6.JPG)
 
 事实上，直观上看，凡是对标量求导，结果的形式都要转置，而标量对向量和矩阵求导则位置保持不动。这样总结方便我们记忆。
 
@@ -82,7 +82,7 @@ tags:
 
 接下来我们来看一些常见的求导，
 
-{% img /images/math/5_7.JPG %}
+![](/images/math/5_7.JPG)
 
 理论上对于任意的表达式，我们都可以通过定义出发，利用上面这种形式推导得到。
 
@@ -90,15 +90,15 @@ tags:
 
 我们先来看求导分类的前三类，对于这三类问题，我们来看一个非常强大的方法，通过分析维度来得到结果。
 
-{% img /images/math/5_8.JPG %}
+![](/images/math/5_8.JPG)
 
 我们发现，虽然乘积法则的精准形式无法应用于矩阵求导中，然而这种非精确的乘积法则可以准确的告诉我们哪些项一定会出现在结果中，然后通过分析维度，我们就可以写出结果。
 
-{% img /images/math/5_9.JPG %}
+![](/images/math/5_9.JPG)
 
-{% img /images/math/5_10.JPG %}
+![](/images/math/5_10.JPG)
 
-{% img /images/math/5_11.JPG %}
+![](/images/math/5_11.JPG)
 
 ## 标量对矩阵求导（微分形式）
 
@@ -115,9 +115,9 @@ tags:
 
 首先我们指出
 
-{% img /images/math/5_12.JPG %}
+![](/images/math/5_12.JPG)
 
-{% img /images/math/5_13.JPG %}
+![](/images/math/5_13.JPG)
 
 其实很简单，我们再看几个例子来加深理解：
 
@@ -128,7 +128,7 @@ tags:
 
 考虑
 
-{% img /images/math/5_14.JPG %}
+![](/images/math/5_14.JPG)
 
 这是一份简短的矩阵求导介绍，它的目的是告诉你如何更好的快速推导这些公式，避免查阅手册的麻烦。当然如果你觉得你完全是一个工程师，查阅手册感觉很方便，那么继续按照你的方式生活吧。如果你觉得很有用，那么请继续： Have fun with math!
 

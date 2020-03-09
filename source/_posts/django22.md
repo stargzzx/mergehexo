@@ -28,7 +28,7 @@ tags:
 
 将 setting.py 下面的那个 csrf 注释掉
 
-{% img /images/django/22_0.png %}
+![](/images/django/22_0.png)
 
 但是，这样做可能会有风险
 

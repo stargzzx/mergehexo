@@ -24,7 +24,7 @@ Django中的cookie与session
 
 [Django session](https://code.ziqiangxuetang.com/django/django-session.html)
 
-{% img /images/django/24_0.jpg %}
+![](/images/django/24_0.jpg)
 
 HTTP被设计为”无状态”，每次请求都处于相同的空间中。 
 
@@ -46,7 +46,7 @@ cookies 是浏览器为 Web 服务器存储的一小段信息。 每次浏览器
 
 浏览器下的cookie：
 
-{% img /images/django/24_1.jpg %}
+![](/images/django/24_1.jpg)
 
 <br/>
 
@@ -134,13 +134,13 @@ session 默认有效时间为两周，可以在 settings.py 中修改默认值
 
 首先，我们先在小程序中获取用户信息。
 
-{% img /images/django/24_2.png %}
+![](/images/django/24_2.png)
 
 下面这两个按钮，第一个是把用户信息发到Django后台，然后后台注册用户信息，返回给小程序一个 sessionid
 
 第二个按钮是小程序将这个sessionid放在header中，传给django后台，看看服务器的session是否包含了之前的信息。
 
-{% img /images/django/24_3.png %}
+![](/images/django/24_3.png)
 
 其中，这个页面的 js 如下：
 
@@ -259,7 +259,7 @@ def test(request):
 	
 正是因为这两段，所以，后台会向小程序发送sessionid相关信息，如果没有，则不会发送
 
-{% img /images/django/24_4.png %}
+![](/images/django/24_4.png)
 
 我们还注意到，其中一段话是
 

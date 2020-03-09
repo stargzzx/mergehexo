@@ -10,4 +10,4 @@ tags:
 
 <!--more-->
 
-{% img /images/software/2_0.png %}
+![](/images/software/2_0.png)

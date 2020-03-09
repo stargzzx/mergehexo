@@ -35,7 +35,7 @@ tags:
 	
 但是，在安装的过程中出现
 
-{% img /images/python/62_0.png %}
+![](/images/python/62_0.png)
 
 看报错信息，我觉得是出现了这个错误
 

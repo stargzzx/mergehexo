@@ -29,11 +29,11 @@ GPT+UEFI是近年来流行的一种U盘装系统模式，与传统的Bios+MBR相
 
 这个是传统的Legacy运行流程：
 
-{% img /images/computer/3_2.png %}
+![](/images/computer/3_2.png)
 
 这个是UEFI运行流程：
 
-{% img /images/computer/3_3.png %}
+![](/images/computer/3_3.png)
 
 ## 什么是MBR，什么是GPT
 
@@ -41,7 +41,7 @@ GPT和MBR是两种不同的分区方案。目前在Windows下广泛采用的磁�
 
 ### MBR磁盘分区结构用下图简单表示（Windows下基本磁盘、4个主分区）
 
-{% img /images/computer/3_4.jpg %}
+![](/images/computer/3_4.jpg)
 
 为了方便计算机访问硬盘，把硬盘上的空间划分成许许多多的区块（英文叫sectors，即扇区），然后给每个区块分配一个地址，称为逻辑块地址（即LBA）。 
 
@@ -51,7 +51,7 @@ GPT和MBR是两种不同的分区方案。目前在Windows下广泛采用的磁�
 
 ### GPT磁盘分区结构可用下图简单表示（Windows下基本磁盘）
 
-{% img /images/computer/3_5.jpg %}
+![](/images/computer/3_5.jpg)
 
 可以看到，在GTP磁盘的第一个数据块中同样有一个与MBR（主引导记录）类似的标记，叫做PMBR。PMBR的作用是，当使用不支持GPT的分区工具时，整个硬盘将显示为一个受保护的分区，以防止分区表及硬盘数据遭到破坏。UEFI并不从PMBR中获取GPT磁盘的分区信息，它有自己的分区表，即GPT分区表。
 
@@ -65,7 +65,7 @@ BIOS和UEFI都是引导操作系统启动的必须介质，目前在Windows下�
 
 ## BIOS引导系统方式（引导Windows）
 
-{% img /images/computer/3_2.png %}
+![](/images/computer/3_2.png)
 
 BIOS下启动操作系统之前，必须从硬盘上指定扇区读取系统启动代码（包含在MBR主引导记录中），然后从活动分区中引导启动操作系统，所以在BIOS下引导安装Windows操作系统，我们不得不使用一些工具（DiskGenius）对硬盘进行配置以达到启动要求（即建立MBR硬盘主引导和活动分区）。
 
@@ -77,7 +77,7 @@ BIOS方式启动过程看起来很不好，他要不断交接电脑控制权和�
 
 ## UEFI引导系统方式（引导Windows）
 
-{% img /images/computer/3_3.png %}
+![](/images/computer/3_3.png)
 
 在UEFI下启动操作系统，不再需要主引导记录，不再需要活动分区，不需要任何工具，只要复制安装文件到一个FAT32（主）分区/U盘中，然后从这个分区/U盘启动。
 
@@ -106,15 +106,15 @@ UEFI方式启动过程以SSD中启动WIN10为例，按下电源键，过1-2秒�
 
 右击”磁盘0“选择”属性“
 
-{% img /images/computer/3_6.png %}
+![](/images/computer/3_6.png)
 
 在”属性“中切换到”卷“标签,这时我们就可以看到”磁盘分区形式“可以看到为gpt
 
-{% img /images/computer/3_7.png %}
+![](/images/computer/3_7.png)
 
 ## 查看启动类型
 
 按下win+r打开运行，输入msinfo32，确定，打开系统信息；
 
-{% img /images/computer/3_8.png %}
+![](/images/computer/3_8.png)
 

@@ -382,5 +382,5 @@ numpy 的数据类型是向量和矩阵。
 
 思维，一定要转变。
 
-{% img /images/python/0.jpg %}
+![](/images/python/0.jpg)
 

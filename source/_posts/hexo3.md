@@ -49,28 +49,28 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 ### 希腊符号
 
-{% img /images/hexo/3_0.png %}
+![](/images/hexo/3_0.png)
 
 ### 逻辑符号
 
-{% img /images/hexo/3_1.png %}
+![](/images/hexo/3_1.png)
 
 ### 集合运算符
 
-{% img /images/hexo/3_2.png %}
+![](/images/hexo/3_2.png)
 
 ### 箭头符号
 
-{% img /images/hexo/3_3.png %}
+![](/images/hexo/3_3.png)
 
 ### 关系运算符
 
-{% img /images/hexo/3_4.png %}
+![](/images/hexo/3_4.png)
 
 
 ### 其他运算符
 
-{% img /images/hexo/3_5.png %}
+![](/images/hexo/3_5.png)
 
 下面来介绍一下语法。
 

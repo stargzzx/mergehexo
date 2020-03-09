@@ -84,7 +84,7 @@ text_create('mytxtfile', 'Hello world!')
 
 我们将在右边看到 「Generate new token」。
 
-{% img /images/jenkins/2_1.png %}
+![](/images/jenkins/2_1.png)
 
 上面的信息填写完成就保存。
 
@@ -96,7 +96,7 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 进入 github 的相关工程，然后在工程主页上，点击 「settings」，在左侧有一个 「webhooks」 ，点击后，再点记右边的 「add webhooks」。
 
-{% img /images/jenkins/2_0.png %}
+![](/images/jenkins/2_0.png)
 
 在「Payload URL」位置填入webhook地址，再点击底部的「Add webhook」，这样就完成webhook配置了，今后当前工程有代码提交，GitHub就会向此webhook地址发请求，通知Jenkins构建。
 
@@ -114,15 +114,15 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 配置GitHub，如下图：
 
-{% img /images/jenkins/2_2.png %}
+![](/images/jenkins/2_2.png)
 
 在打开的页面中，向下拉，拉到 「github」
 
-{% img /images/jenkins/2_3.png %}
+![](/images/jenkins/2_3.png)
 
 填写完 1 之后，再 点击 2 ，出现
 
-{% img /images/jenkins/2_4.png %}
+![](/images/jenkins/2_4.png)
 
 在 「secret」中填写 「Personal access tokens」。
 
@@ -130,23 +130,23 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 然后点击链接测试，如果出现下面就说明没问题。
 
-{% img /images/jenkins/2_5.png %}
+![](/images/jenkins/2_5.png)
 
 然后，点击页面最底部的「保存」按钮。
 
 ## 构建项目
 
-{% img /images/jenkins/2_6.png %}
+![](/images/jenkins/2_6.png)
 
 <br/>
 
-{% img /images/jenkins/2_7.png %}
+![](/images/jenkins/2_7.png)
 
 接下来设置 jenkins 的配置信息，分为"源码管理设置"和"构建环境设置"两部分；
 
 ### 源码管理设置
 
-{% img /images/jenkins/2_8.png %}
+![](/images/jenkins/2_8.png)
 
 这里面的「Repository URL」要填写成项目地址，如下（要使用https）
 
@@ -160,7 +160,7 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 ### 构建触发器、构建环境设置、绑定
 
-{% img /images/jenkins/2_9.png %}
+![](/images/jenkins/2_9.png)
 
 在 bindings 我们选择上面配置的 GitHub Server （看上面的 「Jenkins配置」）
 
@@ -168,11 +168,11 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 这个是在 「构建后操作」
 
-{% img /images/jenkins/2_10.png %}
+![](/images/jenkins/2_10.png)
 
 <br/>
 
-{% img /images/jenkins/2_10.png %}
+![](/images/jenkins/2_10.png)
 
 编写完上面之后，就可以保存了。
 
@@ -182,11 +182,11 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 <br/>
 
-{% img /images/jenkins/2_12.png %}
+![](/images/jenkins/2_12.png)
 
 <br/>
 
-{% img /images/jenkins/2_11.png %}
+![](/images/jenkins/2_11.png)
 
 手动运行的话，可以点击右边绿色的键。
 
@@ -196,7 +196,7 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 <br/>
 
-{% img /images/jenkins/2_13.png %}
+![](/images/jenkins/2_13.png)
 
 这里面我们可以根据相应的选项，选择对应的操作，删除、修改等。
 
@@ -204,11 +204,11 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 ## workspace
 
-{% img /images/jenkins/2_14.png %}
+![](/images/jenkins/2_14.png)
 
 在执行的结果中，我们可以看到我们执行了多少次，如果想要查看执行的结果，可以点击前面的「小球」。
 
-{% img /images/jenkins/2_15.png %}
+![](/images/jenkins/2_15.png)
 
 <br/>
 
@@ -236,7 +236,7 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 配置项有点类似添加凭证：
 
-{% img /images/jenkins/2_17.png %}
+![](/images/jenkins/2_17.png)
 
 ## 构筑后脚本编写
 
@@ -244,6 +244,6 @@ webhooks 这个是当代码上传到 github 上，github 通知 jenkins 可以�
 
 下面是我添加的操作：
 
-{% img /images/jenkins/2_18.png %}
+![](/images/jenkins/2_18.png)
 
 

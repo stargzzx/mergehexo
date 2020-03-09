@@ -36,7 +36,7 @@ tags:
 
 项目进行到后期，接口越来越多，所以，接口分类也很重要，但是，我的文档接口其实并没有分类，但是，我在 postman 中分了类。
 
-{% img /images/eos_voter/6_0.png %}
+![](/images/eos_voter/6_0.png)
 
 <br/>
 
@@ -44,7 +44,7 @@ tags:
 
 <br/>
 
-{% img /images/eos_voter/6_1.png %}
+![](/images/eos_voter/6_1.png)
 
 <br/>
 

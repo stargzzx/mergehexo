@@ -27,11 +27,11 @@ tags:
 
 双点交叉就是在编码中随机设置两个交叉点，然后进行基因互换。
 
-{% img /images/machinelearningalgorithm/9_0.png %}
+![](/images/machinelearningalgorithm/9_0.png)
 
 多点交叉也是顾名思义，直接看例子吧。
 
-{% img /images/machinelearningalgorithm/9_1.png %}
+![](/images/machinelearningalgorithm/9_1.png)
 
 ## 均匀交叉
 
@@ -39,13 +39,13 @@ tags:
 
 贴一张过程图，加深你们的理解。
 
-{% img /images/machinelearningalgorithm/9_2.png %}
+![](/images/machinelearningalgorithm/9_2.png)
 
 ## 算数交叉
 
 直接贴图
 
-{% img /images/machinelearningalgorithm/9_3.png %}
+![](/images/machinelearningalgorithm/9_3.png)
 
 我们可以发现，这次的遗传并不是相互交换了，而是相互融合。所以对象是浮点类型。
 
@@ -65,11 +65,11 @@ tags:
 
 ## 均匀变异
 
-{% img /images/machinelearningalgorithm/9_4.png %}
+![](/images/machinelearningalgorithm/9_4.png)
 
 ## 边界变异
 
-{% img /images/machinelearningalgorithm/9_5.png %}
+![](/images/machinelearningalgorithm/9_5.png)
 
 这个变异方式就很极端，适合于最优解可能在定义域两端的方式下。
 
@@ -77,13 +77,13 @@ tags:
 
 很有意思的变异。
 
-{% img /images/machinelearningalgorithm/9_6.png %}
+![](/images/machinelearningalgorithm/9_6.png)
 
 ## 高斯变异
 
-{% img /images/machinelearningalgorithm/9_7.png %}
+![](/images/machinelearningalgorithm/9_7.png)
 
-{% img /images/machinelearningalgorithm/9_8.png %}
+![](/images/machinelearningalgorithm/9_8.png)
 
 交叉和变异这么多种算法并不是单个的孤岛，而是可以相互组合的。
 

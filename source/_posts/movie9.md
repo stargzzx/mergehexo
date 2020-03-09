@@ -36,4 +36,4 @@ tags:
 
 可能随着发展，长寿命已经触手可及，可惜，人类可能还是不断地死亡，又或者说不断地新生。
 
-{% img /images/movie/9.jpg %}
+![](/images/movie/9.jpg)

@@ -30,4 +30,4 @@ tags:
 
 电影十分，打六分吧，毕竟，表情包那么火，不看，好意思吗？
 
-{% img /images/movie/3.jpg %}
+![](/images/movie/3.jpg)

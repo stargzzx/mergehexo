@@ -24,4 +24,4 @@ tags:
 
 总之，这部电影只能算是快餐电影，留不了任何印象。结束，希望这种电影会越来越少。
 
-{% img /images/movie/21.jpeg %}
+![](/images/movie/21.jpeg)

@@ -35,7 +35,7 @@ PIL中有九种不同模式。分别为1，L，P，RGB，RGBA，CMYK，YCbCr，I
 
 本文我采用的示例图像是图像处理中经典的lena照片。分辨率为512x512的lena图片如下：
 
-{% img /images/python/27_1.jpg %}
+![](/images/python/27_1.jpg)
 
 #### 一、模式“RGB”转换为其他不同模式
 
@@ -69,7 +69,7 @@ PIL中有九种不同模式。分别为1，L，P，RGB，RGBA，CMYK，YCbCr，I
 
 图像lena_1的模式为“1”，分辨率为512x512，如下：
 
-{% img /images/python/27_2.jpg %}
+![](/images/python/27_2.jpg)
 
 2、 模式“L”
 
@@ -105,7 +105,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 转换后的图像lena_L如下：
 
-{% img /images/python/27_3.jpg %}
+![](/images/python/27_3.jpg)
 
 3、 模式“P”
 
@@ -131,7 +131,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 转换后的图像lena_P如下：
 
-{% img /images/python/27_4.png %}
+![](/images/python/27_4.png)
 
 4、 模式“RGBA”
 
@@ -165,7 +165,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 转换后的图像lena_rgba如下：
 
-{% img /images/python/27_5.jpg %}
+![](/images/python/27_5.jpg)
 
 5、 模式“CMYK”
 
@@ -204,7 +204,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 转换后的图像lena_cmyk如下：
 
-{% img /images/python/27_6.jpg %}
+![](/images/python/27_6.jpg)
 
 6、 模式“YCbCr”
 
@@ -241,7 +241,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 转换后的图像lena_ycbcr如下：
 
-{% img /images/python/27_7.jpg %}
+![](/images/python/27_7.jpg)
 
 7、 模式“I”
 
@@ -549,11 +549,11 @@ im.convert(mode,matrix) ⇒ image
 
 图像lena_L如下：
 
-{% img /images/python/27_8.jpg %}
+![](/images/python/27_8.jpg)
 
 图像lena_rgb如下：
 
-{% img /images/python/27_9.jpg %}
+![](/images/python/27_9.jpg)
 
 
 ### alpha_composite()
@@ -604,7 +604,7 @@ Image.new(mode, size, color) ⇒ image
 
 使用给定的变量mode和size生成新的图像。Size是给定的宽/高二元组，这是按照像素数来计算的。对于单通道图像，变量color只给定一个值；对于多通道图像，变量color给定一个元组（每个通道对应一个值）。在版本1.1.4及其之后，用户也可以用颜色的名称，比如给变量color赋值为“red”。如果没有对变量color赋值，图像内容将会被全部赋值为0（图像即为黑色）。如果变量color是空，图像将不会被初始化，即图像的内容全为0。这对向该图像复制或绘制某些内容是有用的。
 
-{% img /images/python/27_0.png %}
+![](/images/python/27_0.png)
 
 {% codeblock %}
 from PIL import Image

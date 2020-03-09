@@ -54,7 +54,7 @@ tags:
 
 结果出现这个错误。
 
-{% img /images/database/0_0.png %}
+![](/images/database/0_0.png)
 
 这个解决方案是重新安装，选择 custom 后，路径自己配置，然后全部默认就好了。
 
@@ -62,7 +62,7 @@ tags:
 
 我再安装的过程中，有一个选项是
 
-{% img /images/database/0_1.jpg %}
+![](/images/database/0_1.jpg)
 
 下一步安装 "install mongoDB compass" 不勾选，否则可能要很长时间都一直在执行安装，MongoDB Compass 是一个图形界面管理工具，我们可以在后面自己到官网下载安装。
 
@@ -72,7 +72,7 @@ tags:
 
 将这个取消勾选后，我重新安装，结果出现了这个错误。
 
-{% img /images/database/0_2.png %}
+![](/images/database/0_2.png)
 
 ##### 解决方法
 
@@ -89,7 +89,7 @@ tags:
 	输入——–mongod -dbpath d:\'这是你安装mongoDB的文件夹，根据你自己的命名来写'\data\db
 		我的是 mongodb d:\mongodb\data\db
 		
-{% img /images/database/0_3.png %}
+![](/images/database/0_3.png)
 
 我的不是上面那个界面，但是也差不多。
 
@@ -97,11 +97,11 @@ tags:
 	此时就成功连接数据库了。
 	如图所示
 
-{% img /images/database/0_4.png %}
+![](/images/database/0_4.png)
 
 这时，上上面的那个就变成
 
-{% img /images/database/0_5.png %}
+![](/images/database/0_5.png)
 
 到这里，就成功连接啦！
 
@@ -115,7 +115,7 @@ tags:
 
 结果出现了这个错误：
 
-{% img /images/database/0_6.png %}
+![](/images/database/0_6.png)
 
 这是因为 cmd 没有用管理员权限打开的结果。
 
@@ -135,7 +135,7 @@ tags:
 
 #### 首先确保上述路径中data和log文件夹已建好
 
-{% img /images/database/0_7.png %}
+![](/images/database/0_7.png)
 
 #### 输入sc delete MongoDB命令
 
@@ -143,13 +143,13 @@ tags:
 
 	sc delete MongoDB
 	
-{% img /images/database/0_8.png %}
+![](/images/database/0_8.png)
 
 #### 如何判断mongo服务已经开启
 
 "win+r" 进入“运行”界面，输入“services.msc”进入"服务"——> 如图
 
-{% img /images/database/0_9.png %}
+![](/images/database/0_9.png)
 
 ## 可视化安装
 

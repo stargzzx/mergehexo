@@ -92,7 +92,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 观看下一幅图：
 
-{% img /images/practice/14_0.png %}
+![](/images/practice/14_0.png)
 
 我们现在知道如何移动以及匹配了，那么新的问题来了，为什么这样移动就可以成功？
 
@@ -110,7 +110,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 回溯原理：
 
-{% img /images/practice/14_1.png %}
+![](/images/practice/14_1.png)
 	
 ## 代码
 
@@ -118,7 +118,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 首先是 next 代码，在此之前再上一个图。
 
-{% img /images/practice/14_2.png %}
+![](/images/practice/14_2.png)
 
 ### next
 

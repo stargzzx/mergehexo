@@ -95,7 +95,7 @@ from scrapy.http import Request
 
 ## 流程
 
-{% img /images/python/15.jpg %}
+![](/images/python/15.jpg)
 
 {% codeblock %}
 调用

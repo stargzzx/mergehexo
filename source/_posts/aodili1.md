@@ -29,7 +29,7 @@ tags:
 
 ## 卡尔·门格尔
 
-{% img /images/aodili/1_0.gif %}
+![](/images/aodili/1_0.gif)
 
 门格尔这个人，生于1840年，从流传下来的照片看，他是个面容忧郁的大胡子。但是，在大胡子的下面，却藏着一颗最敏锐、最富有创造力的心。门格尔早年是个财经记者，偶尔也写点通俗文学。30岁的时候，撰写一本革命性的书，书名叫《国民经济学原理》。正是在这本书里，门格尔颠覆了古典经济学的根基，引起了巨大的争论，这是怎么回事呢？
 
@@ -71,15 +71,15 @@ tags:
 
 ## 罗斯巴德
 
-{% img /images/aodili/1_1.jpg %}
+![](/images/aodili/1_1.jpg)
 
 ## 弗里德里希·哈耶克
 
-{% img /images/aodili/1_2.jpg %}
+![](/images/aodili/1_2.jpg)
 
 ## 汉斯·赫曼·霍普
 
-{% img /images/aodili/1_3.jpg %}
+![](/images/aodili/1_3.jpg)
 
 <br/>
 
@@ -95,7 +95,7 @@ tags:
 
 ## 欧根·冯·庞巴维克
 
-{% img /images/aodili/1_4.png %}
+![](/images/aodili/1_4.png)
 
 <br/>
 

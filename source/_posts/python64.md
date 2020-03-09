@@ -45,7 +45,7 @@ win的查找方式自己找，现在我们只说一下 linux 的版本。
 
 [pytorch](https://pytorch.org/)
 
-{% img /images/python/64_0.png %}
+![](/images/python/64_0.png)
 
 我们将会选择合适的系统和相应版本的命令，但是，如果没有找到对应版本，千万别胡乱安装，我们可以点击图中红框部分，查找之前的 pytroch 版本。
 

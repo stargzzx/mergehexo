@@ -36,7 +36,7 @@ tags:
 
 下面是搜集的颜色列表：
 
-{% img /images/hexo/12_0.png %}
+![](/images/hexo/12_0.png)
 
 <br/>
 

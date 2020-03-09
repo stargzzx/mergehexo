@@ -66,7 +66,7 @@ tags:
 
 在这里截一下这个图，我自己可以看一下 md 文件。
 
-{% img /images/hexo/15_1.png %}
+![](/images/hexo/15_1.png)
 
 添加完成后，回到博客根目录的_config.yml，把external_link的值改为false，默认的为true，这一步绝大多数教程中都没有写。
 
@@ -115,7 +115,7 @@ hexo g 是为了加载配置。
 
 因为渲染问题，导致下面的代码显示不一样，在这里截一下图。
 
-{% img /images/hexo/15_0.png %}
+![](/images/hexo/15_0.png)
 
 ## 流程图示例
 

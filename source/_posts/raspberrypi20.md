@@ -37,7 +37,7 @@ tags:
 	
 然后就是连线，还是延续上面的连线。
 
-{% img /images/raspberry/18_0.png %}
+![](/images/raspberry/18_0.png)
 
 我写的代码如下。
 
@@ -79,7 +79,7 @@ while True:
 
 其输入如下：
 
-{% img /images/raspberry/19_4.png %}
+![](/images/raspberry/19_4.png)
 
 额，我这个图因为接了底线所以是这样输出的。
 

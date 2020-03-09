@@ -74,7 +74,7 @@ MacBook
 
 这个应该是，下面的这个界面
 
-{% img /images/jenkins/1_0.png %}
+![](/images/jenkins/1_0.png)
 
 如果你没有办法穿过墙或者没有配置代理，那么，你会停留在这个界面很长时间。
 
@@ -112,7 +112,7 @@ MacBook
 
 这里改的地方，相当于，目前网上流行的那个更新站点的地方
 
-{% img /images/jenkins/1_1.png %}
+![](/images/jenkins/1_1.png)
 
 但是，改到这里依然不行，我们还需要更改
 
@@ -120,7 +120,7 @@ MacBook
 
 [参考资料](https://www.cnblogs.com/hellxz/p/jenkins_install_plugins_faster.html)
 
-{% img /images/jenkins/1_2.png %}
+![](/images/jenkins/1_2.png)
 
 这里我们发现，每个插件下载路径依旧没有改变，变的只是这个json是从清华源下来的，其内写死的插件下载地址是没有变的，还是从官网下载！
 
@@ -148,11 +148,11 @@ MacBook
 
 按照提示，一直出现
 
-	{% img /images/jenkins/0_0.png %}
+![](/images/jenkins/0_0.png)
 
 见证奇迹，妈妈再也不用担心插件安装不上了。
 
-{% img /images/jenkins/1_3.png %}
+![](/images/jenkins/1_3.png)
 
 后面就跟着提示来就可以了。
 
@@ -164,7 +164,7 @@ MacBook
 
 发现
 
-{% img /images/jenkins/1_4.png %}
+![](/images/jenkins/1_4.png)
 
 询问运维小哥后，他说出现这个正常，应该是版本问题，不需要管。（因为我点击 「纠正」 并没有出现安装插件）
 
@@ -178,7 +178,7 @@ ok，代理设置在这里就要结束了，感谢观看。
 
 按理说经过上面的配置，我安装确实是快了很多，但是，有一点很玄学的是，我在看
 
-{% img /images/jenkins/0_0.png %}
+![](/images/jenkins/0_0.png)
 
 安装的过程中很慢，于是，我想看看是不是代理换了，于是我主动输入
 
@@ -190,7 +190,7 @@ ok，代理设置在这里就要结束了，感谢观看。
 
 发现，确实变成了
 
-{% img /images/jenkins/1_1.png %}
+![](/images/jenkins/1_1.png)
 
 于是，我又退回（退回后，貌似它会自己重启，我忘记了）
 

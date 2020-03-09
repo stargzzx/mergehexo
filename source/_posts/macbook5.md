@@ -65,7 +65,7 @@ ps：我的文件有 BREW_REPO 。。。
 
 (查看了很多帮助，个人觉得有的po主用git://代替https://不会成功，害怕电脑连接不上，我直接试的就是https://）
 
-{% img /images/macbook/5_0.png %}
+![](/images/macbook/5_0.png)
 
 ## 开始安装
 
@@ -73,11 +73,11 @@ ps：我的文件有 BREW_REPO 。。。
 	
 看到如下说明安装成功
 
-{% img /images/macbook/5_1.png %}
+![](/images/macbook/5_1.png)
 
 。。。
 
-{% img /images/macbook/5_2.png %}
+![](/images/macbook/5_2.png)
 
 ps：安装过程缺失和图中差不多
 

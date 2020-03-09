@@ -44,4 +44,4 @@ tags:
 
 下面这幅图很容易验证我的理论。
 
-{% img /images/thought/0.jpg %}
+![](/images/thought/0.jpg)

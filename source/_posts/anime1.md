@@ -39,9 +39,9 @@ tags:
 
 下面贴一下图片。
 
-{% img /images/animes/1_0.jpg %}
+![](/images/animes/1_0.jpg)
 
 第三季的结尾说第四季可能遥遥无期了，但是我还是很希望第四季能上演的。你或许没看过这个番剧，但你或许在某些时候看见过下面这张图。
 
-{% img /images/animes/1_1.jpg %}
+![](/images/animes/1_1.jpg)
 

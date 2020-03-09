@@ -42,7 +42,7 @@ Google scholarA. Google scholar的镜像网站Google学术相信大家都不陌�
 
 PS:说一下我的个人问题，之前我的老电脑的翻墙软件是 xx-net ，性能很好，想要安装的同学可以去 github 搜索。老电脑可以同时访问国内外网站，但是，换了新电脑之后，如果开代理的话，只能访问国外网站，对于镜像，尤其是学术网站是完全不能访问的，呃呃呃，跑题了，在这里先提一下，你可以点击下方链接，了解详情。
 
-{% img /images/paper/2_0.png %}
+![](/images/paper/2_0.png)
 
 [glgoo镜像][https://scholar.glgoo.org/]
 
@@ -54,31 +54,31 @@ google scholar的检索方式
 
 google scholar的检索功能非常强大，下面以一篇文献为例来列举下这些可能的检索方式
 
-{% img /images/paper/2_1.jpg %}
+![](/images/paper/2_1.jpg)
 
 这篇文献的标题为：A general synthesis of mesoporous metal oxides with well-dispersed metal nanoparticles via a versatile sol–gel process，DOI：10.1039/C3TA00570D，卷期号：J. Mater. Chem. A, 2013, 1, 4038-4047, 出自浙江大学范杰老师课题组，第一作者为刘娟娟博士。文献的基本情况介绍完了，下面来看看google scholar到底灵不灵哈。
 
 	已知标题, 将标题输入http://scholar.glgoo.org/网站中，如下图所示：
 
-{% img /images/paper/2_2.png %}
+![](/images/paper/2_2.png)
 
 点击搜索之后，我们要找的文献就出现了。google scholar有一个好处，就是在它的检索结果中同时还会出现这篇文献的引用次数，同时还集成了引用这个功能，可以将文献的citation下载下来，导入Endnote等文献管理工具。
 
-{% img /images/paper/2_3.png %}
+![](/images/paper/2_3.png)
 
 请注意：Google scholar只是个检索工具，不提供文献免费下载，点击刚才的文献链接，会进入到期刊的官方网站，如果你所在的机构购买了这个期刊，那么就可以点击下载了。如果没有购买怎么办呢？可以使用[sci](http://sci-hub.cc) 这个文献下载神器（想了解用法，请继续阅读下方的sci-hub内容）
 
-{% img /images/paper/2_4.jpg %}
+![](/images/paper/2_4.jpg)
 
 ### 已知DOI（DOI是什么？如何有效地使用DOI？请继续阅读下方的DOI部分）
 
 	与已知标题类似，在google scholar中直接输入DOI，也可以检索到这篇文献
 
-{% img /images/paper/2_5.jpg %}
+![](/images/paper/2_5.jpg)
 
 	知道卷期号，也可以直接将卷期号输入到google scholar里面进行检索。
 
-{% img /images/paper/2_6.jpg %}
+![](/images/paper/2_6.jpg)
 
 温馨提示：采用卷期号来进行检索时，要特别注意格式，不要缺胳膊少腿的(比如缺页码)，否则很有可能会出现一大堆文献，甚至检索不出来。
 
@@ -88,11 +88,11 @@ google scholar的检索功能非常强大，下面以一篇文献为例来列举
 
 	例如输入Jie Fan;J. Mater. Chem. A; mesoporous,还是可以在第六页找到这篇文献
 
-{% img /images/paper/2_7.jpg %}
+![](/images/paper/2_7.jpg)
 
 在google scholar检索时，还可以通过左边的限制条件来缩小范围，还是刚才这个例子，输入Jie Fan;J. Mater. Chem. A; mesoporous之后，点击左边的2012年以来，要找的文献就出现在了第一页的第二条了。
 
-{% img /images/paper/2_8.jpg %}
+![](/images/paper/2_8.jpg)
 
 简单的来说，google scholar就是学术版的google，可以简单粗暴地进行检索，是文献检索中最常用的工具之一。
 
@@ -110,9 +110,9 @@ DOI全称为Digital Object Unique Identifier,即数字对象唯一标识符，�
 
 一般论文URL网页上面，论文PDF版本中都会有doi号码，有些时候在参考文献页码没出来之前引用时，也用DOI来进行引用。
 
-{% img /images/paper/2_9.jpg %}
+![](/images/paper/2_9.jpg)
 
-{% img /images/paper/2_10.jpg %}
+![](/images/paper/2_10.jpg)
 
 ### 知道DOI之后如何检索文献？
 
@@ -122,11 +122,11 @@ DOI自身就是一套非常完备的文献储存与检索系统，有非常方�
 	
 进入网站之后，在对话框中输入文献的doi进行检索可以直接链接到文献URL页面。还是刚才那篇JMCA,在dx.doi.org上输入doi进行检索，如下图所示：
 
-{% img /images/paper/2_11.jpg %}
+![](/images/paper/2_11.jpg)
 
 然后就跳入了RSC中文献的URL页面：
 
-{% img /images/paper/2_12.jpg %}
+![](/images/paper/2_12.jpg)
 
 当然，如果你的IP没有下载文献的权限的话，还是下不了，怎么办呢？接下来介绍文献下载神器——“sci-hub.cc”
 
@@ -140,11 +140,11 @@ http://sci-hub.cc可以采用论文标题，doi以及URL网址等方式进行检
 
 具体操作：在浏览器中输入sci-hub.cc，进入如下界面，输入文献的URL网址（如何找到URL网址？google scholar和doi都可以），DOI或者文献标题
 
-{% img /images/paper/2_13.jpg %}
+![](/images/paper/2_13.jpg)
 
 点击Open，就会加载文献的pdf版本供大家下载了（有的时候可能需要输入验证码才会弹出pdf视窗）。
 
-{% img /images/paper/2_14.jpg %}
+![](/images/paper/2_14.jpg)
 
 解析：如果仔细观察可以发现，采用URL网址下载文献的时候，其实相当于在URL网址中加入.sci-hub.cc。
 
@@ -160,11 +160,11 @@ http://sci-hub.cc可以采用论文标题，doi以及URL网址等方式进行检
 
 在google镜像网站中输入关键词“oxygen evolution reaction”
 
-{% img /images/paper/2_15.png %}
+![](/images/paper/2_15.png)
 
 点击搜索，会弹出来这样的页面：
 
-{% img /images/paper/2_16.jpg %}
+![](/images/paper/2_16.jpg)
 
 在google学术里面，左边可以设置搜索条件，比如时间，排序方式等等，比较简单，没有web of science那么细致，不过简单检索一个课题其实也还好（web of science的用法我们过段时间再来分享）。
 
@@ -185,17 +185,17 @@ Google学术有很多优点，
 	
 在检索到了5-10篇还不错的文献之后，你可以大致看看这些文献，如果觉得某篇文献不错，不妨针对这篇论文的通讯作者进行第二次检索，此次检索的关键词为“oxygen evolution reaction 作者名称”，以Daniel Nocera为例，在google scholar里面输入“oxygen evolution reaction Daniel Nocera”,搜索一下，可以看到这些文献：
 
-{% img /images/paper/2_17.jpg %}
+![](/images/paper/2_17.jpg)
 
 然后我们就发现这里面有一篇引用次数2000的Science，也有很多篇JACS等论文，所以，你至少已经找到了OER领域的一位大牛，然后你可以看看这些文献的Abstract，找几篇应用次数最高的文献来看看，然后你就了解了这个领域的一个部分了。
 
 类似的，再来检索下Thomas Jaramillo, 你又可以看到一些还不错的文献。
 
-{% img /images/paper/2_18.jpg %}
+![](/images/paper/2_18.jpg)
 
 然后，Yang Shao-Horn
 
-{% img /images/paper/2_19.jpg %}
+![](/images/paper/2_19.jpg)
 
 当你检索了领域内三位publications都还不错的教授，看了他们的一些代表性著作之后，基本上你应该了解到了这个领域的一小部分了。
 
@@ -207,7 +207,7 @@ Google学术有很多优点，
 
 最好有很相关的综述看一下，一目了然，迅速地了解到这个领域的基本情况，所以在检索和阅读相关文献的时候，最好看看有没有这方面的综述，有的话，可以先看看综述。比如说，你在检索Shannon Boettcher的时候，如果注意到这篇文献，那么你就省事了。
 
-{% img /images/paper/2_20.jpg %}
+![](/images/paper/2_20.jpg)
 
 这种Perspective或者review类型的文章最有利于不太熟悉这个领域的人来了解相关内容了，比如这篇论文就对OER催化剂进行了基本分类，里面引用到的文献基本涵盖了经典的文献以及领域内知名的学者，同时对这个领域的基本现状有所介绍，对领域未来的发展有所展望，对于了解整个领域非常有帮助。
 
@@ -215,11 +215,11 @@ Google学术有很多优点，
 
 举个例子：在google举个例子：在google scholar里面输入Shannon Boettcher,弹出来的第一条就是他的用户个人学术档案。
 
-{% img /images/paper/2_21.jpg %}
+![](/images/paper/2_21.jpg)
 
 点击进去之后，关注一下，以后他有新的论文出现的时候，你就会收到邮件了。
 
-{% img /images/paper/2_22.jpg %}
+![](/images/paper/2_22.jpg)
 
 ## 特别说明
 

@@ -67,4 +67,4 @@ tags:
 
 因为隔了好多天，所以也不想写了。。。见谅！
 
-{% img /images/movie/22.jpg %}
+![](/images/movie/22.jpg)

@@ -25,31 +25,31 @@ tags:
 
 IDE 的布局
 
-{% img /images/plug_in/1_2.png %}
+![](/images/plug_in/1_2.png)
 
 App的布局信息就像网页的HTML一样，保存了App上面各个元素的相对位置和各个参数。对于一个App而言，在不同分辨率的手机上，可能相同的元素有着不同的坐标点，但是这个元素的属性参数一般是不会变的。因此，如果使用元素的属性参数来寻找并控制这个元素，就能实现在不同分辨率手机上的精确定位。
 
 App的布局信息的格式与App的开发环境有关。点击F区的下拉菜单，可以看到这里能够指定不同的App开发环境。其中的Unity、Cocos-*等等一般是做游戏用的，Android是安卓原生App，iOS是苹果的App……如下图所示。
 
-{% img /images/plug_in/1_0.png %}
+![](/images/plug_in/1_0.png)
 
 以手机版知乎为例，由于它是Android原生的App，所以在F区下拉菜单选择Android，此时注意B区弹出提示，询问你是否要插入poco初始代码到当前输入光标的位置，点击Yes，如下图所示。
 
-{% img /images/plug_in/1_1.png %}
+![](/images/plug_in/1_1.png)
 
 此时，B区自动插入了一段代码，如下图所示。
 
-{% img /images/plug_in/1_3.png %}
+![](/images/plug_in/1_3.png)
 
 ## 定位并点击
 
 现在，点击E区的锁形图标，如下图所示。
 
-{% img /images/plug_in/1_4.png %}
+![](/images/plug_in/1_4.png)
 
 锁形图标激活以后，你再操作D区的屏幕，点击知乎App下面的知乎两个字，会发现屏幕上被点击的App并不会打开。但E区和C区却发生了变化，如下图所示。
 
-{% img /images/plug_in/1_5.png %}
+![](/images/plug_in/1_5.png)
 
 其中E区显示的树状结构就是当前屏幕的布局信息，这与Chrome开发者工具里面显示的HTML结构如出一辙。C区显示的是当前被我点中的元素的信息。
 
@@ -59,7 +59,7 @@ App的布局信息的格式与App的开发环境有关。点击F区的下拉菜�
 	
 写完代码以后运行程序，可以看到知乎App被打开了。如下图所示。
 
-{% img /images/plug_in/1_6.png %}
+![](/images/plug_in/1_6.png)
 
 >注意，如果你发现手机真机显示的界面与Airtest屏幕显示的手机界面不一致，可能是因为Airtest的屏幕被你锁定了。在F区点一下锁形图标，取消锁定，Airtest中的手机屏幕就会更新了
 
@@ -67,7 +67,7 @@ App的布局信息的格式与App的开发环境有关。点击F区的下拉菜�
 
 打开知乎以后，我想使用知乎的搜索功能，那么继续，把锁形图标激活，然后点击知乎顶部的搜索框，如下图所示：
 
-{% img /images/plug_in/1_7.png %}
+![](/images/plug_in/1_7.png)
 
 继续看C区显示的搜索框属性，可以看到这里有一个name属性，它的值是com.zhihu.android:id/input，还有一个text属性，它的值为蔡徐坤任 NBA 新春贺岁大使。能不能像前面打开知乎一样，使用text这个属性呢？也行，也不行。说它行，是因为你这么做确实现在能工作；说它不行，因为这是知乎的热门搜索关键词，随时会改变。你今天使用这一句话成功了，明天热门关键词变化了，那么你的代码就无法使用了。所以此时需要使用name这个属性。
 
@@ -75,7 +75,7 @@ App的布局信息的格式与App的开发环境有关。点击F区的下拉菜�
 
 另外还有一点，知乎首页的这个搜索框，实际上是不能输入内容的，当你点击以后，会跳转到另一个页面，如下图所示。
 
-{% img /images/plug_in/1_8.png %}
+![](/images/plug_in/1_8.png)
 
 因此你需要先点击一下这个输入框，跳转到真正的搜索界面：
 
@@ -83,7 +83,7 @@ App的布局信息的格式与App的开发环境有关。点击F区的下拉菜�
 	
 在真正的搜索界面如下图所示。
 
-{% img /images/plug_in/1_9.png %}
+![](/images/plug_in/1_9.png)
 
 可以看到，name属性的值依然是com.zhihu.android:id/input，此时就可以输入内容了。
 
@@ -95,11 +95,11 @@ App的布局信息的格式与App的开发环境有关。点击F区的下拉菜�
 
 输入了搜索关键词以后，再来看看当前页面，搜索出现了三个结果：
 
-{% img /images/plug_in/1_10.png %}
+![](/images/plug_in/1_10.png)
 
-{% img /images/plug_in/1_11.png %}
+![](/images/plug_in/1_11.png)
 
-{% img /images/plug_in/1_12.png %}
+![](/images/plug_in/1_12.png)
 
 通过对比这三个结果的属性信息，发现他们的name属性都是相同的，而text不同。如果像下面这样写点击动作：
 
@@ -133,7 +133,7 @@ App的布局信息的格式与App的开发环境有关。点击F区的下拉菜�
 
 方向示意图如下图所示：
 
-{% img /images/plug_in/1_13.png %}
+![](/images/plug_in/1_13.png)
 
 在一般情况下：
 

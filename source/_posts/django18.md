@@ -21,7 +21,7 @@ tags:
 	实现星座运势应用
 	实现每日笑话应用
 	
-{% img /images/django/18_0.png %}
+![](/images/django/18_0.png)
 
 <br/>
 
@@ -31,7 +31,7 @@ tags:
 
 目录结构
 
-{% img /images/django/18_2.png %}
+![](/images/django/18_2.png)
 
 ## menu.wxml
 
@@ -129,7 +129,7 @@ Page({
 
 整个的目录结构如下：
 
-{% img /images/django/18_1.png %}
+![](/images/django/18_1.png)
 
 这个请求的是 django 下面的 views 的 menu.py
 

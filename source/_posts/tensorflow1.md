@@ -233,7 +233,7 @@ print m_1    #output:  [[ 2.], [ 2.]]
 	)
 	
 reduce_sum() 就是求和，由于求和的对象是tensor，所以是沿着tensor的某些维度求和。函数名中加了reduce是表示求和后会降维，当然可以通过设置参数来保证不降维，但是默认就是要降维的。
-{% img /images/tensorflow/1_1.jpg %}
+![](/images/tensorflow/1_1.jpg)
 
 
 # S

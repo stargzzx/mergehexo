@@ -744,7 +744,7 @@ b(a())
 
 {% endcodeblock %}
 
-{% img /images/python/4_fun.jpg %}
+![](/images/python/4_fun.jpg)
 
 # 其他
 

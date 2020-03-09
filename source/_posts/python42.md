@@ -467,7 +467,7 @@ if __name__ == '__main__':
 
 我的电脑是4核，所以我开了4个线程，看一下CPU资源占有率：
 
-{% img /images/python/42_0.jpg %}
+![](/images/python/42_0.jpg)
 
 我们发现CPU利用率并没有占满，大致相当于单核水平。
 
@@ -497,7 +497,7 @@ if __name__ == '__main__':
         pass
 {% endcodeblock %}
 
-{% img /images/python/42_1.jpg %}
+![](/images/python/42_1.jpg)
 
 结果直接飙到了100%，说明进程是可以利用多核的！
 

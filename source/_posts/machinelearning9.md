@@ -33,17 +33,17 @@ Logistic回归又叫逻辑回归，虽然有回归二字，但却是一个分类
 
 所以，我们理想的函数是这样的，我们输入输入项之后，有一个函数可以输出 0 或者 1 。在这里先介绍海维赛德阶跃函数。
 
-{% img /images/machinelearningalgorithm/3_0.JPG %}
+![](/images/machinelearningalgorithm/3_0.JPG)
 
 但是这个函数有一个明显的缺点，就是从 0 直接跃到 1，这个瞬间跳跃很难处理，因为即便是数据再怎么浩瀚，一个预测值最终只能是概率预测，而不是绝对的分类预测，所以我们引入 sigmoid 函数。
 
 sigmoid 函数如下：
 
-{% img /images/machinelearningalgorithm/3_1.JPG %}
+![](/images/machinelearningalgorithm/3_1.JPG)
 
 其函数图像如下：
 
-{% img /images/machinelearningalgorithm/3_2.jpg %}
+![](/images/machinelearningalgorithm/3_2.jpg)
 
 我们是这样安排的，每一个特征乘以一个回归系数，然后所有的结果相加，即 W'X ，再将这个总和代入 sigmoid 函数中，进而得到范围为 0 - 1 之间的数值。
 
@@ -63,13 +63,13 @@ sigmoid 函数如下：
 
 我们设函数 F(x) ，假设函数是一个正 U 型。如下图所示：
 
-{% img /images/machinelearningalgorithm/3_3.jpeg %}
+![](/images/machinelearningalgorithm/3_3.jpeg)
 
 我们如何在曲线上选一个点，然后用某种手段到达最低点？
 
 假设我们的点 x1 在曲线的右边，那么我们对 F(x1) 求导，得到这点位于曲线上的导数(斜率)。最后我们得到下面这个式子：
 
-{% img /images/machinelearningalgorithm/3_12.JPG %}
+![](/images/machinelearningalgorithm/3_12.JPG)
 
 其中 a 为学习率，为正数，因为点在曲线右边，所以斜率为正，原 W 是一个正数，所以正数减去一个正数，所以点最后向左边移动。
 
@@ -85,39 +85,39 @@ sigmoid 函数如下：
 
 然后我们运用 sigmoid函数，得到下面的式子：
 
-{% img /images/machinelearningalgorithm/3_5.JPG %}
+![](/images/machinelearningalgorithm/3_5.JPG)
 
 而上面的 h(w) 就是最终的我们要预测分类的式子。
 
 h(w)函数的值有特殊的含义，它表示结果取1的概率，因此对于输入x分类结果为类别1和类别0的概率分别为：
 
-{% img /images/machinelearningalgorithm/3_6.JPG %}
+![](/images/machinelearningalgorithm/3_6.JPG)
 
 上述式子可化为：
 
-{% img /images/machinelearningalgorithm/3_7.JPG %}
+![](/images/machinelearningalgorithm/3_7.JPG)
 
 对数似然函数为：
 
-{% img /images/machinelearningalgorithm/3_8.JPG %}
+![](/images/machinelearningalgorithm/3_8.JPG)
 
 所以，我们根据上面推出：
 
-{% img /images/machinelearningalgorithm/3_9.JPG %}
+![](/images/machinelearningalgorithm/3_9.JPG)
 
 误差 J：
 
-{% img /images/machinelearningalgorithm/3_10.JPG %}
+![](/images/machinelearningalgorithm/3_10.JPG)
 
 于是上面式子我们可以得出：
 
-{% img /images/machinelearningalgorithm/3_11.JPG %}
+![](/images/machinelearningalgorithm/3_11.JPG)
 
 ### 求 J 的最小值
 
 可用下面公式：
 
-{% img /images/machinelearningalgorithm/3_12.JPG %}
+![](/images/machinelearningalgorithm/3_12.JPG)
 
 而这个公式的难点在于求导数。
 
@@ -127,7 +127,7 @@ h(w)函数的值有特殊的含义，它表示结果取1的概率，因此对于
 
 我直接写出最后的答案。
 
-{% img /images/machinelearningalgorithm/3_13.JPG %}
+![](/images/machinelearningalgorithm/3_13.JPG)
 
 我们都知道对于上述式子乘不乘 1/m 对图像都没有影响。
 
@@ -139,7 +139,7 @@ h(w)函数的值有特殊的含义，它表示结果取1的概率，因此对于
 
 我们直接看 《in Action》 中的式子：
 
-{% img /images/machinelearningalgorithm/3_14.JPG %}
+![](/images/machinelearningalgorithm/3_14.JPG)
 
 它之所以叫梯度上升，是因为相对于梯度下降这个式子将中间减号改为加号，但是为什么改为加号呢？
 
@@ -153,13 +153,13 @@ h(w)函数的值有特殊的含义，它表示结果取1的概率，因此对于
 
 梯度下降是为了找寻最低点，如下图所示：
 
-{% img /images/machinelearningalgorithm/3_15.png %}
+![](/images/machinelearningalgorithm/3_15.png)
 
 图中圆圈代表的是等高线。
 
 其实梯度下降往往找的不是最低点，因为目标函数的复杂导致图像是由多个凹图像组成，最终我们找的是局部最小值，如图所示：
 
-{% img /images/machinelearningalgorithm/3_16.png %}
+![](/images/machinelearningalgorithm/3_16.png)
 
 ## 梯度上升代码演示
 
@@ -208,11 +208,11 @@ print(gradAscent(data,label))
 
 我们绘制 testSet.txt 的图像如下：
 
-{% img /images/machinelearningalgorithm/3_17.jpg %}
+![](/images/machinelearningalgorithm/3_17.jpg)
 
 我们根据上面得到的 w 拟合直线，得：
 
-{% img /images/machinelearningalgorithm/3_18.jpg %}
+![](/images/machinelearningalgorithm/3_18.jpg)
 
 这里你可能有一个疑问，就是我们明明得到的是三个值，如何拟合一个二维数据。
 

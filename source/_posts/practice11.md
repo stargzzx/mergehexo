@@ -28,7 +28,7 @@ tags:
 
 如下图所示：
 
-{% img /images/practice/11_0.png %}
+![](/images/practice/11_0.png)
 
 这个算法的时间复杂度为 O(M + N)[其中 M N 为矩阵的行数和列数]，空间复杂度为 O(1)。
 

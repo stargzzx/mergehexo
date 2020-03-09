@@ -26,17 +26,17 @@ PSO 初始化一群随机粒子，然后叠代找到最优解。每次叠代，�
 
 如图所示：
 
-{% img /images/machinelearningalgorithm/10_0.png %}
+![](/images/machinelearningalgorithm/10_0.png)
 
 上面的加和为矢量加。
 
 每个粒子的位置和速度都以随机方式进行初始化，而后粒子的速度就超着全局最优和个体最优的方向靠近。
 
-{% img /images/machinelearningalgorithm/10_1.png %}
+![](/images/machinelearningalgorithm/10_1.png)
 
 看图是不是很懵逼，我也是。。。但是，可以知道的事，图中传递的一个信息是矢量相加。
 
-{% img /images/machinelearningalgorithm/10_2.png %}
+![](/images/machinelearningalgorithm/10_2.png)
 
 对于粒子速度的更新公式，我们可以分为三个部分。
 
@@ -46,23 +46,23 @@ PSO 初始化一群随机粒子，然后叠代找到最优解。每次叠代，�
 
 第三部分是所谓的群体认知，代表了群体经验对粒子飞行轨迹的影响，促使粒子朝着群体发现的最好的位置移动。
 
-{% img /images/machinelearningalgorithm/10_3.png %}
+![](/images/machinelearningalgorithm/10_3.png)
 
-{% img /images/machinelearningalgorithm/10_4.png %}
+![](/images/machinelearningalgorithm/10_4.png)
 
 ## 对 PSO 的改进
 
 ### 加惯性权重
 
-{% img /images/machinelearningalgorithm/10_5.png %}
+![](/images/machinelearningalgorithm/10_5.png)
 
-{% img /images/machinelearningalgorithm/10_6.png %}
+![](/images/machinelearningalgorithm/10_6.png)
 
 事实上，几乎大部分的粒子群算法都是按这个公式来写的。
 
 ### 加收缩因子
 
-{% img /images/machinelearningalgorithm/10_7.png %}
+![](/images/machinelearningalgorithm/10_7.png)
 
 ### 其它改进方法
 
@@ -70,9 +70,9 @@ PSO 初始化一群随机粒子，然后叠代找到最优解。每次叠代，�
 
 ## 算法边界条件
 
-{% img /images/machinelearningalgorithm/10_8.png %}
+![](/images/machinelearningalgorithm/10_8.png)
 
-{% img /images/machinelearningalgorithm/10_9.png %}
+![](/images/machinelearningalgorithm/10_9.png)
 
 有一篇论文就是专门论述这四种墙哪种最好，先说结论结论，是阻尼墙最好，这也可以用现实生活中的例子说明。
 

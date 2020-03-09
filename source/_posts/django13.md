@@ -140,17 +140,17 @@ class CommonResponseMixin(object):
 
 从本地相册选择图片或使用相机拍照。
 
-{% img /images/django/13_0.png %}
+![](/images/django/13_0.png)
 
 注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 wx.saveFile，在小程序下次启动时才能访问得到。
 
 success返回参数说明：
 
-{% img /images/django/13_1.png %}
+![](/images/django/13_1.png)
 
 File 对象结构如下:
 
-{% img /images/django/13_2.png %}
+![](/images/django/13_2.png)
 
 {% codeblock %}
 wx.chooseImage({
@@ -183,7 +183,7 @@ wx.chooseImage({
 },
 {% endcodeblock %}
 
-{% img /images/django/13_3.gif %}
+![](/images/django/13_3.gif)
 
 这里有一个非常奇怪的点是：
 
@@ -231,13 +231,13 @@ wx.chooseImage({
 
 OBJECT参数说明：
 
-{% img /images/django/13_4.png %}
+![](/images/django/13_4.png)
 
 注：文件的临时路径，在小程序本次启动期间可以正常使用，如需持久保存，需在主动调用 wx.saveFile，才能在小程序下次启动时访问得到。
 
 success返回参数说明：
 
-{% img /images/django/13_5.png %}
+![](/images/django/13_5.png)
 
 返回值：
 
@@ -249,11 +249,11 @@ success返回参数说明：
 
 downloadTask 对象的方法列表：
 
-{% img /images/django/13_6.png %}
+![](/images/django/13_6.png)
 
 onProgressUpdate 返回参数说明：
 
-{% img /images/django/13_7.png %}
+![](/images/django/13_7.png)
 
 wxml：
 
@@ -302,23 +302,23 @@ preview_img:function(){//图片预览函数
 
 发起 HTTPS 网络请求。
 
-{% img /images/django/13_8.png %}
+![](/images/django/13_8.png)
 
 #### object.method 的合法值
 
-{% img /images/django/13_9.png %}
+![](/images/django/13_9.png)
 
 #### object.dataType 的合法值
 
-{% img /images/django/13_10.png %}
+![](/images/django/13_10.png)
 
 #### object.responseType 的合法值
 
-{% img /images/django/13_11.png %}
+![](/images/django/13_11.png)
 
 #### object.success 回调函数
 
-{% img /images/django/13_12.png %}
+![](/images/django/13_12.png)
 
 data 参数说明
 
@@ -399,7 +399,7 @@ wx.request({
 </view>
 {% endcodeblock %}
 
-{% img /images/django/13_13.png %}
+![](/images/django/13_13.png)
 
 ### .js
 
@@ -480,6 +480,6 @@ Page({
 });
 {% endcodeblock %}
 
-{% img /images/django/13_14.gif %}
+![](/images/django/13_14.gif)
 
 关于后台 Django 的书写，在开头就已经给出。

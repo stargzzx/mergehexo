@@ -18,7 +18,7 @@ tags:
 
 位于视图和数据库之间
 
-{% img /images/django/1_0.png %}
+![](/images/django/1_0.png)
 
 python对象和数据库表之间转换
 
@@ -56,7 +56,7 @@ DATABASES = {
 	
 而当前文件夹下确实有这个文件
 
-{% img /images/django/0_4.png %}
+![](/images/django/0_4.png)
 
 <br/>
 
@@ -119,11 +119,11 @@ class Article(models.Model):
 
 	python manage.py makemigrations
 
-{% img /images/django/1_1.png %}
+![](/images/django/1_1.png)
 
 我们就会发现 blog\migrations\0001_initial.py 创建了。
 
-{% img /images/django/1_2.png %}
+![](/images/django/1_2.png)
 
 然后再执行
 
@@ -131,7 +131,7 @@ class Article(models.Model):
 
 这个命令就是运行迁移文件，把内容同步到数据库里面去
 
-{% img /images/django/1_3.png %}
+![](/images/django/1_3.png)
 
 
 

@@ -19,9 +19,9 @@ tensorboard 是 tensorflow 自带的。
 
 我们先看一下效果。
 
-{% img /images/tensorflow/12_0.png %}
+![](/images/tensorflow/12_0.png)
 
-{% img /images/tensorflow/12_1.png %}
+![](/images/tensorflow/12_1.png)
 
 是不是非常酷炫，用一种很直观的方式将神经网络图展示出来。
 
@@ -35,7 +35,7 @@ tensorboard 是 tensorflow 自带的。
 
 需要注意的是，这个命名是需要点击具体的数据才能打开
 
-{% img /images/tensorflow/12_2.png %}
+![](/images/tensorflow/12_2.png)
 
 ## 对神经层命名
 

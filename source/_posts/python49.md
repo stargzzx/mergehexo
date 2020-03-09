@@ -37,10 +37,10 @@ def add(x:int, y:int) -> int:
 
 然后特别要强调的是，Python 解释器并不会因为这些注解而提供额外的校验，没有任何的类型检查工作。也就是说，这些类型注解加不加，对你的代码来说没有任何影响
 
-{% img /images/python/49_0.jpg %}
+![](/images/python/49_0.jpg)
 
 输出：
-{% img /images/python/49_1.jpg %}
+![](/images/python/49_1.jpg)
 
 但这么做的好处是：
 
@@ -48,15 +48,15 @@ def add(x:int, y:int) -> int:
 
 让 IDE 了解类型，从而提供更准确的代码提示、补全和语法检查（包括类型检查，可以看到 str 和 float 类型的参数被高亮提示）
 
-{% img /images/python/49_2.jpg %}
+![](/images/python/49_2.jpg)
 
 在函数的 __annotations__ 属性中会有你设定的注解：
 
-{% img /images/python/49_3.jpg %}
+![](/images/python/49_3.jpg)
 
 输出：
 
-{% img /images/python/49_4.jpg %}
+![](/images/python/49_4.jpg)
 
 在 Python 3.6 中，又引入了对变量类型进行注解的方法：
 
@@ -82,7 +82,7 @@ def add(x:int, y:int) -> int:
 	
 如果类型都符合，则不会有任何输出，否则就会给出类似输出：
 
-{% img /images/python/49_5.jpg %}
+![](/images/python/49_5.jpg)
 
 这些新特性也许你并不会在代码中使用，不过当你在别人的代码中看到时，请按照对方的约定进行赋值或调用。
 

@@ -16,4 +16,4 @@ tags:
 
 挑了很久，最后还原默认设置才成功。
 
-{% img /images/computer/4_0.png %}
+![](/images/computer/4_0.png)

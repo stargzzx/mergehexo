@@ -65,4 +65,4 @@ tags:
 
 	我是疯子，我在自己的王国中是国王。
 	
- {% img /images/poem/0.jpg %}
+![](img)

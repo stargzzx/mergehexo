@@ -12,9 +12,9 @@ Django是MTV模式，其中Model是模型。
 
 Django构造了ORM框架，向下屏蔽了每一个数据库的差异，向上可以让开发者进行便捷的开发。
 
-{% img /images/django/25_0.png %}
+![](/images/django/25_0.png)
 
-{% img /images/django/25_1.png %}
+![](/images/django/25_1.png)
 
 我们需要 xmpp 中的 MySQL。
 

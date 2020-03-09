@@ -91,15 +91,15 @@ tags:
 	
 出现界面如下，选择第 5 个（我在网上查找的是另外的界面，所以，可能每一版的操作系统界面都不一样，但是只要找找就能找到）
 
-{% img /images/raspberry/8_0.png %}
+![](/images/raspberry/8_0.png)
 
 进去之后，找到 SSH 选项，然后按照步骤来就可以了
 
-{% img /images/raspberry/8_1.png %}
+![](/images/raspberry/8_1.png)
 
-{% img /images/raspberry/8_2.png %}
+![](/images/raspberry/8_2.png)
 
-{% img /images/raspberry/8_3.png %}
+![](/images/raspberry/8_3.png)
 
 至此树莓派的 SSH 就开启了，下面我们就要用 putty 连接了。
 
@@ -111,7 +111,7 @@ tags:
 
 	ifconfig
 
-{% img /images/raspberry/8_4.png %}
+![](/images/raspberry/8_4.png)
 
 我们可以获知树莓派的 IP 是 192.168.1.106
 
@@ -119,17 +119,17 @@ tags:
 
 从网上找的图片
 
-{% img /images/raspberry/8_5.png %}
+![](/images/raspberry/8_5.png)
 
 首次登录会和您确认连接密钥，请按“是”确认。只有首次登录会出现这个提示。
 
-{% img /images/raspberry/8_6.png %}
+![](/images/raspberry/8_6.png)
 
 登录后会提示输入用户名和密码，输入之后即可登录树莓派的命令行。
 
 （提示：Raspbian默认的用户名密码是pi/raspberry）
 
-{% img /images/raspberry/8_7.png %}
+![](/images/raspberry/8_7.png)
 
 ### putty 版本选择
 
@@ -145,7 +145,7 @@ tags:
 
 * 如果您使用英文版PuTTY，碰到命令行的中文乱码，请调整连接选项的：
 
-{% img /images/raspberry/8_8.png %}
+![](/images/raspberry/8_8.png)
 
 ### putty 连接超时
 
@@ -159,7 +159,7 @@ pc 的 ip 可以通过输入如下
 
 	ipconfig
 	
-{% img /images/raspberry/8_9.png %}
+![](/images/raspberry/8_9.png)
 
 3、确保putty中输入的IP是正确的，并且端号为默认22 。
 

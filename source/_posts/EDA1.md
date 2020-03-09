@@ -39,7 +39,7 @@ tags:
 
 <br/>
 
-{% img /images/EDA/1_0.png %}
+![](/images/EDA/1_0.png)
 
 <br/>
 

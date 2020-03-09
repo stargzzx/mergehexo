@@ -36,7 +36,7 @@ tags:
 
 [MVC设计思想](https://benpaodewoniu.github.io/2019/10/06/designthinkings0/)
 
-{% img /images/eos_voter/7_0.png %}
+![](/images/eos_voter/7_0.png)
 
 下面我想详细介绍一下各个文件夹的作用。
 
@@ -52,7 +52,7 @@ tags:
 
 这个文件夹里面存放着和数据库直接相关的文件，也就是直接对数据库进行增删改查。
 
-{% img /images/eos_voter/7_1.png %}
+![](/images/eos_voter/7_1.png)
 
 里面每一个文件都是映射了项目的一个大类，比如结算、投票、账号。
 
@@ -72,7 +72,7 @@ tags:
 
 ## service
 
-{% img /images/eos_voter/7_2.png %}
+![](/images/eos_voter/7_2.png)
 
 这个处理层，是介于 mian.py 和 models 之间的层。当，请求发到 main.py ，mian.py将请求转发到 service 对应的文件中，然后，service 对这个请求做分析，然后，根据结果，去调用 models 的处理函数。
 

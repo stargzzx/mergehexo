@@ -71,7 +71,7 @@ Django内置了很多中间件,其中之一就是CSRF中间件
 
 上面的那个选项是在项目中的 setting.py 文件内
 
-{% img /images/django/21_0.png %}
+![](/images/django/21_0.png)
 
 >对于GET请求，一般来说没有这个问题，CSRF通常是针对POST方法的！
 
@@ -79,7 +79,7 @@ Django内置了很多中间件,其中之一就是CSRF中间件
 
 如下所示：
 
-{% img /images/django/21_1.png %}
+![](/images/django/21_1.png)
 
 	<form id="comment_form" action="#"></form>
 	{% csrf_token %}   就是这个

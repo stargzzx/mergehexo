@@ -27,7 +27,7 @@ tags:
 		
 成功安装会出现下面的图片。
 
-{% img /images/django/0_0.png %}
+![](/images/django/0_0.png)
 
 图中出现了很多命令
 
@@ -55,7 +55,7 @@ tags:
 
 比如
 
-{% img /images/django/0_1.png %}
+![](/images/django/0_1.png)
 
 所以，我们要看好路径。
 
@@ -67,7 +67,7 @@ tags:
 
 	python manage.py runserver
 	
-{% img /images/django/0_2.png %}
+![](/images/django/0_2.png)
 
 <br/>
 
@@ -93,7 +93,7 @@ tags:
 
 一个项目包含一组配置和若干个应用
 
-{% img /images/django/0_3.png %}
+![](/images/django/0_3.png)
 
 从上图中可以看出，应用可以在不同的项目下重叠。
 
@@ -107,7 +107,7 @@ tags:
 	
 会在当前目录下创建一个 blog 应用
 
-{% img /images/django/0_4.png %}
+![](/images/django/0_4.png)
 
 # Django 应用的目录
 
@@ -218,7 +218,7 @@ class BlogConfig(AppConfig):
 
 就可以看见 hello world 了
 
-{% img /images/django/0_5.png %}
+![](/images/django/0_5.png)
 
 
 

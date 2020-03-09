@@ -53,4 +53,4 @@ WTF!!!
 很钦佩他。
 
 
-{% img /images/thought/1.jpg %}
+![](/images/thought/1.jpg)

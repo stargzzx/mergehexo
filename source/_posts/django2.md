@@ -46,7 +46,7 @@ Django 的 shell 也类似，继承了 Django 项目环境
 
 	python manage.py shell
 
-{% img /images/django/2_0.png %}
+![](/images/django/2_0.png)
 
 然后引入
 
@@ -54,11 +54,11 @@ Django 的 shell 也类似，继承了 Django 项目环境
 	
 如上面所示（上面那个打错了，第一个import 应该是 from）
 
-{% img /images/django/2_1.png %}
+![](/images/django/2_1.png)
 
 这个是直接存储文章。
 
-{% img /images/django/2_2.png %}
+![](/images/django/2_2.png)
 
 这个是查询数据库
 

@@ -40,7 +40,7 @@ tags:
 
 里面的目录结构如下
 
-{% img /images/django/7_0.png %}
+![](/images/django/7_0.png)
 
 值得一提的是，原来要创建一个 app 的话，会在 apis 下面创建一个 views.py 的文件，但是，我们创建了一个叫做 views 的文件夹，用来存放视图文件。
 
@@ -97,7 +97,7 @@ def helloworld(request):
 	
 通过 postman 软件，我们访问，就能得到正确得回应
 
-{% img /images/django/7_1.png %}
+![](/images/django/7_1.png)
 
 我们也可以在控制台看见输入的信息，在这里就不展示了。
 
@@ -137,7 +137,7 @@ def helloworld(request):
 
 ## 实战：实现天气查询应用
 
-{% img /images/django/7_2.png %}
+![](/images/django/7_2.png)
 
 使用了第三方聚合数据的API
 
@@ -145,7 +145,7 @@ def helloworld(request):
 
 目录结构如下：
 
-{% img /images/django/7_3.png %}
+![](/images/django/7_3.png)
 
 juhe.py的内容如下：
 
@@ -260,4 +260,4 @@ def weather(request):
 
 利用 postman 发送 POST 请求
 
-{% img /images/django/7_4.png %}
+![](/images/django/7_4.png)

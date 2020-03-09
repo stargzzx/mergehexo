@@ -16,7 +16,7 @@ tags:
 
 在 tensorflow 的例子中自带 MNIST 数据包，我们可以直接引用，如果我们的 tensorflow 没有这个包，那么它会自己下载的。如果有数据的话，它会直接读取。
 
-{% img /images/tensorflow/13_0.png %}
+![](/images/tensorflow/13_0.png)
 
 相关代码如下;
 
@@ -33,7 +33,7 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 目录如下：
 
-{% img /images/tensorflow/13_1.png %}
+![](/images/tensorflow/13_1.png)
 
 
 ## 参考 tensorflow 的文档写的代码

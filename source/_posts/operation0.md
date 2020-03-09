@@ -27,7 +27,7 @@ tags:
 
 <br/>
 
-{% img /images/operation/0_0.jpg %}
+![](/images/operation/0_0.jpg)
 
 <br/>
 
@@ -35,7 +35,7 @@ tags:
 
 <br/>
 
-{% img /images/operation/0_1.jpg %}
+![](/images/operation/0_1.jpg)
 
 看上面两张图片，就能明白了。你想，你看到朋友圈有人发这要结婚了，尤其是单身好多年的，会不会好奇？而刚结婚的如果要玩，换一个话术就可以了。比如，没想到这么快，再次步入婚姻的殿堂。
 

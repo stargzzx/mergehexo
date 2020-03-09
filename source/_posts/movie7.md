@@ -38,4 +38,4 @@ tags:
 
 垃圾。
 
-{% img /images/movie/7.jpg %}
+![](/images/movie/7.jpg)

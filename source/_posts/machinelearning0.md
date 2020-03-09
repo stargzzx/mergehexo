@@ -25,7 +25,7 @@ Bias和Variance分别从两个方面来描述了我们学习到的模型与真�
 
 方差：描述的是预测值的变化范围，离散程度，也就是离其期望值的距离。方差越大，数据的分布越分散，如下图右列所示。
 
-{% img /images/machinelearning/0_0.jpg %}
+![](/images/machinelearning/0_0.jpg)
 
 ## 数学解释
 
@@ -37,7 +37,7 @@ Bias和Variance分别从两个方面来描述了我们学习到的模型与真�
 
 因此，若有变量y作为预测值，以及X作为自变量（协变量），那么我们将数据背后的真实规律f记作
 
-{% img /images/machinelearning/0_1.JPG %}
+![](/images/machinelearning/0_1.JPG)
 
 ## 形象说明
 
@@ -59,7 +59,7 @@ Bias和Variance分别从两个方面来描述了我们学习到的模型与真�
 
 我们观看下图：
 
-{% img /images/machinelearning/0_2.jpg %}
+![](/images/machinelearning/0_2.jpg)
 
 所谓的偏差就是模型对本训练集的拟合程度。
 
@@ -96,7 +96,7 @@ Bias和Variance分别从两个方面来描述了我们学习到的模型与真�
 
 再看一个来自PRML的例子：
 
-{% img /images/machinelearning/0_3.jpg %}
+![](/images/machinelearning/0_3.jpg)
 
 这是一个曲线拟合的问题，对同分布的不同数据集进行了多次的曲线拟合，左边表示方差（variance），右边表示偏差（bias），绿色是真实值函数。
 
@@ -120,11 +120,11 @@ lnλ 表示的是模型的复杂度，这个值越小，表示模型的复杂程
 
 考虑到模型误差是偏差与方差的加和，因此我们可以绘制出这样的图像。
 
-{% img /images/machinelearning/0_4.png %}
+![](/images/machinelearning/0_4.png)
 
 图中的最优位置，实际上是Total Error曲线的拐点。我们知道，连续函数的拐点意味着此处一阶导数的值为0。即
 
-{% img /images/machinelearning/0_5.JPG %}
+![](/images/machinelearning/0_5.JPG)
 
 这个公式给出了寻找最优平衡点的数学描述。若模型复杂度小于平衡点，则模型的偏差会偏高，模型倾向于欠拟合；若模型复杂度大于平衡点，则模型的方差会偏高，模型倾向于过拟合。
 
@@ -138,7 +138,7 @@ lnλ 表示的是模型的复杂度，这个值越小，表示模型的复杂程
 
 因此，我们可以绘制出这样的图像。
 
-{% img /images/machinelearning/0_6.png %}
+![](/images/machinelearning/0_6.png)
 
 在上图左边区域，训练集与验证集的误差都很高，这块区域的偏差比较高。
 

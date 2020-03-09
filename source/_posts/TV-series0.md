@@ -44,4 +44,4 @@ NO,NO,NO
 
 附一张平平无奇古天乐。
 
-{% img /images/TV_series/0.jpg %}
+![](/images/TV_series/0.jpg)

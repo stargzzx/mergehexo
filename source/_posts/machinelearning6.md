@@ -41,7 +41,7 @@ C = (a1 - a2,b1 - b2)
 
 用 octave 画图：
 
-{% img /images/machinelearningalgorithm/0_0.jpg %}
+![](/images/machinelearningalgorithm/0_0.jpg)
 
 贴上测试代码
 
@@ -77,7 +77,7 @@ classty([1,2],group,labels,3)
 
 我用 octave 对特征一和特征二进行绘图。
 
-{% img /images/machinelearningalgorithm/0_1.jpg %}
+![](/images/machinelearningalgorithm/0_1.jpg)
 
 如图所示，三种魅力值不同的人几乎形成相应的集群。
 
@@ -123,7 +123,7 @@ error rate is : 0.050000
 
 如图所示（其中一个零）：
 
-{% img /images/machinelearningalgorithm/0_2.JPG %}
+![](/images/machinelearningalgorithm/0_2.JPG)
 
 图中是一个 32 * 32 的矩阵。
 
