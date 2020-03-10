@@ -36,6 +36,8 @@ tags:
 
 搜遍了全网得知是和一个叫做 hexo-renderer-marked 的模块（hexo 插件，在 hexo 的 node_modules）有关。
 
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)
+
 里面有一句话
 
 	![text](/path/to/image.jpg) becomes <img src="/blog/path/to/image.jpg" alt="text">
