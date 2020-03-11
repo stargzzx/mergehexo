@@ -146,8 +146,7 @@ class TCPServer:
             request, client_address = self.get_request()
             # 2. 处理请求
             try:
-                # self.process_request(request, client_address)
-                self.process_request_multithread(request, client_address)
+                self.process_request(request, client_address)
             except Exception as e:
                 print(e)
 
