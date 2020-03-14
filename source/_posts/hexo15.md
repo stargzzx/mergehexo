@@ -51,7 +51,7 @@ tags:
 
 完成上一步操作之后打开主题目录的themes/next/layout/_partials/footer.swig，这里因为我用的是next主题，其他主题应该大同小异，在footer.swig文件最后加上以下代码：
 
-{% codeblock %}
+```
 {% if theme.mermaid.enable %}
   <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
   <script>
@@ -60,13 +60,7 @@ tags:
     }
   </script>
 {% endif %}
-{% endcodeblock %}
-
-上面的代码显示不全，因为里面涉及了一下 markdown 的渲染标示。所以，建议看一下我参考的资料。
-
-在这里截一下这个图，我自己可以看一下 md 文件。
-
-![](/images/hexo/15_1.png)
+```
 
 添加完成后，回到博客根目录的_config.yml，把external_link的值改为false，默认的为true，这一步绝大多数教程中都没有写。
 
