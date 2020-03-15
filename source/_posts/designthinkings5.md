@@ -198,5 +198,45 @@ Inside Rectangle::draw() method.
 Inside Square::draw() method.
 ```
 
+### python 实现
 
+python 没有 java 的接口模式，并且，由于其不是强类型语言，所以实现起来非常容易。
+
+下面的这个例子，出现在
+
+[Design_pattern_of_python](https://github.com/w392807287/Design_pattern_of_python)
+
+python 的实现原理非常简单，就是需要什么对象，传入相关的判断条件就好了。
+
+```python
+class ChinaGetter:
+    """A simple localizer a la gettext"""
+    def __init__(self):
+        self.trans = dict(dog="小狗", cat="小猫")
+
+    def get(self, msgid):
+        """We'll punt if we don't have a translation"""
+        try:
+            return self.trans[msgid]
+        except KeyError:
+            return str(msgid)
+
+
+class EnglishGetter:
+    """Simply echoes the msg ids"""
+    def get(self, msgid):
+        return str(msgid)
+
+
+def get_localizer(language="English"):
+    """The factory method"""
+    languages = dict(English=EnglishGetter, China=ChinaGetter)
+    return languages[language]()
+
+# Create our localizers
+e, g = get_localizer("English"), get_localizer("China")
+# Localize some text
+for msgid in "dog parrot cat bear".split():
+    print(e.get(msgid), g.get(msgid))
+```
 
