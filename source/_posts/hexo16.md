@@ -19,6 +19,8 @@ tags:
 
 <br/>
 
+## 5.x 的解决方案
+
 [参考资料](https://github.com/iissnan/hexo-theme-next/issues/1908)
 
 里面人这么说
@@ -62,3 +64,17 @@ And in NexT page.swig value is set to 200:
 这个问题我至今没有解决。
 
 到后面有时间了，我或许会升级 next 和 hexo 来尝试解决。
+
+## 7.x 的解决方案
+
+这一版的 next 把相关的配置放到了 next 下的 \_config.yml 里面了。
+
+	tagcloud:
+	  # All values below are same as default, change them by yourself.
+	  min: 12 # Minimun font size in px
+	  max: 30 # Maxium font size in px
+	  start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
+	  end: "#111" # End color (hex, rgba, hsla or color keywords)
+	  amount: 600 # Amount of tags, change it if you have more than 200 tags
+
+找到后修改就好了。
