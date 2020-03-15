@@ -92,7 +92,7 @@ public interface Shape {
 }
 ```
 
-### 步骤二
+#### 步骤二
 
 - Rectangle.java
 
@@ -131,7 +131,7 @@ public class Circle implements Shape {
 }
 ```
 
-### 步骤三
+#### 步骤三
 
 创建一个工厂，生成基于给定信息的实体类的对象。
 
@@ -157,7 +157,7 @@ public class ShapeFactory {
 }
 ```
 
-### 步骤 4
+#### 步骤 4
 
 使用该工厂，通过传递类型信息来获取实体类的对象。
 
@@ -188,7 +188,7 @@ public class FactoryPatternDemo {
       shape3.draw();
 ```
 
-### 步骤五
+#### 步骤五
 
 执行程序，输出结果：
 
