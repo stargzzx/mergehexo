@@ -26,7 +26,7 @@ tags:
 
 下面这个是 python2.7 的操作，根据语法换成 3 就好了。
 
-{% codeblock %}
+```python
 # coding=utf-8
 from crontab import CronTab
 class Crontab_Update(object):
@@ -77,7 +77,8 @@ if __name__ == "__main__":
   print '&&&&&& del_crontab_jobs '
   crontab_update.del_crontab_jobs(commont_name, user)
   print 'end -------'
-{% endcodeblock %}
+```
+
 
 设置定时任务后：
 

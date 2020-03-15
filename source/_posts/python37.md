@@ -508,6 +508,7 @@ row * col * 列中列
 
 None 相当于 numpy.newaxis, 增加了一个轴
 
+```python
 import numpy as np
 arr3 = np.arange(9).reshape((3,3))
 print(arr3)
@@ -522,3 +523,4 @@ print(arr3[None,:])
 	[[[0 1 2]
 	  [3 4 5]
 	  [6 7 8]]]
+```
