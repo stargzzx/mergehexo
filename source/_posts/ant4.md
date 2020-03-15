@@ -1,10 +1,10 @@
 ---
-title: coinex | 现在的设计和部署
+title: ant | 现在的设计和部署
 date: 2020-02-23 23:18:31
 categories:
-- coinex
+- ant
 tags:
-- 币币生息
+- ant
 - coinex
 ---
 在公司已经干了都快满实习期了，这个大项目也有了很长足的发展，下面我说一下，目前的项目进展和其他总结吧。

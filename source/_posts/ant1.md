@@ -2,12 +2,10 @@
 title: coinex | bitmex
 date: 2019-11-24 22:24:44
 categories:
-- coinex
+- ant
 tags:
-- coinexbl
+- ant
 - bitmex
-- 量化
-- 币币生息
 ---
 这是我们公司做量化中，我做的bitmex接口的一些感悟。
 

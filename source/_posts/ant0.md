@@ -1,11 +1,10 @@
 ---
-title: coinex|数据库设计
+title: coinex | 数据库设计
 date: 2019-11-19 21:28:36
 categories:
-- coinex
+- ant
 tags:
-- 币币生息
-- 项目
+- ant
 - coinex
 ---
 这个讲述我的在币币生息所经历的项目——coinex。

@@ -1,11 +1,10 @@
 ---
-title: coinex| 整体流程展现 版本一
+title: coinex | 整体流程展现 版本一
 date: 2019-11-25 14:16:17
 categories:
-- coinex
+- ant
 tags:
-- 币币生息
-- 项目
+- ant
 - coinex
 ---
 这个非常重要，当然，目前我只是明白了如何对接交易所接口而已，对引擎的整体流程并不了解。

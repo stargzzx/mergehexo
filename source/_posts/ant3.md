@@ -2,10 +2,9 @@
 title: coinex | 三类联动
 date: 2019-12-07 20:12:26
 categories:
-- coinex
+- ant
 tags:
-- 币币生息
-- 项目
+- ant
 - coinex
 ---
 这个是做公司的项目的时候，找到的一个设计机制，我觉得挺牛逼的，虽然，应该但是，我还是记录一下。
