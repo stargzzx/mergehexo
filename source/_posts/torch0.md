@@ -16,6 +16,15 @@ tags:
 
 <br/>
 
+# 学习资料
+
+<br/>
+
+[pytorch-tutorial](https://github.com/yunjey/pytorch-tutorial)
+[DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
+
+<br/>
+
 # 安装 torch
 
 <br/>
