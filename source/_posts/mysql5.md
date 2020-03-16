@@ -121,3 +121,17 @@ utf8mb4 替换为 utf8
 	mysqldump -u root -p --compact=TRUE --add-drop-table=FALSE --create-options=FALSE --add-locks=TRUE --column-statistics=FALSE -t ant t_relation >> ~/tmp.sql
 
 ![](/images/mysql/5_3.png)
+
+<br/>
+
+# 新版的 sql 命令
+
+<br/>
+
+## mysqlpump
+
+mysql5.7以后，官方推荐用mysqlpump代替mysqldump，虽然只有一字之差，但是备份时间能缩短一半啊。
+
+执行以下命令，即可备份数据库：
+
+	mysqlpump -uroot -p mydatabase > bak.sql
