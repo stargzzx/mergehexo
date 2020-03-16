@@ -30,6 +30,6 @@ tags:
 
 我们可以使用下面的 
 
-	mysqlpump --login-path=liao mydatabase > bak.sql
+	mysqlpump --login-path=licong mydatabase > bak.sql
 
 进行免密导出。
