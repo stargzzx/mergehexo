@@ -45,7 +45,7 @@ C = (a1 - a2,b1 - b2)
 
 贴上测试代码
 
-{% codeblock %}
+```python
 import numpy as np
 import operator
 def createData():    #初始化测试样本，并为其赋予标签
@@ -67,7 +67,7 @@ def classty(inX,data,labels,k):  # inX 要分类的样本 data 训练样本 labe
     print(sortedClassCount[0][0])
 
 classty([1,2],group,labels,3)
-{% endcodeblock %}
+```
  
 ## Halen的第1001个男人
 

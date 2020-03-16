@@ -47,7 +47,7 @@ tags:
 
 我们在相关的python文件中写对应的代码，然后处理。和正常的python代码一样，只不过需要有两个注意点。
 
-{% codeblock %}
+```python
 from mitmproxy import ctx
 
 # 所有发出的请求数据包都会被这个方法所处理
@@ -85,13 +85,13 @@ def response(flow):
     info(str(response.cookies))
     # 打印响应报文内容
     info(str(response.text))
-{% endcodeblock %}
+```
 
 主要events一览表
 
 需要修改各种事件内容时，重写以下对应方法，这里主要用的是request、response方法
 
-{% codeblock %}
+```python
 import typing
 
 import mitmproxy.addonmanager
@@ -270,11 +270,11 @@ class Events:
             Update is called when one or more flow objects have been modified,
             usually from a different addon.
         """
-{% endcodeblock %}
+```
 
 针对http，常用的API
 
-{% codeblock %}
+```python
 #http.HTTPFlow 实例 flow
 flow.request.headers #获取所有头信息，包含Host、User-Agent、Content-type等字段
 flow.request.url #完整的请求地址，包含域名及请求参数，但是不包含放在body里面的请求参数
@@ -296,11 +296,11 @@ flow.response.text#返回内容，已解码
 flow.response.content #返回内容，二进制
 flow.response.setText()#修改返回内容，不需要转码
 #以上为不完全列举
-{% endcodeblock %}
+```
 
 # 一个例子
 
-{% codeblock %}
+```python
 #修改response内容，这里是服务器已经有返回了结果，再更改，也可以做不经过服务器处理，直接返回，看需求
 def response(flow:http.HTTPFlow)-> None:
     #特定接口需要返回1001结果
@@ -319,7 +319,7 @@ def response(flow:http.HTTPFlow)-> None:
         ctx.log.info("#"*50)
     elif  flow.request.host in  host_list:#host_list 域名列表，作为全局变量，公司有多个域名，也隐藏
         ctx.log.info("response= "+flow.response.text)
-{% endcodeblock %}
+```
 
 
 

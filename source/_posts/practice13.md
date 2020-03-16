@@ -45,7 +45,7 @@ tags:
 
 ### 代码
 
-{% codeblock %}
+```python
 def getNext(substr,next):
     i = 0
     j = -1
@@ -136,4 +136,4 @@ print(substr)
 next = [None for k in range(len(substr))]
 getNext(substr,next)
 print(KMP(str,substr,next))
-{% endcodeblock %}
+```

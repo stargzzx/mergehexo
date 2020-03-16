@@ -18,7 +18,7 @@ tags:
 
 ![](/images/python/24_0.png)
 
-{% codeblock %}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -33,6 +33,6 @@ R = y ** 2 - 10 * np.cos(2 * np.pi * y) + 10
 Z = B + R
 ax.plot_surface(x,y,Z,rstride=1,cstride=1,cmap=plt.get_cmap('rainbow'))
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/24_1.png)

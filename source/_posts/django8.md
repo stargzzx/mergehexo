@@ -101,27 +101,27 @@ url中的过滤信息（分页、指定）
 
 在 project 中的 urls.py 文件中，编写
 
-{% codeblock %}
+```python
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('weather/',include('apis.urls'))
     path('api/v1.0',include('django_test.version_1_0'))
 ]
-{% endcodeblock %}
+```
 
 然后，在project中建立 version_1_0.py文件，编写
 
-{% codeblock %}
+```python
 from django.urls import path,include
 
 urlpattern = [
     path('service/',include('apis.urls'))
 ]
-{% endcodeblock %}
+```
 
 在 apis 中的 urls.py 中编写
 
-{% codeblock %}
+```python
 from django.urls import path
 from .views import weather
 
@@ -129,4 +129,4 @@ urlpatterns = [
     path('weather',weather.weather)
 ]
 然后，在apis 的views中编写页面就好了
-{% endcodeblock %}
+```

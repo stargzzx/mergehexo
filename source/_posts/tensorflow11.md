@@ -12,7 +12,7 @@ tags:
 
 <!-- more -->
 
-{% codeblock %}
+```python
 import tensorflow as tf
 import numpy as np
 import time
@@ -67,6 +67,6 @@ for _ in range(1000):
     sess.run(train_step,feed_dict={xs:x_data,ys:y_data})
     if _ % 50 == 0:
         print(sess.run(loss,feed_dict={xs:x_data,ys:y_data}))
-{% endcodeblock %}
+```
 
 

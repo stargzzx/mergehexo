@@ -48,7 +48,7 @@ tags:
 
 代码：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 # 定义输入和参数
 x = tf.constant([[0.7,0.5]])
@@ -65,7 +65,7 @@ with tf.Session() as sess:
 	sess.run(init_op)			# 官方定义
 	print("y is",sess.run(y))
 		# y is [[3.0904665]]
-{% endcodeblock %}
+```
 
 但是有时候我们不知道到底有多少数据。
 
@@ -81,7 +81,7 @@ with tf.Session() as sess:
 
 代码（喂一组数据）：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 # 定义输入和参数
 x = tf.placeholder(tf.float32,shape=(1,2))
@@ -98,11 +98,11 @@ with tf.Session() as sess:
 	sess.run(init_op)
 	print("y is",sess.run(y,feed_dict={x:[[0.7,0.5]]}))
 		# y is [[3.0904665]]
-{% endcodeblock %}
+```
 
 代码（喂多组数据）：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 # 定义输入和参数
 x = tf.placeholder(tf.float32,shape=(None,2))
@@ -121,7 +121,7 @@ with tf.Session() as sess:
 		#y is [[3.0904665]
 				[2.2305048]]
 	print("W1 is ",sess.run(W1)) # 打印中间值
-{% endcodeblock %}
+```
 
 ### global_variables_initializer()
 

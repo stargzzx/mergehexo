@@ -17,7 +17,7 @@ tags:
 
 多余的话不再说，只是把代码 copy 一下。(PS：现在我好累啊，真他喵的累)
 
-{% codeblock %}
+```python
 class Node: #节点类
 	def __init__(self,k):
 		self.k = k
@@ -65,4 +65,4 @@ class Tree: #二叉树类
 			last = nlast
 			if last == node:
 					print('\n')					
-{% endcodeblock %}
+```

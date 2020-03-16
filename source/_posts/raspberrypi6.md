@@ -39,7 +39,7 @@ tags:
 
 使用 nano （命令行）文本编辑工具，新建一个python 脚本文件 test.py
 
-{% codeblock %}
+```python
 import RPi.GPIO as GPIO
 import time
 
@@ -51,7 +51,7 @@ while True:
     time.sleep(0.5)
     GPIO.output(25, GPIO.LOW)
     time.sleep(0.5)
-{% endcodeblock %}
+```
 
 按 Ctrl + O 保存文件，然后按 Enter回车键 退出 nano工具。
 

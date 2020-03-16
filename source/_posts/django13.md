@@ -36,7 +36,7 @@ tags:
 
 ## 编写图片上传，下载，删除代码
 
-{% codeblock %}
+```python
 import os
 from django.http import Http404, HttpResponse, FileResponse,JsonResponse
 from backend import settings
@@ -82,11 +82,11 @@ class ImageView(View,utils.response.CommonResponseMixin):
         message = 'put method success'
         response = self.wrap_json_response(message=message,code=utils.response.ReturnCode.SUCCESS)
         return JsonResponse(data=response, safe=False)
-{% endcodeblock %}
+```
 
 其中 utils.response 文件内容如下：
 
-{% codeblock %}
+```python
 class ReturnCode:
     SUCCESS = 0
     FAILED = -100
@@ -120,7 +120,7 @@ class CommonResponseMixin(object):
         response['result_code'] = code
         response['message'] = message
         return response
-{% endcodeblock %}
+```
 
 关于这个有一个非常需要注意的一点就是，在这个 CommonResponseMixin 类的 wrap_json_response 方法里面有一个 cls ，它是接受传过来的 request 的，必须存在，否则会报错
 
@@ -152,7 +152,7 @@ File 对象结构如下:
 
 ![](/images/django/13_2.png)
 
-{% codeblock %}
+```python
 wx.chooseImage({
     count: 1, // 默认9
     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -162,11 +162,11 @@ wx.chooseImage({
         var tempFilePaths = res.tempFilePaths
     }
 })
-{% endcodeblock %}
+```
 
 这里尤其要注意的是 tempFilePath可以作为img标签的src属性显示图片
 
-{% codeblock %}
+```python
 // 选择图片上传
 chooseImage: function(e) {
 var that = this;
@@ -181,7 +181,7 @@ wx.chooseImage({
   }
 })
 },
-{% endcodeblock %}
+```
 
 ![](/images/django/13_3.gif)
 
@@ -197,7 +197,7 @@ wx.chooseImage({
 
 ### wx.uploadFile
 
-{% codeblock %}
+```python
 wx.chooseImage({
   success: function(res) {
     var tempFilePaths = res.tempFilePaths
@@ -216,7 +216,7 @@ wx.chooseImage({
     })
   }
 })
-{% endcodeblock %}
+```
 
 这里要说明一下：
 
@@ -257,14 +257,14 @@ onProgressUpdate 返回参数说明：
 
 wxml：
 
-{% codeblock %}
+```python
 <button bindtap='down_file'>下载</button>//用来触发下载函数的按钮
 <view><image src='{{img_l}}' bindtap='preview_img'></image></view>
-{% endcodeblock %}
+```
 
 下载的资源在服务器中支持：
 
-{% codeblock %}
+```python
 page({
       data:{
         img_l:''
@@ -296,7 +296,7 @@ preview_img:function(){//图片预览函数
     })
   }
 })
-{% endcodeblock %}
+```
 
 ### wx.request
 
@@ -330,7 +330,7 @@ data 参数说明
 
 示例代码
 
-{% codeblock %}
+```python
 wx.request({
   url: 'test.php', //仅为示例，并非真实的接口地址
   data: {
@@ -344,13 +344,13 @@ wx.request({
     console.log(res.data)
   }
 })
-{% endcodeblock %}
+```
 
 ## 具体应用
 
 ### .wxml
 
-{% codeblock %}
+```python
 <view class="page">
   <view class="page__hd">
     <view class="page__title">图片备份</view>
@@ -397,13 +397,13 @@ wx.request({
     <view class='text-center' wx:if="{{downloadedBackupedFiles.length == 0}}">暂无</view>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 ![](/images/django/13_13.png)
 
 ### .js
 
-{% codeblock %}
+```python
 const app = getApp()
 const imageUrl = app.globalData.serverUrl + app.globalData.apiVersion + '/service/image'
 
@@ -478,7 +478,7 @@ Page({
     })
   }
 });
-{% endcodeblock %}
+```
 
 ![](/images/django/13_14.gif)
 

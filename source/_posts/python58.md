@@ -20,7 +20,7 @@ python @classmethod 的使用场合
 
 看下面的定义的一个时间类：
 
-{% codeblock %}
+```python
 class Data_test(object):
     day=0
     month=0
@@ -47,7 +47,7 @@ month :
 8
 day :
 1
-{% endcodeblock %}
+```
 
 符合期望。
 
@@ -63,7 +63,7 @@ day :
 
 那么@classmethod 就开始出场了
 
-{% codeblock %}
+```python
 class Data_test2(object):
     day=0
     month=0
@@ -88,7 +88,7 @@ class Data_test2(object):
         print self.month
         print "day :"
         print self.day
-{% endcodeblock %}
+```
 
 在Date_test类里面创建一个成员函数， 前面用了@classmethod装饰。 它的作用就是有点像静态类，比静态类不一样的就是它可以传进来一个当前类作为第一个参数。
 

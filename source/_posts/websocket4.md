@@ -12,7 +12,7 @@ tags:
 
 <!-- more -->
 
-{% codeblock %}
+```python
 import websocket
 
 
@@ -41,6 +41,6 @@ if __name__ == "__main__":
                                 on_close=on_close)
     ws.on_open = on_open
     ws.run_forever(http_proxy_host='127.0.0.1', http_proxy_port=1087)
-{% endcodeblock %}
+```
 
 里面的端口号 1087 是我 vpn 的端口号，各位可以根据自己的需要换。

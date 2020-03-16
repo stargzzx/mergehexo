@@ -166,7 +166,7 @@ TensorFlow的最优化方法tf.train.GradientDescentOptimizer包办了梯度下�
 		
 ## 代码
 
-{% codeblock %}
+```python
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -275,7 +275,7 @@ with tf.Session() as sess:
 plt.scatter(X[:,0],X[:,1],c = np.squeeze(Y_c))
 plt.contour(xx,yy,probs,levels=[.5])
 plt.show()
-{% endcodeblock %}
+```
 
 ## 数据展示
 

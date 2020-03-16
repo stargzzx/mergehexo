@@ -20,7 +20,7 @@ tags:
 
 否则会报错。
 
-{% codeblock %}
+```python
 import multiprocessing as mp
 
 def job(a,d):
@@ -32,11 +32,11 @@ if __name__ == '__main__':
     p1.join()
 	
 		# aaaaaa
-{% endcodeblock %}
+```
 
 ## queue进程输出
 
-{% codeblock %}
+```python
 import multiprocessing as mp
 
 def job(q):
@@ -57,11 +57,11 @@ if __name__=='__main__':
     res2 = q.get()
     print(res1+res2)
 		# 499667166000
-{% endcodeblock %}
+```
 
 ## 效率比较 multithreading multiprocessing
 
-{% codeblock %}
+```python
 import multiprocessing as mp
 import threading as td
 import time
@@ -119,7 +119,7 @@ if __name__ == '__main__':
 		# multithread time: 1.4985547065734863
 		# multicore: 499999666667166666000000
 		# multicore time: 0.8846650123596191
-{% endcodeblock %}
+```
 
 ## 进程池 pool
 
@@ -131,7 +131,7 @@ pool 是一个进程池，我们把值和函数传给进程池，进程池就会
 
 	pool = mp.Pool(processes = 2)
 	
-{% codeblock %}
+```python
 import multiprocessing as mp
 
 def job(x):
@@ -145,11 +145,11 @@ def multicore():
 if __name__ == '__main__':
     multicore()
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-{% endcodeblock %}
+```
 
 只输出一个核的结果
 
-{% codeblock %}
+```python
 import multiprocessing as mp
 
 def job(x):
@@ -169,9 +169,9 @@ if __name__ == '__main__':
     multicore()
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 		# [25]	
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import multiprocessing as mp
 
 def job(x):
@@ -193,7 +193,7 @@ if __name__ == '__main__':
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 		# [25]
 		# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-{% endcodeblock %}
+```
 
 ## 共享内存
 

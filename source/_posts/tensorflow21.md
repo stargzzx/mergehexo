@@ -97,7 +97,7 @@ numpy
 
 ## code
 
-{% codeblock %}
+```python
 from skimage import io,transform
 import glob
 import os
@@ -276,7 +276,7 @@ for epoch in range(n_epoch):
 
 saver.save(sess,model_path)
 sess.close()
-{% endcodeblock %}
+```
 
 
 

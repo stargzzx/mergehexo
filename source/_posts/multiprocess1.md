@@ -64,7 +64,7 @@ authkey、daemon（要通过start()设置）、exitcode(进程在运行时为Non
 
 <br/>
 
-{% codeblock %}
+```python
 import time
 from multiprocessing import Process
 
@@ -89,7 +89,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-{% endcodeblock %}
+```
 
 运行结果
 
@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
 join()方法可以在当前位置阻塞主进程，带执行join()的进程结束后再继续执行主进程的代码逻辑。
 
-{% codeblock %}
+```python
 from multiprocessing import Process
 import os
 import time
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     p1.join()
     p2.join()
     print (now() + ' Process end .')
-{% endcodeblock %}
+```
 
 输出的内容
 
@@ -174,7 +174,7 @@ if __name__ == '__main__':
 
 直接上一下代码
 
-{% codeblock %}
+```python
 from multiprocessing import Process
 import os
 import time
@@ -206,7 +206,7 @@ if __name__ == '__main__':
     p2.start()
     p2.join()
     print (now() + ' Process end .')
-{% endcodeblock %}
+```
 
 其输出如下
 
@@ -223,7 +223,7 @@ if __name__ == '__main__':
 
 ## 去掉 join() 函数
 
-{% codeblock %}
+```python
 if __name__ == '__main__':
     print ('Parent process %s.' % os.getpid())
     p1 = Process(target=func_1, args=('func_1',))
@@ -232,7 +232,7 @@ if __name__ == '__main__':
     p1.start()
     p2.start()
     print now() + ' Process end .'
-{% endcodeblock %}
+```
 
 结果显示
 
@@ -249,7 +249,7 @@ if __name__ == '__main__':
 
 ## 去掉func_2 的 join()
 
-{% codeblock %}
+```python
 if __name__ == '__main__':
     print ('Parent process %s.' % os.getpid())
     p1 = Process(target=func_1, args=('func_1',))
@@ -259,7 +259,7 @@ if __name__ == '__main__':
     p2.start()
     p1.join()  ### 在p1 执行完之后 。不等待p2 执行，主进程结束。
     print now() + ' Process end .'
-{% endcodeblock %}
+```
 
 结果如下:
 

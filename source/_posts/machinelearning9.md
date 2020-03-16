@@ -165,7 +165,7 @@ h(w)函数的值有特殊的含义，它表示结果取1的概率，因此对于
 
 说完原理，在这里我要贴一下代码。
 
-{% codeblock %} 
+```python
 import numpy as np
 import math
 def loadData():
@@ -200,7 +200,7 @@ print(gradAscent(data,label))
 	# [[ 4.12414349]
 		[ 0.48007329]
 		[-0.6168482 ]]
-{% endcodeblock %}
+```
 
 关于上述代码可能存在一个异常，在这里你可以看一下我的博文，异常编号是 1 ：TypeError: only size-1 arrays can be converted to Python scalars
 
@@ -236,9 +236,9 @@ print(gradAscent(data,label))
 
 看改进的如下代码：
 
-{% codeblock %} 
+```python
 最后的改进代码，运算起来不尽人意，所以暂时不贴了
-{% endcodeblock %}
+```
 
 
 

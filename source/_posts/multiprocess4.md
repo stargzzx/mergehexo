@@ -22,7 +22,7 @@ tags:
 
 下面我们来举个例子说明如果多线程在没有同步锁的情况下访问公共资源会导致什么情况
 
-{% codeblock %}
+```python
 import threading
 import time
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         t.join()
     print('num is %d' % num)
     print('结束测试同步锁 at %s' % time.ctime())
-{% endcodeblock %}
+```
 
 上面的例子其实很简单就是创建100的线程，然后每个线程去从公共资源num变量去执行减1操作，按照正常情况下面，等到代码执行结束，打印num变量，应该得到的是0，因为100个线程都去执行了一次减1的操作。
 
@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
 这里就要借助于python的同步锁了，也就是同一时间只能放一个线程来操作num变量，减1之后，后面的线程操作来操作num变量。看看下面我们怎么实现。
 
-{% codeblock %}
+```python
 import threading
 import time
 
@@ -108,7 +108,7 @@ if __name__ == '__main__':
         t.join()
     print('num is %d' % num)
     print('结束测试同步锁 at %s' % time.ctime())
-{% endcodeblock %}
+```
 
 看到上面我们给中间的减1代码块，加个一把同步锁，这样，我们就可以得到我们想要的结果了，这就是同步锁的作用，一次只有一个线程操作同享资源。
 
@@ -140,7 +140,7 @@ if __name__ == '__main__':
 
 python中在线程间共享多个资源的时候，如果两个线程分别占有一部分资源并且同时等待对方的资源，就会造成死锁，因为系统判断这部分资源都正在使用，所有这两个线程在无外力作用下将一直等待下去。下面是一个死锁的例子：
 
-{% codeblock %}
+```python
 import threading
 import time
 
@@ -184,7 +184,7 @@ if __name__ == "__main__":
     for i in range(0, 10):  #建立10个线程
         my_thread = MyThread()  #类继承法是python多线程的另外一种实现方式
         my_thread.start()
-{% endcodeblock %}
+```
 
 代码执行hung住，死锁了
 
@@ -213,7 +213,7 @@ if __name__ == "__main__":
 
 下面我们用递归锁RLock解决上面的死锁问题
 
-{% codeblock %}
+```python
 import threading
 import time
 
@@ -257,7 +257,7 @@ if __name__ == "__main__":
     for i in range(0, 10):  #建立10个线程
         my_thread = MyThread()  #类继承法是python多线程的另外一种实现方式
         my_thread.start()
-{% endcodeblock %}
+```
 
 上面我们用一把递归锁，就解决了多个同步锁导致的死锁问题。大家可以把RLock理解为大锁中还有小锁，只有等到内部所有的小锁，都没有了，其他的线程才能进入这个公共资源。
 

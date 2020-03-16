@@ -14,7 +14,7 @@ Here is tips of octave.
 
 ### 1
 
-{% codeblock %}
+```python
 A = [1 2;1 4]
 	A = [
 		1 2
@@ -41,7 +41,7 @@ end;
 		1   0   1
 		0   0   0
 		1   0   0
-{% endcodeblock %}
+```
 
 ### 2
 

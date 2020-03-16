@@ -26,7 +26,7 @@ tags:
 
 图象是 2 * 3
 
-{% codeblock %}
+```python
 x = tf.constant([[1., 2., 3.],
 				[4., 5., 6.]])
 
@@ -37,11 +37,11 @@ same_pad = tf.nn.max_pool(x, [1, 2, 2, 1], [1, 2, 2, 1], padding='SAME')
 
 valid_pad.get_shape() == [1, 1, 1, 1]  # valid_pad is [5.]
 same_pad.get_shape() == [1, 1, 2, 1]   # same_pad is  [5., 6.]
-{% endcodeblock %}
+```
 
 图象是 3 * 2
 
-{% codeblock %}
+```python
 x = tf.constant([[1., 2., 3.],
 				[4., 5., 6.]])
 
@@ -52,11 +52,11 @@ same_pad = tf.nn.max_pool(x, [1, 2, 2, 1], [1, 2, 2, 1], padding='SAME')
 
 valid_pad.get_shape() == [1, 1, 1, 1]  # valid_pad is [5.]
 same_pad.get_shape() == [1, 2, 1, 1]   # same_pad is  [5., 6.]
-{% endcodeblock %}
+```
 
 图象是 3 * 3
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 x = tf.constant([[1., 2., 3.],
@@ -69,7 +69,7 @@ valid_pad = tf.nn.max_pool(x, [1, 2, 2, 1], [1, 2, 2, 1], padding='VALID')
 same_pad = tf.nn.max_pool(x, [1, 2, 2, 1], [1, 2, 2, 1], padding='SAME')
 print(valid_pad.get_shape()) # (1,1,1,1)
 print(same_pad.get_shape()) # (1,2,2,1)
-{% endcodeblock %}
+```
 
 
 

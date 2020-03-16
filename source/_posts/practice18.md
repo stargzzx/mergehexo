@@ -39,7 +39,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def reverse(i,j,arr):
     arr = list(arr)
     while(i < j):
@@ -52,4 +52,4 @@ arr = reverse(0,3,arr)
 arr = reverse(4,6,arr)
 arr = reverse(0,len(arr) - 1,arr)
 print(arr)
-{% endcodeblock %}
+```

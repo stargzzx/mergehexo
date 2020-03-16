@@ -43,7 +43,7 @@ ceshi.csv 参数
 	d,3,8,13
 	e,4,9,14
 	
-{% codeblock %}
+```python
 import pandas as pd
 obj=pd.read_csv('ceshi.csv')
 print obj
@@ -61,7 +61,7 @@ c1             int64
 c2             int64
 c3             int64
 dtype: object
-{% endcodeblock %}
+```
 
 	代码将有列索引但没有行索引的数据，read_csv会自动添加上行索引（即使原数据有行索引）。
 	read_csv读取的数据类型为Dataframe
@@ -87,7 +87,7 @@ dtype: object
 
 即指明原始文件数据没有列索引，这样read_csv为自动加上列索引，除非你给定列索引的名字。
 
-{% codeblock %}
+```python
 obj_2=pd.read_csv('f:/ceshi.csv',header=None,names=range(2,5))
 print obj_2
 
@@ -98,13 +98,13 @@ print obj_2
 3   2   7  12
 4   3   8  13
 5   4   9  14
-{% endcodeblock %}
+```
 
 ### header=0
 
 表示文件第0行（即第一行，索引从0开始）为列索引，这样加names会替换原来的列索引。
 
-{% codeblock %}
+```python
 obj_2=pd.read_csv('f:/ceshi.csv',header=0,names=range(2,5))
 print obj_2
 
@@ -114,11 +114,11 @@ print obj_2
 2  2  7  12
 3  3  8  13
 4  4  9  14
-{% endcodeblock %}
+```
 
 ### index_col用法
 
-{% codeblock %}
+```python
 obj_2=pd.read_csv('ceshi.csv',index_col=0)
 print obj_2
 
@@ -139,7 +139,7 @@ b 6    1  11
 c 7    2  12
 d 8    3  13
 e 9    4  14
-{% endcodeblock %}
+```
 
 index_col为指定数据中那一列作为Dataframe的行索引，也可以可指定多列，形成层次索引，默认为None,即不指定行索引，这样系统会自动加上行索引。
 

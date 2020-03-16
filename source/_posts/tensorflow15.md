@@ -94,7 +94,7 @@ TFRecordWriter拥有类似python文件操作的接口，如writer.flush()立即�
 
 代码及其注释如下：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 filename = "/home/xsr-ai/study/tfrecord/beautiful_view.jpg"
@@ -163,7 +163,7 @@ writer_none.close()
 writer_zlib.close()
 writer_gzip.close()
 print("finish to write data to tfrecord file!")
-{% endcodeblock %}
+```
 
 运行代码后，生成的数据如下：
 
@@ -219,7 +219,7 @@ features是一个字典，要使用特定数据，需要用字典的key来索引
 
 代码及其注释如下：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
@@ -283,7 +283,7 @@ plt.title("beautiful view")
 plt.show()
 
 print("finish to read data from tfrecord file!")
-{% endcodeblock %}
+```
 
 
 

@@ -77,7 +77,7 @@ Example 5:
 
 ## code
 
-{% codeblock %}
+```python
 class Solution:
     def romanToInt(self, s: 'str') -> 'int':
         number = [900,400,90,40,9,4,1000,500,100,50,10,5,1]
@@ -96,7 +96,7 @@ class Solution:
                 sum += number[number_str.index(str1)]
                 j += 1
         return sum		
-{% endcodeblock %}
+```
 
 ## Result
 

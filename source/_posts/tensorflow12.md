@@ -41,16 +41,16 @@ tensorboard 是 tensorflow 自带的。
 
 具体格式如下：
 
-{% codeblock %}
+```python
 with tf.name_scope('inputs'): # 这句代码就是命名一个神经层
 	# define placeholder for inputs to network
 	xs = tf.placeholder(tf.float32, [None, 1])
 	ys = tf.placeholder(tf.float32, [None, 1])
-{% endcodeblock %}
+```
 
 将所有参数放在同一个层，并且给参数也给上相应的层
 
-{% codeblock %}
+```python
 def add_layer(inputs, in_size, out_size, activation_function=None):
     # add one more layer and return the output of this layer
     with tf.name_scope('layer'):
@@ -71,7 +71,7 @@ def add_layer(inputs, in_size, out_size, activation_function=None):
         else:
             outputs = activation_function(Wx_plus_b, )
         return outputs
-{% endcodeblock %}
+```
 
 activation_function 的话，可以暂时忽略。因为当你自己选择用 tensorflow 中的激励函数（activation function）的时候，tensorflow会默认添加名称。
 
@@ -79,11 +79,11 @@ activation_function 的话，可以暂时忽略。因为当你自己选择用 te
 
 我们需要使用 tf.summary.FileWriter() (tf.train.SummaryWriter() 这种方式已经在 tf >= 0.12 版本中摒弃) 将上面‘绘画’出的图保存到一个目录中，以方便后期在浏览器中可以浏览。 这个方法中的第二个参数需要使用sess.graph ， 因此我们需要把这句话放在获取session的后面。 这里的graph是将前面定义的框架信息收集起来，然后放在logs/目录下面。
 
-{% codeblock %}、
+```python
 sess = tf.Session() # get session
 # tf.train.SummaryWriter soon be deprecated, use following
 writer = tf.summary.FileWriter("logs/", sess.graph)
-{% endcodeblock %}
+```
 
 ## 查看
 
@@ -103,7 +103,7 @@ writer = tf.summary.FileWriter("logs/", sess.graph)
 
 莫烦的全部代码如下：
 
-{% codeblock %}
+```python
 # View more python learning tutorial on my Youtube and Youku channel!!!
 
 # Youtube video tutorial: https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg
@@ -168,4 +168,4 @@ sess.run(init)
 
 # direct to the local dir and run this in terminal:
 # $ tensorboard --logdir=logs
-{% endcodeblock %}
+```

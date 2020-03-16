@@ -18,7 +18,7 @@ tags:
 
 如下面代码所示（可能微有出入，但是也差不多）
 
-{% codeblock %}
+```python
 fatal: TaskCanceledException encountered.
 
 bash: /dev/tty: No such device or address
@@ -40,30 +40,30 @@ node_modules\hexo-util\lib\spawn.js:37:17)
 _modules\cross-spawn\lib\enoent.js:40:29)
     at maybeClose (internal/child_process.js:877:16)
     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
- {% endcodeblock %}
+```
 
 ### 解决方案
 
 我尝试修改了 _config.yml 中的
 
-{% codeblock %}
+```python
 deploy:
   type: git
   repo: https://github.com/benpaodewoniu/benpaodewoniu.github.io.git
   name: licong
   email: 1506316219@qq.com
   branch: master
-{% endcodeblock %}
+```
 
 上面是原来的样子，我经过寻找网上方案，改变原来的
 
-{% codeblock %}
+```python
 repo: https://github.com/benpaodewoniu/benpaodewoniu.github.io.git
-{% endcodeblock %}
+```
 
 进行如下尝试：
 
-{% codeblock %}
+```python
 #repo: ssh://git@github.com/benpaodewoniu/benpaodewoniu.github.io.git
 #repository: ssh://git@github.com/benpaodewoniu/benpaodewoniu.github.io.git
 #repo: ssh://git@github.com:benpaodewoniu/benpaodewoniu.github.io.git
@@ -72,11 +72,11 @@ repo: https://github.com/benpaodewoniu/benpaodewoniu.github.io.git
 #repository: git@github.com:benpaodewoniu/benpaodewoniu.github.io.git
 #repo: git@github.com/benpaodewoniu/benpaodewoniu.github.io.git
 #repository: git@github.com/benpaodewoniu/benpaodewoniu.github.io.git
-{% endcodeblock %}
+```
 
 奋战了一个小时，全部失败，我万念俱灰，尝试另一个博主的方法。将其改为原来的配置，即如下
 
-{% codeblock %}
+```python
 deploy:
   type: git
   #repo: ssh://git@github.com/benpaodewoniu/benpaodewoniu.github.io.git
@@ -85,15 +85,15 @@ deploy:
   name: licong
   email: 1506316219@qq.com
   branch: master
-{% endcodeblock %}
+```
 
 然后趁电脑不注意，重新运行
 
-{% codeblock %}
+```python
 hexo clean
 hexo g
 hexo d
-{% endcodeblock %}
+```
 
 最后，竟然 TMD 成功了。这个文件，我又提交了一次，发现又出现了这个情况，我又回想起上面成功的例子。
 
@@ -105,14 +105,14 @@ hexo d
 
 我 TMD 的修改配置如下：
 
-{% codeblock %}
+```python
 deploy:
   type: git
   repo: https://github.com/benpaodewoniu/benpaodewoniu.github.io.git
   name: benpaodewoniu
   email: 1506316219@qq.com
   branch: master
-{% endcodeblock %}
+```
 
 OK，在后续的过程中，有的成功，有的失败，我最终也没有搞清楚，所以，我的解决方案是，如果提交不成功，那就多提交几次，如果多提交几次不成功，那就隔段时间提交。
 

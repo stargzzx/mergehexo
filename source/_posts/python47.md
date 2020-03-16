@@ -36,20 +36,20 @@ This is a confirmed bug in nb_conda for conda version >=4.4:
 
 查找这一句:
 
-{% codeblock %}
+```python
 return {
     "environments": [root_env] + [get_info(env)
                                   for env in info['envs']]
 }
-{% endcodeblock %}
+```
 
 替换成
-{% codeblock %}
+```python
 return {
     "environments": [root_env] + [get_info(env) for env in info['envs']
                                   if env != root_env['dir']]
 }
-{% endcodeblock %}
+```
 
 重启 jupyter notebook server，错误提示消失。
 

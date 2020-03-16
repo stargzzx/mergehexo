@@ -21,7 +21,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def sort(stack,top):
 	# 辅助栈
     tmp_stack = [None for k in range(len(stack))]
@@ -63,4 +63,4 @@ def sort(stack,top):
 stack = [5,1,3,4,2,1]
 top = 5
 sort(stack,top)
-{% endcodeblock %}
+```

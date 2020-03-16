@@ -181,7 +181,7 @@ $$b_l  \rightarrow b_l’ = b_l-\frac{\eta}{m}  \sum_j \frac{\partial C_{X_j}}{\
 
 下面介绍一下代码的核心部分。首先是 Network 类的初始化部分：
 
-{% codeblock %}
+```python
 class Network(object):
     def __init__(self, sizes):
         self.num_layers = len(sizes)
@@ -189,13 +189,13 @@ class Network(object):
         self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
         self.weights = [np.random.randn(y, x) 
                         for x, y in zip(sizes[:-1], sizes[1:])]
-{% endcodeblock %}
+```
 
 列表 sizes 表示神经网络每一层所包含的神经元个数。比如我们想创建一个 2 个输入神经元，3 个神经元在中间层，一个输出神经元的网络，那么可以
 
-{% codeblock %}
+```python
 net = Network([2, 3, 1])
-{% endcodeblock %}
+```
 
 偏移和权重都是使用 np.random.randn 函数随机初始化的，平均值为 0，标准差为 1。这种随机初始化并不是最佳方案，后续文章会逐步优化。
 
@@ -203,21 +203,21 @@ net = Network([2, 3, 1])
 
 下面是 sigmoid 函数的定义：
 
-{% codeblock %}
+```python
 def sigmoid(z):
     return 1.0/(1.0+np.exp(-z))
 
-{% endcodeblock %}
+```
 
 注意到虽然输入 z 是向量，但 Numpy 能够自动处理，为向量中的每一个元素作相同的 sigmoid 运算。
 
 然后是计算 sigmoid 函数的导数：
 
-{% codeblock %}
+```python
 def sigmoid_prime(z):
     """Derivative of the sigmoid function."""
     return sigmoid(z)*(1-sigmoid(z))
-{% endcodeblock %}
+```
 
 每一层相对于前一层的输出为
 
@@ -225,7 +225,7 @@ $$a’ = \sigma(w a + b)$$
 
 对应的是 feedforward 函数当：
 
-{% codeblock %}
+```python
 
 def feedforward(self, a):
     """Return the output of the network if "a" is input."""
@@ -233,11 +233,11 @@ def feedforward(self, a):
         a = sigmoid(np.dot(w, a)+b)
     return a
 
-{% endcodeblock %}
+```
 
 当然，Network 对象最重要的任务还是自学习。下面的 SGD 函数实现了随机梯度下降法：
 
-{% codeblock %}
+```python
 
 def SGD(self, training_data, epochs, mini_batch_size, eta,
         test_data=None):
@@ -264,13 +264,13 @@ def SGD(self, training_data, epochs, mini_batch_size, eta,
         else:
             print "Epoch {0} complete".format(j)
 
-{% endcodeblock %}
+```
 
 列表 training_data 是由 (x,y) 元组构成，代表训练集的输入和期望输出。而 test_data 则是验证集（非测试集，这里变量名有些歧义），在每一个 epoch 结束时对神经网络正确率做一下检测。其他变量的含义比较显见，不再赘述。
 
 SGD 函数在每一个 epoch 开始时随机打乱训练集，然后按照 mini-batch 的大小对数据分割。在每一步中对一个 mini_batch 计算梯度，在 self.update_mini_batch(mini_batch, eta) 更新权重和偏移：
 
-{% codeblock %}
+```python
 
 def update_mini_batch(self, mini_batch, eta):
     """Update the network's weights and biases by applying
@@ -288,15 +288,15 @@ def update_mini_batch(self, mini_batch, eta):
     self.biases = [b-(eta/len(mini_batch))*nb 
                    for b, nb in zip(self.biases, nabla_b)]
 
-{% endcodeblock %}
+```
 
 其中最关键的是
 
-{% codeblock %}
+```python
 
 delta_nabla_b, delta_nabla_w = self.backprop(x, y)
 
-{% endcodeblock %}
+```
 
 这就是反向转播算法，这是一个快速计算代价函数梯度的方法。所以 update_mini_batch 仅仅是计算这些梯度，然后用来更新 self.weights 和 self.biases。
 
@@ -488,7 +488,7 @@ $$\frac{\partial C}{\partial w} = a_{\rm in} \delta_{\rm out}$$
 
 写成代码即为
 
-{% codeblock %}
+```python
 def backprop(self, x, y):
      """Return a tuple "(nabla_b, nabla_w)" representing the
      gradient for the cost function C_x.  "nabla_b" and
@@ -523,11 +523,11 @@ def backprop(self, x, y):
          nabla_b[-l] = delta
          nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
      return (nabla_b, nabla_w)
-{% endcodeblock %}
+```
 
 ## 完整代码
 
-{% codeblock %}
+```python
 #### Libraries
 # Standard library
 import random
@@ -658,7 +658,7 @@ def sigmoid(z):
 def sigmoid_prime(z):
     """Derivative of the sigmoid function."""
     return sigmoid(z)*(1-sigmoid(z))
-{% endcodeblock %}
+```
 
 
 

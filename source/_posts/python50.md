@@ -44,7 +44,7 @@ scikit-image是基于numpy，因此需要安装numpy和scipy，同时需要安�
 
 可以通过如下程序简单测试下相关库是否安装成功
 
-{% codeblock %}
+```python
 import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
@@ -53,7 +53,7 @@ img = io.imread("./cat.png")
 print(img.shape)
 plt.imshow(img)
 plt.show()		
-{% endcodeblock %}
+```
 
 若显示正常，则可以认为相关的库安装成功
 
@@ -83,23 +83,23 @@ skimage中io子模块提供了相关的功能，同时也提供了一些data模�
 
 skimage.io.imshow(arr)， 表示显示arr数组表示的图片
 
-{% codeblock %}
+```python
 from skimage import io
 img = io.imread('./cat.png')
 io.imshow(img)
 io.show()		
-{% endcodeblock %}
+```
 
 ![](/images/python/50_1.png)
 
 读取单张灰度图片时，使用 skimage.io.imread(fname, as_grey=True) 函数，第一个参数fname表示要显示的图片路径，第二个参数as_grey，是bool类型，默认值False。
 
-{% codeblock %}
+```python
 from skimage import io
 img = io.imread('./cat.png', as_grey=True)
 io.imshow(img)
 io.show()	
-{% endcodeblock %}
+```
 
 ![](/images/python/50_2.png)
 
@@ -109,12 +109,12 @@ io.show()
 
 例如
 
-{% codeblock %}
+```python
 from skimage import io, data
 img = data.hubble_deep_field()
 io.imshow(img)
 io.show()		
-{% endcodeblock %}
+```
 
 ![](/images/python/50_4.png)
 
@@ -136,13 +136,13 @@ io.show()
 	参数fname: 表示保存的路径和名称
 	参数arr：表示需要保存的数组变量
 
-{% codeblock %}
+```python
 from skimage import io, data
 
 img = data.checkerboard()
 io.imshow(img)
 io.imsave('checkerboard_copy.jpg', img)		
-{% endcodeblock %}
+```
 
 这样，在当前的工作目录下就增加了一个checkerboard_copy.jpg文件。
 
@@ -150,7 +150,7 @@ io.imsave('checkerboard_copy.jpg', img)
 
 ## 获取图片信息
 
-{% codeblock %}
+```python
 from skimage import io, data
 
 img = data.chelsea()
@@ -166,7 +166,7 @@ print(img.size)     # 显示总像素个数
 print(img.max())    # 最大像素值
 print(img.min())    # 最小像素值
 print(img.mean())   # 像素平均值		
-{% endcodeblock %}
+```
 
 ## 图像像素访问与裁剪
 
@@ -189,13 +189,13 @@ print(img.mean())   # 像素平均值
 	
 例如， 对data中宇航员图片的B通道中的第20行10列的像素值
 
-{% codeblock %}
+```python
 from skimage import io, data
 
 img = data.astronaut()
 pixel = img[20, 10, 2]
 print(pixel)	
-{% endcodeblock %}
+```
 
 输出
 
@@ -203,14 +203,14 @@ print(pixel)
 	
 例如，显示红色单通道图片的程序如下
 
-{% codeblock %}
+```python
 from skimage import io, data
 
 img = data.astronaut()
 R = img[:, :, 0]
 io.imshow(R)
 io.show()		
-{% endcodeblock %}
+```
 
 ![](/images/python/50_5.png)
 
@@ -218,7 +218,7 @@ io.show()
 
 例如，对宇航员图片随机添加椒盐噪声
 
-{% codeblock %}
+```python
 from skimage import io, data
 import numpy as np
 
@@ -234,7 +234,7 @@ for i in range(5000):
 
 io.imshow(img)
 io.show()		
-{% endcodeblock %}
+```
 
 ![](/images/python/50_6.png)
 
@@ -246,14 +246,14 @@ io.show()
 
 例如，对宇航员图片进行裁剪
 
-{% codeblock %}
+```python
 from skimage import io, data
 
 img = data.astronaut()
 partial_img = img[50:150, 170:270, :]
 io.imshow(partial_img)
 io.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/50_7.png)
 
@@ -271,7 +271,7 @@ io.show()
 
 例1： 将宇航员图片进行二值化，像素值大于128的变为1, 否在变为0
 
-{% codeblock %}
+```python
 from skimage import io, data, color
 
 img = data.astronaut()
@@ -287,13 +287,13 @@ for i in range(rows):
             img_gray[i, j] = 1
 io.imshow(img_gray)
 io.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/50_8.png)
 
 例2： 使用color模块的rgb2gray()函数，将彩色三通道图片转换为灰度图片，转换结果为float64类型的数组，范围在[0,1]之间
 
-{% codeblock %}
+```python
 from skimage import io, data
 
 img = data.astronaut()
@@ -304,7 +304,7 @@ img[img_idx_modified] = [0, 255, 0]
 
 io.imshow(img)
 io.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/50_9.png)
 
@@ -320,11 +320,11 @@ io.show()
 
 一张图片的像素值范围是[0,255], 因此默认类型是unit8, 可用如下代码查看数据类型：
 
-{% codeblock %}
+```python
 from skimage import io, data
 img = data.astronaut()
 print(img.dtype.name)
-{% endcodeblock %}
+```
 
 输出
 
@@ -334,7 +334,7 @@ print(img.dtype.name)
 
 #### uint8转为float
 
-{% codeblock %}
+```python
 from skimage import data, img_as_float
 
 img = data.astronaut()
@@ -342,7 +342,7 @@ print(img.dtype.name)
 
 dst = img_as_float(img)
 print(dst.dtype.name)
-{% endcodeblock %}
+```
 
 输出为
 
@@ -351,7 +351,7 @@ print(dst.dtype.name)
 
 #### float转为uint8
 
-{% codeblock %}
+```python
 from skimage import img_as_ubyte
 import numpy as np
 
@@ -360,7 +360,7 @@ print(img.dtype.name)
 
 dst = img_as_ubyte(img)
 print(dst.dtype.name)
-{% endcodeblock %}
+```
 
 输出为：
 
@@ -383,13 +383,13 @@ float转为uint8,可能会造成数据损失，因此会有警告
 
 #### RGB转为灰度图
 
-{% codeblock %}
+```python
 from skimage import io,data,color
 img=data.camera()
 gray=color.rgb2gray(img)
 io.imshow(gray)
 io.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/50_12.png)
 
@@ -410,14 +410,14 @@ io.show()
 
 #### RGB转为HSV
 
-{% codeblock %}
+```python
 from skimage import io, data, color
 
 img = data.coffee()
 hsv = color.convert_colorspace(img, 'RGB', 'HSV')
 io.imshow(hsv)
 io.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/50_13.png)
 
@@ -427,7 +427,7 @@ skimage.color.label2rgb(arr), 可以根据标签值对图片进行着色。以�
 
 #### 将coffee图片分成三类，然后用默认颜色对三类进行着色
 
-{% codeblock %}
+```python
 from skimage import io,data,color
 import numpy as np
 
@@ -448,7 +448,7 @@ dst=color.label2rgb(labels)
 
 io.imshow(dst)
 io.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/50_14.png)
 

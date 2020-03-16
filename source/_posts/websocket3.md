@@ -16,7 +16,7 @@ tags:
 
 使用create_connection链接，需要pip install websocket-client (此方法不建议使用，链接不稳定，容易断，并且连接很耗时)
 
-{% codeblock %}
+```python
 import time
 from websocket import create_connection
  
@@ -34,13 +34,13 @@ while True: # 连接上，退出第一个循环之后，此循环用于一直获
   ws.send('{"event":"subscribe", "channel":"btc_usdt.ticker"}')
   response = ws.recv()
   print(response)
-{% endcodeblock %}
+```
 
 # 第二种
 
 运行效果很不错，很容易连接，获取数据的速度也挺快
 
-{% codeblock %}
+```python
 import json
 from ws4py.client.threadedclient import WebSocketClient
  
@@ -72,13 +72,13 @@ if __name__ == '__main__':
     ws.run_forever()
   except KeyboardInterrupt:
     ws.close()
-{% endcodeblock %}
+```
 
 # 第三种
 
 其实和第一种差不多，只不过换种写法而已，运行效果不理想，连接耗时，并且容易断
 
-{% codeblock %}
+```python
 import websocket
  
 while True:
@@ -96,13 +96,13 @@ while True:
   ws.send(req)
   resp = ws.recv()
   print(resp)
-{% endcodeblock %}
+```
 
 # 第四种
 
 运行效果也可以，run_forever里面有许多参数，需要自己设置
 
-{% codeblock %}
+```python
 import websocket
  
  
@@ -132,4 +132,4 @@ if __name__ == "__main__":
                 on_close=on_close)
   ws.on_open = on_open
   ws.run_forever(ping_timeout=30)
-{% endcodeblock %}
+```

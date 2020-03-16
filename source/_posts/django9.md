@@ -61,7 +61,7 @@ tags:
 根据上面的那些进入对应得视图文件。
 
 其中 menu.py 下的文件内容为：
-{% codeblock %}
+```python
 import os
 import yaml
 
@@ -85,7 +85,7 @@ def get_menu(request):
     response = utils.response.wrap_json_response(data=published_app_data,
                                                  code=utils.response.ReturnCode.SUCCESS)
     return JsonResponse(data=response, safe=False)
-{% endcodeblock %}
+```
 
 那个
 
@@ -93,7 +93,7 @@ def get_menu(request):
 	
 是自己编写得代码，是为了让返回函数有更好得封装，如下
 
-{% codeblock %}
+```python
 # 状态码
 class ReturnCode:
     SUCCESS = 0
@@ -127,7 +127,7 @@ def wrap_json_response(data=None, code=None, message=None):
     response['result_code'] = code
     response['message'] = message
     return response
-{% endcodeblock %}
+```
 
 通过上面部署代码运行后，在 postman 中输入
 
@@ -171,7 +171,7 @@ def wrap_json_response(data=None, code=None, message=None):
 
 然后，我们进入 menu 文件夹下的 menu.js
 
-{% codeblock %}
+```python
 // pages/menu/menu.js
 
 const app = getApp() //全局唯一的APP对象
@@ -210,13 +210,13 @@ Page({
     })
   }
 })
-{% endcodeblock %}
+```
 
 这里一个细节是 onLoad 的函数内，调用了 updateMenuData 函数。
 
 而 menu.wxml 的内容如下：
 
-{% codeblock %}
+```python
 <!--pages/menu/menu.wxml-->
 <view class="page">
   <view class="page__hd">
@@ -235,7 +235,7 @@ Page({
     </view>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 ![](/images/django/9_4.png)
 

@@ -72,7 +72,7 @@ Tensorflow版本0.11以前，只包含以下三个文件：
 	
 在这里，sess是一个session对象，其中my-test-model是你给模型起的名字。下面是一个完整的例子：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
 w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
@@ -86,7 +86,7 @@ saver.save(sess, 'my_test_model')
 # my_test_model.index
 # my_test_model.meta
 # checkpoint
-{% endcodeblock %}
+```
 
 如果我们想在训练1000次迭代之后保存模型，可以使用如下方法保存
 
@@ -110,7 +110,7 @@ saver.save(sess, 'my_test_model')
 
 注意到，我们在tf.train.Saver()中并没有指定任何东西，因此它将保存所有变量。如果我们不想保存所有的变量，只想保存其中一些变量，我们可以在创建tf.train.Saver实例的时候，给它传递一个我们想要保存的变量的list或者字典。示例如下：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
 w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
@@ -118,7 +118,7 @@ saver = tf.train.Saver([w1,w2])
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 saver.save(sess, 'my_test_model',global_step=1000)
-{% endcodeblock %}
+```
 
 ## 导入一个已经训练好的模型
 
@@ -156,7 +156,7 @@ saver.save(sess, 'my_test_model',global_step=1000)
 
 下面介绍如何恢复任何一个预训练好的模型，并使用它来预测，fine-tuning或者进一步训练。当你使用Tensorflow时，你会定义一个图（graph），其中，你会给这个图喂（feed）训练数据和一些超参数（比如说learning rate，global step等）。下面我们使用placeholder建立一个小的网络，然后保存该网络。注意到，当网络被保存时，placeholder的值并不会被保存。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 #Prepare to feed input, i.e. feed_dict and placeholders
@@ -180,7 +180,7 @@ print sess.run(w4,feed_dict)
 
 #Now, save the graph
 saver.save(sess, 'my_test_model',global_step=1000)		
-{% endcodeblock %}
+```
 
 现在，我们想要恢复这个网络，我们不仅需要恢复图（graph）和权重，而且也需要准备一个新的feed_dict，将新的训练数据喂给网络。我们可以通过使用graph.get_tensor_by_name()方法来获得已经保存的操作（operations）和placeholder variables。
 	
@@ -191,7 +191,7 @@ saver.save(sess, 'my_test_model',global_step=1000)
 
 如果我们仅仅想要用不同的数据运行这个网络，可以简单的使用feed_dict来将新的数据传递给网络。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 sess=tf.Session()    
@@ -214,11 +214,11 @@ op_to_restore = graph.get_tensor_by_name("op_to_restore:0")
 print sess.run(op_to_restore,feed_dict)
 #This will print 60 which is calculated 
 #using new values of w1 and w2 and saved value of b1.
-{% endcodeblock %}
+```
 
 如果你想要给graph增加更多的操作（operations）然后训练它，可以像如下那么做：
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 sess=tf.Session()    
@@ -243,11 +243,11 @@ add_on_op = tf.multiply(op_to_restore,2)
 
 print sess.run(add_on_op,feed_dict)
 #This will print 120.	
-{% endcodeblock %}
+```
 
 但是，你可以只恢复旧的graph的一部分，然后插入一些操作用于fine-tuning？当然可以。仅仅需要通过 by graph.get_tensor_by_name() 方法来获取合适的operation，然后在这上面建立graph。下面是一个实际的例子，我们使用meta graph 加载了一个预训练好的vgg模型，并且在最后一层将输出个数改成2，然后用新的数据fine-tuning。
 
-{% codeblock %}
+```python
 ......
 ......
 saver = tf.train.import_meta_graph('vgg.meta')
@@ -269,7 +269,7 @@ output = tf.matmul(fc7, weights) + biases
 pred = tf.nn.softmax(output)
 
 # Now, you run this with fine-tuning data in sess.run()	
-{% endcodeblock %}
+```
 
 
 

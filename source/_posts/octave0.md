@@ -20,7 +20,7 @@ So,my note about octave is here.
 
 ## tips
 
-{% codeblock %}
+```python
 ctrl + c
 	强制退出
 pause;
@@ -45,11 +45,11 @@ clear
 	删除所有变量
 end
 	end的出现只出现在方法结尾，控制语句结尾，如果整个文件没有方法或者控制语句，就不需要 end
-{% endcodeblock %}
+```
 
 ## 统计数据的几种形式
 
-{% codeblock %}
+```python
 data1 = [[1 2 3]
          [4 5 6]
 ];
@@ -82,11 +82,11 @@ size(data7)
 data8 = [[1    2    3  8] [2     4    5 9]];
 size(data8)
 	% 1   8	
-{% endcodeblock %}
+```
 
 ## basis
 
-{% codeblock %}
+```python
 A = [1 2;3 4;5 6] 建立矩阵
 V = 1:0.1:2 一个行向量从 1 到 2，增量为0.1
 V = 1:6 一个行向量，从 1 到 6，增量为 1
@@ -141,11 +141,11 @@ A .^2
 	将 V 中每一个元素求倒数
 A .* eye(n)
 	A 的对角线上的元素不变，其他的全为零
-{% endcodeblock %}
+```
 
 ## functions
 
-{% codeblock %}
+```python
 复杂输出 disp(a)
 	 disp(sprintf('2 decimals: %0.2f',a)) 类似 c 的风格,这种可以格式化输出
 pinv(A) 伪逆
@@ -261,11 +261,11 @@ B = reshape(A(1:110),10,11);
 	从向量 A 中提取索引为 1 到 110 的元素，将它们排成 10 * 11 的矩阵
 B = [A(:);C(:)];
 	可以将 A 和 C 矩阵变成一个向量
-{% endcodeblock %}
+```
 
 ## calculation
 
-{% codeblock %}
+```python
 abs(x)		
 	純量的絕對值或向量的長度	
 angle(z)		
@@ -383,11 +383,11 @@ nargin
 	函數的輸入引數個數	
 nargout		
 	函數的輸出引數個數
-{% endcodeblock %}
+```
 
 ## files
 
-{% codeblock %}
+```python
 load('文件名')
 	加载文件数据，当我们添加文件后，变量就是以文件名命名
 	load(data1.txt)
@@ -396,11 +396,11 @@ load('data1.txt')
 V = data1(1:10) data1前10个值赋给V
 save a.mat v 将v变量存储在a.mat中，存储格式是压缩的二进制
 save a.txt v -ascii 将v变量存储为可以看得懂的格式，文本文档
-{% endcodeblock %}
+```
 
 ## draw
 
-{% codeblock %}
+```python
 plot(x,y)
 	画图
 	t = [0:0.1:0.98]
@@ -484,11 +484,11 @@ hist(Y);
 	默认十个等间隔区间，并返回每个范围内的Y的元素个数作为一行向量
 hist(Y,nbins);
 	nbins是间隔数，也就是说我们应该统计多少个间隔，这里设nbins=20
-{% endcodeblock %}
+```
 
 ## control
 
-{% codeblock %}
+```python
 for：
 	for i = 1:10,
 		V(i) = 2 ^i;
@@ -525,11 +525,11 @@ else
 	else
 		disp('xxx');
 	end;
-{% endcodeblock %}
+```
 
 ## function by myself
 
-{% codeblock %}
+```python
 在octive中定义函数，首先需要定义一个和 函数名 相同的文件，后缀是 m
 	首先
 	function y = 方法名(变量)
@@ -543,34 +543,34 @@ else
 		function[y1,y2] = 方法(参数)
 		y1 = xxx;
 		y2 = xxx;
-{% endcodeblock %}
+```
 当然在方法中也是可以有返回值的，文件名必须和方法名一致。
-{% codeblock %}
+```python
 function g = sigmoid(z)
 g = 1.0 ./ (1.0 + exp(-z));
 end
-{% endcodeblock %}
+```
 
 ## 如何使用 octave 文件
 
 当我们建了一个文件名为 fun.m 代码如下：
 
-{% codeblock %}
+```python
 W = [3.00774324,1.69532264]
 x = 0:0.1:1
 y = x * W(:,2) + W(:,1)
 plot(x, y, 'k', 'LineWidth', 1.5);
-{% endcodeblock %}
+```
 我们只需要在控制台直接输入 fun 即可。
 如果我们创建了一个 test.m 代码如下：
-{% codeblock %}
+```python
 function test()
 	W = [3.00774324,1.69532264]
 	x = 0:0.1:1
 	y = x * W(:,2) + W(:,1)
 	plot(x, y, 'k', 'LineWidth', 1.5);
 end;
-{% endcodeblock %}
+```
 
 我们只需要在控制台直接输入 test() 即可。
 
@@ -578,7 +578,7 @@ end;
 
 test.m
 
-{% codeblock %}
+```python
 function test()
 data = load('ex2data1.txt');
 
@@ -593,7 +593,7 @@ plot(X(A,1),X(A,2),'k+','LineWidth',2,'MarkerSize',7);  % k+ 是指图形为+ �
 plot(X(B,1),X(B,2),'ko','MarkerFaceColor','r','MarkerSize',7); % ko 是指图像为 o ，MarkerFaceColor r 图像为红色的
 hold off;
 end;
-{% endcodeblock %}
+```
 
 Finally,the picture is following.
 

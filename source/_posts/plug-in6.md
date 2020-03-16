@@ -114,7 +114,7 @@ tags:
 
 我的其中一段代码如下:
 
-{% codeblock %}
+```python
 # -*- encoding=utf8 -*-
 import time
 __author__ = "Administrator"
@@ -143,7 +143,7 @@ time.sleep(2)
 poco(name="转到上一层级").click()
 poco(name="android.support.v7.app.ActionBar$Tab").click()
 poco(text="最近播放").click()
-{% endcodeblock %}
+```
 
 
 

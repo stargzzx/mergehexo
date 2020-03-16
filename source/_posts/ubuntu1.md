@@ -50,7 +50,7 @@ tags:
 
 ## Ubuntu软件操作的相关命令
 
-{% codeblock %}
+```python
 sudo apt-get update  更新源
 sudo apt-get install package 安装包
 sudo apt-get remove package 删除包
@@ -67,7 +67,7 @@ sudo apt-cache rdepends package 查看该包被哪些包依赖
 sudo apt-get source package  下载该包的源代码
 sudo apt-get clean && sudo apt-get autoclean 清理无用的包
 sudo apt-get check 检查是否有损坏的依赖
-{% endcodeblock %}
+```
 
 
 

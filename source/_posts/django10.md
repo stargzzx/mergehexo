@@ -88,7 +88,7 @@ tags:
 
 用于被遍历的组件需要多个属性的时候。
 
-{% codeblock %}
+```python
 //test.js
   data: {
 	input_data: [
@@ -100,7 +100,7 @@ tags:
   }
 //test.wxml
 <input value="id:{{item.id}}"   wx:for="{{input_data}}"  wx:key="unique"  />
-{% endcodeblock %}
+```
 
 ## wx:key="*this"
 
@@ -110,7 +110,7 @@ tags:
 
 用于组件仅需要一个属性，且属性值唯一。
 
-{% codeblock %}
+```python
 //test.js
   data: {
     numberArray: [1, 2, 3, 4],
@@ -120,7 +120,7 @@ tags:
    <input value="id:{{ item }}"   wx:for="{{numberArray}}"  wx:key="*this"  />
    <input value="id:{{ item }}"   wx:for="{{stringArray}}"  wx:key="*this"  />
   },
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -128,7 +128,7 @@ tags:
 
 <br/>
 
-{% codeblock %}
+```python
 //test.wxml
 <view class="container log-list">
 <!--有wx:key-->
@@ -140,9 +140,9 @@ tags:
     随机排序
 </button>
 </view>
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 
 //test.js
 Page({
@@ -175,9 +175,9 @@ Page({
     })
   }
 })
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 //test.wxss
 .log-list {
   display: flex;
@@ -211,7 +211,7 @@ text-shadow: 0 1px 1px rgba(0,0,0,.3);
 border-radius: .5em; 
 box-shadow: 0 1px 2px rgba(0,0,0,.2); 
 }
-{% endcodeblock %}
+```
 
 
 

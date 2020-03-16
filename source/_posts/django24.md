@@ -144,7 +144,7 @@ session 默认有效时间为两周，可以在 settings.py 中修改默认值
 
 其中，这个页面的 js 如下：
 
-{% codeblock %}
+```python
 // pages/user/user.js
 const app = getApp()
 const cookieUtil = require('../../utils/cookie.js')
@@ -196,14 +196,14 @@ Page({
     })
   }
 })
-{% endcodeblock %}
+```
 其中代码中引入了
 
 	const cookieUtil = require('../../utils/cookie.js')
 	
 这个cookie.js的作用就是利用本地缓存将服务器发来的session信息保存到 cookie ，其内容如下：
 
-{% codeblock %}
+```python
 const key = 'cookie'
 
 function getSessionIDFromResponse(res) {
@@ -227,13 +227,13 @@ function getCookieFromStorage() {
   console.log(value)
   return value
 }
-{% endcodeblock %}
+```
 
 然后我们再来说第一个按钮实现的django逻辑，其方法是 test ，就是向后台注册用户信息
 
 内容如下：
 
-{% codeblock %}
+```python
 def test(request):
     data = request.body.decode('utf-8')
     data = json.loads(data)
@@ -250,7 +250,7 @@ def test(request):
 
     response = wrap_json_response(code=ReturnCode.SUCCESS)
     return JsonResponse(data=response,safe=False)
-{% endcodeblock %}
+```
 
 这段代码中，有一个使用 session 的地方就是
 
@@ -269,7 +269,7 @@ def test(request):
 
 下一个按钮的代码如下：
 
-{% codeblock %}
+```python
 class UserView(View, CommonResponseMixin):
     def get(self, request):
         if not already_authorized(request):
@@ -280,7 +280,7 @@ class UserView(View, CommonResponseMixin):
         data = {}
         response = self.wrap_json_response(data=data, code=ReturnCode.SUCCESS)
         return JsonResponse(data=response, safe=False)
-{% endcodeblock %}
+```
 
 小程序的逻辑如下：
 

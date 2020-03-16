@@ -156,7 +156,7 @@ name:操作的名字，可填可不填
 	cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=tf.argmax(y_, 1), logits=y)
 	cross_entropy_mean = tf.reduce_mean(cross_entropy)
 
-{% codeblock %}
+```python
 import tensorflow as tf  
 #our NN's output  
 logits=tf.constant([[1.0,2.0,3.0],[1.0,2.0,3.0],[1.0,2.0,3.0]])  
@@ -204,7 +204,7 @@ with tf.Session() as sess:
     print("Function(tf.reduce_sum) result=\n%s\n"%(sparse_cross_entropy2_step2_value))  
 		# Function(tf.reduce_sum) result=
 			1.2228179
-{% endcodeblock %}
+```
 
 ## tf.nn.softmax_cross_entropy_with_logits
 
@@ -226,7 +226,7 @@ logits和labels的shape都是[batch_size, num_classes]
 
 tf.nn.sparse_softmax_cross_entropy_with_logits（）比tf.nn.softmax_cross_entropy_with_logits多了一步将labels稀疏化的操作。因为深度学习中，图片一般是用非稀疏的标签的，所以用tf.nn.sparse_softmax_cross_entropy_with_logits（）的频率比tf.nn.softmax_cross_entropy_with_logits高。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 input_data = tf.Variable([[0.2, 0.1, 0.9], [0.3, 0.4, 0.6]], dtype=tf.float32)
@@ -239,11 +239,11 @@ with tf.Session() as sess:
     print(sess.run(output2))
 		# [1.365732 0.939831]
 		# [1.365732 0.939831]
-{% endcodeblock %}
+```
 
 但是，有一点需要知道，就是输出值的数目需要和标签的 one-hot 编码位数一样，下面是举个例子
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 input_data = tf.Variable([[0.2, 0.1, 0.9,0.7], [0.3, 0.4, 0.6,0.5]], dtype=tf.float32)
@@ -252,11 +252,11 @@ with tf.Session() as sess:
     init = tf.global_variables_initializer()
     sess.run(init)
     print(sess.run(output2))
-{% endcodeblock %}
+```
 
 上面的代码可以正常输出，但是下面的就不行。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 input_data = tf.Variable([[0.2, 0.1, 0.9,0.7], [0.3, 0.4, 0.6,0.5]], dtype=tf.float32)
@@ -267,7 +267,7 @@ with tf.Session() as sess:
     print(sess.run(output2))
 	
 	# ValueError: Dimensions must be equal, but are 4 and 3 for 'softmax_cross_entropy_with_logits_sg' (op: 'SoftmaxCrossEntropyWithLogits') with input shapes: [2,4], [2,3].
-{% endcodeblock %}
+```
 
 ### 相关知识
 
@@ -304,7 +304,7 @@ One-Hot编码，又称为一位有效编码，主要是采用位状态寄存器�
 
 	softmax = tf.exp(logits) / tf.reduce_sum(tf.exp(logits), axis)
 
-{% codeblock %}
+```python
 import tensorflow as tf
 x = tf.constant([[1.0,2.0],[5.0,3.0]])
 x_2 = tf.exp(x)
@@ -313,7 +313,7 @@ with tf.Session() as sess:
 	
 		# [[  2.7182817   7.389056 ]
 		# [148.41316    20.085537 ]]
-{% endcodeblock %}
+```
 
 
 

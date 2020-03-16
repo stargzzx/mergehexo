@@ -18,7 +18,7 @@ tags:
 
 ## 安装
 
-{% codeblock %}
+```python
 创建相关的虚拟环境后，用豆瓣源
 
 	pip install -i https://pypi.douban.com/simple/ scrapy
@@ -91,13 +91,13 @@ scrapy项目下的文件夹用途
 from scrapy.http import Request
 
 	用于请求参数
-{% endcodeblock %}
+```
 
 ## 流程
 
 ![](/images/python/15.jpg)
 
-{% codeblock %}
+```python
 调用
 
 	scrapy crawl 爬虫名
@@ -109,11 +109,11 @@ from scrapy.http import Request
 	再将其用 item 容器保存
 
 再做后续处理，比如存储等等
-{% endcodeblock %}
+```
 
 ## 选择器
 
-{% codeblock %}
+```python
 selector 是一个选择器，有四个基本方法
 
 xpath():传入一个xpath表达式，返回该表达式所对应的节点列表
@@ -123,11 +123,11 @@ css()：传入css表达式，返回该表达式所对应的节点列表
 extract():序列化该节点为unicode字符串并返回list
 
 re():根据传入的正则表达式对数据进行提取，并返回unicode字符串列表
-{% endcodeblock %}
+```
 
 ## XPath 
 
-{% codeblock %}
+```python
 response.xpath()
 
 排序从1开始
@@ -205,11 +205,11 @@ prise1 = response.xpath(prise).extract()[0]
 	 post_url = response.xpath("//div[@id = 'archive']//div[@class = 'post-meta']//p//a[@class = 'archive-title']/@href")
 	
 	上面的不需要在里面加text()函数	
-{% endcodeblock %}
+```
 
 ## 编写
 
-{% codeblock %}
+```python
 建立项目后
 
 定义 Item 容器
@@ -227,4 +227,4 @@ prise1 = response.xpath(prise).extract()[0]
 	其中包含一个用于下载的初始URL，然后是如何跟进网页中的链接以及如何分析页面中的内容，还有提取生成item的方法	
 
 存储内容
-{% endcodeblock %}
+```

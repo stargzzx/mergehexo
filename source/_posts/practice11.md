@@ -34,7 +34,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def returnIndex(arr,h,l,goal):
     i = 0
     j = l - 1
@@ -54,5 +54,5 @@ def returnIndex(arr,h,l,goal):
 
 arr = [[2,4,5,6],[3,4,6,7],[4,5,7,8],[6,7,8,9]]
 returnIndex(arr,4,4,15)
-{% endcodeblock %}
+```
 

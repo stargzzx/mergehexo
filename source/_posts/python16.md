@@ -16,7 +16,7 @@ Numpy matrices必须是2维的,但是 numpy arrays (ndarrays) 可以是多维的
 
 在numpy中matrix的主要优势是：相对简单的乘法运算符号。例如，a和b是两个matrices，那么a*b，就是矩阵积。
 
-{% codeblock %} 
+```python
 import numpy as np
 
 a=np.mat('4 3; 2 1')
@@ -30,31 +30,31 @@ print(b)
 print(a*b)
 	# [[13 20]
 	#  [ 5  8]]
-{% endcodeblock %}
+```
 
 matrix 和 array 都可以通过objects后面加.T 得到其转置。但是 matrix objects 还可以在后面加 .H f得到共轭矩阵, 加 .I 得到逆矩阵。
 
 相反的是在numpy里面arrays遵从逐个元素的运算，所以array：c 和d的c*d运算相当于matlab里面的c.*d运算。
 
-{% codeblock %}
+```python
 c=np.array([[4, 3], [2, 1]])
 d=np.array([[1, 2], [3, 4]])
 print(c*d)
 # [[4 6]
 #  [6 4]]
-{% endcodeblock %}
+```
 
 而矩阵相乘，则需要numpy里面的dot命令 :
 
-{% codeblock %}
+```python
 print(np.dot(c,d))
 	# [[13 20]
 	#  [ 5  8]]
-{% endcodeblock %}
+```
 
 ** 运算符的作用也不一样 ：
 
-{% codeblock %}
+```python
 # 对于 矩阵的 ** 相当于两个矩阵相乘
 print(a**2)
 	# [[22 15]
@@ -64,7 +64,7 @@ print(a**2)
 print(c**2)
 	# [[16  9]
 	#  [ 4  1]]
-{% endcodeblock %}
+```
 
 问题就出来了，如果一个程序里面既有matrix 又有array，会让人脑袋大。但是如果只用array，你不仅可以实现matrix所有的功能，还减少了编程和阅读的麻烦。
 
@@ -72,7 +72,7 @@ print(c**2)
 
 对我来说，numpy 中的array与numpy中的matrix，matlab中的matrix的最大的不同是，在做归约运算时，array的维数会发生变化，但matrix总是保持为2维。例如下面求平均值的运算。
 
-{% codeblock %}
+```python
 m = np.mat([[1,2],[2,3]])
 m
 	# matrix([[1, 2],
@@ -86,11 +86,11 @@ mm.shape
 m - mm
 	# matrix([[-0.5,  0.5],
     #     [-0.5,  0.5]])	
-{% endcodeblock %}
+```
 
 对array 来说
 
-{% codeblock %}
+```python
 a = np.array([[1,2],[2,3]])
 a
 	# array([[1, 2],
@@ -106,7 +106,7 @@ a - am #wrong
 a - am[:, np.newaxis]  #right
 	# array([[-0.5,  0.5],
 	#        [-0.5,  0.5]])
-{% endcodeblock %}
+```
 
 我在其他地方找到的总结：
 

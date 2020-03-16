@@ -21,7 +21,7 @@ tags:
 
 ### 代码
 
-{% codeblock %}
+```python
 """
 Visualize Genetic Algorithm to find a maximum point in a function.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -93,7 +93,7 @@ for _ in range(N_GENERATIONS):
         parent[:] = child       # parent is replaced by its child
 
 plt.ioff(); plt.show()
-{% endcodeblock %}
+```
 
 ### 效果图
 
@@ -103,7 +103,7 @@ plt.ioff(); plt.show()
 
 第一点首先先写出四大基本框架
 
-{% codeblock %}
+```python
 def get_fitness(pred): # 获取个体的适应度
     return pred
 def translateDNA(pop): # 翻译DNA 因为 DNA 是在电脑中是一段二进制代码，所以要将其翻译成定义域内的数值
@@ -114,13 +114,13 @@ def corssover(parent,pop): # 交叉遗传
     pass
 def mutate(child):  # 变异
     pass
-{% endcodeblock %}
+```
 
 上面的代码就是遗传算法的主要函数，通过就算每个个体的适应度，推算出他们中基因是否能遗传给下一代，然后存活下来的基因进行交叉，然后产生新的一代。
 
 下面我将所有的代码都重新编排了一下，并写上了很详细的注释，也算是给后来者造福。。。
 
-{% codeblock %}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -201,7 +201,7 @@ for i in range(N_GENERATIONS):
         parent[:] = child
 
 plt.show()
-{% endcodeblock %}
+```
 
 关于这段代码，莫烦的交叉和变异采用的是不同的方法。不过，也很新颖。
 
@@ -235,7 +235,7 @@ ASCII 表
 
 ### 源代码
 
-{% codeblock %}
+```python
 """
 Visualize Genetic Algorithm to match the target phrase.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -310,11 +310,11 @@ if __name__ == '__main__':
         if best_phrase == TARGET_PHRASE:
             break
         ga.evolve()
-{% endcodeblock %}
+```
 
 ### 我的注释代码
 
-{% codeblock %}
+```python
 import numpy as np
 
 TARGET_PHRASE = "i love you"        # 目标语句
@@ -395,7 +395,7 @@ if __name__ == '__main__':
         if best_phrase == TARGET_PHRASE:
             break
         ga.evolve()
-{% endcodeblock %}
+```
 
 ## TSP 旅行商问题
 
@@ -405,7 +405,7 @@ if __name__ == '__main__':
 
 ### 原代码
 
-{% codeblock %}
+```python
 """
 Visualize Genetic Algorithm to find the shortest path for travel sales problem.
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
@@ -505,11 +505,11 @@ for generation in range(N_GENERATIONS):
 
 plt.ioff()
 plt.show()
-{% endcodeblock %}
+```
 
 ### 添加详细注释后的代码
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -704,4 +704,4 @@ for generation in range(N_GENERATIONS):
 
 plt.ioff()
 plt.show()
-{% endcodeblock %}
+```

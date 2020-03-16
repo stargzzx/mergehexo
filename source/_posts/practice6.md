@@ -17,12 +17,12 @@ Map
 
 Map is a data-struction.Its appearance like this:
 
-{% codeblock %}
+```python
 a = {
 "key1" : value1,
 "key2" : value2
 }
-{% endcodeblock %}
+```
 
 Map is a hash table.We can find target in near constant time.
 
@@ -36,11 +36,11 @@ You may assume that each input would have exactly one solution, and you may not 
 
 Example:
 
-{% codeblock %}
+```python
 Given nums                = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
-{% endcodeblock %}
+```
 I use python3.
 
 The test data:
@@ -51,7 +51,7 @@ The test data:
 
 Traditional way:
 
-{% codeblock %}
+```python
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -65,13 +65,13 @@ class Solution:
             for j in range(i + 1,len(nums)):
                 if(nums[j] == target - nums[i]):
                     return [i,j]
-{% endcodeblock %}
+```
 
 Map way:
 
 I made
 
-{% codeblock %}
+```python
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -87,13 +87,13 @@ class Solution:
             number = target - nums[j]
             if (number in list(map.values())[j+1:]):
                 return [j,list(map.values())[j+1:].index(number) + j + 1]
-{% endcodeblock %}
+```
 
 But,After running,the runtime of traditional way is less than map way. Maybe beause of input data or my code is bad struction and so on.
 
 When I see other very excellent person writed code.That is amazing.His code is art.So i post up there.
 
-{% codeblock %}
+```python
 class Solution:
         def twoSum(self, nums, target):
         d = {}
@@ -103,7 +103,7 @@ class Solution:
                 return [d[m], i]
             else:
                 d[n] = i
-{% endcodeblock %}
+```
 
 I hope somedays i can code art.
 

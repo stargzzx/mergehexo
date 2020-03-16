@@ -31,7 +31,7 @@ tags:
 
 当然代码有一点粗糙，毛毛雨啦，只需要知道思想就好啦。
 
-{% codeblock %}
+```python
 arr1 = [0 for k in range(256)]
 arr2 = [0 for k in range(256)]
 a = "11543123"
@@ -50,4 +50,4 @@ for i in range(256):
         print("yes")
         break
     i += 1
-{% endcodeblock %}
+```

@@ -65,7 +65,7 @@ tags:
 
 试图从index数据中找出相应元素删除地址
 
-{% codeblock %}
+```python
 // 找到当前地址AVObject对象
 var address = that.data.addressObjects[index];
 // 给出确认提示框
@@ -90,7 +90,7 @@ wx.showModal({
     }
   }
 })
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -102,7 +102,7 @@ wx.showModal({
 
 address/list页面实现以下代码
 
-{% codeblock %}
+```python
 <view class="container" data-index="{{index}}" bindtap="edit"><image src="../../../images/icon_edit.png" /><text>编辑</text></view>
  
 edit: function (e) {
@@ -115,7 +115,7 @@ edit: function (e) {
     url: '../add/add?objectId='+objectId
   });
 },
-{% endcodeblock %}
+```
 
 address/add页面实现onLoad(options)方法，从url路径中获取objectId
 
@@ -139,18 +139,18 @@ address/add页面实现onLoad(options)方法，从url路径中获取objectId
 	
 布局如下：
 
-{% codeblock %}
+```python
 <form bindsubmit="formSubmit">
   <input name="detail" placeholder="详情地址" />
   <input name="realname" placeholder="收件人姓名" />
   <input name="mobile" placeholder="手机号码" type="number"/>
   <button formType="submit" type="primary">Submit</button>
 </form>
-{% endcodeblock %}
+```
 
 js取值：
 
-{% codeblock %}
+```python
 formSubmit: function(e) {
   // detail
   var detail = e.detail.value.detail;
@@ -159,13 +159,13 @@ formSubmit: function(e) {
   // mobile
   var mobile = e.detail.value.mobile;
 }
-{% endcodeblock %}
+```
 
 ## 方式二
 
 	通过<input bindconfirm="realnameConfirm">实现
 	
-{% codeblock %}
+```python
 // 实现相应多个**Confirm方式
 detailConfirm: function(e) {
   var detail = e.detail.value;
@@ -176,7 +176,7 @@ realnameConfirm: function(e) {
 mobileConfirm: function(e) {
   var mobile = e.detail.value;
 }
-{% endcodeblock %}
+```
 
 通过方式一与方式二的对比可以看出，虽然同样都能实现取值的目标，但是它们的使用场景有所不同，前者适合与提交大量表单项时，比如用户完善个人资料，收货地址填写；而后者适合只做一两个表单项时，比如快递单号录入，绑定手机号码。
 

@@ -19,11 +19,11 @@ tags:
 
 [Adafruit CircuitPython API Reference](https://circuitpython.readthedocs.io/en/3.x/docs/)
 
-{% codeblock %}
+```python
 
 [SKU:DFR0553I2C 16-Bit ADC Module](http://wiki.dfrobot.com.cn/index.php?title=(SKU:DFR0553)I2C_16-Bit_ADC_Module)
 
-{% endcodeblock %}
+```
 
 因为格式原因，所以，就直接将网址 pull 到浏览器上就好了。
 
@@ -41,7 +41,7 @@ tags:
 
 我写的代码如下。
 
-{% codeblock %}
+```python
 import time
 import board
 import busio
@@ -75,7 +75,7 @@ while True:
     print("{:>5} | {:>5} |{:>5} |{:>5} |{:>5} |{:>5} |{:>5} |{:>5}".format(chan0.value, chan1.value,chan2.value,chan3.value,chan4.value,chan5.value,chan6.value,chan7.value))
     print("{:>5.3f} | {:>5.3f} | {:>5.3f} |{:>5.3f} |{:>5.3f} |{:>5.3f} |{:>5.3f} |{:>5.3f} |".format(chan0.voltage,chan1.voltage,chan2.voltage,chan3.voltage,chan4.voltage,chan5.voltage,chan6.voltage,chan7.voltage))
     time.sleep(0.5)
-{% endcodeblock %}
+```
 
 其输入如下：
 

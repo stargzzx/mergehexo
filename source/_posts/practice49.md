@@ -38,7 +38,7 @@ Example:
 	
 ## code
 
-{% codeblock %}
+```python
 class Solution:
     def addTwoNumbers(self, l1: 'ListNode', l2: 'ListNode') -> 'ListNode':
         number1 = 0
@@ -64,7 +64,7 @@ class Solution:
             number = number // 10
         return final
 			
-{% endcodeblock %}
+```
 
 ## Result
 

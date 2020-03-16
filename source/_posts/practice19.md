@@ -41,7 +41,7 @@ strs = ["abc","de"] => "abcde"
 
 ## 代码
 
-{% codeblock %}
+```python
 def compare(arr1,arr2):
     for i in range(len(arr1)):
         if(arr1[i] > arr2[i]):
@@ -82,7 +82,7 @@ arr = ["b","ba","a","abc","e","ar"]
 quickSort(arr,0,len(arr) - 1)
 print(compare("aababc","abcaab"))
 print(arr)
-{% endcodeblock %}
+```
 
 
 

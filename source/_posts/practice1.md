@@ -14,7 +14,7 @@ Ok,let us see.
 
 <!--more-->
 
-{% codeblock %}
+```python
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -84,4 +84,4 @@ int main(){
 	printList(d);
 	return 0;
 }
-{% endcodeblock %}
+```

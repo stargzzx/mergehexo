@@ -122,11 +122,11 @@ Draw(image) ⇒ Draw instance
 
 注意：图像内容将会被修改。
 
-{% codeblock %}
+```python
 from PIL import Image, ImageDraw
 im1 = Image.open('2.png')
 draw = ImageDraw.Draw(im1)
 draw.line((0,0) +im1.size, fill=128)
 im1.show()
 	# 给图片添加一条线	
-{% endcodeblock %}
+```

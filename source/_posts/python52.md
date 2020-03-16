@@ -35,7 +35,7 @@ yield 必须放在循环中，要么是 while 要么是 for 循环
 
 字符串，列表或元组对象都可用于创建迭代器：
 
-{% codeblock %}
+```python
 >>>list=[1,2,3,4]
 >>> it = iter(list)    # 创建迭代器对象
 >>> print (next(it))   # 输出迭代器的下一个元素
@@ -43,25 +43,25 @@ yield 必须放在循环中，要么是 while 要么是 for 循环
 >>> print (next(it))
 2
 >>>		
-{% endcodeblock %}
+```
 
 迭代器对象可以使用常规for语句进行遍历：
 
-{% codeblock %}
+```python
 #!/usr/bin/python3
  
 list=[1,2,3,4]
 it = iter(list)    # 创建迭代器对象
 for x in it:
     print (x, end=" ")		
-{% endcodeblock %}
+```
 执行以上程序，输出结果如下：
 
 	1 2 3 4
 	
 也可以使用 next() 函数：
 
-{% codeblock %}
+```python
 #!/usr/bin/python3
  
 import sys         # 引入 sys 模块
@@ -74,7 +74,7 @@ while True:
         print (next(it))
     except StopIteration:
         sys.exit()			
-{% endcodeblock %}
+```
 
 执行以上程序，输出结果如下：
 
@@ -97,7 +97,7 @@ __next__() 方法（Python 2 里是 next()）会返回下一个迭代器对象�
 
 创建一个返回数字的迭代器，初始值为 1，逐步递增 1：
 
-{% codeblock %}
+```python
 class MyNumbers:
   def __iter__(self):
     self.a = 1
@@ -116,7 +116,7 @@ print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))	
-{% endcodeblock %}
+```
 
 执行输出结果为：
 
@@ -126,7 +126,7 @@ print(next(myiter))
 	4
 	5
 
-{% codeblock %}
+```python
 class Fab(object):
 
     def __init__(self, max):
@@ -154,7 +154,7 @@ print(next(e))
 print(next(e))
 print(next(e))
 print(next(e))		
-{% endcodeblock %}
+```
 
 执行输出结果为：
 
@@ -173,7 +173,7 @@ StopIteration 异常用于标识迭代的完成，防止出现无限循环的情
 
 在 20 次迭代后停止执行：
 
-{% codeblock %}
+```python
 class MyNumbers:
   def __iter__(self):
     self.a = 1
@@ -192,7 +192,7 @@ myiter = iter(myclass)
  
 for x in myiter:
   print(x)
-{% endcodeblock %}
+```
 
 执行输出结果为：
 
@@ -217,7 +217,7 @@ for x in myiter:
 	19
 	20
 
-{% codeblock %}
+```python
 class Fab(object):
 
     def __init__(self, max):
@@ -245,7 +245,7 @@ print(next(e))
 print(next(e))
 print(next(e))
 print(next(e))	
-{% endcodeblock %}
+```
 
 执行输出结果为：
 
@@ -275,7 +275,7 @@ print(next(e))
 
 以下实例使用 yield 实现斐波那契数列：
 
-{% codeblock %}
+```python
 #!/usr/bin/python3
  
 import sys
@@ -295,7 +295,7 @@ while True:
         print (next(f), end=" ")
     except StopIteration:
         sys.exit()	
-{% endcodeblock %}
+```
 
 执行以上程序，输出结果如下：
 
@@ -535,7 +535,7 @@ fab 是无法迭代的，而 fab(5) 是可迭代的：
 
 #### 没有 while 的例子
 
-{% codeblock %}
+```python
 def a():
     print("a")
 
@@ -563,11 +563,11 @@ next(f)
 next(f)
 next(f)
 next(f)		
-{% endcodeblock %}
+```
 
 输出
 
-{% codeblock %}
+```python
 1
 2
 3
@@ -581,13 +581,13 @@ Traceback (most recent call last):
   File "ski.py", line 25, in <module>
     next(f)
 StopIteration
-{% endcodeblock %}
+```
 
 因为 next 的输出超过了循环中的次数
 
 #### 有 while 的代码
 
-{% codeblock %}
+```python
 def a():
     print("a")
 
@@ -617,9 +617,9 @@ next(f)
 next(f)
 next(f)
 
-{% endcodeblock %}
+```
 输出
-{% codeblock %}
+```python
 1
 2
 3
@@ -629,7 +629,7 @@ next(f)
 a
 a
 a
-{% endcodeblock %}
+```
 
 while 的是不出错的
 

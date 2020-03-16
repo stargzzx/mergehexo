@@ -17,7 +17,7 @@ tags:
 
 ## 介绍
 
-{% codeblock %}
+```python
 import 模块名
 
 from 模块名 import 函数名
@@ -57,4 +57,4 @@ if __name__ == '__main__':
 		__init__.py 的目的就是告诉py，这是一个包，可以为空，什么都不写
 
 	import 文件夹名.模块名
-{% endcodeblock %}
+```

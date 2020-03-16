@@ -15,7 +15,7 @@ tags:
 
 ## 文件读写
 
-{% codeblock %}
+```python
 打开方式
 	open(s1,s2,s3)
 		s1:文件路径
@@ -138,7 +138,7 @@ os.path 模块使用
 	os.path.dirname(p) : 返回路径的目录
 	os.path.basename(p) : 返回路径的文件名
 	os.rmdir(path) : 删除目录（目录必须是空目录）	
-{% endcodeblock %}
+```
 
 ## 文件系统
 
@@ -148,7 +148,7 @@ os.path 模块使用
 
 ## 永久存储 pickle模块
 
-{% codeblock %}
+```python
 写入磁盘，引入相关模块,以二进制的形式进行存储
 
 	import pickle
@@ -162,7 +162,7 @@ os.path 模块使用
 	file = open("1.pkl","rb")
 	a = pickle.load(file)	读取内容
 	print(a)
-{% endcodeblock %}
+```
 
 ## 文件对象方法
 
@@ -172,7 +172,7 @@ os.path 模块使用
 
 ### 将字典以数组的形式写入
 
-{% codeblock %}
+```python
 data = {
     1:5,2:6,3:7,4:8
 }
@@ -182,7 +182,7 @@ for line in data:
     file.write(str(line) + '\t' + str(data[line]))
     file.write('\n')
 file.close()
-{% endcodeblock %}
+```
 
 1.txt 的内容
 
@@ -200,7 +200,7 @@ file.close()
 	排序过后的数据形式：
 	[(1, 5), (2, 6), (3, 7), (4, 8)]
 
-{% codeblock %}
+```python
 import operator
 data = {
     1:5,2:6,3:7,4:8
@@ -212,7 +212,7 @@ for line in y:
     file.write(str(line[0]) + '\t' + str(line[1]))
     file.write('\n')
 file.close()
-{% endcodeblock %}
+```
 
 1.txt 的内容
 

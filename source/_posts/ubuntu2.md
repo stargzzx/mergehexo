@@ -56,7 +56,7 @@ Ubuntu 每个发行版本都有自己的代号，我们要通过我们电脑上 
 
 我个人不建议你直接复制
 
-{% codeblock %}
+```python
 # 阿里云源
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
@@ -87,7 +87,7 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restrict
 deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
 ##測試版源
 deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-{% endcodeblock %}
+```
 
 ## 方法2 直接复制
 

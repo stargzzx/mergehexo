@@ -23,7 +23,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 arr1 = [None for k in range(0,6)]
 arr1[0] = 1
 arr1[1] = 3
@@ -50,6 +50,6 @@ def merge(arr1,arr2):
             j -= 1
 merge(arr1,arr2)
 print(arr1)
-{% endcodeblock %}
+```
 
 

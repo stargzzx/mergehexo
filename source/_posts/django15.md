@@ -37,7 +37,7 @@ tags:
 
 其中，menu.wxml的代码为
 
-{% codeblock %}
+```python
 <!--pages/menu/menu.wxml-->
 <view class="page">
   <view class="page__hd">
@@ -54,7 +54,7 @@ tags:
     </view>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 这里面有一个标签是
 
@@ -66,7 +66,7 @@ tags:
 
 在 menu.js 中，我们看到这样的代码：
 
-{% codeblock %}
+```python
 // pages/menu/menu.js
 
 const app = getApp()
@@ -123,7 +123,7 @@ Page({
     }
   }
 })
-{% endcodeblock %}
+```
 
 ## updateMenuData
 
@@ -148,7 +148,7 @@ Page({
 	
 其中，在 menu.py 文件中，其代码是这样的
 
-{% codeblock %}
+```python
 import os
 import yaml
 
@@ -171,11 +171,11 @@ def get_menu(request):
     # return JsonResponse(data=published_apps, safe=False, status=200)
     response = utils.response.wrap_json_response(data=published_apps)
     return JsonResponse(data=response, safe=False)
-{% endcodeblock %}
+```
 
 这个代码是让我们加载一个叫做 app.yaml 的文件，其内容是
 
-{% codeblock %}
+```python
 published:
   - app:
       category: life
@@ -192,7 +192,7 @@ published:
       publish_date: 2018-10-01
       url: /service/image
       desc: this is a backup image app.
-{% endcodeblock %}
+```
 
 至此，我们就加载了应用信息。
 
@@ -234,7 +234,7 @@ published:
 
 其页面的 weather.wxml 的代码如下：
 
-{% codeblock %}
+```python
 <!--pages/weather/weather.wxml-->
 <view class="weui-panel weui-panel_access">
   <view wx:if='{{isAuthorized}}' class="weui-panel__hd">您关心的城市：</view>
@@ -257,11 +257,11 @@ published:
     </navigator>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 其 weather.js 的代码如下：
 
-{% codeblock %}
+```python
 // pages/weather/weather.js
 
 const app = getApp()
@@ -337,7 +337,7 @@ Page({
     this.updateWeatherData()
   }
 })
-{% endcodeblock %}
+```
 
 在这里，我们要重点说两个：
 
@@ -368,7 +368,7 @@ Page({
 	
 这个 weather.py 的代码如下：
 
-{% codeblock %}
+```python
 import json
 from django.views import View
 from django.http import HttpResponse, JsonResponse
@@ -394,7 +394,7 @@ class WeatherView(View, CommonResponseMixin):
             data.append(result)
         response_data = self.wrap_json_response(data)
         return JsonResponse(data=response_data, safe=False)
-{% endcodeblock %}
+```
 
 其中
 
@@ -420,7 +420,7 @@ class WeatherView(View, CommonResponseMixin):
 
 ![](/images/django/15_2.png)
 
-{% codeblock %}
+```python
 <view class="page">
   <view class="page__hd">
     <view class="page__title">图片备份</view>
@@ -463,11 +463,11 @@ class WeatherView(View, CommonResponseMixin):
     <view class='text-center' wx:if="{{downloadedBackupedFiles.length == 0}}">暂无</view>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 其 backup.js 的代码如下：
 
-{% codeblock %}
+```python
 const app = getApp()
 const imageUrl = app.globalData.serverUrl + app.globalData.apiVersion + '/service/image'
 
@@ -604,7 +604,7 @@ Page({
     })
   },
 });
-{% endcodeblock %}
+```
 
 ## onLoad
 
@@ -640,7 +640,7 @@ Page({
 	
 而相关的 py 文件代码如下：
 
-{% codeblock %}
+```python
 import os
 import hashlib
 from django.views import View
@@ -708,7 +708,7 @@ class ImageView(View, CommonResponseMixin):
             message = 'file(%s) not found.' % img_name
         response = self.wrap_json_response(code=ReturnCode.SUCCESS, message=message)
         return JsonResponse(data=response, safe=False)
-{% endcodeblock %}
+```
 
 在 url 中，我们这样配置
 

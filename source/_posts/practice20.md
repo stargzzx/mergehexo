@@ -26,7 +26,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def change(str):
     arr = str.split(" ")
     i = len(str) - 1
@@ -49,4 +49,4 @@ def change(str):
 
 arr = " a b c "
 change(arr)
-{% endcodeblock %}
+```

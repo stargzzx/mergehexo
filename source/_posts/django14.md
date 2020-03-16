@@ -42,7 +42,7 @@ Object 以 key: value 的形式表示，将 this.data 中的 key 对应的值改
 	单次设置的数据不能超过1024KB，尽量避免一次设置过多的数据
 	不要把data中的任何一项的value设为undefined，否则这一项将不能被设置，可能会有潜在的问题
 
-{% codeblock %}
+```python
 Page({
 
   /**
@@ -59,7 +59,7 @@ Page({
 
   }
   })
-{% endcodeblock %}
+```
 
 在页面中显示：
 
@@ -82,7 +82,7 @@ Page({
 
 代码：
 
-{% codeblock %}
+```python
 wx:wx.request({
       url: 'http://180.169.225.27:7011/ibeacon/mobile.asmx/getRequest',
       data:{userid:this.data.username},
@@ -104,7 +104,7 @@ wx:wx.request({
       fail: function(res) {},
       complete: function(res) {},
     });
-{% endcodeblock %}
+```
 
 这里会出现一个问题：直接在wx:request()的success回调函数中使用this.setData()会报这样一个错误：
 
@@ -114,7 +114,7 @@ wx:wx.request({
 
 完整代码如下：
 
-{% codeblock %}
+```python
 //js代码
 onLoad: function (options) {
     console.log(options);
@@ -148,7 +148,7 @@ onLoad: function (options) {
       complete: function(res) {},
     });
   }
-{% endcodeblock %}
+```
 
 	//wxml代码
 	<view wx:for="{{postData}}">posno:{{item.posno}},TradeTime:{{item.TradeTime}}</view>

@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 import time
@@ -36,4 +36,4 @@ for i in range(0, y):
         else:
             t.putpixel([j, i], tuple(np.array([255, 255, 255])))
 t.save('max/licong.jpg')
-{% endcodeblock %}
+```

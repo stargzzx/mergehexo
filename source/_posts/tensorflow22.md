@@ -58,7 +58,7 @@ tf.Variable的初始化函数如下所示
 
 例如我们创建一个变量，并且查看其name和shape
 
-{% codeblock %}
+```python
 import tensorflow as tf
 w1 = tf.Variable(tf.random_normal([784,200], stddev = 0.35), name="weights")
 b1 = tf.Variable(tf.zeros([200]),name="biases")
@@ -76,7 +76,7 @@ weights:0 (784, 200)
 biases:0 (200,)
 weights_1:0 (784, 200)
 biases_1:0 (200,)
-{% endcodeblock %}
+```
 
 可以看到在命名的时候，如果指定的name重复，那么w2就会被命名为"name_1:0" 这样累加下去。
 
@@ -88,7 +88,7 @@ biases_1:0 (200,)
 
 要查看放置在某个集合中的所有变量的列表，可以采用如下方式
 
-{% codeblock %}
+```python
 import tensorflow as tf
 w1 = tf.Variable(tf.random_normal([784,200], stddev = 0.35), name="weights")
 b1 = tf.Variable(tf.zeros([200]),name="biases")
@@ -100,7 +100,7 @@ print tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)
 
 ************************************输出**************************************
 [<tf.Variable 'weights:0' shape=(784, 200) dtype=float32_ref>, <tf.Variable 'biases:0' shape=(200,) dtype=float32_ref>, <tf.Variable 'weights_1:0' shape=(784, 200) dtype=float32_ref>, <tf.Variable 'biases_1:0' shape=(200,) dtype=float32_ref>]
-{% endcodeblock %}
+```
 
 可以看到输出结果是所有变量的列表
 
@@ -119,7 +119,7 @@ print tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)
 									
 我们测试效果如下所示，可以看到b2的trainable=False，那么输出collection没有b2
 
-{% codeblock %}
+```python
 import tensorflow as tf
 w1 = tf.Variable(tf.random_normal([784,200], stddev = 0.35), name="weights")
 b1 = tf.Variable(tf.zeros([200]),name="biases")
@@ -131,7 +131,7 @@ print tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)
 
 ************************************输出**************************************
 [<tf.Variable 'weights:0' shape=(784, 200) dtype=float32_ref>, <tf.Variable 'biases:0' shape=(200,) dtype=float32_ref>, <tf.Variable 'weights_1:0' shape=(784, 200) dtype=float32_ref>]
-{% endcodeblock %}
+```
 
 您也可以使用自己的集合。集合名称可为任何字符串，且您无需显式创建集合。创建变量（或任何其他对象）后，要将其添加到集合，请调用 tf.add_to_collection。例如，以下代码将名为 my_local 的现有变量添加到名为 my_collection_name 的集合中：
 
@@ -141,7 +141,7 @@ tf.add_to_collection("my_collection_name", my_local)
 
 我们查看下面的代码，表示一个卷积神经网络，其中包括conv1_weights, conv1_biases, conv2_weights, conv2_biases四个参数，也就是4个变量
 
-{% codeblock %}
+```python
 def my_image_filter(input_images):
     conv1_weights = tf.Variable(tf.random_normal([5, 5, 32, 32]),
         name="conv1_weights")
@@ -156,18 +156,18 @@ def my_image_filter(input_images):
     conv2 = tf.nn.conv2d(relu1, conv2_weights,
         strides=[1, 1, 1, 1], padding='SAME')
     return tf.nn.relu(conv2 + conv2_biases)
-{% endcodeblock %}
+```
 
 假设我们利用这个函数对两张图片进行相同的操作，也就是调用两次，那么每次都会创建4个变量，假设我们在函数内对变量进行了优化求解，那么每次都会重新创建变量，这样就无法复用参数，导致训练过程无效
 
-{% codeblock %}
+```python
 # 第一次执行方法创建4个变量
 result1 = my_image_filter(image1)
 # 第二次执行再创建4个变量
 result2 = my_image_filter(image2)
 
 ValueError: Variable weight already exists, disallowed. Did you mean to set reuse=True or reuse=tf.AUTO_REUSE in VarScope? Originally defined at:
-{% endcodeblock %}
+```
 
 TensowFlow通过变量范围(variable scope)和tf.get_variable方法解决了共享变量(参数)的问题。
 
@@ -177,7 +177,7 @@ tf.Variable()方法每次被调用都会创建新的变量，这样就无法解�
 
 例如上面的例子中有两个卷积层，我们先来编写一个函数创建一个卷积/relu层，这个函数使命的变量名称是'weights'和'biases'
 
-{% codeblock %}
+```python
 def conv_relu(input, kernel_shape, bias_shape):
     # Create variable named "weights".
     weights = tf.get_variable("weights", kernel_shape,
@@ -188,11 +188,11 @@ def conv_relu(input, kernel_shape, bias_shape):
     conv = tf.nn.conv2d(input, weights,
         strides=[1, 1, 1, 1], padding='SAME')
     return tf.nn.relu(conv + biases)
-{% endcodeblock %}
+```
 
 在真实模型中需要多个卷积层，我们通过变量域来区分不同层的变量，不同的变量域下的变量名车为：scope_name/variable_name, 如下所示，第一个卷积层的变量名称是'conv1/weights', 'conv1/biases', 第二个卷积层的变量名称是 'conv2/weights', 'conv2/biases'。
 
-{% codeblock %}
+```python
 def my_image_filter(input_images):
     with tf.variable_scope("conv1"):
         # Variables created here will be named "conv1/weights", "conv1/biases".
@@ -200,7 +200,7 @@ def my_image_filter(input_images):
     with tf.variable_scope("conv2"):
         # Variables created here will be named "conv2/weights", "conv2/biases".
         return conv_relu(relu1, [5, 5, 32, 32], [32])
-{% endcodeblock %}
+```
 
 但即便这样，如果多次调用该函数，也会抛出异常，
 
@@ -212,7 +212,7 @@ def my_image_filter(input_images):
 
 如下面的代码。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 
@@ -235,7 +235,7 @@ with tf.Session() as sess:
     print(sess.run(d))
 	
 	# 上面两个输出是一样的
-{% endcodeblock %}
+```
 
 开启共享变量有两种方式
 
@@ -243,25 +243,25 @@ with tf.Session() as sess:
 
 采用scope.reuse_variables()触发重用变量，如下所示
 
-{% codeblock %}
+```python
 with tf.variable_scope("model") as scope:
   output1 = my_image_filter(input1)
   scope.reuse_variables()
   output2 = my_image_filter(input2)
-{% endcodeblock %}
+```
 
 ##### 方法2
 
-{% codeblock %}
+```python
 with tf.variable_scope("model"):
   output1 = my_image_filter(input1)
 with tf.variable_scope("model", reuse=True):
   output2 = my_image_filter(input2)
-{% endcodeblock %}
+```
 
 ##### 几个简单的例子
 
-{% codeblock %}
+```python
 import tensorflow as tf
 def test(b):
     a = tf.get_variable(name='test',shape=[2,2],initializer=tf.truncated_normal_initializer(stddev=0.02))
@@ -286,9 +286,9 @@ with tf.Session() as sess:
 	# [-0.02743572 -0.04263557]]
 	#[[0.02182615 0.01196657]
 	# [0.04365229 0.02393314]]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import tensorflow as tf
 def test(b):
     a = tf.get_variable(name='test',shape=[2,2],initializer=tf.truncated_normal_initializer(stddev=0.02))
@@ -314,9 +314,9 @@ with tf.Session() as sess:
 	# [[-0.02963482 -0.01020483]
 	# [-0.05926965 -0.02040966]]
 	# 两个输出是相同的
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import tensorflow as tf
 def test(b):
     a = tf.get_variable(name='test',shape=[2,2],initializer=tf.truncated_normal_initializer(stddev=0.02))
@@ -339,7 +339,7 @@ with tf.Session() as sess:
     print(sess.run(d))
 	# 这个会出错
 	# ValueError: Variable test/test already exists, disallowed. Did you mean to set reuse=True or reuse=tf.AUTO_REUSE in VarScope?
-{% endcodeblock %}
+```
 
 #### 理解variable_scope
 
@@ -347,40 +347,40 @@ with tf.Session() as sess:
 
 首先，TensorFlow 会判断是否要共享变量，也就是判断 tf.get_variable_scope().reuse 的值，如果结果为 False（即你没有在变量域内调用scope.reuse_variables()），那么 TensorFlow 认为你是要初始化一个新的变量，紧接着它会判断这个命名的变量是否存在。如果存在，会抛出 ValueError 异常，否则，就根据 initializer 初始化变量：
 
-{% codeblock %}
+```python
 with tf.variable_scope("foo"):
     v = tf.get_variable("v", [1])
 assert v.name == "foo/v:0"
-{% endcodeblock %}
+```
 
 而如果 tf.get_variable_scope().reuse == True，那么 TensorFlow 会执行相反的动作，就是到程序里面寻找变量名为 scope name + name 的变量，如果变量不存在，会抛出 ValueError 异常，否则，就返回找到的变量：
 
-{% codeblock %}
+```python
 with tf.variable_scope("foo"):
     v = tf.get_variable("v", [1])
 with tf.variable_scope("foo", reuse=True):
     v1 = tf.get_variable("v", [1])
 assert v1 is v	
-{% endcodeblock %}
+```
 
 变量域可以多层重叠，例如，下面的变量上有两层的变量域，那么变量名是'foo/var/v:0'
 
-{% codeblock %}
+```python
 with tf.variable_scope("foo"):
     with tf.variable_scope("bar"):
         v = tf.get_variable("v", [1])
 assert v.name == "foo/bar/v:0"
-{% endcodeblock %}
+```
 
 在同一个变量域中，如果需要调用同名变量，那么需要重用变量即可，例如v1和v两个变量时相同的，因为变量名都是'foo/v'
 
-{% codeblock %}
+```python
 with tf.variable_scope("foo"):
     v = tf.get_variable("v", [1])
     tf.get_variable_scope().reuse_variables()
     v1 = tf.get_variable("v", [1])
 assert v1 is v
-{% endcodeblock %}
+```
 
 ### 总结
 
@@ -415,7 +415,7 @@ tf中使用tf.constant_initializer(value)类生成一个初始值为常量value�
 
 constant_initializer类的构造函数定义：
 
-{% codeblock %}
+```python
 def __init__(self, value=0, dtype=dtypes.float32, verify_shape=False):
     self.value = value
     self.dtype = dtypes.as_dtype(dtype)
@@ -424,9 +424,9 @@ def __init__(self, value=0, dtype=dtypes.float32, verify_shape=False):
 	# value：指定的常量
 	# dtype： 数据类型
 	# verify_shape： 是否可以调整tensor的形状，默认可以调整
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import tensorflow as tf
 value = [0, 1, 2, 3, 4, 5, 6, 7]
 init = tf.constant_initializer(value)
@@ -436,7 +436,7 @@ with tf.Session() as sess:
   print(x.eval())
 #output:
 #[ 0.  1.  2.  3.  4.  5.  6.  7.]
-{% endcodeblock %}
+```
 
 ### tf.zeros_initializer() tf.ones_initializer()
 
@@ -446,7 +446,7 @@ with tf.Session() as sess:
 
 当初始化一个维数很多的常量时，一个一个指定每个维数上的值很不方便，tf提供了 tf.zeros_initializer() 和 tf.ones_initializer() 类，分别用来初始化全0和全1的tensor对象
 
-{% codeblock %}
+```python
 import tensorflow as tf
 init_zeros=tf.zeros_initializer()
 init_ones = tf.ones_initializer
@@ -460,7 +460,7 @@ with tf.Session() as sess:
 #output:
 # [ 0.  0.  0.  0.  0.  0.  0.  0.]
 # [ 1.  1.  1.  1.  1.  1.  1.  1.]
-{% endcodeblock %}
+```
 
 ### tf.random_normal_initializer(mean,stddev) tf.truncated_normal_initializer() 
 
@@ -474,7 +474,7 @@ tf中使用 tf.truncated_normal_initializer() 类来生成一组符合截断正�
 
 tf.random_normal_initializer 类和 tf.truncated_normal_initializer 的构造函数定义：
 
-{% codeblock %}
+```python
 def __init__(self, mean=0.0, stddev=1.0, seed=None, dtype=dtypes.float32):
     self.mean = mean
     self.stddev = stddev
@@ -485,9 +485,9 @@ def __init__(self, mean=0.0, stddev=1.0, seed=None, dtype=dtypes.float32):
 	# stddev： 正太分布的标准差，默认值1
 	# seed： 随机数种子，指定seed的值可以每次都生成同样的数据
 	# dtype： 数据类型
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import tensorflow as tf
 init_random = tf.random_normal_initializer(mean=0.0, stddev=1.0, seed=None, dtype=tf.float32)
 init_truncated = tf.truncated_normal_initializer(mean=0.0, stddev=1.0, seed=None, dtype=tf.float32)
@@ -504,13 +504,13 @@ with tf.Session() as sess:
 #   0.43091929 -0.31410623  0.70080078 -0.9620409 ]
 # [ 0.18356581 -0.06860946 -0.55245203  1.08850253 -1.13627422 -0.1006074
 #   0.65564936  0.03948414  0.86558545 -0.4964745 ]
-{% endcodeblock %}
+```
 
 ### tf.random_uniform_initializer(a,b,seed,dtype)
 
 初始化为均匀分布,从a到b均匀初始化，将变量初始化为满足平均分布的随机值，主要参数（最大值，最小值）
 
-{% codeblock %}
+```python
 def __init__(self, minval=0, maxval=None, seed=None, dtype=dtypes.float32):
     self.minval = minval
     self.maxval = maxval
@@ -521,9 +521,9 @@ def __init__(self, minval=0, maxval=None, seed=None, dtype=dtypes.float32):
 	# maxval： 最大值
 	# seed：随机数种子
 	# dtype： 数据类型
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import tensorflow as tf
 init_uniform = tf.random_uniform_initializer(minval=0, maxval=10, seed=None, dtype=tf.float32)
 with tf.Session() as sess:
@@ -534,7 +534,7 @@ with tf.Session() as sess:
 # output:
 # [ 6.93343639  9.41196823  5.54009819  1.38017178  1.78720832  5.38881063
 #   3.39674473  8.12443542  0.62157512  8.36026382]
-{% endcodeblock %}
+```
 
 从输出可以看到，均匀分布生成的随机数并不是从小到大或者从大到小均匀分布的，这里均匀分布的意义是每次从一组服从均匀分布的数里边随机抽取一个数。
 
@@ -542,12 +542,12 @@ with tf.Session() as sess:
 
 将变量初始化为满足平均分布但不影响输出数量级的随机值
 
-{% codeblock %}
+```python
 def __init__(self, factor=1.0, seed=None, dtype=dtypes.float32):
     self.factor = factor
     self.seed = seed
     self.dtype = _assert_float_dtype(dtypes.as_dtype(dtype))
-{% endcodeblock %}
+```
 
 同样都是生成均匀分布，tf.uniform_unit_scaling_initializer 跟 tf.random_uniform_initializer 不同的地方是前者不需要指定最大最小值，是通过公式计算出来的：
 
@@ -556,7 +556,7 @@ def __init__(self, factor=1.0, seed=None, dtype=dtypes.float32):
 
 input_size是生成数据的维度，factor是系数。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 init_uniform_unit = tf.uniform_unit_scaling_initializer(factor=1.0, seed=None, dtype=tf.float32)
 with tf.Session() as sess:
@@ -567,13 +567,13 @@ with tf.Session() as sess:
 # output:
 # [-1.65964031  0.59797513 -0.97036457 -0.68957627  1.69274557  1.2614969
 #   1.55491126  0.12639415  0.54466736 -1.56159735]
-{% endcodeblock %}
+```
 
 ### 初始化为变尺度正太、均匀分布
 
 tf中tf.variance_scaling_initializer()类可以生成截断正太分布和均匀分布的tensor，增加了更多的控制参数。构造函数：
 
-{% codeblock %}
+```python
 def __init__(self, scale=1.0,
                mode="fan_in",
                distribution="normal",
@@ -595,7 +595,7 @@ def __init__(self, scale=1.0,
 		# scale: 缩放尺度
 		# mode： 有3个值可选，分别是 “fan_in”, “fan_out” 和 “fan_avg”，用于控制计算标准差 stddev的值
 		# distribution： 2个值可选，”normal”或“uniform”，定义生成的tensor的分布是截断正太分布还是均匀分布
-{% endcodeblock %}
+```
 
 distribution选‘normal’的时候，生成的是截断正太分布，标准差 stddev = sqrt(scale / n), n的取值根据mode的不同设置而不同：
 
@@ -608,7 +608,7 @@ distribution选 ‘uniform’，生成均匀分布的随机数tensor，最大值
 	max_value = sqrt(3 * scale / n)
 	min_value = -max_value
 	
-{% codeblock %}
+```python
 import tensorflow as tf
 init_variance_scaling_normal = tf.variance_scaling_initializer(scale=1.0,mode="fan_in",
                                                         distribution="normal",seed=None,dtype=tf.float32)
@@ -626,7 +626,7 @@ with tf.Session() as sess:
 #   0.15629818  0.56271428 -0.15364751 -0.03651841]
 # [ 0.22965753 -0.1339919  -0.21013224  0.112804   -0.49030468  0.21375734
 #   0.24524075 -0.48397955  0.02254289 -0.07996771]
-{% endcodeblock %}
+```
 
 ### 其他初始化方式
 
@@ -634,7 +634,7 @@ with tf.Session() as sess:
 	tf.glorot_uniform_initializer() 初始化为与输入输出节点数相关的均匀分布随机数
 	tf.glorot_normal_initializer（） 初始化为与输入输出节点数相关的截断正太分布随机数
 
-{% codeblock %}
+```python
 import tensorflow as tf
 init_orthogonal = tf.orthogonal_initializer(gain=1.0, seed=None, dtype=tf.float32)
 init_glorot_uniform = tf.glorot_uniform_initializer()
@@ -659,7 +659,7 @@ with tf.Session() as sess:
 #   0.37086374  0.09727859  0.51015782 -0.43838671]
 # [-0.50223351  0.18181904  0.43594137  0.3390047   0.61405027  0.02597036
 #   0.31719241  0.04096413  0.10962497 -0.13165198]
-{% endcodeblock %}
+```
 
 ### 全局初始化
 

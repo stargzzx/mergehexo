@@ -31,7 +31,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 data = [5,4,3,2,1]
 stack1 = [None for k in range(len(data))]
 top1 = -1
@@ -45,4 +45,4 @@ for i in range(len(data)):
     stack2[i] = stack1[top1 - i]
     top2 += 1
 print(stack2)
-{% endcodeblock %}
+```

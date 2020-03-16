@@ -17,7 +17,7 @@ python 中 math 模块。
 
 [转载](http://www.cnblogs.com/vamei)
 
-{% codeblock %}
+```python
 math包主要处理数学相关的运算。math包定义了两个常数:
 math.e   # 自然常数e
 math.pi  # 圆周率pi
@@ -45,4 +45,4 @@ math.sqrt(x)
 双曲函数: math.sinh(x), math.cosh(x), math.tanh(x), math.asinh(x), math.acosh(x), math.atanh(x)
 
 特殊函数： math.erf(x), math.gamma(x)
-{% endcodeblock %}
+```

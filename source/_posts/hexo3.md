@@ -81,17 +81,17 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 	$数学公式$ 行内 不独占一行
 	$$数学公式$$ 行间 独占一行
 	
-{% codeblock %}
+```python
 $f(x)=ax+b$
-{% endcodeblock %}
+```
 
 显示效果为： $f(x)=ax+b$
 
 如果是行间则使用：
 
-{% codeblock %}
+```python
 $$f(x)=ax+b$$
-{% endcodeblock %}
+```
 
 $$f(x)=ax+b$$
 
@@ -99,9 +99,9 @@ $$f(x)=ax+b$$
 
 使用 ^ 表示上标，使用 _ 表示下标，如果上下标的内容多于一个字符，可以使用大括号括起来：
 
-{% codeblock %}
+```python
 $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
-{% endcodeblock %}
+```
 
 显示效果为：
 
@@ -109,9 +109,9 @@ $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
 
 如果左右两边都有上下标可以使用 \sideset 语法：
 
-{% codeblock %}
+```python
 $$\sideset{^n_k}{^x_y}a$$
-{% endcodeblock %}
+```
 
 显示效果为：
 
@@ -121,17 +121,17 @@ $$\sideset{^n_k}{^x_y}a$$
 
 如果是数学符号，那么直接用\limits命令放在正下方，如Max函数下面的取值范围，需要放在Max的正下方。可以如下实现：
 
-{% codeblock %}
+```python
 $$ \max \limits_{a<x<b}\{f(x)\} $$
-{% endcodeblock %}
+```
 
 $$ \max \limits_{a<x<b}\{f(x)\} $$
 
 若是普通符号，那么要用\mathop先转成数学符号再用\limits，如
 
-{% codeblock %}
+```python
 $$ \mathop{a}\limits_{i=1} $$
-{% endcodeblock %}
+```
 
 $$ \mathop{a}\limits_{i=1} $$
 
@@ -139,10 +139,10 @@ $$ \mathop{a}\limits_{i=1} $$
 
 在 markdown 语法中，\, $, {, }, _都是有特殊含义的，所以需要加\转义。小括号与方括号可以使用原始的() [] 大括号需要转义\也可以使用\lbrace和 \rbrace
 
-{% codeblock %}
+```python
 \{x*y\}
 \lbrace x*y \rbrace
-{% endcodeblock %}
+```
 
 显示效果为：
 
@@ -150,9 +150,9 @@ $$\{x*y\}$$
 
 原始符号不会随着公式大小自动缩放，需要使用 \left 和 \right 来实现自动缩放：
 
-{% codeblock %}
+```python
 $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
-{% endcodeblock %}
+```
 
 $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 
@@ -160,9 +160,9 @@ $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 
 不使用\left 和 \right的效果：
 
-{% codeblock %}
+```python
 $$ \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9}  \rbrace$$
-{% endcodeblock %}
+```
 
 $$ \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9}  \rbrace$$
 
@@ -174,19 +174,19 @@ $$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
 
 可以使用\frac 或者 \over 实现分数的显示：
 
-{% codeblock %}
+```python
 $\frac xy$
 $ x+3 \over y+5 $
-{% endcodeblock %}
+```
 
 分别显示$\frac xy$和$ x+3 \over y+5 $
 
 开方使用\sqrt:
 
-{% codeblock %}
+```python
 $ \sqrt{x^5} $
 $ \sqrt[3]{\frac xy} $
-{% endcodeblock %}
+```
 
 分别显示$ \sqrt{x^5} $和$ \sqrt[3]{\frac xy} $
 
@@ -194,11 +194,11 @@ $ \sqrt[3]{\frac xy} $
 
 求和使用\sum,可加上下标，积分使用\int可加上下限，双重积分用\iint:
 
-{% codeblock %}
+```python
 $ \sum_{i=0}^n $
 $ \int_1^\infty $
 $ \iint_1^\infty $
-{% endcodeblock %}
+```
 
 分别显示：
 
@@ -206,9 +206,9 @@ $ \sum_{i=0}^n $和$ \int_1^\infty $和$ \iint_1^\infty $
 
 ### 极限
 
-{% codeblock %}
+```python
 $ \lim_{x \to 0} $
-{% endcodeblock %}
+```
 
 显示为 $ \lim_{x \to 0} $
 
@@ -216,7 +216,7 @@ $ \lim_{x \to 0} $
 
 表格样式lcr表示居中，|加入一条竖线，\hline表示行间横线，列之间用&分隔，行之间用\分隔
 
-{% codeblock %}
+```python
 $$\begin{array}{c|lcr}
 n & \text{Left} & \text{Center} & \text{Right} \\\\
 \hline
@@ -224,7 +224,7 @@ n & \text{Left} & \text{Center} & \text{Right} \\\\
 2 & -11 & 19 & -80 \\\\
 3 & 70 & 209 & 1+i \\\\
 \end{array}$$
-{% endcodeblock %}
+```
 
 显示效果为：
 
@@ -238,13 +238,13 @@ n & \text{Left} & \text{Center} & \text{Right} \\\\
 
 表格的插入也可以使用以下方式：
 
-{% codeblock %}
+```python
 |名称|说明|
 |---|---|
 |temperature|  室内温度|
 |set temperature|  设定温度|
 |height|  室内高度|
-{% endcodeblock %}
+```
 显示效果：
 
 |名称|说明|
@@ -255,7 +255,7 @@ n & \text{Left} & \text{Center} & \text{Right} \\\\
 
 矩阵显示和表格很相似
 
-{% codeblock %}
+```python
 $$\left[
 \begin{matrix}
 V_A \\\\
@@ -277,7 +277,7 @@ V_y \\\\
 W \\\\
 \end{matrix}
 \right] $$
-{% endcodeblock %}
+```
 
 显示效果为：
 

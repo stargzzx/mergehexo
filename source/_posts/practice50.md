@@ -45,7 +45,7 @@ Example 2:
 
 ## code
 
-{% codeblock %}
+```python
 class Solution:
     def longestCommonPrefix(self, strs: 'List[str]') -> 'str':
         i = 0
@@ -69,11 +69,11 @@ class Solution:
                         g = j
             j += 1
         return strs[0][f:g]		
-{% endcodeblock %}
+```
 
 我自己写的代码太过于冗余，下面我贴一下其他人写的代码，供自己学习。
 
-{% codeblock %}
+```python
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -96,7 +96,7 @@ class Solution(object):
             if(same):
                 cpt += check[0]
         return cpt	
-{% endcodeblock %}
+```
 
 当然，我在原来代码的基础上进行了改变。
 
@@ -110,7 +110,7 @@ class Solution(object):
 
 所以，在这里贴一下我的最长匹配代码，所以啊，磨刀不误砍柴功，干任何事都要仔细的思考之后再做，当然，三思而殆，这点也要注意。
 
-{% codeblock %}
+```python
 class Solution:
     def longestCommonPrefix(self, strs: 'List[str]') -> 'str':
         i = 0
@@ -139,7 +139,7 @@ class Solution:
                 j = i + 1
             j += 1
         return strs[0][f:g]		
-{% endcodeblock %}
+```
 
 ## Result
 

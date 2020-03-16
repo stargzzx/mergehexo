@@ -37,7 +37,7 @@ tags:
 	
 ## 在 tensorflow 中如何写滑动平均
 
-{% codeblock %}
+```python
 ema = tf.train.ExponentialMovingAverage(衰减率MOVING_AVERAGE_DECAY,当前轮数gloal_step)
 #ema_op = ema.apply([])
 ema_op = ema.apply(tf.trainable_variables())
@@ -46,11 +46,11 @@ with tf.control_dependencies([train_step,ema_op]):
 	train_op = tf.no_op(name = 'train')
 ema.average(参数名)
 	# 查看某些参数的活动平均值
-{% endcodeblock %}
+```
 
 ## 代码示例
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 #1 定义一个 32 位浮点变量，初始值为 0.0 这个代码就是不断地更新 w1 参数，优化 w1 参数，滑动平均做了个 w1 的影子
@@ -113,4 +113,4 @@ with tf.Session() as sess:
 		# [10.0, 4.061389]
 		# [10.0, 4.547275]
 		# [10.0, 4.9934072]
-{% endcodeblock %}
+```

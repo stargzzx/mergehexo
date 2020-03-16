@@ -45,7 +45,7 @@ PIL中有九种不同模式。分别为1，L，P，RGB，RGBA，CMYK，YCbCr，I
 
 例子：
 
-{% codeblock %}
+```python
 >>>from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena.mode
@@ -65,7 +65,7 @@ PIL中有九种不同模式。分别为1，L，P，RGB，RGBA，CMYK，YCbCr，I
 0 
 >>>lena_1.getpixel((130,120))
 255
-{% endcodeblock %}
+```
 
 图像lena_1的模式为“1”，分辨率为512x512，如下：
 
@@ -81,7 +81,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PIL importImage
 >>> lena = Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena.mode
@@ -97,7 +97,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 (197, 111, 78)
 >>>lena_L.getpixel((0,0))
 132
-{% endcodeblock %}
+```
 
 对于第一个像素点，原始图像lena为(197, 111, 78)，其转换为灰色值为：
 
@@ -115,7 +115,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PIL importImage
 >>> lena = Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena.mode
@@ -127,7 +127,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 'P'
 >>>lena_P.getpixel((0,0))
 62
-{% endcodeblock %}
+```
 
 转换后的图像lena_P如下：
 
@@ -141,7 +141,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 例子： 
 
-{% codeblock %}
+```python
 >>> from PIL import Image
 >>>lena = Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>>lena.mode
@@ -159,7 +159,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 (197,111, 78)
 >>>lena.getpixel((0,1))
 (196,110, 77)
-{% endcodeblock %}
+```
 
 从实例中可以看到，使用当前这个方式将“RGB”图像转为“RGBA”图像时，alpha通道全部设置为255，即完全不透明。
 
@@ -177,7 +177,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>>from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_cmyk =lena.convert("CMYK")
@@ -191,7 +191,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 (197, 111, 78)
 >>>lena.getpixel((0,1))
 (196, 110, 77)
-{% endcodeblock %}
+```
 
 从实例中可以得知PIL中“RGB”转换为“CMYK”的公式如下：
 
@@ -220,7 +220,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>>from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_ycbcr =lena.convert("YCbCr")
@@ -230,7 +230,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 (132, 97, 173)
 >>>lena.getpixel((0,0))
 (197, 111, 78)
-{% endcodeblock %}
+```
 
 按照公式，Y = 0.257*197+0.564*111+0.098*78+16= 136.877
 
@@ -253,7 +253,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PIL import Image
 >>>lena = Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>>lena.getpixel((0,0))
@@ -272,7 +272,7 @@ L = R * 299/1000 + G * 587/1000+ B * 114/1000
 132
 >>>lena_L.getpixel((0,1))
 131
-{% endcodeblock %}
+```
 
 从实验的结果看，模式“I”与模式“L”的结果是完全一样，只是模式“L”的像素是8bit，而模式“I”的像素是32bit。
 
@@ -286,7 +286,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>>from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>>lena.getpixel((0,0))
@@ -300,7 +300,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 132.95199584960938
 >>>lena_F.getpixel((0,1))
 131.95199584960938
-{% endcodeblock %}
+```
 
 模式“F”与模式“L”的转换公式是一样的，都是RGB转换为灰色值的公式，但模式“F”会保留小数部分，如实验中的数据。
 
@@ -317,7 +317,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PILimport Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_1 =lena.convert("1")
@@ -328,7 +328,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 255
 >>>lena_1_rgb.getpixel((0,0))
 (255, 255, 255)
-{% endcodeblock %}
+```
 
 2、 模式“L”转换为模式“RGB”
 
@@ -336,7 +336,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PIL import Image
 >>> lena = Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_L =lena.convert("L")
@@ -347,7 +347,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 132
 >>>lena_rgb.getpixel((0,0))
 (132, 132, 132)
-{% endcodeblock %}
+```
 
 3、 模式“P”转换为模式“RGB”
 
@@ -355,7 +355,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_P =lena.convert("P")
@@ -366,7 +366,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 62
 >>>lena_P_rgb.getpixel((0,0))
 (204, 102, 51)
-{% endcodeblock %}
+```
 
 4、 模式“RGBA”转换为模式“RGB”
 
@@ -374,7 +374,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PILimport Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_RGBA =lena.convert("RGBA")
@@ -385,7 +385,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 (197, 111, 78, 255)
 >>>lena_RGBA_rgb.getpixel((0,0))
 (197, 111, 78)
-{% endcodeblock %}
+```
 
 5、 模式“CMYK”转换为模式“RGB”
 
@@ -404,7 +404,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_CMYK =lena.convert("CMYK")
@@ -415,7 +415,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 (58, 144, 177, 0)
 >>>lena_CMYK_rgb.getpixel((0,0))
 (197, 111, 78)
-{% endcodeblock %}
+```
 
 6、 模式“YCbCr”转换为模式“RGB”
 
@@ -433,7 +433,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PILimport Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_YCbCr =lena.convert("YCbCr")
@@ -444,7 +444,7 @@ F = R * 299/1000+ G * 587/1000 + B * 114/1000
 (132, 97, 173)
 >>>lena_YCbCr_rgb.getpixel((0,0))
 (195, 110, 77)
-{% endcodeblock %}
+```
 
 7、 模式“I”转换为模式“RGB”
 
@@ -456,7 +456,7 @@ I = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PILimport Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_I =lena.convert("I")
@@ -467,7 +467,7 @@ I = R * 299/1000+ G * 587/1000 + B * 114/1000
 132
 >>>lena_I_rgb.getpixel((0,0))
 (132, 132, 132)
-{% endcodeblock %}
+```
 
 8、 模式“F”转换为模式“RGB”
 
@@ -479,7 +479,7 @@ I = R * 299/1000+ G * 587/1000 + B * 114/1000
 
 例子：
 
-{% codeblock %}
+```python
 >>> from PILimport Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_F =lena.convert("F")
@@ -490,7 +490,7 @@ I = R * 299/1000+ G * 587/1000 + B * 114/1000
 132.95199584960938
 >>>lena_F_rgb.getpixel((0,0))
 (132, 132, 132)
-{% endcodeblock %}
+```
 
 #### 三、调色板图像的转换
 
@@ -516,13 +516,13 @@ im.convert(“P”,**options) ⇒ image
 
 上述转换代码如下：
 
-{% codeblock %}
+```python
 >>> from PILimport Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena_P_dither= lena.convert("P", dither = Image.NONE)
 >>> lena_P_palette= lena.convert("P", palette = Image.ADAPTIVE)
 >>>lena_P_palette_colors = lena.convert("P", palette = Image.ADAPTIVE,colors = 10)
-{% endcodeblock %}
+```
 
 #### 四、带矩阵的模式转换
 
@@ -534,7 +534,7 @@ im.convert(mode,matrix) ⇒ image
 
 例子：下面的例子将一个RGB图像（根据ITU-R709线性校准，使用D65亮度）转换到CIE XYZ颜色空间：
 
-{% codeblock %}
+```python
 >>>from PIL import Image
 >>> lena =Image.open("D:\\Code\\Python\\test\\img\\lena.jpg")
 >>> lena.mode
@@ -545,7 +545,7 @@ im.convert(mode,matrix) ⇒ image
                        0.019334,0.119193, 0.950227, 0 )
 >>>lena_L = lena.convert("L", rgb2xyz)
 >>>lena_rgb = lena.convert("RGB", rgb2xyz)
-{% endcodeblock %}
+```
 
 图像lena_L如下：
 
@@ -565,7 +565,7 @@ alpha_composite(im1, im2)：在im1对象上的透明层复合im2，返回一个I
 
 im1和im2的size要相同。且im1和im2的mode都必须是RGBA
 
-{% codeblock %}
+```python
 from PIL import Image, ImageDraw
 im1 = Image.new('RGBA',size=(300,300),color='red')
 im2 = Image.new('RGBA',size=(300,300))
@@ -574,7 +574,7 @@ draw.line((0,0) +im2.size,'green',10)
 image = Image.alpha_composite(im1,im2)
 image.save('aaa.png')
 	# 这个 image 最后的图象是红色背景，绿色的线
-{% endcodeblock %}
+```
 
 ## G
 
@@ -582,13 +582,13 @@ image.save('aaa.png')
 
 im.getpixel((x, y))	得到某个像素点的颜色
 
-{% codeblock %}
+```python
 from PIL import Image, ImageDraw
 im1 = Image.new('RGBA',size=(300,300),color='red')
 rgb = im1.getpixel((1,1))
 print(rgb)
     # (255, 0, 0, 255)
-{% endcodeblock %}
+```
 
 
 ## N
@@ -606,13 +606,13 @@ Image.new(mode, size, color) ⇒ image
 
 ![](/images/python/27_0.png)
 
-{% codeblock %}
+```python
 from PIL import Image
 im= Image.new("RGB", (128, 128), "#FF0000")
 im.show()
 	# 输出的是一个 128 * 128 的红色矩阵
 	# 不设置 color 的话就是黑色
-{% endcodeblock %}
+```
 
 
 ## O

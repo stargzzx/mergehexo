@@ -13,7 +13,7 @@ tags:
 
 ## 魔法方法 小例
 
-{% codeblock %}
+```python
 __init__()
 	类在实例化对象的时候首先调用的方法
 	不能在这个函数中给任何 return
@@ -32,7 +32,7 @@ __new__(class[,..])
 
 __del__(self)
 	自动调用，垃圾回收机制
-{% endcodeblock %}
+```
 
 ![](/images/python/10_m0.JPG)
 

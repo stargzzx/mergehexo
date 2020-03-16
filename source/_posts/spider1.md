@@ -209,7 +209,7 @@ Pipelines 文件如下图：
 
 所以， spiders 下的 hanzi.py 的内容如下
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 import scrapy
 from ..items import SpiderItem
@@ -247,13 +247,13 @@ class HanziSpider(scrapy.Spider):
         for url in next_urls:
             if url:
                 yield scrapy.Request(url, callback=self.parse_detail)
-{% endcodeblock %}
+```
 
 我们编写 items 文件，这个文件主要是规定文件的格式
 
 所以， items.py 内容如下
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 
 # Define here the models for your scraped items
@@ -272,11 +272,11 @@ class SpiderItem(scrapy.Item):
     name = scrapy.Field()
 	# 代表的是谁写的字，比如这个例子便是 文征明的书法
     hanzi_class = scrapy.Field()
-{% endcodeblock %}
+```
 
 然后，我们编写存储文件，即 pipelines.py 文件
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 
 # Define your item pipelines here
@@ -299,7 +299,7 @@ class SpiderPipeline(object):
         except Exception:
             print(123123)
         return item
-{% endcodeblock %}
+```
 
 OK，到了现在一个很简易的爬虫就做好了，虽然爬虫非常简单，但是，已经可以适应大部分的网站了。
 

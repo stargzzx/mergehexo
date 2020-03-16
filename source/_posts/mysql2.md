@@ -26,11 +26,11 @@ mysqldump 是 mysql 用于转存储数据库的实用程序。它主要产生一
 
 以下实例将数据表 runoob_tbl 导出到 /tmp 目录中：
 
-{% codeblock %}
+```python
 $ mysqldump -u root -p --no-create-info \
             --tab=/tmp RUNOOB runoob_tbl
 password ******
-{% endcodeblock %}
+```
 
 ### 导出 SQL 格式的数据
 
@@ -40,24 +40,24 @@ password ******
 
 导出 SQL 格式的数据到指定文件，如下所示：
 
-{% codeblock %}
+```python
 $ mysqldump -u root -p RUNOOB runoob_tbl > dump.txt
 password ******
-{% endcodeblock %}
+```
 
 如果你需要导出整个数据库的数据，可以使用以下命令：
 
-{% codeblock %}
+```python
 $ mysqldump -u root -p RUNOOB > database_dump.txt
 password ******
-{% endcodeblock %}
+```
 
 如果需要备份所有数据库，可以使用以下命令：
 
-{% codeblock %}
+```python
 $ mysqldump -u root -p --all-databases > database_dump.txt
 password ******
-{% endcodeblock %}
+```
 
 当然，那份参考资料上还有直接备份到本地数据库，由于我没用到，所以在这里就不写了，感兴趣的小伙伴可以看看。
 

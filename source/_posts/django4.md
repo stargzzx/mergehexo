@@ -73,7 +73,7 @@ templates用来放置模板文件
 
 我们先配置路由，也就是 blog下的urls.py文件
 
-{% codeblock %}
+```python
 from django.urls import path,include
 import blog.views
 
@@ -84,10 +84,10 @@ urlpatterns = [
     path('detail',blog.views.get_detail_page)
 ]
 
-{% endcodeblock %}
+```
 然后我们配置 blog 下的 views.py 文件
 添加两个函数
-{% codeblock %}
+```python
 
 def get_index_page(request):
     all_article = Article.objects.all()
@@ -102,11 +102,11 @@ def get_detail_page(request):
                   {
                       'curr_article':curr_article
                   })
-{% endcodeblock %}
+```
 
 最后我们编写index.html 文件
 
-{% codeblock %}
+```python
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,7 +147,7 @@ def get_detail_page(request):
 </div>
 </body>
 </html>
-{% endcodeblock %}
+```
 
 最后运行项目，然后浏览器输入
 
@@ -168,7 +168,7 @@ def get_detail_page(request):
 
 首先修改 blog 下的路径文件
 
-{% codeblock %}
+```python
 from django.urls import path,include
 import blog.views
 
@@ -180,9 +180,9 @@ urlpatterns = [
     path('detail/<int:article_id>',blog.views.get_detail_page)
 ]
 
-{% endcodeblock %}
+```
 之前的blog下面的views.py
-{% codeblock %}
+```python
 
 def get_detail_page(request):
     curr_article = Article.objects.all()[0]
@@ -190,11 +190,11 @@ def get_detail_page(request):
                   {
                       'curr_article':curr_article
                   })
-{% endcodeblock %}
+```
 
 变成
 
-{% codeblock %}
+```python
 def get_detail_page(request,article_id):
     all_article = Article.objects.all()
     curr_article = None
@@ -207,7 +207,7 @@ def get_detail_page(request,article_id):
                   {
                       'curr_article':curr_article
                   })
-{% endcodeblock %}
+```
 
 ![](/images/django/4_2.png)
 
@@ -221,7 +221,7 @@ def get_detail_page(request,article_id):
 
 修改blog 下面的 views 的 get_detail_page 函数
 
-{% codeblock %}
+```python
 def get_detail_page(request,article_id):
     all_article = Article.objects.all()
     curr_article = None
@@ -254,11 +254,11 @@ def get_detail_page(request,article_id):
                       'previous_article':previous_article,
                       'next_article':next_article
                   })
-{% endcodeblock %}
+```
 
 然后修改detail的代码
 
-{% codeblock %}
+```python
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -289,7 +289,7 @@ def get_detail_page(request,article_id):
 </div>
 </body>
 </html>
-{% endcodeblock %}
+```
 
 最后的页面如下面所示：
 

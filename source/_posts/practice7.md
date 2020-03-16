@@ -45,7 +45,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def LEFT(x):
     return 2 * x + 1
 
@@ -78,13 +78,13 @@ def heapSort(arr,length):
 
 arr = [2,1,4,3,6,8,5,7,9]
 heapSort(arr,3)
-{% endcodeblock %}
+```
 
 ## 写代码途中所遇错误
 
 最开始我打算用切片的方式，把数组进行长度为三的切片，然后传递给函数，结果发现，切片后传递的只是形参，具体如下代码。
 
-{% codeblock %}
+```python
 def test(arr):
     arr[0] = 10
 
@@ -92,5 +92,5 @@ arr = [1,1,1,1]
 test(arr[0:2])
 print(arr)
 	# [1, 1, 1, 1]
-{% endcodeblock %}
+```
 

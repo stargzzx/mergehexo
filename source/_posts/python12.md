@@ -17,7 +17,7 @@ tags:
 [python 自定义异常和异常捕捉](https://blog.csdn.net/flyingshuai/article/details/73482177)
 
 ## 异常
-{% codeblock %}
+```python
 try:
 	检测范围
 
@@ -48,7 +48,7 @@ finally:
 raise 语句，自主引发异常
 	raise Exception
 		raise ZeroDivisionError("除数为零的异常")
-{% endcodeblock %}
+```
 
 ![](/images/python/12_0.JPG)
 
@@ -56,20 +56,20 @@ raise 语句，自主引发异常
 
 ## 异常参数输出：
 
-{% codeblock %}
+```python
 try:
     testRaise()
 except PreconditionsException as e: #python3的写法，必须用as
 									# python2 是另一种写法
 									# except PreconditionsException,e:
     print (e)
-{% endcodeblock %}
+```
 
 ## 自定义异常
 
 自定义异常，只需自定义异常类继承父类Exception。在自定义异常类中，重写父类init方法。
 
-{% codeblock %}
+```python
 class DatabaseException(Exception):
     def __init__(self,err='数据库错误'):
         Exception.__init__(self,err)
@@ -86,7 +86,7 @@ try:
 except PreconditionsException as e:
     print (e)
 		# PreconditionsErr
-{% endcodeblock %}
+```
 
 注意：PreconditonsException又是DatabaseException的子类。 
 

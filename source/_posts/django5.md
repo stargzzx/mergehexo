@@ -22,7 +22,7 @@ tags:
 
 <br/>
 
-{% codeblock %}
+```python
 from django.core.paginator import Paginator
 l = [1,2,3,4]
 p = Paginator(l,2) # 将 l 分为 2 组
@@ -41,11 +41,11 @@ print(page2.has_next())
 print(page1.has_previous())
 	# False
 
-{% endcodeblock %}
+```
 
 为了获取 url 里的参数，我们可以修改blog/views.py 的 get_index_page()
 
-{% codeblock %}
+```python
 def get_index_page(request):
     page = request.GET.get('page')
     if page:
@@ -76,11 +76,11 @@ def get_index_page(request):
                       'next_page': next_page,
                       'previous_page': previous_page
                   })
-{% endcodeblock %}
+```
 
 而 /blog/index.html的界面代码如下：
 
-{% codeblock %}
+```python
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,7 +144,7 @@ def get_index_page(request):
 </body>
 </html>
 
-{% endcodeblock %}
+```
 
 ![](/images/django/5_1.png)
 

@@ -33,7 +33,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def test(a,b):
     number = a - b
     f = number >> 31
@@ -44,5 +44,5 @@ def test(a,b):
     return  i * a + j * b
     
 print(test(8,7))
-{% endcodeblock %}
+```
 

@@ -109,7 +109,7 @@ Django内置了很多中间件,其中之一就是CSRF中间件
 
 好办！在你的前端模版的JavaScript代码处，添加下面的代码：
 
-{% codeblock %}
+```python
 // using jQuery
 function getCookie(name) {
     var cookieValue = null;
@@ -139,7 +139,7 @@ $.ajaxSetup({
         }
     }
 });
-{% endcodeblock %}
+```
 
 上面代码的作用就是让你的ajax的POST方法带上CSRF需要的令牌，它依赖Jquery库，必须提前加载Jquery。这是Django官方提供的解决方案哦，^-^。
 
@@ -159,7 +159,7 @@ $.ajaxSetup({
 
 Django CSRF中间件的源码
 
-{% codeblock %}
+```python
 class CsrfViewMiddleware(MiddlewareMixin):
 
     def _accept(self, request):
@@ -298,13 +298,13 @@ class CsrfViewMiddleware(MiddlewareMixin):
         self._set_token(request, response)
         response.csrf_cookie_set = True
         return response
-{% endcodeblock %}
+```
 
 从上面的源码中可以看到，CsrfViewMiddleware中间件中定义了process_request，process_view和process_response三个方法
 
 ## 先来看process_request方法
 
-{% codeblock %}
+```python
 def _get_token(self, request):  
     if settings.CSRF_USE_SESSIONS:  
         try:  
@@ -331,7 +331,7 @@ def process_request(self, request):
         if csrf_token is not None:  
             # Use same token next time.  
       request.META['CSRF_COOKIE'] = csrf_token
-{% endcodeblock %}
+```
 
 从Django项目配置文件夹中读取CSRF_USE_SESSIONS的值，如果获取成功，则从session中读取CSRF_SESSION_KEY的值，默认为'_csrftoken'，如果没有获取到CSRF_USE_SESSIONS的值，则从发送过来的请求中获取CSRF_COOKIE_NAME的值，如果没有定义则返回None。
 

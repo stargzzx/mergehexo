@@ -25,14 +25,14 @@ matplotlib是python中强大的画图模块，按官网上的图例，基本能�
 
 我们用不到 matplotlib 的所有功能，基本上只是使用一小部分，所以只需要：
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1,1,50)
 y = 2 * x + 1
 plt.plot(x,y)	
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_0.png)
 
@@ -49,7 +49,7 @@ figure(num=None, figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon
 
 想要画出多个图像
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1, 1, 50)
@@ -64,7 +64,7 @@ plt.plot(x,y1,color = 'red',linewidth = 1.0,linestyle = '--')
 	# 在一幅图中做两条线
 	# linestyle 是线段类型，比如这个就是虚线
 plt.show()
-{% endcodeblock %}
+```
 
 一共表现为两张图
 
@@ -74,7 +74,7 @@ plt.show()
 
 ## 设置坐标
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1, 1, 50)
@@ -104,11 +104,11 @@ plt.yticks(
 	[r'$really \ bad$', 'bad', r'$normal\ \alpha$', 'good', 'really good']
 )
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_2.png)
 
-{% codeblock %}
+```python
 #修改坐标轴位置
 import matplotlib.pyplot as plt
 import numpy as np
@@ -152,13 +152,13 @@ ax.yaxis.set_ticks_position('left')
 ax.spines['bottom'].set_position(('data',-1))
 ax.spines['left'].set_position(('data',0))
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_3.png)
 
 ## legend 图例
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-1, 1, 50)
@@ -184,13 +184,13 @@ plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--',label = 'down')
 # label的选择是就近原则，如下不会打出 up,down 只会打出 li cong
 plt.legend(loc = 'best',labels = ['li','cong'])
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_4.png)
 
 ## 动图
 
-{% codeblock %}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import time
@@ -203,7 +203,7 @@ for i in range(200):
     if 'l' in globals():
         l.remove()
 plt.show()
-{% endcodeblock %}
+```
 
 #接口
 
@@ -220,18 +220,18 @@ pyplot是一个收集一些函数的模块，这些函数允许以函数式方�
 
 这两段代码效果一样。
 
-{% codeblock %}
+```python
 plt.figure()
 plt.xticks([])
 plt.yticks([])
 data = np.arange(12)
 plt.plot(data,data*2)
 plt.show()
-{% endcodeblock %}
+```
 
 注意，类似的这些操作若想起作用，需要将其置于 plt.show() 之前，plt.imshow() 之后
 
-{% codeblock %}
+```python
 plt.figure()
 frame = plt.gca()
 # y 轴不可见
@@ -241,13 +241,13 @@ frame.axes.get_xaxis().set_visible(False)
 data = np.arange(12)
 plt.plot(data,data*2)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_4_0.png)
 
 ## 去掉边界
 
-{% codeblock %}
+```python
 plt.figure()
 frame = plt.gca()
 # y 轴不可见
@@ -258,7 +258,7 @@ plt.axis('off')
 data = np.arange(12)
 plt.plot(data,data*2)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_4_1.png)
 
@@ -280,7 +280,7 @@ Matplotlib中默认是使用阻塞模式。看一下这里用到的matplotlib中
 	
 了解了以上几个函数之后，就可以很方便的画出动态图了。原理很简单，就是一个“画图-->清理-->画图”的循环，注意这中间的pause暂停。
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 def test():
@@ -295,7 +295,7 @@ def test():
 		plt.ioff()
 		plt.show()
 test()
-{% endcodeblock %}
+```
 
 让人感到奇怪的是，即便是将 ion() 和 ioff() 注释掉后，还是原来的效果。。。
 
@@ -305,17 +305,17 @@ test()
 
 ### win下的解决方案
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
 plt.text(0.5,0.3,"李丛123")
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_4_3.png)
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
@@ -324,7 +324,7 @@ plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 plt.figure()
 plt.text(0.5,0.3,u"李丛123")
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_4_4.png)
 
@@ -332,8 +332,8 @@ plt.show()
 
 由于Mac系统自带有中文字库，Arial Unicode MS即为其中一种。不需要安装字库，不需要修改配置文件。
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 plt.rcParams["font.family"] = 'Arial Unicode MS'
-{% endcodeblock %}
+```
 

@@ -31,7 +31,7 @@ tags:
 
 ### 代码
 
-{% codeblock %}
+```python
 class Node:
     def __init__(self,value):
         self.value = value
@@ -40,7 +40,7 @@ class Node:
 class Head:
     def __init__(self):
         self.next = None
-{% endcodeblock %}
+```
 
 ### 说明
 	
@@ -50,12 +50,12 @@ class Head:
 	
 ### 没有头结点
 
-{% codeblock %}
+```python
 class Node:
     def __init__(self,value):
         self.value = value
         self.next  = None
-{% endcodeblock %}
+```
 
 ### 说明
 

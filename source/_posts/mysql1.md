@@ -157,7 +157,7 @@ tags:
 
 例子1
 
-{% codeblock %}
+```python
 CREATE TABLE IF NOT EXISTS `ppserver`.`eventTable`(
    `userId`         INT UNSIGNED      NOT null,
    `taskId`         INT UNSIGNED      NOT null,
@@ -171,11 +171,11 @@ CREATE TABLE IF NOT EXISTS `ppserver`.`eventTable`(
    unique index(`userId` ,`taskId`,`date`),
    PRIMARY KEY ( `eventId`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-{% endcodeblock %}
+```
 
 例子2
 
-{% codeblock %}
+```python
 CREATE TABLE Persons   
 (   
 Id_P int NOT NULL,   
@@ -185,13 +185,13 @@ Address varchar(255),
 City varchar(255),   
 CONSTRAINT uc_PersonID UNIQUE (Id_P,LastName)   
 )
-{% endcodeblock %}
+```
 
 #### 唯一索引的场景
 
 如果业务中要求两个字符联合起了是唯一的，比如“地址”+“名称”是唯一的，又假设有一个需求是用户给评论点赞,数据库设计是三张表,用户表t_user,评论表t_comment,点赞表t_praise,其中点赞表中有两个外键分别是user_id和comment_id,分别关联用户表的用户id和评论表的评论id,然后规定一个用户只能给同一条评论点赞一次,有一种实现方式就是在插入点赞表之前,先通过user_id和comment_id查询是否有点赞记录,如果没有的话,再执行插入操作,否则返回您已经点过赞了.这样实现的话就会多一次数据库查询操作.更好的实现是,修改点赞表的user_id和comment_id为唯一约束,即这两列不能同时相同,这样在执行插入操作的话,如果已经点过赞了,数据库会抛出违反了唯一键约束,这样的话,就可以避免多一次数据库查询操作了.具体设置多列为唯一约束的语句是:
 
-{% codeblock %}
+```python
 CREATE TABLE `t_praise` (
   `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` int(12) NOT NULL,
@@ -201,11 +201,11 @@ CREATE TABLE `t_praise` (
   UNIQUE KEY `UK_praise` (`comment_id`,`user_id`)
 
 )
-{% endcodeblock %}
+```
 
 ## mysql中key 、primary key 、unique key 与index区别
 
-{% codeblock %}
+```python
 CREATE TABLE `phpcolor_ad` (  
 `id` mediumint(8) NOT NULL AUTO_INCREMENT,  
 `name` varchar(30) NOT NULL,  
@@ -214,7 +214,7 @@ CREATE TABLE `phpcolor_ad` (  
 PRIMARY KEY (`id`),  
 KEY `type` (`type`)  
 );
-{% endcodeblock %}
+```
 
 最后一句的KEY `type` (`type`)是什么意思？
 

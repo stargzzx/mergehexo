@@ -50,7 +50,7 @@ tags:
 
 此时我们有搜索框来接受用户输入，也有后端容纳数据，是时候让 JavaScript 大显身手了。
 
-{% codeblock %}
+```python
 var inputArea = document.querySelector("#local-search-input");
 if (inputArea) {
 	inputArea.onclick = function() {
@@ -65,7 +65,7 @@ var getSearchFile = function() {
 var path = "/search.xml";
 searchFunc(path, 'local-search-input', 'local-search-result');
 }
-{% endcodeblock %}
+```
 
 但是，因为我对 hexo 的分布很不了解，于是 js 添加到哪失败了。
 

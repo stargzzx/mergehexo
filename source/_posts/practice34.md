@@ -30,11 +30,11 @@ tags:
 	得到的数就是所要找的数
 	
 ## 代码
-{% codeblock %}
+```python
 arr = [1,2,3,2,1]
 a = 0
 for i in range(len(arr)):
     a = a ^ arr[i]
 print(a)
-{% endcodeblock %}
+```
 

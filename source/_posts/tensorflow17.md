@@ -23,7 +23,7 @@ mathjax: true
 
 具体的原因是下面的代码。
 
-{% codeblock %}
+```python
 test1 = -tf.reduce_sum(y_*tf.log(y),reduction_indices=[1,0])
 test2 = -tf.reduce_sum(y_*tf.log(y))
 
@@ -36,7 +36,7 @@ train1 = optimizer.minimize(test1)
 train2 = optimizer.minimize(test2)
 train3 = optimizer.minimize(loss1)
 train4 = optimizer.minimize(loss2)
-{% endcodeblock %}
+```
 
 让人感到惊奇的是，用 train1，train2 训练的 loss 是 nan ，而用 train3,train4 训练的却是正常的。
 

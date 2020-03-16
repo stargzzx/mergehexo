@@ -35,7 +35,7 @@ d cba => d abc
 
 ## 代码
 
-{% codeblock %}
+```python
 def reverse(i,j,arr):
     arr = list(arr)
     while(i < j):
@@ -49,4 +49,4 @@ new = ""
 for i in range(len(arr)):
     new = new + reverse(0,len(arr[i]) - 1,arr[i]) + " "
 print(new)
-{% endcodeblock %}
+```

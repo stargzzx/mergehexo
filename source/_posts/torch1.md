@@ -33,13 +33,13 @@ mathjax: true
 
 	x = tensor.ones(2,4,requires_grad=True)
 
-{% codeblock %}
+```python
 import torch
 x = torch.ones(2,4,requires_grad=True)
 print(x)
 	tensor([[1., 1., 1., 1.],
        		[1., 1., 1., 1.]], requires_grad=True)
-{% endcodeblock %}
+```
 
 只要这样设置了之后，后面由x经过运算得到的其他tensor，就都有requires_grad=True属性了。
 
@@ -47,7 +47,7 @@ print(x)
 
 grad_fn 记录了这个 tensor 是经过什么操作得到的
 
-{% codeblock %}
+```python
 y = x + 2
 print(y)
 
@@ -56,11 +56,11 @@ print(y)
 
 y.requires_grad
 True
-{% endcodeblock %}
+```
 
 如果想改变这个属性，就调用tensor.requires_grad_()方法：
 
-{% codeblock %}
+```python
 x.requires_grad_(False)
 
 	tensor([[1., 1., 1., 1.],
@@ -68,7 +68,7 @@ x.requires_grad_(False)
 
 print(x.requires_grad,y.requires_grad)
 	False True
-{% endcodeblock %}
+```
 
 这里，注意区别tensor.requires_grad和tensor.requires_grad_()两个东西，前面是调用变量的属性值，后者是调用内置的函数，来改变属性。
 
@@ -82,12 +82,12 @@ print(x.requires_grad,y.requires_grad)
 
 我们首先定义一个计算图（计算的步骤）：
 
-{% codeblock %}
+```python
 x = torch.tensor([[1.,2.,3.],[4.,5.,6.]],requires_grad=True)
 y = x+1
 z = 2*y*y
 J = torch.mean(z)
-{% endcodeblock %}
+```
 
 这里需要注意的是，要想使x支持求导，必须让x为浮点类型，也就是我们给初始值的时候要加个点：“.”。不然的话，就会报错。
 
@@ -112,24 +112,24 @@ x、y、z都是tensor，但是size为（2,3）的矩阵。但是J是对z的每�
 
 试图z对x求导：
 
-{% codeblock %}
+```python
 z.backward()
 # 会报错：
 Traceback (most recent call last)
 <ipython-input-31-aa814b0a8cba> in <module>()
 ----> 1 z.backward()
 RuntimeError: grad can be implicitly created only for scalar outputs
-{% endcodeblock %}
+```
 
 正确的应该是J对x求导：
 
-{% codeblock %}
+```python
 J.backward()
 x.grad
 
 	tensor([[1.3333, 2.0000, 2.6667],
         	[3.3333, 4.0000, 4.6667]])
-{% endcodeblock %}
+```
 
 grad 就是导数，要求这个首先得调用 backward.
 
@@ -158,7 +158,7 @@ J对x的导数应该是什么呢？
 
 [文档](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html)
 
-{% codeblock %}
+```python
 x = torch.randn(3, requires_grad=True)
 
 y = x * 2
@@ -172,7 +172,7 @@ print(x.grad)
 
 	tensor([1.0240e+02, 1.0240e+03, 1.0240e-01])
 
-{% endcodeblock %}
+```
 
 它这里的y是一个tensor，是一个向量。按道理不能求导呀。这个参数gradients是干嘛的？
 
@@ -212,14 +212,14 @@ print(x.grad)
 
 ## 例子1
 
-{% codeblock %}
+```python
 from __future__ import print_function
 import torch as t
 from torch.autograd import Variable
 x = Variable(t.ones(2, 2),requires_grad = True)
 y = x + 1
 y.backward()
-{% endcodeblock %}
+```
 
 然后就会报上面的错误：
 
@@ -290,14 +290,14 @@ $$ {dy \over {dx}_2} = i \times {dy_1 \over dx_1} + j \times {dy_2 \over dx_1} =
 
 (i,j)的值就是传入.backward()的参数的值
 
-{% codeblock %}
+```python
 x = Variable(t.FloatTensor([[2, 4]]),requires_grad = True)
 y = Variable(t.zeros(1, 2))
 y[0,0] = x[0,0]**2 + 2 * x[0,1]
 y[0,1] = 2 * x[0,0] + 3 * x[0,1]**2
 y.backward(Variable(t.ones(1, 2))) #（i，j）= (1,1)
 x.grad
-{% endcodeblock %}
+```
 
 返回：
 
@@ -309,14 +309,14 @@ x.grad
 
 比如$ x = (x_1 = 2, x_2 = 4, x_3=5) $,$ y = ({x}_1^2 + 2x_2 + 4x_3,2x_1+{3x}_2^2+x_3^2) $
 
-{% codeblock %}
+```python
 x = Variable(t.FloatTensor([[2, 4, 5]]),requires_grad = True)
 y = Variable(t.zeros(1, 2))
 y[0,0] = x[0,0]**2 + 2 * x[0,1] + 4 * x[0,2]
 y[0,1] = 2 * x[0,0] + 3 * x[0,1]**2 + x[0,2]**2
 y.backward(Variable(t.ones(1, 2)))
 x.grad
-{% endcodeblock %}
+```
 
 返回：
 
@@ -324,14 +324,14 @@ x.grad
 
 如果(i, j) = (2,2),结果是否为(12, 52, 28)呢？
 
-{% codeblock %}
+```python
 x = Variable(t.FloatTensor([[2, 4, 5]]),requires_grad = True)
 y = Variable(t.zeros(1, 2))
 y[0,0] = x[0,0]**2 + 2 * x[0,1] + 4 * x[0,2]
 y[0,1] = 2 * x[0,0] + 3 * x[0,1]**2 + x[0,2]**2
 y.backward(Variable(t.FloatTensor([[2, 2]])))
 x.grad
-{% endcodeblock %}
+```
 
 返回：
 
@@ -343,7 +343,7 @@ x.grad
 
 如果你想要分别得到$ y_1,y_2 $对$ x_1,x_2,x_3 $的求导值，方法是：
 
-{% codeblock %}
+```python
 x = Variable(t.FloatTensor([[2, 4, 5]]),requires_grad = True)
 y = Variable(t.zeros(1, 2))
 y[0,0] = x[0,0]**2 + 2 * x[0,1] + 4 * x[0,2]
@@ -358,7 +358,7 @@ x.grad.data.zero_() #将之前的值清零
 y.backward(Variable(t.FloatTensor([[0, 1]]))) 
 j[:,1] = x.grad.data
 print(j)
-{% endcodeblock %}
+```
 
 报错：
 
@@ -366,7 +366,7 @@ print(j)
 
 原因是新版本使用的参数名为retain_graph，改了即可：
 
-{% codeblock %}
+```python
 x = Variable(t.FloatTensor([[2, 4, 5]]),requires_grad = True)
 y = Variable(t.zeros(1, 2))
 y[0,0] = x[0,0]**2 + 2 * x[0,1] + 4 * x[0,2]
@@ -381,7 +381,7 @@ x.grad.data.zero_() #将之前的值清零
 y.backward(Variable(t.FloatTensor([[0, 1]]))) 
 j[:,1] = x.grad.data
 print(j)
-{% endcodeblock %}
+```
 
 返回：
 

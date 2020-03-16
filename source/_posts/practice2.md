@@ -20,7 +20,7 @@ tags:
 ![](/images/practice/2_0.gif)
 
 ### 代码
-{% codeblock %}
+```python
 def bubbleSort(arr):		#冒泡排序
 	l = len(arr)
 	for i in range(l):
@@ -30,7 +30,7 @@ def bubbleSort(arr):		#冒泡排序
 				arr[j] = arr[j + 1]
 				arr[j + 1] = tmp
 	return arr
-{% endcodeblock %}
+```
 
 ## 选择排序
 
@@ -46,7 +46,7 @@ def bubbleSort(arr):		#冒泡排序
 
 ### 代码
 
-{% codeblock %}
+```python
 def selectionSort(arr): # 选择排序
 	l = len(arr)
 	index = 0
@@ -59,7 +59,7 @@ def selectionSort(arr): # 选择排序
 		arr[index] = arr[i]
 		arr[i] = value
 	return arr
-{% endcodeblock %}
+```
 
 ## 插入排序
 
@@ -71,7 +71,7 @@ def selectionSort(arr): # 选择排序
 
 ### 自己写的代码
 
-{% codeblock %}
+```python
 def change(arr,i,j):
 	tmp = arr[j]
 	for k in range(i,j)[::-1]:
@@ -89,17 +89,17 @@ def insertSort(arr):	# 插入排序
 				print(j)
 				change(arr,i,j)
 	return arr	
-{% endcodeblock %}
+```
 
 ### 网上流传的代码
 
-{% codeblock %}
+```python
 def insert_Sort(arr):
 	for x in range(1,len(arr)):
 		for i in range(x-1,-1,-1):
 			if(arr[i] > arr[i + 1]):
 				arr[i],arr[i+1] = arr[i+1],arr[i]
-{% endcodeblock %}
+```
 
 ### 后面相当于变相的冒泡排序
 
@@ -115,7 +115,7 @@ def insert_Sort(arr):
 
 ### 代码
 
-{% codeblock %}
+```python
 def mergeSort(arr,first,mid,last,tmp):	# 归并排序
 	i,j,k = first,mid+1,0
 	while(i <= mid) and (j <= last):
@@ -147,7 +147,7 @@ def merge_sort(arr,first,last,tmp):
 def merge_array(arr):
 	tmp = len(arr) * [0]
 	merge_sort(arr,0,len(arr)-1,tmp)
-{% endcodeblock %}
+```
 
 ## 快速排序
 
@@ -159,7 +159,7 @@ def merge_array(arr):
 
 ### 代码
 
-{% codeblock %}
+```python
 def quickSort(L,start,end):
 	if start < end:
 		i,j,pivot = start,end,L[start]
@@ -177,7 +177,7 @@ def quickSort(L,start,end):
 		L[i]=pivot
 		quickSort(L,start,i-1)
 		quickSort(L,i+1,end)
-{% endcodeblock %}
+```
 
 ## 堆排序
 
@@ -205,7 +205,7 @@ def quickSort(L,start,end):
 
 ### 代码
 
-{% codeblock %}
+```python
 def LEFT(i):
 	return 2 * i + 1
 def RIGHT(i):
@@ -241,7 +241,7 @@ def heapSort(arr):
 		adjustHeap(arr,i,0)
 
 arr = [4,2,3,7,1,5,6]
-{% endcodeblock %}
+```
 
 ## 时间复杂度
 

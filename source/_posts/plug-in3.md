@@ -124,7 +124,7 @@ tags:
 
 动图中涉及到的完整代码为：
 
-{% codeblock %}
+```python
 from airtest.core.api import *
 import time
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
@@ -136,7 +136,7 @@ poco(name="com.zhihu.android:id/input").set_text('古剑奇谭三')
 time.sleep(2)
 poco(name='com.zhihu.android:id/magi_title', textMatches='^古剑奇谭三.*$').click()
 poco.swipe([0.5, 0.8], [0.5, 0.2])
-{% endcodeblock %}
+```
 
 
 

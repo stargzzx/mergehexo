@@ -71,7 +71,7 @@ python解释器因为GIL的存在，在同一时刻同一进程中只有一个�
 
 <br/>
 
-{% codeblock %}
+```python
 from multiprocessing import Process
 from threading import Thread
 import os,time
@@ -95,7 +95,7 @@ if __name__ == '__main__':
         p.join()
     stop=time.time()
     print('run time is %s' %(stop-start))
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
 <br/>
 
-{% codeblock %}
+```python
 from multiprocessing import Process
 from threading import Thread
 import threading
@@ -126,7 +126,7 @@ if __name__ == '__main__':
         p.join()
     stop=time.time()
     print('run time is %s' %(stop-start))
-{% endcodeblock %}
+```
 
 <br/>
 

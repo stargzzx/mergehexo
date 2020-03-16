@@ -35,7 +35,7 @@ tags:
 
 具体的代码如下
 
-{% codeblock %}
+```python
 # -*- encoding=utf8 -*-
 import time
 __author__ = "Administrator"
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     p3.join()
     p4.join()
     p5.join()
-{% endcodeblock %}
+```
 这里需要注意的是多进程的 start 和 join 的顺序一定要是这样,不然效果就是单核.
 到后期,我会提供更加健壮的代码.
 

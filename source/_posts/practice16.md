@@ -31,7 +31,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 def getNext(substr,next):
     i = 0
     j = -1
@@ -72,4 +72,4 @@ else:
         print("no")
     else:
         print("yes")
-{% endcodeblock %}
+```

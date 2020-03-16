@@ -45,7 +45,7 @@ Example 3:
 	Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 ## code
-{% codeblock %}
+```python
 class Solution:
     def isPalindrome(self, x: 'int') -> 'bool':
         b = x
@@ -59,7 +59,7 @@ class Solution:
             return True
         else:
             return False		
-{% endcodeblock %}
+```
 
 这道题目和我上次写的 leetcode 2 原理差不多，在此不再详述。
 

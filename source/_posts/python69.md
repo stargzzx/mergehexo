@@ -13,7 +13,7 @@ tags:
 
 ![](/images/python/69_0.gif)
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -74,4 +74,4 @@ class Show:
 if __name__ == '__main__':
     show = Show()
     show.show_picture(show.get_file_path())
-{% endcodeblock %}
+```

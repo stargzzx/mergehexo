@@ -46,7 +46,7 @@ hash 表只记录字符是否出现，所以一共只有两个值，一个为 0(
 
 代码如下：
 
-{% codeblock %}
+```python
 def hash(arr):
     l = len(arr)
     lenl = 1
@@ -66,7 +66,7 @@ def hash(arr):
 
 arr = "abcaacdsxaababxhsgdn"
 print(hash(arr))
-{% endcodeblock %}
+```
 
 ### 最优解
 
@@ -82,7 +82,7 @@ print(hash(arr))
 
 代码还是出错，抽时间再看。
 
-{% codeblock %}
+```python
 def maxSubString(arr):
 	front = 0
 	lenl = 0
@@ -106,5 +106,5 @@ def maxSubString(arr):
 
 arr = "abcasfafdecfgxc"
 print(maxSubString(arr))
-{% endcodeblock %}
+```
 

@@ -104,12 +104,12 @@ nonebot 是在酷Q 的接口上进行二次开发。但是，开发的过于复�
 
 在 SDK 所给的例子中，有这样一段代码。
 
-{% codeblock %}
+```python
 @bot.on_notice('group_increase')
 async def handle_group_increase(context):
     await bot.send(context, message='欢迎新人～',
                    at_sender=True, auto_escape=True)
-{% endcodeblock %}
+```
 
 在上面这段代码中，@bot.on_notice('group_increase') 中的 group_increase 来源于插件。
 

@@ -132,7 +132,7 @@ tags:
 
 代码如下：
 
-{% codeblock %}
+```python
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -140,7 +140,7 @@ from django.http import HttpResponse
 
 def helloworld(request):
     return HttpResponse("hello world")
-{% endcodeblock %}
+```
 
 ## 配置路由
 
@@ -156,20 +156,20 @@ def helloworld(request):
 
 下面的意思就是如果路由里含有hello_world 就跳转到 blog.views.helloworld 页面
 
-{% codeblock %}
+```python
 from django.urls import path,include
 import blog.views
 
 urlpatterns = [
     path('hello_world',blog.views.helloworld)
 ]
-{% endcodeblock %}
+```
 
 ## 配置项目路由
 
 下面的代码意思就是如果url 含有 blog 的话，就跳转到 blog 应用下的 urls 路由规则
 
-{% codeblock %}
+```python
 from django.contrib import admin
 from django.urls import path,include
 
@@ -177,13 +177,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls'))
 ]
-{% endcodeblock %}
+```
 
 ## 配置setting文件
 
 在 INSTALLED_APPS 添加下面的东西
 
-{% codeblock %}
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -194,19 +194,19 @@ INSTALLED_APPS = [
     # myapp
     'blog.apps.BlogConfig'
 ]
-{% endcodeblock %}
+```
 
 这个就是配置 blog APP，至于为什么是 BlogConfig 是因为在
 
 blog文件夹下的 apps.py 文件的内容
 
-{% codeblock %}
+```python
 from django.apps import AppConfig
 
 
 class BlogConfig(AppConfig):
     name = 'blog'
-{% endcodeblock %}
+```
 
 ## 运行
 

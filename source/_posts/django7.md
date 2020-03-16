@@ -52,18 +52,18 @@ tags:
 
 在 apis 中的 urls.py 中，我们编写
 
-{% codeblock %}	
+```python
 from django.urls import path
 from .views import weather
 
 urlpatterns = [
 	path('',weather.helloworld)
 ]
-{% endcodeblock %}
+```
 
 在总的 urls.py 下我们编写
 
-{% codeblock %}	
+```python
 from django.contrib import admin
 from django.urls import path,include
 
@@ -71,7 +71,7 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('weather/',include('apis.urls'))
 ]
-{% endcodeblock %}
+```
 
 然后在 setting.py 中，我们注释 MIDDLEWARE 中的
 
@@ -80,7 +80,7 @@ urlpatterns = [
 
 我们在 views 文件夹之下，创建 weather.py 文件，里面编写
 
-{% codeblock %}
+```python
 from django.http import HttpResponse
 
 def helloworld(request):
@@ -89,7 +89,7 @@ def helloworld(request):
     print('request cookies:',request.COOKIES)
     print('request QueryDict:',request.GET) # 这个是打印 GET 传过去的参数
     return HttpResponse('OK')	
-{% endcodeblock %}
+```
 
 然后我们运行
 
@@ -119,7 +119,7 @@ Response对象中的content属性
 
 	from django.http import HttpResponse,JsonResponse,FileResponse
 	
-{% codeblock %}
+```python
 from django.http import HttpResponse,JsonResponse,FileResponse
 
 def helloworld(request):
@@ -133,7 +133,7 @@ def helloworld(request):
     }
     return JsonResponse(data=m,safe=False,status=200)
     # 这个 safe 属性为 true 的时候，data 只能转换字典对象，如果为 False 则不检查
-{% endcodeblock %}
+```
 
 ## 实战：实现天气查询应用
 
@@ -149,7 +149,7 @@ def helloworld(request):
 
 juhe.py的内容如下：
 
-{% codeblock %}
+```python
 import json
 import requests
 
@@ -180,11 +180,11 @@ def weather(cityname):
 
 if __name__ == '__main__':
     data = weather('深圳')
-{% endcodeblock %}
+```
 
 我们将 apis 下views 文件夹内的 weather.py 文件内容改成
 
-{% codeblock %}
+```python
 from django.http import HttpResponse,JsonResponse,FileResponse
 from thirdparty import juhe
 
@@ -207,18 +207,18 @@ def weather(request):
         return JsonResponse(data=data,status=200)
     else:
         print("no support method")
-{% endcodeblock %}
+```
 
 然后 apis 下的 urls.py 文件改成
 
-{% codeblock %}
+```python
 from django.urls import path
 from .views import weather
 
 urlpatterns = [
     path('',weather.weather)
 ]
-{% endcodeblock %}
+```
 
 最后我们通过 postman 发送 127.0.0.1:8000/weather/?icity="深圳"
 
@@ -226,7 +226,7 @@ urlpatterns = [
 
 我们继续完善，加上 POST 方法
 
-{% codeblock %}
+```python
 from django.http import HttpResponse,JsonResponse,FileResponse
 from thirdparty import juhe
 import json
@@ -256,7 +256,7 @@ def weather(request):
             result = juhe.weather(city)
             response_data.append(result)
         return JsonResponse(data=response_data,status=200,safe=False)
-{% endcodeblock %}
+```
 
 利用 postman 发送 POST 请求
 

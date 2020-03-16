@@ -14,7 +14,7 @@ tags:
 
 一段代码讲述如何建立。。。
 
-{% codeblock %}
+```python
 import tensorflow as tf
 
 def add_layer(inputs,in_size,out_size,activation_function = None):
@@ -27,7 +27,7 @@ def add_layer(inputs,in_size,out_size,activation_function = None):
     else:
         outputs = activation_function(Wx_plus_b)
     return outputs
-{% endcodeblock %}
+```
 
 OK，打完收工。
 

@@ -15,7 +15,7 @@ tags:
 
 ### 改变单值全局变量
 
-{% codeblock %}
+```python
 a = 10
 def test():
     global a
@@ -24,13 +24,13 @@ def test():
 test()
 print(a)
 	# 1
-{% endcodeblock %}
+```
 
 ## 数组型复合全局变量
 
 ### del 函数改变
 
-{% codeblock %}
+```python
 data = [1,2,3]
 def test():
     del(data[0])
@@ -38,11 +38,11 @@ def test():
 test()
 print(data)
 	# [2, 3]
-{% endcodeblock %}
+```
 
 ### pop 函数改变
 
-{% codeblock %}
+```python
 data = [1,2,3]
 def test():
     data.pop(0)
@@ -50,11 +50,11 @@ def test():
 test()
 print(data)
 	# [2, 3]
-{% endcodeblock %}
+```
 
 ### 在数组内部改变
 
-{% codeblock %}
+```python
 data = [1,2,3]
 def test():
     data[data.pop(0)] = 4
@@ -62,4 +62,4 @@ def test():
 test()
 print(data)
 	# [2, 4]
-{% endcodeblock %}
+```

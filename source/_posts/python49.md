@@ -17,10 +17,10 @@ tags:
 
 我们知道 Python 是一种动态语言，变量以及函数的参数是不区分类型。因此我们定义函数只需要这样写就可以了：
 
-{% codeblock %}
+```python
 def add(x, y):
     return x + y
-{% endcodeblock %}
+```
 
 这样的好处是有极大的灵活性，但坏处就是对于别人代码，无法一眼判断出参数的类型，IDE 也无法给出正确的提示。
 
@@ -28,10 +28,10 @@ def add(x, y):
 
 函数注解
 
-{% codeblock %}
+```python
 def add(x:int, y:int) -> int:
     return x + y
-{% endcodeblock %}
+```
 
 用 : 类型 的形式指定函数的参数类型，用 -> 类型 的形式指定函数的返回值类型。
 

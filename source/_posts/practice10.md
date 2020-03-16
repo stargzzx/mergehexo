@@ -39,7 +39,7 @@ k 指向 2 区域，初始化是 len(arr) - 1
 
 具体原因，因为懒也不想排查了。
 
-{% codeblock %}
+```python
 def arrSort(arr):
     l = len(arr)
     i = 0
@@ -61,5 +61,5 @@ def arrSort(arr):
 arr = [0,1,0,2,0,0,1,1,2,2]
 arrSort(arr)
 print(arr)
-{% endcodeblock %}
+```
 

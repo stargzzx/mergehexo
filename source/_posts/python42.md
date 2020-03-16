@@ -14,7 +14,7 @@ tags:
 
 ## 基础用法
 
-{% codeblock %}
+```python
 import threading
 def test():
     print(threading.active_count())
@@ -28,7 +28,7 @@ def test():
 			# <_MainThread(MainThread, started 11792)>
 if __name__ == '__main__':
     test()
-{% endcodeblock %}
+```
 
 ## 定义一个线程
 
@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
 	added_thread.start()
 	
-{% codeblock %}
+```python
 import threading
 def thread_job():
     print("this is a test %s" % threading.current_thread())
@@ -56,13 +56,13 @@ def test():
 		# <_MainThread(MainThread, started 2396)>
 if __name__ == '__main__':
     test()
-{% endcodeblock %}
+```
 
 ## join 功能
 
 演示一下线程间的异步
 
-{% codeblock %}
+```python
 import threading
 import time
 def thread_job():
@@ -81,11 +81,11 @@ if __name__ == '__main__':
 	# T1 START
 	# all done
 	# T1 END
-{% endcodeblock %}
+```
 
 join 的作用，是必须先把目标线程运行完之后，再运行下面的代码，这个可多用于数据之间的传输等待
 
-{% codeblock %}
+```python
 import threading
 import time
 def thread_job():
@@ -104,11 +104,11 @@ if __name__ == '__main__':
 	# T1 START
 	# T1 END
 	# all done
-{% endcodeblock %}
+```
 
 多个线程间的演示
 
-{% codeblock %}
+```python
 import threading
 import time
 def thread_job():
@@ -134,11 +134,11 @@ if __name__ == '__main__':
 	# all done
 	# T2 END
 	# T1 END
-{% endcodeblock %}
+```
 
 三种加 join 的表现方式
 
-{% codeblock %}
+```python
 import threading
 import time
 def thread_job():
@@ -165,11 +165,11 @@ if __name__ == '__main__':
 	# T2 END
 	# T1 END
 	# all done
-{% endcodeblock %}
+```
 
 在这个 join 中，我们给时间最长的线程加上 join 后，只是影响了主线程，而没有影响其他的另添加线程。
 
-{% codeblock %}
+```python
 import threading
 import time
 def thread_job():
@@ -196,9 +196,9 @@ if __name__ == '__main__':
 	# T2 END
 	# all done
 	# T1 END
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import threading
 import time
 def thread_job():
@@ -225,13 +225,13 @@ if __name__ == '__main__':
 	# T2 END
 	# T1 END
 	# all done
-{% endcodeblock %}
+```
 
 ## Queue 功能
 
 多线程那些功能是没有返回值的，所以我们要将它运算的结果放在队列中，然后在主线程中拿出来再进行加工。
 
-{% codeblock %}
+```python
 import threading
 import time
 from queue import Queue
@@ -257,13 +257,13 @@ def multithreading(data):
 if __name__ == '__main__':
     data = [[1,2,3],[3,4,5],[4,4,4],[5,5,5]]
     multithreading(data)
-{% endcodeblock %}
+```
 
 ## 不一定有效果
 
 python 的多线程并不是一个工作同时给很多个线程同时做，而是，python 有一个自带的程序，这个程序叫做 GIL ，GIL 可以将某一个线程锁住，然后，达到多线程的效果。只能让同一时间同一线程运行，通过不断的切换，让你看见多线程的效果。
 
-{% codeblock %}
+```python
 import threading
 from queue import Queue
 import copy
@@ -304,13 +304,13 @@ if __name__ == '__main__':
 	# normal:  0.12218308448791504
 	# 1999998000000
 	# multithreading:  0.20545268058776855
-{% endcodeblock %}
+```
 
 ## lock
 
 如果第一个线程的处理结果是第二个线程的参数，所以，我们需要一个锁，来锁住第一个线程，然后等第一个线程处理完之后，在开始第二个。
 
-{% codeblock %}
+```python
 import threading
 import time
 def job1():
@@ -354,9 +354,9 @@ if __name__ == '__main__':
 	# job1 108
 	# job1 109
 	# job1 110
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import threading
 import time
 
@@ -407,7 +407,7 @@ if __name__ == '__main__':
 	# job2 90
 	# job2 100
 	# job2 110
-{% endcodeblock %}
+```
 
 
 ## 对 python 多线程的理解
@@ -443,7 +443,7 @@ if __name__ == '__main__':
 
 我们都知道，比方我有一个4核的CPU，那么这样一来，在单位时间内每个核只能跑一个线程，然后时间片轮转切换。但是Python不一样，它不管你有几个核，单位时间多个核只能跑一个线程，然后时间片轮转。看起来很不可思议？但是这就是GIL搞的鬼。任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，解释器就自动释放GIL锁，让别的线程有机会执行。这个GIL全局锁实际上把所有线程的执行代码都给上了锁，所以，多线程在Python中只能交替执行，即使100个线程跑在100核CPU上，也只能用到1个核。通常我们用的解释器是官方实现的CPython，要真正利用多核，除非重写一个不带GIL的解释器。我们不妨做个试验：
 
-{% codeblock %}
+```python
 #coding=utf-8
 from multiprocessing import Pool
 from threading import Thread
@@ -463,7 +463,7 @@ if __name__ == '__main__':
 
     while True:
         pass
-{% endcodeblock %}
+```
 
 我的电脑是4核，所以我开了4个线程，看一下CPU资源占有率：
 
@@ -475,7 +475,7 @@ if __name__ == '__main__':
 
 我们改一下代码：
 
-{% codeblock %}
+```python
 #coding=utf-8
 from multiprocessing import Pool
 from threading import Thread
@@ -495,7 +495,7 @@ if __name__ == '__main__':
 
     while True:
         pass
-{% endcodeblock %}
+```
 
 ![](/images/python/42_1.jpg)
 

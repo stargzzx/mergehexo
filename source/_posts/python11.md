@@ -29,7 +29,7 @@ Python3里默认的str是(Python2里的)unicode, bytes是(Python2)的str, b前�
 
 ## 字符串
 
-{% codeblock %}
+```python
 字符串切片
 
 	str = "1234567"
@@ -56,7 +56,7 @@ Python3里默认的str是(Python2里的)unicode, bytes是(Python2)的str, b前�
 str.capitalize() 使首字母大写
 str.casefold()	整个字符改成小写
 str.center() 看图片
-{% endcodeblock %}
+```
 
 ## 函数
 
@@ -68,7 +68,7 @@ str.center() 看图片
 
 ## 格式化
 
-{% codeblock %}
+```python
 format()
 
 位置参数,必须从0开始
@@ -116,7 +116,7 @@ format()
 
 "%-10d" % 5
 	输出"5         "
-{% endcodeblock %}
+```
 
 ![](/images/python/11_3.JPG)
 
@@ -127,7 +127,7 @@ format()
 
 ## 字符输出
 
-{% codeblock %}
+```python
 python中如果输出字符是
 	print("c:\nov")
 
@@ -164,6 +164,6 @@ python中如果输出字符是
 
 print() 默认换行
 	要想不换行 print (x,end = '')  
-{% endcodeblock %}
+```
 
 

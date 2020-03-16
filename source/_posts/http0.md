@@ -97,7 +97,7 @@ Transmission Conreol Protocol 传输控制协议
 
 #### server.py
 
-{% codeblock %}
+```python
 # -*- encoding=utf-8 -*-
 
 
@@ -124,11 +124,11 @@ def server():
 
 if __name__ == '__main__':
     server()
-{% endcodeblock %}
+```
 
 #### client.py
 
-{% codeblock %}
+```python
 # -*- encoding=utf-8 -*-
 
 
@@ -150,5 +150,5 @@ def client():
 
 if __name__ == '__main__':
     client()
-{% endcodeblock %}
+```
 

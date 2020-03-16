@@ -15,7 +15,7 @@ tags:
 [websocket-client](https://github.com/websocket-client/websocket-client)
 
 公司封装的 websocket
-{% codeblock %}
+```python
 import json
 import ssl
 import sys
@@ -333,9 +333,9 @@ class WebsocketClient(object):
         Record last received text for debug purpose.
         """
         self._last_received_text = text[:1000]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 from websocket_client import WebsocketClient
 
 
@@ -379,4 +379,4 @@ if __name__ == '__main__':
     bitmex = Bitmex()
     bitmex.connect()
     bitmex.start()
-{% endcodeblock %}
+```

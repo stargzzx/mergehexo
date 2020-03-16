@@ -87,7 +87,7 @@ HTTP中有两个对象，一个是客户端，一个是服务端
 
 然后，我们在 views.py 的内容如下：
 
-{% codeblock %}
+```python
 from django.shortcuts import render
 # Create your views here.
 from django.http import JsonResponse
@@ -104,7 +104,7 @@ def test_session2(request):
     print('session content: ', request.session.items())
     response = wrap_json_response(code=ReturnCode.SUCCESS)
     return JsonResponse(data=response, safe=False)
-{% endcodeblock %}
+```
 
 其中，我们可以看到
 
@@ -120,7 +120,7 @@ test_session 是为了设置 session
 
 我们定义了一个使用 storage 存储 cookie 的文件
 
-{% codeblock %}
+```python
 const key = 'cookie'
 
 function getSessionIDFromResponse(res){
@@ -147,7 +147,7 @@ module.exports = {
   getCookieFromStorage: getCookieFromStorage,
   getSessionIDFromResponse: getSessionIDFromResponse
 }
-{% endcodeblock %}
+```
 
 我们使用 
 
@@ -160,14 +160,14 @@ module.exports = {
 
 #### hompage.wxml
 
-{% codeblock %}
+```python
 <!--pages/homepage/homepage.wxml-->
 <view class="container">
   <view class="page__bd page__bd_spacing button-sp-area">
     <button class="weui-btn mini-btn" type="primary" bindtap='onReadCookies'>获取Cookies演示</button>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 #### homepage.js
 
@@ -177,7 +177,7 @@ module.exports = {
 	
 然后我们就能调用那个页面的方法了
 
-{% codeblock %}
+```python
 // pages/homepage/homepage.js
 
 const app = getApp()
@@ -209,7 +209,7 @@ Page({
     })
   }
 })
-{% endcodeblock %}
+```
 
 整个的页面逻辑如下：
 

@@ -18,7 +18,7 @@ tags:
 
 过程如图：
 
-{% codeblock %}
+```python
 class Node: #节点类
 	def __init__(self,k):
 		self.k = k
@@ -48,7 +48,7 @@ class Tree: #二叉树类
 				else:
 					q.append(p.l)
 					q.append(p.r)				
-{% endcodeblock %}
+```
 
 ## 遍历说明
 
@@ -66,7 +66,7 @@ class Tree: #二叉树类
 
 ## 层次遍历
 
-{% codeblock %}
+```python
 	def levelOrder(self):  # 按层次遍历
 		l = []             # 借助队列
 		last = None
@@ -84,11 +84,11 @@ class Tree: #二叉树类
 			last = nlast
 			if last == node:
 					print('\n')
-{% endcodeblock %}
+```
 
 ## 前序遍历
 
-{% codeblock %}			
+```python
 	def preorder(self,node):	# 前序遍历
 		if node is None:
 			print("#!",end = "")
@@ -97,11 +97,11 @@ class Tree: #二叉树类
 			print("%s!" % node.k,end = "")
 			self.preorder(node.l)
 			self.preorder(node.r)
-{% endcodeblock %}
+```
 
 ## 中序遍历
 
-{% codeblock %}				
+```python
 	def midorder(self,node): # 中序遍历
 		if node is None:
 			print("#!",end = "")
@@ -110,11 +110,11 @@ class Tree: #二叉树类
 			self.midorder(node.l)
 			print("%s!" % node.k,end = "")
 			self.midorder(node.r)
-{% endcodeblock %}
+```
 
 ## 后序遍历
 
-{% codeblock %}		
+```python
 	def postorder(self,node):	#后序遍历
 		if node is None:
 			print("#!",end = "")
@@ -124,12 +124,12 @@ class Tree: #二叉树类
 			self.postorder(node.r)
 			print("%s!" % node.k,end = "")
 
-{% endcodeblock %}
+```
 
 ## 测试
 
-{% codeblock %}
+```python
 t = Tree()
 for i in range(10):
 	t.add(i)
-{% endcodeblock %}
+```

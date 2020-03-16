@@ -25,7 +25,7 @@ np.eye: 创建一个对角线为 1 其他为 0 的矩阵.
 
 np.identity: 创建一个主对角线为 1 其他为 0 的方阵.
 
-{% codeblock %}
+```python
 np.zeros((3,4))
 	# [[ 0.  0.  0.  0.]
 		[ 0.  0.  0.  0.]
@@ -40,7 +40,7 @@ np.eye(3)
 	# [[ 1.  0.  0.]
 		[ 0.  1.  0.]
 	[ 0.  0.  1.]]
-{% endcodeblock %}
+```
 
 # A
 
@@ -48,7 +48,7 @@ np.eye(3)
 
 array和asarray都可以将结构数据转化为ndarray，但是主要区别就是当数据源是ndarray时，array仍然会copy出一个副本，占用新的内存，但asarray不会。
 
-{% codeblock %}
+```python
 import numpy as np
 data1 = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 arr2 = np.array(data1)
@@ -68,11 +68,11 @@ print('arr3:\n', arr3)
 	 [[1 1 1]
 	 [1 1 1]
 	 [1 1 1]] 
-{% endcodeblock %}
+```
 
 如果数据源是 narray
 
-{% codeblock %}
+```python
 import numpy as np
 data1 = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]])
 arr2 = np.array(data1)
@@ -94,20 +94,20 @@ print('arr3:\n', arr3)
 	 [[1 1 1]
 	 [1 2 1]
 	 [1 1 1]]
-{% endcodeblock %}
+```
 
 ## python numpy array 函数用法
 
 使用numpy.array方法将tuple和list, array, 或者其他的序列模式的数据转创建为 ndarray, 默认创建一个新的 ndarray.
 
-{% codeblock %}
+```python
 np.array([1,2,3,4]) 
 	# [1 2 3 4]
  b = array( [ (1.5,2,3), 
                  (4,5,6)  ]  )　　 
 	# array([[ 1.5,  2. ,  3. ],  
 　　　  	[ 4. ,  5. ,  6. ]])  
-{% endcodeblock %}
+```
 
 ## python numpy arange 函数用法
 
@@ -115,7 +115,7 @@ arange([start,] stop[, step,], dtype=None)根据start与stop指定的范围以�
 
 生成均匀分布的array。最后返回的如果不加处理一般是向量。
 
-{% codeblock %}
+```python
 np.arange(3)
 	# array([0, 1, 2])
 np.arange(3)[::-1]
@@ -131,13 +131,13 @@ np.arange(3,7,2)
 		[ 3  4  5]  
 		[ 6  7  8]  
 		[ 9 10 11]]　　
-{% endcodeblock %}
+```
 
 ## python numpy argsort函数用法
 
 argsort()函数返回的是数组从小到大值所对应的索引。
 
-{% codeblock %}
+```python
 import numpy as np
 data = np.array([[3,2,5]]);
 print(np.argsort(data));
@@ -154,14 +154,14 @@ print(np.argsort(data,axis=1));
 	#[[0 1]
 	#[0 1]
 	#[0 1]]
-{% endcodeblock %}
+```
 
 ## numpy argmax 函数
 
 numpy.argmax(a, axis=None, out=None)  返回沿轴axis最大值的索引。
 
 axis : int, 可选  默认情况下，索引的是平铺的数组，否则沿指定的轴。
-{% codeblock %} 
+```python
 a = np.arange(6).reshape(2,3)
 a
 	#array([[0, 1, 2],
@@ -179,13 +179,13 @@ b
 	# array([0, 5, 2, 3, 4, 5])
 np.argmax(b) # 只返回第一次出现的最大值的索引
 	# 1
-{% endcodeblock %}
+```
 
 ## python numpy astype 函数
 
 Numpy数据类型转换astype，dtype
 
-{% codeblock %}
+```python
 arr = np.array([1,2,3,4,5])
 arr
 	array([1, 2, 3, 4, 5])
@@ -196,11 +196,11 @@ float_arr = arr.astype(np.float64)
 // 该命令查看数据类型
 float_arr.dtype
 	dtype('float64')
-{% endcodeblock %}
+```
 
 转换数据类型
 
-{% codeblock %}
+```python
 // 如果将浮点数转换为整数，则小数部分会被截断
 arr2 = np.array([1.1, 2.2, 3.3, 4.4, 5.3221])
 arr2
@@ -211,16 +211,16 @@ arr2.dtype
 // 转换数据类型  float -> int
 arr2.astype(np.int32)
 	array([1, 2, 3, 4, 5], dtype=int32)
-{% endcodeblock %}
+```
 字符串数组转换为数值型
-{% codeblock %}
+```python
 numeric_strings = np.array(['1.2','2.3','3.2141'], dtype=np.string_)
 numeric_strings
 	array(['1.2', '2.3', '3.2141'], dtype='|S6')
 // 此处写的是float 而不是np.float64, Numpy很聪明，会将python类型映射到等价的dtype上
 numeric_strings.astype(float)
 	array([ 1.2, 2.3, 3.2141])
-{% endcodeblock %}
+```
 
 # C
 
@@ -232,7 +232,7 @@ numpy关于copy有三种情况，完全不复制、视图（view）或者叫浅�
 
 而 b = a[:] 这种形式就属于第二种，即视图，这本质上是一种切片操作（slicing），所有的切片操作返回的都是视图。具体来说，b = a[:]会创建一个新的对象 b（所以 id(b) 和id(a) 返回的结果是不一样的），但是 b 的数据完全来自于a，和 a 保持完全一致，换句话说，b的数据完全由a保管，他们两个的数据变化是一致的，可以看下面的示例:
 
-{% codeblock %}
+```python
 a = np.arange(4)  # array([0, 1, 2, 3])
 b = a[:]  # array([0, 1, 2, 3])
 b.flags.owndata  # 返回 False，b 并不保管数据
@@ -243,16 +243,16 @@ b  #  array([0, 1, 2, 10])
 # 改变 b 同时也影响到 a
 b[0] = 10  # array([10, 1, 2, 10])
 a  # array([10, 1, 2, 10])
-{% endcodeblock %}
+```
 b = a 和 b = a[:] 的差别就在于后者会创建新的对象，前者不会。两种方式都会导致 a 和 b 的数据相互影响。
 要想不让 a 的改动影响到 b，可以使用深复制：
-{% codeblock %}
+```python
 unique_b = a.copy()
-{% endcodeblock %}
+```
 
 有一点需要特别注意，numpy 的复制 和 python 的 list 复制是不一样的
 
-{% codeblock %}
+```python
 import numpy as np
 a = [1,2,3,4]
 b = a[:]
@@ -264,7 +264,7 @@ b = a[:]
 a[1] = 10
 print(b)
 	[0,10,2,3]
-{% endcodeblock %}
+```
 
 # D
 
@@ -280,7 +280,7 @@ numpy.diff(a, n=1,axis=-1)
 - n：可选，代表要执行几次差值 
 - axis：默认是最后一个 
 
-{% codeblock %}
+```python
 import numpy as np
 
 A = np.arange(2 , 14).reshape((3 , 4))
@@ -294,7 +294,7 @@ print(np.diff(A))
 	# [[1 1 1]
 	#  [2 0 1]
 	#  [1 1 1]]	
-{% endcodeblock %}
+```
 
 从输出结果可以看出，其实diff函数就是执行的是后一个元素减去前一个元素。
 
@@ -310,28 +310,28 @@ dot()函数可以通过numpy库调用，也可以由数组实例对象进行调�
 
 处理一维得到的是两数组的內积
 
-{% codeblock %}
+```python
 a = np.arange(5)
 b = a[::-1]
 print(np.dot(a,b))
 	10
 print(np.dot(b,a))
 	10
-{% endcodeblock %}
+```
 如果是二维数组（矩阵）之间的运算，则得到的是矩阵积
-{% codeblock %}
+```python
 a = np.arange(1,5).reshape(2,2)
 b = np.arange(5,9).reshape(2,2)
 print(np.dot(a,b))
 	[[19 22]
 	[43 50]]
-{% endcodeblock %}
+```
 
 这是将二进制翻译成十进制，装逼必备代码
 
-{% codeblock %}
+```python
 pop.dot(2 ** np.arange(DNA_SIZE)[::-1])
-{% endcodeblock %}
+```
 
 # F
 
@@ -339,12 +339,12 @@ pop.dot(2 ** np.arange(DNA_SIZE)[::-1])
 
 使用字符串创建矩阵,将 python 中的字符串，转化为 numpy 中指定类型的矩阵
 
-{% codeblock %}
+```python
 import numpy as np
 s = np.fromstring("licong",dtype=np.uint8)
 print(s)
 	# [108 105  99 111 110 103] 里面的数字代表的是字母的 ASCII 码
-{% endcodeblock %}
+```
 
 # H
 
@@ -356,18 +356,18 @@ hstack(tup) ，参数tup可以是元组，列表，或者numpy数组，返回结
 
 比如第一个代码，两个数据都是一维，所以，他们里面的数据处于同等地位，按照行排列，最后输出。
 
-{% codeblock %}
+```python
 import numpy as np
 a=[1,2,3]
 b=[4,5,6]
 print(np.hstack((a,b)))
 
 输出：[1 2 3 4 5 6 ]
-{% endcodeblock %}
+```
 
 下面的代码中，每个变量都有三个维度的数据，他们相同下标下对应的维度是相同，优先按照行排列，最后输出。
 
-{% codeblock %}
+```python
 import numpy as np
 a=[[1],[2],[3]]
 b=[[6],[7],[8]]
@@ -377,7 +377,7 @@ print(np.hstack((a,b,c,d)))
 	#[[ 1  6  9  1]
 		[ 2  7 10  2]
 		[ 3  8 11  3]]
-{% endcodeblock %}
+```
 
 # E
 
@@ -391,14 +391,14 @@ numpy.empty(shape, dtype=float, order=’C’)
 	
 返回生成随机矩阵
 
-{% codeblock %}
+```python
 np.empty([2, 2])
 	# array([[ -9.74499359e+001,   6.69583040e-309],
 		[  2.13182611e-314,   3.06959433e-309]])         #random
 np.empty([2, 2], dtype=int)
 	# array([[-1073741821, -1067949133],
 		[  496041986,    19249760]])                     #random
-{% endcodeblock %}
+```
 
 ## empty_like()
 
@@ -411,7 +411,7 @@ numpy.empty_like(a, dtype=None, order=’K’, subok=True)
 
 返回值是生成与a相似（形态和数据类型）的随机矩阵
 
-{% codeblock %}
+```python
 import numpy as np
 a = ([1,2,3],[4,5,6])
 print(a)
@@ -429,7 +429,7 @@ print(type(b))
 print(np.empty_like(b))
 	# [[1 2 3]
 		[4 5 6]]
-{% endcodeblock %}
+```
 
 # L
 
@@ -443,41 +443,41 @@ numpy.linspace是用于创建一个一维数组，并且是等差数列构成的
 
 	numpy.arange()，该函数返回的是一个均匀分布的数组，step一般为整数，如果需要步长不为整数的情况，可以使用linspace
 	
-{% codeblock %}
+```python
 a = np.linspace(1,10,10)
 	# array([  1.,   2.,   3.,   4.,   5.,   6.,   7.,   8.,   9.,  10.])
-{% endcodeblock %}
+```
 
 用它创建一个元素全部是1的等差数列，或者你也可以让所有的元素为0。
 
-{% codeblock %}
+```python
 a = np.linspace(1,1,10)
 	# array([ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.])
-{% endcodeblock %}
+```
 
 linspace创建的数组元素的数据格式，当然是浮点型
 
-{% codeblock %}
+```python
 a.dtype
 	# dtype('float64')
-{% endcodeblock %}
+```
 
 还可以使用参数endpoint来决定是否包含终止值，如果不设置这个参数，默认是True
 
-{% codeblock %}
+```python
 a = np.linspace(1,10,10,endpoint=False)
 	# array([ 1. ,  1.9,  2.8,  3.7,  4.6,  5.5,  6.4,  7.3,  8.2,  9.1])
-{% endcodeblock %}
+```
 
 装逼代码必备
 
-{% codeblock %}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 a = [1,5]
 print(np.linspace(*a,10))
 	# 上面的代码相当于 print(np.linspace(a[0],a[1],10))
-{% endcodeblock %}
+```
 
 ## loadtxt()
 
@@ -511,20 +511,20 @@ NumPy 包包含numpy.linalg模块，提供线性代数所需的所有功能。
 
 numpy.linalg.det()函数计算输入矩阵的行列式。
 
-{% codeblock %}
+```python
 import numpy as np
 a = np.array([[1,2], [3,4]]) 
 print np.linalg.det(a)
 	# -2.0
-{% endcodeblock %}
+```
 
 所以可以用这个函数判断一下是否可逆：
 
-{% codeblock %}
+```python
 if np.linalg.det(xTx) == 0.0:
     print('不可逆')
     return
-{% endcodeblock %}
+```
 
 ### numpy.linalg.inv()
 
@@ -558,11 +558,11 @@ numpy.linalg.solve()函数给出了矩阵形式的线性方程的解。
 
 举一个例子：
 
-{% codeblock %}
+```python
 ws = X.I * (xMat.T * yMat)
 # 可以换成下面这个：
 ws = np.linalg.solve(X,xMat.T * yMat)
-{% endcodeblock %}
+```
 
 
 # M
@@ -571,7 +571,7 @@ ws = np.linalg.solve(X,xMat.T * yMat)
 
 mat函数可以将目标数据的类型转换为矩阵（matrix）， 因此可以使用mat函数将一个列表a转换成相应的矩阵类型。
 
-{% codeblock %}
+```python
 import numpy as np
 a=[[1,2,3,],
      [3,2,1]]
@@ -582,13 +582,13 @@ myMat
 	#matrix([[1,2,3],[3,2,1]])
 type(myMat)
 	#numpy.matrixlib.defmatrix.martix
-{% endcodeblock %}
+```
 
 ## max()
 
 直接上代码
 
-{% codeblock %}
+```python
 import numpy as np
 data = np.arange(0,12,1).reshape(3,4)
 print(data)
@@ -599,13 +599,13 @@ print(np.max(data,1))
 	# [ 3  7 11]
 print(np.max(data,0))	
 	# [ 8  9 10 11]
-{% endcodeblock %}
+```
 
 ## python numpy mean
 
 计算矩阵的均值
 
-{% codeblock %}
+```python
 a = np.array([[1, 2], [3, 4]])  
 np.mean(a) # 将上面二维矩阵的每个元素相加除以元素个数（求平均数）  
 	# 2.5  
@@ -613,7 +613,7 @@ np.mean(a, axis=0) # axis=0，计算每一列的均值
 	# array([ 2.,  3.])  
 np.mean(a, axis=1) # 计算每一行的均值  
 	# array([ 1.5,  3.5])  
-{% endcodeblock %}
+```
 
 
 
@@ -704,10 +704,10 @@ replace是bool类型，为True，则选取的元素会出现重复；反之不�
 
 p为数组，里面存放选到每个数的可能性，即概率，值得注意的是 p 中的概率之和是 1
 
-{% codeblock %}
+```python
 print(np.random.choice(5,size=4,replace=True,p=[0.1,0.1,0.2,0.5,0.1]))
 	#	[2 3 3 3]
-{% endcodeblock %}
+```
 
 ### python random.normal
 
@@ -723,11 +723,11 @@ numpy.random.rand(d0,d1,…dn)
 
 以给定的形状创建一个数组，并在数组中加入在[0,1]之间均匀分布的随机样本。 
 
-{% codeblock %}
+```python
 print(np.random.rand(2,3))
 	[[0.14132485 0.56433519 0.8146228 ]
 	[0.332916   0.88956782 0.61115085]]
-{% endcodeblock %}
+```
 
 ### python random.randn
 
@@ -737,11 +737,11 @@ numpy.random.rand(d0,d1,…dn)
 
 N(μ,σ^2)
 
-{% codeblock %}
+```python
 print(np.random.randn(2,3))
 	[ 0.82942049 -1.21329075  2.37576017]
 	[-1.28842471 -0.88193488 -0.37684046]]
-{% endcodeblock %}
+```
 
 ### python random.randint
 
@@ -751,11 +751,11 @@ numpy.random.randint(low,high=None,size=None,dtype)
 
 在统计学及概率理论中，离散型均匀分布是一个离散型概率分布，其中有限个数值拥有相同的概率。
 
-{% codeblock %}
+```python
 print(np.random.randint(2,10,size=(2,3)))
 	[[8 4 5]
 	[7 8 9]]
-{% endcodeblock %}
+```
 
 ### python random.permutation()
 
@@ -765,7 +765,7 @@ shuffle 返回 None，这点尤其要注意，也就是说没有返回值，而 
 
 permutation 其实在内部实现也是调用的 shuffle，这点从 Numpy 的源码 可以看出来：
 
-{% codeblock %}
+```python
 def permutation(self, object x):
     '''这里都是帮助文档，我就省略了'''
     if isinstance(x, (int, long, np.integer)):
@@ -774,9 +774,9 @@ def permutation(self, object x):
         arr = np.array(x)
     self.shuffle(arr)
     return arr
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
 a = np.arange(0,12).reshape(3,4)
 print(a)
@@ -799,7 +799,7 @@ print(np.random.permutation(b))
 	# [[ 0  1  2  3]
 		[ 4  5  6  7]
 		[ 8  9 10 11]]	
-{% endcodeblock %}
+```
 
 ### python random.shuffle()
 
@@ -819,7 +819,7 @@ repeat函数的作用： 扩充数组元素或降低数组维度
 
 numpy.repeat(a, repeats, axis=None)：若axis=None，对于多维数组而言，可以将多维数组变化为一维数组，然后再根据repeats参数扩充数组元素；若axis=M，表示数组在轴M上扩充数组元素。
 
-{% codeblock %}
+```python
 import numpy as np
 
 arr = np.arange(12).reshape(1,4,3)
@@ -849,9 +849,9 @@ print(a)
     # [3 1 1 1 1 1 1 1 1 1 1 1]
 print(arr.repeat(a))
     # [ 0  0  0  1  2  3  4  5  6  7  8  9 10 11]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
 
 arr = np.arange(12).reshape(2,2,3)
@@ -885,7 +885,7 @@ print(arr.repeat((1,2),axis = 1))
 
 print(arr.repeat((1,2),axis = 2))
     # 出错
-{% endcodeblock %}
+```
 
 ## reshape()
 
@@ -893,13 +893,13 @@ numpy.reshape(a, newshape, order='C')中的newshape参数和order参数。
 
 两种表达形式
 
-{% codeblock %}
+```python
 a=np.array([1,2,3,4,5,6,7,8,9,10,11,12])
 b=np.reshape(a,(2,-1))
 c=a.reshape(2,-1)
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
 
 arr = np.arange(12).reshape(4,3)
@@ -914,9 +914,9 @@ print(arr)
     #   [ 3  4  5]
     #   [ 6  7  8]
     #   [ 9 10 11]]]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
  
 a=np.array([1,2,3,4,5,6,7,8,9,10,11,12])
@@ -940,7 +940,7 @@ d=np.reshape(a,(2,3,-1))
 		[[ 7  8]
 		[ 9 10]
 		[11 12]]]	
-{% endcodeblock %}
+```
 
 newshape参数用数组表示，以c为例，数组(2,2,-1)就是c的形状，一共有三阶，第三个数字是reshape后数组a中最小单元中元素个数，在这里是3，如果是-1则表示可以自动推测出。
 
@@ -977,7 +977,7 @@ return
 
 	old_settings : dict
 	
-{% codeblock %}
+```python
 import numpy as np
 np.seterr(all='ignore')
 a = np.arange(0,10,1)
@@ -996,13 +996,13 @@ print(c)
 		#c = a / b
 		#E:\code\别人的代码\EEG\MUSE-EEG-Classification\test\test.py:4: RuntimeWarning: invalid value encountered in true_divide
 		#c = a / b
-{% endcodeblock %}
+```
 
 ## python numpy shape
 
 shape函数是numpy.core.fromnumeric中的函数，它的功能是查看矩阵或者数组的维数。
 
-{% codeblock %}
+```python
 import numpy as np
 data = np.array([[2,4,3],[4,6,5]])
 print(data.shape)
@@ -1011,11 +1011,11 @@ print(data.shape[0])
 	# 2
 print(data.shape[1])
 	# 3
-{% endcodeblock %}
+```
 
 ## python numpy sum 函数用法
 
-{% codeblock %}
+```python
 import numpy as np
 data = np.array([[1,2],[2,2]]);
 print(np.sum(data));
@@ -1042,11 +1042,11 @@ print((a == b).sum(axis=0))
 print((a == b).reshape(1,9).sum(axis=1))
 	# axis 为 1 的时候，是行相加
 	# [8]
-{% endcodeblock %}
+```
 
 对于多维数组
 
-{% codeblock %}
+```python
  
 import numpy as np
 a = np.arange(12).reshape((3,4))
@@ -1058,11 +1058,11 @@ print(a.sum(axis=0)) # 为 0 的时候，表示列相加
 	# [12 15 18 21]
 print(a.sum(axis = 1))	# 为 1 的时候，表示行相加
 	# [ 6 22 38]
-{% endcodeblock %}
+```
 
 ## python numpy sorted 函数用法
 
-{% codeblock %}
+```python
 这个方法我在用numpy实际操作的时候，发现没有，但是查阅相关文档，貌似又有，可能是版本问题。但是这个方法是python自带的。
 
 sorted(data, cmp=None, key=None, reverse=False)  
@@ -1085,7 +1085,7 @@ sorted(data, cmp=None, key=None, reverse=False)
 	d = {'data1':3, 'data2':1, 'data3':2, 'data4':4}  
 	sorted(d.iteritems(), key=itemgetter(1), reverse=True)  
 	[('data4', 4), ('data1', 3), ('data3', 2), ('data2', 1)]
-{% endcodeblock %}
+```
 
 ## stack()
 
@@ -1097,7 +1097,7 @@ stack(arrays, axis=0)，arrays可以传数组和列表。
 
 [原文](https://blog.csdn.net/csdn15698845876/article/details/73380803)
 
-{% codeblock %}
+```python
 import numpy as np
 a=[[1,2,3],
    [4,5,6]]
@@ -1117,9 +1117,9 @@ print(c)
 	# [[1 4]
 		[2 5]
 		[3 6]]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
 a=[[1,2,3,4],
    [5,6,7,8],
@@ -1147,9 +1147,9 @@ print(c)
  [ 2  6 10]
  [ 3  7 11]
  [ 4  8 12]]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
 a=[1,2,3,4]
 b=[5,6,7,8]
@@ -1179,9 +1179,9 @@ print(d)
  [ 2  6 10]
  [ 3  7 11]
  [ 4  8 12]]
-{% endcodeblock %}
+```
 
-{% codeblock %}
+```python
 import numpy as np
 a=[[1,2,3],
    [4,5,6]]
@@ -1233,7 +1233,7 @@ print(d)
  [[4 4 4]
   [5 5 5]
   [6 6 6]]]
-{% endcodeblock %}
+```
 
 ## std()
 
@@ -1261,7 +1261,7 @@ numpy.std(a, axis=None, dtype=None, out=None, ddof=0, keepdims=)
 		控制自由度，自由度=N - ddof，N是数据的长度。当ddof=1时，就是样本标准差，当ddof=0时，是总体标准差
 	keepdims : bool, optional
 
-{% codeblock %}
+```python
 a = np.array([[1, 2], [3, 4]])
 np.std(a) # 计算全局标准差
 	# 1.1180339887498949
@@ -1269,7 +1269,7 @@ np.std(a, axis=0) # axis=0计算每一列的标准差
 	# array([ 1.,  1.])
 np.std(a, axis=1) # 计算每一行的标准差
 	# array([ 0.5,  0.5])
-{% endcodeblock %}
+```
 
 
 
@@ -1284,7 +1284,7 @@ np.std(a, axis=1) # 计算每一行的标准差
 
 将 numpy 的数据转化为 python 的 list
 
-{% codeblock %}
+```python
 a = np.arange(1,10)
 print(a.dtype)
 	# int32
@@ -1292,7 +1292,7 @@ print(type(a.tolist()))
 	# <class 'list'>
 print(a.tolist().dtype)
 	# AttributeError: 'list' object has no attribute 'dtype'
-{% endcodeblock %}
+```
 
 ## python numpy tostring函数
 
@@ -1300,7 +1300,7 @@ print(a.tolist().dtype)
 
 将 numpy 的字符串转化为 python 的字符串
 
-{% codeblock %}
+```python
 import numpy as np
 s = np.fromstring("licong",dtype=np.uint8)
 print(s)
@@ -1313,13 +1313,13 @@ print(type(s.tostring()))
 	# <class 'bytes'>
 print(s.tostring().decode('ascii'))
 	# licong
-{% endcodeblock %}
+```
 
 ## python numpy tile函数用法
 
 tile函数位于python模块 numpy.lib.shape_base中，他的功能是重复某个数组。比如tile(A,n)，功能是将数组A重复n次，构成一个新的数组，我们还是使用具体的例子来说明问题:
 
-{% codeblock %}
+```python
 import numpy as np
 data = np.array([[1,2]])
 print(np.tile(data,(1,1)));
@@ -1332,7 +1332,7 @@ print(np.tile(data,(2,2)));
 	[1 2 1 2]]
 print(np.tile(data,(1,2)));
 	[[1 2 1 2]]
-{% endcodeblock %}
+```
 
 # V
 
@@ -1346,7 +1346,7 @@ print(np.tile(data,(1,2)));
 
 [为什么样本方差（sample variance）的分母是 n-1？](https://benpaodewoniu.github.io/2018/06/15/math3/)
 
-{% codeblock %}
+```python
 import numpy as np
 data = np.array([[1,2,3],[5,9,15]])
 A = np.var(data)
@@ -1355,7 +1355,7 @@ B = np.var(data,axis=0) # 列的方差
 	# [ 4.   12.25 36.  ]
 C = np.var(data,axis=1) # 行的方差
 	# [ 0.66666667 16.88888889]
-{% endcodeblock %}
+```
 
 ## vstack()
 
@@ -1365,7 +1365,7 @@ vstack(tup) ，参数tup可以是元组，列表，或者numpy数组，返回结
 
 对于下面的代码，a 和 b 中的数据都是一个维度，所以输出如下。
 
-{% codeblock %}
+```python
 import numpy as np
 a=[1,2,3]
 b=[4,5,6]
@@ -1375,9 +1375,9 @@ print(np.vstack((a,b)))
 [[1 2 3]
  [4 5 6]]
 
-{% endcodeblock %}
+```
 下面的代码中，每个变量中的数据都有自己的维度，先排 a 的，然后依次排下去，最后输出。
-{% codeblock %}
+```python
 
 import numpy as np
 a=[[1],[2],[3]]
@@ -1397,4 +1397,4 @@ print(np.vstack((a,b,c,d)))
 		[ 1]
 		[ 2]
 		[ 3]]
-{% endcodeblock %}
+```

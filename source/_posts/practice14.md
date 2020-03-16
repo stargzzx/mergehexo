@@ -122,7 +122,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 ### next
 
-{% codeblock %}
+```python
 def getNext(substr,next):
     i = 0
     j = -1
@@ -134,9 +134,9 @@ def getNext(substr,next):
             next[i] = j
         else:
             j = next[j]
-{% endcodeblock %}
+```
 ### KMP
-{% codeblock %}
+```python
 def KMP(str,substr,next):
     i = 0
     j = 0
@@ -150,13 +150,13 @@ def KMP(str,substr,next):
         return i - len(substr)
     else:
         return -1
-{% endcodeblock %}
+```
 
 ### 测试
 
-{% codeblock %}
+```python
 sub = "abc"
 next = [None for k in range(len(sub))]
 getNext(sub,next)
 print(KMP("ababababca","abc",next))
-{% endcodeblock %}
+```

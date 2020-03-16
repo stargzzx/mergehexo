@@ -46,7 +46,7 @@ tags:
 
 ## 代码
 
-{% codeblock %}
+```python
 class Node:  # 节点类
     def __init__(self, k):
         self.k = k
@@ -106,4 +106,4 @@ tree.add(3)
 tree.add(4)
 tree.add(5)
 tree.preorder2(tree.root)
-{% endcodeblock %}
+```

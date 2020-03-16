@@ -42,14 +42,14 @@ python对象和数据库表之间转换
 
 找到 DATABASES 的字符段
 
-{% codeblock %}
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-{% endcodeblock %}
+```
 
 	ENGINE 表明数据库使用的是哪一个驱动
 	NAME 数据库的名字，图中所示是 db.sqlite3
@@ -90,7 +90,7 @@ DATABASES = {
 
 在 blog 的 models.py 文件下定义
 
-{% codeblock %}
+```python
 from django.db import models
 
 # Create your models here.
@@ -105,7 +105,7 @@ class Article(models.Model):
     content = models.TextField()
     # 文章的发布日期
     publish_date = models.DateTimeField(auto_now=True)
-{% endcodeblock %}
+```
 
 <br/>
 

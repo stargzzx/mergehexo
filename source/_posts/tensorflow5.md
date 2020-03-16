@@ -58,7 +58,7 @@ tags:
 
 代码
 
-{% codeblock %}
+```python
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -221,7 +221,7 @@ with tf.Session() as sess:
 # [[0.9777026]
 #  [1.0181949]]
 # After 19500 training step(s),loss on all data is 0.000775461
-{% endcodeblock %}
+```
 
 结论
 
@@ -248,7 +248,7 @@ with tf.Session() as sess:
 	
 代码1
 
-{% codeblock %}
+```python
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -412,7 +412,7 @@ with tf.Session() as sess:
 # [[1.0208615]
 #  [1.0454264]]
 # After 19500 training step(s),loss on all data is 1.91289
-{% endcodeblock %}
+```
 
 结论2
 
@@ -422,7 +422,7 @@ with tf.Session() as sess:
 
 我们修改参数，让成本为 9，利润为 1
 
-{% codeblock %}
+```python
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -586,7 +586,7 @@ with tf.Session() as sess:
 # [[0.967159  ]
 #  [0.97354174]]
 # After 19500 training step(s),loss on all data is 1.44697
-{% endcodeblock %}
+```
 
 结论2
 

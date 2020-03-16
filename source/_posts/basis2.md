@@ -27,20 +27,20 @@ tags:
 
 好了，在这里我还要从大多数博文那样，从阶乘入手，看下述代码：
 
-{% codeblock %}
+```python
 def F(num):
     if num == 1:
         return 1
     return num * F(num - 1)
 
 F(5)
-{% endcodeblock %}
+```
 
 ### 错误的示例
 
 很多人的博文对于上述的函数传递都会有下述的流程：
 
-{% codeblock %}
+```python
 F(5)                        # 第 1 次调用使用 5
 5 * F(4)                    # 第 2 次调用使用 4
 5 * (4 * F(3))              # 第 3 次调用使用 3
@@ -51,7 +51,7 @@ F(5)                        # 第 1 次调用使用 5
 5 * (4 * 6)                 # 从第 3次调用返回
 5 * 24                      # 从第 2 次调用返回
 120                         # 从第 1 次调用返回
-{% endcodeblock %}
+```
 
 很多书籍也是这么解读的，其实我认为是错误的，又或者是具有二义性。起先，我认为这个流程是对的，直到我在书写完用递归画树状图，才对这个流程产生不解。因为，按照它的传递思路，是不可能写出树状图的。
 
@@ -79,13 +79,13 @@ F(5)                        # 第 1 次调用使用 5
 
 正如栈一样，函数F(5) 发现自己递归了一个 F(4),所以就把F(5)压入栈中，然后在自己上面添加一个F(4),最后递归到F(1)，发现F(1)有值，所以在依次从栈中取出那些数。最后成功。
 
-{% codeblock %}
+```python
 F(1) = 1
 F(2) = 2 * F(1) = 2
 F(3) = 3 * F(2) = 6
 F(4) = 4 * F(3) = 24
 F(5) = 5 * F(4) = 120
-{% endcodeblock %}
+```
 
 上述我认为才是递归的合理流程，这样我才觉得递归真的理解了。
 
@@ -95,7 +95,7 @@ F(5) = 5 * F(4) = 120
 
 ### 异常记录 RecursionError: maximum recursion depth exceeded in comparison
 
-{% codeblock %}
+```python
 num = [1, 2, 3]
 label = ['A', 'B']
 
@@ -112,7 +112,7 @@ def createTree():
         return data
 
 print(createTree())
-{% endcodeblock %}
+```
 
 上面的异常是递归过深，说明没有触碰到停止条件。
 
@@ -130,7 +130,7 @@ data[label.pop(0)][i] = createTree()
 
 我写下下面的代码进行验证：
 
-{% codeblock %}
+```python
 num = [1, 2, 3]
 label = ['A', 'B']
 
@@ -147,13 +147,13 @@ def createTree():
         return data
 
 print(createTree())
-{% endcodeblock %}
+```
 
 答案和成品的答案是一样的，所以也验证了我之前的猜想。
 
 ### 最后的成品 1
 
-{% codeblock %}
+```python
 num = [1, 2, 3]
 label = ['A', 'B']
 
@@ -172,11 +172,11 @@ def createTree():
         return data
 
 print(createTree())
-{% endcodeblock %}
+```
 
 输出结果：
 
-{% codeblock %}
+```python
 {'A':
      {0: 'YES',
       1: 'YES',
@@ -188,11 +188,11 @@ print(createTree())
           }
       }
  }
-{% endcodeblock %}
+```
 
 ### 最后的成品 2
 
-{% codeblock %}
+```python
 num = [1, 2, 3]
 label = ['A', 'B']
 
@@ -211,11 +211,11 @@ def createTree():
         return data
 
 print(createTree())
-{% endcodeblock %}
+```
 
 输出结果：
 
-{% codeblock %}
+```python
 {'A':
      {0: 'YES',
       1: 'YES',
@@ -227,7 +227,7 @@ print(createTree())
           }
       }
  }
-{% endcodeblock %}
+```
 
 成品 1 和成品 2 只是在删除 label 元素的时候会有不同。
 
@@ -239,7 +239,7 @@ print(createTree())
 
 代码：
 
-{% codeblock %}
+```python
 num = [1, 2, 3]
 label = ['A', 'B']
 def change(label):	#这个是
@@ -261,11 +261,11 @@ def createTree(label):
         return data
 
 print(createTree(label))
-{% endcodeblock %}
+```
 
 输出结果：
 
-{% codeblock %}
+```python
 {'A':
      {0: 'YES',
       1: 'YES',
@@ -277,11 +277,11 @@ print(createTree(label))
           }
       }
  }
-{% endcodeblock %}
+```
 
 ### 成品 4
 
-{% codeblock %}
+```python
 num = [1, 2, 3]
 label = ['A', 'B']
 
@@ -300,11 +300,11 @@ def createTree():
 
 print(createTree())
 
-{% endcodeblock %}
+```
 
 输出结果：
 
-{% codeblock %}
+```python
 {'A':
      {0: 'YES',
       1: 'YES',
@@ -316,7 +316,7 @@ print(createTree())
           }
       }
  }
-{% endcodeblock %}
+```
 
 为什么会有这么多的成品呢，原因是，在我奋战了很长时间，我遇到了很多异常，比如递归深度过深，字典 key 错误，但不管怎么说，我最后成功了，于是有了成品 3 的代码。
 
@@ -324,7 +324,7 @@ print(createTree())
 
 ## 递归中有别的函数
 
-{% codeblock %}
+```python
 
 def test(i):
     print(i)
@@ -342,7 +342,7 @@ test1(5)
 	# 3
 	# 4
 	# 5
-{% endcodeblock %}
+```
 
 正如逻辑思考的那样，递归中如果有别的函数，也一样压入栈中。
 

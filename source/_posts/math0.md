@@ -56,37 +56,37 @@ tags:
 
 首先，随机产生一个10*3维的整数矩阵作为样本集，10为样本的个数，3为样本的维数。
 
-{% codeblock %}
+```python
 mysample = fix(rand(10,3)*50)
-{% endcodeblock %}
+```
 
 ![](/images/math/0_6.jpg)
 
 根据公式，计算协方差需要计算均值，那是按行计算均值还是按列呢，我一开始就老是困扰这个问题。前面我们也特别强调了，协方差矩阵是计算不同维度间的协方差，要时刻牢记这一点。样本矩阵的每行是一个样本，每列为一个维度，所以我们要按列计算均值。为了描述方便，我们先将三个维度的数据分别赋值：
 
-{% codeblock %}
+```python
 >> dim1 = mysample(:,1);
 >> dim2 = mysample(:,2);
 >> dim3 = mysample(:,3);
-{% endcodeblock %}
+```
 计算dim1与dim2，dim1与dim3，dim2与dim3的协方差：
-{% codeblock %}
+```python
 >> sum((dim1 - mean(dim1)) .* (dim2 - mean(dim2))) / (size(mysample, 1) - 1)  %得到 -147.0667
 >> sum((dim1 - mean(dim1)) .* (dim3 - mean(dim3))) / (size(mysample, 1) - 1)  %得到  -82.2667
 >> sum((dim2 - mean(dim2)) .* (dim3 - mean(dim3))) / (size(mysample, 1) - 1)  %得到   76.5111
-{% endcodeblock %}
+```
 搞清楚了这个后面就容易多了，协方差矩阵的对角线就是各个维度上的方差，下面我们依次计算：
-{% codeblock %}
+```python
 >> var(dim1)  %得到 227.8778
 >> var(dim2)  %得到 179.8222
 >> var(dim3)  %得到 156.7111
-{% endcodeblock %}
+```
  这样，我们就得到了计算协方差矩阵所需要的所有数据，调用Matlab自带的cov函数进行验证：
  
 
-{% codeblock %}
+```python
 >> cov(mysample)
-{% endcodeblock %}
+```
 
 ![](/images/math/0_7.jpg)
 
@@ -96,10 +96,10 @@ mysample = fix(rand(10,3)*50)
 
 今天突然发现，原来协方差矩阵还可以这样计算，先让样本矩阵中心化，即每一维度减去该维度的均值，使每一维度上的均值为0，然后直接用新的到的样本矩阵乘上它的转置，然后除以(N-1)即可。其实这种方法也是由前面的公式推导而来，只不过理解起来不是很直观，但在抽象的公式推导时还是很常用的！同样给出Matlab代码实现：
 
-{% codeblock %}
+```python
 >> temp = mysample - repmat(mean(mysample), 10, 1);
 >> result = temp' * temp ./ (size(mysample, 1) - 1);
-{% endcodeblock %}
+```
 ![](/images/math/0_8.jpg)
 
 ## 总结

@@ -19,11 +19,11 @@ tags:
 
 ## 问题描述
 
-{% codeblock %}
+```python
 from PIL import Image 
 im = Image.open(“xxx.jpg”) 
 im.show() 
-{% endcodeblock %}
+```
 
 但是实践过程中发现，我的程序虽然能正常运行，但是无法弹出窗口显示图片。并且经过实验还能够顺利将图像保存到本地。
 

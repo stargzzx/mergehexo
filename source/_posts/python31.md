@@ -18,7 +18,7 @@ python 中 os 模块。
 
 ### 常见函数列表
 
-{% codeblock %}
+```python
 os.sep
 	取代操作系统特定的路径分隔符
 os.name
@@ -84,4 +84,4 @@ os.path.basename(path)
 	返回文件名
 os.path.dirname(path)	
 	返回文件路径
-{% endcodeblock %}
+```

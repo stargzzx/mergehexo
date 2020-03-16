@@ -121,7 +121,7 @@ tags:
 
 ## 全局配置 app.json
 
-{% codeblock %}
+```python
 	{
 	  "pages": [
 		"pages/index/index",
@@ -135,7 +135,7 @@ tags:
 	  },
 	  "sitemapLocation": "sitemap.json"
 	}
-{% endcodeblock %}
+```
 
 ### pages 配置
 
@@ -151,7 +151,7 @@ tags:
 
 ![](/images/django/6_1.png)
 
-{% codeblock %}
+```python
 {
   "pages": [
     "pages/index/index",
@@ -180,7 +180,7 @@ tags:
     ]
   }
 }
-{% endcodeblock %}
+```
 
 ![](/images/django/6_3.png)
 
@@ -194,11 +194,11 @@ tags:
 
 以 index.json 为例
 
-{% codeblock %}
+```python
 {
   "enablePullDownRefresh": true
 }
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -369,13 +369,13 @@ globalData在app.js文件中app()全局应用实例中：
 
 在小程序的逻辑层里面有这样的代码
 
-{% codeblock %}
+```python
 Page({
 	data:{
 		message:"hello Mima"
 	}
 })
-{% endcodeblock %}
+```
 
 在视图层我们直接
 
@@ -389,7 +389,7 @@ Page({
 
 在逻辑层中
 
-{% codeblock %}
+```python
 Page({
 	data:{
 		array:[{
@@ -399,7 +399,7 @@ Page({
 		}]
 	}
 })
-{% endcodeblock %}
+```
 
 	<view wx:for ="{{array}}">
 		{{index}}:{{item.message}}
@@ -407,11 +407,11 @@ Page({
 		index 是微信约定俗称的，就是第几个的意思，微信会自动排列
 		item 也是微信约定俗成，在 array 里面的元素，都是 item
 		
-{% codeblock %}
+```python
 <view wx:for="{{array}}">
     NO.{{index}} item,message:{{item.message}}
 </view>
-{% endcodeblock %}
+```
 
 就会出现
 

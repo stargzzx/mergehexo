@@ -26,7 +26,7 @@ tags:
 
 PyTorch 中保存模型的方式有许多种：
 
-{% codeblock %}
+```python
 # 保存整个网络，载入后可以直接用
 torch.save(model, PATH)
 # 保存网络中的参数, 速度快，占空间少
@@ -35,7 +35,7 @@ torch.save(model.state_dict(),PATH)
 torch.save({'state_dict': model.state_dict(), 'fc_dict':model.fc.state_dict(),
             'optimizer': optimizer.state_dict(),'alpha': loss.alpha, 'gamma': loss.gamma},
             PATH)
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -45,7 +45,7 @@ torch.save({'state_dict': model.state_dict(), 'fc_dict':model.fc.state_dict(),
 
 同样的，PyTorch 中读取模型参数的方式也有许多种：
 
-{% codeblock %}
+```python
 # 读取整个网络
 model = torch.load(PATH)
 
@@ -65,7 +65,7 @@ model_dict.update(Checkpoint)
 model.load_state_dict(model_dict)
 # 2. 利用 load_state_dict() 的 strict 参数进行部分加载
 model.load_state_dict(torch.load(PATH), strict=False)
-{% endcodeblock %}
+```
 
 如何利用前面的参数呢？我以 官方 的一段代码进行阐述，当然，利用参数有两种情况
 
@@ -78,7 +78,7 @@ model.load_state_dict(torch.load(PATH), strict=False)
 
 [TRAINING A CLASSIFIER](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html)
 
-{% codeblock %}
+```python
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -116,7 +116,7 @@ outputs = net(images)
 _, predicted = torch.max(outputs, 1)
 print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
                               for j in range(4)))
-{% endcodeblock %}
+```
 
 在这个代码中，我们可以看出，我们得预先知道整个网络的结构才行。
 

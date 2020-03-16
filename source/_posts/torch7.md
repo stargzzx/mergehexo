@@ -16,7 +16,7 @@ tags:
 
 <br/>
 
-{% codeblock %}
+```python
 x = torch.randn(10, 3)
 y = torch.randn(10, 2)
 
@@ -54,7 +54,7 @@ optimizer.step()
 pred = linear(x)
 loss = criterion(pred, y)
 print('loss after 1 step optimization: ', loss.item())
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -62,7 +62,7 @@ print('loss after 1 step optimization: ', loss.item())
 
 <br/>
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -89,7 +89,7 @@ loss.backward()
 optimizer.step()
 d = m.liner1
 torch.save(m, './m.pth')
-{% endcodeblock %}
+```
 
 这个代码有一个简单的结构。
 
@@ -100,7 +100,7 @@ torch.save(m, './m.pth')
 
 下面是载入模型的代码。
 
-{% codeblock %}
+```python
 class M(nn.Module):
     def __init__(self):
         super(M, self).__init__()
@@ -121,7 +121,7 @@ outputs = m(x)
 print(outputs)
 loss = criterion(outputs, y)
 print(loss)
-{% endcodeblock %}
+```
 
 这里有一个特别注意的点就是，我们虽然可以从文件中直接读取参数和网络结构，但是，在文件中还是要放一下我们构建模型的那个 model。
 
@@ -131,7 +131,7 @@ print(loss)
 
 <br/>
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import numpy as np
@@ -187,7 +187,7 @@ plt.show()
 
 # Save the model checkpoint
 torch.save(model.state_dict(), 'model.ckpt')
-{% endcodeblock %}
+```
 
 optimizer.zero_grad() 之所以有这个方法，请看我下面的博文。
 
@@ -195,7 +195,7 @@ optimizer.zero_grad() 之所以有这个方法，请看我下面的博文。
 
 # 一个比较完整的 MNIST logistic_regression
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torchvision
@@ -271,7 +271,7 @@ with torch.no_grad():
 
 # Save the model checkpoint
 torch.save(model.state_dict(), 'model.ckpt')
-{% endcodeblock %}
+```
 
 在这里唯一值得说明的是 no_grad() 这个方法
 
@@ -291,7 +291,7 @@ torch.save(model.state_dict(), 'model.ckpt')
 
 里面的数据集 MNIST 如果没有会自动下载
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torchvision
@@ -387,7 +387,7 @@ with torch.no_grad():
 
 # Save the model checkpoint
 torch.save(model.state_dict(), 'model.ckpt')
-{% endcodeblock %}
+```
 
 
 

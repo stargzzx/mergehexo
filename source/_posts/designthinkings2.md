@@ -92,7 +92,7 @@ tags:
 
 透明组合模式 通用代码如下所示：
 
-{% codeblock %}
+```python
 package com.yn.design_pattern.composite.universal.transparent;
 
 import java.util.ArrayList;
@@ -192,7 +192,7 @@ class Client {
         }
     }
 }
-{% endcodeblock %}
+```
 
 透明组合模式 中，由于 Component 包含叶子节点所不需要的方法，因此，我们直接将这些方法默认抛出UnsupportedOperationException异常。
 
@@ -208,7 +208,7 @@ class Client {
 
 	修改 Component 代码：只保留各层次公有行为：
 	
-{% codeblock %}
+```python
     // 抽象根节点
     static abstract class Component {
         protected String name;
@@ -219,11 +219,11 @@ class Client {
 
         public abstract String operation();
     }
-{% endcodeblock %}
+```
 
 	修改客户端代码：将树枝节点类型更改为 Composite 类型，以便获取管理子类操作的方法：
 	
-{% codeblock %}
+```python
 class Client {
     public static void main(String[] args) {
         // 来一个根节点
@@ -246,7 +246,7 @@ class Client {
         System.out.println(result);
     }
 }
-{% endcodeblock %}
+```
 
 上述例子的运行结果如下：
 
@@ -275,7 +275,7 @@ class Client {
 
 代码如下：
 
-{% codeblock lang:java%}
+```python
 class Client {
     public static void main(String[] args) {
         Folder diskC = new Folder("C:\\");
@@ -347,7 +347,7 @@ class Client {
         }
     }
 }
-{% endcodeblock %}
+```
 
 客户端创建了一个磁盘 C:\，并再 C 盘下创建了 windows 目录，windows 目录下又创建了 system32 目录，system32 目录下包含两个文件 calc.exe 和 ping.exe。上面代码执行的结果如下：
 

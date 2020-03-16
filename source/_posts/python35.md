@@ -33,7 +33,7 @@ PIL.ImageFont.truetype(font=None, size=10, index=0, encoding='')
 	
 ### 输出中文
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 from PIL import ImageDraw,Image,ImageFont
 image = Image.new('RGB',(100,100))
@@ -41,5 +41,5 @@ draw = ImageDraw.Draw(image)
 Font = ImageFont.truetype('C:\Windows\Fonts\simsun.ttc',30,encoding='utf-8')
 draw.text((10,10),'程序猿',fill=(255,255,255),font=Font)
 image.save('test.jpg')
-{% endcodeblock %}
+```
 ![](/images/python/35_0.jpg)

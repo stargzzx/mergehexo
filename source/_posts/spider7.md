@@ -44,7 +44,7 @@ tags:
 
 下面把代码贴一下
 
-{% codeblock %}
+```python
 import requests
 from bs4 import BeautifulSoup
 from collections import defaultdict
@@ -106,7 +106,7 @@ for name, info in name_info.items():
         doc.add_paragraph(live_area[i])
 
 doc.save('./test.docx')
-{% endcodeblock %}
+```
 
 这里面有几个地方需要解释一下：
 

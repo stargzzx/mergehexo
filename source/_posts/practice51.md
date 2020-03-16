@@ -71,7 +71,7 @@ Example 5:
 	
 ## code
 
-{% codeblock %}
+```python
 class Solution:
     def isValid(self, s: 'str') -> 'bool':
         i = 0
@@ -107,7 +107,7 @@ class Solution:
             return True
         else:
             return False		
-{% endcodeblock %}
+```
 
 这里值得思考的是 or 和 and
 
@@ -115,7 +115,7 @@ class Solution:
 
 贴一下别人写的代码
 
-{% codeblock %}
+```python
 JeremieMelo's avatar
 JeremieMelo
 2
@@ -162,13 +162,13 @@ class Solution(object):
             return True
         else:
             return False	
-{% endcodeblock %}
+```
 
 下面这个代码更加优秀。
 
 它熟练地运用了字典的性质。
 
-{% codeblock %}
+```python
 JeremieMelo's avatar
 JeremieMelo
 2
@@ -185,7 +185,7 @@ def isValid(self, s):
         else:
             stack.append(ch)
     return not stack		
-{% endcodeblock %}
+```
 
 首先说明一下字典的一些概念
 

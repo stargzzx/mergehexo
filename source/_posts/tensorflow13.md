@@ -20,10 +20,10 @@ tags:
 
 相关代码如下;
 
-{% codeblock %}
+```python
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-{% endcodeblock %}
+```
 
 但是，我们应该自己下载下来。[因为漫长的等待总是让人崩溃的]
 
@@ -40,7 +40,7 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 用最普通的方式做训练
 
-{% codeblock %}
+```python
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 import numpy as np
@@ -77,10 +77,10 @@ for step in range(1500):
     print(sess.run(loss, feed_dict={x: batch[0], y_: batch[1]}))
     print("test accuracy %g" % accuracy.eval(session=sess,feed_dict={x:mnist.test.images,y_:mnist.test.labels}))
 
-{% endcodeblock %}
+```
 
 ## 用 CNN 做训练
-{% codeblock %}
+```python
 
 from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
@@ -171,7 +171,7 @@ if __name__ == "__main__":
     print("test accuracy %g" % accuracy.eval(session=sess,feed_dict={
         x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
     #test accuracy 0.9919
-{% endcodeblock %}
+```
 
 
 

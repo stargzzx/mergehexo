@@ -33,7 +33,7 @@ tags:
 
 关于私用 ID 的介绍，可以看下面。
 
-{% codeblock %}
+```python
 XX-Net/code/default/gae_proxy/server/
 
 Windows 用户
@@ -52,7 +52,7 @@ Windows 用户
 	开启调试输出，使用 123456 作为 RC4 密码并部署 xxnet-1 这个 appid
 	uploader.bat "xxnet-1" -debug -password 123456
 	uploader.bat "lxxnet-1|lxxnet-2|lxxnet-3|lxxnet-4|lxxnet-5|lxxnet-6|lxxnet-7|lxxnet-8|lxxnet-9|lxxnet-10|lxxnet-11|lxxnet-12" -password 123456
-{% endcodeblock %}
+```
 
 ## APPID的流量用完
 
@@ -62,7 +62,7 @@ Windows 用户
 
 但是，我在老版本遇到过这样一个情况。我还没开始用私用 ID 的流量就用完了。好几天都是这样，但是私用的用完后，我不会转公用的，导致不能科学上网，因为我的私用额度用完了，这个情况满普遍的，经过询问后，解决方案如下。
 
-{% codeblock %}
+```python
 结束进程 pythonw.exe，编辑 config.ini 或 manual.ini ，将如下内容的 appid 前添加;（注释以停用）
 [gae]
 ;添加你自己的appid，多个用竖线 | 分隔
@@ -70,4 +70,4 @@ appid =xxx|yyy|zzz
 ;appid密码，无可不填
 password =
 config.ini 在data文件夹中
-{% endcodeblock %}
+```

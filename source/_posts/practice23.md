@@ -17,7 +17,7 @@ tags:
 
 定义不多说，直接上代码。
 
-{% codeblock %}
+```python
 class Node():
 	def __init__(self,value = None,next = None):
 		self.value = value
@@ -49,15 +49,15 @@ class LinkList():
 			self.head = self.head.next
 			self.length -= 1
 			return node.value
-{% endcodeblock %}
+```
 
 ## 测试数据
 
-{% codeblock %}
+```python
 linkList = LinkList()
 linkList.add(12)
 linkList.add(11)
 print(linkList.count())
 print(linkList.pop())
 print(linkList.pop())
-{% endcodeblock %}
+```

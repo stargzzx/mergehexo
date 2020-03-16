@@ -154,7 +154,7 @@ tags:
 
 handle.py
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 # filename: handle.py
 
@@ -185,11 +185,11 @@ class Handle(object):
                 return ""
         except Exception, Argument:
             return Argument
-{% endcodeblock %}
+```
 
 但是在 python3.6.5 版本中，正确的代码应该是
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 # filename: handle.py
 
@@ -224,7 +224,7 @@ class Handle(object):
 				return ""
 		except Exception as Argument:
 			return Argument
-{% endcodeblock %}
+```
 
 ## 一些其他的事
 

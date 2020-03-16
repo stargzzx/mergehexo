@@ -31,7 +31,7 @@ tensorflow 中的 tensor 就是张量的意思。
 
 ### 定义张量
 
-{% codeblock %}
+```python
 import tensorflow as tf
 a = tf.constant([1.0,2.0])
 b = tf.constant([3.0,4.0])
@@ -40,7 +40,7 @@ print result
 	# Tensor("add:0", shape=(2,), dtype=float32)
 	# 之所以会输出这种结果，是因为会话这一步才开始计算，其他都是搭建或者表示
 	# add 表示运算方式 shape 表示维度 dtype 表示数据类型
-{% endcodeblock %}
+```
 
 ## 计算图
 
@@ -52,7 +52,7 @@ print result
 
 即：Y = XW = X1 * W1 + X2 * W2
 
-{% codeblock %}
+```python
 import tensorflow as tf
 X = tf.constant([[1.0,2.0]])	# 表示建立一个 1 * 2 的张量
 W = tf.constant([[3.0],[4.0]])	# 表示建立一个 2 * 1 的张量
@@ -61,7 +61,7 @@ print(result)
 	# Tensor("MatMul:0", shape=(1, 1), dtype=float32)
 	# 之所以会输出这种结果，是因为会话这一步才开始计算，其他都是搭建或者表示
 	# add 表示运算方式 shape 表示维度 dtype 表示数据类型	
-{% endcodeblock %}
+```
 
 ## 会话
 
@@ -78,7 +78,7 @@ session 是执行计算图中的节点运算。
 	with tf.Session() as sess:
 		print(sess.run(Y))
 		
-{% codeblock %}
+```python
 import tensorflow as tf
 X = tf.constant([[1.0,2.0]])	# 表示建立一个 2 * 1 的张量
 W = tf.constant([[3.0],[4.0]])	# 表示建立一个 1 * 2 的张量
@@ -89,7 +89,7 @@ print(result)
 	# add 表示运算方式 shape 表示维度 dtype 表示数据类型
 with tf.Session() as sess:
 	print(sess.run(result))		#[[11.]]
-{% endcodeblock %}
+```
 
 ### 为什么会有会话？
 
@@ -111,7 +111,7 @@ Session（会话）是tensorflow里面的重要机制，tensorflow构建的计�
 
 下面这个是对的
 
-{% codeblock %}
+```python
 **** # 前面的一些代码
 test = cnn(data)
 y = [1]
@@ -121,11 +121,11 @@ with tf.Session() as sess:
     init = tf.global_variables_initializer()
     sess.run(init)
     error = sess.run(loss)
-{% endcodeblock %}
+```
 
 但是，如果 init 换位置，下面就会出错
 
-{% codeblock %}
+```python
 **** # 前面的一些代码
 test = cnn(data)
 y = [1]
@@ -135,7 +135,7 @@ train_op=tf.train.AdamOptimizer(learning_rate=0.00001).minimize(loss)
 with tf.Session() as sess:
     sess.run(init)
     error = sess.run(loss)
-{% endcodeblock %}
+```
 
 
 

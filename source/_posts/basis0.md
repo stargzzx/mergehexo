@@ -18,7 +18,7 @@ tags:
 
 ## 基础
 
-{% codeblock %}
+```python
 
  . 匹配任意字符（除了\n）
 
@@ -80,11 +80,11 @@ $ 匹配字符串的结尾
 
 	输出 booby123
 	
-{% endcodeblock %}
+```
 
 ## 例子
 
-{% codeblock %}
+```python
 str = "booooobb123"
 	
 	想将booooob提取出来
@@ -141,11 +141,11 @@ str = "booooobb123"
 
 		输出为 b00b 因为后面的不能满足
 		
-{% endcodeblock %}
+```
 
 ## 有意识的匹配输出
 
-{% codeblock %}
+```python
 
 在 python 中如果模式匹配中有括号，那么匹配的输出结果是括号内容
 
@@ -183,4 +183,4 @@ str = "booooobb123"
 
 	r'<(?p<mark>[\w}+>)[\w]+</(?p=mark)','<book>python</book>'
 
-{% endcodeblock %}
+```

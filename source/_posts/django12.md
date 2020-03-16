@@ -19,7 +19,7 @@ django的类视图
 
 ## 函数视图的弊端
 
-{% codeblock %}
+```python
 def image(request):
     if request.method == 'GET':
         md5 = request.GET.get('md5')
@@ -37,7 +37,7 @@ def image(request):
         pass
     elif request.method == 'DELETE':
         pass	
-{% endcodeblock %}
+```
 
 之前的函数视图都是用 GET 去查询信息，POST 提交信息，PUT 修改信息 ，DELETE 删除信息
 
@@ -51,7 +51,7 @@ def image(request):
 	
 我们定义一个类：
 
-{% codeblock %}
+```python
 class ImageView(View):
     def get(self,request):
         md5 = request.GET.get('md5')
@@ -77,20 +77,20 @@ class ImageView(View):
         message = 'delete method success'
         resonse = utils.response.wrap_json_response(message=message)
         return JsonResponse(data=resonse, safe=False)		
-{% endcodeblock %}
+```
 
 这个类里面有get,post,put,delete方法，当对应的请求来的时候，会自动调用相应的方法，然后，我们修改应用的路由
 
 类的路由，和方法的路由不一样，需要调用一个这个类，然后调用这个类的自有方法
 
-{% codeblock %}
+```python
 urlpatterns = [
     # path('', weather.helloworld)
     path('weather', weather.weather),
     path('menu', menu.get_menu),
     path('image',image.ImageView.as_view())
 ]
-{% endcodeblock %}
+```
 
 ![](/images/django/12_0.png)
 

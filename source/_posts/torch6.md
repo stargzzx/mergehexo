@@ -63,7 +63,7 @@ torch.nn.Module是所有网络的基类，在Pytorch实现的Model都要继承�
 
 简单的定义一个网络Model
 
-{% codeblock %}
+```python
 class Model(nn.Module):
     def __init__(self):
         super(Model,self).__init__()
@@ -74,7 +74,7 @@ class Model(nn.Module):
         x = self.conv1(x)
         x = self.conv2(x)
         return x
-{% endcodeblock %}
+```
 
 我们必须继承 model 之后，必须要实现 __init__ 和 forward
 
@@ -82,7 +82,7 @@ Model中两个属性conv1和conv2是两个卷积层，在正向传播的过程�
 
 除了使用Model的属性来为网络添加层外，还可以使用add_module将网络层添加到网络中。
 
-{% codeblock %}
+```python
 class Model(nn.Module):
     def __init__(self):
         super(Model,self).__init__()
@@ -100,7 +100,7 @@ class Model(nn.Module):
         x = self.conv3(x)
         x = self.conv4(x)
         return x
-{% endcodeblock %}
+```
 
 add_module(name,layer)在正向传播的过程中可以使用添加时的name来访问改layer。
 
@@ -112,7 +112,7 @@ add_module(name,layer)在正向传播的过程中可以使用添加时的name来
 
 ModuleList是以list的形式保存sub-modules或者网络层，这样就可以先将网络需要的layer构建好保存到一个list，然后通过ModuleList方法添加到网络中。
 
-{% codeblock %}
+```python
 class MyModule(nn.Module):
     def __init__(self):
         super(MyModule,self).__init__()
@@ -127,13 +127,13 @@ class MyModule(nn.Module):
             x = self.linears[i // 2](x) + l(x)
 
         return x
-{% endcodeblock %}
+```
 
 使用[nn.Linear(10, 10) for i in range(10)]构建要给Layer的list，然后使用ModuleList添加到网络中，在正向传播的过程中，遍历该list。
 
 更为方便的是，可以提前配置后，所需要的各个Layer的属性，然后读取配置创建list，然后使用ModuleList将配置好的网络层添加到网络中。 以VGG为例：
 
-{% codeblock %}
+```python
 vgg_cfg = [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 'C', 512, 512, 512, 'M',
            512, 512, 512, 'M']
 
@@ -166,7 +166,7 @@ class Model1(nn.Module):
             x = l(x)
 m1 = Model1()
 print(m1)
-{% endcodeblock %}
+```
 
 读取配置好的网络结构vgg_cfg然后，创建相应的Layer List，使用ModuleList加入到网络中。这样就可以很灵活的创建不同的网络。
 
@@ -178,7 +178,7 @@ print(m1)
 
 Sequential也是一次加入多个Module到网络中中，和ModuleList不同的是，它接受多个Module依次加入到网络中，还可以接受字典作为参数，例如：
 
-{% codeblock %}
+```python
 # Example of using Sequential
         model = nn.Sequential(
                   nn.Conv2d(1,20,5),
@@ -194,7 +194,7 @@ model = nn.Sequential(OrderedDict([
     ('conv2', nn.Conv2d(20,64,5)),
     ('relu2', nn.ReLU())
     ]))
-{% endcodeblock %}
+```
 
 另一个是，Sequential中实现了添加Module的forward，不需要手动的循环调用了。这点相比ModuleList较为方便。
 
@@ -226,7 +226,7 @@ model = nn.Sequential(OrderedDict([
 
 简单的定义一个如下网络：
 
-{% codeblock %}
+```python
 class Model(nn.Module):
     def __init__(self):
         super(Model,self).__init__()
@@ -247,7 +247,7 @@ class Model(nn.Module):
         x = self.features(x)
 
         return x
-{% endcodeblock %}
+```
 
 modules()方法，返回一个包含当前模型所有模块的迭代器，这个是递归的返回网络中的所有Module。使用如下语句
 
@@ -289,13 +289,13 @@ modules()方法，返回一个包含当前模型所有模块的迭代器，这�
 
 named_modules()的功能和modules()的功能类似，不同的是它返回内容有两部分:module的名称以及module。
 
-{% codeblock %}
+```python
 model = torch.load('./m.pth')
 
 for name, value in model.named_parameters():
     print(name)
     print(value)
-{% endcodeblock %}
+```
 
     liner1.weight
     Parameter containing:
@@ -314,7 +314,7 @@ for name, value in model.named_parameters():
 
 ## 从文件中读取
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -333,7 +333,7 @@ if __name__ == '__main__':
     # print(m.liner1.weight)
     for idx, m in enumerate(m.modules()):
         print(idx, "-", m)
-{% endcodeblock %}
+```
 
 从代码中我们知道，虽然可以从文件中读取，但是依然要给定定义的 model 类。
 
@@ -375,7 +375,7 @@ named_children()和children()的功能类似，不同的是其返回两部分内
 
 ## 在训练的过程中获得参数
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -403,7 +403,7 @@ optimizer.step()
 d = m.liner1
 print(d.weight)
 	# 这个来输出某一层的权重
-{% endcodeblock %}
+```
 
 ## 读取网络文件来输出权重
 
@@ -417,7 +417,7 @@ print(d.weight)
 
 ## 多层定义
 
-{% codeblock %}
+```python
 class net(nn.Module):
     def __init__(self):
         super().__init__()
@@ -454,7 +454,7 @@ tensor([[[[ 2.7182e-03, -8.7767e-03,  3.2988e-02, -1.0006e-01, -1.1177e-01],
       	...
       	...
 model.c1[0].parameters()为该层的参数，包含梯度等等
-{% endcodeblock %}
+```
 
 因为其包含网络中的所有的权值矩阵参数以及偏置参数。 对网络进行训练时需要将parameters()作为优化器optimizer的参数。
 

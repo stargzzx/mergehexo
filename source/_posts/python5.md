@@ -17,15 +17,15 @@ Here is the tutorial of python.
 
 numpy提供了numpy.concatenate((a1,a2,...), axis=0)函数。能够一次完成多个数组的拼接。其中a1,a2,...是数组类型的参数
 
-{% codeblock %}
+```python
 a=np.array([1,2,3])
 b=np.array([11,22,33])
 c=np.array([44,55,66])
 np.concatenate((a,b,c),axis=0)  # 默认情况下，axis=0可以不写
 	# array([ 1,  2,  3, 11, 22, 33, 44, 55, 66]) #对于一维数组拼接，axis的值不影响最后的结果
 
-{% endcodeblock %}
-{% codeblock %}
+```
+```python
 
 a=np.array([[1,2,3],[4,5,6]])
 b=np.array([[11,21,31],[7,8,9]])
@@ -38,7 +38,7 @@ np.concatenate((a,b),axis=0)
 np.concatenate((a,b),axis=1)  #axis=1表示对应行的数组进行拼接
 	# array([[ 1,  2,  3, 11, 21, 31],
       		 [ 4,  5,  6,  7,  8,  9]])
-{% endcodeblock %}
+```
 
 
 
@@ -54,17 +54,17 @@ Python 2.3. 以上版本可用，2.6 添加 start 参数。
 
 enumerate(sequence, [start=0])
 
-{% codeblock %}
+```python
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 list(enumerate(seasons))
 	# [(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
 list(enumerate(seasons, start=1))       # 下标从 1 开始
 	# [(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
-{% endcodeblock %}
+```
 
 普通 for 循环
 
-{% codeblock %}
+```python
 i = 0
 seq = ['one', 'two', 'three']
 for element in seq:
@@ -74,11 +74,11 @@ for element in seq:
 	# 0 one
 	# 1 two
 	# 2 three
-{% endcodeblock %}
+```
 
 for 循环使用 enumerate
 
-{% codeblock %}
+```python
 seq = ['one', 'two', 'three']
 for i, element in enumerate(seq):
     print i, element
@@ -92,7 +92,7 @@ for i,d in enumerate(a):
     print(d)
 	# [1, 2, 3]
 		[4, 5, 6]	
-{% endcodeblock %}
+```
 
 
 
@@ -103,7 +103,7 @@ for i,d in enumerate(a):
 
 首先声明两者所要实现的功能是一致的（将多维数组降位一维），两者的区别在于返回拷贝（copy）还是返回视图（view），numpy.flatten()返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，而numpy.ravel()返回的是视图（view，也颇有几分C/C++引用reference的意味），会影响（reflects）原始矩阵。
 
-{% codeblock %}
+```python
 x = np.array([[1, 2], [3, 4]])
 x.flatten()[1] = 100
 x
@@ -113,7 +113,7 @@ x.ravel()[1] = 100
 x
 	# array([[  1, 100],
 		[  3,   4]])
-{% endcodeblock %}
+```
 
 ## fromstring()
 
@@ -125,7 +125,7 @@ A new 1-D array initialized from text data in a string
 
 因为是 ASCII 码，所以，不能转换中文，这是我自己的猜测，因为在转换中文的时候，会输出三个数字代码，看不懂。。。
 
-{% codeblock %}
+```python
 import numpy as np
 s = "一"
 a = 'yi'
@@ -133,7 +133,7 @@ print(np.fromstring(s,dtype=np.uint8))
 	# [228 184 128]
 print(np.fromstring(a,dtype=np.uint8))
 	# [121 105]
-{% endcodeblock %}
+```
 
 
 
@@ -154,7 +154,7 @@ globals() 函数会以字典类型返回当前位置的全部全局变量
 
 numpy.isin(element, test_elements, assume_unique=False, invert=False)
 
-{% codeblock %}
+```python
 import numpy as np
 a = np.arange(1,10)
 b = np.array([3,4,7])
@@ -170,7 +170,7 @@ print(np.isin(a,b))
 	# [False False  True  True False False  True False False]
 print(np.isin(a,b,invert=True))
 	# [ True  True False False  True  True False  True  True]	
-{% endcodeblock %}
+```
 
 
 
@@ -179,11 +179,11 @@ print(np.isin(a,b,invert=True))
 
 ## join()
 
-{% codeblock %}
+```python
 将列表，元组转为字符串
 a = [1,2,3,4]
 str = "".join(a)
-{% endcodeblock %}
+```
 
 
 
@@ -192,12 +192,12 @@ str = "".join(a)
 
 ## len
 
-{% codeblock %}
+```python
 Python len() 方法返回对象（字符、列表、元组等）长度或项目个数。
 语法
 	len()方法语法：
 	len( s )
-{% endcodeblock %}
+```
 
 ## list
 
@@ -205,12 +205,12 @@ list() 方法用于将元组（字符串也可以）转换为列表。
 
 注：元组与列表是非常类似的，区别在于元组的元素值不能修改，元组是放在括号中，列表是放于方括号中。
 
-{% codeblock %}
+```python
 print(list("123"))
 	# ['1', '2', '3']
 print(list(("123","234")))
 	# ['123', '234']
-{% endcodeblock %}
+```
 
 
 
@@ -218,7 +218,7 @@ print(list(("123","234")))
 
 ## min max
 
-{% codeblock %}
+```python
 min( x, y, z, .... )
 	参数
 		x -- 数值表达式。
@@ -234,7 +234,7 @@ min( x, y, z, .... )
 		# 1
 	
 	max 和 min 一样
-{% endcodeblock %}
+```
 
 
 
@@ -243,10 +243,10 @@ min( x, y, z, .... )
 
 ## ord()
 
-{% codeblock %}
+```python
 返回字符在 ASCII 的位置
 index = ord("a")
-{% endcodeblock %}
+```
 
 
 
@@ -257,7 +257,7 @@ index = ord("a")
 
 首先声明两者所要实现的功能是一致的（将多维数组降位一维），两者的区别在于返回拷贝（copy）还是返回视图（view），numpy.flatten()返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，而numpy.ravel()返回的是视图（view，也颇有几分C/C++引用reference的意味），会影响（reflects）原始矩阵。
 
-{% codeblock %}
+```python
 x = np.array([[1, 2], [3, 4]])
 x.flatten()[1] = 100
 x
@@ -267,7 +267,7 @@ x.ravel()[1] = 100
 x
 	# array([[  1, 100],
 		[  3,   4]])
-{% endcodeblock %}
+```
 
 
 
@@ -277,7 +277,7 @@ x
 
 ## sorted()
 
-{% codeblock %}
+```python
 内置函数
 sorted(data, cmp=None, key=None, reverse=False)  
 		#data是待排序数据，可以使List或者iterator, cmp和key都是函数，这两个函数作用与data的元素上产生一个结果，sorted方法根据这个结果来排序。 
@@ -312,11 +312,11 @@ sorted(data, cmp=None, key=None, reverse=False)
 	y = sorted(data.items(), key=operator.itemgetter(1), reverse=False)
 	print(y)
 		# [(1, 5), (2, 6), (3, 7), (4, 8)]
-{% endcodeblock %}
+```
 
 ## strip()
 
-{% codeblock %}
+```python
 python 2.0+
 str = "0000000     Runoob  0000000"; 
 print str.strip( '0' );  # 去除首尾字符 0
@@ -326,11 +326,11 @@ print str2.strip();
 	#Runoob
 #只移除字符串头尾指定的字符，中间部分不会移除
 python3一样使用
-{% endcodeblock %}
+```
 
 ## split()
 
-{% codeblock %}
+```python
 split(str , num)
 	参数
 		str 分隔符，默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等。
@@ -342,7 +342,7 @@ split(str , num)
 		#['th', 's is string example....wow!!!']
 	print (str.split('w'))
 		#['this is string example....', 'o', '!!!']
-{% endcodeblock %}
+```
 
 
 
@@ -359,7 +359,7 @@ zip() 函数用于将可迭代的对象作为参数，将对象中对应的元�
 
 zip([iterable, ...]) iterabl -- 一个或多个迭代器;
 
-{% codeblock %}
+```python
 a = [1,2,3]
 b = [4,5,6]
 c = [4,5,6,7,8]
@@ -376,4 +376,4 @@ list(a1)
 	# [1, 2, 3]
 list(a2)
 	# [4, 5, 6]
-{% endcodeblock %}
+```

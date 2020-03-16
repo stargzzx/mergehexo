@@ -53,7 +53,7 @@ python的web框架为flask。
 
 所以，我们写代码如下：
 
-{% codeblock %}
+```python
 import requests
 import json
 import time
@@ -112,7 +112,7 @@ while index >= 0 :
         result = handle_action(actions,index)
     finally:
         index -= 1
-{% endcodeblock %}
+```
 
 对于解读数据包的结构我们在这里就不说了，我们重点说传包的数据即
 
@@ -247,7 +247,7 @@ while index >= 0 :
 
 然后脚本代码如下：
 
-{% codeblock %}
+```python
 import pymysql
 
 db = pymysql.connect(
@@ -285,7 +285,7 @@ with open('data.txt','r') as file:
                 db.commit()
             except:
                 print("fail")
-{% endcodeblock %}
+```
 
 最后成功录入。有一点需要注意的是
 

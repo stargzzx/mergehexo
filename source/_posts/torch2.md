@@ -33,7 +33,7 @@ tags:
 
 2. 需要知道反向传播的梯度信息，我们还是从代码入手，如下所示是Pytorch 中SGD优化算法的step()函数具体写法，具体SGD的写法放在参考部分
 
-{% codeblock %}
+```python
 def step(self, closure=None):
         """Performs a single optimization step.
         Arguments:
@@ -71,7 +71,7 @@ def step(self, closure=None):
                 p.data.add_(-group['lr'], d_p)
  
         return loss
-{% endcodeblock %}
+```
 
 从上面的代码可以看到step这个函数使用的是参数空间(param_groups)中的grad,也就是当前参数空间对应的梯度，这也就解释了为什么optimzier使用之前需要zero清零一下，因为如果不清零，那么使用的这个grad就得同上一个mini-batch有关，这不是我们需要的结果。
 

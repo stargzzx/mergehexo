@@ -61,7 +61,7 @@ Matplotlib常常不可避免地存在冗繁的API（应用程序编程接口）
 
 基本原理是将数据放入数组，然后每次往数组里面增加一个数，清除之前的图，重新画出图像。
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 y1 = []
@@ -71,7 +71,7 @@ for i in range(50):
     ax.bar(y1, label='test', height=y1, width=0.3)
     ax.legend()
     plt.pause(0.1)
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -83,7 +83,7 @@ for i in range(50):
 
 基本原理是使用一个长度为2的数组，每次替换数据并在原始图像后追加。
 
-{% codeblock %}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -101,7 +101,7 @@ for i in range(100):
     ys[1] = y
     plt.plot(xs, ys)
     plt.pause(0.1)
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -125,7 +125,7 @@ ArtistAnimation：利用已定义的Artist对象创建动画。
 
 ![](/images/python/68_2.gif)
 
-{% codeblock %}
+```python
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -148,7 +148,7 @@ anim = FuncAnimation(fig, animate, init_func=init,
                                frames=200, interval=20, blit=True)
 
 anim.save('sine_wave.gif', writer='imagemagick')
-{% endcodeblock %}
+```
 
 在第7行到第9行，简单地创建一个图形窗口，图中只有一个轴。然后，创建无内容的行对象，其本质上是在动画中可修改的对象。稍后用数据来填充行对象。
 
@@ -168,7 +168,7 @@ anim.save('sine_wave.gif', writer='imagemagick')
 
 ![](/images/python/68_3.gif)
 
-{% codeblock %}
+```python
 #importing libraries
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -197,7 +197,7 @@ def animate(i):
 
 ani = animation.FuncAnimation(fig, animate, interval=1000) 
 plt.show()
-{% endcodeblock %}
+```
 
 其更新的时间间隔是1000毫秒或一秒。
 
@@ -213,7 +213,7 @@ plt.show()
 
 首先创建一个名为volcano的文件夹，放在与记事本相同的目录中。然后，将所有会用于动画化的图形储存在该文件夹中。
 
-{% codeblock %}
+```python
 # library
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
@@ -245,7 +245,7 @@ for angle in range(70,210,2):
     filename='Volcano/Volcano_step'+str(angle)+'.png'
     plt.savefig(filename, dpi=96)
     plt.gca()
-{% endcodeblock %}
+```
 
 这样就可以在Volcano文件夹中创建多个PNG文件。接着，利用ImageMagick（一个创建、编辑、合成图片的软件）将这些PNG文件转化成动画。打开终端并导向Volcano文件夹，输入以下指令：
 
@@ -273,7 +273,7 @@ Celluloid是python中的一个模块，其在matplotlib中可简化创建动画�
 
 首先创建一个名为volcano的文件夹，放在与记事本相同的目录中。然后，将所有会用于动画化的图形储存在该文件夹中。
 
-{% codeblock %}
+```python
 from matplotlib import pyplot as plt
 from celluloid import Camera
 
@@ -284,13 +284,13 @@ for i in range(10):
     camera.snap()
 animation = camera.animate()
 animation.save('celluloid_minimal.gif', writer = 'imagemagick')
-{% endcodeblock %}
+```
 
 ## 子图
 
 ![](/images/python/68_6.gif)
 
-{% codeblock %}
+```python
 import numpy as np
 from matplotlib import pyplot as plt
 from celluloid import Camera
@@ -305,13 +305,13 @@ for i in t:
 
 animation = camera.animate()  
 animation.save('celluloid_subplots.gif', writer = 'imagemagick')
-{% endcodeblock %}
+```
 
 ## 图例
 
 ![](/images/python/68_7.gif)
 
-{% codeblock %}
+```python
 import matplotlib
 from matplotlib import pyplot as plt
 from celluloid import Camera
@@ -324,7 +324,7 @@ for i in range(20):
     camera.snap()
 animation = camera.animate()
 animation.save('celluloid_legends.gif', writer = 'imagemagick')
-{% endcodeblock %}
+```
 
 # 通过定时器Timer触发事件，定时更新绘图
 
@@ -338,7 +338,7 @@ animation.save('celluloid_legends.gif', writer = 'imagemagick')
 
 通过self.user = self.user[1:] + [temp]，每次删除列表的第一元素，在其尾部添加新的元素。这样完成user数据的动态更新。其他详细的解释见文中的注释部分。
 
-{% codeblock %}
+```python
 #-*-coding:utf-8-*-
 import wx
 from matplotlib.figure import Figure
@@ -409,7 +409,7 @@ if __name__ == '__main__':
     t.Start(50)
     frame.Show()
     app.MainLoop()
-{% endcodeblock %}
+```
 
 但程序运行在关闭的时候会出现应用程序错误，不知道什么问题。python不是有垃圾回收机制吗，难道是内存泄露？
 

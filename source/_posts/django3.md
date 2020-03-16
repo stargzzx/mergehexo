@@ -68,7 +68,7 @@ shell新增文章很复杂
 
 在 blog 的admin中填写
 
-{% codeblock %}
+```python
 from django.contrib import admin
 
 <br/>
@@ -80,7 +80,7 @@ from django.contrib import admin
 from .models import Article
 
 admin.site.register(Article)
-{% endcodeblock %}
+```
 
 然后刷新页面就会出现
 
@@ -98,7 +98,7 @@ admin.site.register(Article)
 
 我们可以看到文章是以对象信息出现的，我们想让它们显示文章标题，可以修改 blog 下的 models.py
 
-{% codeblock %}
+```python
 from django.db import models
 
 # Create your models here.
@@ -116,7 +116,7 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
-{% endcodeblock %}
+```
 
 重新运行命令
 
@@ -134,7 +134,7 @@ class Article(models.Model):
 
 修改 blog 下的views 文件
 
-{% codeblock %}
+```python
 from django.shortcuts import render
 from django.http import HttpResponse
 from blog.models import Article
@@ -159,11 +159,11 @@ def article_content(request):
                                                     article_id,
                                                     publish_date)
     return HttpResponse(return_str)
-{% endcodeblock %}
+```
 
 配置路由，即修改 blog 下的 urls.py 文件
 
-{% codeblock %}
+```python
 from django.urls import path,include
 import blog.views
 
@@ -171,7 +171,7 @@ urlpatterns = [
     path('hello_world',blog.views.helloworld),
     path('content',blog.views.article_content)
 ]
-{% endcodeblock %}
+```
 
 然后开启服务，在浏览器输入
 

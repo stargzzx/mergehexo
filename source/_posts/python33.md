@@ -27,22 +27,22 @@ copy模块非常简单，只有两个api。分别是copy.copy(x)和copy.deepcopy
 
 在Python里，一切皆对象。当用赋值运算符将某个对象x赋值给另外一个对象y时，仅仅只是将x的引用赋值给y。本质上x和y指向的是同一块内存区域。这里可以使用Python的内建函数id()进行验证：
 
-{% codeblock %}
+```python
 x = [1, 2, 3]
 y = x
 print(id(x) == id(y)) # True
-{% endcodeblock %}
+```
 
 ##  克隆对象
 
 如果想要对目标进行克隆，而不是简单的引用绑定，就需要用到copy模块。使用copy模块可以创建一个与原对象一模一样的新对象。
 
-{% codeblock %}
+```python
 import copy
 x = [1, 2, 3]
 y = copy.copy(x)
 print(id(x) == id(y)) # False
-{% endcodeblock %}
+```
 
 ## 克隆策略
 
@@ -55,23 +55,23 @@ print(id(x) == id(y)) # False
 
 ### 使用浅复制策略时
 
-{% codeblock %}
+```python
 import copy
 x = [[1, 2, 3]]
 y = copy.copy(x)
 print(id(x) == id(y)) # False
 print(id(x[0]) == id(y[0])) # True
-{% endcodeblock %}
+```
 
 ### 使用深复制策略时
 
-{% codeblock %}
+```python
 import copy
 x = [[1, 2, 3]]
 y = copy.deepcopy(x)
 print(id(x) == id(y)) # False
 print(id(x[0]) == id(y[0])) # False
-{% endcodeblock %}
+```
 
 简单的说就是有没有递归调用的区别。
 
@@ -91,7 +91,7 @@ print(id(x[0]) == id(y[0])) # False
 
 用户自定义的类允许重写copy和deepcopy函数，这样就可以自定义调用copy模块时的操作，自行调整克隆策略：
 
-{% codeblock %}
+```python
 import copy
 class a():
     # 重写copy函数无法额外参数
@@ -105,7 +105,7 @@ class a():
 x = a()
 print(copy.copy(x)) # override copy
 print(copy.deepcopy(x)) # override deepcopy
-{% endcodeblock %}
+```
 
 ## 其他需要注意的地方
 

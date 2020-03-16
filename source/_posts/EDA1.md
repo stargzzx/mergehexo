@@ -51,27 +51,27 @@ tags:
 
 这个文件仅仅只是事件对象，你可以在这个文件中定义各种事件类型。
 
-{% codeblock %}
+```python
 class Event(object):
     # 事件对象
     def __init__(self, type=None):
         self.type = type
         self.dict = {}
-{% endcodeblock %}
+```
 
 ## Constant.py
 
 这个文件是你的各种事件名字。
 
-{% codeblock %}
+```python
 EVENT_ARTICAL = "Event_Artical"
-{% endcodeblock %}
+```
 
 ## EventEngine.py
 
 这个是事件引擎，相当于快递小哥的存在，是最核心的代码。
 
-{% codeblock %}
+```python
 from multiprocessing import Process, Queue
 
 
@@ -168,13 +168,13 @@ class EventEngine(object):
     def sendEvent(self, event):
         # 发送事件 像队列里存入事件
         self.__eventQueue.put(event)
-{% endcodeblock %}
+```
 
 ## ListenerTypeOne.py
 
 这个是消费者 1
 
-{% codeblock %}
+```python
 # 监听器 订阅者
 class ListenerTypeOne:
     def __init__(self, username):
@@ -184,13 +184,13 @@ class ListenerTypeOne:
     def ReadArtical(self, event):
         print(u'%s 收到新文章' % self.__username)
         print(u'%s 正在阅读新文章内容：%s' % (self.__username, event.dict["artical"]))
-{% endcodeblock %}
+```
 
 ## ListenerTypeTwo.py
 
 这个是第二种消费者，之所以，有这个消费者是因为这个消费者会 sleep 3 秒，相当于，这个消费者本身就要忙其他的事，然后才来看杂志。
 
-{% codeblock %}
+```python
 import time
 class ListenerTypeTwo:
     def __init__(self, username):
@@ -201,13 +201,13 @@ class ListenerTypeTwo:
         print(u'%s 收到新文章 睡3秒再看' % self.__username)
         time.sleep(3)
         print(u'%s 正在阅读新文章内容：%s' % (self.__username, event.dict["artical"]))
-{% endcodeblock %}
+```
 
 ## PublicAccounts.py
 
 杂志社
 
-{% codeblock %}
+```python
 from Event import Event
 from Constant import (
     EVENT_ARTICAL
@@ -223,13 +223,13 @@ class PublicAccounts:
         # 发送事件
         self.__eventManager.sendEvent(event)
         print(u'公众号发送新文章\n')
-{% endcodeblock %}
+```
 
 ## main.py
 
 执行总文件。
 
-{% codeblock %}
+```python
 # -*- coding: utf-8 -*-
 from ListenerTypeOne import ListenerTypeOne
 from ListenerTypeTwo import ListenerTypeTwo
@@ -260,4 +260,4 @@ if __name__ == '__main__':
 
     publicAcc = PublicAccounts(ee)
     publicAcc.writeNewArtical()
-{% endcodeblock %}
+```

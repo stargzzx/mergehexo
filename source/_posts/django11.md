@@ -42,7 +42,7 @@ tags:
 
 然后，我们在 apis 应用中的 views 文件夹内，创建了 image.py
 
-{% codeblock %}
+```python
 import os
 from django.http import Http404, HttpResponse, FileResponse
 from backend import settings
@@ -64,11 +64,11 @@ def image(request):
             return Http404()
     elif request.method == 'POST':
         pass
-{% endcodeblock %}
+```
 
 我们继续添加 apis 应用下的 urls.py 的路由
 
-{% codeblock %}
+```python
 from django.urls import path
 
 from .views import weather, menu, image
@@ -79,7 +79,7 @@ urlpatterns = [
     path('menu', menu.get_menu),
     path('image', image.image)
 ]
-{% endcodeblock %}
+```
 
 然后我们通过浏览器访问
 
@@ -95,7 +95,7 @@ urlpatterns = [
 
 我们在 apis 的 image.py 再次添加一个方法
 
-{% codeblock %}
+```python
 def image_text(request):
     if request.method == 'GET':
         md5 = request.GET.get('md5')
@@ -111,7 +111,7 @@ def image_text(request):
             response_data['url'] = '/service/image?md5=%s' % (md5)
             response = utils.response.wrap_json_response(data = response_data)
             return JsonResponse(data=response,safe=False)		
-{% endcodeblock %}
+```
 
 这样我们访问
 

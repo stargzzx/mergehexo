@@ -149,7 +149,7 @@ Ent(青绿) = - (3/6 * log(3/6,2) + 3/6 * log(3/6,2)) = 1.000
 
 ### 创建数据
 
-{% codeblock %}
+```python
 def createData():
     dataSet = [
 
@@ -161,11 +161,11 @@ def createData():
     ]
     labels = ['no surfacing','flippers']
     return dataSet,labels
- {% endcodeblock %}
+```
 
 ### 计算信息熵
 
-{% codeblock %}
+```python
 def calcShannon(dataSet): #计算香农熵（信息熵）
     num     = len(dataSet)
     labels  = {}
@@ -179,13 +179,13 @@ def calcShannon(dataSet): #计算香农熵（信息熵）
         prob     = float(labels[key]) / num
         shannon -= prob * (math.log(prob,2))
     return shannon
-{% endcodeblock %}
+```
 
 ### 分割数据
 
 其目的是比如西瓜的色泽属性，将色泽为青绿的分为一个数据集，乌黑的分为另一个数据集，浅白的分为其他数据集
 
-{% codeblock %}
+```python
  def spiltData(dataset,axis,value): #将同一属性的同一数值划分到同一数据集
     retData = []
     for feat in dataset:
@@ -194,7 +194,7 @@ def calcShannon(dataSet): #计算香农熵（信息熵）
             redData.extend(feat[axis + 1:])
             retData.append(redData)
     return retData
-{% endcodeblock %}
+```
 
 ### 选取最大的信息增益
 
@@ -204,7 +204,7 @@ def calcShannon(dataSet): #计算香农熵（信息熵）
 
 Gain(D,a) = Ent(D) - ∑ (|Dv| / |D| ) * Ent(Dv)
 
-{% codeblock %}
+```python
 def chooseBest(dataSet):
     num        = len(dataSet[0]) - 1  #得到除了标签之外的属性长度
     base       = calcShannon(dataSet) #计算原始信息熵
@@ -228,13 +228,13 @@ def chooseBest(dataSet):
             bestGain    = infoGain
             bestFeature = i
     return bestFeature   
-{% endcodeblock %}
+```
 
 ### 返回出现次数最多的分类名称
 
 选择出现次数最高的标签，如[1,2,1,1] 就返回 1
 
-{% codeblock %}
+```python
 def major(classList):                       #
     classCount = {}
     for vote in classList:
@@ -243,7 +243,7 @@ def major(classList):                       #
         classCount[vote] += 1
     sortClassCount = sorted(classCount.items(),key = operator.itemgetter(1),reverse=True)
     return sortClassCount[0][0]
-{% endcodeblock %}
+```
 
 ### 构建决策树
 
@@ -251,7 +251,7 @@ def major(classList):                       #
 
 [递归](https://benpaodewoniu.github.io/2018/06/11/python13/)
 
-{% codeblock %}
+```python
  def createTree(dataSet,labels):
     classList = [example[-1] for example in dataSet]    #得到标签
     if classList.count(classList[0]) == len(classList): #
@@ -268,20 +268,20 @@ def major(classList):                       #
         subLabels = labels[:]        #复制已经去除最佳标签的数组
         myTree[bestFeatLabel][value] = createTree(spiltData(dataSet,bestFeat,value),subLabels) #对分支标签加上属性值
     return myTree
-{% endcodeblock %}
+```
 
 ### 运行
 
-{% codeblock %}
+```python
 data,labels= createData()
 myTree = createTree(data,labels)
 print(myTree)
-{% endcodeblock %}
+```
 
 ### 结果
 
-{% codeblock %}
+```python
 {'no surfacing': {0: 'no', 1: {'flippers': {0: 'no', 1: 'yes'}}}}
-{% endcodeblock %}
+```
 
 

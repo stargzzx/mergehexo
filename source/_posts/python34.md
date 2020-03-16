@@ -32,7 +32,7 @@ OK，我们下面先上示例图。
 
 ## 按照列存像素信息
 
-{% codeblock %}
+```python
 from PIL import Image
 from PIL import ImageDraw
 data = Image.open('1.jpg')
@@ -46,7 +46,7 @@ for j in range(data.size[1]):
     for i in range(data.size[0]):
         image.putpixel([i,j],tuple(data1[j * data.size[0] + i]))
 image.save('0.jpg')
-{% endcodeblock %}
+```
 
 ## 上面关键内容说明
 
@@ -85,14 +85,14 @@ image.save('0.jpg')
 
 ### 验证猜测
 
-{% codeblock %}
+```python
 from PIL import Image
 from PIL import ImageDraw
 image = Image.new('RGB',size=(50,100))
 draw = ImageDraw.Draw(image)
 draw.line(((0,0),(50,100)),'red',3)
 image.save('a.jpg')
-{% endcodeblock %}
+```
 
 ![](/images/python/34_7.jpg)
 

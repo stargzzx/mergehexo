@@ -16,7 +16,7 @@ pytorch中的torchvision.transforms模块提供了一般的图像转换操作类
 
 首先举一个例子：
 
-{% codeblock %}
+```python
 transforms.Compose([
      transforms.CenterCrop(10),
      transforms.ToTensor(),
@@ -40,7 +40,7 @@ print(img.size)
 croped_img=crop(img)
 print(type(croped_img))
 print(croped_img.size)
-{% endcodeblock %}
+```
 
 输出
 
@@ -71,7 +71,7 @@ print(croped_img.size)
 
 将给定的PIL.Image的所有边用给定的pad value填充。 padding：要填充多少像素 fill：用什么值填充 例子：
 
-{% codeblock %}
+```python
 from torchvision import transforms
 from PIL import Image
 padding_img = transforms.Pad(padding=10, fill=0)
@@ -83,7 +83,7 @@ print(img.size)
 padded_img=padding(img)
 print(type(padded_img))
 print(padded_img.size)
-{% endcodeblock %}
+```
 
 输出
 
@@ -102,12 +102,12 @@ print(padded_img.size)
 
 把一个取值范围是[0,255]的PIL.Image或者shape为(H,W,C)的numpy.ndarray，转换成形状为[C,H,W]，取值范围是[0,1.0]的torch.FloadTensor
 
-{% codeblock %}
+```python
 data = np.random.randint(0, 255, size=300)
 img = data.reshape(10,10,3)
 print(img.shape)
 img_tensor = transforms.ToTensor()(img) # 转换成tensor
-{% endcodeblock %}
+```
 
 ## ToPILImage
 

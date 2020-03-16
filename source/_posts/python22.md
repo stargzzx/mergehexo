@@ -23,7 +23,7 @@ tags:
 
 在查阅了网上很多资料后，主要有两种方法，第一种方法我试了并没有效果，但还是放在下面。
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -38,7 +38,7 @@ fig.canvas.draw()
 # Now we can save it to a numpy array.
 data = np.fromstring(fig.canvas.tostring_rgb(), dtype=np.uint8, sep='')
 data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
-{% endcodeblock %}
+```
 
 思路是用matplotlib库中的canvas方法将其转换，但我在使用中发现出现全白的情况，有可能和前面的HSV处理有关，但始终找不到解决办法，
 
@@ -46,7 +46,7 @@ data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
 
 上代码：
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import pylab
 import imageio
@@ -66,6 +66,6 @@ data = np.asarray(dataPIL)
 cv2.imshow('image', data)
 #释放缓存    
 buffer_.close()
-{% endcodeblock %}
+```
 
 总结，实测方法二效率还是非常高的。这也是目前找到的两种比较靠谱的方法。

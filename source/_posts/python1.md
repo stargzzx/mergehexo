@@ -14,7 +14,7 @@ Here is the tutorial of python's pandas.
 
 ## 基本属性
 
-{% codeblock %}
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -31,11 +31,11 @@ print(s)
 #4    44.0
 #5     1.0
 #dtype: float64
-{% endcodeblock %}
+```
 
 ## 基本操作
 
-{% codeblock %}
+```python
 #索引自定义
 dates = pd.date_range('20180501',periods=6) #从 20180501 开始生成六天
 print(dates)
@@ -116,9 +116,9 @@ print(df.sort_values(by = 'A')) #按照值排序
 #0  1 2018-05-22  foo
 #1  1 2018-05-22  foo
 #2  1 2018-05-22  foo
-{% endcodeblock %}
+```
 ## 选取数据
-{% codeblock %}
+```python
 dates = pd.date_range('20180522',periods=6)
 df    = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C','D'])
 
@@ -176,9 +176,9 @@ print(df[df.A > 8])
 #2018-05-25  12  13  14  15
 #2018-05-26  16  17  18  19
 #2018-05-27  20  21  22  23
-{% endcodeblock %}
+```
 ## 设置值
-{% codeblock %}
+```python
 dates = pd.date_range('20180522',periods=6)
 df    = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C','D'])
 
@@ -210,9 +210,9 @@ print(df)
 #2018-05-25  0  13    14  15 NaN
 #2018-05-26  0  17    18  19 NaN
 #2018-05-27  0  21    22  23 NaN
-{% endcodeblock %}
+```
 ## 处理丢失数据
-{% codeblock %}
+```python
 dates = pd.date_range('20180522',periods=6)
 df    = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates,columns=['A','B','C','D'])
 df.iloc[0,1] = np.nan
@@ -249,18 +249,18 @@ print(df.isnull())
 #2018-05-27  False  False  False  False
 print(np.any(df.isnull()) == True) #判断里面是否有 nan
 #True
-{% endcodeblock %}
+```
 ## 导入导出
-{% codeblock %}
+```python
 #支持导入导出的文件格式
 # csv excel hdf sql json msgpack html gbq stata clipboard pickle
 # csv 也是表格，可以直接用 excel 保存
 data = pd.read_csv('name') #同理，读 hdf 就用 read_hdf()
 data 默认加索引，默认用 0 - N
 data.to_pickle('name.pickle') #保存
-{% endcodeblock %}
+```
 ## 合并concatenating
-{% codeblock %}
+```python
 df1 = pd.DataFrame(np.ones((3,4)) * 0,columns=['A','B','C','D'])
 df2 = pd.DataFrame(np.ones((3,4)) * 1,columns=['A','B','C','D'])
 df3 = pd.DataFrame(np.ones((3,4)) * 2,columns=['A','B','C','D'])
@@ -368,9 +368,9 @@ print(res)
 #1  0.0  0.0  0.0  0.0
 #2  0.0  0.0  0.0  0.0
 #3  1.0  2.0  3.0  4.0
-{% endcodeblock %}
+```
 ## 合并升级 merge
-{% codeblock %}
+```python
 left = pd.DataFrame(
     {
         'key' : ['K0','K1','K2','K3'],
@@ -533,6 +533,6 @@ print(res)
 #0  K0        1         4
 #1  K1        2         5
 #2  K2        3         6
-{% endcodeblock %}
+```
 
 ![](/images/python/1.jpg)

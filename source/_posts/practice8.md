@@ -29,7 +29,7 @@ O(1)
 
 ## 代码
 
-{% codeblock %}
+```python
 def LEFT(i):
     return 2 * i + 1
 
@@ -78,4 +78,4 @@ def isOne(arr):
 arr = [4, 2, 3, 7, 1, 5, 6, 4]
 heapSort(arr)
 isOne(arr)
-{% endcodeblock %}
+```

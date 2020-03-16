@@ -41,7 +41,7 @@ str = ")(" return False
 
 ## 代码
 
-{% codeblock %}
+```python
 def can(arr):
     num = 0
     for i in range(len(arr)):
@@ -56,4 +56,4 @@ def can(arr):
 
 arr = "(()))"
 can(arr)
-{% endcodeblock %}
+```

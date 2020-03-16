@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-{% codeblock %}
+```python
 class A:
 
     def __init__(self):
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     a = A()
     b = B(a)
     b.print_c_index()
-{% endcodeblock %}
+```
 
 最终输出
 

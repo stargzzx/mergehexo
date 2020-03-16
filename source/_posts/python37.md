@@ -33,13 +33,13 @@ python 中含有六种内建序列类：list, tuple, string, unicode, buffer, xr
 	start 是切片起点索引，end 是切片终点索引，但切片结果不包括终点索引的值。step 是步长默认是 1。
 	[start : end : step) 左开右闭
 
-{% codeblock %}
+```python
 li=["A","B","C","D"]
 t=li[0:3]        ["A","B","C"]       #起点的0索引可以省略，t=li[:3]
 t=li[2: ]        ["C","D"]           #省略end，则切到末尾
 t=li[1:3]        ["B","C"]
 t=li[0:4:2]      ["A","C"]			 #从li[0]到li[3],设定步长为2。   
-{% endcodeblock %}
+```
 
 	t=li[0:2]	t=li[0:-2]	t=li[-4:-2]	t=li[-4:2]
 
@@ -129,7 +129,7 @@ list 的切片，内部是调用 __getitem__，__setitem__，__delitem__ 和 sli
 	
 看看代码具体实现
 
-{% codeblock %}
+```python
 def between(beg, end, mid):
 	# 判断mid是否位于begin和end之间
 	return end > mid >= beg or end < mid <= beg
@@ -188,7 +188,7 @@ def set_slice(a, li, beg, end, delta=1):
   	# 用li中的全部元素逐一替换
   	for ind, value in enumerate(li):
    		a[ind * delta + beg] = value
-{% endcodeblock %}
+```
 
 ## numpy
 
@@ -200,7 +200,7 @@ def set_slice(a, li, beg, end, delta=1):
 
 这也意味着，如果不想更改原始数组，我们需要进行显式的复制，从而得到它的副本（.copy())。
 
-{% codeblock %}
+```python
 import numpy as np #导入numpy
 arr = np.arange(10) #类似于list的range()
 	# array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
@@ -215,7 +215,7 @@ arr #可以发现将标量赋值给一个切片时，该值可以传播到整个
 	# array([ 0,  1,  2, 33, 33, 33,  6,  7,  8,  9])
 arr_old
 	# array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-{% endcodeblock %}
+```
 
 ### 二维数组
 

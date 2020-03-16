@@ -27,7 +27,7 @@ tags:
 
 刚接触Python的时候，简单的异常处理已经可以帮助我们解决大多数问题，但是随着逐渐地深入，我们会发现有很多情况下简单的异常处理已经无法解决问题了，如下代码，单纯的打印异常所能提供的信息会非常有限。
 
-{% codeblock %}
+```python
 def func1():
   raise Exception("--func1 exception--")
  
@@ -39,7 +39,7 @@ def main():
  
 if __name__ == '__main__':
   main()
-{% endcodeblock %}
+```
 执行后输出如下
 
 	--func1 exception--
@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
 Python程序的traceback信息均来源于一个叫做traceback object的对象，而这个traceback object通常是通过函数sys.exc_info()来获取的，先来看一个例子：
 
-{% codeblock %}
+```python
 import sys
 def func1():
   raise NameError("--func1 exception--")
@@ -68,7 +68,7 @@ def main():
     print "exc_traceback_obj: %s" % exc_traceback_obj
 if __name__ == '__main__':
   main()
-{% endcodeblock %}
+```
 
 执行后输出如下：
 
@@ -90,7 +90,7 @@ Python的traceback module提供一整套接口用于提取，格式化和打印P
 
 ## print_tb
 
-{% codeblock %}
+```python
 import sys
 import traceback
  
@@ -106,7 +106,7 @@ def main():
  
 if __name__ == '__main__':
   main()
-{% endcodeblock %}
+```
 
 输出：
 
@@ -125,7 +125,7 @@ traceback.print_tb(tb[, limit[, file]])
 	
 ## print_exception
 
-{% codeblock %}
+```python
 import sys
 import traceback
  
@@ -143,7 +143,7 @@ def main():
  
 if __name__ == '__main__':
   main()
-{% endcodeblock %}
+```
 
 输出：
 
@@ -171,7 +171,7 @@ traceback.print_exception(etype, value, tb[, limit[, file]])
 
 print_exc是简化版的print_exception, 由于exception type, value和traceback object都可以通过sys.exc_info()获取，因此print_exc()就自动执行exc_info()来帮助获取这三个参数了，也因此这个函数是我们的程序中最常用的，因为它足够简单
 
-{% codeblock %}
+```python
 import sys
 import traceback
  
@@ -189,7 +189,7 @@ def main():
  
 if __name__ == '__main__':
   main()
-{% endcodeblock %}
+```
 
 输出（由于limit=1，因此只有一个层级被打印出来）：
 
@@ -208,7 +208,7 @@ if __name__ == '__main__':
 
 <br/>
 
-{% codeblock %}
+```python
 import logging
 import sys
 import traceback
@@ -228,7 +228,7 @@ def main():
  
 if __name__ == '__main__':
   main()
-{% endcodeblock %}
+```
 
 从这个例子可以看出有时候我们想得到的是一个字符串，比如我们想通过logger将异常记录在log里，这个时候就需要format_exc了，这个也是最常用的一个函数，它跟print_exc用法相同，只是不直接打印而是返回了字符串。
 
@@ -244,7 +244,7 @@ traceback module中还有一些其它的函数，但因为并不常用，就不�
 
 以下示例来自weidong的博客文章，稍有修改（见参考链接）
 
-{% codeblock %}
+```python
 import threading
 import traceback
  
@@ -292,7 +292,7 @@ try:
   t.join()
 except:
   traceback.print_exc()
-{% endcodeblock %}
+```
 
 输出如下：
 

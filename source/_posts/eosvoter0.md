@@ -81,7 +81,7 @@ tags:
 
 这个访问的 url 调用的是下面的方法
 
-{% codeblock %}
+```python
 @app.route("/eosvoter/v1/vote/statistics", methods=['GET'])
 @login_required
 def vote_statistics():
@@ -94,7 +94,7 @@ def vote_statistics():
     if not ret:
         response = Response.fail(100001, "数据为空", [])
         return jsonify(response.to_json())
-{% endcodeblock %}
+```
 
 但是，返回的为 500。
 
@@ -114,7 +114,7 @@ def vote_statistics():
 
 进入到下面的代码（截取了部分）：
 
-{% codeblock %}
+```python
 代码没有截全，只是部分
 @staticmethod
 def get_vote_statistics_by_bps(bp_name):
@@ -131,7 +131,7 @@ def get_vote_statistics_by_bps(bp_name):
 		all_total_eos = voteItem[2]
 		back_all_total_eos = 0
 		vote_record = vote_obj.get_vote_statistics(voteItem[1], voteItem[0], period)
-{% endcodeblock %}
+```
 
 其中比较重要的是
 
@@ -143,11 +143,11 @@ def get_vote_statistics_by_bps(bp_name):
 
 进入到下面的代码：
 
-{% codeblock %}
+```python
     def get_vote_statistics_by_bp(self, from_bp, period):
         sql = "select from_bp,to_bp,vote_eos,bps,bp_accounts from t_vote_statistics where from_bp = %s and period=%s"
         return self.db.get_all(sql, [from_bp, period])
-{% endcodeblock %}
+```
 
 发现这句话出了带 from_bp 的参数外，还携带 period。
 

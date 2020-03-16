@@ -17,7 +17,7 @@ python 中的模块。
 
 #DB PyMySQL(3 以上版本)
 
-{% codeblock %}
+```python
 DB 模块(只支持 3 以下版本)
 	开始
 	创建connection
@@ -107,6 +107,6 @@ $ pip install PyMySQL
 			conn.commit()
 		异常结束事务（会使上述所有的执行都没有生效）
 			conn.rollback()
-{% endcodeblock %}
+```
 
 ![](/images/python/8_DB.JPG)

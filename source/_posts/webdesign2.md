@@ -19,7 +19,7 @@ tags:
 
 我将文件改成下面的那个了。
 
-{% codeblock %}
+```python
 <?php 
 $st_post_meta = of_get_option('st_article_meta' );
 $number = get_comments_number(get_the_ID()); ?>
@@ -58,7 +58,7 @@ $number = get_comments_number(get_the_ID()); ?>
 
 
 </ul>
-{% endcodeblock %}
+```
 
 
 

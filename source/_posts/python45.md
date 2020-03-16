@@ -76,7 +76,7 @@ tags:
 
 我是公司的集群上，安装 anaconda3 之后，当正确的安装后，我创建环境，报了这个错误：
 
-{% codeblock %}
+```python
  ./conda create -n py3.6 python=3.6
 Collecting package metadata (current_repodata.json): failed
 
@@ -90,7 +90,7 @@ If your current network has https://www.anaconda.com blocked, please file
 a support request with your network engineering team.
 
 ConnectionError(MaxRetryError("SOCKSHTTPSConnectionPool(host='repo.anaconda.com', port=443): Max retries exceeded with url: /pkgs/main/linux-64/current_repodata.json (Caused by NewConnectionError('<urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x7fcfc46e0910>: Failed to establish a new connection: [Errno 111] Connection refused'))"))
-{% endcodeblock %}
+```
 
 下面是解决方案：
 
@@ -127,7 +127,7 @@ ConnectionError(MaxRetryError("SOCKSHTTPSConnectionPool(host='repo.anaconda.com'
 
 出现
 
-{% codeblock %}
+```python
 ./conda create -n py3.6 python=3.6
 Collecting package metadata (repodata.json): failed
 
@@ -141,7 +141,7 @@ If your current network has https://www.anaconda.com blocked, please file
 a support request with your network engineering team.
 
 ConnectionError(MaxRetryError("SOCKSHTTPSConnectionPool(host='repo.anaconda.com', port=443): Max retries exceeded with url: /pkgs/main/linux-64/repodata.json (Caused by NewConnectionError('<urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x7f579443de50>: Failed to establish a new connection: [Errno 111] Connection refused'))"))
-{% endcodeblock %}
+```
 
 问题还没解决，或者说，没有解决全部的问题。
 

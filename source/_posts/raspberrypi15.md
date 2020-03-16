@@ -96,7 +96,7 @@ tags:
 就会出现下面的图。
 ![](/images/raspberry/15_2.png)
 ### 样例代码
-{% codeblock %}
+```python
 
 #include <wiringPi.h> 
 int main(void) 
@@ -110,7 +110,7 @@ int main(void)
 	} 
 }
 
-{% endcodeblock %}
+```
 ### 编译运行
 
 	gcc -Wall -o test test.c -lwiringPi 
@@ -143,7 +143,7 @@ int main(void)
 	sudo make install
 	
 ### 样例代码
-{% codeblock %}
+```python
 
 #include < bcm2835.h> 
 //P1插座第11脚 
@@ -168,7 +168,7 @@ int main(int argc, char **argv)
 	return 0; 
 }
 
-{% endcodeblock %}
+```
 ### 编译运行
 
 	编译运行

@@ -19,8 +19,8 @@ tags:
 
 比较好的方法就是，让大中小各组成三个链，然后一点点的组合，最终串联。
 
-{% codeblock %}
+```python
 
 
 
-{% endcodeblock %}
+```

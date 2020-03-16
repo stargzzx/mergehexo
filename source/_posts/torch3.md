@@ -23,7 +23,7 @@ pytorch读取训练集是非常便捷的，只需要使用到2个类：
 
 You should build your custom dataset as below.
 
-{% codeblock %}
+```python
 class CustomDataset(torch.utils.data.Dataset):
     def __init__(self):
         # TODO
@@ -38,16 +38,16 @@ class CustomDataset(torch.utils.data.Dataset):
     def __len__(self):
         # You should change 0 to the total size of your dataset.
         return 0 
-{% endcodeblock %}
+```
 
 You can then use the prebuilt data loader. 
 
-{% codeblock %}
+```python
 custom_dataset = CustomDataset()
 train_loader = torch.utils.data.DataLoader(dataset=custom_dataset,
                                            batch_size=64, 
                                            shuffle=True)
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -65,7 +65,7 @@ train_loader = torch.utils.data.DataLoader(dataset=custom_dataset,
 
 首先要继承torch.utils.data.Dataset类，完成图像及标签的读取。
 
-{% codeblock %}
+```python
 import os
 import torch
 import torch.utils.data as data
@@ -108,7 +108,7 @@ class myImageFloder(data.Dataset):
     
     def getName(self):
         return self.classes
-{% endcodeblock %}
+```
 
 关于 transform ，你可以看我的另一篇博客
 
@@ -116,7 +116,7 @@ class myImageFloder(data.Dataset):
 
 ## 实例化torch.utils.data.DataLoader
 
-{% codeblock %}
+```python
 mytransform = transforms.Compose([
     transforms.ToTensor()
     ]
@@ -137,7 +137,7 @@ for i, data in enumerate(imgLoader, 0):
     cv2.imshow('img2', img2)
     cv2.waitKey()
     break
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -149,7 +149,7 @@ for i, data in enumerate(imgLoader, 0):
 
 下面以cifar10为例：
 
-{% codeblock %}
+```python
 import torch
 import torchvision
 from PIL import Image
@@ -161,11 +161,11 @@ print (img)
 print (label)
 print (img.format, img.size, img.mode)
 img.show()
-{% endcodeblock %}
+```
 
 ## 实例化torch.utils.data.DataLoader
 
-{% codeblock %}
+```python
 mytransform = transforms.Compose([
     transforms.ToTensor()
     ]
@@ -174,16 +174,16 @@ mytransform = transforms.Compose([
 # torch.utils.data.DataLoader
 cifarSet = torchvision.datasets.CIFAR10(root = "../data/cifar/", train= True, download = True, transform = mytransform )
 cifarLoader = torch.utils.data.DataLoader(cifarSet, batch_size= 10, shuffle= False, num_workers= 2)
-{% endcodeblock %}
+```
 
 下面就可以进行读取数据的显示，以进行简单测试是否读取成功：
 
-{% codeblock %}
+```python
 for i, data in enumerate(cifarLoader, 0):
     print(data[i][0])
     # PIL
     img = transforms.ToPILImage()(data[i][0])
     img.show()
     break
-{% endcodeblock %}
+```
 

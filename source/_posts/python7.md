@@ -20,28 +20,28 @@ Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境�
 
 ## 1 运行
 
-{% codeblock %}
+```python
 pip install virtualenvwrapper
-{% endcodeblock %}
+```
 
 ## 2 创建目录
 
 用来存放虚拟环境(只是创建一个普通的目录)
 
-{% codeblock %}
+```python
 mkdir 。。。
-{% endcodeblock %}
+```
 
 ## 3 在环境变量中添加路径 
 
-{% codeblock %}
+```python
 WORKON_HOME=~/.virtualenvs
 
 source /usr/local/bin/virtualenvwrapper.sh
 	比如我的是：WORKON_HOME  =  D:\virtualenv
 		意味着，以后我所创建的虚拟环境都需要放在这个目录下，放在别的地方不行。			
 			另外，我在其他目录创建虚拟环境，剪切到这个目录也是可以workon的
-{% endcodeblock %}
+```
 
 ## 4 运行： 
 
@@ -49,13 +49,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 需要使用
 
-{% codeblock %}	
+```python
 mkvirtualenv  创建
-{% endcodeblock %}
+```
 
 ## 命令列表
 
-{% codeblock %}	
+```python
 workon:列出虚拟环境列表
 	
 lsvirtualenv:同上
@@ -71,7 +71,7 @@ workon [虚拟环境名称]:切换虚拟环境
 			删除之前要到要删除虚拟环境的目录下把文件都事先删除
 
 	deactivate: 离开虚拟环境
-{% endcodeblock %}
+```
 
 ## 注意点
 
@@ -79,6 +79,6 @@ workon [虚拟环境名称]:切换虚拟环境
 
 安装第三方可以用豆瓣源
 
-{% codeblock %}	
+```python
 pip install -i http://pypi.douban.com/simple/ saltTesting
-{% endcodeblock %}
+```

@@ -82,7 +82,7 @@ tags:
 
 <br/>
 
-{% codeblock %}
+```python
 import torch
 import numpy as np
 
@@ -97,7 +97,7 @@ print(np_data, '\n', torch_data, '\n', tensor2array)
         	[3, 4, 5]]) 
 	 [[0 1 2]
  	[3 4 5]]
-{% endcodeblock %}
+```
 
 
 

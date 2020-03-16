@@ -19,7 +19,7 @@ python 中 re 模块。
 
 [正则表达式](https://benpaodewoniu.github.io/2018/06/13/basis4/)
 
-{% codeblock %}
+```python
 import re ： python正则表达式模块
 一次性函数：
 re.search(pattern,string,flags = 0) 返回match对象
@@ -71,4 +71,4 @@ match对象用法
 		start（） 匹配字符串在原始字符串的开始位置
 		end（）	匹配字符串在原始字符串的结束位置
 		span（） 返回（start（），end（））
-{% endcodeblock %}
+```

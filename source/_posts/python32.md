@@ -27,13 +27,13 @@ tags:
 
 ### 命令行中的 hello world
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.parse_args()
 	# 这个时候我们并没有输入参数的请求
 	# 但是我们依然可以输入一个默认的参数，及 -h
-{% endcodeblock %}
+```
 
 cmd 中输入 python test.py -h
 
@@ -45,13 +45,13 @@ cmd 中输入 python test.py -h
 
 ### 指定参数
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("echo")
 args = parser.parse_args()
 print(args.echo)
-{% endcodeblock %}
+```
 
 输出
 
@@ -59,13 +59,13 @@ print(args.echo)
 	
 ### 对设置的参数进行详细的说明
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("echo", help="echo the string you use here")
 args = parser.parse_args()
 print(args.echo)
-{% endcodeblock %}
+```
 
 输入
  
@@ -87,24 +87,24 @@ cmd 中显示：
 
 第一种是获得参数后在参数内部进行转化
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("square", help="display a square of a given number")
 args = parser.parse_args()
 print int(args.square)**2
-{% endcodeblock %}
+```
 
 第二种是在add_argument()方法中用关键字type指定输入类型，即可解决
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("square", help="display a square of a given number", type=int)
 args = parser.parse_args()
 print(args.square ** 2)
 	# 15129
-{% endcodeblock %}
+```
 
 ### 可选参数
 
@@ -112,14 +112,14 @@ print(args.square ** 2)
 
 如果程序运行时要赋值可选参数，必须先指定该可选参数
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--verbosity", help="increase output verbosity")
 args = parser.parse_args()
 if args.verbosity:
 	print ("verbosity turned on")
-{% endcodeblock %}
+```
 
 输入
 
@@ -135,14 +135,14 @@ if args.verbosity:
 
 默认可选参数会被赋值为str，而在实际情况中，很多时候，可选参数是作为一个标识而不是一个确切的值，仅需要确定是true或false即可，可以指定关键字action，赋值为"store_true"
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--verbosity", help="increase output verbosity", action="store_true")
 args = parser.parse_args()
 if args.verbosity:
 	print("verbosity turned on")
-{% endcodeblock %}
+```
 
 输入
 
@@ -153,14 +153,14 @@ if args.verbosity:
 
 ### 增加快捷方式
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("-v", "--verbose", help="increase verbosity", action="store_true")
 args = parser.parse_args()
 if args.verbose:
 	print("verbosity turned on")
-{% endcodeblock %}
+```
 
 输入
 
@@ -169,7 +169,7 @@ if args.verbose:
 		
 ### 结合使用位置参数和可选参数
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("square", type=int, help="display a square of a given number")
@@ -180,7 +180,7 @@ if args.verbose:
 	print( "the square of {} equals {}".format(args.square, answer))
 else:
 	print (answer)
-{% endcodeblock %}
+```
 
 注意，参数顺序没有关系
 
@@ -191,7 +191,7 @@ else:
 	python test.py  4
 		# 16
 		
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("square", type=int, help="display a square of a given number")
@@ -204,7 +204,7 @@ elif args.verbosity == 1:
 	print("{}^2 == {}".format(args.square, answer))
 else:
 	print(answer)
-{% endcodeblock %}
+```
 
 输入
 
@@ -218,7 +218,7 @@ else:
 
 ### action 属性的运用
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("square", type=int, help="display a square of a given number")
@@ -233,7 +233,7 @@ elif args.verbosity == 3:
     print("test")
 else:
 	print(answer)
-{% endcodeblock %}
+```
 
 这个 count 的作用是，额，还是通过例子来说明吧
 
@@ -258,7 +258,7 @@ else:
 	
 ### 多个位置参数
 
-{% codeblock %}
+```python
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("x", type=int, help="the base")
@@ -272,7 +272,7 @@ elif args.verbosity >= 1:
 	print ("{}^{} == {}".format(args.x, args.y, answer))
 else:
 	print (answer)
-{% endcodeblock %}
+```
 
 输入
 
@@ -283,7 +283,7 @@ else:
 
 下面来一个官方源码，供大家参考
 
-{% codeblock %}
+```python
 if __name__ == '__main__':
     script_start_time = time.time()
  
@@ -313,6 +313,6 @@ if __name__ == '__main__':
             args['mean'], args['labels'], not args['nogpu'])
  
     print 'Script took %s seconds.' % (time.time() - script_start_time,)
-{% endcodeblock %}
+```
 
 

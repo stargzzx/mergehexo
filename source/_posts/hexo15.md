@@ -113,7 +113,7 @@ hexo g 是为了加载配置。
 
 ## 流程图示例
 
-{% codeblock %}
+```python
 ```mermaid
 graph TB
 	start(开始)-->inputA[输入用户名密码]
@@ -125,7 +125,7 @@ graph TB
 	conditionB--no-->inputA
 	opB-->en(登录)
 ```
-{% endcodeblock %}
+```
 
 ```mermaid
 graph TB
@@ -141,7 +141,7 @@ graph TB
 
 ## 时序图示例
 
-{% codeblock %}
+```python
 ```mermaid
 sequenceDiagram
 	participant Client
@@ -155,7 +155,7 @@ sequenceDiagram
 	Client->Server:ACK=y+1
 	Note right of Server:ESTABLISHED
 ```
-{% endcodeblock %}
+```
 
 
 

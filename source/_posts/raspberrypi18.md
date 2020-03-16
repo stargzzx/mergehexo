@@ -55,14 +55,14 @@ ADS1115 的地址可以通过 ADDR 与SDA、SCL、GND 或 VDD 短接，实现修
 
 下面的代码就是用地址来区分 ADS1115 的。
 
-{% codeblock %}
+```python
 adc1 = Adafruit_ADS1x15.ADS1115(address=0x48)
 adc2 = Adafruit_ADS1x15.ADS1115(address=0x49)
-{% endcodeblock %}
+```
 
 完整代码如下
 
-{% codeblock %}
+```python
 # Simple demo of reading the difference between channel 1 and 0 on an ADS1x15 ADC.
 # Author: Tony DiCola
 # License: Public Domain
@@ -112,7 +112,7 @@ while True:
 	print('| {0:>6} | {1:>6} | {2:>6} | {3:>6} | {4:>6} | {5:>6} | {6:>6} | {7:>6} |'.format(*values))
     # Pause for half a second.
 	time.sleep(0.5)
-{% endcodeblock %}
+```
 
 
 

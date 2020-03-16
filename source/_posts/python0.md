@@ -15,7 +15,7 @@ Here is the tutorial of python's numpy.
 
 ## 基本用法
 
-{% codeblock %}
+```python
 import numpy as np
 
 # np 的矩阵都是从 0 开始的
@@ -44,11 +44,11 @@ print("type:",array.dtype)
 a = np.zeros((3,4)) #定义为 3 行 4 列
 b = np.ones((3,4))
 c = np.empty((3,4)) #定义一个空矩阵 实际上很接近于零
-{% endcodeblock %}
+```
 
 ## 对数组的处理
 
-{% codeblock %}
+```python
 a = np.arange(10,20,2)
 print(a) #[10 12 14 16 18] 起始位置 步长 用来生成 数组
 
@@ -64,7 +64,7 @@ print(a.flatten()) #将矩阵变成单个的数 [ 0  1  2  3  4  5  6  7  8  9 1
 #生成线段
 a = np.linspace(1,10,4)
 print(a) #[ 1.  4.  7. 10.] 从 1 到 10 生成 4 段的数列
-{% endcodeblock %}
+```
 
 ## 基本属性
 
@@ -75,15 +75,15 @@ print(a) #[ 1.  4.  7. 10.] 从 1 到 10 生成 4 段的数列
 	a.shape  #返回具体的维度
 	print a.itemsize  #每个元素所占的字节数
 	
-{% codeblock %}
+```python
 b = np.arange(1,10)
 print(b.dtype)
 	# int32
-{% endcodeblock %}
+```
 
 ## numpy 的基本运算
 
-{% codeblock %}
+```python
 a = np.array([10,9,8])
 b = np.arange(3)
 
@@ -174,11 +174,11 @@ print(np.clip(a,5,9)) #在矩阵中凡是小于 5 的都等于 5 凡是 大于 9
 a = np.array([1,1,1])
 print(a.T) #对于 单行矩阵是没办法将其变为向量的
 print(a.reshape((1,3))) #可以这样
-{% endcodeblock %}
+```
 
 ## 通过索引找元素
 
-{% codeblock %}
+```python
 a = np.arange(3,15).reshape((3,4))
 print(a[2]) #[11 12 13 14]
 print(a[2,1])  #12 索引具体数
@@ -197,11 +197,11 @@ for column in a.T:
 #[ 6 10 14]
 for item in a.flat: #和a.flatten() 不同 a.flat 返回的是迭代器
     print(item) #输出每一个元素
-{% endcodeblock %}
+```
 
 ## 合并
 
-{% codeblock %}
+```python
 a = np.array([1,1,1])
 b = np.array([2,2,2])
 print(np.vstack((a,b))) # 向下合并
@@ -210,13 +210,13 @@ print(np.vstack((a,b))) # 向下合并
 print(np.hstack((a,b))) # 横向合并
 #[1 1 1 2 2 2]
 print(np.vstack((a,a,b))) #多个合并
-{% endcodeblock %}
+```
 
 ## 分割
 
 numpy 的分割和 python 自带的切片不一样。
 
-{% codeblock %}
+```python
 a = np.arange(12).reshape((3,4))
 print(np.split(a,2,axis=1)) #将矩阵 a 按照行分割成 2 个片段
 #[array([[0, 1],
@@ -249,7 +249,7 @@ b = a.copy()
 a[0] = 2
 print(a) #[2 1 1]
 print(b) #[1 1 1]
-{% endcodeblock %}
+```
 
 ## 小技巧
 
@@ -257,15 +257,15 @@ print(b) #[1 1 1]
 
 在 python 中下面的句子是不成立的。
 
-{% codeblock %}
+```python
 a = [0 , 1]
 b = [True,False]
 print(a[b])
-{% endcodeblock %}
+```
 
 但是在 numpy 中这种语句是成立的，比如
 
-{% codeblock %}
+```python
 import numpy as np
 points = np.arange(1,11,step=1)
 cross_points = np.random.randint(0, 2, size=10).astype(np.bool)
@@ -275,13 +275,13 @@ print(cross_points)
 	# [ True  True False False  True  True  True  True False False]
 print(points[cross_points])
 	# [1 2 5 6 7 8]
-{% endcodeblock %}
+```
 
 在 numpy 中，我们可以看到，第一它们的数据类型并不是列表，也就是没有逗号，第二，他们都是 numpy 的数据类型。
 
 这一点技巧很重要，因为它可以直接换取局部数值。
 
-{% codeblock %}
+```python
 import numpy as np
 points = np.arange(1,11,step=1)
 cross_points = np.random.randint(0, 2, size=10).astype(np.bool)
@@ -297,7 +297,7 @@ print(random_i)
 points[cross_points] = random_i[cross_points]
 print(points)
 	# [1 2 4 7 1 6 7 8 8 2]	
-{% endcodeblock %}
+```
 
 上面的小技巧交给我们如何直接局部值。非常重要，装逼必备。
 
@@ -305,7 +305,7 @@ print(points)
 
 我们知道用 numpy 创造的数据是矩阵，而矩阵的特性是和 python 的那些数据类型不一样的，比如，它可以直接比较，如下面的装逼必备代码。
 
-{% codeblock %}
+```python
 import numpy as np
 a = np.arange(1,10)
 b = a.copy()
@@ -315,11 +315,11 @@ print(a == b)
 	# [False  True  True  True False  True  True  True  True]
 print((a == b).sum(axis=0))
 	# 7
-{% endcodeblock %}
+```
 
 ### 3 取反
 
-{% codeblock %}
+```python
 import numpy as np
 a = np.arange(1,11)
 b = np.random.randint(0,2,size=10).astype(np.bool)
@@ -327,16 +327,16 @@ print(b)
 	# [False False False False False  True False  True False False]
 print(~b)
 	# [ True  True  True  True  True False  True False  True  True]
-{% endcodeblock %}
+```
 
 ### 4 直接改变 list 元素
 
-{% codeblock %}
+```python
 v = np.array([1,2,3,4])
 v[v > 2] = 3
 print(v)
 	# [1,2,3,3]
-{% endcodeblock %}
+```
 
 ## numpy 支持的数据类型
 

@@ -15,16 +15,16 @@ tags:
 
 ## TypeError: only size-1 arrays can be converted to Python scalars
 
-{% codeblock %} 
+```python
 import numpy as np
 import math
 data = np.mat(np.array([[1],[2],[3]]))
 print(math.exp(data)) 
-{% endcodeblock %}
+```
 
 因为 math.exp() 只能对单一数据做处理，而不能对矩阵做处理，所以可以改为：
 
-{% codeblock %} 
+```python
 import numpy as np
 import math
 data = np.mat(np.array([[1],[2],[3]]))
@@ -34,4 +34,4 @@ print(data)
 		[ 7.3890561 ]
 		[20.08553692]]
 	# 最后面的那个 T，是为了转置成为向量
-{% endcodeblock %}
+```

@@ -28,7 +28,7 @@ Python中的多进程是通过multiprocessing包来实现的，和多线程的th
 
 <br/>
 
-{% codeblock %}
+```python
 from multiprocessing import  Process
 
 def fun1(name):
@@ -45,7 +45,7 @@ if __name__ == '__main__':
         p.join()
 
     print('结束测试')
-{% endcodeblock %}
+```
 
 结果
 
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
 还记得python多线程的第二种实现方法吗?是通过类继承的方法来实现的，python多进程的第二种实现方式也是一样的
 
-{% codeblock %}
+```python
 from multiprocessing import  Process
 
 class MyProcess(Process): #继承Process类
@@ -89,7 +89,7 @@ if __name__ == '__main__':
         p.join()
 
     print('结束测试')
-{% endcodeblock %}
+```
 
 结果
 
@@ -144,7 +144,7 @@ if __name__ == '__main__':
 
 Queue在多线程中也说到过，在生成者消费者模式中使用，是线程安全的，是生产者和消费者中间的数据管道，那在python多进程中，它其实就是进程之间的数据管道，实现进程通信。
 
-{% codeblock %}
+```python
 from multiprocessing import Process,Queue
 
 
@@ -169,7 +169,7 @@ if __name__ == '__main__':
     print(q.get())
     print(q.get())
     print('结束测试')
-{% endcodeblock %}
+```
 
 结果
 
@@ -188,7 +188,7 @@ if __name__ == '__main__':
 
 管道Pipe和Queue的作用大致差不多，也是实现进程间的通信，下面之间看怎么使用吧
 
-{% codeblock %}
+```python
 from multiprocessing import Process, Pipe
 def fun1(conn):
     print('子进程发送消息：')
@@ -207,7 +207,7 @@ if __name__ == '__main__':
     conn1.send("你好子进程")
     p.join()
     print('结束测试')
-{% endcodeblock %}
+```
 
 结果
 
@@ -225,7 +225,7 @@ if __name__ == '__main__':
 
 Queue和Pipe只是实现了数据交互，并没实现数据共享，即一个进程去更改另一个进程的数据。那么久要用到Managers
 
-{% codeblock %}
+```python
 from multiprocessing import Process, Manager
 
 def fun1(dic,lis,index):
@@ -250,7 +250,7 @@ if __name__ == '__main__':
             res.join()
         print(dic)
         print(l)
-{% endcodeblock %}
+```
 
 结果：
 
@@ -273,7 +273,7 @@ apply：同步，一般不使用
 
 apply_async：异步
 
-{% codeblock %}
+```python
 from  multiprocessing import Process,Pool
 import os, time, random
 
@@ -293,7 +293,7 @@ if __name__=='__main__':
     pool.close()
     pool.join()
     print('结束测试')
-{% endcodeblock %}
+```
 
 结果
 
@@ -325,7 +325,7 @@ if __name__=='__main__':
 
 因为网上看到这个例子觉得不错，所以这里就不自己写案例，这个案例比较有说服力
 
-{% codeblock %}
+```python
 import os 
 import PIL 
 
@@ -358,7 +358,7 @@ if __name__ == \'__main__\':
     pool.map(creat_thumbnail, images) #关键点，images是一个可迭代对象
     pool.close()
     pool.join()
-{% endcodeblock %}
+```
 
 上边这段代码的主要工作就是将遍历传入的文件夹中的图片文件，一一生成缩略图，并将这些缩略图保存到特定文件夹中。这我的机器上，用这一程序处理 6000 张图片需要花费 27.9 秒。 map 函数并不支持手动线程管理，反而使得相关的 debug 工作也变得异常简单。
 

@@ -157,13 +157,13 @@ Fiddler可以抓取支持http代理的任意程序的数据包，如果要抓取
 
 在fiddler菜单栏，点击Rules->Customize Rules，用Ctrl+F查找OnBeforeRequest方法添加一行代码
 
-{% codeblock %}
+```python
 if (oSession.host.toLowerCase() == "webserver:8888") 
 {
         oSession.host = "webserver:80";
 
 }
-{% endcodeblock %}
+```
 
 ![](/images/spider/2_17.png)
 

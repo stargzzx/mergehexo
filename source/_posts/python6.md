@@ -22,19 +22,19 @@ pyhon有很多版本，如果想要同时用 2 和 3 就需要版本控制器。
 virtualenv创建一个拥有自己安装目录的环境, 这个环境不与其他虚拟环境共享库, 能够方便的管理python版本和管理python库
 
 ## 1.安装Virtualenv	
-{% codeblock %}	
+```python
 	pip install virtualenv
-{% endcodeblock %}
+```
 
 ## 2. virtualenv基本使用
 
-{% codeblock %}	
+```python
 构造项目目录
 命令行转移到相应的项目目录
 创建：virtualenv env(可指定版本号 virtualenv -h可以查看帮助)
 激活：.\env\Scripts\activate.bat
 默认情况下，virtualenv已经安装好了pip。在启动虚拟环境后直接使用pip install 命令就可以为该虚拟环境安装类库
     （上述安装时应注意，应该事先进入虚拟环境在进行安装）
-{% endcodeblock %}
+```
 
 但是每次进入虚拟环境都需要运行相应目录下的activate.bat，所以我们需要安装Virtualenvwrapper

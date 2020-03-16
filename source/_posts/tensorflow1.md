@@ -22,14 +22,14 @@ tf.get_collection(‘list_name’)：返回名称为list_name的列表
 
 tf.add_n(list)：将列表元素相加并返回
 
-{% codeblock %}
+```python
 import tensorflow as tf
 tf.add_to_collection('losses', tf.constant(2.2))
 tf.add_to_collection('losses', tf.constant(3.))
 with tf.Session() as sess:
     print(sess.run(tf.get_collection('losses')))
     print(sess.run(tf.add_n(tf.get_collection('losses'))
-{% endcodeblock %}
+```
 
 	结果：
 	[2.2, 3.0] 
@@ -49,7 +49,7 @@ with tf.Session() as sess:
 
 ## exp()
 
-{% codeblock %}
+```python
 import tensorflow as tf
 x = tf.constant([[1.0,2.0],[5.0,3.0]])
 x_2 = tf.exp(x)
@@ -59,7 +59,7 @@ with tf.Session() as sess:
 		# [[  2.7182817   7.389056 ]
 		# [148.41316    20.085537 ]]
 
-{% endcodeblock %}
+```
 
 # G
 ## get_variable
@@ -75,7 +75,7 @@ tf.get_variable(name,  shape, initializer)[当然还有更多的参数选项]: n
 	tf.ones_initializer：全是1
 	tf.uniform_unit_scaling_initializer：满足均匀分布，但不影响输出数量级的随机值
 
-{% codeblock %}
+```python
 
 import tensorflow as tf;  
 import numpy as np;  
@@ -97,12 +97,12 @@ with tf.Session() as sess:
 		[[ 1.  1.  1.]
 		[ 1.  1.  1.]]
 		
-{% endcodeblock %}
+```
 注意：不同的变量之间不能有相同的名字，除非你定义了variable_scope，这样才可以有相同的名字。
 # M
 ## matmul
 这是矩阵的相乘，相当于 numpy 的 dot 
-{% codeblock %}
+```python
 
 import tensorflow as tf
 matrix1 = tf.constant([[3,3]])
@@ -113,7 +113,7 @@ with tf.Session() as sess:
 print(result)
 	# [[12]]
 
-{% endcodeblock %}
+```
 
 
 
@@ -121,7 +121,7 @@ print(result)
 # N
 ## newaxis
 np.newaxis的功能是插入新维度，看下面的例子：
-{% codeblock %}
+```python
 
 a=np.array([1,2,3,4,5])
 b=a[np.newaxis,:]
@@ -132,8 +132,8 @@ print a
 print b
 	# [[1 2 3 4 5]]
 
-{% endcodeblock %}
-{% codeblock %}
+```
+```python
 
 a=np.array([1,2,3,4,5])
 b=a[:,np.newaxis]
@@ -146,7 +146,7 @@ print b
 	#	[3]
 	#	[4]
 	#	[5]]
-{% endcodeblock %}
+```
 可以看出np.newaxis分别是在行或列上增加维度，原来是（6，）的数组，在行上增加维度变成（1,6）的二维数组，在列上增加维度变为(6,1)的二维数组
 
 
@@ -167,7 +167,7 @@ init = tf.initialize_all_variables()
 # P
 ## placeholder()
 这个函数相当于一个占位符，在 sess.run() 的时候通过 feed_dict 的方式，以键值对的方式传入参数
-{% codeblock %}
+```python
 
 import tensorflow as tf
 # 使用 placeholder 的时候，要给类型
@@ -182,7 +182,7 @@ with tf.Session() as sess:
     print(sess.run(output,feed_dict={input1:[7.],input3:[8.]}))
         # [56.]
 
-{% endcodeblock %}
+```
 
 
 
@@ -196,7 +196,7 @@ with tf.Session() as sess:
 	第四个参数name： 操作的名称;
 	第五个参数 reduction_indices：在以前版本中用来指定轴，已弃用;
 	
-{% codeblock %}
+```python
 
 import tensorflow as tf
  
@@ -221,7 +221,7 @@ print m_a    # output: [[ 2.]]
 print m_0    # output: [[ 1.  2.  3.]]
 print m_1    #output:  [[ 2.], [ 2.]]
 
-{% endcodeblock %}
+```
 ## reduce_sum()
 
 	reduce_sum(
@@ -247,7 +247,7 @@ tf.square(x, name=None)
 ## trainable_variables()
 tf.trainable_variables返回的是需要训练的变量列表
 tf.all_variables返回的是所有变量的列表
-{% codeblock %}
+```python
 
 import tensorflow as tf;  
 import numpy as np;  
@@ -263,7 +263,7 @@ for ele1 in tf.trainable_variables():
 for ele2 in tf.all_variables():
 	print ele2.name
 
-{% endcodeblock %}
+```
 
 	输出：
 	v:0
@@ -277,7 +277,7 @@ for ele2 in tf.all_variables():
 # V
 ## Variable()
 tensorflow 就好像 java 一样，变量必须声明之后才是变量，如果不声明就不是 tensorflow 变量。。。
-{% codeblock %}
+```python
 
 import tensorflow as tf
 # 给变量赋予名字
@@ -300,7 +300,7 @@ with tf.Session() as sess:
             # 2
             # 3
 			
-{% endcodeblock %}
+```
 ## variable_scope
 [tensorflow: name_scope 和 variable_scope区别及理解](https://blog.csdn.net/u012609509/article/details/80045529)
 [tensorflow里面name_scope, variable_scope等如何理解？](https://www.zhihu.com/question/54513728)
@@ -308,7 +308,7 @@ with tf.Session() as sess:
 之所以会出现这两种类型的scope，主要是后者（variable scope）为了实现tensorflow中的变量共享机制：即为了使得在代码的任何部分可以使用某一个已经创建的变量，TF引入了变量共享机制，使得可以轻松的共享变量，而不用传一个变量的引用。具体解释如下：
 ### tensorflow中创建variable的2种方式：
 tf.Variable()：只要使用该函数，一律创建新的variable，如果出现重名，变量名后面会自动加上后缀1，2….
-{% codeblock %}
+```python
 
 import tensorflow as tf
 
@@ -324,13 +324,13 @@ print(var_3.name)
 	cltdevelop/var_1_1:0
 	cltdevelop/var_1_2:0
 			
-{% endcodeblock %}
+```
 tf.get_variable()：如果变量存在，则使用以前创建的变量，如果不存在，则新创建一个变量。
 ### tensorflow中的两种作用域
 命名域(name scope)：通过tf.name_scope()来实现；
 变量域（variable scope）：通过tf.variable_scope()来实现；可以通过设置reuse 标志以及初始化方式来影响域下的变量。 
 这两种作用域都会给tf.Variable()创建的变量加上词头，而tf.name_scope对tf.get_variable()创建的变量没有词头影响，代码如下：
-{% codeblock %}
+```python
 
 import tensorflow as tf
 
@@ -351,10 +351,10 @@ print(var_4.name)
 	aaa/var_3:0
 	aaa/var_4:0
 			
-{% endcodeblock %}
+```
 ### tensorflow中变量共享机制的实现
 在tensorflow中变量共享机制是通过tf.get_variable()和tf.variable_scope()两者搭配使用来实现的。如下代码所示：
-{% codeblock %}
+```python
 
 import tensorflow as tf
 
@@ -369,22 +369,22 @@ print(var_2.name)
 	cltdevelop/var_1:0
 	cltdevelop/var_1:0
 
-{% endcodeblock %}
+```
 [注：]当 reuse 设置为 True 或者 tf.AUTO_REUSE 时，表示这个scope下的变量是重用的或者共享的，也说明这个变量以前就已经创建好了。但如果这个变量以前没有被创建过，则在tf.variable_scope下调用tf.get_variable创建这个变量会报错。如下：
-{% codeblock %}
+```python
 
 import tensorflow as tf
 
 with tf.variable_scope('cltdevelop', reuse=True):
     var_1 = tf.get_variable('var_1', shape=[1, ])
 
-{% endcodeblock %}
+```
 则上述代码会报错
 
 	ValueErrorL Variable cltdevelop/v1 doesnot exist, or was not created with tf.get_variable()
 	
 如果使用tf.get_variable()创建变量，且没有设置共享变量，重名时会报错
-{% codeblock %}
+```python
 
 import tensorflow as tf
 
@@ -400,9 +400,9 @@ with tf.Session() as sess:
 # to set reuse=True in VarScope? Originally defined at:
 # var1 = tf.get_variable(name='var1', shape=[1], dtype=tf.float32)
 
-{% endcodeblock %}
+```
 所以要共享变量，需要使用tf.variable_scope()
-{% codeblock %}
+```python
 
 import tensorflow as tf
 
@@ -425,9 +425,9 @@ with tf.Session() as sess:
 # variable_scope_y/var2:0 [ 2.]
 # variable_scope_y/var2_1:0 [ 2.]
 
-{% endcodeblock %}
+```
 也可以这样
-{% codeblock %}
+```python
 
 with tf.variable_scope('foo') as foo_scope:
     v = tf.get_variable('v', [1])
@@ -435,9 +435,9 @@ with tf.variable_scope('foo', reuse=True):
     v1 = tf.get_variable('v')
 assert v1 == v
 
-{% endcodeblock %}
+```
 或者这样：
-{% codeblock %}
+```python
 
 with tf.variable_scope('foo') as foo_scope:
     v = tf.get_variable('v', [1])
@@ -445,7 +445,7 @@ with tf.variable_scope(foo_scope, reuse=True):
     v1 = tf.get_variable('v')
 assert v1 == v
 
-{% endcodeblock %}
+```
 
 
 

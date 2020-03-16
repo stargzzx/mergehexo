@@ -29,7 +29,7 @@ tags:
 
 暂时还没有写好，有点BUG
 
-{% codeblock %}
+```python
 def max_len(arr):
 	i = 0
 	l = []
@@ -46,14 +46,14 @@ def max_len(arr):
 		tmp[i] = arr[j]	
 		l.append(i + 1)
 	return l
-{% endcodeblock %}
+```
 
 ## 测试
 
-{% codeblock %}
+```python
 b = [1,2,3,4,5,6]
 print(max_len(b))
-{% endcodeblock %}
+```
 
 
 

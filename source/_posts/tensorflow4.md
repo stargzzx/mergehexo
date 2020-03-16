@@ -23,25 +23,25 @@ tags:
 
 ![](/images/tensorflow/2_0.JPG)
 
-{% codeblock %}
+```python
 loss = tf.reduce_mean(tf.square(y_ - y))
-{% endcodeblock %}
+```
 
 ## 训练方法
 
 以减小 loss 值为优化目标
 
-{% codeblock %}
+```python
 train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
 train_step = tf.train.MomentumOptimizer(learning_rate,momentum).minimize(loss)
 train_step = tf.train.AdamOptimizer(learning_rate).minimize(loss)
-{% endcodeblock %}
+```
 
 ## 学习率
 
 决定参数每次更新的幅度
 
-{% codeblock %}
+```python
 # 导入模块，生成模拟数据集
 import tensorflow as tf
 import numpy as np
@@ -112,7 +112,7 @@ with tf.Session() as sess:
 	# [[-0.06024267]
 	# [ 0.91956186]
 	# [-0.0682071 ]]
-{% endcodeblock %}
+```
 
 ## 神经网络八股
 

@@ -33,7 +33,7 @@ tags:
 
 下面代码只是实现了 getMin 的辅助数据，其他的方法就不实现了。
 
-{% codeblock %}
+```python
 data = [5,4,1,2]
 stack1 = [None for k in range(len(data))]
 stack2 = [None for k in range(len(data))]
@@ -54,4 +54,4 @@ for i in range(len(data)):
 
 print(stack1)
 print(stack2)
-{% endcodeblock %}
+```

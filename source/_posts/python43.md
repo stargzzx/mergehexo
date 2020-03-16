@@ -29,7 +29,7 @@ tags:
 
 看如下代码和例子
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 a = np.arange(1,100)
@@ -42,13 +42,13 @@ for i in range(4):
     y = a * i
     plt.plot(a,y)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_3.png)
 
 添加 cla()
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 a = np.arange(1,100)
@@ -62,13 +62,13 @@ for i in range(4):
     plt.cla()
     plt.plot(a,y)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_4.png)
 
 替换为 clf()
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 a = np.arange(1,100)
@@ -82,7 +82,7 @@ for i in range(4):
     plt.clf()
     plt.plot(a,y)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_5.png)
 
@@ -148,14 +148,14 @@ format_string：控制曲线的格式字符串，可选，由颜色字符、风�
 
 ![](/images/python/2_method_16.JPG)
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
 a = np.arange(10)
 plt.plot(a,a*1.5,'go-',a,a*2.5,'rx',a,a*3.5,'*',a,a*4.5,'b-.')
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_17.png)
 
@@ -168,7 +168,7 @@ plt.plot(x,y,format_string,**kwargs)
 	markerfacecolor:标记颜色，markerfacecolor = ‘blue’ 
 	markersize:标记尺寸，markersize = ‘20’
 	
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
@@ -177,7 +177,7 @@ plt.plot(data, 'k--', label = 'Default')
 plt.plot(data, 'k-', drawstyle = 'steps-post', label = 'steps-post')
 plt.legend(loc='best',labels = ['Default','steps-post']) # 在合适的位置放图示
 plt.show()
-{% endcodeblock %}	
+```
 
 ![](/images/python/2_method_18.png)
 
@@ -197,7 +197,7 @@ text(x=0, y=0, text='', color=None, verticalalignment='baseline', horizontalalig
 	# wight 字体的粗细
 	# bbox 给字体添加框，alpha 设置框体的透明度， facecolor 设置框体的颜色
 	
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 a = np.arange(1,100)
@@ -207,7 +207,7 @@ plt.figure()
 plt.plot(a,y1)
 plt.text(-0.05,-0.05,"this is a test %d" % x ,fontdict={'size':20,'color':'red'})
 plt.show()
-{% endcodeblock %}
+```
 ![](/images/python/2_method_6.png)
 
 ## I
@@ -244,7 +244,7 @@ python可视化库matplotlib有两种显示模式：
 	交互模式，即plt.plot()后立马显示图片，且不阻塞代码的继续运行。
 
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 def y(x):
@@ -264,7 +264,7 @@ plt.plot(x,k(x))
 # 显示前关掉交互模式
 plt.ioff()
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_0.png)
 
@@ -278,17 +278,17 @@ plt.show()
 
 ![](/images/python/2_method_13.jpg)
 
-{% codeblock %}
+```python
 N = 10
 x = np.random.rand(N)  # 包含10个均匀分布的随机值的横坐标数组，大小[0, 1]
 y = np.random.rand(N)  # 包含10个均匀分布的随机值的纵坐标数组
 plt.scatter(x, y, alpha=0.6)  # 绘制散点图，透明度为0.6（这样颜色浅一点，比较好看）
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_7.png)
 
-{% codeblock %}
+```python
 N = 10
 x = np.random.rand(N)
 y = np.random.rand(N)
@@ -297,11 +297,11 @@ fig = plt.figure()
 ax = plt.subplot()
 ax.scatter(x, y, s=area, alpha=0.5)  # 绘制散点图，面积随机
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_8.png)
 
-{% codeblock %}
+```python
 N = 10
 x = np.random.rand(N)
 y = np.random.rand(N)
@@ -313,11 +313,11 @@ ax = plt.subplot()
 ax.scatter(x, y, s=area, alpha=0.5)
 ax.scatter(x2, y2, s=area, c='green', alpha=0.6)  # 改变颜色
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_9.png)
 
-{% codeblock %}
+```python
 N = 10
 x = np.random.rand(N)
 y = np.random.rand(N)
@@ -332,7 +332,7 @@ ax.scatter(x, y, s=area, alpha=0.5)
 ax.scatter(x2, y2, s=area, c='green', alpha=0.6)
 ax.scatter(x3, y3, s=area, c=area, marker='v', cmap='Reds', alpha=0.7)  # 更换标记样式，另一种颜色的样式
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_10.png)
 
@@ -342,7 +342,7 @@ plt.show()
 
 调整散点边界
 
-{% codeblock %}
+```python
 N = 10
 x = [1]
 y = [1]
@@ -357,7 +357,7 @@ ax.scatter(x, y, s=area, alpha=0.5, edgecolors='face')
 ax.scatter(x2, y2, s=area, linewidths=[3])
 ax.scatter(x3, y3, s=area, alpha=0.5, linewidths=[3], edgecolors='r')
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_11.png)
 
@@ -375,7 +375,7 @@ plotNum 参数指定创建的 Axes（子图） 对象所在的区域
 
 均与图
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 a = np.arange(1,100)
@@ -388,13 +388,13 @@ for i in range(4):
     y = a * i
     plt.plot(a,y)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_method_1.png)
 
 不均匀图
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 a = np.arange(1,100)
@@ -407,7 +407,7 @@ plt.plot(a,a*3)
 plt.subplot(2,2,4)
 plt.plot(a,a*4)
 plt.show()
-{% endcodeblock %}
+```
 
 这里解释一下为什么下面的两副图的排列是 2,2 3 和 2,2,4
 
@@ -422,19 +422,19 @@ plt.show()
 
 ## 柱状图
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 plt.figure()
 plt.hist(np.random.randn(100), bins  = 20, color = 'k', alpha = 0.3)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_3_0.png)
 
 ## 基础图形
 
-{% codeblock %}
+```python
 import matplotlib.pyplot as plt
 import matplotlib.patches as pt
 import numpy as np
@@ -447,7 +447,7 @@ a.add_patch(rect)
 a.add_patch(circ)
 a.add_patch(pgon)
 plt.show()
-{% endcodeblock %}
+```
 
 ![](/images/python/2_3_1.png)
 

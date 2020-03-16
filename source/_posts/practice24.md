@@ -28,7 +28,7 @@ tags:
 原理不再表述。直接上代码。
 
 ### 递归版本
-{% codeblock %}
+```python
 class Node:
 	def __init__(self,k):
 		self.k = k
@@ -66,11 +66,11 @@ def deep_Tree(node):
 			deep_Tree(node.l)
 		if node.r is not None:
 			deep_Tree(node.r)
-{% endcodeblock %}
+```
 
 ### 非递归版本
 
-{% codeblock %}
+```python
 def deep(tree):
 	data = []
 	data_top = -1
@@ -89,4 +89,4 @@ def deep(tree):
 			way.append(node)
 			top += 1
 			node = data.pop()
-{% endcodeblock %}
+```

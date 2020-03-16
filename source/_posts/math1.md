@@ -103,7 +103,7 @@ H=-((1/7000)·log(1/7000)+(1/7000)·log(1/7000)+…(1/7000)·log(1/7000))=12.77(
 
 ## 举一个简单的代码例子：
 
-{% codeblock %}
+```python
 import math
 def calcShannon(dataSet): #计算香农熵（信息熵）
     num = len(dataSet)
@@ -139,4 +139,4 @@ print(calcShannon(dataSet))
     # 1.3709505944546687
 
 #可以看出 信息熵的大小主要和数据的复杂度有关
-{% endcodeblock %}
+```

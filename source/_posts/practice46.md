@@ -49,7 +49,7 @@ Assume we are dealing with an environment which could only store integers within
 
 ## code
 
-{% codeblock %}
+```python
 class Solution:
     def reverse(self, x: 'int') -> 'int':
 		# lock 是一个判断锁
@@ -90,7 +90,7 @@ class Solution:
             return 0
         else:
             return a * b
-{% endcodeblock %}
+```
 
 ## Result
 
@@ -98,7 +98,7 @@ Runtime: 52 ms, faster than 89.25% of Python3 online submissions for Reverse Int
 Memory Usage: 12.7 MB, less than 100.00% of Python3 online submissions for Reverse Integer.
 
 ## other code
-{% codeblock %}
+```python
 class Solution:
     # @return an integer
     def reverse(self, x):
@@ -115,7 +115,7 @@ class Solution:
             x //= 10
 
         return 0 if result > pow(2, 31) else result * symbol
-{% endcodeblock %}
+```
 
 
 

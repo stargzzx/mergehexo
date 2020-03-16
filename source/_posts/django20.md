@@ -40,7 +40,7 @@ tags:
 
 其中我们在 authorization 中有一个文件是 models.py ，这里面有我们设定的模型
 
-{% codeblock %}
+```python
 from django.db import models
 
 # Create your models here.
@@ -50,7 +50,7 @@ class User(models.Model):
     open_id = models.CharField(max_length=32, unique=True)
     # 昵称
     nickname = models.CharField(max_length=256)
-{% endcodeblock %}
+```
 
 当我们完成这个模型后，我们需要进行数据库的迁移：
 
@@ -110,7 +110,7 @@ Django后台的目录架构：
 	
 然后，我们在 utils 文件夹下面有一个 auth.py ，这个的内容是：
 
-{% codeblock %}
+```python
 import json
 import requests
 from utils import proxy
@@ -159,13 +159,13 @@ def code2session(appid, code):
     data = json.loads(response.text)
     print(data)
     return data
-{% endcodeblock %}
+```
 
 我们可以看到其中的 API 是微信的验证接口。
 
 我们的Django的后台如下，其目录结构是 authorization 下的 views.py 内容如下：
 
-{% codeblock %}
+```python
 import json
 
 from django.http import JsonResponse
@@ -227,7 +227,7 @@ def __authorize_by_code(request):
 
 def authorize(request):
     return __authorize_by_code(request)
-{% endcodeblock %}
+```
 
 我们的小程序的界面是：
 
@@ -235,7 +235,7 @@ def authorize(request):
 
 其中 homepage.wxml 的内容如下：
 
-{% codeblock %}
+```python
 <!--pages/homepage/homepage.wxml-->
 <view class="container">
   <view class="page__bd page__bd_spacing button-sp-area">
@@ -243,11 +243,11 @@ def authorize(request):
     <button class="weui-btn mini-btn" type="primary" bindtap='authorize'>授权登录</button>
   </view>
 </view>
-{% endcodeblock %}
+```
 
 其中 homepage.js的 内容如下：
 
-{% codeblock %}
+```python
 // pages/homepage/homepage.js
 
 const app = getApp()
@@ -303,4 +303,4 @@ Page({
     })
   }
 })
-{% endcodeblock %}
+```

@@ -32,7 +32,7 @@ strict=False 使得预训练模型参数中和新模型对应上的参数会被�
 
 构建一个网络，并进行一次计算后保存网络架构以及参数。
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -62,7 +62,7 @@ loss.backward()
 optimizer.step()
 
 torch.save(m, 'm.pth')
-{% endcodeblock %}
+```
 
 其中我们保存的参数如下面所示
 
@@ -83,7 +83,7 @@ liner2.bias
 
 下面我们改变结构，代码如下：
 
-{% codeblock %}
+```python
 class M(nn.Module):
 
     def __init__(self):
@@ -104,7 +104,7 @@ m1.load_state_dict(m.state_dict(), strict=False)
 
 d = m1(t)
 print(d.item())
-{% endcodeblock %}
+```
 
 最后的输出是
 
@@ -134,7 +134,7 @@ $$\left[
 
 代码如下：
 
-{% codeblock %}
+```python
 class M(nn.Module):
 
     def __init__(self):
@@ -165,7 +165,7 @@ loss.backward()
 optimizer.step()
 print(m1.liner2.weight)
 	# tensor([[-0.3572, -0.0466]], requires_grad=True)
-{% endcodeblock %}
+```
 
 可以看出，最后tensor 由
 
@@ -208,7 +208,7 @@ model.state_dict()返回一个python的字典对象,将每一层与它的对应�
 
 下面的 M 类，我去掉了两层。
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -246,7 +246,7 @@ m.load_state_dict(model_dict2)
 for name, values in m.named_parameters():
     print(name)
     print(values)
-{% endcodeblock %}
+```
 
 就只输出 liner2 的信息了。
 
@@ -265,7 +265,7 @@ for name, values in m.named_parameters():
 
 代码示例：
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -309,7 +309,7 @@ optimizer.step()
 
 for name, value in model.named_parameters():
     print(value)
-{% endcodeblock %}
+```
 
 上面的代码是只更改 liner2 不更改 liner1
 
@@ -374,7 +374,7 @@ liner1.bias
 
 其全部的代码如下：
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -417,7 +417,7 @@ optimizer.step()
 
 for name, value in model.named_parameters():
     print(value)
-{% endcodeblock %}
+```
 
 我的 pytorch 的版本是 1.4.0，torchvision 是 0.5.0
 
@@ -464,7 +464,7 @@ detach()的官方说明如下：
 
 然后我们的代码如下：
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -507,7 +507,7 @@ optimizer.step()
 
 for name, value in model.named_parameters():
     print(value)
-{% endcodeblock %}
+```
 
 这里面的重点是，在 model M class 中，我们增加了一个 detach() 方法，这个方法会使得前面的参数不变，只改变后面的参数。
 
@@ -637,7 +637,7 @@ torch 不愧是最符合逻辑的，感觉里面替换层或者增加层都很�
 
 所以我们可以这样来修改，以下是完整的代码演示
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -672,7 +672,7 @@ loss = criterion(outputs, y)
 
 for name, value in model.named_parameters():
     print(value)
-{% endcodeblock %}
+```
 
 其输入的内容如下所示：
 
@@ -719,7 +719,7 @@ for name, value in model.named_parameters():
 
 <p style="color: #FF0000;">后来，我删除了一层 liner1 并且增加了 liner3</p>
 
-{% codeblock %}
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -759,4 +759,4 @@ m.load_state_dict(model_dict2)
 for name, values in m.named_parameters():
     print(name)
     print(values)
-{% endcodeblock %}
+```

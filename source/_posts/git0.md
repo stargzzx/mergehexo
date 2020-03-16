@@ -16,7 +16,7 @@ tags:
 
 ### 初始
 
-{% codeblock %}
+```python
 安装完 GIT 后，首先要进行配置
 打开 cmd
 输入 git config --global user.name "用户名"
@@ -27,11 +27,11 @@ tags:
         git config --global user.email "1506316219@qq.com"
 输入完成是没有任何显示的
 需要输入 git config --list 进行检验
-{% endcodeblock %}
+```
 
 ### 理论基础 
 
-{% codeblock %}
+```python
 svn 记录的是每一次版本的变动内容
 git 则是每个版本的独立存储
 优秀的程序员更侧重于程序设计
@@ -45,11 +45,11 @@ git管理的文件有三种状态
 	已修改（modified）
 	已暂存（staged）
 	已提交（commited）
-{% endcodeblock %}
+```
 
 ### 建立项目
 
-{% codeblock %}
+```python
 建立一个新的文件夹
 在此文件夹下按住shift 右键在此处打开命令行
 输入 git init 即创建
@@ -58,11 +58,11 @@ git管理的文件有三种状态
      如果想反悔，不想让 git 追踪可以输入 git rest HEAD 将仓库恢复到先前状态。也可以在后面指定文件名 git rest HEAD 文件名  
      git commit -m "add a readme file"  将暂存区域提交到仓库
 git add * 提交所有文件
-{% endcodeblock %}
+```
 
 ## 查看工作状态和历史提交
 
-{% codeblock %}
+```python
 git status 查看状态 显示的是暂存区域的内容，比如修改的文件，未提交的文件
 提交过后 git status 不会有文件的显示
 创建一个文件名为 LICENSE 无扩展名
@@ -100,13 +100,13 @@ git log 查看历史提交
 git log --decorate 查看所有，包括分支等
 git log --oneline 精简化形式显示
 git log --decorate --oneline --graph --all 以图形化显示所有分支
-{% endcodeblock %}
+```
 
 ![](/images/git/0_0.JPG)
 
 ## 回到过去
 
-{% codeblock %}
+```python
 git reset HEAD~ 返回上一个版本
 	返回上一个版本后，所变化的文件状态会回到暂存区域
 	而 ~ 的个数代表的是返回上几个版本
@@ -140,13 +140,13 @@ reset的参数
 
 当然 reset也可以回到未来，即以前修改的但是又放弃，后来又想回去
 	条件是必须知道之前的ID号
-{% endcodeblock %}
+```
 
 ![](/images/git/0_1.png)
 
 ## 版本对比
 
-{% codeblock %}
+```python
 git diff
 	出现两个版本不同的地方
 
@@ -155,11 +155,11 @@ git diff
 
 比较暂存区域和GIT仓库的版本
 	git diff --cached  在后加上ID后，指定某一版本和暂存区的版本
-{% endcodeblock %}
+```
 
 ## 修改最后一次提交，删除文件和重命名
 
-{% codeblock %}
+```python
 git commit --amend 
 	更正上一次操作
 		比如提交完一次版本后，发现有两个文件没有添加，又不值得为这两个
@@ -187,11 +187,11 @@ git commit --amend
 		2.添加了一个新的文件
 	所以直接用命令
 		git mv 旧文件名 新文件名
-{% endcodeblock %}
+```
 
 ## 分支
 
-{% codeblock %}
+```python
 HEAD 是一个指针，它指向的是现在正在使用的分支
 默认为master
 创建分支
@@ -210,11 +210,11 @@ HEAD 是一个指针，它指向的是现在正在使用的分支
 	second变成了三个版本
 	切换到master分支，调用git log
 	发现里面只有两个版本，且文件没有改变
-{% endcodeblock %}
+```
 
 ## 合并分支和删除分支
 
-{% codeblock %}
+```python
 创建分支
 git merge 分支名
 	将指定分支合并到HEAD指向的分支
@@ -227,13 +227,13 @@ git merge 分支名
 
 删除分支
 	git branch -d 分支名
-{% endcodeblock %}
+```
 
 ![](/images/git/0_2.png)
 
 ## 匿名分支
 
-{% codeblock %}
+```python
 如果checkout后面没有跟ID而是
 		git checkout HEAD~
 
@@ -248,5 +248,5 @@ git merge 分支名
 checkout有两种功能
 	1.切换分支
 	2.将暂存区域中的文件拷贝到工作目录
-{% endcodeblock %}
+```
 

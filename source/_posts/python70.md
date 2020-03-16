@@ -24,12 +24,12 @@ tags:
 
 代码表示
 
-{% codeblock %}
+```python
 bar = Bar('进度如下：', max=len(file_names))
 for file in file_names:
 	处理代码
     bar.next()
 bar.finish()
-{% endcodeblock %}
+```
 
 这个代码逻辑已经非常清晰了，就不再多做解释了。

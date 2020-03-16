@@ -14,7 +14,7 @@ tags:
 
 ## 得到最后一个重复的位置
 
-{% codeblock %}
+```python
 def gainLast(arr,num):	# 得到最后一个重复的位置
 	l = 0
 	r = len(arr)
@@ -38,11 +38,11 @@ def gainLast(arr,num):	# 得到最后一个重复的位置
 			index -= 1
 			break
 	return index
-{% endcodeblock %}
+```
 
 ### 测试
 
-{% codeblock %}
+```python
 arr = [1,2,2,2,3,5,6,6,7,9]
 print(gainLast(arr,0))
 	# -1
@@ -54,11 +54,11 @@ print(gainLast(arr,9))
 	# 9
 print(gainLast(arr,10))
 	# 9
-{% endcodeblock %}
+```
 
 ## 得到第一个重复的位置
 
-{% codeblock %}
+```python
 def gainFirst(arr,num):	# 得到第一个重复的位置
 	l = 0
 	r = len(arr)
@@ -84,11 +84,11 @@ def gainFirst(arr,num):	# 得到第一个重复的位置
 			index -= 1
 			break
 	return index
-{% endcodeblock %}
+```
 
 ### 测试
 
-{% codeblock %}
+```python
 arr = [1,2,2,2,3,5,6,6,7,9]
 print(gainLast(arr,0))
 	# -1
@@ -100,4 +100,4 @@ print(gainLast(arr,9))
 	# 8
 print(gainLast(arr,10))
 	# 9
-{% endcodeblock %}
+```
