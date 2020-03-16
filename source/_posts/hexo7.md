@@ -66,16 +66,62 @@ highlight_theme: normal，注释显示有五种显示主题可用，分别是：
 我选择的是night
 
 ### 代码块
+
 此时，还不能解决高亮问题，虽然背景会变，但是文字并没起作用。
 
 有的博文建议用反码代码块包裹，然后注明代码
 
-	``` [language] [title] [url] [link text] code snippet ```
+\`\`\` [language] [title] [url] [link text] code snippet 
+\`\`\`
 	
 但是，这个在我的版本中并不适用，我最后选择的还是之前的标签
 
-```python
-	
+	{% codeblock %} {% endcodeblock %}
+
 并且，我也没有注明代码类型，但是，最后却能显示高亮，在此记录一下，可能是版本问题，或者有默认选项。
 
 总之，我的代码有高亮了。
+
+### 7.x next 版本再次更新
+
+在这个版本中，如果使用 
+
+	{% codeblock %} {% endcodeblock %}
+
+会导致代码紊乱，所以，使用
+
+\`\`\`python 
+\`\`\`
+
+代替。
+
+使用脚本修改所有的相关内容。
+
+脚本如下
+
+```python
+import glob
+
+paths = glob.glob(r"./*.md")
+print(len(paths))
+
+for f_p in paths:
+    print(f_p)
+    f = open(f_p, 'r')
+    alllines = f.readlines()
+    f.close()
+
+    f = open(f_p, 'w+')
+    for eachline in alllines:
+        if "{% codeblock" in eachline:
+            eachline = f"```python"
+            f.writelines(eachline)
+            f.writelines('\n')
+        elif "{% endcodeblock" in eachline:
+            eachline = f"```"
+            f.writelines(eachline)
+            f.writelines('\n')
+        else:
+            f.writelines(eachline)
+    f.close()
+```
