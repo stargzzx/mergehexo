@@ -122,6 +122,18 @@ utf8mb4 替换为 utf8
 
 ![](/images/mysql/5_3.png)
 
+如果 where 条件里面需要带 \' 的话，sql 的字符串语句是需要转译符号 \\
+
+```python
+sql = f'mysqldump --login-path={login_path} --compact=TRUE --add-drop-table=FALSE --create-options=FALSE --add-locks=TRUE --column-statistics=FALSE -t  --replace ant t_limit_trade_volume --where="coin=\'{coin}\'" >> ~/python/ant/ant/sql/{symbol_dict}/official_{symbol}.sql'
+print(sql)
+```
+
+打印出来就是
+
+	mysqldump --login-path=licong --compact=TRUE --add-drop-table=FALSE --create-options=FALSE --add-locks=TRUE --column-statistics=FALSE -t  --replace ant t_limit_trade_volume --where="coin='BTMX'" >> ~/python/ant/ant/sql/bnb_ht_okb_hpt_ftt_btmx/test_bnb_ht_okb_hpt_ftt_btmx.sql
+
+
 <br/>
 
 # 新版的 sql 命令
