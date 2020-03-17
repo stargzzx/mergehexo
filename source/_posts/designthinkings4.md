@@ -212,3 +212,104 @@ if __name__ == '__main__':
 
 Python内置有一个全局锁会保证只进入一个线程调用类的方法，所以没有这个问题，但如果其他语言实现就要考虑这个问题，比如java就应该用synchronized锁住代码块确保线程安全。这一问题也是造成Python的多线程不是真正的多线程的原因。
 
+<br/>
+
+# 单例模式再次更新(非常重要) 只实验了 python
+
+<br/>
+
+## 懒汉模式
+
+请看如下的代码
+
+```python
+class Singleton(object):
+    __instance = None
+
+    # 初始化时，如果存在对象，就直接返回这个对象，不存在就不管，也不new它
+    def __init__(self, name):
+        self.name = name
+        if Singleton.__instance:
+            self.get_instance()
+
+    # 实际的对象创建发生在调用get_instance的时候
+    @classmethod
+    def get_instance(cls, *args):
+        if not cls.__instance:
+            cls.__instance = Singleton(*args)
+        return cls.__instance
+
+    def get_name(self):
+        print(self.name)
+
+
+if __name__ == '__main__':
+    singleton1 = Singleton.get_instance(1)
+    singleton1.get_name()
+    singleton2 = Singleton.get_instance(2)
+    singleton2.get_name()
+    singleton2.name = 2
+    singleton1.get_name()
+    print(singleton1 == singleton2)
+```
+
+其打印出的东西如下：
+
+    1
+    1
+    2
+    True
+
+## 饿汉模式
+
+```python
+class Singleton(object):
+
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(Singleton, cls).__new__(cls)
+        return cls.instance
+
+    def __init__(self, name):
+        self.name = name
+
+    def get_name(self):
+        print(self.name)
+
+
+if __name__ == '__main__':
+    singleton1 = Singleton(1)
+    singleton1.get_name()
+    singleton2 = Singleton(2)
+    singleton2.get_name()
+    singleton2.name = 3
+    singleton1.get_name()
+    print(singleton1 == singleton2)
+```
+
+    1
+    2
+    3
+    True
+
+## 不使用单例模式
+
+```python
+class Singleton(object):
+
+    def __init__(self, name):
+        self.name = name
+
+    def get_name(self):
+        print(self.name)
+
+
+if __name__ == '__main__':
+    singleton1 = Singleton(1)
+    singleton1.get_name()
+    singleton1.name = 3
+    singleton1.get_name()
+```
+
+    1
+    3
