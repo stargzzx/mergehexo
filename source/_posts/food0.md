@@ -5,8 +5,6 @@ categories:
 - food
 tags:
 - food
-- eat
-- relaxation
 ---
 我做了很多遍孜然羊肉，用过了很多方子，也尝试了不同的做法，目前写出我自己比较满意的方子和做法。
 
