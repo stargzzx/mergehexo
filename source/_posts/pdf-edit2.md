@@ -37,3 +37,104 @@ tags:
 
 ## 使用 google 的原生接口
 
+谷歌翻译爬虫
+
+通过浏览器 F12 开发者工具，很容易定位到翻译请求的 URL: 
+
+	http://translate.google.cn/translate_a/single?client=t&sl=en&tl=zh-CN&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss &dt=t&ie=UTF-8&oe=UTF-8&clearbtn=1&otf=1&pc=1&srcrom=0&ssel=0&tsel=0&kc=2
+
+这个请求接受两个参数，一个就是我们要翻译的字符串 q，另一个是用于用户认证的 tk(token),其中 q 很容易构造，tk 的构造就需要花费一番心力了，需要我们调试 js 代码，这里参考 Github 上大神的轮子： https://github.com/cocoa520/Google_TK
+
+关于如何获取 tk 值，在这里，我附上我改造后的代码。
+
+- translation.py
+
+```python
+import execjs
+
+
+class Py4Js():
+
+    def __init__(self):
+        self.ctx = execjs.compile(""" 
+        function VL(a) {
+        var b = a.trim();
+        return TL(b);
+        }
+        
+        function TL(a) {
+            var k = "";
+            var b = 406644;
+            var b1 = 3293161072;
+            
+            var jd = ".";
+            var $b = "+-a^+6";
+            var Zb = "+-3^+b+-f";
+        
+            for (var e = [], f = 0, g = 0; g < a.length; g++) {
+                var m = a.charCodeAt(g);
+                128 > m ? e[f++] = m : (2048 > m ? e[f++] = m >> 6 | 192 : (55296 == (m & 64512) && g + 1 < a.length && 56320 == (a.charCodeAt(g + 1) & 64512) ? (m = 65536 + ((m & 1023) << 10) + (a.charCodeAt(++g) & 1023),
+                e[f++] = m >> 18 | 240,
+                e[f++] = m >> 12 & 63 | 128) : e[f++] = m >> 12 | 224,
+                e[f++] = m >> 6 & 63 | 128),
+                e[f++] = m & 63 | 128)
+            }
+            a = b;
+            for (f = 0; f < e.length; f++) a += e[f],
+            a = RL(a, $b);
+            a = RL(a, Zb);
+            a ^= b1 || 0;
+            0 > a && (a = (a & 2147483647) + 2147483648);
+            a %= 1E6;
+            return a.toString() + jd + (a ^ b)
+        };
+        
+        function RL(a, b) {
+            var t = "a";
+            var Yb = "+";
+            for (var c = 0; c < b.length - 2; c += 3) {
+                var d = b.charAt(c + 2),
+                d = d >= t ? d.charCodeAt(0) - 87 : Number(d),
+                d = b.charAt(c + 1) == Yb ? a >>> d: a << d;
+                a = b.charAt(c) == Yb ? a + d & 4294967295 : a ^ d
+            }
+            return a
+        }
+    """)
+
+    def getTk(self, text):
+        return self.ctx.call("VL", text)
+```
+
+在这里我们用到了 execjs 这个库，关于它的用法可以参考我下面的博文。
+
+[python | PyExecJS](https://benpaodewoniu.github.io/2020/03/19/python85/)
+
+进行调用的代码如下：
+
+- main.py
+
+```python
+from translation import Py4Js
+import requests
+
+
+def translate(tk, content):
+    if len(content) > 4891:
+        print("翻译的长度超过限制！！！")
+        return
+
+    param = {'tk': tk, 'q': content}
+
+    result = requests.get("""http://translate.google.cn/translate_a/single?client=t&sl=en
+        &tl=zh-CN&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss
+        &dt=t&ie=UTF-8&oe=UTF-8&clearbtn=1&otf=1&pc=1&srcrom=0&ssel=0&tsel=0&kc=2""", params=param)
+
+    data = result.json()
+    print(data[0][0][0])
+
+
+p = Py4Js()
+tk = p.getTk('i love you')
+translate(tk, 'i love you')
+```
