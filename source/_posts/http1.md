@@ -303,6 +303,8 @@ class TestBaseRequestHandler(StreamRequestHandler):
         time.sleep(1)
         self.write_content(msg)
         self.send()
+        pass
+
 
 # 测试SocketServer(TCPServer)
 class SocketServerTest:
@@ -330,6 +332,8 @@ class SocketServerTest:
         server_thread = threading.Thread(target=self.run_server)
         server_thread.start()
 
+        time.sleep(5)
+
         clients = self.gen_clients(10)
         for client in clients:
             client.start()
@@ -339,17 +343,72 @@ class SocketServerTest:
             client.join()
 
 
-class BaseHTTPRequestHandlerTest:
-    def run_server(self):
-        BaseHTTPServer(('127.0.0.1', 9999), BaseHTTPRequestHandler).serve_forever()
-
-    def run(self):
-        self.run_server()
-
 
 if __name__ == '__main__':
-    # SocketServerTest().run()
-    BaseHTTPRequestHandlerTest().run()
+    SocketServerTest().run()
 ```
 
+上面就完成了简单的例子，但是，目前完成的服务器还非常初级，甚至，是单线程工作，下一步，我们将代码改编成多线程。
 
+
+其实只需要修改
+
+- socket_server.py
+
+将里面的处理函数，变成多线程处理，其全部代码如下所示
+
+```python
+# -*- encoding=utf-8 -*-
+
+import socket
+import threading
+
+class TCPServer:
+
+    def __init__(self, server_address, handler_class):
+        self.server_address = server_address
+        self.HandlerClass = handler_class
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.is_shutdown = False
+
+    # 服务器的启动函数
+    def serve_forever(self):
+        self.socket.bind(self.server_address)
+        self.socket.listen(10)
+        # while True:
+        while not self.is_shutdown:
+            # 1. 接收请求
+            request, client_address = self.get_request()
+            # 2. 处理请求
+            try:
+                # self.process_request(request, client_address)
+                self.process_request_multithread(request, client_address)
+            except Exception as e:
+                print(e)
+
+    # 接收请求
+    def get_request(self):
+        return self.socket.accept()
+
+    # 处理请求
+    def process_request(self, request, client_address):
+        handler = self.HandlerClass(self, request, client_address)
+        handler.handle()
+        # 3. 关闭连接
+        self.close_request(request)
+
+    # 多线程处理请求
+    def process_request_multithread(self, request, client_address):
+        t = threading.Thread(target=self.process_request,
+                             args=(request, client_address))
+        t.start()
+
+    # 关闭请求
+    def close_request(self, request):
+        request.shutdown(socket.SHUT_WR)
+        request.close()
+
+    # 关闭服务器
+    def shutdown(self):
+        self.is_shutdown = True
+```
