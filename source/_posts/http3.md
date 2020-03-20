@@ -81,7 +81,7 @@ graph LR
 	BaseHTTPRequsetHandler==>解析/处理请求
     解析/处理请求
     解析/处理请求-->handle
-    解析/处理请求-->parse_equest
+    解析/处理请求-->parse_request
     BaseHTTPRequsetHandler==>返回结果
     返回结果
     返回结果-->write_header

@@ -38,7 +38,7 @@ HTTP 服务器是工作在 应用层和传输层的。
 
 ## TCP
 
-Transmission Conreol Protocol 传输控制协议
+Transmission Control Protocol 传输控制协议
 
 - 解决协议可靠传输
 - 流量控制
