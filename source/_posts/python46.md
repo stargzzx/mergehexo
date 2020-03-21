@@ -3,6 +3,7 @@ title: Jupyter notebook
 date: 2019-01-20 17:37:27
 categories:
 - python
+- jupyter
 tags:
 - python
 - Anaconda

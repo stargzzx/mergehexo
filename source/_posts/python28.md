@@ -3,6 +3,8 @@ title: PIL ImageDraw 模块函数详解
 date: 2018-12-03 20:28:09
 categories:
 - python
+- 模块
+- PIL
 tags:
 - PIL
 - pillow

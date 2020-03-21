@@ -3,6 +3,7 @@ title: 二分法详解
 date: 2018-06-30 22:02:45
 categories:
 - practice
+- 算法讲解
 tags:
 - practice
 - 二分法

@@ -3,6 +3,7 @@ title: python 编码异常
 date: 2019-02-23 10:46:12
 categories:
 - python
+- 基础
 tags:
 - python
 - 编码

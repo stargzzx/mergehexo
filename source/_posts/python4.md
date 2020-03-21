@@ -3,6 +3,7 @@ title: python详解
 date: 2018-06-03 16:28:51
 categories:
 - python
+- 基础
 tags:
 - python
 - tutorial

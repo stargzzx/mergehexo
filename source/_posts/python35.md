@@ -3,6 +3,8 @@ title: PIL ImageFont 模块函数讲解
 date: 2018-12-11 21:53:40
 categories:
 - python
+- 模块
+- PIL
 tags:
 - python 第三方库
 - python

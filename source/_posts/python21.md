@@ -3,6 +3,8 @@ title: python—pillow(PIL)
 date: 2018-10-29 20:52:23
 categories:
 - python
+- 模块
+- PIL
 tags:
 - PIL
 - pillow

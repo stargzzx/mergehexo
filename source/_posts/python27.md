@@ -3,6 +3,8 @@ title: PIL Image 模块函数详解
 date: 2018-12-03 16:58:39
 categories:
 - python
+- 模块
+- PIL
 tags:
 - PIL
 - pillow

@@ -3,6 +3,7 @@ title: Jupyter 所遇到的错误
 date: 2019-01-20 22:06:19
 categories:
 - python
+- jupyter
 tags:
 - python
 - Anaconda

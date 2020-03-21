@@ -3,6 +3,8 @@ title: python copy 模块
 date: 2018-12-04 12:17:39
 categories:
 - python
+- 模块
+- copy
 tags:
 - copy模块
 - python 模块

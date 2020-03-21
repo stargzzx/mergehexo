@@ -3,6 +3,8 @@ title: PyMySQL 操作数据库
 date: 2019-03-18 22:29:33
 categories:
 - python
+- 模块
+- PyMySQL
 tags:
 - python
 - python第三方库

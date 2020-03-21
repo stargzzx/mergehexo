@@ -3,6 +3,7 @@ title: 有序数组合并
 date: 2018-07-10 16:40:01
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

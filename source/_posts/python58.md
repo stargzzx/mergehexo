@@ -3,6 +3,7 @@ title: python @classmethod 的使用场合
 date: 2019-08-23 15:35:09
 categories:
 - python
+- 进阶
 tags:
 - python
 ---

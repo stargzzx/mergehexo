@@ -3,6 +3,8 @@ title: python DB 模块
 date: 2018-06-08 12:17:36
 categories:
 - python
+- 模块
+- DB
 tags:
 - DB模块
 - python 模块

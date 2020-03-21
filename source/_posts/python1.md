@@ -3,6 +3,8 @@ title: python - pandas
 date: 2018-05-23 13:56:54
 categories:
 - python
+- 模块
+- pandas
 tags:
 - python
 - tutorial

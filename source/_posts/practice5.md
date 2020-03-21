@@ -3,6 +3,7 @@ title: 最长递增子序列
 date: 2018-07-02 11:54:39
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

@@ -3,6 +3,7 @@ title: 可查询最值栈
 date: 2018-07-23 22:39:17
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

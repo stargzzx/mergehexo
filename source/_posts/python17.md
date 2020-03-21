@@ -3,6 +3,8 @@ title: 在运用 numpy 时出现的异常
 date: 2018-06-20 10:54:03
 categories:
 - python
+- 模块
+- numpy
 tags:
 - python 第三方库
 - python

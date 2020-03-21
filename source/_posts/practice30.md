@@ -3,6 +3,7 @@ title: 双栈排序
 date: 2018-07-31 21:01:54
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

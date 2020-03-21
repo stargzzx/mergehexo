@@ -3,6 +3,8 @@ title: python - numpy
 date: 2018-05-20 20:39:03
 categories:
 - python
+- 模块
+- numpy
 tags:
 - python 第三方库
 - python

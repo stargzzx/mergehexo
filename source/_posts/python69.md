@@ -3,6 +3,8 @@ title: python | matplotlib | 画连续动态图，一边图片，一边信号
 date: 2019-12-16 16:20:22
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - matplotlib

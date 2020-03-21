@@ -3,6 +3,7 @@ title: 字符串移位
 date: 2018-07-15 16:21:15
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

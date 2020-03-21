@@ -3,6 +3,8 @@ title: python 的 glob
 date: 2019-02-25 10:47:03
 categories:
 - python
+- 模块
+- glob
 tags:
 - python
 - python 模块

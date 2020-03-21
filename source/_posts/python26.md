@@ -3,6 +3,8 @@ title: 用 PIL 对像素点进行操作
 date: 2018-12-01 20:57:49
 categories:
 - python
+- 模块
+- PIL
 tags:
 - python
 - PIL

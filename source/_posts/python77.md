@@ -3,6 +3,8 @@ title: python | Peewee 教程
 date: 2020-03-14 22:24:39
 categories:
 - python
+- 模块
+- peewee
 tags:
 - python
 - peewee

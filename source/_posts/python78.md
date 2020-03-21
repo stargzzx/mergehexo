@@ -3,6 +3,7 @@ title: python | 装饰器 @property
 date: 2020-03-15 11:10:56
 categories:
 - python
+- 进阶
 tags:
 - python
 - property

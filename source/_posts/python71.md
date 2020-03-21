@@ -3,6 +3,7 @@ title: python 自动生成 requirements.txt
 date: 2020-02-05 10:45:38
 categories:
 - python
+- 进阶
 tags:
 - python
 - requirements

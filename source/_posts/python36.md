@@ -3,6 +3,8 @@ title: python scipy
 date: 2018-12-12 14:55:11
 categories:
 - python
+- 模块
+- scipy
 tags:
 - python 第三方库
 - python

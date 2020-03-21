@@ -3,6 +3,7 @@ title: 比较练习
 date: 2018-08-05 14:58:31
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

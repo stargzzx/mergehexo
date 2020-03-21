@@ -3,6 +3,7 @@ title: python | 使用__slots__
 date: 2020-03-15 12:27:14
 categories:
 - python
+- 进阶
 tags:
 - python
 - __slots__

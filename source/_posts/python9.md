@@ -3,6 +3,7 @@ title: python IO
 date: 2018-06-08 13:29:17
 categories:
 - python
+- 基础
 tags:
 - python
 - tutorial

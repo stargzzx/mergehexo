@@ -3,6 +3,8 @@ title: python Virtaulenvwrapper
 date: 2018-06-08 11:34:59
 categories:
 - python
+- 模块
+- Virtaulenvwrapper
 tags:
 - python
 - tutorial

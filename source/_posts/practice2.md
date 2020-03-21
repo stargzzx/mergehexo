@@ -3,6 +3,7 @@ title: 排序算法总结
 date: 2018-06-30 21:50:52
 categories:
 - practice
+- 算法讲解
 tags:
 - sort
 - practice

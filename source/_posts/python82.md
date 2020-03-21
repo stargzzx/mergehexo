@@ -3,6 +3,7 @@ title: python | 枚举类
 date: 2020-03-15 12:54:46
 categories:
 - python
+- 进阶
 tags:
 - python
 - 枚举类

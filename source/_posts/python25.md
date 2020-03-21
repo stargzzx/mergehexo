@@ -2,7 +2,8 @@
 title: PIL 和 matplotlib 相结合，将图片输入到内存并读取
 date: 2018-12-01 10:00:08
 categories:
-- python
+- [python,模块,PIL]
+- [python,模块,matplotlib]
 tags:
 - python
 - PIL

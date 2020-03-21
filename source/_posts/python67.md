@@ -3,6 +3,7 @@ title: python 的进制转换
 date: 2019-11-24 21:29:02
 categories:
 - python
+- 基础
 tags:
 - python
 - 进制转换

@@ -3,6 +3,7 @@ title: 空格替换
 date: 2018-07-16 09:10:41
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

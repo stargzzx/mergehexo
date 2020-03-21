@@ -3,6 +3,7 @@ title: 最短子数组
 date: 2018-07-11 10:51:46
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

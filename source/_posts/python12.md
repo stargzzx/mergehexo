@@ -3,6 +3,7 @@ title: python 异常
 date: 2018-06-08 14:20:38
 categories:
 - python
+- 基础
 tags:
 - 异常
 - python

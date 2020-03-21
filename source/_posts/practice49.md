@@ -3,6 +3,7 @@ title: leetcode 5
 date: 2019-02-17 10:13:10
 categories:
 - practice
+- 算法练习
 tags:
 - leetcode
 - practice

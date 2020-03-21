@@ -2,7 +2,9 @@
 title: numpy pandas scipy 的简单区别
 date: 2018-12-19 13:44:31
 categories:
-- python
+- [python,模块,numpy]
+- [python,模块,pandas]
+- [python,模块,scipy]
 tags:
 - python 第三方库
 - python

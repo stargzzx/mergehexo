@@ -2,7 +2,8 @@
 title: 将 matplotlib 的 figure 转化为 numpy 的 array
 date: 2018-10-29 22:05:01
 categories:
-- python
+- [python,模块,numpy]
+- [python,模块,matplotlib]
 tags:
 - python 第三方库
 - python

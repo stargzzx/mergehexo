@@ -3,6 +3,7 @@ title: python 全局变量
 date: 2018-06-11 21:12:27
 categories:
 - python
+- 基础
 tags:
 - python
 - tutorial

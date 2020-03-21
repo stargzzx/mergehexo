@@ -3,6 +3,7 @@ title: python | Python中的*args和**kwargs
 date: 2020-03-14 13:04:36
 categories:
 - python
+- 基础
 tags:
 - python
 - args

@@ -3,6 +3,7 @@ title: python | 访问限制
 date: 2020-03-14 17:07:01
 categories:
 - python
+- 基础
 tags:
 - python
 - 私有

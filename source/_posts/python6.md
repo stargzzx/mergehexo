@@ -3,6 +3,8 @@ title: python 版本控制器 virtualenv
 date: 2018-06-08 11:31:00
 categories:
 - python
+- 模块
+- virtualenv
 tags:
 - 版本控制器
 - python

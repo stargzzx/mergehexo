@@ -3,6 +3,7 @@ title: 合法括号序列判断
 date: 2018-07-16 09:38:21
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

@@ -3,6 +3,8 @@ title: python - matplotlib
 date: 2018-05-23 14:10:44
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - tutorial

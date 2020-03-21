@@ -3,6 +3,8 @@ title: python scikit-image skimage
 date: 2019-02-16 15:35:53
 categories:
 - python
+- 模块
+- scikit-image
 tags:
 - python
 - python 第三方库

@@ -3,6 +3,8 @@ title: 在 win10 中安装 python 的版本控制器
 date: 2018-10-14 21:47:47
 categories:
 - python
+- 模块
+- virtualenvwrapper
 tags:
 - win10
 - virtualenv

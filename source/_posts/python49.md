@@ -3,6 +3,7 @@ title: python3 的新特性
 date: 2019-02-14 15:22:21
 categories:
 - python
+- 基础
 tags:
 - python3
 - 类型注解

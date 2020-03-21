@@ -3,6 +3,7 @@ title: python安装包使用各种镜像加速
 date: 2019-10-27 17:32:36
 categories:
 - python
+- 基础
 tags:
 - python
 - 镜像

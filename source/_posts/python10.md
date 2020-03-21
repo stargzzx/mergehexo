@@ -3,6 +3,7 @@ title: python 魔法方法
 date: 2018-06-08 13:32:40
 categories:
 - python
+- 基础
 tags:
 - python
 - tutorial

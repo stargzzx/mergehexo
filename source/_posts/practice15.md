@@ -3,6 +3,7 @@ title: 词语变形
 date: 2018-07-14 17:02:49
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

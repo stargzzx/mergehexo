@@ -3,6 +3,8 @@ title: 论numpy中matrix 和 array的区别
 date: 2018-06-15 09:39:30
 categories:
 - python
+- 模块
+- numpy
 tags:
 - python 第三方库
 - python

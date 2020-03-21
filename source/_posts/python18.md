@@ -3,6 +3,7 @@ title: 位运算
 date: 2018-08-03 22:52:00
 categories:
 - python
+- 基础
 tags:
 - python
 - tutorial

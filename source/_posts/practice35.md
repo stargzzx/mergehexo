@@ -3,6 +3,7 @@ title: 寻找奇数出现 II
 date: 2018-08-07 23:50:14
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

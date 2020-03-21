@@ -3,9 +3,9 @@ title: python 字符串处理
 date: 2018-06-08 14:13:05
 categories:
 - python
+- 基础
 tags:
 - python
-- tutorial
 - 字符串
 - 格式化
 ---

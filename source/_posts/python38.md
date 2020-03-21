@@ -3,6 +3,8 @@ title: python pandas 函数详解
 date: 2018-12-17 10:05:43
 categories:
 - python
+- 模块
+- pandas
 tags:
 - python
 - python 第三方库

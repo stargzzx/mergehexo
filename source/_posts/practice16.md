@@ -3,6 +3,7 @@ title: 旋转词
 date: 2018-07-14 18:16:11
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

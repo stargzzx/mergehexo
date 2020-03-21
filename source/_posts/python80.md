@@ -3,6 +3,7 @@ title: python | 实例属性和类属性
 date: 2020-03-15 12:11:01
 categories:
 - python
+- 基础
 tags:
 - python
 - 实例属性

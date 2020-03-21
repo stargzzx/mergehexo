@@ -3,6 +3,7 @@ title: 栈的反转
 date: 2018-07-31 17:13:24
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

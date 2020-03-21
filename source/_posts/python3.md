@@ -3,6 +3,8 @@ title: python-numpy-函数详解
 date: 2018-06-03 15:44:22
 categories:
 - python
+- 模块
+- numpy
 tags:
 - python 第三方库
 - python

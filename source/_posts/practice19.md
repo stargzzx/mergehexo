@@ -3,6 +3,7 @@ title: 拼接最小字典序
 date: 2018-07-15 16:48:06
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

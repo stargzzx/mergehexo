@@ -3,6 +3,8 @@ title: PIL 关于对图像的长宽处理
 date: 2018-12-06 22:22:33
 categories:
 - python
+- 模块
+- PIL
 tags:
 - python 第三方库
 - python

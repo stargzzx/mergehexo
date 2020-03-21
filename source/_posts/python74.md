@@ -3,6 +3,7 @@ title: python | super()
 date: 2020-03-14 13:31:46
 categories:
 - python
+- 进阶
 tags:
 - python
 - super

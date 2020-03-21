@@ -3,6 +3,7 @@ title: python | 继承和多态
 date: 2020-03-15 11:47:33
 categories:
 - python
+- 基础
 tags:
 - python
 - 继承

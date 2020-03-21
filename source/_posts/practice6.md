@@ -3,6 +3,7 @@ title: trade space for speed
 date: 2018-07-03 11:55:58
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

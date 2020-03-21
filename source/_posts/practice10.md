@@ -3,6 +3,7 @@ title: 三色排序
 date: 2018-07-10 17:25:06
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

@@ -3,6 +3,8 @@ title: matplotlib 动态图总结
 date: 2019-11-24 21:42:51
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - matplotlib

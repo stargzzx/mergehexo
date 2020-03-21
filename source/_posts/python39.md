@@ -2,7 +2,8 @@
 title: numpy 和 pandas 的区别详解
 date: 2018-12-17 20:56:33
 categories:
-- python
+- [python,模块,numpy]
+- [python,模块,pandas]
 tags:
 - python
 - python 第三方库

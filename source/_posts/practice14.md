@@ -3,6 +3,7 @@ title: KMP详解
 date: 2018-07-12 21:34:18
 categories:
 - practice
+- 算法讲解
 tags:
 - practice
 - algorithm

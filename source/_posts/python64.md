@@ -3,6 +3,8 @@ title: python 安装 pytorch
 date: 2019-11-10 09:23:01
 categories:
 - python
+- 模块
+- pytorch
 tags:
 - python
 - torch

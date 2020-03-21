@@ -3,6 +3,8 @@ title: python | 进度条
 date: 2020-01-27 20:38:23
 categories:
 - python
+- 模块
+- progressbar
 tags:
 - python
 - 进度条

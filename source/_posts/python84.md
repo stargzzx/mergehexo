@@ -3,6 +3,8 @@ title: python | PyMuPDF
 date: 2020-03-18 20:32:30
 categories:
 - python
+- 模块
+- PyMuPDF
 tags:
 - python
 - PyMuPDF

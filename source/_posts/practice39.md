@@ -3,6 +3,7 @@ title: practice39
 date: 2018-08-11 22:59:53
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

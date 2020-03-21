@@ -3,6 +3,8 @@ title: Python数据可视化利器Matplotlib，colors系列，颜色的指定形
 date: 2018-10-31 14:59:12
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - tutorial

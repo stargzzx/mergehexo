@@ -3,6 +3,7 @@ title: 小范围排序
 date: 2018-07-03 11:26:58
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - algorithm

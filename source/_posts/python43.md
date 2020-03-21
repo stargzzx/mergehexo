@@ -3,6 +3,8 @@ title: python matplotlib 函数详解，基础画图
 date: 2018-12-20 17:16:05
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - python 第三方库

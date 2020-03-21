@@ -3,6 +3,7 @@ title: python 函数详解
 date: 2018-06-05 23:52:41
 categories:
 - python
+- 基础
 tags:
 - python
 - tutorial

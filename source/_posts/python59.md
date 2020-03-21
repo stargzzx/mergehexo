@@ -2,7 +2,7 @@
 title: pycarm永久激活
 date: 2019-10-27 14:56:22
 categories:
-- python
+- pycharm
 tags:
 - pycharm
 - python

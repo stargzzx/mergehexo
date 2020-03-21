@@ -3,6 +3,8 @@ title: matplotlib 画 3D 图像
 date: 2018-11-05 22:33:04
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - tutorial

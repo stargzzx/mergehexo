@@ -3,6 +3,8 @@ title: python 和 numpy 切片详解
 date: 2018-12-16 20:50:21
 categories:
 - python
+- 模块
+- numpy
 tags:
 - python 第三方库
 - python

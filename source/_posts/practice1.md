@@ -3,6 +3,7 @@ title: how to sort two list
 date: 2018-06-30 16:44:27
 categories:
 - practice
+- 算法练习
 tags:
 - practice
 - sort

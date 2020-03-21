@@ -3,6 +3,8 @@ title: python 的 cPickle pickle
 date: 2019-02-23 10:49:58
 categories:
 - python
+- 模块
+- pickle
 tags:
 - python
 - python 模块

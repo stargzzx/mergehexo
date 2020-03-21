@@ -3,6 +3,8 @@ title: python 的动态图
 date: 2019-03-26 21:56:50
 categories:
 - python
+- 模块
+- matplotlib
 tags:
 - python
 - 动态图

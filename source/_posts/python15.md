@@ -3,6 +3,8 @@ title: python scrapy 框架
 date: 2018-06-13 11:42:31
 categories:
 - python
+- 模块
+- scrapy
 tags:
 - 爬虫
 - scrapy

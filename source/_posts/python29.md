@@ -3,6 +3,8 @@ title: python Math 模块
 date: 2018-06-08 12:18:36
 categories:
 - python
+- 模块
+- math
 tags:
 - math模块
 - python 模块

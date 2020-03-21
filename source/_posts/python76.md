@@ -3,6 +3,7 @@ title: python | whl 以及各种包的搜集网站
 date: 2020-03-14 22:16:56
 categories:
 - python
+- 基础
 tags:
 - python
 - whl
