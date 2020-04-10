@@ -1,6 +1,6 @@
 ---
 title: 币圈知识 | 标记价格 和 指数价格
-date: 2020-04-10 16:07:45
+date: 2020-04-10 18:21:16
 categories:
 - virtualcoin
 - 基础
