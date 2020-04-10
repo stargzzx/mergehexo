@@ -31,6 +31,7 @@ tags:
 	git branch -D 分支名
 
 比如，我们新创建了一个分支，但是，最后这个分支没用了，所以，要删除，但是，这个分支并没有合并到 master ，所以，git 会产生疑问，这个时候你要使用强制删除。
+
 <br/>
 
 # 查看分支
@@ -48,6 +49,28 @@ tags:
 	git checkout 分支
 	我更推荐你用下面的命令
 	git switch 分支
+
+<br/>
+
+# 分支备注
+
+<br/>
+
+有的时候我们创建了大量的分支，最后发现有的分支是什么作用，有没有被合并都不知道了，所以，我们迫切的需要一个可以备注分支作用的命令。
+
+	git config branch.{branch_name}.description "内容"
+
+比如
+
+	git.config branch.dev.description "升级部分数据"
+
+## 查看
+
+	git.config branch.dev.description
+
+## 修改
+
+	git.config branch.dev.description "修改的内容"
 
 <br/>
 
