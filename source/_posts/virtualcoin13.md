@@ -6,7 +6,6 @@ categories:
 - 基础
 tags:
 - virtualcoin
-- staking
 ---
 做币圈的量化项目很久了，但是，一直都是得过且过，没有真正搞明白币圈某些专业名词的具体含义。
 
