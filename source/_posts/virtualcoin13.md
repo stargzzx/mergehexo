@@ -1,5 +1,5 @@
 ---
-title: 币圈知识 | 标记价格 和 指数价格
+title: 币圈 | 标记价格 和 指数价格
 date: 2020-04-10 18:21:16
 categories:
 - virtualcoin
