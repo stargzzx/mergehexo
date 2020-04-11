@@ -2,10 +2,8 @@
 title: 双栈队列
 date: 2018-07-30 18:22:43
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- practice
 - algorithm
 ---
 问题描述：

@@ -2,10 +2,8 @@
 title: BFS(广度优先)
 date: 2018-07-23 22:09:18
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- practice
 - algorithm
 ---
 其实之前我已经写过一篇关于广度优先的文章了，链接如下。

@@ -2,10 +2,8 @@
 title: 链表入门
 date: 2018-08-08 14:52:23
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- practice
 - algorithm
 ---
 链表是数据结构中非常重要的结构，但是链表本身不难，难的是写代码的逻辑要清晰。

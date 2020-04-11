@@ -2,14 +2,9 @@
 title: 二叉树创建、四大遍历
 date: 2018-06-30 21:57:54
 categories:
-- practice
-- 算法讲解
-tags:
-- practice
-- 二叉树
-- 遍历
 - algorithm
-- Binary tree
+tags:
+- algorithm
 ---
 如题所示，另外代码是由 python 实现。
 

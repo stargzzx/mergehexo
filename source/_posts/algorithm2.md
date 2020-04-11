@@ -2,11 +2,8 @@
 title: 排序算法总结
 date: 2018-06-30 21:50:52
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- sort
-- practice
 - algorithm
 ---
 如题所示，另外代码是用 python 实现，附上自己的理解。
@@ -18,7 +15,7 @@ tags:
 
 这个算法的名字由来是因为越大的元素会经由交换慢慢“浮”到数列的顶端，故名“冒泡排序”。
 
-![](/images/practice/2_0.gif)
+![](/images/algorithm/2_0.gif)
 
 ### 代码
 ```python
@@ -39,7 +36,7 @@ def bubbleSort(arr):		#冒泡排序
 
 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。
 
-![](/images/practice/2_1.gif)
+![](/images/algorithm/2_1.gif)
 
 选择排序有插入版和交换版。
 
@@ -68,7 +65,7 @@ def selectionSort(arr): # 选择排序
 
 它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
 
-![](/images/practice/2_2.gif)
+![](/images/algorithm/2_2.gif)
 
 ### 自己写的代码
 
@@ -110,9 +107,9 @@ def insert_Sort(arr):
 
 将两个已经排序的序列合并成一个序列的操作。运用分而治之的思想。
 
-![](/images/practice/2_3.gif)
+![](/images/algorithm/2_3.gif)
 
-![](/images/practice/2_4.gif)
+![](/images/algorithm/2_4.gif)
 
 ### 代码
 
@@ -156,7 +153,7 @@ def merge_array(arr):
 
 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
 
-![](/images/practice/2_5.gif)
+![](/images/algorithm/2_5.gif)
 
 ### 代码
 
@@ -186,7 +183,7 @@ def quickSort(L,start,end):
 
 堆分为大根堆和小根堆，是完全二叉树。
 
-![](/images/practice/2_6.gif)
+![](/images/algorithm/2_6.gif)
 
 ### 过程图解
 
@@ -196,11 +193,11 @@ def quickSort(L,start,end):
 
 ### 构建大顶堆
 
-![](/images/practice/2_7.png)
+![](/images/algorithm/2_7.png)
 
 ### 输出以及调整大顶堆
 
-![](/images/practice/2_8.png)
+![](/images/algorithm/2_8.png)
 
 代码最后的答案可能和图片有点出入，是因为图片我才用比较右在比较左，而代码正好相反。小事情，在这里提一下。
 

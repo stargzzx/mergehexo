@@ -2,9 +2,8 @@
 title: 动态规划（Dynamic Programming）
 date: 2018-11-07 17:03:30
 categories:
-- algorithm_thought
+- algorithm
 tags:
-- algorithm_thought
 - algorithm
 - 动态规划
 ---
@@ -30,7 +29,7 @@ OK,现在我们从著名的 Fibonacci Sequence.
 
 即用递归的思想，但是用递归就会有有一种冗余的存在，请看下面这幅图。
 
-![](/images/algorithm_thought/0_0.png)
+![](/images/algorithm/0_0.png)
 
 但是很明显左边的分支 F(5) 和右边的分支 F(5) 是同一值，但是，我们却需要计算很多次，所以我们做的全是重复的工作。
 
@@ -64,7 +63,7 @@ OK,现在我们从著名的 Fibonacci Sequence.
 
 ## 如何快速赚大钱
 
-![](/images/algorithm_thought/0_1.png)
+![](/images/algorithm/0_1.png)
 
 图中一共有 8 分工作，矩阵的长度代表着这个工作的时长，并且有开始和结束的信息。
 

@@ -2,10 +2,8 @@
 title: KMP详解
 date: 2018-07-12 21:34:18
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- practice
 - algorithm
 ---
 纵观各种辅导书和各种视频对 KMP 的解析，我只想对他们说：真是**了狗了。
@@ -93,7 +91,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 观看下一幅图：
 
-![](/images/practice/14_0.png)
+![](/images/algorithm/14_0.png)
 
 我们现在知道如何移动以及匹配了，那么新的问题来了，为什么这样移动就可以成功？
 
@@ -111,7 +109,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 回溯原理：
 
-![](/images/practice/14_1.png)
+![](/images/algorithm/14_1.png)
 	
 ## 代码
 
@@ -119,7 +117,7 @@ next 数组和 PMT 其实区别不大，只不过 next 数组取的是标记前�
 
 首先是 next 代码，在此之前再上一个图。
 
-![](/images/practice/14_2.png)
+![](/images/algorithm/14_2.png)
 
 ### next
 

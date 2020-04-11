@@ -2,10 +2,8 @@
 title: 栈的浅析
 date: 2018-07-21 21:20:06
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- practice
 - algorithm
 ---
 这里初度对栈进行浅度分析。

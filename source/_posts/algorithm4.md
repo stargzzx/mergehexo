@@ -2,11 +2,8 @@
 title: 二分法详解
 date: 2018-06-30 22:02:45
 categories:
-- practice
-- 算法讲解
+- algorithm
 tags:
-- practice
-- 二分法
 - algorithm
 ---
 如题所示，另外代码是由 python 实现。
