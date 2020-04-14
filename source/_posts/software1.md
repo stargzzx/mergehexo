@@ -1,8 +1,9 @@
 ---
-title: postman
+title: software | postman
 date: 2019-10-05 20:47:24
 categories:
 - software
+- 电脑软件
 tags:
 - software
 - postman

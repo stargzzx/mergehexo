@@ -3,6 +3,7 @@ title: software | JetBrains全系列软件激活
 date: 2020-03-11 13:30:05
 categories:
 - software
+- 电脑软件
 tags:
 - software
 - JetBrains

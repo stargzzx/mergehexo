@@ -3,6 +3,7 @@ title: software | 截图工具（win10、mac）
 date: 2020-01-07 14:40:26
 categories:
 - software
+- 电脑软件
 tags:
 - software
 - lightshot

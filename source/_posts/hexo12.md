@@ -266,3 +266,15 @@ tags:
     </tr>
 </table>
 ```
+
+<br/>
+
+# 修改图片大小
+
+<br/>
+
+    <div style="width: 50%;padding-left: 25%">
+    ![](/images/software/5_0.jpg)
+    </div>
+
+另外剧中的话使用 text-align:center; 不管用，需要使用上面的代码。

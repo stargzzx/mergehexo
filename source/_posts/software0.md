@@ -1,8 +1,9 @@
 ---
-title: 科学上网（翻墙软件）
+title: software | 科学上网（翻墙软件）
 date: 2018-06-13 15:10:51
 categories:
 - software
+- 电脑软件
 tags:
 - xx-net
 - VPN
