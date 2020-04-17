@@ -27,17 +27,19 @@ tags:
 
 ## 修改_layout.swig
 
-打开 next/layout/_layout.swig 
+打开 next/layout/\_layout.swig 
 
 在 < /body>之前添加代码(注意不要放在< /head>的后面)
 
-	{% if theme.canvas_nest %}
-	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-	{% endif %}
+```
+{% if theme.canvas_nest %}
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+{% endif %}
+```
 
 ## 修改配置文件
 
-打开 /next/_config.yml,在里面添加如下代码：
+打开 /next/\_config.yml,在里面添加如下代码：
 
 	canvas_nest: true
 	
