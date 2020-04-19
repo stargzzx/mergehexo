@@ -211,7 +211,7 @@ tags:
 <b style = 'color:green;'>Tim:</b> Who am I?I'm not the back-door guy.
 
 
-<b style = 'color:green;'>Debble:</b> Yes,you are.You called and said,It's 9
+<b style = 'color:green;'>Debble:</b> Yes,you are.You called and said,It's 9:00 a.m. Cock-a-doodle-doo. Send someone over for some back-door action at Tim's place.
 
 <b style = 'color:green;'>Tim:</b> No,I did not say cock-a-doodle-doo.
 
