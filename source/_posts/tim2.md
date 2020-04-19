@@ -166,7 +166,64 @@ Rondey: This is what I'm doing right now.
 
 tuner: One motherfucker in the house getting it.
 
-tuner: Caged heat! Caged heat! 13:57
+tuner: Caged heat! Caged heat!
+
+Tim: Rodney, I'm begging with you get out of that cage.
+
+Rodney: Why,man? I'm digging this.
+
+Tim: If people show up --
+
+Alan: You're dancing in acage for two guys. All right? This is not your traditional straight man's bachelor party.
+
+Rodney: All right,all right. Cut the music,cut the music.
+
+Tim: Wow, that was incredibly awkward.
+
+Rodney: Man,this is depressing.
+
+Tim: That never happened,okay?
+
+Rodney: No one showed up but you guys.
+
+Alan: I know, and I don't even want to be here.
+
+Rodney: I know that I'm loud and obnoxious...
+
+Alan: True
+
+Rodney: ... and grab people and stuff. But, I don't know. I thought people liked me.
+
+Tim: Rodney,some people like you.
+
+Alan: People know who you are.
+
+Tim: Yeah,you're well-known.
+
+Rodney: Dude,I'm kind of embarrassed to go to work tomorrow. What am I gonna tell everybody?
+
+Tim: We'll make up stories. How's that sound? Make it sound like a crazy fun parth. All your friends were here and everyone will wish they came.
+
+Rodney: You guys would do that for me?
+
+Tim: Yeah,who cares? Yeah
+
+Alan: I don't give a shit.
+
+Tim: All right
+
+Rodney: All right. Yeah,I'm on this,man. Okay, I got it, I got it.
+
+Rodney: Stu,you greaesd up two chicks in the cage and had your way with them while someone was videotaping. It'll be on YouTube next week.
+
+
+
+
+
+
+
+
+
 
 
 
