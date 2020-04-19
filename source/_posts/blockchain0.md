@@ -3,6 +3,7 @@ title: 区块链入门
 date: 2018-07-21 14:21:21
 categories:
 - blockchain
+- 基础
 tags:
 - blockchain
 - BitCoin
