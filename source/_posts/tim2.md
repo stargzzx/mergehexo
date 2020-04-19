@@ -16,682 +16,1020 @@ tags:
 
 <br/>
 
-Tim: Hey,Rondney,everything good?
+<b style = 'color:green;'>Tim:</b> Hey,Rondney,everything good?
 
-Rondey: Yeah,man. Hanging large,know what I mean?
 
-Tim: Uh,kind of.
+<b style = 'color:green;'>Rondey:</b> Yeah,man. Hanging large,know what I mean?
 
-Rondey: Good,good.
 
-Rondey: Hey,you know,Timbo. I've kind of always considered you to be one of my closest frineds,man.
+<b style = 'color:green;'>Tim:</b> Uh,kind of.
 
-Tim: Closest?
 
-Rondey: Yeah.
+<b style = 'color:green;'>Rondey:</b> Good,good.
 
-Tim: We've never spoken outside of the desk area here,you know?
 
-Rondey: Still,you got to know a guy when you make small talk and whatnot.
+<b style = 'color:green;'>Rondey:</b> Hey,you know,Timbo. I've kind of always considered you to be one of my closest frineds,man.
 
-Tim: You know what my last name is?
 
-Rondey: No idea.
+<b style = 'color:green;'>Tim:</b> Closest?
 
-Rnodey: Anyway, I want to invite you and Stu to my bachelor party.
 
-Tim: You're getting married?
+<b style = 'color:green;'>Rondey:</b> Yeah.
 
-Rondey: Yeah.
 
-Tim: To who?
+<b style = 'color:green;'>Tim:</b> We've never spoken outside of the desk area here,you know?
 
-Rondey: Oh,dude,some broad.
 
-Tim: Some broad?
+<b style = 'color:green;'>Rondey:</b> Still,you got to know a guy when you make small talk and whatnot.
 
-Rondey: So here's the deal. The party is going to just be,boom,fantastic. I rented out a club. It's gonna be 20 guys,20 strippers and bam,a midgst.
 
-Tim: There's gonna be a midget at the party?
+<b style = 'color:green;'>Tim:</b> You know what my last name is?
 
-Rondey: I know,a midget,man. You konw what I mean?
 
-Tim: Taht sounds crazy.
+<b style = 'color:green;'>Rondey:</b> No idea.
 
-Alan: Rodney,Rodney.
 
-Rodney: Alan,wha's up?
+<b style = 'color:green;'>Rnodey:</b> Anyway, I want to invite you and Stu to my bachelor party.
 
-Alan: I'm 4'11. All right? 4'11, I'm happy to come to there parties of yours,but please stop telling people I'm a midget,man.
 
-Rondey: Alan,dude,you are a small guy. It's just--
+<b style = 'color:green;'>Tim:</b> You're getting married?
 
-Alan: It's ignorant and hurtful.
 
-Rondey: Come on,dude.
+<b style = 'color:green;'>Rondey:</b> Yeah.
 
-Alan: I'm 4'11.
 
-Rondey: Both of you need to get ready to party Rondey style. You know waht I mean?
+<b style = 'color:green;'>Tim:</b> To who?
 
-Tim: I don't,but--
 
-Rondey: Chicks and midgets. Bam!
+<b style = 'color:green;'>Rondey:</b> Oh,dude,some broad.
 
-Tim: This is partying Rondey style?
 
-Rondey: Yeah, I don't know what to say,man. I mean,maybe everybody's running late.
+<b style = 'color:green;'>Tim:</b> Some broad?
 
-Tim: Everybody?
 
-Stu: What about the strippers?
+<b style = 'color:green;'>Rondey:</b> So here's the deal. The party is going to just be,boom,fantastic. I rented out a club. It's gonna be 20 guys,20 strippers and bam,a midgst.
 
-Rondey: Uh,yeah,they all called in sick.
 
-Tim: All 20?
+<b style = 'color:green;'>Tim:</b> There's gonna be a midget at the party?
 
-Rondey: They said there's some kind of flu bug going around. You know,there was some kind of,like,virtus that was stuck to the pole. Then when they rubbed their junk on it,they all got sick.
 
-Tim: I guess that's the way is goes.
+<b style = 'color:green;'>Rondey:</b> I know,a midget,man. You konw what I mean?
 
-Stu: I read about that online.
 
-tuner: Yo yo yo yo yo yo,gentlemen.
+<b style = 'color:green;'>Tim:</b> Taht sounds crazy.
 
-Tim: Yo?
 
-tuner: You ready to get this party started?
+<b style = 'color:green;'>Alan:</b> Rodney,Rodney.
 
-Tim: I don't think we are,actually.
 
-Rondey: Yes! Please, let's do it. When people finally get here I want this thing to be cracking.
+<b style = 'color:green;'>Rodney:</b> Alan,wha's up?
 
-tuner: All right. Then come on down,motherfuckers!
 
-Tim: Who's he talking to?
+<b style = 'color:green;'>Alan:</b> I'm 4'11. All right? 4'11, I'm happy to come to there parties of yours,but please stop telling people I'm a midget,man.
 
-Stu: He got so angry.
 
-tuner: Let's get this fucking party started!
+<b style = 'color:green;'>Rondey:</b> Alan,dude,you are a small guy. It's just--
 
-Stu: Language
 
-Tim: Yeah,you don't have to curse.
+<b style = 'color:green;'>Alan:</b> It's ignorant and hurtful.
 
-tuner: You,asshole,on the floor.
 
-Tim: Really, I got to stop you tight there.
+<b style = 'color:green;'>Rondey:</b> Come on,dude.
 
-tuner: Now!Now!Now!
 
-Tim: I do not appreciate--
+<b style = 'color:green;'>Alan:</b> I'm 4'11.
 
-Stu: Jesus.
 
-tuner: Let's get this motherfucker popping! Let's start bumping.
+<b style = 'color:green;'>Rondey:</b> Both of you need to get ready to party Rondey style. You know waht I mean?
 
-Stu: I appreciate the rhyme,but I'm still not onboard.
 
-tuner: With bitcher on the floor,we party all the more.
+<b style = 'color:green;'>Tim:</b> I don't,but--
 
-Tim: What did he call us?
 
-Rondey: BItches,dude. We're acting like bitches. Come on,guys. Let's just dance a little bit,please.
+<b style = 'color:green;'>Rondey:</b> Chicks and midgets. Bam!
 
-Tim: The three of us?
 
-Rondey: Tim
+<b style = 'color:green;'>Tim:</b> This is partying Rondey style?
 
-Tim: All right,all right. motherfucker.
 
-Rondey: Yes.
+<b style = 'color:green;'>Rondey:</b> Yeah, I don't know what to say,man. I mean,maybe everybody's running late.
 
-Tim: This bitch is ready to turn it loose.
 
-tuner: Heat! Heat! Dance! Heat! Man meat! Dance!
+<b style = 'color:green;'>Tim:</b> Everybody?
 
-Stu: Is it just me or is this perhaps the gayest bachelor party in the history of the world?
 
-Tim: Got to be top 10.
+<b style = 'color:green;'>Stu:</b> What about the strippers?
 
-Rondey: Guys, I'm getting in cage and I'm taking off my shirt.
 
-Tim: Oh,no
+<b style = 'color:green;'>Rondey:</b> Uh,yeah,they all called in sick.
 
-Stu: Oh,God.
 
-Tim: No, this is not what people do at bachelor parties.
+<b style = 'color:green;'>Tim:</b> All 20?
 
-Rondey: This is what I'm doing right now.
 
-tuner: One motherfucker in the house getting it.
+<b style = 'color:green;'>Rondey:</b> They said there's some kind of flu bug going around. You know,there was some kind of,like,virtus that was stuck to the pole. Then when they rubbed their junk on it,they all got sick.
 
-tuner: Caged heat! Caged heat!
 
-Tim: Rodney, I'm begging with you get out of that cage.
+<b style = 'color:green;'>Tim:</b> I guess that's the way is goes.
 
-Rodney: Why,man? I'm digging this.
 
-Tim: If people show up --
+<b style = 'color:green;'>Stu:</b> I read about that online.
 
-Stu: You're dancing in acage for two guys. All right? This is not your traditional straight man's bachelor party.
 
-Rodney: All right,all right. Cut the music,cut the music.
+<b style = 'color:green;'>tuner:</b> Yo yo yo yo yo yo,gentlemen.
 
-Tim: Wow, that was incredibly awkward.
 
-Rodney: Man,this is depressing.
+<b style = 'color:green;'>Tim:</b> Yo?
 
-Tim: That never happened,okay?
 
-Rodney: No one showed up but you guys.
+<b style = 'color:green;'>tuner:</b> You ready to get this party started?
 
-Stu: I know, and I don't even want to be here.
 
-Rodney: I know that I'm loud and obnoxious...
+<b style = 'color:green;'>Tim:</b> I don't think we are,actually.
 
-Stu: True
 
-Rodney: ... and grab people and stuff. But, I don't know. I thought people liked me.
+<b style = 'color:green;'>Rondey:</b> Yes! Please, let's do it. When people finally get here I want this thing to be cracking.
 
-Tim: Rodney,some people like you.
 
-Stu: People know who you are.
+<b style = 'color:green;'>tuner:</b> All right. Then come on down,motherfuckers!
 
-Tim: Yeah,you're well-known.
 
-Rodney: Dude,I'm kind of embarrassed to go to work tomorrow. What am I gonna tell everybody?
+<b style = 'color:green;'>Tim:</b> Who's he talking to?
 
-Tim: We'll make up stories. How's that sound? Make it sound like a crazy fun parth. All your friends were here and everyone will wish they came.
 
-Rodney: You guys would do that for me?
+<b style = 'color:green;'>Stu:</b> He got so angry.
 
-Tim: Yeah,who cares? Yeah
 
-Stu: I don't give a shit.
+<b style = 'color:green;'>tuner:</b> Let's get this fucking party started!
 
-Tim: All right
 
-Rodney: All right. Yeah,I'm on this,man. Okay, I got it, I got it.
+<b style = 'color:green;'>Stu:</b> Language
 
-Rodney: Stu,you greaesd up two chicks in the cage and had your way with them while someone was videotaping. It'll be on YouTube next week.
 
-Stu: I can't wait to see the footage.
+<b style = 'color:green;'>Tim:</b> Yeah,you don't have to curse.
 
-Rodney: And me,uh, the bartender gave me this look and I was like "what?" And he was like "waht?" And then I kicked his ass.
 
-Tim: That's pretty good. That sounds like a fun party. How about me? What did I do?
+<b style = 'color:green;'>tuner:</b> You,asshole,on the floor.
 
-Rodney: Oh,oh,Timbo,you just threw up all over yourself and then you went home early.
 
-Tim: What? No.
+<b style = 'color:green;'>Tim:</b> Really, I got to stop you tight there.
 
-Rodney: It's perfect.
 
-Tim: No,give me a good story. Give me something with a stripper.
+<b style = 'color:green;'>tuner:</b> Now!Now!Now!
 
-Stu: You puked on a stripper.
 
-Tim: Why am I puking at all?
+<b style = 'color:green;'>Tim:</b> I do not appreciate--
 
-Rodney: It fits you.
 
-Tim: No,it doesn't.
+<b style = 'color:green;'>Stu:</b> Jesus.
 
-Rodney: Totally. Like a glove.
 
-Tim: Let's do something with me in the cage with like a --
+<b style = 'color:green;'>tuner:</b> Let's get this motherfucker popping! Let's start bumping.
 
-Rodney: I got it. Tim drank too much and took a dump in his pants.
 
-Rodney: Oh,perfect
+<b style = 'color:green;'>Stu:</b> I appreciate the rhyme,but I'm still not onboard.
 
-Tim: I don't like this story. I don't like the general themes you're exploring.
 
-Stu: Tim, if we exaggerate no one will believe us.
+<b style = 'color:green;'>tuner:</b> With bitcher on the floor,we party all the more.
 
-Rodney: It has to be authentic to you, who you are around the office and stuff.
 
-Tim: That's who I am?
+<b style = 'color:green;'>Tim:</b> What did he call us?
 
-Stu: Yeah. Remember, we're doing this for Rodney.
 
-Rodney: Yeah,come on,Tim.
+<b style = 'color:green;'>Rondey:</b> BItches,dude. We're acting like bitches. Come on,guys. Let's just dance a little bit,please.
 
-Tim: Let's just come up with a good one for me.
 
-Rodney: All right, Tim,You know what? Let me sleep on it and I'll have something good for you in the morning.
+<b style = 'color:green;'>Tim:</b> The three of us?
 
-Tim: Something fun?
 
-Rodney: Fun,exciting, You know,but authentic.
+<b style = 'color:green;'>Rondey:</b> Tim
 
-Rondey: Oh,dude,you should've been there. It was like midgets everywhere.
 
-Alan: Oh my god.
+<b style = 'color:green;'>Tim:</b> All right,all right. motherfucker.
 
-Rodney: And you should have seen Stu.
 
-Alan: Yeah?
+<b style = 'color:green;'>Rondey:</b> Yes.
 
-Rodney: He's in this cage with this chick that's dressed up like a cheetah and he's like in this safari outfit but he's got like this big tub of Vaseline and he's just like rubbing it all over and making out with her. You know what I mean?
+
+<b style = 'color:green;'>Tim:</b> This bitch is ready to turn it loose.
+
+
+<b style = 'color:green;'>tuner:</b> Heat! Heat! Dance! Heat! Man meat! Dance!
+
+
+<b style = 'color:green;'>Stu:</b> Is it just me or is this perhaps the gayest bachelor party in the history of the world?
+
+
+<b style = 'color:green;'>Tim:</b> Got to be top 10.
+
+
+<b style = 'color:green;'>Rondey:</b> Guys, I'm getting in cage and I'm taking off my shirt.
+
+
+<b style = 'color:green;'>Tim:</b> Oh,no
+
+
+<b style = 'color:green;'>Stu:</b> Oh,God.
+
+
+<b style = 'color:green;'>Tim:</b> No, this is not what people do at bachelor parties.
+
+
+<b style = 'color:green;'>Rondey:</b> This is what I'm doing right now.
+
+
+<b style = 'color:green;'>tuner:</b> One motherfucker in the house getting it.
+
+
+<b style = 'color:green;'>tuner:</b> Caged heat! Caged heat!
+
+
+<b style = 'color:green;'>Tim:</b> Rodney, I'm begging with you get out of that cage.
+
+
+<b style = 'color:green;'>Rodney:</b> Why,man? I'm digging this.
+
+
+<b style = 'color:green;'>Tim:</b> If people show up --
+
+
+<b style = 'color:green;'>Stu:</b> You're dancing in acage for two guys. All right? This is not your traditional straight man's bachelor party.
+
+
+<b style = 'color:green;'>Rodney:</b> All right,all right. Cut the music,cut the music.
+
+
+<b style = 'color:green;'>Tim:</b> Wow, that was incredibly awkward.
+
+
+<b style = 'color:green;'>Rodney:</b> Man,this is depressing.
+
+
+<b style = 'color:green;'>Tim:</b> That never happened,okay?
+
+
+<b style = 'color:green;'>Rodney:</b> No one showed up but you guys.
+
+
+<b style = 'color:green;'>Stu:</b> I know, and I don't even want to be here.
+
+
+<b style = 'color:green;'>Rodney:</b> I know that I'm loud and obnoxious...
+
+
+<b style = 'color:green;'>Stu:</b> True
+
+
+<b style = 'color:green;'>Rodney:</b> ... and grab people and stuff. But, I don't know. I thought people liked me.
+
+
+<b style = 'color:green;'>Tim:</b> Rodney,some people like you.
+
+
+<b style = 'color:green;'>Stu:</b> People know who you are.
+
+
+<b style = 'color:green;'>Tim:</b> Yeah,you're well-known.
+
+
+<b style = 'color:green;'>Rodney:</b> Dude,I'm kind of embarrassed to go to work tomorrow. What am I gonna tell everybody?
+
+
+<b style = 'color:green;'>Tim:</b> We'll make up stories. How's that sound? Make it sound like a crazy fun parth. All your friends were here and everyone will wish they came.
+
+
+<b style = 'color:green;'>Rodney:</b> You guys would do that for me?
+
+
+<b style = 'color:green;'>Tim:</b> Yeah,who cares? Yeah
+
+
+<b style = 'color:green;'>Stu:</b> I don't give a shit.
+
+
+<b style = 'color:green;'>Tim:</b> All right
+
+
+<b style = 'color:green;'>Rodney:</b> All right. Yeah,I'm on this,man. Okay, I got it, I got it.
+
+
+<b style = 'color:green;'>Rodney:</b> Stu,you greaesd up two chicks in the cage and had your way with them while someone was videotaping. It'll be on YouTube next week.
+
+
+<b style = 'color:green;'>Stu:</b> I can't wait to see the footage.
+
+
+<b style = 'color:green;'>Rodney:</b> And me,uh, the bartender gave me this look and I was like "what?" And he was like "waht?" And then I kicked his ass.
+
+
+<b style = 'color:green;'>Tim:</b> That's pretty good. That sounds like a fun party. How about me? What did I do?
+
+
+<b style = 'color:green;'>Rodney:</b> Oh,oh,Timbo,you just threw up all over yourself and then you went home early.
+
+
+<b style = 'color:green;'>Tim:</b> What? No.
+
+
+<b style = 'color:green;'>Rodney:</b> It's perfect.
+
+
+<b style = 'color:green;'>Tim:</b> No,give me a good story. Give me something with a stripper.
+
+
+<b style = 'color:green;'>Stu:</b> You puked on a stripper.
+
+
+<b style = 'color:green;'>Tim:</b> Why am I puking at all?
+
+
+<b style = 'color:green;'>Rodney:</b> It fits you.
+
+
+<b style = 'color:green;'>Tim:</b> No,it doesn't.
+
+
+<b style = 'color:green;'>Rodney:</b> Totally. Like a glove.
+
+
+<b style = 'color:green;'>Tim:</b> Let's do something with me in the cage with like a --
+
+
+<b style = 'color:green;'>Rodney:</b> I got it. Tim drank too much and took a dump in his pants.
+
+
+<b style = 'color:green;'>Rodney:</b> Oh,perfect
+
+
+<b style = 'color:green;'>Tim:</b> I don't like this story. I don't like the general themes you're exploring.
+
+
+<b style = 'color:green;'>Stu:</b> Tim, if we exaggerate no one will believe us.
+
+
+<b style = 'color:green;'>Rodney:</b> It has to be authentic to you, who you are around the office and stuff.
+
+
+<b style = 'color:green;'>Tim:</b> That's who I am?
+
+
+<b style = 'color:green;'>Stu:</b> Yeah. Remember, we're doing this for Rodney.
+
+
+<b style = 'color:green;'>Rodney:</b> Yeah,come on,Tim.
+
+
+<b style = 'color:green;'>Tim:</b> Let's just come up with a good one for me.
+
+
+<b style = 'color:green;'>Rodney:</b> All right, Tim,You know what? Let me sleep on it and I'll have something good for you in the morning.
+
+
+<b style = 'color:green;'>Tim:</b> Something fun?
+
+
+<b style = 'color:green;'>Rodney:</b> Fun,exciting, You know,but authentic.
+
+
+<b style = 'color:green;'>Rondey:</b> Oh,dude,you should've been there. It was like midgets everywhere.
+
+
+<b style = 'color:green;'>Alan:</b> Oh my god.
+
+
+<b style = 'color:green;'>Rodney:</b> And you should have seen Stu.
+
+
+<b style = 'color:green;'>Alan:</b> Yeah?
+
+
+<b style = 'color:green;'>Rodney:</b> He's in this cage with this chick that's dressed up like a cheetah and he's like in this safari outfit but he's got like this big tub of Vaseline and he's just like rubbing it all over and making out with her. You know what I mean?
+
 And I was just getting mine too. It was cool.
 
-passer: Oh,man, I always miss the --
+<b style = 'color:green;'>passer:</b> Oh,man, I always miss the --
 
-Tim: Hey. The boss wants to see me? Is that true?
 
-Rodney: Yeah,yeah. You can head right in.
+<b style = 'color:green;'>Tim:</b> Hey. The boss wants to see me? Is that true?
 
-Tim: All right. Sorry for interrupting.
 
-passer: Hey, Tim
+<b style = 'color:green;'>Rodney:</b> Yeah,yeah. You can head right in.
 
-Tim: Yeah?
 
-passer: It's gonna be okay,man. I mean,I -- just keep your head up high.
+<b style = 'color:green;'>Tim:</b> All right. Sorry for interrupting.
 
-Tim: All right.
 
-Boss: Ah,Timothy.
+<b style = 'color:green;'>passer:</b> Hey, Tim
 
-Tim: Yes?
 
-Boss: Come in,come in. Close the door too,please.
+<b style = 'color:green;'>Tim:</b> Yeah?
 
-Tim: Close the door?
 
-Boss: Yeah,shut the door.
+<b style = 'color:green;'>passer:</b> It's gonna be okay,man. I mean,I -- just keep your head up high.
 
-Tim: Okay.
 
-Boss: Sit down,please. Or don't sit. You don't have to sit.
+<b style = 'color:green;'>Tim:</b> All right.
 
-Tim: I'll stand.
 
-Boss: Great.
+<b style = 'color:green;'>Boss:</b> Ah,Timothy.
 
-Boss: Hi
 
-Tim: Hey.
+<b style = 'color:green;'>Tim:</b> Yes?
 
-Boss: I understand you attended Rodney's bachelor party last night.
 
-Tim: Oh,that. Yeah,we had a good time.
+<b style = 'color:green;'>Boss:</b> Come in,come in. Close the door too,please.
 
-Boss: Really? You had a great time?
 
-Tim: So much fun.
+<b style = 'color:green;'>Tim:</b> Close the door?
 
-Boss: Huh
 
-Tim: Rodney had a lot of friends there.
+<b style = 'color:green;'>Boss:</b> Yeah,shut the door.
 
-Boss: Right
 
-Tim: It got pretty nuts. A lot of good close friends.
+<b style = 'color:green;'>Tim:</b> Okay.
 
-Boss: Listen, I'm all for some light-hearted shenanigans,but I have to say that I'm a little concerned about you in particular.
 
-Tim: What did -- I was just at the party.
+<b style = 'color:green;'>Boss:</b> Sit down,please. Or don't sit. You don't have to sit.
 
-Boss: Hmm,really?
 
-Tim: Yeah.
+<b style = 'color:green;'>Tim:</b> I'll stand.
 
-Boss: I'm hearing a couple of stories and your story strikes me as just a little freaky.
 
-Tim: My story?
+<b style = 'color:green;'>Boss:</b> Great.
 
-Boss: Yeah.
 
-Tim: Did I,um-- did I do something with a stripper? I don't even remember.
+<b style = 'color:green;'>Boss:</b> Hi
 
-Boss: No no.
 
-Tim: What did I do?
+<b style = 'color:green;'>Tim:</b> Hey.
 
-Boss: Well,it's my understanding that you were raped by a bum.
 
-Tim: Come again?
+<b style = 'color:green;'>Boss:</b> I understand you attended Rodney's bachelor party last night.
 
-Boss: Raped by a bum.
 
-Tim: No,no, my story -- I kicked some guy's ass.
+<b style = 'color:green;'>Tim:</b> Oh,that. Yeah,we had a good time.
 
-Boss: No,you were reped by a bum.
 
-Tim: And I went home with a stripper.
+<b style = 'color:green;'>Boss:</b> Really? You had a great time?
 
-Boss: I'm sorry. I'm confused. Are you saying Rodney's a liar?
 
-Tim: Um ...  can I have a minute?
+<b style = 'color:green;'>Tim:</b> So much fun.
 
-Tim: Rodney?
 
-Rodney: Yeah?
+<b style = 'color:green;'>Boss:</b> Huh
 
-Tim: Raped by a bum?
 
-Rodney: Right in the backside. You know what I mean?
+<b style = 'color:green;'>Tim:</b> Rodney had a lot of friends there.
 
-Tim: That's not a good story.
 
-Rodney: Why not,man? It fits you.
+<b style = 'color:green;'>Boss:</b> Right
 
-Tim: It fits me?
 
-Rodney: Yeah,you're like a frail guy. I can see like some homeless drunk taking advantage of you.
+<b style = 'color:green;'>Tim:</b> It got pretty nuts. A lot of good close friends.
 
-Tim: No,it's not a good story.
 
-Rodney: If you're not into it -- 
+<b style = 'color:green;'>Boss:</b> Listen, I'm all for some light-hearted shenanigans,but I have to say that I'm a little concerned about you in particular.
 
-Tim: Get in there,tell him the truth.
 
-Rodney: Okay,fine.
+<b style = 'color:green;'>Tim:</b> What did -- I was just at the party.
 
-Rodney: Yeah,I'm a good storyteller. Tim, I'll rework it.
 
-Tim: Let's rework it a lot.
+<b style = 'color:green;'>Boss:</b> Hmm,really?
 
-Rodney: Yeah.
 
-Rodney: Hey, boss. Uh, I wanted to clear something up with you.
+<b style = 'color:green;'>Tim:</b> Yeah.
 
-Boss: Yes, Rodney,go.
 
-Rodney: You're not gonna believe this,but there was a misunderstanding between you and me earlier.
+<b style = 'color:green;'>Boss:</b> I'm hearing a couple of stories and your story strikes me as just a little freaky.
 
-Boss: Oh?
 
-Rodney: This is crazy. Tim wasn't reped by a bum.
+<b style = 'color:green;'>Tim:</b> My story?
 
-Boss: He -- he wasn't raped?
 
-Rodney: No, I thought I made this clear, but he actually bought drapes for a bum.
+<b style = 'color:green;'>Boss:</b> Yeah.
 
-Boss: Draped? You bought drapes for a bum?
 
-Tim: I did. I bought drapes. I,um--
+<b style = 'color:green;'>Tim:</b> Did I,um-- did I do something with a stripper? I don't even remember.
 
-Rodney: He left the party and -- 
 
-Tim: I just cut out and went to Bloomingdale's 
+<b style = 'color:green;'>Boss:</b> No no.
 
-Boss: I don't believe you.
 
-Tim: You don't believe me?
+<b style = 'color:green;'>Tim:</b> What did I do?
 
-Boss: No, I don't believe either of you.
 
-Rodney: Okay.
+<b style = 'color:green;'>Boss:</b> Well,it's my understanding that you were raped by a bum.
 
-Tim: Okay? What happened?
 
-Boss: Rodney.
+<b style = 'color:green;'>Tim:</b> Come again?
 
-Rodney: What?
 
-Boss: It's very noble of you to try and cover for Tim, but the reality is a bum stuck his penis inside of Tim. That much has been established. It's clear.
+<b style = 'color:green;'>Boss:</b> Raped by a bum.
 
-Tim: Let's not lock that down just yet.
 
-Boss: Tim,It's been established.
+<b style = 'color:green;'>Tim:</b> No,no, my story -- I kicked some guy's ass.
 
-Tim: Please stop saying that.
 
-Boss: No,it's true.It happened.
+<b style = 'color:green;'>Boss:</b> No,you were reped by a bum.
 
-Tim: That did not -- the details of it--
 
-Rodney: He bought drapes.
+<b style = 'color:green;'>Tim:</b> And I went home with a stripper.
 
-Boss: Tim, I'm sending you to Human Resources for some mandatory counseling.
 
-Tim: Counseling?
+<b style = 'color:green;'>Boss:</b> I'm sorry. I'm confused. Are you saying Rodney's a liar?
 
-Boss: Counseling.
 
-Boss: Marie
+<b style = 'color:green;'>Tim:</b> Um ...  can I have a minute?
 
-Tim: Don't bother Marie.
 
-Boss: I'm sending Tim down your way.
+<b style = 'color:green;'>Tim:</b> Rodney?
 
-Marie: Because he was raped by a bum last night?
 
-Boss: Exactly
+<b style = 'color:green;'>Rodney:</b> Yeah?
 
-Marie: All right
 
-Tim: Wow, word travels fast.
+<b style = 'color:green;'>Tim:</b> Raped by a bum?
 
-Tim: Hey,Marie
 
-Marie: Tim,how are you?
+<b style = 'color:green;'>Rodney:</b> Right in the backside. You know what I mean?
 
-Tim: Doing all right.
 
-Marie: I have a couple of questions.
+<b style = 'color:green;'>Tim:</b> That's not a good story.
 
-Tim: All right,ley's just --
 
-Marie: We'll just wrap this up.
+<b style = 'color:green;'>Rodney:</b> Why not,man? It fits you.
 
-Tim: Yeah.
 
-Marie: And then you can put this entire ordeal behind you ...
+<b style = 'color:green;'>Tim:</b> It fits me?
 
-Tim: That's what I --
 
-Marie: So to speak.
+<b style = 'color:green;'>Rodney:</b> Yeah,you're like a frail guy. I can see like some homeless drunk taking advantage of you.
 
-TIm: Behind me.
 
-Marie: Just a little bum-rape humor. I'm sorry.
+<b style = 'color:green;'>Tim:</b> No,it's not a good story.
 
-Tim: Bum rape humor? That's not a genre of humor.
 
-Marie: Anyway, if you could describe exactly what happened between you and this homeless man.
+<b style = 'color:green;'>Rodney:</b> If you're not into it -- 
 
-Tim: To be prefectly honest ...
 
-Marie: Yes,please.
+<b style = 'color:green;'>Tim:</b> Get in there,tell him the truth.
 
-Tim: It never happened. The event did not take place.
 
-Marie: Tim,you're in denial.
+<b style = 'color:green;'>Rodney:</b> Okay,fine.
 
-Tim: No,I'm coming clean.
 
-Marie: No. You continue to say no. That's an indication of denial.
+<b style = 'color:green;'>Rodney:</b> Yeah,I'm a good storyteller. Tim, I'll rework it.
 
-Tim: No.
 
-Marie: No,See? It's right there.
+<b style = 'color:green;'>Tim:</b> Let's rework it a lot.
 
-Marie: Tim, I'm worried. I'm afraid this man could strike again.
 
-Tim: No,let's just assume that's not gonna happen.
+<b style = 'color:green;'>Rodney:</b> Yeah.
 
-Marie: We can't take the chance. I'm gonna need to contact the police.
 
-Tim: He seemed like a good guy. Don't bug him.
+<b style = 'color:green;'>Rodney:</b> Hey, boss. Uh, I wanted to clear something up with you.
 
-Marice: I need to call the cops right now.
 
-Tim: No,no,don't call them.
+<b style = 'color:green;'>Boss:</b> Yes, Rodney,go.
 
-Marie: Tim,it's Omnicorp policy.
 
-Tim: Omnicorp has a policy on bum rape?
+<b style = 'color:green;'>Rodney:</b> You're not gonna believe this,but there was a misunderstanding between you and me earlier.
 
-Marie: My hands are tied ... as I'm sure yours were. hahahahaha, I'm sorry.
 
-Tim: You should not be the HR lady. You really should not.
+<b style = 'color:green;'>Boss:</b> Oh?
 
-Marie: Oh,man,Yeah.
 
-police-1: Hey,Tim. Thanks for coming by.
+<b style = 'color:green;'>Rodney:</b> This is crazy. Tim wasn't reped by a bum.
 
-Tim: Okay.
 
-police-1: Listen,we rounded up all the homeless men within a live-block radius of the crime site. All we need is a positive ID of this bum and you can be on your way back home,okay?
+<b style = 'color:green;'>Boss:</b> He -- he wasn't raped?
 
-Tim: Whatever puts this to an end.
 
-police-1: Great. Bum number one, please reenact the crime.
+<b style = 'color:green;'>Rodney:</b> No, I thought I made this clear, but he actually bought drapes for a bum.
 
-bum-1: Uh, what do I do?
 
-police-1: You've got to pretend you're having sexual relationships with this man.
+<b style = 'color:green;'>Boss:</b> Draped? You bought drapes for a bum?
 
-bum-1: With this guy? Can I touch him?
 
-police-1: Can you touch him?
+<b style = 'color:green;'>Tim:</b> I did. I bought drapes. I,um--
 
-Tim: No,no.
 
-police-1: That might be good for you,Tim.
+<b style = 'color:green;'>Rodney:</b> He left the party and -- 
 
-Tim: No.
 
-police-1: It's very realistic to be touched. Maybe that'll help.
+<b style = 'color:green;'>Tim:</b> I just cut out and went to Bloomingdale's 
 
-plice-1: You know what? Yes,touch him, bum.
 
-bum-1: All right.
+<b style = 'color:green;'>Boss:</b> I don't believe you.
 
-Tim: That's really the way you do there thing?
 
-bum-1: Here we go.
+<b style = 'color:green;'>Tim:</b> You don't believe me?
 
-Tim: No.it's not him.It's not the guy.Let's get number two.
 
-police-1: That's not the guy?
+<b style = 'color:green;'>Boss:</b> No, I don't believe either of you.
 
-Tim: It's so not the guy.
 
-police-1: Really,you sure?
+<b style = 'color:green;'>Rodney:</b> Okay.
 
-Tim: I'm so positive.
 
-police-1: Maybe it'll jog your memory if he took his clothes off.
+<b style = 'color:green;'>Tim:</b> Okay? What happened?
 
-Tim: No, that would not help.
 
-police-1: Bum number one ... 
+<b style = 'color:green;'>Boss:</b> Rodney.
 
-Tim: I want to go ...
 
-police-1: Could you please get naked for us?
+<b style = 'color:green;'>Rodney:</b> What?
 
-bum-1: All right
 
-Tim: This is not how lineups usually work.
+<b style = 'color:green;'>Boss:</b> It's very noble of you to try and cover for Tim, but the reality is a bum stuck his penis inside of Tim. That much has been established. It's clear.
 
-bum-1: That's better.
 
-police-1: That doesn't help at all?
+<b style = 'color:green;'>Tim:</b> Let's not lock that down just yet.
 
-Tim: It doesm't.
 
-police-1: You sure,Tim?
+<b style = 'color:green;'>Boss:</b> Tim,It's been established.
 
-Tim: It was dark. It was behind a dumpster.
 
-police-1: Look at his body.
+<b style = 'color:green;'>Tim:</b> Please stop saying that.
 
-bum-1: Yeah.
 
-police-1: Get a good look at his body,Tim.
+<b style = 'color:green;'>Boss:</b> No,it's true.It happened.
 
-Tim: My face was in the dirt.
 
-police-2: whoa,hey,Excuse me.
+<b style = 'color:green;'>Tim:</b> That did not -- the details of it--
 
-police-2: Sergant,we have a development on this case here.
 
-police-1: What's the development?
+<b style = 'color:green;'>Rodney:</b> He bought drapes.
 
-Tim: Development?
 
-police-2: We got the security tape from the crime site. It's pretty revealing.
+<b style = 'color:green;'>Boss:</b> Tim, I'm sending you to Human Resources for some mandatory counseling.
 
-police-1: why do you keep talking? Put it in.
 
-police-2: All right.
+<b style = 'color:green;'>Tim:</b> Counseling?
 
-Tim: Security rape?
 
-Tim: Who's that?
+<b style = 'color:green;'>Boss:</b> Counseling.
 
-police-1: Looks like you,Tim.
 
-Tim: Those taped are so grainy.
+<b style = 'color:green;'>Boss:</b> Marie
+
+
+<b style = 'color:green;'>Tim:</b> Don't bother Marie.
+
+
+<b style = 'color:green;'>Boss:</b> I'm sending Tim down your way.
+
+
+<b style = 'color:green;'>Marie:</b> Because he was raped by a bum last night?
+
+
+<b style = 'color:green;'>Boss:</b> Exactly
+
+
+<b style = 'color:green;'>Marie:</b> All right
+
+
+<b style = 'color:green;'>Tim:</b> Wow, word travels fast.
+
+
+<b style = 'color:green;'>Tim:</b> Hey,Marie
+
+
+<b style = 'color:green;'>Marie:</b> Tim,how are you?
+
+
+<b style = 'color:green;'>Tim:</b> Doing all right.
+
+
+<b style = 'color:green;'>Marie:</b> I have a couple of questions.
+
+
+<b style = 'color:green;'>Tim:</b> All right,ley's just --
+
+
+<b style = 'color:green;'>Marie:</b> We'll just wrap this up.
+
+
+<b style = 'color:green;'>Tim:</b> Yeah.
+
+
+<b style = 'color:green;'>Marie:</b> And then you can put this entire ordeal behind you ...
+
+
+<b style = 'color:green;'>Tim:</b> That's what I --
+
+
+<b style = 'color:green;'>Marie:</b> So to speak.
+
+
+<b style = 'color:green;'>TIm:</b> Behind me.
+
+
+<b style = 'color:green;'>Marie:</b> Just a little bum-rape humor. I'm sorry.
+
+
+<b style = 'color:green;'>Tim:</b> Bum rape humor? That's not a genre of humor.
+
+
+<b style = 'color:green;'>Marie:</b> Anyway, if you could describe exactly what happened between you and this homeless man.
+
+
+<b style = 'color:green;'>Tim:</b> To be prefectly honest ...
+
+
+<b style = 'color:green;'>Marie:</b> Yes,please.
+
+
+<b style = 'color:green;'>Tim:</b> It never happened. The event did not take place.
+
+
+<b style = 'color:green;'>Marie:</b> Tim,you're in denial.
+
+
+<b style = 'color:green;'>Tim:</b> No,I'm coming clean.
+
+
+<b style = 'color:green;'>Marie:</b> No. You continue to say no. That's an indication of denial.
+
+
+<b style = 'color:green;'>Tim:</b> No.
+
+
+<b style = 'color:green;'>Marie:</b> No,See? It's right there.
+
+
+<b style = 'color:green;'>Marie:</b> Tim, I'm worried. I'm afraid this man could strike again.
+
+
+<b style = 'color:green;'>Tim:</b> No,let's just assume that's not gonna happen.
+
+
+<b style = 'color:green;'>Marie:</b> We can't take the chance. I'm gonna need to contact the police.
+
+
+<b style = 'color:green;'>Tim:</b> He seemed like a good guy. Don't bug him.
+
+
+<b style = 'color:green;'>Marice:</b> I need to call the cops right now.
+
+
+<b style = 'color:green;'>Tim:</b> No,no,don't call them.
+
+
+<b style = 'color:green;'>Marie:</b> Tim,it's Omnicorp policy.
+
+
+<b style = 'color:green;'>Tim:</b> Omnicorp has a policy on bum rape?
+
+
+<b style = 'color:green;'>Marie:</b> My hands are tied ... as I'm sure yours were. hahahahaha, I'm sorry.
+
+
+<b style = 'color:green;'>Tim:</b> You should not be the HR lady. You really should not.
+
+
+<b style = 'color:green;'>Marie:</b> Oh,man,Yeah.
+
+
+<b style = 'color:green;'>police-1:</b> Hey,Tim. Thanks for coming by.
+
+
+<b style = 'color:green;'>Tim:</b> Okay.
+
+
+<b style = 'color:green;'>police-1:</b> Listen,we rounded up all the homeless men within a live-block radius of the crime site. All we need is a positive ID of this bum and you can be on your way back home,okay?
+
+
+<b style = 'color:green;'>Tim:</b> Whatever puts this to an end.
+
+
+<b style = 'color:green;'>police-1:</b> Great. Bum number one, please reenact the crime.
+
+
+<b style = 'color:green;'>bum-1:</b> Uh, what do I do?
+
+
+<b style = 'color:green;'>police-1:</b> You've got to pretend you're having sexual relationships with this man.
+
+
+<b style = 'color:green;'>bum-1:</b> With this guy? Can I touch him?
+
+
+<b style = 'color:green;'>police-1:</b> Can you touch him?
+
+
+<b style = 'color:green;'>Tim:</b> No,no.
+
+
+<b style = 'color:green;'>police-1:</b> That might be good for you,Tim.
+
+
+<b style = 'color:green;'>Tim:</b> No.
+
+
+<b style = 'color:green;'>police-1:</b> It's very realistic to be touched. Maybe that'll help.
+
+
+<b style = 'color:green;'>plice-1:</b> You know what? Yes,touch him, bum.
+
+
+<b style = 'color:green;'>bum-1:</b> All right.
+
+
+<b style = 'color:green;'>Tim:</b> That's really the way you do there thing?
+
+
+<b style = 'color:green;'>bum-1:</b> Here we go.
+
+
+<b style = 'color:green;'>Tim:</b> No.it's not him.It's not the guy.Let's get number two.
+
+
+<b style = 'color:green;'>police-1:</b> That's not the guy?
+
+
+<b style = 'color:green;'>Tim:</b> It's so not the guy.
+
+
+<b style = 'color:green;'>police-1:</b> Really,you sure?
+
+
+<b style = 'color:green;'>Tim:</b> I'm so positive.
+
+
+<b style = 'color:green;'>police-1:</b> Maybe it'll jog your memory if he took his clothes off.
+
+
+<b style = 'color:green;'>Tim:</b> No, that would not help.
+
+
+<b style = 'color:green;'>police-1:</b> Bum number one ... 
+
+
+<b style = 'color:green;'>Tim:</b> I want to go ...
+
+
+<b style = 'color:green;'>police-1:</b> Could you please get naked for us?
+
+
+<b style = 'color:green;'>bum-1:</b> All right
+
+
+<b style = 'color:green;'>Tim:</b> This is not how lineups usually work.
+
+
+<b style = 'color:green;'>bum-1:</b> That's better.
+
+
+<b style = 'color:green;'>police-1:</b> That doesn't help at all?
+
+
+<b style = 'color:green;'>Tim:</b> It doesm't.
+
+
+<b style = 'color:green;'>police-1:</b> You sure,Tim?
+
+
+<b style = 'color:green;'>Tim:</b> It was dark. It was behind a dumpster.
+
+
+<b style = 'color:green;'>police-1:</b> Look at his body.
+
+
+<b style = 'color:green;'>bum-1:</b> Yeah.
+
+
+<b style = 'color:green;'>police-1:</b> Get a good look at his body,Tim.
+
+
+<b style = 'color:green;'>Tim:</b> My face was in the dirt.
+
+
+<b style = 'color:green;'>police-2:</b> whoa,hey,Excuse me.
+
+
+<b style = 'color:green;'>police-2:</b> Sergant,we have a development on this case here.
+
+
+<b style = 'color:green;'>police-1:</b> What's the development?
+
+
+<b style = 'color:green;'>Tim:</b> Development?
+
+
+<b style = 'color:green;'>police-2:</b> We got the security tape from the crime site. It's pretty revealing.
+
+
+<b style = 'color:green;'>police-1:</b> why do you keep talking? Put it in.
+
+
+<b style = 'color:green;'>police-2:</b> All right.
+
+
+<b style = 'color:green;'>Tim:</b> Security rape?
+
+
+<b style = 'color:green;'>Tim:</b> Who's that?
+
+
+<b style = 'color:green;'>police-1:</b> Looks like you,Tim.
+
+
+<b style = 'color:green;'>Tim:</b> Those taped are so grainy.
+
 
 ... ...
 
 
-police-1: I got a question for you,Tim.
+<b style = 'color:green;'>police-1:</b> I got a question for you,Tim.
 
-Tim: Yeah?
 
-police-1: There was no bum rape,was there?
+<b style = 'color:green;'>Tim:</b> Yeah?
 
-Tim: You know what? I've got to come clean here. There was no bum rape. It never happened.
 
-Tim: I'm glad we settled this.
+<b style = 'color:green;'>police-1:</b> There was no bum rape,was there?
 
-police-2: Never happened?
 
-Tim: Sorry to inconvenience you guys.I'll be on my way.
+<b style = 'color:green;'>Tim:</b> You know what? I've got to come clean here. There was no bum rape. It never happened.
 
-police-1: Oh,no.
 
-Tim: And sorry to inconvenience the bums.
+<b style = 'color:green;'>Tim:</b> I'm glad we settled this.
 
-police-1: no,no,no, It's not gonna happen,like that,Tim.
 
-Tim: No? 
+<b style = 'color:green;'>police-2:</b> Never happened?
 
-police-1: No. What was this?
 
-Tim: What do you mean?
+<b style = 'color:green;'>Tim:</b> Sorry to inconvenience you guys.I'll be on my way.
 
-police-1: Was this your 15 minutes of fame?
 
-Tim: Fame? No
+<b style = 'color:green;'>police-1:</b> Oh,no.
 
-police-1: Yeah,you want to be on "60 Minutes"? You wanna go, "Oh,look at me,I'm Tim". I'm the guy who got raped by a bum.
 
-Tim: No, That's the opposite of what I want.
+<b style = 'color:green;'>Tim:</b> And sorry to inconvenience the bums.
 
-police-1: Want to shank hands with Oprah Winfrey?
 
-Tim: Not radlly.
+<b style = 'color:green;'>police-1:</b> no,no,no, It's not gonna happen,like that,Tim.
 
-police-1: You wanna go on "The view"
 
-Tim: No no. I'd like for this to fly under the radar.
+<b style = 'color:green;'>Tim:</b> No? 
 
-police-1: No,you're gonna get your wish,sonny boy.
 
-Tim: Iam?
+<b style = 'color:green;'>police-1:</b> No. What was this?
 
-police-1: You're getting your big old wish.
 
-Tim: No,please don't give me my wish.
+<b style = 'color:green;'>Tim:</b> What do you mean?
 
-police-1: I'm gonna give you a wish. Either go on TV or you're going in jail. Your choice, Timmy.
 
-Tim: Those aren't good choices.
+<b style = 'color:green;'>police-1:</b> Was this your 15 minutes of fame?
 
-60 Minutes: Tonight on "60 Minutes" ... the Chinese economy shows no signs of slowing but at what cost to the environment? Then a one-on-one with Tim who was raped by a bum behind a filthy dumpster.
 
-Tim: What was it like? Anyone that;s been raped by a bum knows the drill. He pretty much took his pants off and went crazy.
+<b style = 'color:green;'>Tim:</b> Fame? No
 
-Amy: Waht the fuck?
 
-Tim: Did I not tell you that story.
+<b style = 'color:green;'>police-1:</b> Yeah,you want to be on "60 Minutes"? You wanna go, "Oh,look at me,I'm Tim". I'm the guy who got raped by a bum.
+
+
+<b style = 'color:green;'>Tim:</b> No, That's the opposite of what I want.
+
+
+<b style = 'color:green;'>police-1:</b> Want to shank hands with Oprah Winfrey?
+
+
+<b style = 'color:green;'>Tim:</b> Not radlly.
+
+
+<b style = 'color:green;'>police-1:</b> You wanna go on "The view"
+
+
+<b style = 'color:green;'>Tim:</b> No no. I'd like for this to fly under the radar.
+
+
+<b style = 'color:green;'>police-1:</b> No,you're gonna get your wish,sonny boy.
+
+
+<b style = 'color:green;'>Tim:</b> Iam?
+
+
+<b style = 'color:green;'>police-1:</b> You're getting your big old wish.
+
+
+<b style = 'color:green;'>Tim:</b> No,please don't give me my wish.
+
+
+<b style = 'color:green;'>police-1:</b> I'm gonna give you a wish. Either go on TV or you're going in jail. Your choice, Timmy.
+
+
+<b style = 'color:green;'>Tim:</b> Those aren't good choices.
+
+
+<b style = 'color:green;'>60 Minutes:</b> Tonight on "60 Minutes" ... the Chinese economy shows no signs of slowing but at what cost to the environment? Then a one-on-one with Tim who was raped by a bum behind a filthy dumpster.
+
+
+<b style = 'color:green;'>Tim:</b> What was it like? Anyone that;s been raped by a bum knows the drill. He pretty much took his pants off and went crazy.
+
+
+<b style = 'color:green;'>Amy:</b> Waht the fuck?
+
+
+<b style = 'color:green;'>Tim:</b> Did I not tell you that story.
+
