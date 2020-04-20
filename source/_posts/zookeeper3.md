@@ -61,6 +61,10 @@ tags:
 
 	cp ./config.cfg ~/.m2/repository
 
+ps: 2020.4.20
+
+这里有一个疑问点，也就是或许不需要将 config.cfg 移动到 \~/.m2/repository, 因为在后期，我修改 \~/.m2/repository 里面的 config.cfg 的内容根本不管用，而是直接修改了 /Users/licong/python/zkui 下面的 config.cfg 才奏效。
+
 这一步参考
 
 [maven | 安装](https://benpaodewoniu.github.io/2020/04/07/maven0/)
@@ -82,6 +86,10 @@ tags:
 - target		
 - zkui.sh
 
+在这里我特别明确的交代一下，该目录为（以我本地为例）
+
+	/Users/licong/python/zkui
+
 run.sh 有三种运行模式
 
 - start
@@ -93,6 +101,12 @@ run.sh 有三种运行模式
 	./run.sh start
 
 如果没有意外，就可以成功运行了。
+
+ps: 2020.4.20 日
+
+我再次运行 ./run.sh 没有任何作用，经过我的探究，发现应该运行 zuki.sh
+
+其和我上面描述的 run.sh 的功能一模一样。
 
 <br/>
 
@@ -117,3 +131,46 @@ run.sh 有三种运行模式
 输入账号密码后
 
 ![](/images/zookeeper/3_0.png)
+
+<br/>
+
+# config.cfg 配置
+
+<br/>
+
+首先要注意的是。
+
+- 修改完 config.cfg 的内容要重新开启服务
+	- ./zkui.sh restart
+- 直接修改 /Users/licong/python/zkui 下的 config.cfg 即可，不需要到 \~/.m2/repository 修改
+
+下面直接说明
+
+## Server Port
+
+	serverPort=9090
+
+这个是本地的端口号
+
+## zkServer
+
+	zkServer=localhost:2181,localhost:2181
+	zkServer=218.30.67.43:2181,218.30.67.43:2181
+
+上面第一个连接的是 本地的 zookeeper ，第二个连接的是 远程服务器上的 zookeeper。
+
+最后，浏览器访问的地址都是
+
+	http://localhost:9090/
+
+## userSer
+
+	userSet = {"users": [{ "username":"admin" , "password":"manager","role": "ADMIN" },{ "username":"appconfig" , "password":"appconfig","role": "USER" }]}
+
+这个是 zkui 自带的权限账户，自己可以修改，上面的在登录的时候的权限就是
+
+	username: admin
+	pwd: manager (Admin privileges, CRUD operations supported) 
+
+	username: appconfig
+	pwd: appconfig (Readonly privileges, Read operations supported)

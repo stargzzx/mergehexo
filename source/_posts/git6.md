@@ -62,15 +62,15 @@ tags:
 
 比如
 
-	git.config branch.dev.description "升级部分数据"
+	git config branch.dev.description "升级部分数据"
 
 ## 查看
 
-	git.config branch.dev.description
+	git config branch.dev.description
 
 ## 修改
 
-	git.config branch.dev.description "修改的内容"
+	git config branch.dev.description "修改的内容"
 
 <br/>
 
