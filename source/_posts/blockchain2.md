@@ -1,12 +1,12 @@
 ---
-title: blockchain | 《精通区块链编程》 拜占庭将军问题
+title: blockchain | 《精通比特币第二版》 拜占庭将军问题
 date: 2020-04-18 22:34:32
 categories:
-- [blockchain,精通区块链编程]
+- [blockchain,精通比特币]
 - [blockchain,基础]
 tags:
 - blockchain
-- 精通区块链编程
+- 精通比特币
 ---
 >针对拜占庭问题的深入研究，科学家们得出一个结论：如果叛徒的数量大于或等于1/3，拜占庭问题不可解。
 

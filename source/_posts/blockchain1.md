@@ -1,12 +1,12 @@
 ---
-title: blockchain | 《精通区块链编程》 双花问题
+title: blockchain | 《精通比特币第二版》 双花问题
 date: 2020-04-18 21:58:24
 categories:
-- [blockchain,精通区块链编程]
+- [blockchain,精通比特币]
 - [blockchain,基础]
 tags:
 - blockchain
-- 精通区块链编程
+- 精通比特币
 ---
 在看书的时候，发现这样一句话。
 
