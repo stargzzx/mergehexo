@@ -144,3 +144,17 @@ git 在 pull 或者 push 一个大项目时，可能会碰到出现如题所示�
 	> git config --global https.postBuffer 524288000
 	
 对于 errno 54 这个错误，经尝试 http 或者 https 协议都无法正常提交。必须改为 ssh 方式来提交代码。也就是必须使用公私钥的方式进行账号验证，并提交代码。
+
+<br/>
+
+# brew 的用法
+
+<br/>
+
+	brew search **  //查找某个软件包
+	brew list  //列出已经安装的软件的包
+	brew install ** //安装某个软件包,默认安装的是稳定版本
+	brew uninstall **//卸载某个软件的包
+	brew upgrade ** //更新某个软件包
+	brew info ** //查看指定软件包的说明
+	brew cache clean //清理缓存
