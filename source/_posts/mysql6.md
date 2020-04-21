@@ -2,6 +2,7 @@
 title: mysql | ORM 详解
 date: 2020-03-12 15:07:15
 categories:
+- sql
 - mysql
 tags:
 - mysql

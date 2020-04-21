@@ -2,6 +2,7 @@
 title: mysql | 免密输入
 date: 2020-03-16 17:29:59
 categories:
+- sql
 - mysql
 tags:
 - mysql

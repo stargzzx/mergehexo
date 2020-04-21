@@ -2,6 +2,7 @@
 title: mysql 修改数据库
 date: 2019-11-24 20:46:44
 categories:
+- sql
 - mysql
 tags:
 - mysql

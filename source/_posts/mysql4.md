@@ -1,8 +1,10 @@
 ---
-title: sql | 系统展示
+title: sql | 《SQL必知必会》
 date: 2020-02-09 12:22:53
 categories:
+- sql
 - mysql
+- 《SQL必知必会》
 tags:
 - mysql
 - 数据库

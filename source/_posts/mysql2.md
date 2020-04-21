@@ -2,6 +2,7 @@
 title: 服务器数据下载到本地
 date: 2019-10-27 16:58:19
 categories:
+- sql
 - mysql
 tags:
 - mysql

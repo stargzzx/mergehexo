@@ -2,6 +2,7 @@
 title: mysql | 导出导入数据库
 date: 2020-02-14 10:28:52
 categories:
+- sql
 - mysql
 tags:
 - mysql

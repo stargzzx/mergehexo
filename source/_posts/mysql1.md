@@ -2,6 +2,7 @@
 title: mysql 的索引
 date: 2019-10-27 15:40:38
 categories:
+- sql
 - mysql
 tags:
 - mysql

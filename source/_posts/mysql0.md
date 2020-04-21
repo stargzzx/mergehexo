@@ -2,6 +2,7 @@
 title: 安装 mysql
 date: 2019-03-18 21:22:50
 categories:
+- sql
 - mysql
 tags:
 - mysql
