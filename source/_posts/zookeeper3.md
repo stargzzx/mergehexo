@@ -174,3 +174,43 @@ ps: 2020.4.20 日
 
 	username: appconfig
 	pwd: appconfig (Readonly privileges, Read operations supported)
+
+<br/>
+
+# 远程服务器安装
+
+<br/>
+
+公司的需求时把可视化放在服务器上，然后根据 IP 直接访问，而不是本地安装独立的客户端。
+
+## 背景
+
+- ubuntu
+
+## 下载
+
+	git clone git@github.com:DeemOpen/zkui.git
+
+## mvn构建
+
+	cd zkui/
+	mvn clean install
+		这一步我构筑了很长时间大概 22 mins ，可能是我镜像配置错了
+
+如果上面构筑成功，会在 zkui 这个文件夹中，创建 config.cfg 。其他步骤都相同。
+
+唯一和上面有所区别的是
+
+	zkServer=0.0.0.0:2181,0.0.0.0:2181
+
+最后，我们在本地浏览器可以用 IP 进行访问
+
+	IP:9090
+
+另外，由于服务器上的 java 的版本太低了，所以，开始 mvn 的时候构筑不成功，我重新安装了 jdk ，最后的版本信息如下
+
+	java -version
+		openjdk version "1.8.0_242"
+		OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~16.04-b08)
+		OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+

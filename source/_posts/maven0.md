@@ -58,7 +58,7 @@ tags:
 
 然后，把上面的压缩包解压到 maven
 
-	tar -xjvf ~/Downloads/apache-maven-3.6.3-bin.tar.gz -C ~/maven
+	tar -xzvf ~/Downloads/apache-maven-3.6.3-bin.tar.gz -C ~/maven
 
 ## 配置环境变量
 
@@ -124,3 +124,36 @@ tags:
 	</mirrors>
 
 找到相应的标签替换就好了。
+
+<br/>
+
+# ubuntu 安装
+
+<br/>
+
+## 下载
+
+	cd ~
+	wget https://mirror.olnevhost.net/pub/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+
+## 解压
+
+	mkdir mvn
+	tar -xzvf ~/Downloads/apache-maven-3.6.3-bin.tar.gz -C ~/maven
+
+## 配置环境变量
+
+	vim ~/.bashrc
+
+添加以下两行：
+
+	export M2_HOME=/Users/licong/maven/apache-maven-3.6.3
+	export PATH=$PATH:$M2_HOME/bin
+
+激活
+
+	source ~/.bashrc
+
+## 检查 maven 是否已经安装成功
+
+	mvn -v
