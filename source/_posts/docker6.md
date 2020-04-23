@@ -3,6 +3,7 @@ title: docker | 在环境下运行自己的代码
 date: 2019-12-01 09:33:00
 categories:
 - docker
+- 基础
 tags:
 - docker
 ---
@@ -56,9 +57,3 @@ tags:
 如果，我们退出了环境的话，再想执行之前的可以参考我下面的博文
 
 [docker | 容器的使用](https://benpaodewoniu.github.io/2019/12/01/docker7/)
-
-<br/>
-
-# nvidia-docker
-
-<br/>

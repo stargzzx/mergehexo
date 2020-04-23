@@ -1,8 +1,9 @@
 ---
-title: docker | 配置镜像
+title: docker | 配置国内源
 date: 2019-11-30 11:18:40
 categories:
 - docker
+- 基础
 tags:
 - docker
 ---
@@ -12,7 +13,7 @@ tags:
 
 <br/>
 
-# 镜像加速
+# 国内源加速
 
 <br/>
 

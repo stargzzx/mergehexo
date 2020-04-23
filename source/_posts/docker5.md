@@ -3,6 +3,7 @@ title: docker | 制作自己的 image
 date: 2019-11-30 11:22:40
 categories:
 - docker
+- 基础
 tags:
 - docker
 ---

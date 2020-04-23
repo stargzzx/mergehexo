@@ -3,6 +3,7 @@ title: docker | 容器和主机如何互相拷贝传输文件
 date: 2019-12-08 12:33:14
 categories:
 - docker
+- 基础
 tags:
 - docker
 ---

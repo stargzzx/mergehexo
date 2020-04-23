@@ -3,6 +3,7 @@ title: jenkins | 使用镜像加速安装插件
 date: 2020-03-03 16:49:31
 categories:
 - jenkins
+- 基础
 tags:
 - jenkins
 ---

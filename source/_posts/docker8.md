@@ -3,6 +3,7 @@ title: docker | image
 date: 2019-11-30 11:20:40
 categories:
 - docker
+- 基础
 tags:
 - docker
 ---

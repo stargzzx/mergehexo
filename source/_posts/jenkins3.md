@@ -3,6 +3,7 @@ title: jenkins | 自定义参数传递
 date: 2020-03-10 17:28:35
 categories:
 - jenkins
+- 进阶
 tags:
 - jenkins
 ---

@@ -3,6 +3,7 @@ title: docker | 基本原理
 date: 2019-11-29 11:37:05
 categories:
 - docker
+- 基础
 tags:
 - docker
 ---
