@@ -2,7 +2,9 @@
 title: Redis | Redis 和 MySQL 的区别
 date: 2020-04-21 17:16:43
 categories:
+- sql
 - redis
+- 基础
 tags:
 - redis
 ---

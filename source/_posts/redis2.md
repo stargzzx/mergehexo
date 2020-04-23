@@ -2,7 +2,9 @@
 title: Redis | 配置和使用
 date: 2020-04-22 15:43:04
 categories:
+- sql
 - redis
+- 基础
 tags:
 - redis
 ---
