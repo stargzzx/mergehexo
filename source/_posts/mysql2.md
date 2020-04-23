@@ -97,3 +97,11 @@ password ******
 从本地传到服务器只需要反过来写即可
 
 	scp /Users/xxxxx/Desktop/htmltitle.cpp root@139.59.250.52:/root/htmltitle
+
+如果后面的服务器开启了固定端口应该这样写
+
+	scp -P 12138 /root/eosvoter.tar  root@IP:/root/
+
+而不是
+
+	scp /root/eosvoter.tar -P 12138 root@IP:/root/
