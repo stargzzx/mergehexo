@@ -93,13 +93,33 @@ ps：近期很多电脑被种了挖矿程序病毒
 
 经过 dump.pub 已经 redis 的权限查询发现都没问题，然后看到一个解决方案。
 
-You need to add the following to your `/etc/systemd/system/redis-server` unit file:
+You need to add the following to your `/etc/systemd/system/redis.service` unit file:
 
 	ReadWriteDirectories=-/var/lib/redis
 
 Note that `/var/lib/redis` is the default, but if in your `/etc/redis/redis.conf` you set a different dir config option, you will need to set ReadWriteDirectories to that.
 
 OK,let me try it.
+
+In Ubuntu 16.04 the unit file is located at `/etc/systemd/system/redis.service`
+
+你可以 find 一下这个文件，然后我添加了一个
+
+	ReadWriteDirectories=-/bbsx/redis
+
+但是，并没有什么用。
+
+于是，继续搜索。
+
+[新方案](https://blog.csdn.net/qq_36949713/article/details/85626723)
+
+将stop-writes-on-bgsave-error设置为no
+	
+	redis-cli
+	127.0.0.1:6379> config set stop-writes-on-bgsave-error no
+
+最后，项目启动成功。
+
 
 
 
