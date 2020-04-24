@@ -16,7 +16,13 @@ tags:
 
 	links: /links/ || link
 
+老版：
+
 `/themes/next/languages/zh-Hans.yml` 文件中 `menu` 下增加中文描述：
+
+新版：
+
+`/themes/next/languages/zh-CN.yml` 文件中 `menu` 下增加中文描述：
 
 	links: 友链
 
