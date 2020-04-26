@@ -6,6 +6,9 @@ categories:
 tags:
 - ant
 - coinex
+password: antant0
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 这个讲述我的在币币生息所经历的项目——coinex。
 

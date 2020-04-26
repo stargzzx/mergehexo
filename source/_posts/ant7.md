@@ -5,6 +5,9 @@ categories:
 - ant
 tags:
 - ant
+password: antant7
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 mathjax: true
 ---
 合约一般分为三种，而 ant 项目，会把最后的计价单位变成一种单位。

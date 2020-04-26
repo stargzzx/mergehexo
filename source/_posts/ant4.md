@@ -6,6 +6,9 @@ categories:
 tags:
 - ant
 - coinex
+password: antant4
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 在公司已经干了都快满实习期了，这个大项目也有了很长足的发展，下面我说一下，目前的项目进展和其他总结吧。
 

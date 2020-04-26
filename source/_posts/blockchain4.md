@@ -7,7 +7,7 @@ tags:
 - blockchain
 password: blockchain4
 abstract: 区块链历史进程的一些资料收集
-message: 您好, 这里是 3 级加密文章，未来会对外开放，请理解。
+message: 您好, 这里是 5 级加密文章，未来会对外开放，请理解。
 ---
 关于这个诞生过程，我将会按照下面的两个模块展开。
 

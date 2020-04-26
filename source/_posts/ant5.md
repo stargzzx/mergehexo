@@ -6,6 +6,9 @@ categories:
 tags:
 - ant
 - coinex
+password: antant5
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 目前， ant 项目的数据库使用的是 peewee 。
 

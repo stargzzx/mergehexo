@@ -6,6 +6,9 @@ categories:
 tags:
 - ant
 - coinex
+password: antant2
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 这个非常重要，当然，目前我只是明白了如何对接交易所接口而已，对引擎的整体流程并不了解。
 

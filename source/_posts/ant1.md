@@ -6,6 +6,9 @@ categories:
 tags:
 - ant
 - bitmex
+password: antant1
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 这是我们公司做量化中，我做的bitmex接口的一些感悟。
 

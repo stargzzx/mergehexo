@@ -6,6 +6,9 @@ categories:
 tags:
 - ant
 mathjax: true
+password: antant6
+abstract: ant 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 ant数据收集模块，作为连接交易所和数据展示模块的中间件，起到了将数据结构化、规整化，使得每个交易所返回的数据按照 ant 项目的要求进行返回。
 
