@@ -2,7 +2,8 @@
 title: eosvoter | 文档编写 v1
 date: 2020-02-28 15:40:12
 categories:
-- eosvoter
+- [eosvoter]
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 password: eosvotereosvoter5

@@ -2,7 +2,7 @@
 title: 用字组成图片
 date: 2018-12-11 22:06:09
 categories:
-- interesting_code
+- [项目经历,微型]
 tags:
 - interesting_code
 - python

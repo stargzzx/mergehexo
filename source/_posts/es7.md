@@ -2,7 +2,8 @@
 title: GA 的案例 用圆圈拼 chrome 图标
 date: 2018-12-04 18:43:17
 categories:
-- 进化算法
+- [进化算法]
+- [项目经历,微型]
 tags:
 - 进化算法
 - GA

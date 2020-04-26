@@ -2,7 +2,8 @@
 title: eosvoter | 运维
 date: 2020-02-29 14:48:16
 categories:
-- eosvoter
+- [eosvoter]
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 password: eosvotereosvoter11

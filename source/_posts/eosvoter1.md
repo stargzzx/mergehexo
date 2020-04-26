@@ -2,7 +2,8 @@
 title: eosvoter|关于项目的一些业务逻辑
 date: 2019-10-09 21:00:39
 categories:
-- eosvoter
+- [eosvoter]
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 - 币币生息

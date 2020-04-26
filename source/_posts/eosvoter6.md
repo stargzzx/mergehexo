@@ -2,7 +2,8 @@
 title: eosvoter | 接口规范 v1
 date: 2020-02-28 15:53:05
 categories:
-- eosvoter
+- [eosvoter]
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 password: eosvotereosvoter6

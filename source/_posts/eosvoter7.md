@@ -2,7 +2,8 @@
 title: eosvoter | 架构 v1
 date: 2020-02-29 11:08:43
 categories:
-- eosvoter
+- [eosvoter]
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 password: eosvotereosvoter7

@@ -2,7 +2,8 @@
 title: ant | 现在的设计和部署
 date: 2020-02-23 23:18:31
 categories:
-- ant
+- [ant]
+- [项目经历,大型,ant]
 tags:
 - ant
 - coinex
