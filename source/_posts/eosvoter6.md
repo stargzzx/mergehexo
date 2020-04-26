@@ -5,6 +5,9 @@ categories:
 - eosvoter
 tags:
 - eosvoter
+password: eosvotereosvoter6
+abstract: eosvoter 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 这个项目一开始并不是我一个人负责。前端的架构是外包的。
 

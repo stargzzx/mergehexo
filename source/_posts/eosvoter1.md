@@ -6,6 +6,9 @@ categories:
 tags:
 - eosvoter
 - 币币生息
+password: eosvotereosvoter1
+abstract: eosvoter 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 这个主要是怕忘记了业务逻辑，所以，在这里总结一下。
 

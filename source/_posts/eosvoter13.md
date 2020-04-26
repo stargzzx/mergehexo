@@ -5,6 +5,9 @@ categories:
 - eosvoter
 tags:
 - eosvoter
+password: eosvotereosvoter13
+abstract: eosvoter 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 因为 eosvoter 这个项目是建立在 eos 投票的基础上的，所以，很多数据都需要从主网或者其他地方获取。
 

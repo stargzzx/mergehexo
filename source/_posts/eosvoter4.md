@@ -5,6 +5,9 @@ categories:
 - eosvoter
 tags:
 - eosvoter
+password: eosvotereosvoter4
+abstract: eosvoter 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 这是我在币币生息做的第一个项目，后来这个项目也是我全权负责，截止到今天，我现在在这个公司已经实习了半年了。
 

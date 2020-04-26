@@ -5,6 +5,9 @@ categories:
 - eosvoter
 tags:
 - eosvoter
+password: eosvotereosvoter8
+abstract: eosvoter 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 一个项目的安全是必不可少的，这个主要是由运维小哥做，我在这里就我的观察写一下吧。
 

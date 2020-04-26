@@ -5,6 +5,9 @@ categories:
 - eosvoter
 tags:
 - eosvoter
+password: eosvotereosvoter5
+abstract: eosvoter 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 文档可以作为衡量一个项目是否完整的标准。
 
