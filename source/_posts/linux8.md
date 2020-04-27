@@ -109,3 +109,15 @@ wget支持递归下载，而curl则没有这个功能。
 	wget --mirror -p --convert-links -P /var/www/html http://man.linuxde.net/
 
 这里面仅仅只是很少以一部分命令说明，后期会继续补充。
+
+<br/>
+
+# 注意点
+
+<br/>
+
+## curl
+
+如果 url 中含有参数请求，应该用`引号`包裹着 url。
+
+	curl "https://data.eosbeijing.one/api/listBPByEOS?chain=eos"

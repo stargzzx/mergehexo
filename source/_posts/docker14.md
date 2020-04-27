@@ -85,8 +85,6 @@ tags:
 
 	docker run -itd -p 5010:5010 eosvoter:v3
 
-ps：我执行这一步的时候报错，但是，我继续执行，不影响后面。
-
 那么，使用
 
 	docker ps -a
@@ -95,6 +93,10 @@ ps：我执行这一步的时候报错，但是，我继续执行，不影响后
 
 	196d69be2985        eosvoter:v3             "/bin/bash/"            6 seconds ago       Created                   0.0.0.0:5010->5010/tcp   loving_germain
 
-可以看到 5010 已经挂载成功。这个时候，只要进入该容器，然后开启服务就好。
+可以看到 5010 已经挂载成功。这个时候，只要进入该容器
+
+	docker exec -it 788015bdbdb2 /bin/bash
+
+然后开启服务就好。
 
 需要注意的是，要将 docker 的服务挂载到 5010 上。

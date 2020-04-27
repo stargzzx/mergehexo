@@ -16,6 +16,14 @@ message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理
 
 <!-- more -->
 
+ps: 讲述一个技巧，如何判断该机器是否有权限访问某一网站
+
+使用
+
+	curl "https://data.eosbeijing.one/api/listBPByEOS?chain=eos"
+
+如果是 `get` 请求，并且，带有参数，一定要用 `引号` 包裹。
+
 <br/>
 
 # 切换端口
