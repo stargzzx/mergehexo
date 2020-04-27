@@ -2,7 +2,8 @@
 title: 第四种事业的秘密
 date: 2019-05-04 11:07:17
 categories:
-- investment
+- [转载,文章,投资]
+- [转载,文章,币圈]
 tags:
 - 币圈
 - 思想

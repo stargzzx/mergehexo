@@ -2,7 +2,7 @@
 title: 聚合思维
 date: 2019-05-10 22:24:37
 categories:
-- investment
+- [转载,文章,思考]
 tags:
 - 知识星球
 - 思想

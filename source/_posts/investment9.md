@@ -2,7 +2,7 @@
 title: 通过Google挖掘细分市场的一个案例
 date: 2019-05-11 21:32:25
 categories:
-- investment
+- [转载,文章,投资]
 tags:
 - 知识星球
 - 思想

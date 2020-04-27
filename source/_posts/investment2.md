@@ -2,7 +2,8 @@
 title: 论傻逼的共识
 date: 2019-05-04 23:56:51
 categories:
-- investment
+- [转载,文章,投资]
+- [转载,文章,币圈]
 tags:
 - 币圈
 - 思想

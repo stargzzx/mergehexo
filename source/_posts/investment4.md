@@ -2,7 +2,8 @@
 title: 什么，决定脑袋？
 date: 2019-05-06 17:27:02
 categories:
-- investment
+- [转载,文章,投资]
+- [转载,文章,币圈]
 tags:
 - 币圈
 - 思想
