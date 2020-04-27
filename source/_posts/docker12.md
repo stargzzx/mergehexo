@@ -131,11 +131,13 @@ RUN pip install  lxml==4.4.2
 
 <br/>
 
+## 迁移到宿主机
+
 首先我想要把相关的项目安装到 `docker` 中。
 
 	docker run -it eosvoter:v1  /bin/bash
 
-安装好东西后
+安装好东西后【开源项目 proxy_pool】
 
 	exit
 
@@ -164,3 +166,102 @@ RUN pip install  lxml==4.4.2
 
 	docker load < eosvoter.tar
 
+使用
+
+	docker image list
+
+可以查看到你的 image 确实已经移植过来了。
+
+然后使用
+
+	docker run -it eosvoter:v2  /bin/bash
+
+进入 `proxy_pool` 的内在文件夹，然后安装 python 的依赖。
+
+## 连接宿主机相关服务
+
+接着，我修改了 `proxy_pool` 的 启动文件 `start.sh`
+
+	#!/usr/bin/env bash
+	nohup python3.7 proxyPool.py webserver > /root/proxy_pool/log/webserver.log 2>&1 &
+	nohup python3.7 proxyPool.py schedule >  /root/proxy_pool/log/schedule.log 2>&1 &
+
+然后运行，发现，并不能行，查阅「日志」发现出现这样的错误
+
+	redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+怀疑是宿主机的 redis 服务没有开启或者 docker 无法连接宿主机的 redis
+
+- 查询宿主机开启了 redis
+
+然后，看 docker 是否可以连接宿主机的 redis。在 docker 中使用
+
+	telnet 宿主机IP 端口
+
+需要注意的是，宿主机 IP 不能写公网 IP ，要写 `docker IP`。当宿主机中启动 `docker` 是，会建立虚拟网卡，并命名为 `docker0`。
+
+查询宿主机的 内网 IP ，进入宿主机环境
+
+	ip a
+
+或者使用
+
+	ifconfig
+
+出现「这是使用 ip a 出现的」
+
+	1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+	    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+	    inet 127.0.0.1/8 scope host lo
+	       valid_lft forever preferred_lft forever
+	2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+	    link/ether 00:16:3e:00:0b:53 brd ff:ff:ff:ff:ff:ff
+	    inet ****/20 brd *** scope global eth0
+	       valid_lft forever preferred_lft forever
+	3: docker_gwbridge: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+	    link/ether 02:42:b1:77:c0:d9 brd ff:ff:ff:ff:ff:ff
+	    inet ****/16 brd *** scope global docker_gwbridge
+	       valid_lft forever preferred_lft forever
+	4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+	    link/ether ***e brd ff:ff:ff:ff:ff:ff
+	    inet ****/16 brd *** scope global docker0
+	       valid_lft forever preferred_lft forever
+	6: veth1e9d8dc@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+	    link/ether ***:ff:ff:ff:ff:ff link-netnsid 0
+	54: vethf42a2d2@if53: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+	    link/ether ***ff:ff:ff:ff:ff:ff link-netnsid 1
+	56: veth8827fa3@if55: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+	    link/ether ***f:ff:ff:ff:ff link-netnsid 2
+
+其中 `docker0` 所代表的 `inet` 就是内网 IP。
+
+然后，我们使用
+
+	telnet *** 6379
+
+其中
+
+- \*\*\* 代表 eth0 中的 inet
+- 6379 是 宿主机 redis 服务端口
+- IP 和 端口之间要有空格
+
+输出
+
+	Trying **02...
+	Connected to **.
+	Escape character is '^]'.
+
+说明，连接正常，退出这个连接使用
+
+	quit
+
+这个时候就是代码本身出问题，我在连接 redis 的时候，配置为
+
+	DB_TYPE = getenv('db_type', 'REDIS').upper()
+	DB_HOST = getenv('db_host', '127.0.0.1')
+	DB_PORT = getenv('db_port', 6379)
+	DB_PASSWORD = getenv('db_password', '')
+
+其中 `127.0.0.1` 和 `localhost` 都不能连接宿主机，要将其换成 `docker0` 的 IP。
+
+最终， `proxy_pool` 运行成功。
