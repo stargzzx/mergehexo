@@ -83,7 +83,7 @@ tags:
 
 镜像删除使用 docker rmi 命令，比如我们删除 hello-world 镜像：
 
-	docker rmi hello-world
+	docker rmi [image ID]
 
 在删除镜像前，要保证该镜像的容器都已经删掉了，否则删除失败。
 
