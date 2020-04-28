@@ -1,9 +1,9 @@
 ---
-title: zookeeper | 可视化界面 zkui（web版本）
+title: zookeeper | 可视化界面 zkui（web版本）安装和使用
 date: 2020-04-07 12:03:32
 categories:
 - [zookeeper]
-- [开源项目,python,zkui]
+- [开源项目,python,zkui,基础]
 tags:
 - zookeeper
 ---
@@ -215,3 +215,4 @@ ps: 2020.4.20 日
 		OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~16.04-b08)
 		OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
+然后构筑成功，后来按照上面 MacBook 下的运行条件，将服务启起来，在外面就可以访问了。

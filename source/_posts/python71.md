@@ -49,7 +49,8 @@ github地址为： https://github.com/bndr/pipreqs
 
 ## 在当前目录生成
 
-	pipreqs . --encoding=utf8 --force
+	pipreqs ./ --encoding=utf8 --force
+		我个人做这一步的时候耗费的时间很长
 
 注意 
 

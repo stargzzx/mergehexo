@@ -57,6 +57,28 @@ netstat命令的功能是显示网络连接、路由表和网络接口信息，�
 
 <br/>
 
+# telnet
+
+<br/>
+
+Linux telnet命令用于远端登入。
+
+执行telnet指令开启终端机阶段作业，并登入远端主机。
+
+## 退出连接
+
+如果连接不成功可以
+
+	control + c 「MacBook」
+
+如果连接成功，可以使用
+
+	quit
+	如果quit不能退出，可以先执行
+	control + ] 然后 quit 退出
+
+<br/>
+
 # 外部访问
 
 <br/>

@@ -137,7 +137,7 @@ RUN pip install  lxml==4.4.2
 
 	docker run -it eosvoter:v1  /bin/bash
 
-安装好东西后【开源项目 proxy_pool】
+安装好东西后【开源项目 proxy_pool 一个 IP 代理池】
 
 	exit
 
@@ -265,3 +265,109 @@ RUN pip install  lxml==4.4.2
 其中 `127.0.0.1` 和 `localhost` 都不能连接宿主机，要将其换成 `docker0` 的 IP。
 
 最终， `proxy_pool` 运行成功。
+
+然后我在我的浏览器上访问
+
+	宿主机IP:5010
+
+是可以成功访问的，但是，访问的数据是 0。
+
+## 排除 BUG
+
+经过，一番查询，其中 `redis` 里面有空，也就是没有 docker 数据写入宿主机的 redis。
+
+查询日志后，发现，其在验证 IP 是否可用的时候，出现异常。
+
+整个 `IP 代理池` 项目可以大致分为两个部分
+
+- 收集网上免费的代理IP
+- 验证这些 IP 是否可用
+
+第一步，收集 IP 是没问题的，问题出现在 IP 是否可用上。也就是下面代码的验证
+
+```python
+def validUsefulProxy(proxy):
+    """
+    检验代理是否可用
+    :param proxy:
+    :return:
+    """
+    if isinstance(proxy, bytes):
+        proxy = proxy.decode("utf8")
+    proxies = {"http": "http://{proxy}".format(proxy=proxy)}
+    try:
+        r = requests.get('https://data.eosbeijing.one/api/listBPByEOS?chain=eos', proxies=proxies, timeout=10, verify=False)
+        if r.status_code == 200:
+            return True
+    except Exception as e:
+        pass
+    return False
+```
+
+换言之，在 docker 中使用 python 的代理模式，不能访问外网，做了以下的努力
+
+- 更改 docker 和 宿主机的网络模式，如 bridge/host
+- 在宿主机上执行项目代码，发现没有问题，可以使用代理访问外网
+- 使用 curl 可以证明 docker 的外网连接成功
+
+经过一番查证，发现，是 docker 中，使用代理出现了异常，异常代码如下
+
+	InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised
+
+经过查询资料
+
+[资料](https://www.jianshu.com/p/bc2ad1311331)
+
+是由于
+
+	request.get(url,verify=False) 的 verify=False 导致的
+
+原因如下
+
+>requests 库其实是基于 urllib 编写的，对 urllib 进行了封装，使得使用时候的体验好了很多，现在 urllib 已经出到了3版本，功能和性能自然是提升了不少。
+所以，requests最新版本也是基于最新的 urllib3 进行封装。
+
+>在urllib2时代对https的处理非常简单，只需要在请求的时候加上 verify=False 即可，这个参数的意思是忽略https安全证书的验证，也就是不验证证书的可靠性，直接请求，
+这其实是不安全的，因为证书可以伪造，不验证的话就不能保证数据的真实性。
+
+>在urllib3时代，官方强制验证https的安全证书，如果没有通过是不能通过请求的，虽然添加忽略验证的参数，但是依然会 给出醒目的 Warning，这一点没毛病。
+
+接下来， 禁用 urllib3 ，然后在相关文件上添加
+
+	import urllib3
+	urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+最后却是没有这个异常了，但是，问题还没有解决，也就是还是不能用 「代理」 访问外网，并且我有如下的疑问
+
+- 为什么同样的代码，在宿主机上可以使用，但是 docker 中不能
+	- 初步怀疑是依赖的问题
+
+下面查询依赖
+
+发现宿主机的依赖和 docker 的依赖是一样的。。。现在又进入瓶颈。
+
+经过长时间的探究发现两个原因
+
+- 代理代码书写有问题
+- 确实有大量的 IP 不可用
+
+### 修改代码
+
+```python
+def validUsefulProxy(proxy):
+    proxies = {"http": f"http://{proxy}", "https": f"http://{proxy}"}
+    try:
+        r = requests.get('https://data.eosbeijing.one/api/listBPByEOS?chain=eos', proxies=proxies, timeout=30)
+        if r.status_code == 200:
+            return True
+    except Exception as e:
+    	pass
+    return False
+```
+
+然后执行，现在好了。
+
+还有更多细节上的原因，由于已经超过本文章的探讨范围了，感兴趣的同学请移步到
+
+[开源项目 | proxy_pool 更改验证 IP 有效的方式](https://benpaodewoniu.github.io/2020/04/28/opensource1/)
+
