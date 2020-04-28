@@ -386,4 +386,38 @@ def validUsefulProxy(proxy):
 - 公司的 eosvoter 项目是私有的
 - jenkins 要做到自动拉取最新代码，然后，同时部署 proxy_pool 和 eosvoter 这两个项目「注意顺序」
 
+## 编写脚本
 
+首先，我并不打算做 jenkins 自动拉取代码，我先把 docker 启动服务做了。
+
+在 docker 中，主要是填写下面的内容
+
+![](/images/docker/12_0.png)
+
+其中选择哪个服务器你可以在我下面的博文中的插件那里找到。
+
+[jenkins | 向GitHub提交代码时触发Jenkins自动构建](https://benpaodewoniu.github.io/2020/03/09/jenkins2/)
+
+下面重点说一下脚本编写
+
+```jenkins
+cd /root/eosvoter
+./start_app.sh
+docker stop eosvoter
+sleep 5
+docker rm eosvoter
+
+docker run -dit --net=host --name eosvoter  eosvoter:v5
+
+docker cp /root/eosvoter   eosvoter:/root/
+
+sleep 5
+
+docker exec -i eosvoter /bin/bash -c 'source /etc/profile && cd /root/proxy_pool/cli && sh ./start.sh && cd /root/eosvoter && sh ./start.sh'
+```
+
+里面大部分都能看得懂值得一提的是 `sh文件` 在 `jenkins` 的执行方式
+
+	sh ./***.sh
+
+经过，我在服务器上的部署，现在可以成功构建，并且服务也可以跑起来。
