@@ -371,3 +371,19 @@ def validUsefulProxy(proxy):
 
 [开源项目 | proxy_pool 更改验证 IP 有效的方式](https://benpaodewoniu.github.io/2020/04/28/opensource1/)
 
+现在一个开源项目已经部署到 docker 了，然后将这个容器进行 commit 后。
+
+接下来，就要编写 jenkins 了。
+
+<br/>
+
+# 编写 jenkins
+
+<br/>
+
+首先，明确以下几点
+
+- 公司的 eosvoter 项目是私有的
+- jenkins 要做到自动拉取最新代码，然后，同时部署 proxy_pool 和 eosvoter 这两个项目「注意顺序」
+
+
