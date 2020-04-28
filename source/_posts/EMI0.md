@@ -5,6 +5,9 @@ categories:
 - EMI
 tags:
 - EMI
+password: EMIEMI0
+abstract: EMI 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 近期，感觉自己的区块链理论体系十分的薄弱，所以，迫切的想提高自己的理论水平，于是找到了当时合作过的一个大佬，进行了毛遂自荐。
 

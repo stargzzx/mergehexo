@@ -6,6 +6,9 @@ categories:
 - 任务
 tags:
 - EMI
+password: EMIEMI1
+abstract: EMI 项目资料
+message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 EMI 区块链研究院第一阶段的任务如下。
 
