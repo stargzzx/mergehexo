@@ -26,6 +26,10 @@ tags:
 
 集成环境： wamp (apache + mysql + php)
 
+关于 wamp 你可以看我下面的文章。
+
+[wamp安装和启动](https://benpaodewoniu.github.io/2018/07/25/wamp0/)
+
 前提条件是电脑端和手机端连接同一个局域网。
 
 当我们在电脑端搭建好，并且有如下链接访问成功：

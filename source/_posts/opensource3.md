@@ -30,6 +30,7 @@ tags:
 |项目名字|项目描述|入选理由|本地运行|项目地址|论文文档|信息来源|
 |---|---|---|---|---|---|---|
 |hangzhou_house_knowledge|2017年买房经历总结出来的买房购房知识|未来必看|否|[项目地址](https://github.com/houshanren/hangzhou_house_knowledge)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/mN-5kk4p339Di1jh7smU9A)|
+|interview_internal_reference|国内大厂的面试题目及答案|找工作必备|否|[项目地址](https://github.com/0voice/interview_internal_reference)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/KOhExW2Kofdiz9vj0JIeUg)|
 
 <br/>
 
@@ -41,6 +42,7 @@ tags:
 |---|---|---|---|---|---|---|
 |Anime4K|使渣渣动画画质变为4K，延时仅3ms|思路非常牛逼，对于我这个动漫党来说，刚需|否|[项目地址](https://github.com/bloc97/Anime4K)|[论文地址](https://github.com/bloc97/Anime4K/blob/master/Preprint.md)|[GitHub爱好者社区](https://mp.weixin.qq.com/s/8fvf6Std9ZNVVdt9IQ6iYQ)|
 |AutoPiano|自由钢琴，可以通过打字来发出声音|呃呃呃，或许可以和实验室大项目结合|否|[项目地址](https://github.com/WarpPrism/AutoPiano)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/mN-5kk4p339Di1jh7smU9A)|
+|algorithm-visualizer|经典算法可视化，包括源代码、可视化|更好的理解算法|否|[项目地址](https://github.com/algorithm-visualizer/algorithm-visualizer)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/Ey4PB_ZoUn8LqpssVOelNA)|
 
 
 <br/>
