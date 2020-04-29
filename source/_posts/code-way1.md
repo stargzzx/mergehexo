@@ -3,6 +3,7 @@ title: python | 利用指针修改内容
 date: 2020-03-10 23:18:07
 categories:
 - 编程之道
+- 自身
 tags:
 - 编程之道
 ---
