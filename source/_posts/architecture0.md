@@ -2,10 +2,10 @@
 title: 编程之道 | 支付宝的架构到底有多牛逼！还没看完我就跪了！「转载」
 date: 2020-04-29 12:01:30
 categories:
-- 编程之道
-- 牛逼plus
+- 架构
+- 综合
 tags:
-- 编程之道
+- 架构
 ---
 
 自 2008 年双 11 以来，在每年双 11 超大规模流量的冲击上，蚂蚁金服都会不断突破现有技术的极限。2010 年双 11 的支付峰值为 2 万笔/分钟，到 2017 年双 11 时这个数字变为了 25.6 万笔/秒。
@@ -89,7 +89,7 @@ LDC 实现的关键就在于单元化系统架构设计，所以在蚂蚁内部�
 
 <div style="width: 70%;padding-left: 15%">
 
-![](/images/code_way/4_0.png)
+![](/images/architecture/0_0.png)
 
 </div>
 
@@ -99,7 +99,7 @@ LDC 实现的关键就在于单元化系统架构设计，所以在蚂蚁内部�
 
 <div style="width: 70%;padding-left: 15%">
 
-![](/images/code_way/4_1.png)
+![](/images/architecture/0_1.png)
 
 </div>
 
@@ -111,7 +111,7 @@ LDC 实现的关键就在于单元化系统架构设计，所以在蚂蚁内部�
 
 <div style="width: 70%;padding-left: 15%">
 
-![](/images/code_way/4_2.png)
+![](/images/architecture/0_2.png)
 
 </div>
 
@@ -121,7 +121,7 @@ LDC 实现的关键就在于单元化系统架构设计，所以在蚂蚁内部�
 
 <div style="width: 70%;padding-left: 15%">
 
-![](/images/code_way/4_3.png)
+![](/images/architecture/0_3.png)
 
 </div>
 
@@ -147,7 +147,7 @@ LDC 实现的关键就在于单元化系统架构设计，所以在蚂蚁内部�
 
 <div style="width: 70%;padding-left: 15%">
 
-![](/images/code_way/4_4.png)
+![](/images/architecture/0_4.png)
 
 </div>
 
@@ -157,7 +157,7 @@ LDC 实现的关键就在于单元化系统架构设计，所以在蚂蚁内部�
 
 <div style="width: 70%;padding-left: 15%">
 
-![](/images/code_way/4_5.png)
+![](/images/architecture/0_5.png)
 
 </div>
 
