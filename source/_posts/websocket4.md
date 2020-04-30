@@ -2,6 +2,7 @@
 title: 用 websocket 连接 bitmex 交易所
 date: 2020-01-01 20:29:39
 categories:
+- 网络
 - websocket
 tags:
 - network
