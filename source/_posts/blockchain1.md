@@ -2,7 +2,7 @@
 title: blockchain | 《精通比特币第二版》 双花问题
 date: 2020-04-18 21:58:24
 categories:
-- [blockchain,精通比特币]
+- [blockchain,书籍,《精通比特币》]
 - [blockchain,基础]
 tags:
 - blockchain
