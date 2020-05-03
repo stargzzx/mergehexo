@@ -2,9 +2,10 @@
 title: 双栈排序
 date: 2018-07-31 21:01:54
 categories:
-- algorithm
+- 算法
+- 经典
 tags:
-- algorithm
+- 算法
 ---
 问题描述：
 

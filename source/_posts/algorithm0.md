@@ -2,9 +2,10 @@
 title: 动态规划（Dynamic Programming）
 date: 2018-11-07 17:03:30
 categories:
-- algorithm
+- 算法
+- 经典
 tags:
-- algorithm
+- 算法
 - 动态规划
 ---
 动态规划是一种牛逼闪闪的算法思想。

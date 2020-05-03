@@ -2,9 +2,10 @@
 title: 栈的浅析
 date: 2018-07-21 21:20:06
 categories:
-- algorithm
+- 算法
+- 经典
 tags:
-- algorithm
+- 算法
 ---
 这里初度对栈进行浅度分析。
 

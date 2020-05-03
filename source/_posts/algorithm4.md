@@ -2,9 +2,10 @@
 title: 二分法详解
 date: 2018-06-30 22:02:45
 categories:
-- algorithm
+- 算法
+- 经典
 tags:
-- algorithm
+- 算法
 ---
 如题所示，另外代码是由 python 实现。
 

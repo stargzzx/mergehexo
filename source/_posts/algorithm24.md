@@ -2,9 +2,10 @@
 title: 深度优先(DFS)
 date: 2018-07-23 21:37:17
 categories:
-- algorithm
+- 算法
+- 经典
 tags:
-- algorithm
+- 算法
 ---
 深度优先是一种基础算法。它分为递归版和非递归版。
 

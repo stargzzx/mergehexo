@@ -2,9 +2,10 @@
 title: 排序算法总结
 date: 2018-06-30 21:50:52
 categories:
-- algorithm
+- 算法
+- 经典
 tags:
-- algorithm
+- 算法
 ---
 如题所示，另外代码是用 python 实现，附上自己的理解。
 <!-- more -->

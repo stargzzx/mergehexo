@@ -8,6 +8,8 @@ tags:
 - Tim
 ---
 
+第一季第二集第一章的台词。
+
 <!-- more -->
 
 Boss: Ah, Timothy, come on in.
