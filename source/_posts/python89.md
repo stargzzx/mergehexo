@@ -23,6 +23,10 @@ Click  是用 Python 写的一个第三方模块，用于快速创建命令行�
 - [Python命令行神器 Click 简明笔记](https://blog.csdn.net/lihua_tan/article/details/54869355)
 - [Python 命令行之旅：深入 click 之子命令篇](https://www.cnblogs.com/xueweihan/p/11931096.html)
 
+上面的那个是一个系列，要从头看
+
+- [削微寒的程序员之路](https://www.cnblogs.com/xueweihan/category/1525040.html)
+
 <br/>
 
 # 快速使用
