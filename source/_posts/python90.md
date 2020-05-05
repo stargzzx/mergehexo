@@ -417,3 +417,187 @@ def som_function():
     module_logger.info("call function some_function")
 ```
 
+执行之后，在控制和日志文件log.txt中输出
+
+```
+2017-07-25 15:05:07,427 - mainModule - INFO - creating an instance of subModule.subModuleClass
+2017-07-25 15:05:07,427 - mainModule.sub.module - INFO - creating an instance in SubModuleClass
+2017-07-25 15:05:07,427 - mainModule - INFO - calling subModule.subModuleClass.doSomething
+2017-07-25 15:05:07,427 - mainModule.sub.module - INFO - do something in SubModule
+2017-07-25 15:05:07,427 - mainModule.sub.module - INFO - finish something in SubModuleClass
+2017-07-25 15:05:07,427 - mainModule - INFO - done with  subModule.subModuleClass.doSomething
+2017-07-25 15:05:07,427 - mainModule - INFO - calling subModule.some_function
+2017-07-25 15:05:07,427 - mainModule.sub - INFO - call function some_function
+2017-07-25 15:05:07,428 - mainModule - INFO - done with subModule.some_function
+```
+
+说明：
+
+首先在主模块定义了 `logger'mainModule'`，并对它进行了配置，就可以在解释器进程里面的其他地方通过 `getLogger('mainModule')` 得到的对象都是一样的，不需要重新配置，可以直接使用。定义的该logger的子logger，都可以共享父logger的定义和配置，所谓的父子logger是通过命名来识别，任意以'mainModule'开头的logger都是它的子logger，例如'mainModule.sub'。
+
+实际开发一个 `application`，首先可以通过logging配置文件编写好这个application所对应的配置，可以生成一个根logger，如'PythonAPP'，然后在主函数中通过fileConfig加载logging配置，接着在application的其他地方、不同的模块中，可以使用根logger的子logger，如'PythonAPP.Core'，'PythonAPP.Web'来进行log，而不需要反复的定义和配置各个模块的logger。
+
+<br/>
+
+# 通过JSON或者YAML文件配置logging模块
+
+<br/>
+
+尽管可以在Python代码中配置logging，但是这样并不够灵活，最好的方法是使用一个配置文件来配置。在Python 2.7及以后的版本中，可以从字典中加载logging配置，也就意味着可以通过JSON或者YAML文件加载日志的配置。
+
+## 通过JSON文件配置
+
+JSON配置文件
+
+```json
+{
+    "version":1,
+    "disable_existing_loggers":false,
+    "formatters":{
+        "simple":{
+            "format":"%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        }
+    },
+    "handlers":{
+        "console":{
+            "class":"logging.StreamHandler",
+            "level":"DEBUG",
+            "formatter":"simple",
+            "stream":"ext://sys.stdout"
+        },
+        "info_file_handler":{
+            "class":"logging.handlers.RotatingFileHandler",
+            "level":"INFO",
+            "formatter":"simple",
+            "filename":"info.log",
+            "maxBytes":"10485760",
+            "backupCount":20,
+            "encoding":"utf8"
+        },
+        "error_file_handler":{
+            "class":"logging.handlers.RotatingFileHandler",
+            "level":"ERROR",
+            "formatter":"simple",
+            "filename":"errors.log",
+            "maxBytes":10485760,
+            "backupCount":20,
+            "encoding":"utf8"
+        }
+    },
+    "loggers":{
+        "my_module":{
+            "level":"ERROR",
+            "handlers":["info_file_handler"],
+            "propagate":"no"
+        }
+    },
+    "root":{
+        "level":"INFO",
+        "handlers":["console","info_file_handler","error_file_handler"]
+    }
+}
+```
+
+通过JSON加载配置文件，然后通过logging.dictConfig配置logging，
+
+```python
+import json
+import logging.config
+import os
+ 
+def setup_logging(default_path = "logging.json",default_level = logging.INFO,env_key = "LOG_CFG"):
+    path = default_path
+    value = os.getenv(env_key,None)
+    if value:
+        path = value
+    if os.path.exists(path):
+        with open(path,"r") as f:
+            config = json.load(f)
+            logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level = default_level)
+ 
+def func():
+    logging.info("start func")
+ 
+    logging.info("exec func")
+ 
+    logging.info("end func")
+ 
+if __name__ == "__main__":
+    setup_logging(default_path = "logging.json")
+    func()
+```
+
+## 通过YAML文件配置
+
+通过YAML文件进行配置，比JSON看起来更加简介明了，
+
+```yaml
+version: 1
+disable_existing_loggers: False
+formatters:
+        simple:
+            format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+handlers:
+    console:
+            class: logging.StreamHandler
+            level: DEBUG
+            formatter: simple
+            stream: ext://sys.stdout
+    info_file_handler:
+            class: logging.handlers.RotatingFileHandler
+            level: INFO
+            formatter: simple
+            filename: info.log
+            maxBytes: 10485760
+            backupCount: 20
+            encoding: utf8
+    error_file_handler:
+            class: logging.handlers.RotatingFileHandler
+            level: ERROR
+            formatter: simple
+            filename: errors.log
+            maxBytes: 10485760
+            backupCount: 20
+            encoding: utf8
+loggers:
+    my_module:
+            level: ERROR
+            handlers: [info_file_handler]
+            propagate: no
+root:
+    level: INFO
+    handlers: [console,info_file_handler,error_file_handler]
+```
+
+通过YAML加载配置文件，然后通过logging.dictConfig配置logging
+
+```python
+import yaml
+import logging.config
+import os
+ 
+def setup_logging(default_path = "logging.yaml",default_level = logging.INFO,env_key = "LOG_CFG"):
+    path = default_path
+    value = os.getenv(env_key,None)
+    if value:
+        path = value
+    if os.path.exists(path):
+        with open(path,"r") as f:
+            config = yaml.load(f)
+            logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level = default_level)
+ 
+def func():
+    logging.info("start func")
+ 
+    logging.info("exec func")
+ 
+    logging.info("end func")
+ 
+if __name__ == "__main__":
+    setup_logging(default_path = "logging.yaml")
+    func()
+```

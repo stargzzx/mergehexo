@@ -2,8 +2,8 @@
 title: 密码学 | Merkle Tree「转载」
 date: 2020-05-01 22:08:03
 categories:
-- 密码学
-- Nervos 系列
+- [密码学,Nervos 系列]
+- [密码学,基础]
 tags:
 - 密码学
 ---
