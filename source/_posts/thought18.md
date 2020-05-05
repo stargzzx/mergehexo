@@ -2,10 +2,11 @@
 title: 一个女孩想平安长大有多难
 date: 2018-10-31 22:31:28
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 [原文链接](https://mp.weixin.qq.com/s/eiGJcMN48gXohzAbGHgzmg)

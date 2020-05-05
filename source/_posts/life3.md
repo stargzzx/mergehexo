@@ -2,9 +2,11 @@
 title: 我的人生 | 不能尿尿的公羊
 date: 2020-05-01 14:28:35
 categories:
-- 我的人生
+- 人生
+- 经历
 tags:
-- 我的人生
+- 人生
+- 经历
 password: life3life3
 abstract: 我的记忆与人生
 message: 您好, 这里是 4 级加密文章，乃我个人的人生经历，暂不对外公开，请理解。

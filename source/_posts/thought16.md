@@ -2,10 +2,11 @@
 title: 度的问题
 date: 2018-08-29 09:50:20
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 这么早就碰到问题，应该是值的庆幸的。

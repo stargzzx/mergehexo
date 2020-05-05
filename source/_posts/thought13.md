@@ -2,10 +2,11 @@
 title: 人性本善还是本恶？
 date: 2018-08-18 10:38:31
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 如题，说一说我的看法。

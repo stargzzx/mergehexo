@@ -2,10 +2,11 @@
 title: 思考 | 对 neoworld 的建议
 date: 2018-07-31 19:26:20
 categories:
-- thought
+- 人生
+- 奇思
 tags:
-- neoworld
-- thought
+- 人生
+- 奇思
 ---
 我对我感兴趣的投资项目写了一封建议信，下面是信的原件内容。
 

@@ -2,10 +2,11 @@
 title: 沟壑难填
 date: 2018-07-31 16:35:57
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 标题中所说的沟壑指的是欲望。

@@ -2,10 +2,11 @@
 title: 冲动是魔鬼
 date: 2018-07-24 22:55:50
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 冲动是魔鬼这句话真的是至理名言。

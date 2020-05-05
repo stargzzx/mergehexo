@@ -2,10 +2,11 @@
 title: 看问题的角度
 date: 2018-08-21 14:49:37
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 如题。

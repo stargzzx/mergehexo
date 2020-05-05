@@ -2,10 +2,11 @@
 title: 老实的鸡被宰
 date: 2018-09-24 21:25:23
 categories:
-- thought
+- 人生
+- 思考
 tags:
-- thought
-- life
+- 人生
+- 思考
 ---
 
 这篇文章主要是讲解一下我最近的心路历程。
