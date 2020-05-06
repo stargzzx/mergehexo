@@ -411,6 +411,194 @@ if __name__ == '__main__':
 	# job2 110
 ```
 
+`lock` 除了
+
+- `lock.acquire()`
+- `lock.release()`
+
+可以加上、解开锁之外还可以用
+
+    with lock
+
+```python
+def job2():
+    global A, lock
+    with lock:
+        for i in range(10):
+            A += 10
+            print('job2', A)
+```
+
+上面的代码和下面的代码是一个效果
+
+```python
+def job2():
+    global A, lock
+    lock.acquire()
+    for i in range(10):
+        A += 10
+        print('job2', A)
+    lock.release()
+```
+
+但是有的时候，由于相互之间的跳转，会导致出现死锁。
+
+```python
+import threading
+import time
+
+
+def job1():
+    global A, lock
+    with lock:
+        for i in range(10):
+            A += 1
+            print('job1', A)
+            time.sleep(0.1)
+            if i == 5:
+                test()
+
+
+def job2():
+    global A, lock
+    with lock:
+        for i in range(10):
+            A += 10
+            print('job2', A)
+
+
+def test():
+    global A, lock
+    with lock:
+        print(123)
+
+
+if __name__ == '__main__':
+    lock = threading.Lock()
+    A = 0
+    t1 = threading.Thread(target=job1)
+    t2 = threading.Thread(target=job2)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+```
+
+可以看到在 `job1` 中，我们直接跳到了 `test` 由于锁没有解开，所以导致，出现了死锁等待。
+
+我们使用 pycharm debug 一下。
+
+我们在 job1 中的 with lock 中打第一个断点，在 job1 的 test() 前面打第二个端点。在 test() 函数中的 with lock 打第三个端点
+
+### 第一个断点
+
+`lock` 的状态为
+
+    <unlocked _thread.lock object at 0x1074adb98>
+
+### 第二个断点
+
+`lock` 的状态为
+
+    <locked _thread.lock object at 0x10abe6b98>
+
+### 第三个断点
+
+因为 lock 的状态依然是 locked ，所以，即便是跳转到 test() 中，状态依然没有改变，出现死锁。
+
+`lock` 的状态为
+
+    <locked _thread.lock object at 0x10abe6b98>
+
+并且，内存地址一样，证明了这是同一个锁。
+
+那么，什么时候跳出是安全的呢？
+
+```python
+import threading
+import time
+
+
+def job1():
+    global A, lock
+    with lock:
+        for i in range(10):
+            A += 1
+            print('job1', A)
+            time.sleep(0.1)
+    test()
+
+
+def job2():
+    global A, lock
+    with lock:
+        for i in range(10):
+            A += 10
+            print('job2', A)
+
+
+def test():
+    global A, lock
+    with lock:
+        print(123)
+
+
+if __name__ == '__main__':
+    lock = threading.Lock()
+    A = 0
+    t1 = threading.Thread(target=job1)
+    t2 = threading.Thread(target=job2)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+```
+
+让跳出函数和 with 平级就好。
+
+或者
+
+```python
+import threading
+import time
+
+
+def job1():
+    global A, lock
+    lock.acquire()
+    for i in range(10):
+        A += 1
+        print('job1', A)
+        time.sleep(0.1)
+        if i == 5:
+            lock.release()
+            test()
+
+
+def job2():
+    global A, lock
+    with lock:
+        for i in range(10):
+            A += 10
+            print('job2', A)
+
+
+def test():
+    global A, lock
+    with lock:
+        print(123)
+
+
+if __name__ == '__main__':
+    lock = threading.Lock()
+    A = 0
+    t1 = threading.Thread(target=job1)
+    t2 = threading.Thread(target=job2)
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+```
 
 ## 对 python 多线程的理解
 
