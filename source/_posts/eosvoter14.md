@@ -73,6 +73,8 @@ message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理
 
 ![](/images/eos_voter/14_2.png)
 
+ps: 我尝试过用 python 执行 js 代码，但是，最后的密钥我还是破解不了，失败... ...
+
 <br/>
 
 # 模拟浏览器
@@ -167,3 +169,27 @@ ps:不需要在终端事先输入 `chromedriver`
 
 ## 解析网页
 
+需要注意的是，访问 `btc.com` 需要走科学上网路线。
+
+其实解析就非常简单了，我下面举一个简单的例子，你们就会了。
+
+```python
+from selenium import webdriver
+
+browser = webdriver.Chrome()
+response = browser.page_source
+html = BeautifulSoup(response, "html.parser", from_encoding="utf-8")
+...
+
+解析网页
+
+...
+
+browser.close()
+```
+
+需要注意的是，这段程序会自动打开 chrome，然后进行操作。
+
+ps: 这一博文几乎没怎么用 selenium ,只是借助了它的返回页面的操作。
+
+这个库真正的用处在于模拟人的操作，包括验证码滑动等。
