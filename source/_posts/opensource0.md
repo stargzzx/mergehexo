@@ -2,10 +2,8 @@
 title: 开源项目 | proxy_pool 安装和运行
 date: 2020-04-21 18:28:33
 categories:
-- 开源项目
-- python
-- proxy_pool
-- 基础
+- [开源项目,python,proxy_pool,基础]
+- [爬虫,电脑,proxy_pool]
 tags:
 - 开源项目
 ---

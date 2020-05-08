@@ -5,6 +5,7 @@ categories:
 - [python,进阶,日志]
 - [python,模块,logger]
 - [开源项目,python,proxy_pool,源码分析]
+- [爬虫,电脑,proxy_pool]
 tags:
 - python
 - proxy_pool

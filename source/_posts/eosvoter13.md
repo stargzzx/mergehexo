@@ -1,9 +1,10 @@
 ---
-title: eosvoter | 爬取数据
+title: eosvoter | 爬取 eos 相关数据
 date: 2020-04-22 12:08:44
 categories:
 - [eosvoter]
 - [项目经历,中型,eosvoter]
+- [爬虫,电脑]
 tags:
 - eosvoter
 password: eosvotereosvoter13

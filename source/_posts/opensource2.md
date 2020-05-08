@@ -2,10 +2,8 @@
 title: 开源项目 | proxy_pool 在服务器部署
 date: 2020-04-28 14:01:25
 categories:
-- 开源项目
-- python
-- proxy_pool
-- 基础
+- [开源项目,python,proxy_pool,基础]
+- [爬虫,电脑,proxy_pool]
 tags:
 - 开源项目
 ---

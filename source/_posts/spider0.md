@@ -2,7 +2,8 @@
 title: scrapy的选择器
 date: 2019-03-05 09:22:37
 categories:
-- spider
+- 爬虫
+- 电脑
 tags:
 - python 第三方库
 - spider
