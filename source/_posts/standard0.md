@@ -2,8 +2,9 @@
 title: 编程规范 | rest 接口篇
 date: 2020-03-03 22:20:39
 categories:
-- standard
+- 标准规范
 tags:
+- 标准规范
 - standard
 - rest
 mathjax: true

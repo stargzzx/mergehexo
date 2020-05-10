@@ -3,6 +3,8 @@ title: python|单元测试和mock
 date: 2019-10-27 17:26:25
 categories:
 - python
+- 进阶
+- 单元测试
 tags:
 - 单元测试
 - python
