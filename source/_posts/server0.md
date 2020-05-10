@@ -2,9 +2,10 @@
 title: 利用阿里云搭建微信公众号
 date: 2019-03-18 17:07:41
 categories:
-- server
+- 服务器
+- 阿里云
 tags:
-- server
+- 服务器
 - 阿里云
 - 服务器
 - 微信公众号

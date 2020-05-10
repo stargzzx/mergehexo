@@ -2,11 +2,9 @@
 title: 《迷途行者》
 date: 2018-04-25 11:58:28
 categories:
-- anime
+- 动漫
 tags:
-- anime
-- killtime
-- relaxation
+- 动漫
 ---
 我看过 N 多的动漫，但是，这是我第一篇关于动漫的博文。
 

@@ -2,12 +2,9 @@
 title: 《Rick and Morty》
 date: 2018-06-13 15:35:14
 categories:
-- anime
+- 动漫
 tags:
-- anime
-- philosophy
-- killtime
-- relaxation
+- 动漫
 ---
 
 哈哈，这是我最近追的最有意思的番剧了。是美国的脑洞系列的漫画，充满了黑色幽默和讽刺。有点类似我看过的电影系列《惊声尖笑》。这是一部神作。

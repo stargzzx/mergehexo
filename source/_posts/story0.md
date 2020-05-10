@@ -2,11 +2,10 @@
 title: 一位老饕
 date: 2018-11-01 21:20:28
 categories:
-- story
+- 历史
+- 人物
 tags:
-- story
-- history
-- life
+- 历史
 ---
 日啖荔枝三百颗，不辞长作岭南人。
 

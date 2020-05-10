@@ -2,10 +2,9 @@
 title: signal 基础
 date: 2019-03-04 11:51:29
 categories:
-- signal
+- 信号
+- 基础
 tags:
-- signal
-- 信号处理
 - 信号基础
 ---
 这篇主要讲述了信号的频率等相关属性。

@@ -2,9 +2,9 @@
 title: 千山飞鸟
 date: 2018-07-11 15:03:57
 categories:
-- phonegame
+- 手机游戏
 tags:
-- phonegame
+- 手机游戏
 - game
 - killtime
 - relaxation

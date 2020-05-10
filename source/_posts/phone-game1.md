@@ -2,9 +2,9 @@
 title: 《Rusty Lake Hotel》锈湖旅馆
 date: 2018-07-14 15:17:43
 categories:
-- phonegame
+- 手机游戏
 tags:
-- phonegame
+- 手机游戏
 - game
 - killtime
 - relaxation

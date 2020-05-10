@@ -2,10 +2,9 @@
 title: TF卡和SD卡的区别
 date: 2018-12-28 16:57:49
 categories:
-- hardware
+- 硬件
 tags:
 - 硬件
-- hardware
 - TF卡
 - SD卡
 ---

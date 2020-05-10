@@ -2,9 +2,9 @@
 title: 寻秦记
 date: 2018-04-20 22:55:16
 categories:
-- TV_series
+- 电视剧
 tags:
-- TV_series
+- 电视剧
 - killtime
 - relaxation
 ---

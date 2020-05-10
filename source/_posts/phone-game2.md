@@ -2,11 +2,11 @@
 title: 《Tengami》纸镜
 date: 2018-07-16 15:35:12
 categories:
-- phonegame
+- 手机游戏
 tags:
 - game
 - killtime
-- phonegame
+- 手机游戏
 - relaxation
 ---
 《纸镜》是一个日本古风手机游戏，就好像是它的字面意思，里面的世界是用纸做的。

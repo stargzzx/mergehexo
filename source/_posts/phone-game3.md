@@ -2,12 +2,12 @@
 title: 《忍者 岚》
 date: 2018-07-23 21:42:00
 categories:
-- phonegame
+- 手机游戏
 tags:
 - game
 - killtime
 - relaxation
-- phonegame
+- 手机游戏
 ---
 《忍者 岚》是一个闯关类游戏。它目前非常非常火，所以，我也蹭了一把热度。
 

@@ -2,10 +2,10 @@
 title: 数字信号和模拟信号
 date: 2019-01-02 10:52:32
 categories:
-- signal
+- 信号
+- 基础
 tags:
-- signal
-- 信号处理
+- 信号
 - 数字信号
 - 模拟信号
 ---
