@@ -2,8 +2,9 @@
 title: 我的搬砖经历 IQ 从OTCBTC到鲸交所
 date: 2019-05-03 21:08:21
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - IQ
 - 搬砖
 - meet.one

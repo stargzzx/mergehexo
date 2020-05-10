@@ -2,8 +2,9 @@
 title: 和社区合伙人的书信
 date: 2018-08-05 11:28:56
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - neoworld
 - virtualcoin
 - blockchain

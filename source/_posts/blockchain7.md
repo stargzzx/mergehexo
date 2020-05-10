@@ -2,9 +2,9 @@
 title: 区块链 | 路线图
 date: 2020-05-01 21:11:56
 categories:
-- [blockchain,基础]
+- [区块链,基础]
 tags:
-- blockchain
+- 区块链
 ---
 我将公布我自己学习区块链的路线图，当然，这个路线图只是最初始的状态，我会慢慢的进行完善。
 
@@ -17,3 +17,7 @@ tags:
 ## 简单的密码学知识
 
 [区块链背后的密码学](https://learning.nervos.org/crypto-block)
+
+## bitcoin 白皮书
+
+[白皮书](https://benpaodewoniu.github.io/2020/05/10/blockchain10/)

@@ -2,9 +2,9 @@
 title: 币圈 | 永续合约的资金费率
 date: 2020-04-10 20:49:34
 categories:
-- virtualcoin
-- 基础
+- [区块链,虚拟币,基础]
 tags:
+- 区块链
 - virtualcoin
 ---
 永续怎么赚钱，使用的就是资金费率。

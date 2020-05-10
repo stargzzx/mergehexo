@@ -2,8 +2,9 @@
 title: 我的搬砖经历 NASH 从币虎到龙网
 date: 2019-05-03 21:08:27
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - 搬砖
 - 龙网
 - neoworld

@@ -2,8 +2,9 @@
 title: 区块链 | 《密码朋克宣言》
 date: 2020-04-24 20:26:18
 categories:
-- [blockchain,进阶,文件]
+- [区块链,进阶,文件]
 tags:
+- 区块链
 - blockchain
 ---
 这是 1993 年 由 Eric Hughes 编写的 《A Cypherpunk's Manifesto》

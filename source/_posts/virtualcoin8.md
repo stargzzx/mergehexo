@@ -2,8 +2,9 @@
 title: 我的搬砖经历 TPT 从鲸交所到dex.top
 date: 2019-05-03 21:10:44
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - TPT
 - eos
 - 搬砖

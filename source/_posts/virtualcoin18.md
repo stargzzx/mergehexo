@@ -2,10 +2,9 @@
 title: 币圈 | DMA
 date: 2020-04-13 16:19:01
 categories:
-- virtualcoin
-- 进阶
-- 量化
+- [区块链,虚拟币,进阶,量化]
 tags:
+- 区块链
 - virtualcoin
 - 量化
 mathjax: true

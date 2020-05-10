@@ -2,8 +2,9 @@
 title: neoworld
 date: 2018-07-30 20:47:48
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - virtualcoin
 - blockchain
 - game

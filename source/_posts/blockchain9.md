@@ -2,11 +2,11 @@
 title: 区块链 | 《比特币：一个虚幻而真实的金融世界》
 date: 2020-05-03 14:51:26
 categories:
-- [blockchain,书籍]
-- [blockchain,基础]
+- [区块链,书籍]
+- [区块链,基础]
 - [book]
 tags:
-- blockchain
+- 区块链
 ---
 花费了大约两天的时间，将这本书看完，收获还是有的。
 

@@ -2,9 +2,10 @@
 title: 区块链 | hashcash
 date: 2020-04-26 14:19:35
 categories:
-- [blockchain,基础]
+- [区块链,基础]
 - [密码学,基础]
 tags:
+- 区块链
 - blockchain
 ---
 比特币三大体系支撑之一就是 hash cash。

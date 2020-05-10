@@ -2,8 +2,9 @@
 title: 帮助他人申请合伙人
 date: 2018-08-12 09:07:21
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - virtualcoin
 - blockchain
 - game

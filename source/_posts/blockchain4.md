@@ -2,8 +2,9 @@
 title: 区块链 | 区块链的历史历程
 date: 2020-04-24 18:34:45
 categories:
-- [blockchain,基础]
+- [区块链,基础]
 tags:
+- 区块链
 - blockchain
 password: blockchain4
 abstract: 区块链历史进程的一些资料收集

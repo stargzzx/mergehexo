@@ -2,9 +2,9 @@
 title: 区块链 | 区块链本质及特点
 date: 2020-05-03 14:50:24
 categories:
-- [blockchain,基础]
+- [区块链,基础]
 tags:
-- blockchain
+- 区块链
 ---
 这算是资料收集吧，主要是给 EMI 课件提供资料，将从下面两部分梳理。
 

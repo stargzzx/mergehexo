@@ -2,9 +2,10 @@
 title: blockchain | 《精通比特币第二版》 拜占庭将军问题
 date: 2020-04-18 22:34:32
 categories:
-- [blockchain,书籍,《精通比特币》]
-- [blockchain,基础]
+- [区块链,书籍,《精通比特币》]
+- [区块链,基础]
 tags:
+- 区块链
 - blockchain
 - 精通比特币
 ---

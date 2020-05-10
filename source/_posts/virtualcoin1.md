@@ -2,8 +2,9 @@
 title:  USDT
 date: 2018-08-01 15:44:46
 categories:
-- virtualcoin
+- [区块链,虚拟币]
 tags:
+- 区块链
 - virtualcoin
 - blockchain
 - game
