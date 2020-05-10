@@ -2,12 +2,10 @@
 title: 箭峪岭游记
 date: 2018-11-26 21:34:08
 categories:
-- travel
+- 旅行
 tags:
-- travel
-- mountain
-- funny
-- relaxation
+- 旅行
+- 箭峪岭
 ---
 
 记录前段日子，额，也就是 2018 年 11 月 24 日爬箭峪岭的经历。
