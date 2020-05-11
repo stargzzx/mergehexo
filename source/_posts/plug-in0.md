@@ -2,7 +2,8 @@
 title: 使用 Airtest 通过 USB 连接手机
 date: 2019-03-11 06:48:21
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - plug_in
 - AirtestIDE

@@ -2,7 +2,8 @@
 title: 本地构建wordpress
 date: 2019-07-08 14:23:13
 categories:
-- webdesign
+- 前端设计
+- wordpress
 tags:
 - webdesign
 - wordpress

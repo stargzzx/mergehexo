@@ -2,7 +2,8 @@
 title: 基于App布局信息操作手机
 date: 2019-03-11 09:56:50
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - plug_in
 - AirtestIDE

@@ -2,7 +2,8 @@
 title: 群控模拟器
 date: 2019-03-11 18:54:29
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - 群控
 - 多线程

@@ -2,7 +2,8 @@
 title: adb 的简单用法
 date: 2019-03-11 14:06:59
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - 手机
 - adb

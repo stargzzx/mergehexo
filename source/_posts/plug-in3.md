@@ -2,7 +2,8 @@
 title: 电脑无线连接手机
 date: 2019-03-11 13:07:35
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - 无线
 - plug_in

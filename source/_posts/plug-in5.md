@@ -2,7 +2,8 @@
 title: 手机模拟器与 XPosed
 date: 2019-03-11 15:09:46
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - xposed
 - XPosed

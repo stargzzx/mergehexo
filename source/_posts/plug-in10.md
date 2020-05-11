@@ -2,7 +2,8 @@
 title: QQ 机器人
 date: 2019-03-17 10:05:03
 categories:
-- plug_in
+- 脚本控制
+- 手机 & 机器人
 tags:
 - plug_in
 - 脚本

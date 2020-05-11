@@ -2,7 +2,8 @@
 title: 直接用 python 控制手机,通过 USB 连接方式
 date: 2019-03-11 10:15:57
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - plug_in
 - python

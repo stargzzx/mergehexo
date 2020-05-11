@@ -2,7 +2,8 @@
 title: 模拟器连接
 date: 2019-03-11 15:16:47
 categories:
-- plug_in
+- 脚本控制
+- 手机
 tags:
 - xposed
 - XPosed
