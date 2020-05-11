@@ -2,7 +2,8 @@
 title: 《幸福是什么》
 date: 2018-05-23 15:58:56
 categories:
-- article
+- [文学,原创,文章]
+- [人生,思考]
 tags:
 - article
 - original

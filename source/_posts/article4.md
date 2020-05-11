@@ -2,7 +2,7 @@
 title: 小人物的一生
 date: 2018-07-11 10:01:16
 categories:
-- article
+- [文学,原创,文章]
 tags:
 - article
 - original

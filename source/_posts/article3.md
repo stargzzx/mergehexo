@@ -2,7 +2,7 @@
 title: 《流血的衣柜》
 date: 2018-05-26 17:10:24
 categories:
-- article
+- [文学,原创,文章]
 tags:
 - article
 - original

@@ -2,7 +2,7 @@
 title: 走向存量残杀的危险世界
 date: 2019-10-27 21:14:06
 categories:
-- article
+- [文学,转载,文章,思考]
 tags:
 - article
 ---

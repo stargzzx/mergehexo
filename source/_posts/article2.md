@@ -2,7 +2,7 @@
 title: 《寄生沙-人类的末日》
 date: 2018-05-24 10:51:25
 categories:
-- article
+- [文学,原创,文章]
 tags:
 - article
 - original
