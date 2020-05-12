@@ -7,7 +7,6 @@ categories:
 tags:
 - webdesign
 - webapp
-- tutorial
 ---
 当我们在电脑端写 webapp 代码之后，会有两个途径检查结果。
 
