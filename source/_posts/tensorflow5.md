@@ -2,7 +2,7 @@
 title: tensorflow 神经网络的损失函数
 date: 2018-09-13 16:16:13
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

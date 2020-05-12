@@ -2,7 +2,7 @@
 title: 神经层的可视化 tensorboard
 date: 2018-11-12 16:26:21
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - tensorboard
 - machine learning

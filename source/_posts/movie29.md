@@ -2,7 +2,9 @@
 title: movie | 叶问4
 date: 2020-03-11 14:20:03
 categories:
-- movie
+- 电影
+- 经典佳作
+- 功夫武侠
 tags:
 - movie
 ---

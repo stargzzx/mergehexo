@@ -2,7 +2,7 @@
 title: linux | 查看文件内容
 date: 2020-04-27 18:31:24
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 ---

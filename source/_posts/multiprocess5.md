@@ -2,7 +2,9 @@
 title: Python | 多线程之同步条件，信号量和队列
 date: 2019-12-22 21:07:53
 categories:
-- multiprocess
+- python
+- 进阶
+- 多进程 & 多线程
 tags:
 - multiprocess
 - 多进程

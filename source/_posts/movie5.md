@@ -2,7 +2,9 @@
 title: 星际穿越
 date: 2018-04-10 19:08:50
 categories:
-- movie
+- 电影
+- 经典佳作
+- 超现实主义
 tags:
 - movie
 - killtime

@@ -2,7 +2,8 @@
 title: 微信小程序之综合实践——休闲娱乐
 date: 2019-08-30 14:40:36
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

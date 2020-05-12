@@ -2,7 +2,9 @@
 title: 归来
 date: 2017-08-02 09:51:27
 categories:
-- movie
+- 电影
+- 经典佳作
+- 人生情感
 tags:
 - movie
 - killtime

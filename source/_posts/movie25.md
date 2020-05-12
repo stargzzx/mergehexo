@@ -2,7 +2,9 @@
 title: 《巴黎危机》
 date: 2020-02-09 23:55:31
 categories:
-- movie
+- 电影
+- 消磨时间
+- 超现实主义
 tags:
 - movie
 ---

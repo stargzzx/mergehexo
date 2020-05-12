@@ -2,7 +2,9 @@
 title: 《诛仙I》
 date: 2019-10-07 13:23:55
 categories:
-- movie
+- 电影
+- 排坑烂片
+- 超现实主义
 tags:
 - movie
 ---

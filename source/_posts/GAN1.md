@@ -2,6 +2,8 @@
 title: GAN1
 date: 2019-03-27 22:23:18
 categories:
+- 人工智能
+- 深度学习
 - GAN
 tags:
 - GAN

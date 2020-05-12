@@ -2,7 +2,7 @@
 title: 在 linux 重定向
 date: 2019-11-24 19:40:39
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - 重定向

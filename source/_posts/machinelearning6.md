@@ -2,7 +2,7 @@
 title: KNN 算法
 date: 2018-06-06 10:02:28
 categories:
-- machine learning
+- [人工智能,机器学习,KNN]
 tags:
 - KNN
 - machine learning

@@ -2,7 +2,8 @@
 title: 用几何的角度看复杂导数
 date: 2018-11-12 22:02:43
 categories:
-- calculus
+- 数学
+- 高等数学
 tags:
 - calculus
 - math

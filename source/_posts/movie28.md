@@ -2,7 +2,9 @@
 title: movie | 武侠
 date: 2020-02-24 09:48:15
 categories:
-- movie
+- 电影
+- 经典佳作
+- 功夫武侠
 tags:
 - movie
 ---

@@ -2,7 +2,7 @@
 title: 安装 Anaconda
 date: 2019-01-20 11:33:02
 categories:
-- anaconda
+- [python,中间件,anaconda]
 tags:
 - anaconda
 ---

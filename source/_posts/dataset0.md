@@ -2,7 +2,9 @@
 title: eegmmidb
 date: 2019-03-30 20:43:26
 categories:
-- dataset
+- 人工智能
+- 深度学习
+- 数据集
 tags:
 - dataset
 - EEG

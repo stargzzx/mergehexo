@@ -2,7 +2,7 @@
 title: tensorflow 基础
 date: 2018-08-24 14:51:48
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

@@ -2,6 +2,8 @@
 title: pdf_edit | 使用 google 翻译接口
 date: 2020-03-18 21:37:20
 categories:
+- 项目经历
+- 小型
 - pdf_edit
 tags:
 - pdf_edit

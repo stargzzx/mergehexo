@@ -2,7 +2,9 @@
 title: Python | 多线程同步锁，死锁和递归锁
 date: 2019-12-22 20:37:01
 categories:
-- multiprocess
+- python
+- 进阶
+- 多进程 & 多线程
 tags:
 - multiprocess
 - 多进程

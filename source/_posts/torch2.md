@@ -2,7 +2,7 @@
 title: pytorch | optimizer.step() 和loss.backward()
 date: 2020-01-26 15:38:14
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

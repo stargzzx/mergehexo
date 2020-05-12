@@ -3,7 +3,7 @@ title: docker | 实战 配置 eosvoter 项目
 date: 2020-04-23 15:23:20
 categories:
 - [docker,进阶]
-- [jenkins,进阶]
+- [中间件,jenkins,进阶]
 tags:
 - docker
 - jenkins

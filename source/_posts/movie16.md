@@ -2,7 +2,9 @@
 title: 《流浪地球》
 date: 2019-02-15 15:15:59
 categories:
-- movie
+- 电影
+- 经典佳作
+- 超现实主义
 tags:
 - movie
 - killtime

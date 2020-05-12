@@ -2,7 +2,9 @@
 title: 深度学习总纲
 date: 2019-01-03 09:24:12
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- 基础
 tags:
 - 密码学
 - deep learning

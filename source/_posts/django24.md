@@ -2,7 +2,9 @@
 title: Django中的cookie与session
 date: 2019-09-13 16:54:55
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 - session

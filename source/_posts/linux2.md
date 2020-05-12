@@ -2,7 +2,7 @@
 title: linux 的 crontab
 date: 2019-11-24 19:45:21
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - crontab

@@ -2,7 +2,9 @@
 title: 《银河漫游指南》
 date: 2018-10-08 14:59:19
 categories:
-- movie
+- 电影
+- 经典佳作
+- 超现实主义
 tags:
 - movie
 - killtime

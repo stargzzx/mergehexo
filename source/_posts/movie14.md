@@ -2,7 +2,9 @@
 title: 《神奇动物在哪里：格林德沃之罪》
 date: 2018-12-04 14:27:16
 categories:
-- movie
+- 电影
+- 经典佳作
+- 超现实主义
 tags:
 - movie
 - killtime

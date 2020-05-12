@@ -2,7 +2,9 @@
 title: 电影 | 《大空头》
 date: 2020-05-05 08:54:22
 categories:
-- movie
+- 电影
+- 经典佳作
+- 写实改编
 tags:
 - movie
 ---

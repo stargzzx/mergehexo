@@ -2,7 +2,9 @@
 title: 神经网络初篇
 date: 2018-11-08 17:29:52
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- 基础
 tags:
 - machine learning
 - neural network

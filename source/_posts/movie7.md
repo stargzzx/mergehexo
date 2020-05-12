@@ -2,7 +2,9 @@
 title: 黑豹
 date: 2018-05-17 11:24:27
 categories:
-- movie
+- 电影
+- 排坑烂片
+- 超现实主义
 tags:
 - movie
 - killtime

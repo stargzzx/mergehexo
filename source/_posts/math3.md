@@ -2,7 +2,8 @@
 title: 为什么样本方差（sample variance）的分母是 n-1？
 date: 2018-06-15 11:25:25
 categories:
-- math
+- 数学
+- 基础
 tags:
 - basis
 - math

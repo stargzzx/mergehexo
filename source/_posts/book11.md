@@ -2,7 +2,8 @@
 title: 《一个创业程序员的35岁人生人生总结》
 date: 2019-10-15 15:45:04
 categories:
-- book
+- 书籍
+- 传记
 tags:
 - book
 ---

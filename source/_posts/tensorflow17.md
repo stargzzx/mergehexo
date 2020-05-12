@@ -2,7 +2,7 @@
 title: loss 总是 NAN
 date: 2019-01-28 15:10:11
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - loss
 - machine learning

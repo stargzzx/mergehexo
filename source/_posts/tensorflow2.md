@@ -2,7 +2,7 @@
 title: tensorflow 张量，计算图，会话
 date: 2018-08-26 14:51:48
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

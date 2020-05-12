@@ -2,7 +2,7 @@
 title: pytorch | 微调别人的 model，以及参数相关
 date: 2020-01-27 15:18:40
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 mathjax: true

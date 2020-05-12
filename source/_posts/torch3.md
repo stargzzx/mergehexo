@@ -2,7 +2,7 @@
 title: pytorch | 数据集的建立
 date: 2020-01-26 17:03:11
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

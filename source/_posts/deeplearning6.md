@@ -2,7 +2,9 @@
 title: 激活函数
 date: 2018-11-08 22:08:23
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- 基础
 tags:
 - machine learning
 - neural network

@@ -2,7 +2,7 @@
 title: 建造神经网络
 date: 2018-11-09 16:42:00
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

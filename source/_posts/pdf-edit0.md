@@ -2,6 +2,8 @@
 title: pdf_edit | 项目成立目的
 date: 2020-03-18 09:01:20
 categories:
+- 项目经历
+- 小型
 - pdf_edit
 tags:
 - pdf_edit

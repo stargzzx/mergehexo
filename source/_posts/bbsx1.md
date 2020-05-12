@@ -2,7 +2,7 @@
 title: 抓捕漏的数据|币币生息
 date: 2019-09-22 16:07:51
 categories:
-- eosvoter
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 ---

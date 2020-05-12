@@ -2,7 +2,9 @@
 title: 神经网络的数学推导公式
 date: 2019-01-16 22:04:59
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- DNN
 tags:
 - 神经网络
 - 数学推导

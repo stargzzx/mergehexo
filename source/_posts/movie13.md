@@ -2,7 +2,9 @@
 title: 《毒液：致命守护者》
 date: 2018-11-10 11:18:09
 categories:
-- movie
+- 电影
+- 消磨时间
+- 超现实主义
 tags:
 - movie
 - killtime

@@ -2,7 +2,7 @@
 title: eosvoter|远程服务器部署
 date: 2019-10-09 21:46:57
 categories:
-- eosvoter
+- [项目经历,中型,eosvoter]
 tags:
 - eosvoter
 - ssh

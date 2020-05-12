@@ -2,7 +2,8 @@
 title: 小程序开发——实现个人助手功能清单发布
 date: 2019-08-21 10:35:39
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

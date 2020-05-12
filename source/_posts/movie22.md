@@ -2,7 +2,9 @@
 title: 《牧马人》
 date: 2020-01-28 00:44:35
 categories:
-- movie
+- 电影
+- 经典佳作
+- 人生情感
 tags:
 - movie
 ---

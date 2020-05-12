@@ -2,7 +2,7 @@
 title: tensorflow中的坑 无法在 python2 中安装
 date: 2019-01-25 14:27:49
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

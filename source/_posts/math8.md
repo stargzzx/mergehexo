@@ -2,7 +2,7 @@
 title: 导数，偏导数，方向导数，梯度
 date: 2019-01-03 15:15:43
 categories:
-- math
+- [数学,高等数学]
 tags:
 - basis
 - 导数

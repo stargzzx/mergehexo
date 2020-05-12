@@ -2,7 +2,9 @@
 title: 《中国机长》
 date: 2019-10-07 13:30:37
 categories:
-- movie
+- 电影
+- 排坑烂片
+- 写实改编
 tags:
 - movie
 ---

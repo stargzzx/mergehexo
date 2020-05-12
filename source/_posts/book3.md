@@ -2,7 +2,8 @@
 title: 《银带》
 date: 2017-08-17 09:51:27
 categories:
-- book
+- 书籍
+- 漫画
 tags:
 - book
 - literature

@@ -2,7 +2,8 @@
 title: Map - Reduce
 date: 2018-08-11 16:54:18
 categories:
-- basis
+- 电脑相关
+- 编程基础
 tags:
 - basis
 - 分布式

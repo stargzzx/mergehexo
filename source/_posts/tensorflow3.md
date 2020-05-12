@@ -2,7 +2,7 @@
 title: tensorflow 前向传播
 date: 2018-08-28 15:44:50
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

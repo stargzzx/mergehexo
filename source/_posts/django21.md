@@ -2,7 +2,9 @@
 title: Django中的CSRF与AJAX
 date: 2019-09-09 09:29:26
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 - CSRF

@@ -2,7 +2,8 @@
 title: MongoDB
 date: 2019-07-03 22:02:39
 categories:
-- database
+- sql
+- MongoDB
 tags:
 - database
 - 数据库

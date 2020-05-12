@@ -2,7 +2,9 @@
 title: 博客制作——django shell
 date: 2019-08-09 12:21:41
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 ---

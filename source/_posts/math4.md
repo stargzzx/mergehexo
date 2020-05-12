@@ -2,7 +2,8 @@
 title: 最小二乘法
 date: 2018-06-17 10:22:20
 categories:
-- math
+- 数学
+- 基础
 tags:
 - basis
 - math

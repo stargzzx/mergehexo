@@ -2,7 +2,7 @@
 title: pytorch | 几个比较简单的代码示例
 date: 2020-01-26 21:52:01
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

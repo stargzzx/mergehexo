@@ -2,7 +2,9 @@
 title: 斯巴达300勇士 1,2
 date: 2017-09-08 09:51:27
 categories:
-- movie
+- 电影
+- 经典佳作
+- 超现实主义
 tags:
 - movie
 - killtime

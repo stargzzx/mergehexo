@@ -2,7 +2,8 @@
 title: 《许三观卖血记》
 date: 2018-05-25 11:15:09
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - literature
 - relaxation

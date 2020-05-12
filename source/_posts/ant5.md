@@ -2,7 +2,6 @@
 title: ant | 数据库的对接
 date: 2020-03-15 19:49:41
 categories:
-- [ant]
 - [项目经历,大型,ant]
 tags:
 - ant

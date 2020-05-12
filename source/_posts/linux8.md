@@ -2,7 +2,7 @@
 title: linux | 命令行下载，联网访问
 date: 2020-01-10 11:47:33
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - curl

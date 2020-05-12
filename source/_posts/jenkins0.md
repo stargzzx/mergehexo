@@ -2,6 +2,7 @@
 title: jenkins | 简介和安装
 date: 2020-03-03 11:00:14
 categories:
+- 中间件
 - jenkins
 - 基础
 tags:

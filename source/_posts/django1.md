@@ -2,7 +2,9 @@
 title: 博客制作——django模型层
 date: 2019-08-09 11:43:24
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 ---

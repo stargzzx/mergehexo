@@ -2,7 +2,7 @@
 title: anaconda | 配置文件 .condarc
 date: 2020-01-09 16:16:15
 categories:
-- anaconda
+- [python,中间件,anaconda]
 tags:
 - anaconda
 - condarc

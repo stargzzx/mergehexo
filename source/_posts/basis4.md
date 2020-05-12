@@ -2,7 +2,8 @@
 title: 哈希函数
 date: 2018-08-11 16:35:15
 categories:
-- basis
+- 电脑相关
+- 编程基础
 tags:
 - basis
 - hash

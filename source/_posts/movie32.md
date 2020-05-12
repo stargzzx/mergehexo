@@ -2,7 +2,9 @@
 title: 电影 | 《蜀山传》
 date: 2020-05-10 15:00:04
 categories:
-- movie
+- 电影
+- 消磨时间
+- 超现实主义
 tags:
 - movie
 ---

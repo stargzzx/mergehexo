@@ -2,7 +2,9 @@
 title: python | GLI锁机制
 date: 2019-12-19 22:36:25
 categories:
-- multiprocess
+- python
+- 进阶
+- 多进程 & 多线程
 tags:
 - multiprocess
 - 多进程

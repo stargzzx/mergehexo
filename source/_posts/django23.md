@@ -2,7 +2,9 @@
 title: django的中间件
 date: 2019-09-09 13:02:42
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 - 中间件

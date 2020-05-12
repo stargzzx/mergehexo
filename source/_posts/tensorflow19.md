@@ -2,7 +2,7 @@
 title: tf 中的’SAME’和’VALID’填充有什么区别？
 date: 2019-01-29 09:10:17
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - nn模块
 - machine learning

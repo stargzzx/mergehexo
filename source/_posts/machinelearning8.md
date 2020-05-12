@@ -2,7 +2,7 @@
 title: 预测数值型数据：回归
 date: 2018-06-14 16:56:34
 categories:
-- machine learning
+- [人工智能,机器学习,线性回归]
 tags:
 - 回归
 - machine learning

@@ -2,7 +2,9 @@
 title: 神经网络超级详解
 date: 2019-01-03 09:35:13
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- DNN
 tags:
 - 神经网络
 - deep learning

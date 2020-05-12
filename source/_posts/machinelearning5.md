@@ -2,7 +2,7 @@
 title: 什么是交叉熵
 date: 2019-01-26 23:20:48
 categories:
-- machine learning
+- [人工智能,深度学习,基础]
 tags:
 - 交叉熵
 - machine learning

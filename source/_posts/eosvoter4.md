@@ -2,7 +2,6 @@
 title: eosvoter | 项目总结 v1
 date: 2020-02-23 23:55:00
 categories:
-- [eosvoter]
 - [项目经历,中型,eosvoter]
 tags:
 - eosvoter

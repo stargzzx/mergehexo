@@ -2,7 +2,9 @@
 title: 《东成西就》
 date: 2018-11-03 09:59:12
 categories:
-- movie
+- 电影
+- 经典佳作
+- 搞笑大片
 tags:
 - movie
 - killtime

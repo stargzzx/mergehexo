@@ -2,7 +2,8 @@
 title: cuda、cudnn版本的关系
 date: 2019-12-07 22:15:41
 categories:
-- nvidia
+- 人工智能
+- 基本知识
 tags:
 - nvidia
 - gpu

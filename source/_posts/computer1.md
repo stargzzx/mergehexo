@@ -2,7 +2,8 @@
 title: win10更新后 chrome内核浏览器总是打开网页一直加载 甚至打不开 解决方法
 date: 2018-10-28 20:07:17
 categories:
-- computer
+- 电脑相关
+- chrome
 tags:
 - chrome
 - computer

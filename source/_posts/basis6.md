@@ -2,7 +2,8 @@
 title: CPU 和 GPU 的区别
 date: 2018-08-26 14:56:56
 categories:
-- basis
+- 电脑相关
+- 硬件基础
 tags:
 - basis
 - CPU

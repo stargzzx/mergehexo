@@ -2,7 +2,7 @@
 title: flask | flask 入门
 date: 2020-03-18 08:57:52
 categories:
-- flask
+- [python,框架,flask]
 tags:
 - flask
 ---

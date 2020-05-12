@@ -2,7 +2,9 @@
 title: 钢的琴
 date: 2017-08-30 09:51:27
 categories:
-- movie
+- 电影
+- 经典佳作
+- 写实改编
 tags:
 - movie
 - killtime

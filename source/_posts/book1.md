@@ -2,7 +2,8 @@
 title: 华商崛起
 date: 2017-08-03 09:51:27
 categories:
-- book
+- 书籍
+- 传记
 tags:
 - book
 - literature

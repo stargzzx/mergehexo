@@ -2,7 +2,7 @@
 title: one-hot 编码方式 独热编码
 date: 2019-01-25 22:34:05
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - one-hot
 - machine learning

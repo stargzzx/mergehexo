@@ -2,7 +2,7 @@
 title: 对第一阶段目标的回顾
 date: 2020-03-03 11:58:49
 categories:
-- goal
+- 目标
 tags:
 - goal
 ---

@@ -2,7 +2,8 @@
 title: 微信小程序——开发入门
 date: 2019-08-14 10:25:47
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

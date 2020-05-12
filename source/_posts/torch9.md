@@ -2,7 +2,7 @@
 title: pytorch | 训练技巧
 date: 2020-01-28 00:32:20
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

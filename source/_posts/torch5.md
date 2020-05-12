@@ -2,7 +2,7 @@
 title: pytorch | 模型相关（保存、载入、修改等）
 date: 2020-01-26 18:02:44
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

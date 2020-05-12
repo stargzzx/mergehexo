@@ -2,7 +2,8 @@
 title: 茫茫书海一缕光，苗疆登顶不张狂
 date: 2017-06-17 09:51:27
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - book
 - literature

@@ -2,7 +2,8 @@
 title: 积分微分的本质
 date: 2018-11-11 12:45:21
 categories:
-- calculus
+- 数学
+- 高等数学
 tags:
 - calculus
 - math

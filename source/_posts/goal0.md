@@ -2,7 +2,7 @@
 title: 我的目标
 date: 2018-02-28 18:07:18
 categories:
-- goal
+- 目标
 tags:
 - goal
 ---

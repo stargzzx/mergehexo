@@ -2,7 +2,7 @@
 title: tensorflow 的 nn 模块
 date: 2019-01-29 07:14:12
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - nn模块
 - machine learning

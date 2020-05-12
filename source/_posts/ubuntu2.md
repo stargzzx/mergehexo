@@ -2,7 +2,7 @@
 title: ubuntu 镜像进阶篇
 date: 2019-11-30 10:52:51
 categories:
-- ubuntu
+- [linux,ubuntu]
 tags:
 - ubuntu
 ---

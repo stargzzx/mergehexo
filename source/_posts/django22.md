@@ -2,7 +2,9 @@
 title: Django的POST总是出现403错误
 date: 2019-09-09 12:31:54
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 - CSRF

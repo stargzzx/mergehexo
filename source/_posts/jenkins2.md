@@ -2,6 +2,7 @@
 title: jenkins | 向GitHub提交代码时触发Jenkins自动构建
 date: 2020-03-09 15:02:58
 categories:
+- 中间件
 - jenkins
 - 进阶
 tags:

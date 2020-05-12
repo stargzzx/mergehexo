@@ -2,7 +2,8 @@
 title: 《围城》
 date: 2018-11-04 09:35:01
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - book
 - literature

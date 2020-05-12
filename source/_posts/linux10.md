@@ -2,7 +2,7 @@
 title: linux | 网络相关
 date: 2020-04-23 13:53:45
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 ---

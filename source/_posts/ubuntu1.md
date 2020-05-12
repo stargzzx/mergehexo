@@ -2,7 +2,7 @@
 title: ubuntu 更换镜像源
 date: 2019-01-19 03:05:23
 categories:
-- ubuntu
+- [linux,ubuntu]
 tags:
 - ubuntu
 ---

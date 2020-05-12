@@ -2,7 +2,8 @@
 title: 无偏和有偏到底是什么？
 date: 2018-06-15 11:16:28
 categories:
-- math
+- 数学
+- 基础
 tags:
 - basis
 - math

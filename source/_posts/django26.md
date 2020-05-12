@@ -2,7 +2,9 @@
 title: Django模型层之数据库迁移
 date: 2019-09-13 18:12:28
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 ---

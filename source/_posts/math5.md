@@ -2,7 +2,8 @@
 title: 矩阵求导
 date: 2018-06-18 23:40:12
 categories:
-- math
+- [数学,线性代数]
+- [数学,高等数学]
 tags:
 - basis
 - 线性代数

@@ -2,7 +2,7 @@
 title: tensorflow cnn CIFAR-10
 date: 2019-01-29 21:58:03
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

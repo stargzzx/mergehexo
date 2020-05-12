@@ -2,7 +2,8 @@
 title: 事件驱动的一个简单的小demo
 date: 2020-01-01 20:02:00
 categories:
-- EDA
+- 架构
+- 事件驱动
 tags:
 - EDA
 - 事件驱动

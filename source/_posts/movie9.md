@@ -2,7 +2,9 @@
 title: 《这个男人来自地球》
 date: 2018-08-29 10:02:24
 categories:
-- movie
+- 电影
+- 经典佳作
+- 超现实主义
 tags:
 - movie
 - killtime

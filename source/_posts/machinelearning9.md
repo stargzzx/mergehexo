@@ -2,7 +2,7 @@
 title: Logistic回归
 date: 2018-06-19 09:18:02
 categories:
-- machine learning
+- [人工智能,机器学习,逻辑回归]
 tags:
 - Logistic
 - machine learning

@@ -2,7 +2,7 @@
 title: pycharm的一些技巧
 date: 2019-11-10 18:00:09
 categories:
-- pycharm
+- [python,IDE,pycharm]
 tags:
 - pycharm
 ---

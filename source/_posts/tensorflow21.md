@@ -2,7 +2,7 @@
 title: 用 cnn 分类 flower
 date: 2019-02-21 15:03:38
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

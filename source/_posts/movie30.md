@@ -2,7 +2,9 @@
 title: 《蛋炒饭》
 date: 2020-04-16 17:16:06
 categories:
-- movie
+- 电影
+- 排坑烂片
+- 超现实主义
 tags:
 - movie
 ---

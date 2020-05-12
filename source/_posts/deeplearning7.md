@@ -2,7 +2,9 @@
 title: 优化器，加速神经网络训练
 date: 2018-11-12 15:48:31
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- 基础
 tags:
 - machine learning
 - neural network

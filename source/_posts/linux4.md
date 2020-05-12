@@ -2,7 +2,7 @@
 title: linux 的磁盘管理
 date: 2020-01-01 18:03:20
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - 磁盘

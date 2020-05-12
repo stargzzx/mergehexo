@@ -2,7 +2,8 @@
 title: gpu 的驱动，cuda，cudnn的关系
 date: 2019-12-07 21:50:19
 categories:
-- nvidia
+- 人工智能
+- 基本知识
 tags:
 - nvidia
 - gpu

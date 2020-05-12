@@ -2,7 +2,8 @@
 title: 微信小程序开发——会话服务
 date: 2019-09-07 10:23:34
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

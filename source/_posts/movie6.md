@@ -2,7 +2,9 @@
 title: 超人：钢铁之躯
 date: 2018-04-25 12:20:11
 categories:
-- movie
+- 电影
+- 消磨时间
+- 写实改编
 tags:
 - movie
 - killtime

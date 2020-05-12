@@ -2,7 +2,8 @@
 title: 从几何的角度看导数
 date: 2018-11-12 09:07:17
 categories:
-- calculus
+- 数学
+- 高等数学
 tags:
 - calculus
 - math

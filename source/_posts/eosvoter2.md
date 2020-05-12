@@ -2,7 +2,6 @@
 title: eosvoter | dfuse接口对接，获取节点的reward
 date: 2019-11-25 17:29:21
 categories:
-- [eosvoter]
 - [项目经历,中型,eosvoter]
 tags:
 - eosvoter

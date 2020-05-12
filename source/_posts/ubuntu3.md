@@ -2,7 +2,7 @@
 title: ubuntu | 挂载问题
 date: 2019-12-01 09:52:43
 categories:
-- ubuntu
+- [linux,基础]
 tags:
 - ubuntu
 ---

@@ -2,7 +2,7 @@
 title: linux | 语法
 date: 2020-03-16 17:53:42
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 ---

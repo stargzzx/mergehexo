@@ -2,7 +2,7 @@
 title: tensorflow 反向传播
 date: 2018-09-08 15:19:45
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

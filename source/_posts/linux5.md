@@ -2,7 +2,7 @@
 title: linux 的管道命令
 date: 2020-01-01 21:12:08
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - 管道

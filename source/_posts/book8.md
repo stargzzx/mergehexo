@@ -2,7 +2,8 @@
 title: 《平妖二十年》
 date: 2018-07-24 22:52:45
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - book
 - literature

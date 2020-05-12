@@ -2,7 +2,9 @@
 title: 《洛丽塔》
 date: 2018-07-30 16:04:30
 categories:
-- movie
+- 电影
+- 经典佳作
+- 人生情感
 tags:
 - movie
 - killtime

@@ -2,7 +2,8 @@
 title: 《解忧杂货店》
 date: 2018-07-11 10:11:27
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - book
 - literature

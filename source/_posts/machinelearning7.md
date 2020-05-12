@@ -2,7 +2,7 @@
 title: 决策树
 date: 2018-06-10 14:48:16
 categories:
-- machine learning
+- [人工智能,机器学习,决策树]
 tags:
 - 决策树
 - machine learning

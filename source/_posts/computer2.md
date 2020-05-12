@@ -2,7 +2,8 @@
 title: 只要2步 永久关闭Win10自动更新
 date: 2018-10-28 20:30:36
 categories:
-- computer
+- 电脑相关
+- win10
 tags:
 - computer
 - win10

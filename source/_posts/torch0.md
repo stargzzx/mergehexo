@@ -2,7 +2,7 @@
 title: pytorch | 入门
 date: 2020-01-22 18:10:58
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

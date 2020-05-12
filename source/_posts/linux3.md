@@ -2,7 +2,7 @@
 title: linux 中的 文件操作
 date: 2019-11-24 19:57:57
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - 文件

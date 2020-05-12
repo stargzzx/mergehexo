@@ -2,7 +2,7 @@
 title: tensorflow 正则化
 date: 2018-10-10 14:30:55
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

@@ -2,7 +2,7 @@
 title: Anaconda 所遇到的错误
 date: 2019-01-20 16:03:03
 categories:
-- anaconda
+- [python,中间件,anaconda]
 tags:
 - anaconda
 ---

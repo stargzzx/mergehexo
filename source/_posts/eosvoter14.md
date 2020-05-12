@@ -2,7 +2,6 @@
 title: eosvoter | 爬取矿池数据
 date: 2020-05-08 14:08:20
 categories:
-- [eosvoter]
 - [项目经历,中型,eosvoter]
 - [python,模块,selenium]
 - [爬虫,电脑]

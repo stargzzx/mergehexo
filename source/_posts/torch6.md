@@ -2,7 +2,7 @@
 title: pytorch | 模型的自我构建以及其他细节（参数、结构等）
 date: 2020-01-26 20:40:31
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

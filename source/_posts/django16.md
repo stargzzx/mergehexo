@@ -2,7 +2,8 @@
 title: Django报错TypeError:xxx got multiple valuesy for argument 'xxx'
 date: 2019-08-23 14:58:30
 categories:
-- Django
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - Django错误

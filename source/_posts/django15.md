@@ -2,7 +2,8 @@
 title: 微信小程序——综合实践之生活服务
 date: 2019-08-23 14:07:21
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

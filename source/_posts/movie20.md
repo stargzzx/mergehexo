@@ -2,7 +2,9 @@
 title: 《我和我的祖国》
 date: 2019-10-07 13:28:24
 categories:
-- movie
+- 电影
+- 消磨时间
+- 写实改编
 tags:
 - movie
 ---

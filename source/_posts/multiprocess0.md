@@ -2,7 +2,9 @@
 title: 多进程或者线程之间的通信
 date: 2019-12-16 16:25:21
 categories:
-- multiprocess
+- python
+- 进阶
+- 多进程 & 多线程
 tags:
 - multiprocess
 - 多进程

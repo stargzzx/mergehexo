@@ -2,7 +2,9 @@
 title: 《算命》
 date: 2020-02-07 16:50:33
 categories:
-- movie
+- 电影
+- 经典佳作
+- 写实改编
 tags:
 - movie
 ---

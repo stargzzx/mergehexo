@@ -2,7 +2,7 @@
 title: ubuntu | 软连接和硬链接
 date: 2019-12-08 21:19:41
 categories:
-- ubuntu
+- [linux,基础]
 tags:
 - ubuntu
 ---

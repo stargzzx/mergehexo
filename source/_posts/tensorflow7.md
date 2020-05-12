@@ -2,7 +2,7 @@
 title: tensorflow 滑动平均
 date: 2018-10-08 21:23:58
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

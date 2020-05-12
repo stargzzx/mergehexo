@@ -2,7 +2,7 @@
 title: pycharm 配置 anaconda 环境
 date: 2019-01-21 10:39:20
 categories:
-- anaconda
+- [python,中间件,anaconda]
 tags:
 - anaconda
 ---

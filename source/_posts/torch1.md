@@ -2,7 +2,7 @@
 title: pytorch | 自动求导
 date: 2020-01-23 21:44:37
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 mathjax: true

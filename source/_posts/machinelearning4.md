@@ -2,7 +2,7 @@
 title: 模型评估和选择
 date: 2018-11-10 11:18:36
 categories:
-- machine learning
+- [人工智能,深度学习,基础]
 tags:
 - 周志华
 - machine learning

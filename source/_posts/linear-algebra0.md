@@ -2,7 +2,8 @@
 title: 初识矩阵
 date: 2018-11-14 09:43:32
 categories:
-- linear algebra
+- 数学
+- 线性代数
 tags:
 - linear algebra
 - 矩阵

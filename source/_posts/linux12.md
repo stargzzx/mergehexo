@@ -2,7 +2,7 @@
 title: 什么是守护进程
 date: 2020-05-07 22:02:19
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - 守护进程

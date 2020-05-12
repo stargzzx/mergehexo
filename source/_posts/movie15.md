@@ -2,7 +2,9 @@
 title: 《破坏王2：大闹互联网》
 date: 2018-12-04 14:27:24
 categories:
-- movie
+- 电影
+- 消磨时间
+- 动漫剧场
 tags:
 - movie
 - killtime

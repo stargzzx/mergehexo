@@ -2,7 +2,7 @@
 title: K-均值聚类算法
 date: 2018-06-21 10:45:45
 categories:
-- machine learning
+- [人工智能,机器学习,K-均值聚类]
 tags:
 - K-均值聚类
 - machine learning

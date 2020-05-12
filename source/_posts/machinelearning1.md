@@ -2,7 +2,7 @@
 title: 机器学习中的数据归一
 date: 2018-06-17 15:13:01
 categories:
-- machine learning
+- [人工智能,深度学习,基础]
 tags:
 - 数据归一
 - machine learning

@@ -2,7 +2,8 @@
 title: 华尔街之狼
 date: 2017-08-14 09:51:27
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - book
 - literature

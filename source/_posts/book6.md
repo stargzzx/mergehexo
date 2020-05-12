@@ -2,7 +2,8 @@
 title: 《射雕英雄传》
 date: 2018-06-21 07:23:38
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - literature
 - relaxation

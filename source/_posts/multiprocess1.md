@@ -2,7 +2,9 @@
 title: python | 多进程间的运行
 date: 2019-12-19 17:58:20
 categories:
-- multiprocess
+- python
+- 进阶
+- 多进程 & 多线程
 tags:
 - multiprocess
 - 多进程

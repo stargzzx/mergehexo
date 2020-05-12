@@ -2,7 +2,7 @@
 title: linux 入门
 date: 2019-01-30 13:21:17
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - system

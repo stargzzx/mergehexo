@@ -2,6 +2,8 @@
 title: wamp安装和启动
 date: 2018-07-25 11:59:41
 categories:
+- 网站设计
+- 服务器
 - wamp
 tags:
 - wamp

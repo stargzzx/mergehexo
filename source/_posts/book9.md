@@ -2,7 +2,8 @@
 title: 《人生》
 date: 2018-07-24 22:59:02
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - book
 - literature

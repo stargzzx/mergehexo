@@ -2,7 +2,8 @@
 title: 协方差的意义和计算公式
 date: 2018-05-30 21:07:12
 categories:
-- math
+- 数学
+- 基础
 tags:
 - basis
 - math

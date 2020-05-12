@@ -2,7 +2,8 @@
 title: 理解wx:key
 date: 2019-08-21 11:37:19
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - 微信小程序
 ---

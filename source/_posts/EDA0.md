@@ -2,7 +2,8 @@
 title: 什么是事件驱动
 date: 2019-12-22 22:04:24
 categories:
-- EDA
+- 架构
+- 事件驱动
 tags:
 - EDA
 - 事件驱动

@@ -2,7 +2,8 @@
 title: 布隆过滤器简单说明（入门）
 date: 2018-08-01 22:19:34
 categories:
-- basis
+- 算法
+- 经典
 tags:
 - basis
 - 布隆过滤器

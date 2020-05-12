@@ -2,7 +2,7 @@
 title: tensorflow 的变量以及初始化
 date: 2019-03-25 10:37:35
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - 变量
 - tensorflow

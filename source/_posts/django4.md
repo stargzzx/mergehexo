@@ -2,7 +2,9 @@
 title: 博客制作——django 模板系统
 date: 2019-08-09 16:14:33
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 ---

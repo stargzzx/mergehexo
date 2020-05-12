@@ -2,7 +2,8 @@
 title: ubuntu 的安装
 date: 2019-01-19 03:05:19
 categories:
-- ubuntu
+- [linux,ubuntu]
+- [linux,基础]
 tags:
 - ubuntu
 ---

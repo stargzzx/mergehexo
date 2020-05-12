@@ -2,7 +2,8 @@
 title: 信息熵到底是什么
 date: 2018-06-09 18:06:16
 categories:
-- math
+- 数学
+- 基础
 tags:
 - 信息熵
 - basis

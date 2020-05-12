@@ -2,7 +2,6 @@
 title: eosvoter | 前端代码的书写以及部署
 date: 2019-12-08 08:27:39
 categories:
-- [eosvoter]
 - [项目经历,中型,eosvoter]
 tags:
 - eosvoter

@@ -2,7 +2,8 @@
 title: Win10更新后卡顿怎么办，2018win10爆卡的解决办法
 date: 2018-10-28 19:57:12
 categories:
-- computer
+- 电脑相关
+- win10
 tags:
 - win10
 - computer

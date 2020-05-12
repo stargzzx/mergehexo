@@ -2,7 +2,8 @@
 title: 小程序开发——django视图层（Request Response对象）
 date: 2019-08-20 11:25:47
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

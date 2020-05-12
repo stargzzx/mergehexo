@@ -2,7 +2,8 @@
 title: 什么是导数？
 date: 2018-11-11 22:17:55
 categories:
-- calculus
+- 数学
+- 高等数学
 tags:
 - calculus
 - math

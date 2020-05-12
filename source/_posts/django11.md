@@ -2,7 +2,8 @@
 title: 微信小程序——实现图文开发
 date: 2019-08-21 16:26:42
 categories:
-- 微信小程序
+- [微信小程序]
+- [python,框架,django]
 tags:
 - Django
 - 微信小程序

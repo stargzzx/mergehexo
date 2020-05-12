@@ -2,6 +2,7 @@
 title: MacBook | 安装 kafka
 date: 2020-02-10 00:35:34
 categories:
+- 中间件
 - kafka
 tags:
 - kafka

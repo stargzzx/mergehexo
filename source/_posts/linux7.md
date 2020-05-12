@@ -2,7 +2,7 @@
 title: linux | 安装软件相关的命令
 date: 2020-01-09 18:09:01
 categories:
-- linux
+- [linux,基础]
 tags:
 - apt-get
 - linux

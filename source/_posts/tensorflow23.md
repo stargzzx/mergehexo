@@ -2,7 +2,7 @@
 title: 模型的保存和提取
 date: 2019-03-25 23:22:54
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - tensorflow
 - 模型保存

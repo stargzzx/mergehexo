@@ -2,7 +2,7 @@
 title: pytorch | 使用 gpu 和 cpu 进行计算
 date: 2020-01-29 18:32:39
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

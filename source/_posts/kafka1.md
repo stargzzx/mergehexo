@@ -2,6 +2,7 @@
 title: kafka | 基础知识
 date: 2020-03-13 17:41:59
 categories:
+- 中间件
 - kafka
 tags:
 - kafka

@@ -2,7 +2,9 @@
 title: Django的模型层简介
 date: 2019-09-13 18:05:59
 categories:
-- Django
+- python
+- 框架
+- django
 tags:
 - Django
 ---

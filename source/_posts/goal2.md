@@ -2,7 +2,7 @@
 title: goal | 第二阶段的目标
 date: 2020-03-03 12:31:26
 categories:
-- goal
+- 目标
 tags:
 - goal
 ---

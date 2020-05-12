@@ -2,7 +2,7 @@
 title: linux 后台运行程序
 date: 2020-01-01 21:31:19
 categories:
-- linux
+- [linux,基础]
 tags:
 - linux
 - 进程

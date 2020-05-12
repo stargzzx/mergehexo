@@ -2,7 +2,9 @@
 title: 二十二
 date: 2017-08-22 09:51:27
 categories:
-- movie
+- 电影
+- 经典佳作
+- 记录传记
 tags:
 - killtime
 - movie

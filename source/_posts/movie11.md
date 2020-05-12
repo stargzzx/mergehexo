@@ -2,7 +2,9 @@
 title: 《低俗小说》
 date: 2018-10-08 15:13:31
 categories:
-- movie
+- 电影
+- 经典佳作
+- 无法分类
 tags:
 - movie
 - killtime

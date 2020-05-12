@@ -2,7 +2,8 @@
 title: chrome | 解决某一个网页打不开，不显示
 date: 2019-12-07 22:44:15
 categories:
-- computer
+- 电脑相关
+- chrome
 tags:
 - chrome
 ---

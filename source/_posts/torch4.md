@@ -2,7 +2,7 @@
 title: pytorch | torchvision transform 的讲解
 date: 2020-01-26 17:40:38
 categories:
-- pytorch
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - pytorch
 ---

@@ -2,7 +2,9 @@
 title: 权衡偏差和方差
 date: 2018-06-16 12:46:52
 categories:
-- machine learning
+- [人工智能,深度学习,基础]
+- [人工智能,数学]
+- [数学,基础]
 tags:
 - 偏差和方差
 - machine learning

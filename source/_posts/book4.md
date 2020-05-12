@@ -2,7 +2,8 @@
 title: 《活着》
 date: 2018-05-17 16:06:40
 categories:
-- book
+- 书籍
+- 长篇小说
 tags:
 - literature
 - relaxation

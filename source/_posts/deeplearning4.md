@@ -2,7 +2,9 @@
 title: 对 CNN 的新理解
 date: 2019-04-22 21:00:20
 categories:
-- deep learning
+- 人工智能
+- 深度学习
+- CNN
 tags:
 - deep learning
 - CNN

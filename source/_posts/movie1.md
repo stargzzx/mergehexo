@@ -2,7 +2,9 @@
 title: 大决战！超奥特曼八兄弟
 date: 2017-08-15 09:51:27
 categories:
-- movie
+- 电影
+- 消磨时间
+- 超现实主义
 tags:
 - movie
 - killtime

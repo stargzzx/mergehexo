@@ -2,7 +2,7 @@
 title: 制作数据集
 date: 2019-01-25 16:39:12
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow

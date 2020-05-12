@@ -2,7 +2,9 @@
 title: 《麦收》
 date: 2020-02-09 13:32:52
 categories:
-- movie
+- 电影
+- 经典佳作
+- 写实改编
 tags:
 - movie
 ---

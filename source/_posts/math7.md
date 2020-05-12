@@ -2,7 +2,8 @@
 title: 正态分布
 date: 2018-09-23 20:01:26
 categories:
-- math
+- 数学
+- 基础
 tags:
 - basis
 - 正态分布

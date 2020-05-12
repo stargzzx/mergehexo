@@ -2,7 +2,7 @@
 title: tensorflow 搭建模块化的神经网络八股
 date: 2018-10-24 19:14:41
 categories:
-- tensorflow
+- [人工智能,深度学习,框架,tensorflow]
 tags:
 - machine learning
 - tensorflow
