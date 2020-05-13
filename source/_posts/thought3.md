@@ -2,6 +2,7 @@
 title: 一元钱的故事
 date: 2018-06-30 20:11:17
 categories:
+- 文学
 - 人生
 - 思考
 tags:

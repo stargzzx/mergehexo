@@ -2,6 +2,7 @@
 title: 漫漫长夜，随记
 date: 2018-07-10 21:14:56
 categories:
+- 文学
 - 人生
 - 思考
 tags:

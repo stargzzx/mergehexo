@@ -2,6 +2,7 @@
 title: 随笔二三记
 date: 2018-08-14 11:25:34
 categories:
+- 文学
 - 人生
 - 思考
 tags:

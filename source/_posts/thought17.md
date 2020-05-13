@@ -2,6 +2,7 @@
 title: 老实的鸡被宰
 date: 2018-09-24 21:25:23
 categories:
+- 文学
 - 人生
 - 思考
 tags:

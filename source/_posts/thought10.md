@@ -2,6 +2,7 @@
 title: 冲动是魔鬼
 date: 2018-07-24 22:55:50
 categories:
+- 文学
 - 人生
 - 思考
 tags:

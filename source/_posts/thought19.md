@@ -2,6 +2,7 @@
 title: 近期的思考
 date: 2019-06-01 17:38:53
 categories:
+- 文学
 - 人生
 - 思考
 tags:

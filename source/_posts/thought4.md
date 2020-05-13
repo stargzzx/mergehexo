@@ -2,6 +2,7 @@
 title: 看病人的感悟
 date: 2018-06-30 20:13:02
 categories:
+- 文学
 - 人生
 - 思考
 tags:

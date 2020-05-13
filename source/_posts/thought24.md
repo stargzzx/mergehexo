@@ -2,6 +2,7 @@
 title: 货币即信息
 date: 2020-05-05 22:06:06
 categories:
+- 文学
 - 人生
 - 奇思
 tags:

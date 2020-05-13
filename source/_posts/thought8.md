@@ -2,6 +2,7 @@
 title: 社会是公平的
 date: 2018-07-05 20:34:32
 categories:
+- 文学
 - 人生
 - 思考
 tags:

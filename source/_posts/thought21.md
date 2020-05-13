@@ -2,6 +2,7 @@
 title: 我在区块链那两年
 date: 2020-04-02 14:14:38
 categories:
+- 文学
 - 人生
 - 经历
 tags:
