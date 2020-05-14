@@ -2,10 +2,10 @@
 title: github 中 README.MD 的写法
 date: 2018-12-08 20:04:19
 categories:
+- git
 - github
 tags:
 - github
-- tutorial
 ---
 教程内容如标题所写。
 
