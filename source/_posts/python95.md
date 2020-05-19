@@ -112,6 +112,19 @@ browser.close()
 
 我先安装了 chrome 浏览器。
 
+过程如下，安装稳定版的 64 位 chrome
+
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+下载完后，运行如下命令安装。
+
+	sudo dpkg -i google-chrome*
+	sudo apt-get -f install
+
+然后就搞定了！安装完成后，到终端搜索Chrome就可以启动它了。
+
+	dpkg -l | grep chrome
+
 将其放在 `/usr/bin` 中，使用
 
 	$ google-chrome --version
