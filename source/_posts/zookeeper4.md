@@ -2,7 +2,7 @@
 title: zookeeper | 什么是ZooKeeper？「转载」
 date: 2020-04-30 10:24:54
 categories:
-- [zookeeper]
+- [中间件,zookeeper]
 tags:
 - zookeeper
 ---

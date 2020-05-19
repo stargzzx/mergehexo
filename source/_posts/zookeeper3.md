@@ -2,7 +2,7 @@
 title: zookeeper | 可视化界面 zkui（web版本）安装和使用
 date: 2020-04-07 12:03:32
 categories:
-- [zookeeper]
+- [中间件,zookeeper]
 - [开源项目,python,zkui,基础]
 tags:
 - zookeeper

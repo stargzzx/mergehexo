@@ -2,6 +2,7 @@
 title: zookeeper | 安装与配置
 date: 2020-03-23 10:04:30
 categories:
+- 中间件
 - zookeeper
 tags:
 - zookeeper

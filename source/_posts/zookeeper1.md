@@ -2,6 +2,7 @@
 title: zookeeper | 相关的命令以及其他细节
 date: 2020-03-23 12:07:17
 categories:
+- 中间件
 - zookeeper
 tags:
 - zookeeper

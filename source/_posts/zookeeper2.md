@@ -2,6 +2,7 @@
 title: zookeeper | python 读取远程 zookeeper 配置
 date: 2020-03-23 17:44:22
 categories:
+- 中间件
 - zookeeper
 tags:
 - zookeeper
