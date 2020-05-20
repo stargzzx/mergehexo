@@ -1,6 +1,6 @@
 ---
-title: python | 多线程和进程中的 join
-date: 2020-05-06 21:51:15
+title: python | 多线程和进程中的 join 和 守护进程
+date: 2018-12-19 22:12:39
 categories:
 - python
 - 进阶
@@ -107,6 +107,10 @@ if __name__ == '__main__':
 
 <br/>
 
+此类线程的特点是，当程序中主线程及所有非守护线程执行结束时，未执行完毕的守护线程也会随之消亡（进行死亡状态），程序将结束运行。
+
+>Python 解释器的垃圾回收机制就是守护线程的典型代表，当程序中所有主线程及非守护线程执行完毕后，垃圾回收机制也就没有再继续执行的必要了。
+
 ```python
 import threading
 import time
@@ -136,7 +140,7 @@ if __name__ == '__main__':
     print('一共用时：', time.time()-start_time)
 ```
 
-其执行结果如下，注意请确保setDaemon()在start()之前。
+其执行结果如下，注意请确保setDaemon()在start()之前,否则 Python 解释器将报 RuntimeError 错误。
 
 	这是主线程： MainThread
 	主线程结束了！ MainThread
@@ -151,6 +155,12 @@ if __name__ == '__main__':
 # join的作用
 
 <br/>
+
+join() 方法的功能是在程序指定位置，优先让该方法的调用者使用 CPU 资源。
+
+    thread.join([timeout])
+
+其中，thread 为 Thread 类或其子类的实例化对象；timeout 参数作为可选参数，其功能是指定 thread 线程最多可以霸占 CPU 资源的时间（以秒为单位），如果省略，则默认直到 thread 执行结束（进入死亡状态）才释放 CPU 资源。
 
 ```python
 import threading

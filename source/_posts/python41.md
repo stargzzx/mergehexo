@@ -1,6 +1,6 @@
 ---
 title: python multiprocessing 多进程
-date: 2018-12-19 22:12:38
+date: 2018-12-19 22:14:38
 categories:
 - python
 - 进阶
