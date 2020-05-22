@@ -126,6 +126,117 @@ RLock 支持在同一线程中多次请求同一资源。
 
 Lock 是控制多个线程对共享资源进行访问的工具。通常，锁提供了对共享资源的独占访问，每次只能有一个线程对 Lock 对象加锁，线程在开始访问共享资源之前应先请求获得 Lock 对象。当对共享资源访问完成后，程序释放对 Lock 对象的锁定。
 
+## Lock用法
+
+
+锁通常被用来实现对共享资源的同步访问。为每一个共享资源创建一个Lock对象，当你需要访问该资源时，调用acquire方法来获取锁对象（如果其它线程已经获得了该锁，则当前线程需等待其被释放），待资源访问完后，再调用release方法释放锁。
+
+下面我们来举个例子说明如果多线程在没有同步锁的情况下访问公共资源会导致什么情况
+
+```python
+import threading
+import time
+
+num = 100
+
+def fun_sub():
+    global num
+    # num -= 1
+    num2 = num
+    time.sleep(0.001)
+    num = num2-1
+
+if __name__ == '__main__':
+    print('开始测试同步锁 at %s' % time.ctime())
+
+    thread_list = []
+    for thread in range(100):
+        t = threading.Thread(target=fun_sub)
+        t.start()
+        thread_list.append(t)
+
+    for t in thread_list:
+        t.join()
+    print('num is %d' % num)
+    print('结束测试同步锁 at %s' % time.ctime())
+```
+
+上面的例子其实很简单就是创建100的线程，然后每个线程去从公共资源num变量去执行减1操作，按照正常情况下面，等到代码执行结束，打印num变量，应该得到的是0，因为100个线程都去执行了一次减1的操作。
+
+但是结果却不是我们想想的，我们看看结果
+
+	开始测试同步锁 at Sun Apr 28 09:56:45 2019
+	num is 91
+	结束测试同步锁 at Sun Apr 28 09:56:45 2019
+
+我们会发现，每次执行的结果num值都不是一样的，上面显示的是91，那就存在问题了，为什么结果不是0呢？
+
+我们来看看上面代码的执行流程。
+
+	1.因为GIL，只有一个线程（假设线程1）拿到了num这个资源，然后把变量赋值给num2,sleep 0.001秒，这时候num=100
+
+	2.当第一个线程sleep 0.001秒这个期间，这个线程会做yield操作，就是把cpu切换给别的线程执行（假设线程2拿到个GIL，获得cpu使用权），线程2也和线程1一样也拿到num,返回赋值给num2，然sleep,这时候，其实num还是=100.
+
+	3.线程2 sleep时候，又要yield操作，假设线程3拿到num,执行上面的操作，其实num有可能还是100
+
+	4.等到后面cpu重新切换给线程1，线程2，线程3上执行的时候，他们执行减1操作后，其实等到的num其实都是99，而不是顺序递减的。
+
+	5.其他剩余的线程操作如上
+
+大家应该发现问题了，结果和我们想想的不一样，那我们怎么才能等到我们想要的结果呢？就是100个线程操作num变量得到最后结果为0？
+
+这里就要借助于python的同步锁了，也就是同一时间只能放一个线程来操作num变量，减1之后，后面的线程操作来操作num变量。看看下面我们怎么实现。
+
+```python
+import threading
+import time
+
+num = 100
+
+def fun_sub():
+    global num
+    lock.acquire()
+    print('----加锁----')
+    print('现在操作共享资源的线程名字是:',t.name)
+    num2 = num
+    time.sleep(0.001)
+    num = num2-1
+    lock.release()
+    print('----释放锁----')
+
+if __name__ == '__main__':
+    print('开始测试同步锁 at %s' % time.ctime())
+
+    lock = threading.Lock() #创建一把同步锁
+
+    thread_list = []
+    for thread in range(100):
+        t = threading.Thread(target=fun_sub)
+        t.start()
+        thread_list.append(t)
+
+    for t in thread_list:
+        t.join()
+    print('num is %d' % num)
+    print('结束测试同步锁 at %s' % time.ctime())
+```
+
+看到上面我们给中间的减1代码块，加个一把同步锁，这样，我们就可以得到我们想要的结果了，这就是同步锁的作用，一次只有一个线程操作同享资源。
+
+看看上面代码执行的结果：
+
+	.......
+	----加锁----
+	现在操作共享资源的线程名字是: Thread-98
+	----释放锁----
+	----加锁----
+	现在操作共享资源的线程名字是: Thread-100
+	----释放锁----
+	num is 0
+	结束测试同步锁 at Sun Apr 28 12:08:27 2019
+
+## RLock 用法
+
 在实现线程安全的控制中，比较常用的是 RLock。
 
 通常使用 RLock 的代码格式如下：
@@ -226,5 +337,89 @@ threading.Thread(name='乙', target=draw , args=(acct , 800)).start()
 
 - 如果可变类有两种运行环境，单线程环境和多线程环境，则应该为该可变类提供两种版本，即线程不安全版本和线程安全版本。在单线程环境中使用钱程不安全版本以保证性能，在多线程环境中使用线程安全版本。
 
+<br/>
 
+# 死锁
 
+<br/>
+
+当两个线程相互等待对方释放资源时，就会发生死锁。Python 解释器没有监测，也不会主动采取措施来处理死锁情况，所以在进行多线程编程时应该采取措施避免出现死锁。
+一旦出现死锁，整个程序既不会发生任何异常，也不会给出任何提示，只是所有线程都处于阻塞状态，无法继续。
+
+死锁是很容易发生的，尤其是在系统中出现多个同步监视器的情况下，如下程序将会出现死锁：
+
+```python
+import threading
+import time
+class A:
+    def __init__(self):
+        self.lock = threading.RLock()
+    def foo(self, b):
+        try:
+            self.lock.acquire()
+            print("当前线程名: " + threading.current_thread().name\
+                + " 进入了A实例的foo()方法" )     # ①
+            time.sleep(0.2)
+            print("当前线程名: " + threading.current_thread().name\
+                + " 企图调用B实例的last()方法")   # ③
+            b.last()
+        finally:
+            self.lock.release()
+    def last(self):
+        try:
+            self.lock.acquire()
+            print("进入了A类的last()方法内部")
+        finally:
+            self.lock.release()
+class B:
+    def __init__(self):
+        self.lock = threading.RLock()
+    def bar(self, a):
+        try:
+            self.lock.acquire()
+            print("当前线程名: " + threading.current_thread().name\
+                + " 进入了B实例的bar()方法" )   # ②
+            time.sleep(0.2)
+            print("当前线程名: " + threading.current_thread().name\
+                + " 企图调用A实例的last()方法")  # ④
+            a.last()
+        finally:
+            self.lock.release()
+    def last(self):
+        try:
+            self.lock.acquire()
+            print("进入了B类的last()方法内部")
+        finally:
+            self.lock.release()
+a = A()
+b = B()
+def init():
+    threading.current_thread().name = "主线程"
+    # 调用a对象的foo()方法
+    a.foo(b)
+    print("进入了主线程之后")
+def action():
+    threading.current_thread().name = "副线程"
+    # 调用b对象的bar()方法
+    b.bar(a)
+    print("进入了副线程之后")
+# 以action为target启动新线程
+threading.Thread(target=action).start()
+# 调用init()函数
+init()
+```
+程序既无法向下执行，也不会抛出任何异常，就一直“僵持”着。究其原因，是因为上面程序中 A 对象和 B 对象的方法都是线程安全的方法。
+
+死锁是不应该在程序中出现的，在编写程序时应该尽量避免出现死锁。下面有几种常见的方式用来解决死锁问题：
+
+1. 避免多次锁定。尽量避免同一个线程对多个 Lock 进行锁定。例如上面的死锁程序，主线程要对 A、B 两个对象的 Lock 进行锁定，副线程也要对 A、B 两个对象的 Lock 进行锁定，这就埋下了导致死锁的隐患。
+
+2. 具有相同的加锁顺序。如果多个线程需要对多个 Lock 进行锁定，则应该保证它们以相同的顺序请求加锁。比如上面的死锁程序，主线程先对 A 对象的 Lock 加锁，再对 B 对象的 Lock 加锁；而副线程则先对 B 对象的 Lock 加锁，再对 A 对象的 Lock 加锁。这种加锁顺序很容易形成嵌套锁定，进而导致死锁。如果让主线程、副线程按照相同的顺序加锁，就可以避免这个问题。
+
+3. 使用定时锁。程序在调用 acquire() 方法加锁时可指定 timeout 参数，该参数指定超过 timeout 秒后会自动释放对 Lock 的锁定，这样就可以解开死锁了。
+
+4. 死锁检测。死锁检测是一种依靠算法机制来实现的死锁预防机制，它主要是针对那些不可能实现按序加锁，也不能使用定时锁的场景的。
+
+另外如何在 debug 中监测到 「死锁」，请看我下面的博文中的死锁。
+
+- [python threading 多线程](https://benpaodewoniu.github.io/2018/12/20/python42/)
