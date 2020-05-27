@@ -233,3 +233,117 @@ script就像node一样暴露一些接口，可以看到我们的template标签�
 - https://isux.tencent.com/about
 - https://isux.tencent.com/recruit
 
+注意这里只有about和recruit，这些不带xxx.html的地址其实是服务器端经过一层封装指定到某些文件上去。同样的道理，前端也可以根据带锚点的方式实现简单路由（不需要刷新页面）
+
+- https://zhitu.isux.us/index.php/preview/install#mac
+
+其中`#mac`就是我们的锚点路由，注意开始我们在浏览器中打开的地址：
+
+- http://localhost:8080/#/，
+
+路由让我们可以访问诸如`http://localhost:8080/#/about/` 或者 `http://localhost:8080/#/recruit` 这些页面的时候不带刷新，直接展示。现在回到我们刚才打开的App.vue文件中看这行代码
+
+    <router-view></router-view>
+
+这句代码在页面中放入一个路由视图容器，当我们访问`http://localhost:8080/#/about/`的时候会将about的内容放进去，访问`http://localhost:8080/#/recruit`的时候会将`recruit`的内容放进去
+
+<div style="width: 50%;padding-left: 25%">
+
+![](/images/vue/1_1.png)
+
+</div>
+
+如此看来，无论我们打开`http://localhost:8080/#/about/` 还是`http://localhost:8080/#/recruit`页面中的图片都是公用部分，变得只是路由器里面的内容，那么路由器的内容谁来控制呢？
+
+前面说的`src/main.js`中有一句引入路由器的代码。
+
+    import router from './router'
+
+现在就让我们打开router目录下的js文件。
+
+```javascript
+import Vue from 'vue'
+import Router from 'vue-router'
+import Hello from '@/components/Hello'
+import About from '@/components/about'
+import Recruit from '@/components/recruit'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Hello',
+      component: Hello
+},
+    {
+      path: '/about',
+      name: 'about',
+      component: About
+},
+    {
+      path: '/recruit',
+      name: 'recruit',
+      component: Recruit
+}
+  ]
+})
+```
+
+前面先引入了路由插件`vue-router`，然后显式声明要用路由 `Vue.use(Router)` 。注意到Hello，About等都是页面（也可以是组件），接着注册路由器，然后开始配置路由。
+
+路由的配置应该一目了然，给不同的path分配不同的页面（或组件，页面和组件其实是一样的概念），name参数不重要只是用来做识别用的。看到这里就可以明白，前面说的红色框的内容，其实就是Hello里面的内容，打开components目录下的Hello.vue就能明白了。
+
+<div style="width: 50%;padding-left: 25%">
+
+![](/images/vue/1_0.png)
+
+</div>
+
+到这里就可以完成路由的配置，我个人习惯喜欢把页面放在`pages目录`下，组件放在`components目录`下，可能有人会问如果要访问`http://localhost:8080/#/about/me`的话要如何配置呢，很简单只要给路由加多一个子路由配置，如下：
+
+```javascript
+{
+      path: '/blog',
+      name: 'blog',
+      component: Blog,
+      children: [
+        {
+          path: '/',
+          component: page1
+        },
+        {
+          path: 'info',
+          component: page2
+        }
+      ]
+}
+```
+
+访问/blog的时候会访问Blog页面，Blog里面放个路由器就可以了，然后访问`http://localhost:8080/#/blog/`的时候会往路由容器中放置`page1`的内容，访问`http://localhost:8080/#/blog/info`的时候会往路由容器中放置`page2`的内容
+
+```vue
+<template>
+    <div>公用部分</div>
+    <router-view></router-view>
+</template>
+```
+<br/>
+
+# 小结
+
+<br/>
+
+贯穿我们刚才学习的过程，从初始化到页面展示，Vue的页面架构流程大概是这样的
+
+<div style="width: 50%;padding-left: 25%">
+
+![](/images/vue/1_2.png)
+
+</div>
+
+
+<a href="/zip/vue/1_0.zip">下载源码</a>
+
+还是建议下载源码来看。
