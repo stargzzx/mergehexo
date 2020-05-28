@@ -27,6 +27,48 @@ tags:
 
 这一步成功之后，在项目中就会生成一个 `dist` 目录，里面就存着生成的项目代码。
 
+## 异常
+
+如果运行 `npm run build` 出现 `npm ERR! missing script:` 这种错误。
+
+那么，我们先查看文件 `package.json` 是否有
+
+```json
+"scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "build": "node build/build.js"
+  },
+```
+
+### 情况一：
+
+可就是好不到，什么原因呢？最后一看路径不对，vue init webpack my-project时，自己又建立一个文件夹,取不到对应的package.json中的dev.
+
+cd 到对应文件夹，重新运行npm run dev 就OK了。
+
+### 情况二：
+
+还有一种情况，打开的是当前文件夹，但是文件夹package.js里的scripts确实没有dev,
+
+输入vue init webpack  将package.json中丢失的：
+
+```json
+"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+"start": "npm run dev",
+"build": "node build/build.js"
+```
+
+重新下载过来，然后在npm intall 安装依赖，最后 npm run dev即可
+
+也适用于解决`start, build`丢失。
+
+### 情况三：
+
+运行命令   `npm run dev` 出现     `npm ERR! missing script: dev`  的错误
+
+这是因为vue 版本问题，使用 npm run serve 来运行项目。
+
 <br/>
 
 # 开启 MacBook web 服务

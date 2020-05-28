@@ -82,6 +82,10 @@ tags:
 
 可以看到顺利的上传了自己的包。
 
+关于为什么必须要 setup.py 文件，你可以看下面的链接内容。
+
+- [devpi 快速入门: 上传， 测试， 推送发行版](https://github.com/yekeqiang/post/blob/master/original/devpi%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%20%E4%B8%8A%E4%BC%A0%EF%BC%8C%20%E6%B5%8B%E8%AF%95%EF%BC%8C%20%E6%8E%A8%E9%80%81%E5%8F%91%E8%A1%8C%E7%89%88.markdown)
+
 而，看浏览器的 devpi ant 用户的目录，可以发现
 
 ![](/images/devpi/0_2.png)

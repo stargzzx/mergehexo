@@ -63,7 +63,15 @@ tags:
 
 ## 安装
 
-这个我还没真正在懂理论的情况下安装过，所以，先占坑，等回学校，使用学校里的机器做一下。
+查看该机器是否已经成功安装了 `nvidia-docker`
+
+可以使用
+
+    nvidia-docker run -–rm nvidia/cuda nvidia-smi
+
+如果没有 nvidia/cuda docker 会自己下载的，最后出现。
+
+![](/images/docker/13_0.png)
 
 
 

@@ -34,3 +34,13 @@ tags:
 	fixed 6 of 6 vulnerabilities in 11466 scanned packages
 
 然后我 npm 就没有错误了。
+
+最后可以执行
+
+    npm audit
+
+查看修复成果。
+
+ps: 再次更新
+
+出现这个原因是 npm 自动检查哪里有漏洞，但是，这个有时候不管也可以，不影响使用。
