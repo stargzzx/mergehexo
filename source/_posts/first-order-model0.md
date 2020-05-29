@@ -20,8 +20,6 @@ tags:
 
 <!-- more -->
 
-![](/images/first_order_model/0_1.gif)
-
 <br/>
 
 # 项目相关
