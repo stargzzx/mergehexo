@@ -192,8 +192,8 @@ torchvision==0.2.1
     cd first-order-model
     git clone https://github.com/1adrianb/face-alignment
     cd face-alignment
-    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-    python setup.py install
+    pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+    python3 setup.py install
 
 安装应该会特别顺利。
 
@@ -220,7 +220,7 @@ torchvision==0.2.1
 |config|checkpoint|
 |---|---|
 |bair-256.yaml|bair-cpk.pth.tar|
-|fashion-256.yaml|fashion-cpk.pth.tar|	
+|fashion-256.yaml|fashion.pth.tar|	
 |mgif-256.yaml|mgif-cpk.pth.tar|
 |nemo-256.yaml|nemo-cpk.pth.tar|	
 |taichi-256.yaml|taichi-cpk.pth.tar|	
@@ -260,7 +260,7 @@ torchvision==0.2.1
 
 我们使用下面的命令，开启一个容器。
 
-    docker run -it --gpus all -v /data/licong/first-order-model:dsa/app a29d
+    docker run -it --gpus all -v /data/licong/first-order-model:/app a29d
 
 需要注意的是，我们将 `/data/licong/first-order-model` 挂载到容器的 `/app` 中。
 
@@ -276,7 +276,7 @@ torchvision==0.2.1
 
 那么，我们需要对其进行裁剪，运行下面的代码
 
-    python crop-video.py --inp source.mp4
+    python3 crop-video.py --inp source.mp4
     
 它会生成一个命令，我们运行那个命令完成裁剪。比如说生成出
 
@@ -290,7 +290,7 @@ ffmpeg -i source.mp4 -ss 15.275862068965518 -t 95.17241379310344 -filter:v "crop
 
 但是有的时候，我们运行了上面的预处理视频脚本，并没有命令生成，这个有可能和帧率有关，默认的最小帧率是 150。我们可以这样运行
 
-    python crop-video.py --inp source.mp4 --min_frames 30
+    python3 crop-video.py --inp source.mp4 --min_frames 30
     
 另外需要注意的是，虽然官方说可以处理图片或者 `gif` ，但是，经过验证确实不行，只能处理 `mp4`。
 
@@ -306,7 +306,7 @@ ffmpeg -i source.mp4 -ss 15.275862068965518 -t 95.17241379310344 -filter:v "crop
 import cv2
 
 root = './source.png'
-crop_size = (255, 255)
+crop_size = (256, 256)
 img = cv2.imread(root)
 img_new = cv2.resize(img, crop_size, interpolation=cv2.INTER_CUBIC)
 cv2.imwrite('s.png',img_new)
