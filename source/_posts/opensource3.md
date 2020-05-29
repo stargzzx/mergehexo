@@ -53,5 +53,5 @@ tags:
 
 |项目名字|项目描述|入选理由|本地运行|项目地址|论文文档|信息来源|
 |---|---|---|---|---|---|---|
-|first-order-model|上传你的一段视频，然后上传一张目标图（静态）<br/>目标就会自动跟着你视频中的样子模仿|或许可以结合实验室大项目<br/>如文物跟着自己行动|否|[项目地址](https://github.com/AliaksandrSiarohin/first-order-model)|[论文地址](https://arxiv.org/pdf/2003.00196.pdf)|[量子位](https://mp.weixin.qq.com/s/vEMdAPzsrfqHz3PAKPWsBA)|
+|first-order-model|上传你的一段视频，然后上传一张目标图（静态）<br/>目标就会自动跟着你视频中的样子模仿|或许可以结合实验室大项目<br/>如文物跟着自己行动|[是](https://benpaodewoniu.github.io/2020/05/28/first-order-model0/)|[项目地址](https://github.com/AliaksandrSiarohin/first-order-model)|[论文地址](https://arxiv.org/pdf/2003.00196.pdf)|[量子位](https://mp.weixin.qq.com/s/vEMdAPzsrfqHz3PAKPWsBA)|
 |seq2seq-couplet|自动对对联系统|或许未来对实验室大项目有用|否|[项目地址](https://github.com/wb14123/seq2seq-couplet)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/mN-5kk4p339Di1jh7smU9A)|
