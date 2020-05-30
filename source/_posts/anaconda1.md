@@ -87,3 +87,26 @@ tags:
                           /data/aaa/.conda/envs
 
 至此，迁移成功。
+
+但是，虽然迁移成功，但是进入虚拟环境的时候，`pip` 的时候会出错。
+
+	bad interpreter: No such file or directory
+
+这是因为，我们需要把环境指向编译器。
+
+假设我们把
+
+原来位置上的 `py3.7` 移动到了 `/data/aaa/.conda/envs/py3.7` 中。
+
+我们
+
+	cd /data/aaa/.conda/envs/py3.7/bin
+	vim pip
+
+我们在 `#!` 中添加
+
+	/data/aaa/.conda/envs/py3.7/bin/python
+
+下面是一个例子。
+
+![](/images/anaconda/1_0.png)
