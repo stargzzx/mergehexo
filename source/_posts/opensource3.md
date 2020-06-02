@@ -43,6 +43,7 @@ tags:
 |Anime4K|使渣渣动画画质变为4K，延时仅3ms|思路非常牛逼，对于我这个动漫党来说，刚需|否|[项目地址](https://github.com/bloc97/Anime4K)|[论文地址](https://github.com/bloc97/Anime4K/blob/master/Preprint.md)|[GitHub爱好者社区](https://mp.weixin.qq.com/s/8fvf6Std9ZNVVdt9IQ6iYQ)|
 |AutoPiano|自由钢琴，可以通过打字来发出声音|呃呃呃，或许可以和实验室大项目结合|否|[项目地址](https://github.com/WarpPrism/AutoPiano)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/mN-5kk4p339Di1jh7smU9A)|
 |algorithm-visualizer|经典算法可视化，包括源代码、可视化|更好的理解算法|否|[项目地址](https://github.com/algorithm-visualizer/algorithm-visualizer)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/Ey4PB_ZoUn8LqpssVOelNA)|
+|中文 OCR|轻量级中文识别 OCR|未来或许用得到|否|[项目地址](https://github.com/ouyanghuiyu/chineseocr_lite)|否|[文字识别神器，超轻量级中文 OCR！](https://mp.weixin.qq.com/s/flgXEh55IRsS6JK3paggeg)|
 
 
 <br/>
@@ -56,3 +57,8 @@ tags:
 |first-order-model|上传你的一段视频，然后上传一张目标图（静态）<br/>目标就会自动跟着你视频中的样子模仿|或许可以结合实验室大项目<br/>如文物跟着自己行动|[是](https://benpaodewoniu.github.io/2020/05/28/first-order-model0/)|[项目地址](https://github.com/AliaksandrSiarohin/first-order-model)|[论文地址](https://arxiv.org/pdf/2003.00196.pdf)|[量子位](https://mp.weixin.qq.com/s/vEMdAPzsrfqHz3PAKPWsBA)|
 |seq2seq-couplet|自动对对联系统|或许未来对实验室大项目有用|否|[项目地址](https://github.com/wb14123/seq2seq-couplet)|无|[GitHub爱好者社区](https://mp.weixin.qq.com/s/mN-5kk4p339Di1jh7smU9A)|
 |cnn-explainer|可视化的 CNN 运行描述|[展示网站](https://poloclub.github.io/cnn-explainer/)|否|[项目地址](https://github.com/poloclub/cnn-explainer)|[论文地址](https://arxiv.org/abs/2004.15004)|老师|
+|InstColorization|利用深度学习给黑白照片染色|为实验室大项目服务|[是](https://benpaodewoniu.github.io/2020/03/15/colorization0/)|[项目地址](https://github.com/ericsujw/InstColorization)|[论文地址](https://arxiv.org/abs/2005.10825)|[给黑白照片上色，修复简直「如假包换」](https://mp.weixin.qq.com/s/YA-pTE-EMEVCB0wGDeM93Q)|
+|edge-connect|修复和去掉图片中的内容|为大项目服务|[是](https://benpaodewoniu.github.io/2020/06/02/edge0/)|[项目地址](https://github.com/knazeri/edge-connect)|[论文地址](https://arxiv.org/abs/1901.00212)|[女神被打码了](https://zhuanlan.zhihu.com/p/54107962?utm_source=wechat_session&utm_medium=social&utm_oi=620730450692542464)|
+|pytorch-CycleGAN-and-pix2pix|涂鸦生成物体|非常有意思|否|[项目地址](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)|未寻找|他人来源|
+|avatarify|相当于 first-order-model 的实时版本，有摄像头|未来大项目或许用|否|[项目地址](https://github.com/alievk/avatarify)|未找到|杂信息|
+|Background-Matting|动态抠图|或许可以用于大项目|否|[项目地址](https://github.com/senguptaumd/Background-Matting)|[论文地址](https://arxiv.org/pdf/2004.00626.pdf)|[整个世界都是你的绿幕](https://mp.weixin.qq.com/s/yLO0-KWl8bCMobHiB-FLAw)|

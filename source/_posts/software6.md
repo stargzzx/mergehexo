@@ -3,7 +3,7 @@ title: 软件 | shadowsocks 在阿里云「香港」服务器搭建
 date: 2020-04-24 20:53:59
 categories:
 - software
-- 电脑
+- 电脑软件
 tags:
 - software
 ---
@@ -155,6 +155,20 @@ ShadowSocks的安装包在GitHub上有很多版本，我这里选择的是通过
 然后执行
 
 	ssserver -c /etc/shadowsocks.json --log-file /home/log -d restart
+
+<br/>
+
+# 再次升级
+
+<br/>
+
+在更换了几次端口号之后，我的服务器被阿里给封了，远程也登不上，所以，我了解到了一个新的技术。 `V2ray`.
+
+但是，我还没开始尝试，我现在先把链接放一下。
+
+- [Vpn/ss/ssr与V2Ray的介绍与区别](https://www.imdupeng.cn/server/guid-diff-vpn-ss-ssr-and-v2ray.html)
+- [GFW BLOG](http://www.chinagfw.org/2016/08/shadowsocks_31.html)
+- [个人翻墙事宜的一些总结与经验分享](https://medium.com/@vonsis/%E8%BF%91%E6%9C%9F%E4%BB%A5%E6%9D%A5%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-%E7%BF%BB%E5%A2%99-%E4%BA%8B%E5%AE%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93-8928d55bce73)
 
 # 参考资料
 
