@@ -339,3 +339,11 @@ OK，我们现在把 图片 和 视频 都处理好了，下面就该运行他�
 经过大规模的尝试，`fashion` 和 `mgif` 效果都不是很好，遂放弃。
 
 - [在线剪辑mp4视频](https://online-video-cutter.com/cn/)
+
+<br/>
+
+# 其他参考文章
+
+<br/>
+
+- [First Order Motion Model for Image Animation 论文解读](https://zhuanlan.zhihu.com/p/136606648)
