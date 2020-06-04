@@ -77,7 +77,7 @@ tags:
 	envs_dirs:
 	  - /data/aaa/.conda/envs
 	pkgs_dirs:
-	  - /data/aaa/.conda/
+	  - /data/aaa/.conda/pkgs
 
 再次执行 `conda info`
 
