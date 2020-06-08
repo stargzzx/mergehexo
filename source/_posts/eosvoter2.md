@@ -6,13 +6,12 @@ categories:
 tags:
 - eosvoter
 - 币币生息
-password: eosvotereosvoter2
-abstract: eosvoter 项目资料
-message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 因为之前获得 reward 的接口挂了，官方换成其他的了，所以，我们也要重新对接相关的接口。
 
 这里说一下 reward 就是出块奖励和投票奖励。
+
+这是 `V1.0` 版本的方案，现在已经弃用。
 
 <!-- more -->
 

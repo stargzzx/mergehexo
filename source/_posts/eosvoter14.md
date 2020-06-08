@@ -7,9 +7,6 @@ categories:
 - [爬虫,电脑]
 tags:
 - eosvoter
-password: eosvotereosvoter14
-abstract: eosvoter 项目资料
-message: 您好, 这里是 2 级加密文章，不对非利益方公开，请理解。
 ---
 先说一下我的两个思路。
 
@@ -192,3 +189,46 @@ browser.close()
 ps: 这一博文几乎没怎么用 selenium ,只是借助了它的返回页面的操作。
 
 这个库真正的用处在于模拟人的操作，包括验证码滑动等。
+
+当然，由于部署在服务器端，不需要开启窗口环境，所以，需要自己设置一些限制参数，比如我的是
+
+```python
+options = webdriver.ChromeOptions()
+options.add_argument("--no-sandbox")
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+options.add_argument('blink-settings=imagesEnabled=false')
+browser = webdriver.Chrome(chrome_options=options)
+```
+
+<br/>
+
+# 更新 2020-6-8
+
+<br/>
+
+将项目放在新的服务器上，出现了新的问题。
+
+`selenium` 的得到的网页数据拿不到 `ajax` 的数据了。
+
+最后的解决办法，我进行了人的模拟滑动操作。
+
+```python
+options = webdriver.ChromeOptions()
+options.add_argument("--no-sandbox")
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+options.add_argument('blink-settings=imagesEnabled=false')
+browser = webdriver.Chrome(chrome_options=options)
+
+net_info = dict()
+browser.get(root_url)
+time.sleep(2)
+browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+time.sleep(2)
+response = browser.page_source
+pool_tables = BeautifulSoup(response, "html.parser", from_encoding="utf-8").find_all('div', class_="panel-body")
+
+...
+...
+```
