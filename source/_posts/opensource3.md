@@ -62,3 +62,5 @@ tags:
 |pytorch-CycleGAN-and-pix2pix|涂鸦生成物体|非常有意思|否|[项目地址](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)|未寻找|他人来源|
 |avatarify|相当于 first-order-model 的实时版本，有摄像头|未来大项目或许用|否|[项目地址](https://github.com/alievk/avatarify)|未找到|杂信息|
 |Background-Matting|动态抠图|或许可以用于大项目|否|[项目地址](https://github.com/senguptaumd/Background-Matting)|[论文地址](https://arxiv.org/pdf/2004.00626.pdf)|[整个世界都是你的绿幕](https://mp.weixin.qq.com/s/yLO0-KWl8bCMobHiB-FLAw)|
+|Lip2Wav|根据嘴唇动作自动合成语音|有趣|否|[项目地址](https://github.com/Rudrabha/Lip2Wav)|[论文地址](https://arxiv.org/abs/2005.08209)|[信息来源](https://mp.weixin.qq.com/s/CdToHAzls0JCEHegv5wtTw)|
+|lag|高糊图像还原|或许可以为实验室大项目服务|否|[项目地址](https://github.com/google-research/lag)|[论文地址](https://arxiv.org/pdf/2003.02365.pdf)|[信息来源](https://mp.weixin.qq.com/s/vSFocmAo6iVl7oNN91T1jQ)|
