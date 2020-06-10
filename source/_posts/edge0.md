@@ -178,6 +178,42 @@ cv2.imwrite('./test.png', np.bitwise_or(b, a))
 
 ![](/images/edge/0_0.png)
 
+为了让流程走的更顺利，我创建了一个叫做 `init_png.py` 的文件，其内容如下:
+
+```python
+import cv2
+import glob
+import argparse
+import numpy as np
+
+
+def init_png(origin_dir, mask_dir, result_dir):
+    origin_pngs = glob.glob(f'{origin_dir}/*.png')
+    for origin_png in origin_pngs:
+        a = cv2.imread(origin_png)
+        a = cv2.resize(a, (256, 256))
+        b = cv2.imread(f'{mask_dir}/{origin_png.split("/")[-1]}')
+        cv2.imwrite(f'{result_dir}/{origin_png.split("/")[-1]}', np.bitwise_or(b, a))
+        print(f'图片 {origin_png.split("/")[-1]} 生成成功')
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--origin_dir")
+    parser.add_argument("--mask_dir")
+    parser.add_argument("--result_dir")
+    args = parser.parse_args()
+    init_png(args.origin_dir, args.mask_dir, args.result_dir)
+```
+
+其中
+
+- `origin_dir`:是原始图像的文件夹
+- `mask_dir`：是遮罩图片的文件夹
+- `result_dir`：是合成图片的文件夹
+
+所以，你可以先初始化对象。
+
 ## 运行代码
 
 举一个简单的运行代码的例子

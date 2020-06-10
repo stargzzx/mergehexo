@@ -78,6 +78,35 @@ Anaconda 的下载文件比较大（约 500 MB），因为它附带了 Python �
 	
 并在提示是否更新的时候输入 y（Yes）让更新继续。初次安装下的软件包版本一般都比较老旧，因此提前更新可以避免未来不必要的问题。
 
+## 集群上配置 anaconda 环境
+
+先说一下背景信息
+
+- ubuntu16.04
+- anaconda3
+
+anaconda3 已经安装在 `/data/anaconda3` 上了。
+
+首先，假设 `user` 为 star
+
+	cd ~
+	vim .bashrc
+		添加
+		export PATH=/data/anaconda3/bin:$PATH
+	source .bashrc
+
+这个时候，你执行 `conda`，会有文字出来，说要初始化 `anaconda`。
+
+如果你直接执行
+
+	conda init
+
+那么会出现一些不可预知的 bug，所以，在初始化的时候要指定 shell
+	
+	conda init bash
+
+假如，你手快执行了 conda init 然后出现了不可预知的 bug ，那么也不需要慌，你只需要删掉 `.bashrc` 然后重新走一遍流程就好了。
+
 ## 如何管理包？
 
 安装了 Anaconda 之后，就可以很方便的管理包了（安装，卸载，更新）。
