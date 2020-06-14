@@ -22,6 +22,7 @@ tags:
 |postwoman|一款在线类postman的工具，支持websocket，开源|[地址](https://postwoman.io/)|
 |oktools|小工具聚合网站|[地址](https://oktools.net/)|
 |online-video-cutter|在线mp4剪辑|[地址](https://online-video-cutter.com/cn/)|
+|在线ps|功能很强大|[地址](https://www.uupoop.com/)|
 
 <br/>
 
