@@ -35,6 +35,16 @@ tags:
 
 <br/>
 
+# eth
+
+<br/>
+
+|名称|描述|地址|
+|---|---|---|
+|ethfans|以太坊论坛，技术、资讯等|[地址](https://ethfans.org/)|
+
+<br/>
+
 # 其他
 
 <br/>
@@ -44,4 +54,3 @@ tags:
 |蹬链社区|区块链技术论坛，很综合|[地址](https://learnblockchain.cn/)|
 |巴比特|一个很优秀的关于区块链的新闻资讯论坛，有着很深的见解|[地址](https://www.8btc.com/)|
 |Nervos 学习站|一个清新的技术小站|[地址](https://learning.nervos.org/)|
-|ethfans|以太坊论坛，技术、资讯等|[地址](https://ethfans.org/)|
