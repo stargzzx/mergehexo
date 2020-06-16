@@ -58,19 +58,105 @@ tags:
 
 <br/>
 
-# 解题思路
+# 解题
 
 <br/>
 
-作为社会的好青年我们是拒绝向小偷提供这个服务的，当然，作为一个社会好青年，我会将抓他的思路提供给警察。👮‍♀️
+想了很久都没有解题思路，于是就看了一下解析。
 
-很明显这是一个二叉树的运算，在运算之前，我们应该先建立这个二叉树本身，但是，由于题目中有 null 的存在，所以就更加简单了。
+- [三种方法解决树形动态规划问题](https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie-jue-shu-xing-dong-tai-gui-hu/)
 
-<br/>
+他的方法如下
 
-# 代码书写
+- 递归
+- 递归 + 记忆化
+- 动态规划
 
-<br/>
+不过，我没理解他的动态规划是什么意思。
 
-额，想了好久，没有思路，打算看看解析。
+所以，只做了前两项。使用 python 实现。
+
+## 递归
+
+在看递归之前你可以看我下面的文章
+
+- [递归](https://benpaodewoniu.github.io/2018/06/14/basis2/)
+
+```python
+class Solution:
+    def rob(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        money = root.val
+        if root.right:
+            money += self.rob(root.right.left) + self.rob(root.right.right)
+        if root.left:
+            money += self.rob(root.left.right) + self.rob(root.left.left)
+        return max(money, self.rob(root.right) + self.rob(root.left))
+```
+
+很不幸的是， `python` 的运行效率太低上面的题目，在 123/124 用例的时候超时。
+
+## 递归 + 记忆化
+
+在看这个解法的时候，建议看一下
+
+- [算法 | 斐波那契与记忆性](https://benpaodewoniu.github.io/2020/06/16/algorithm37/)
+
+```python
+class Solution:
+    def rob(self, root) -> int:
+
+        meno = {}
+        if not root:
+            return 0
+        if root in meno:
+            return meno[root]
+
+        a = root.val
+        if root.left:
+            a += self.rob(root.left.left) + self.rob(root.left.right)
+        if root.right:
+            a += self.rob(root.right.left) + self.rob(root.right.right)
+
+        b = 0
+        b += self.rob(root.left) + self.rob(root.right)
+
+        res = max(a, b)
+        meno[root] = res
+        return res
+```
+
+但是，很不幸，这个在 123/124 的时候也是超时。
+
+于是，改用其他的代码
+
+```python
+class Solution:
+    def rob(self, root: TreeNode) -> int:
+
+        meno = {}
+
+        def dfs(root):
+            if not root: return 0
+            if root in meno: return meno[root]
+
+            a = root.val
+            if root.left:
+                a += dfs(root.left.left) + dfs(root.left.right)
+            if root.right:
+                a += dfs(root.right.left) + dfs(root.right.right)
+            
+            b = 0
+            b += dfs(root.left) + dfs(root.right)
+
+            res = max(a, b)
+            meno[root] = res
+            return res
+        
+        return dfs(root)
+```
+
+这个代码通过了，看来嵌套函数比自我调用快。
+
 
