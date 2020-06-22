@@ -1,5 +1,5 @@
 ---
-title: coinex | 整体流程展现 版本一
+title: coinex | 整体流程展现 「已经弃用」
 date: 2019-11-25 14:16:17
 categories:
 - [项目经历,大型,ant]
