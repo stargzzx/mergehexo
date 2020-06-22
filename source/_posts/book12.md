@@ -32,6 +32,7 @@ tags:
 |书籍名|书籍地址|
 |---|---|
 |《鸟哥的Linux私房菜：基础学习篇 第四版》|[在线](http://shouce.jb51.net/vbird-linux-basic-4/index-2.html)|
+|《深入理解计算机系统(第三版)中文》|[百度云盘/wdk7](https://pan.baidu.com/s/1QvRargrZkIMCw_6uz2Oeqg)|
 
 ## 中间件
 

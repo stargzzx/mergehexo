@@ -165,3 +165,33 @@ git stash apply stash@{id} 命令则会继续保存stash id。所以，我们还
 	git stash pop stash@{int}
 
 git stash pop stash@{id}命令会在执行后将对应的stash id 从stash list里删除。
+
+<br/>
+
+# git diff
+
+<br/>
+
+## 比较工作区与暂存区
+
+	git diff 不加参数即默认比较工作区与暂存区
+
+## 比较暂存区与最新本地版本库（本地库中最近一次commit的内容）
+
+	git diff --cached  [<path>...] 
+
+## 比较工作区与最新本地版本库
+
+	git diff HEAD [<path>...]  如果HEAD指向的是master分支，那么HEAD还可以换成master
+
+## 比较工作区与指定commit-id的差异
+
+	git diff commit-id  [<path>...] 
+
+## 比较暂存区与指定commit-id的差异
+
+	git diff --cached [<commit-id>] [<path>...] 
+
+## 比较两个commit-id之间的差异
+
+	git diff [<commit-id>] [<commit-id>]
