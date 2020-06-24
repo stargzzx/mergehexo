@@ -330,6 +330,67 @@ OK，我们现在把 图片 和 视频 都处理好了，下面就该运行他�
 
 把它下下来，看看是否满足你的要求吧。
 
+## 抽帧合成图片
+
+因为，论文中需要画图，所以，我进行了抽帧画图。源代码如下
+
+```python
+# -*- coding:utf8 -*-
+import cv2
+import PIL.Image as Image
+import glob
+from collections import defaultdict
+
+dir_path = './source/*/*.mp4'
+class_mp4 = defaultdict(list)
+
+files = glob.glob(dir_path)
+class_mp4['guohua'].append('./source.mp4')
+class_mp4['diaosu'].append('./source.mp4')
+class_mp4['nianhua'].append('./source.mp4')
+
+for f in files:
+    class_mp4[f.split('/')[2]].append(f)
+
+image_width = 256
+image_heigh = 256
+image_number = 6
+image_column = 4
+
+imges = [5, 15, 30, 38, 50]
+
+for dir_c in class_mp4:
+    toImage = Image.new('RGBA', (image_width * image_number, image_heigh * image_column))
+    j = 0
+    i = -1
+    z = 0
+    for filename in class_mp4[dir_c]:
+        i += 1
+        videoCapture = cv2.VideoCapture(filename)
+        while True:
+            z += 1
+            success, frame = videoCapture.read()
+            if z in imges:
+                j += 1
+                loc = (j * 256, i * 256)
+                [height, width, pixels] = frame.shape
+                if height != 256 or width != 256:
+                    frame = cv2.resize(frame, (256, 256), interpolation=cv2.INTER_CUBIC)
+                from_image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+                toImage.paste(from_image, loc)
+            if not success:
+                z = 0
+                j = 0
+                break
+    toImage.save(f'{filename.split("/")[2]}merged.png')
+```
+
+效果如下：
+
+![](/images/first_order_model/0_1.png)
+
+当然，你需要自己根据实际情况修改代码，祝好运吧！！！
+
 <br/>
 
 # 其他
@@ -339,6 +400,10 @@ OK，我们现在把 图片 和 视频 都处理好了，下面就该运行他�
 经过大规模的尝试，`fashion` 和 `mgif` 效果都不是很好，遂放弃。
 
 - [在线剪辑mp4视频](https://online-video-cutter.com/cn/)
+
+如果遇到内存泄漏相关的问题，可以在运行的命令后面加上
+
+    --cpu
 
 <br/>
 
