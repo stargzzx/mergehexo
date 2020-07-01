@@ -35,7 +35,11 @@ tags:
 |---|---|---|
 |酷漫屋|免费看漫画，种类很多，下拉式，无广告|[地址](http://www.kuman5.com/)|
 |unsplash|免费的下载壁纸的网站「高清」|[地址](https://unsplash.com/)|
-
+|在线视频换脸|利用Deepfake制作的在线网站，有信息泄漏的风险|[地址](https://myvoiceyourface.com/)|
+|在线线稿染色|有趣|[地址](https://petalica-paint.pixiv.dev/index_zh.html)|
+|在线黑白图片染色|有趣|[地址](https://colourise.sg/#colorize)|
+|在线黑白图片染色|有趣|[地址](https://colorize.cc/)|
+|在线黑白图片染色|有趣|[地址](https://demos.algorithmia.com/colorize-photos)|
 
 <br/>
 
