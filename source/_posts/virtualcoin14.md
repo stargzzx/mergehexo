@@ -2,7 +2,7 @@
 title: 币圈 | 合约到底是什么
 date: 2020-04-10 16:07:45
 categories:
-- [区块链,虚拟币,基础]
+- [区块链,虚拟币,交易所]
 tags:
 - 区块链
 - virtualcoin

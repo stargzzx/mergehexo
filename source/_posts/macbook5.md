@@ -1,8 +1,9 @@
 ---
-title: macbook安装brew
+title: macbook安装brew及用法
 date: 2019-10-09 21:18:25
 categories:
 - MacBook
+- brew
 tags:
 - MacBook
 - brew
@@ -158,3 +159,4 @@ git 在 pull 或者 push 一个大项目时，可能会碰到出现如题所示�
 	brew upgrade ** //更新某个软件包
 	brew info ** //查看指定软件包的说明
 	brew cache clean //清理缓存
+

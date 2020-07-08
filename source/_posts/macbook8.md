@@ -3,6 +3,7 @@ title: MacBook | brew 本地安装
 date: 2020-02-10 00:04:48
 categories:
 - MacBook
+- brew
 tags:
 - MacBook
 - brew
@@ -110,7 +111,11 @@ brew cask可以看作是苹果官方app store的补充。
 
 最后成功安装。
 
-## brew 的本地安装
+<br/>
+
+# brew 的本地安装
+
+<br/>
 
 经过测试，brew install 和 brew cask install 一样。
 

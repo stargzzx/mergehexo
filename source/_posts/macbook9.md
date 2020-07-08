@@ -3,6 +3,7 @@ title: macbook | brew 换源
 date: 2020-02-10 00:43:53
 categories:
 - MacBook
+- brew
 tags:
 - MacBook
 - brew
@@ -46,3 +47,5 @@ brew update 这一步挺慢的，耐心等待
 	git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/Homebrew/homebrew-cask.git
 
 	brew update
+
+但是，有时候清华源并不能及时更新，也就是安装的软件可能是老版本，我安装 `gradle` 的时候就出现过这个情况，最后不得不换回原来的源。

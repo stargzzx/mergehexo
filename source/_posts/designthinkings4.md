@@ -115,6 +115,18 @@ if __name__ == '__main__':
     print(singleton1 == singleton2)
 ```
 
+这里面为什么用
+
+    cls.instance = super(Singleton, cls).__new__(cls)
+    而不用
+    cls.instance = Singleton()
+
+是因为
+
+    cls.instance = Singleton()
+
+会导致递归自身，出现错误。
+
 <br/>
 
 # 懒汉模式

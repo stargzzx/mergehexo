@@ -2,7 +2,7 @@
 title: 币圈 | maker 和 taker
 date: 2020-06-09 14:45:53
 categories:
-- [区块链,虚拟币,基础]
+- [区块链,虚拟币,交易所]
 tags:
 - 区块链
 - virtualcoin
