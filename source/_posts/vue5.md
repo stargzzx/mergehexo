@@ -1,10 +1,10 @@
 ---
-title: vue | 安装生态「插件、脚手架」等
+title: npm | 安装方式
 date: 2020-05-28 16:31:43
 categories:
-- [网站设计,前端设计,vue]
+- [网站设计,npm]
 tags:
-- vue
+- npm
 ---
 vue 的生态完备，现在网络上提供了非常多的脚手架。
 
