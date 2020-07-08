@@ -24,6 +24,12 @@ tags:
 |online-video-cutter|在线mp4剪辑|[地址](https://online-video-cutter.com/cn/)|
 |在线ps|功能很强大|[地址](https://www.uupoop.com/)|
 |在线画流程图|非常方便|[地址](https://www.processon.com/)|
+|在线视频换脸|利用Deepfake制作的在线网站，有信息泄漏的风险|[地址](https://myvoiceyourface.com/)|
+|在线线稿染色|有趣|[地址](https://petalica-paint.pixiv.dev/index_zh.html)|
+|在线黑白图片染色|有趣|[地址](https://colourise.sg/#colorize)|
+|在线黑白图片染色|有趣|[地址](https://colorize.cc/)|
+|在线黑白图片染色|有趣|[地址](https://demos.algorithmia.com/colorize-photos)|
+|人工智能放大图片|实用，确实有用|[地址](https://bigjpg.com/)|
 
 <br/>
 
@@ -35,11 +41,7 @@ tags:
 |---|---|---|
 |酷漫屋|免费看漫画，种类很多，下拉式，无广告|[地址](http://www.kuman5.com/)|
 |unsplash|免费的下载壁纸的网站「高清」|[地址](https://unsplash.com/)|
-|在线视频换脸|利用Deepfake制作的在线网站，有信息泄漏的风险|[地址](https://myvoiceyourface.com/)|
-|在线线稿染色|有趣|[地址](https://petalica-paint.pixiv.dev/index_zh.html)|
-|在线黑白图片染色|有趣|[地址](https://colourise.sg/#colorize)|
-|在线黑白图片染色|有趣|[地址](https://colorize.cc/)|
-|在线黑白图片染色|有趣|[地址](https://demos.algorithmia.com/colorize-photos)|
+|九歌|清华大学搞的在线作诗|[地址](http://jiuge.thunlp.org/)|
 
 <br/>
 

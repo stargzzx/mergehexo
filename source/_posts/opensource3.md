@@ -66,3 +66,6 @@ tags:
 |Deep-motion-editing|动画形象跟随人体移动<br/>有骨骼成分|否|[项目](https://github.com/DeepMotionEditing/deep-motion-editing)|未寻找|[来源](https://mp.weixin.qq.com/s/uU1-DwHnU4pPMLtQZNQyVQ)|
 |pose-animator|打开摄像头<br/>2D插画实时变动画|有趣|否|[项目](https://github.com/yemount/pose-animator)<br/>[镜头demo](https://pose-animator-demo.firebaseapp.com/camera.html)<br/>[图片demo](https://pose-animator-demo.firebaseapp.com/static_image.html)|未寻找|[来源](https://mp.weixin.qq.com/s/rEmNKSd0eV2u1iRMp90EZA)|
 |DeepRemaster|黑白视频上色|还不错<br/>不过，由中国人做了更好的实现<br/>详情看来源|否|[项目](https://github.com/satoshiiizuka/siggraphasia2019_remastering)<br/>[展示](http://iizuka.cs.tsukuba.ac.jp/projects/remastering/en/index.html)|未寻找|[来源](https://mp.weixin.qq.com/s/6mZ9RhgUpFV-RyOkWibEwQ)|
+|TTSR|相当于是马赛克图片变大图|效果非常好|是|[项目](https://github.com/researchmm/TTSR)|[论文](https://arxiv.org/abs/2006.04139)|懒得找了|
+|SC-FEGAN|自动修复/补充涂鸦|效果不错|否|[项目](https://github.com/run-youngjoo/SC-FEGAN)|[论文](https://arxiv.org/pdf/1902.06838.pdf)|[来源](https://zhuanlan.zhihu.com/p/57294544)|
+|中英文OCR模型|深度学习相关|可自训练|否|[项目](https://github.com/PaddlePaddle/PaddleOCR)<br/>[在线](https://www.paddlepaddle.org.cn/hub/scene/ocr)|无|[来源](https://mp.weixin.qq.com/s/igwv49jsudaH8s8Fk-5W0Q)|
