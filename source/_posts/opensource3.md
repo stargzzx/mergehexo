@@ -69,3 +69,4 @@ tags:
 |TTSR|相当于是马赛克图片变大图|效果非常好|是|[项目](https://github.com/researchmm/TTSR)|[论文](https://arxiv.org/abs/2006.04139)|懒得找了|
 |SC-FEGAN|自动修复/补充涂鸦|效果不错|否|[项目](https://github.com/run-youngjoo/SC-FEGAN)|[论文](https://arxiv.org/pdf/1902.06838.pdf)|[来源](https://zhuanlan.zhihu.com/p/57294544)|
 |中英文OCR模型|深度学习相关|可自训练|否|[项目](https://github.com/PaddlePaddle/PaddleOCR)<br/>[在线](https://www.paddlepaddle.org.cn/hub/scene/ocr)|无|[来源](https://mp.weixin.qq.com/s/igwv49jsudaH8s8Fk-5W0Q)|
+|九歌|自动生成古诗词|国内目前最好的|否|[项目](https://github.com/THUNLP-AIPoet/MixPoet)|[论文](https://arxiv.org/pdf/2003.06094.pdf)|[来源](https://mp.weixin.qq.com/s/-KU2IAZnX4H6Rr0GpvYC5A)|
