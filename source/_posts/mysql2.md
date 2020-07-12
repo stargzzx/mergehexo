@@ -1,5 +1,5 @@
 ---
-title: 服务器数据下载到本地
+title: 服务器数据下载到本地 | 基础导入导出
 date: 2019-10-27 16:58:19
 categories:
 - [sql,mysql]
@@ -43,6 +43,15 @@ password ******
 
 ```python
 $ mysqldump -u root -p RUNOOB runoob_tbl > dump.txt
+password ******
+```
+
+上面是导出一张表的数据。
+
+如果要导出多张表，只需要在后面添加相应的表名
+
+```python
+$ mysqldump -u root -p RUNOOB runoob_tbl t_base t_table > dump.txt
 password ******
 ```
 

@@ -37,8 +37,8 @@ tags:
 |书籍名|书籍地址|
 |---|---|
 |《算法》|[百度云盘/dc7e](https://pan.baidu.com/s/1w3uVHhKPGigz7nIVvAqE5Q)|
-|《算法导论》|
-
+|《算法导论》||
+|《剑指 offer》|[百度云盘/fawm](https://pan.baidu.com/s/1bj00SRj11PxIj2xv--AvqA)|
 
 ## 系统
 
