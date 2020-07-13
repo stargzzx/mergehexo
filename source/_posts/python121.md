@@ -2,8 +2,8 @@
 title: python | 下载文件的 11 种方式
 date: 2020-07-12 17:09:46
 categories:
-- python
-- 进阶
+- [python,进阶]
+- [爬虫,基础]
 tags:
 - python
 ---
