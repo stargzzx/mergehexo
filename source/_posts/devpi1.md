@@ -2,8 +2,7 @@
 title: devpi | 线上安装
 date: 2020-02-20 20:05:16
 categories:
-- 中间件
-- devpi
+- [python,中间件,devpi]
 tags:
 - devpi
 - python

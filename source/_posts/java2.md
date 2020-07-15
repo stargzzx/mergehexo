@@ -3,6 +3,7 @@ title: gradle | 安装和简介
 date: 2020-07-08 14:13:53
 categories:
 - java
+- 基础
 - gradle
 tags:
 - gradle
@@ -40,6 +41,10 @@ tags:
 参考，我下面的博文。
 
 - [MacBook | brew 本地安装](https://benpaodewoniu.github.io/2020/02/10/macbook8/)
+
+如何在 idea 中配置 `gradle` 请看下面的博文。
+
+- [idea | 面向小白](https://benpaodewoniu.github.io/2020/07/08/idea0/)
 
 <br/>
 

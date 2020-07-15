@@ -2,8 +2,7 @@
 title: devpi | 本地安装
 date: 2020-02-10 00:53:48
 categories:
-- 中间件
-- devpi
+- [python,中间件,devpi]
 tags:
 - devpi
 - python
