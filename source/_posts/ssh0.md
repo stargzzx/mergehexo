@@ -35,7 +35,7 @@ ok，开始我们的操作。
 
 接下来还有两个提示，直接 enter 就好了。
 
-然后我们会看见在 ~/.ssh 下面有几个文件，其中两个是原来的 ssh-key 的文件，另外两个是你刚才生成的 ssh-key 存储文件。
+然后我们会看见在 \~/.ssh 下面有几个文件，其中两个是原来的 ssh-key 的文件，另外两个是你刚才生成的 ssh-key 存储文件。
 
 win 中 ssh 存储的地方是
 
@@ -54,7 +54,7 @@ Administrator 这个是登录者的名称
 
 但是，现在仅仅只是生成了 ssh-key ，还得做一下区分，下面的方法是我自创的，完全是权宜之举，我相信还有更好的方法，如果我找到更好的方法，我会来更新的。
 
-你还需要在 ~/.ssh 下创建一个叫 config 的文件
+你还需要在 \~/.ssh 下创建一个叫 config 的文件
 
     touch config
 
@@ -83,7 +83,7 @@ Administrator 这个是登录者的名称
 
 如果我要上传公司代码，就要注释掉我私人的ssh-key，反之亦然。
 
-然后，我们在 ~/.ssh 下使用下面的命令来测试 git 是否能连接成功。
+然后，我们在 \~/.ssh 下使用下面的命令来测试 git 是否能连接成功。
 
     ssh -T git@git.com  // 或者其他域名地址
 
@@ -115,3 +115,53 @@ Administrator 这个是登录者的名称
 建议只使用单项目配置。
 
 感谢大家观看，目前，只是权宜之计，很麻烦，如果要上传不同的项目，还得先切换 ssh-key。在接下来的日子里，我会查询相关资料，一次配置就好了，请各位期待。    
+
+ps: 时隔 6 个月，终于有替代方法了。
+
+首先，先看一下我的 `~/.ssh/config` 的内容
+
+    # bbsx
+    Host github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+    # hexo
+    Host hexo.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_hexo_mac
+
+和之前唯一的不同就是我把 `hexo` 的 `host` 变了。
+
+进入我的博客，我们执行下面的命令
+
+    git remote -v
+
+出现
+
+    origin  git@github.com:***/**.git (fetch)
+    origin  git@github.com:***/**.git (push)
+
+在 `git@` 后面有一个 `github.com` 这是一个标示，指的是当上传到服务器的时候，会读取 `.ssh/config` 这个文件中的 `Host = git@后面` 标志中的配置。
+
+所以，我们只需要修改一下这个 `remote url` 就好了。
+
+使用
+
+    git remote set-url origin git@hexo.com:***/***.git
+
+就可以了，然后
+
+    git remote -v
+
+看一下
+
+    origin  git@hexo.com:***/***.git (fetch)
+    origin  git@hexo.com:***/***.git (push)
+
+后面成功运行。
+
+当然，我们也可以 `clone` 的时候就指定不同的 `Host`。
+
+    git clone git@host/repopath「我还没试过，试过后，把这句话去除」
+
