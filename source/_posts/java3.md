@@ -332,6 +332,10 @@ apply from: "push.gradle"
 
 </div>
 
+- [自建 Maven 仓库](https://juejin.im/post/5dabcdc66fb9a04dde1479ae)
+
+如果，我写的不够清晰，可以看看上面的链接。
+
 <br/>
 
 # 依赖配置
