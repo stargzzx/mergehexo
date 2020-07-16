@@ -22,26 +22,6 @@ tags:
 
 <br/>
 
-# 配置 gradle
-
-<br/>
-
-虽然，现在还不知道 `gradle` 到底是什么，但是，先把环境配置起来吧。
-
-首先你要先把 `gradle` 在本地安装起来。
-
-- [gradle | 安装和简介](https://benpaodewoniu.github.io/2020/07/08/java2/)
-
-然后
-
-	Preferences 搜索 gradle
-
-在下面选择相应的选项。
-
-![](/images/idea/0_1.png)
-
-<br/>
-
 # 更换 JDK
 
 <br/>

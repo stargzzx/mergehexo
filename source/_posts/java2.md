@@ -48,8 +48,51 @@ tags:
 
 <br/>
 
-# 简介
+# IDEA 使用 gradle
 
 <br/>
 
+## 导入 gradle 项目
+
+如果是 gradle 项目，只需要直接打开就好， IDEA 会自行的创建 gradle 相关的环境。
+
+## 创建 gradle 项目
+
+我们在 IDEA 中，选择
+
+	File ——> Project ——> Gradle
+
+![](/images/gradle/2_0.png)
+
+选好 java 的 SDK 和 java 项目。
+
+![](/images/gradle/2_1.png)
+
+选好项目目录。
+
+这样就创建好了。
+
+![](/images/gradle/2_2.png)
+
+上面图中的东西会自己创建出来。
+
+## 配置 gradle
+
+假如，你一开始创建项目的时候，并没有 gradle ，但是，项目又是 geadle ，这个时候，你需要先安装 gradle ，然后，为该项目加上 gradle。
+
+或者，你导入项目的时候 gradle 构建错了。
+
+虽然，现在还不知道 `gradle` 到底是什么，但是，先把环境配置起来吧。
+
+首先你要先把 `gradle` 在本地安装起来「参照上面」。
+
+然后
+
+	Preferences 搜索 gradle
+
+在下面选择相应的选项。
+
+![](/images/idea/0_1.png)
+
+这里值得注意的是，我的 gradle 和 JDK 都是自己特指的，而不是默认的。 IDEA 有时候会默认 JDK 为 1.8 ，那个时候，配合 gradle 可能会出错。
 
