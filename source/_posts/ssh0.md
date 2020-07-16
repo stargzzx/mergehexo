@@ -163,5 +163,7 @@ ps: 时隔 6 个月，终于有替代方法了。
 
 当然，我们也可以 `clone` 的时候就指定不同的 `Host`。
 
-    git clone git@host/repopath「我还没试过，试过后，把这句话去除」
+举一个例子
+
+    git clone git@hexo.com:benpaodewoniu/exchange_symbols.git
 
