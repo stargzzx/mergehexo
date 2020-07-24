@@ -96,3 +96,7 @@ tags:
 
 这里值得注意的是，我的 gradle 和 JDK 都是自己特指的，而不是默认的。 IDEA 有时候会默认 JDK 为 1.8 ，那个时候，配合 gradle 可能会出错。
 
+## 寻找 jar 版本
+
+- [mvnrepository](https://mvnrepository.com/)
+
