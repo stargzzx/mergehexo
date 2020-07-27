@@ -12,36 +12,119 @@ tags:
 
 <br/>
 
+# ping
+
+<br/>
+
+用来检查网络是否通畅或者网络连接速度的命令 
+
+	ping www.baidu.com
+
+<br/>
+
+# telnet
+
+<br/>
+
+Linux telnet命令用于远端登入。
+
+执行telnet指令开启终端机阶段作业，并登入远端主机。「一般用 ssh 来完成上面的作用」。
+
+但是，通常用来探测指定ip是否开放指定端口
+
+通过
+
+	telnet ip port
+
+可以判断某一 IP 的 端口是否对外开放。
+
+	# telnet 47.75** 8090
+	Trying 47.75.**...
+	Connected to 47.75.**. 「表示连接成功，该端口已经开启」
+	Escape character is '^]'.
+	Connection closed by foreign host.
+
+如果没有开启，可能会停留在
+
+	Trying 47.75.***...
+
+## 退出连接
+
+如果连接不成功可以
+
+	control + c 「MacBook」
+
+如果连接成功，可以使用
+
+	quit
+	如果quit不能退出，可以先执行
+	control + ] 然后 quit 退出
+	
+<br/>
+
+# ssh
+
+<br/>
+
+关于 `ssh` 你可以点击下面的链接。
+
+- [ssh](https://benpaodewoniu.github.io/categories/ssh/)
+
+## ssh 和 telnet 的区别
+
+`telnet` 和 `ssh` 都是连接远程计算机的连接协议，可以完成对完成计算机的控制，方便维护。
+
+他们都是基于`TCP/IP`协议下的，所以连接时都需要知道目标机的网址或者域名.
+
+他们都是与远程主机连接的通道，完成的目的是一样的，只不过手段不一样而已。
+
+由于 `ssh` 经过加密算法加密，收报文需要解密，发报文需要加密，导致其传输速度、效率较telnet低很多，然而，它却有telnet不具有的安全性「明文链接」。
+
+<br/>
+
+# ifconfig
+
+<br/>
+
+查看和修改网络配置
+
+eth0是指具体的网络设备，如果有多个网络设备，0依次累加
+
+这个可以设置网卡之类的，可以单独的 google 一下。
+
+
+<br/>
+
 # netstat
 
 <br/>
 
 netstat命令的功能是显示网络连接、路由表和网络接口信息，可以让用户得知目前都有哪些网络连接正在运作。
 
-- a或--all 显示所有连线中的Socket。
-- A<网络类型>或--<网络类型> 列出该网络类型连线中的相关地址。
-- c或--continuous 持续列出网络状态。
-- C或--cache 显示路由器配置的快取信息。
-- e或--extend 显示网络其他相关信息。
-- F或--fib 显示FIB。
-- g或--groups 显示多重广播功能群组组员名单。
-- h或--help 在线帮助。
-- i或--interfaces 显示网络界面信息表单。
-- l或--listening 显示监控中的服务器的Socket。
-- M或--masquerade 显示伪装的网络连线。
-- n或--numeric 直接使用IP地址，而不通过域名服务器。
-- N或--netlink或--symbolic 显示网络硬件外围设备的符号连接名称。
-- o或--timers 显示计时器。
-- p或--programs 显示正在使用Socket的程序识别码和程序名称。
-- r或--route 显示Routing Table。
-- s或--statistice 显示网络工作信息统计表。
-- t或--tcp 显示TCP传输协议的连线状况。
-- u或--udp 显示UDP传输协议的连线状况。
-- v或--verbose 显示指令执行过程。
-- V或--version 显示版本信息。
-- w或--raw 显示RAW传输协议的连线状况。
-- x或--unix 此参数的效果和指定"-A unix"参数相同。
-- -ip或--inet 此参数的效果和指定"-A inet"参数相同。
+- `a` 或 `--all` 显示所有连线中的Socket。
+- `A` <网络类型> 或 --<网络类型> 列出该网络类型连线中的相关地址。
+- `c` 或 `--continuous` 持续列出网络状态。
+- `C` 或 `--cache` 显示路由器配置的快取信息。
+- `e` 或 `--extend` 显示网络其他相关信息。
+- `F` 或 `--fib` 显示FIB。
+- `g` 或 `--groups` 显示多重广播功能群组组员名单。
+- `h` 或 `--help` 在线帮助。
+- `i` 或 `--interfaces` 显示网络界面信息表单。
+- `l` 或 `--listening` 显示监控中的服务器的Socket。
+- `M` 或 `--masquerade` 显示伪装的网络连线。
+- `n` 或 `--numeric` 直接使用IP地址，而不通过域名服务器。
+- `N` 或 `--netlink` 或 `--symbolic` 显示网络硬件外围设备的符号连接名称。
+- `o` 或 `--timers` 显示计时器。
+- `p` 或 `--programs` 显示正在使用Socket的程序识别码和程序名称。
+- `r` 或 `--route` 显示Routing Table。
+- `s` 或 `--statistice` 显示网络工作信息统计表。
+- `t` 或 `--tcp` 显示TCP传输协议的连线状况。
+- `u` 或 `--udp` 显示UDP传输协议的连线状况。
+- `v` 或 `--verbose` 显示指令执行过程。
+- `V` 或 `--version` 显示版本信息。
+- `w` 或 `--raw` 显示RAW传输协议的连线状况。
+- `x` 或 `--unix` 此参数的效果和指定"-A unix"参数相同。
+- `-ip` 或 `--inet` 此参数的效果和指定"-A inet"参数相同。
 
 ## netstat -an | grep LISTEN
 
@@ -57,25 +140,24 @@ netstat命令的功能是显示网络连接、路由表和网络接口信息，�
 
 <br/>
 
-# telnet
+# ufw
 
 <br/>
 
-Linux telnet命令用于远端登入。
+`Ubuntu` 系统进行安装的时候默认安装了 `ufw防火墙`.
 
-执行telnet指令开启终端机阶段作业，并登入远端主机。
+## ufw status
 
-## 退出连接
+	状态：不活动
 
-如果连接不成功可以
+不活动意味着没开启，不意味着没安装
 
-	control + c 「MacBook」
-
-如果连接成功，可以使用
-
-	quit
-	如果quit不能退出，可以先执行
-	control + ] 然后 quit 退出
+	开启防火墙: ufw enable
+		开启的过程中，会提示你 ssh 可能中断，选择 yes 即可
+		此时再执行 ufw status 就会出现暴漏的端口了
+	开启端口: ufw allow 22
+		开启完成，需要重启防火墙生效
+	重启防火墙: ufw reload
 
 <br/>
 
@@ -135,6 +217,7 @@ Linux telnet命令用于远端登入。
 假设，我们查询 `0.0.0.0:5010` 不能被外部访问，可以使用下面的命令试一试
 
 	ufw allow 5010
+	ufw reload
 
 我就是通过这个修好了我外部不能连接的问题。
 
