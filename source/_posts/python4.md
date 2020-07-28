@@ -1,5 +1,5 @@
 ---
-title: python详解
+title: python基础
 date: 2018-06-03 16:28:51
 categories:
 - python
