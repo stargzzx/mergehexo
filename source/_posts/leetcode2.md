@@ -8,7 +8,7 @@ categories:
 tags:
 - leetcode
 ---
-记录每一次自己刷题。
+记录每一次自己刷题，今日完成任务 1/3 。
 
 <!-- more -->
 
