@@ -21,3 +21,4 @@ tags:
 |Deep Learning with PyTorch|pytorch官方的指导书籍|深度学习必备|否|[项目](https://pytorch.org/assets/deep-learning/Deep-Learning-with-PyTorch.pdf)<br/>[代码1](https://github.com/deep-learning-with-pytorch/dlwpt-code)<br/>[代码2](https://www.manning.com/books/deep-learning-with-pytorch)|无|[来源](https://mp.weixin.qq.com/s/vm65gSl8nLl4GDzRW4IYPA)|
 |pytorch-tutorial|外国人写的pytorch例子|代码非常优美，从入门开始|是|[项目](https://github.com/yunjey/pytorch-tutorial)|无|忘了|
 |李航《统计学》代码实现|牛逼|希望可以看完|否|[地址1](https://github.com/hktxt/Learn-Statistical-Learning-Method)<br/>[地址2](https://github.com/SmirkCao/Lihang)|无|[来源](https://mp.weixin.qq.com/s/w3Zd7lIkG1g3OCPnPcThgQ)|
+|CS-Notes|技术面试必备基础知识|最近找工作的时候，发现基础非常重要|否|[CS-Notes](https://github.com/CyC2018/CS-Notes)|无|无|
