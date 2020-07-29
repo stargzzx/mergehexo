@@ -43,7 +43,7 @@ tags:
 
 <br/>
 
-## 解法一
+## 解法一 「有序哈希」
 
 - 执行用时：132 ms 击败了 39.78% 的用户
 - 内存消耗：13.8 MB 击败了 100.00% 的用户
@@ -71,5 +71,18 @@ class Solution:
 关于这个问题，你可以参考我下面的博文。
 
 - [python | 字典总结](https://benpaodewoniu.github.io/2020/06/24/python119/)
+
+## 优化解法一
+
+```python
+class Solution:
+    def firstUniqChar(self, s: str) -> str:
+        dic = {}
+        for c in s:
+            dic[c] = not c in dic
+        for k, v in dic.items():
+            if v: return k
+        return ' '
+```
 
 

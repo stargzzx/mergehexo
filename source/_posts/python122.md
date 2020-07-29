@@ -12,6 +12,12 @@ tags:
 
 <!-- more -->
 
+<br/>
+
+# 数组
+
+<br/>
+
 ## deque 双端队列
 
 deque 是一个双端队列, 如果要经常从两端append 的数据, 选择这个数据结构就比较好了, 如果要实现随机访问,不建议用这个,请用列表.
@@ -50,6 +56,7 @@ print(mydeque)
 # 可以从左边也可以从右边 出队列
 mydeque.pop()
 mydeque.popleft()
+    # 其 popleft() 方法可达到 O(1) 时间复杂度；列表 list 的 pop(0) 方法时间复杂度为 O(N)。
 print(mydeque)
     # deque([6, 5, 'b', 'a', 10, 12, 5, 6], maxlen=10)
 
@@ -124,4 +131,87 @@ d.appendleft('frank')
 deque(['frank', 0, 1, 2, 3])
 d.append('xiaoming')
 	# deque([0, 1, 2, 3, 'xiaoming'])
+```
+
+<br/>
+
+# 字典
+
+<br/>
+
+## OrderedDict 有序字典
+
+- 在`Python 3.5`（含）以前，字典是不能保证顺序的，所以，要用 `OrderedDict` 。
+- 但是从`Python 3.6`开始，字典是变成有顺序的了。
+
+```python
+from collections import OrderedDict
+
+dic = OrderedDict()
+dic['k1'] = 'v1'
+dic['k2'] = 'v2'
+dic['k3'] = 'v3'
+print(dic)
+    # OrderedDict([('k1', 'v1'), ('k2', 'v2'), ('k3', 'v3')])
+
+# 清空
+dic.clear()
+print(dic)
+# OrderedDict()
+
+# 浅拷贝
+dic.copy()
+
+# fromkeys(指定一个列表，把列表中的值作为字典的key,生成一个字典)
+name = ['tom', 'lucy', 'sam']
+a = dic.fromkeys(name)
+d = dic.fromkeys(name, '2')
+print(a)
+    # OrderedDict([('tom', None), ('lucy', None), ('sam', None)])
+print(d)
+    # OrderedDict([('tom', '2'), ('lucy', '2'), ('sam', '2')])
+
+# items(返回由“键值对组成元素“的列表)
+
+for key, item in d.items():
+    print(key)
+    print(item)
+    # tom
+    # 2
+    # lucy
+    # 2
+    # sam
+    # 2
+
+# keys(获取字典所有的key)
+print(d.keys())
+    # odict_keys(['tom', 'lucy', 'sam'])
+
+# move_to_end(指定一个key，把对应的key-value移到最后)
+d.move_to_end('lucy')
+print(d)
+    # OrderedDict([('tom', '2'), ('sam', '2'), ('lucy', '2')])
+
+# pop(获取指定key的value，并在字典中删除)
+print(d.pop('lucy'))
+# 2
+print(d)
+    # OrderedDict([('tom', '2'), ('sam', '2')])
+
+# popitem(按照后进先出原则，删除最后加入的元素，返回key-value)
+print(d)
+# OrderedDict([('tom', '2'), ('sam', '2')])
+print(d.popitem())
+# ('sam', '2')
+print(d)
+    # OrderedDict([('tom', '2')])
+
+# setdefault(获取指定key的value，如果key不存在，则创建)
+d.setdefault('l', 5)
+print(d)
+    # OrderedDict([('tom', '2'), ('l', 5)])
+
+# values(获取字典所有的value，返回一个列表)
+print(d.values())
+    # odict_values(['2', 5])
 ```

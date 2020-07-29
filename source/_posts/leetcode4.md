@@ -93,3 +93,30 @@ class Solution:
 返回：
 
 	[3,20,7,15,9]
+
+## 优化解法一
+
+- 执行用时：40 ms 击败了 81.91% 的用户
+- 内存消耗：13.9 MB 击败了 100.00% 的用户
+
+在这里我们使用一个数据结构，双端队列，关于双端队列，你可以查看我下面的博文
+
+- [python | collections](https://benpaodewoniu.github.io/2020/07/28/python122/)
+
+之所以，使用双端队列能够提升速度的原因在于
+
+- 其 popleft() 方法可达到 O(1) 时间复杂度；列表 list 的 pop(0) 方法时间复杂度为 O(N)。
+
+```python
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[int]:
+        q,dq = [],collections.deque()
+        if not root: return q
+        dq.append(root)
+        while(dq):
+            node = dq.popleft()
+            q.append(node.val)
+            if(node.left):dq.append(node.left)
+            if(node.right):dq.append(node.right)
+        return q
+```
