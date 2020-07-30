@@ -1,5 +1,5 @@
 ---
-title: leetcode6
+title: 刷 leetcode 的一些坑
 date: 2020-07-29 14:20:39
 categories:
 - 算法

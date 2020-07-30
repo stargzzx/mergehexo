@@ -8,7 +8,7 @@ categories:
 tags:
 - leetcode
 ---
-今天的算法任务。 2/3
+今天的算法任务。 2/3 已经优化
 
 <!-- more -->
 
