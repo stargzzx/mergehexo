@@ -263,6 +263,41 @@ Nexus 默认就有一个游客账号(anonymous)，在默认状态下拥有浏览
 
 <br/>
 
+# 手动上传
+
+<br/>
+
+登陆之后，点击 「upload」
+
+![](/images/nexus/0_19.png)
+
+点击之后，选择要上传的 仓库。
+
+![](/images/nexus/0_20.png)
+
+- Extension: 文件的后缀
+- 红框里的一定要勾选
+
+上传完之后，再次访问该仓库，就会出现
+
+![](/images/nexus/0_21.png)
+
+然后，我们就要配置 `build.gradle`
+
+![](/images/nexus/0_22.png)
+
+它的这个地址获取在
+
+![](/images/nexus/0_23.png)
+
+这里面有两个填写仓库地址的地方，一定不要填错地方。
+
+然后，就可以配置
+
+	implementation 'com.futu:ftapi4j:1.0.0'
+
+<br/>
+
 # 上传脚本
 
 <br/>
