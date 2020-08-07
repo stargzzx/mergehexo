@@ -40,3 +40,12 @@ tags:
 `Okhttp`是对底层网络请求的封装与优化(`socket优化`，`数据压缩`，`buffer缓存`等)。
 
 ![](/images/retiofit/0_0.jpg)
+
+<br/>
+
+# 如何使用
+
+<br/>
+
+- [深入浅出 Retrofit，这么牛逼的框架你们还不来看看？](https://segmentfault.com/a/1190000005638577)
+
