@@ -105,3 +105,57 @@ def fib(n: int) -> int:
 
 <br/>
 
+给你 `k` 种面值的硬币，面值分别为 `c1`, `c2` ... `ck`，每种硬币的数量无限，再给一个总金额 `amount`，问你最少需要几枚硬币凑出这个金额，如果不可能凑出，算法返回 `-1` 。
+
+- 明确基本问题
+	- amount < c1 return -1
+	- amount = 0 return 0
+	- amount = c1 return c1
+- 最优子结构
+- 传递方程
+- 尝试记忆化
+	- 解决重叠子问题
+- 尝试优化记忆化空间
+
+<br/>
+
+# 暴力破解法
+
+<br/>
+
+```python
+def coin_change(coins, amount):
+    res = float('inf')
+    for coin in coins:
+        sub = amount - coin
+        if sub < 0:
+            continue
+        res = min(res, 1 + coin_change(coins, sub))
+    return res
+```
+
+<br/>
+
+# 记忆化
+
+<br/>
+
+```python
+memo = {}
+
+memo[1] = 1
+memo[0] = 0
+
+
+def coin_change(coins, amount):
+    if amount in memo:
+        return memo[amount]
+    res = float('inf')
+    for coin in coins:
+        sub = amount - coin
+        if sub < 0:
+            continue
+        res = min(res, 1 + coin_change(coins, sub))
+    memo[amount] = res
+    return memo[amount]
+```

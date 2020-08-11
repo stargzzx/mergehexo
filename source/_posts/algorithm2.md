@@ -178,6 +178,14 @@ def quickSort(L,start,end):
 		quickSort(L,i+1,end)
 ```
 
+第一轮排序结构
+
+<div style="width: 50%;padding-left: 25%">
+
+![](/images/algorithm/2_9.png)
+
+</div>
+
 ## 堆排序
 
 ### 原理
