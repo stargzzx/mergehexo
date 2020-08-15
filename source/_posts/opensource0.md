@@ -27,7 +27,7 @@ tags:
 
 你可以在我下面的栏目中了解，什么是 redis 以及如何用。
 
-[redis](https://benpaodewoniu.github.io/categories/redis/)
+[redis](https://benpaodewoniu.github.io/categories/sql/redis/)
 
 <br/>
 
@@ -81,6 +81,8 @@ SERVER_API = {
 ```
 
 ## 启动
+
+首先需要开启 `redis`。
 
 进入 cli目录下通过ProxyPool.py启动
 
