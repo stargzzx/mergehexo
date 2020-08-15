@@ -32,8 +32,8 @@ tags:
 
 在你博客的 `source` 这个文件夹中
 
-	mkdie source
-	cd source
+	mkdir links
+	cd links
 	touch index.md
 
 然后在 `index.md` 中添加内容就好了。
