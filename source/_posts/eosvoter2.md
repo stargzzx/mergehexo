@@ -51,20 +51,13 @@ tags:
 
 ![](/images/eos_voter/2_4.png)
 
-且不选择这个选项的url 是
+且不选择这个选项的url 是「2020-08-17」
 
-	https://www.api.bloks.io/dfuse?type=search_transactions&q=(auth:blockpooleos OR
-						  receiver:blockpooleos OR
-						  data.to:blockpooleos OR
-						  data.from:blockpooleos OR
-						  data.receiver:blockpooleos)&options[sort]=desc&options[cursor]=&options[limit]=25&options[withReversible]=true
-
-
-是没有
-
-	data.to:blockpooleos
-
-这个条件的，这一点要尤为注意。
+    url = f"""https://www.api.bloks.io/dfuse?type=search_transactions_graphql&q=(auth%3A{account} OR
+                      receiver%3A{account} OR
+                      data.to%3A{account} OR
+                      data.from%3A{account} OR
+                      data.receiver%3A{account}) data.to%3A{account}&options[sort]=desc&options[cursor]=&options[limit]={limit}&options[withReversible]=true&options[code]=1"""
 
 <br/>
 
@@ -116,15 +109,71 @@ JWT来获取数据的，而 JWT 是通过 key 来得到的，但是，JWT只有2
 
 在 eosvoter 中，使用 api_key 得到 JWT
 
-![](/images/eos_voter/2_7.png)
+```python
+def get_token_dfuse(apikey):
+    headers = {
+        'Content-Type': 'application/json',
+    }
+    data = '{"api_key":"%s"}' % (apikey)
+    response = requests.post('https://auth.dfuse.io/v1/auth/issue', headers=headers, data=data)
+    if response.status_code == 200:
+        content = eval(str(response.content, encoding = "utf-8"))
+        return True, content['token'], util.times.format_time_from_timestamp(content['expires_at'])
+    return False, None, None
+```
 
 根据时间，看是否更新JWT
 
-![](/images/eos_voter/2_8.png)
+```python
+def get_dfuse_token():
+    if os.path.isfile(os.path.join(os.path.abspath('..'), 'dfuse_token.txt')):
+        file_path = os.path.join(os.path.abspath('..'), 'dfuse_token.txt')
+    elif os.path.isfile(os.path.join(os.path.abspath('.'), 'dfuse_token.txt')):
+        file_path = os.path.join(os.path.abspath('.'), 'dfuse_token.txt')
+    with open(file_path, 'r') as f:
+        f_data = f.read()
+    if len(f_data) == 0:
+        b, token, t = auth.get_token_dfuse(app_config.dfuse_api_key)
+        if b:
+            with open(file_path, 'w') as f:
+                data = dict()
+                data['token'] = token
+                data['time'] = t
+                data = json.dumps(data)
+                f.write(data)
+                return token
+    else:
+        data = json.loads(f_data)
+        if data['time'] > times.now():
+            return data['token']
+        else:
+            b, token, t = auth.get_token_dfuse(app_config.dfuse_api_key)
+            if b:
+                with open(file_path, 'w') as f:
+                    data = dict()
+                    data['token'] = token
+                    data['time'] = t
+                    data = json.dumps(data)
+                    f.write(data)
+                    return token
+```
 
 得到相关的 token ，这个 token 就是 JWT ，来获取数据
 
-![](/images/eos_voter/2_9.png)
+```python
+def get_actions(account, limit=5, timeout=30):
+    token = get_dfuse_token()
+    headers = {
+        'Authorization': 'Bearer %s' % (token),
+    }
+    url = f"""https://www.api.bloks.io/dfuse?type=search_transactions_graphql&q=(auth%3A{account} OR
+                      receiver%3A{account} OR
+                      data.to%3A{account} OR
+                      data.from%3A{account} OR
+                      data.receiver%3A{account}) data.to%3A{account}&options[sort]=desc&options[cursor]=&options[limit]={limit}&options[withReversible]=true&options[code]=1"""
+    data = get(url=url, headers=headers, timeout=timeout)
+    return data.json()['transactions']
+```
 
 至此，dfuse 接口就对接完毕了。
 
@@ -139,4 +188,10 @@ API Reference
 ![](/images/eos_voter/2_10.png)
 
 
+ps:
 
+在 2020-08-17 又重新启用了 `dfuse` 但是，这个网站已经更改了收费规则。
+
+在此之前，虽然，每个月有 250K 的次数，但是，网站并不统计，你可以直接用。但是，现在，网站已经开始统计。
+
+并且，上面的访问 URL 是根据 EOS 主网抓包得到的，经过验证，这个 URL 不需要身份验证，哈哈，真的有趣。但是，为了保险起见，我还是加上了身份验证。
