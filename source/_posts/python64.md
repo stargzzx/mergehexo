@@ -2,9 +2,8 @@
 title: python 安装 pytorch
 date: 2019-11-10 09:23:01
 categories:
-- python
-- 模块
-- pytorch
+- [python,模块,pytorch]
+- [人工智能,深度学习,框架,pytorch]
 tags:
 - python
 - torch
@@ -41,6 +40,14 @@ win的查找方式自己找，现在我们只说一下 linux 的版本。
 	
 为准，另外，有的系统可能没有其中一个方法，这属于正常现像。
 
+2020-09-01:
+
+或者使用
+
+	nvidia-smi
+
+来查看 CUDA 版本。「推荐这个方法」
+
 得到 cuda 的版本后，我们就要得到相应版本的 pytorch。
 
 访问官网。
@@ -63,3 +70,32 @@ win的查找方式自己找，现在我们只说一下 linux 的版本。
 	
 加上 -c 是指从 pytorch 原官网下载，而不是利用镜像。
 
+2020-09-01 更新：
+
+我猜测可能是镜像源改规则了。我通过清华源的规则，并不能下载 torch，所以，我给修改了一下，如下：
+
+	auto_activate_base: false
+	channels:
+	  - defaults
+	show_channel_urls: true
+	channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda
+	default_channels:
+	  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+	  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+	  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+	  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+	  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+	  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
+	custom_channels:
+	  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+	  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+	  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+	  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+	  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
+	  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+
+我推荐你直接修改
+
+	.condarc 
+
+这个文件，而不是使用命令行添加的方式。
