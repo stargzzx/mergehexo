@@ -36,6 +36,7 @@ tags:
 - 安装你电脑中 `GPU` 的 `driver`
 - 安装 `docker 19.03`
 - 你不需要安装 `CUDA`
+	- 集成到 `nvidia-docker` 了
 
 ## nvidia-docker 的发展历程
 
@@ -73,5 +74,42 @@ tags:
 
 ![](/images/docker/13_0.png)
 
+ps: 2020-09-03 上面的命令并不能下载，所以，我有查阅了官网的安装资料。
 
+- [nvidia-docker 安装流程](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
+官网明确说过，如果你有 `nvidia-docker1.0` 要么升级，要么卸载后安装 `nvidia-docker2`。
+
+我们是通过 `apt-get` 安装。但是，`apt-get` 的下载通道中没有这个下载通道，所以，我们要添加一下。
+
+```
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+```
+
+这个时候已经添加了。
+
+然后安装 `nvidia-docker2`。
+
+```
+sudo apt-get update
+sudo apt-get install -y nvidia-docker2
+```
+
+重新打开 
+
+```
+sudo systemctl restart docker
+```
+
+然后官网会给你一个命令检测你安装成功了吗。
+
+	sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+
+这个命令不一定可以，因为，你的驱动可能太低了，不能运行 `cuda11.0`。所以，你可以自己尽心降版本运行。
+
+	sudo docker run --rm --gpus all nvidia/cuda:10.0-base nvidia-smi
+	sudo docker run --rm --gpus all nvidia/cuda:10.2-base nvidia-smi
+
+祝你好运。
