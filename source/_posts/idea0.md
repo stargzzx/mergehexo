@@ -34,14 +34,53 @@ tags:
 
 ![](/images/idea/0_0.png)
 
-第 1 指的是 `gradle` 的位置
+<br/>
 
-在这里贴一下
+# 让一个 gradle 项目跑起来
 
-	/usr/local/Cellar/gradle/6.5.1/libexec
+<br/>
 
-第 2 指的是 `gradle` 的编译器是啥
+使用 IDEA 跑一个 gradle 项目，主要有下面的要求。
 
-我这里是 `open jdk 14`，路径如下:
+- JAVA 的编译环境 JDK 14
+- IDEA 的语法环境
+- gradle 的编译环境
 
-	/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
+首先，我们不是新建一个 gradle 项目，而是导入 gradle 项目。
+
+## 导入 gradle 项目
+
+- 选择菜单栏的 `File->Open`。
+- 在打开的窗口选择对应 `Gradle` 项目的 `build.gradle` 文件，然后点击`OK`。
+
+![](/images/idea/0_2.png)
+
+- 在 `Open Project` 窗口中，点击 `Open as Project`
+
+## 配置 JDK 和语法环境
+
+在这里值得注意的是，语法环境和 IDEA 的版本有关，比如 `language level` 14 以上需要 IDEA 2020 版本以上。
+
+所以，建议你安装下载最新的 IDEA 环境。
+
+### 下载相应版本的 JDK
+
+- [java | 安装多版本 JDK](https://benpaodewoniu.github.io/2020/07/08/java1/)
+
+### 配置JDK 和语法环境
+
+进入 `project settings` 在 「`file -> project structure` 查询」
+
+![](/images/idea/0_3.png)
+
+然后，左边红框的那些，都点一点，然后都换成相关的 JDK 和 对应 JDK 版本的 language level 。
+
+![](/images/idea/0_4.png)
+
+## 配置 gradle 环境
+
+因为是 gradle 项目，所以，我们使用 gradle 来进行编译，如何配置这个，请参考。
+
+- [gradle | 安装和简介](https://benpaodewoniu.github.io/2020/07/08/java2/)
+
+

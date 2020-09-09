@@ -96,6 +96,18 @@ tags:
 
 这里值得注意的是，我的 gradle 和 JDK 都是自己特指的，而不是默认的。 IDEA 有时候会默认 JDK 为 1.8 ，那个时候，配合 gradle 可能会出错。
 
+第 1 指的是 `gradle` 的位置
+
+在这里贴一下
+
+	/usr/local/Cellar/gradle/6.5.1/libexec
+
+第 2 指的是 `gradle` 的编译器是啥
+
+我这里是 `open jdk 14`，路径如下:
+
+	/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
+
 ## 寻找 jar 版本
 
 - [mvnrepository](https://mvnrepository.com/)
