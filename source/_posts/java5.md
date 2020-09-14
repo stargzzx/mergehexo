@@ -379,6 +379,6 @@ Request getRequest = new Request.Builder()
 这个`Request`实例.
 
 - 使用`addHeader()`方法添加了请求头。
-- 使用`cacheControl(CacheControl.FORCE_NETWORK)`设置此次请求是能使用网络，不用缓存。（还可以设置只用缓存FORCE_CACHE。）
+- 使用`cacheControl(CacheControl.FORCE_NETWORK)`设置此次请求是能使用网络，不用缓存。（还可以设置只用缓存`FORCE_CACHE`。）
 
 好了，okhttp的使用就讲这里了，总体还是比较简单的。

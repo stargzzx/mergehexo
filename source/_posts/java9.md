@@ -342,12 +342,12 @@ private <T> void finished(Deque<T> calls, T call) {
 
 ```java
 public void enqueue(Callback responseCallback) {
-	synchronized (this) {
-	  if (executed) throw new IllegalStateException("Already Executed");
-	  executed = true;
-	}
-	transmitter.callStart();//回调请求监听器的请求开始
-client.dispatcher().enqueue(new AsyncCall(responseCallback));//请求调度
+  synchronized (this) {
+    if (executed) throw new IllegalStateException("Already Executed");
+    executed = true;
+  }
+  transmitter.callStart();//回调请求监听器的请求开始
+  client.dispatcher().enqueue(new AsyncCall(responseCallback));//请求调度
 }
 ```
 
