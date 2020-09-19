@@ -32,7 +32,8 @@ tags:
 	gitbook init
 
 进行了生成，然后，我是用
-
+	
+	git init
 	git remote add origin git@hexo.com:benpaodewoniu/blockchain.git
 
 - 这里为啥是 `hexo.com` 而不是 `github.com`，你可以参考我下面的博文
@@ -58,7 +59,7 @@ tags:
 	git commit -m 'update'
 	git push origin gh-pages
 
-上面的那些步骤主要是给远程仓库建立 `gh-pages` 分支。
+上面的那些步骤主要是给远程仓库建立 `gh-pages` 分支，也可以不用这么做，直接在另一个文件夹中 `clone` 一下，然后把内容删除后，把 `_book` 的内容移动过来。
 
 我们找一个其他的目录，比如我是
 
