@@ -5,6 +5,9 @@ categories:
 - [项目经历,中型,labwebs]
 tags:
 - labwebs
+password: labwebs
+abstract: 暂不公开
+message: 您好, 这里是 4 级加密文章，会在一星期后公开。
 ---
 应老师要求已经自身的现有的技术，结合开源项目，搭建了一个高分布式、组件式网站的多人合作传承系统。
 
@@ -207,11 +210,11 @@ root: /project
 
 而你的 `project` 的资源文件路径类似于下面
 
-- https://labwebs.github.io/project/1.html
+- `https://labwebs.github.io/project/1.html`
 
 不修改，你就变成
 
-- https://labwebs.github.io/1.html
+- `https://labwebs.github.io/1.html`
 
 会导致 `404`。
 
@@ -271,3 +274,71 @@ ps: 这里需要注意的是，有的时候，我们新创建的分支的时候�
 
 ## 参考文献
 
+- [ubuntu下typora联合PicGo实现图片上传功能](https://blog.csdn.net/u013468614/article/details/108539933)
+- [PicGo+Gitee搭建个人图床](https://www.cnblogs.com/geq2020/p/12506466.html)
+
+## 获取码云上传权限
+
+创建仓库，这个仓库要求要公开，要不图片放进来后无法访问
+
+![](/images/labwebs/0_4.png)
+
+在个人主页找到个人设置然后点击
+
+![](/images/labwebs/0_5.png)
+
+进入以后选择“私人令牌”，然后选择“生成新令牌”
+
+![](/images/labwebs/0_6.png)
+
+创建私人令牌
+
+![](/images/labwebs/0_7.png)
+
+然后生成的令牌只出现一次，可以复制下来。
+
+## 安装PicGo
+
+- [官网地址](https://github.com/Molunerfinn/PicGo/releases)
+
+`ubuntu` 下载 `AppImage` 版本。
+
+下载下来后，右键 `*.AppImage` 属性，选中`Allow executing file as program`，如下图所示：
+
+![](/images/labwebs/0_0.png)
+
+右键 `*.AppImage`，点击 `run`，默认下面图标，不要着急，不要一气之下把它给删了，继续…
+
+![](/images/labwebs/0_1.png)
+
+鼠标放在上面的小图标上，`右键，打开详细窗口`：
+
+![](/images/labwebs/0_2.png)
+
+下载gitee码云图片上传插件，这两个都安装一下
+
+![](/images/labwebs/0_3.png)
+
+`Gitee` 图床设置界面如下所示
+
+![](/images/labwebs/0_8.png)
+
+后续我们上传到码云不同的仓库，只需要修改 `repo` 属性即可。
+
+<br/>
+
+# 后续
+
+<br/>
+
+## 每次上传都要输入账户密码
+
+进入项目目录
+
+	git config --global credential.helper store
+
+然后你会在你本地生成一个文本，上边记录你的账号和密码。当然这些你可以不用关心。
+
+然后你使用上述的命令配置好之后，再操作一次 `git pull`，然后它会提示你输入账号密码，这一次之后就不需要再次输入密码了。
+
+`hexo` 上传和 `git` 上传都不需要再输入密码了。
